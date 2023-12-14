@@ -9,6 +9,26 @@ export const siteConfig = {
       title: "Home",
       href: "/",
     },
+    {
+      title: "SUNBELT Miners",
+      href: "/miners",
+    },
+    {
+      title: "How It Works",
+      href: "/how-it-works",
+    },
+    {
+      title: "Company",
+      href: "/company",
+    },
+    {
+      title: "Blogs",
+      href: "/blogs",
+    },
+    {
+      title: "Contact",
+      href: "/contact",
+    },
   ],
   links: {
     twitter: "https://twitter.com/shadcn",
