@@ -34,14 +34,14 @@ export function SiteFooter() {
   return (
     <footer className="relative z-40 w-full border-b bg-primary/5 mt-20">
       <div
-        className="grid grid-cols-2 bg-primary max-w-5xl p-10 mx-auto -mt-20 rounded-3xl"
+        className="grid grid-cols-1 sm:grid-cols-2 bg-primary max-w-5xl p-10 lg:mx-auto -mt-20 rounded-3xl mx-8"
         style={{
           background:
             "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%), #1570EF",
           boxShadow: "0px 0px 18px 0px rgba(0, 0, 0, 0.06)",
         }}
       >
-        <div>
+        <div className="hidden sm:block">
           <div className="text-sm text-white font-mont font-medium my-1">
             Subscribe to be informed
           </div>
@@ -67,8 +67,8 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      <div className="container flex items-start space-x-4 sm:justify-between sm:space-x-0 py-8">
-        <div className="w-[40%]">
+      <div className="container flex md:flex-row flex-col items-start space-x-4 sm:justify-between sm:space-x-0 py-8">
+        <div className="md:w-[40%] w-full">
           <div className="text-2xl text-primary font-semibold my-2">
             About us
           </div>
@@ -80,10 +80,10 @@ export function SiteFooter() {
             for all levels of miners. Join us in shaping the future of
             sustainable and advanced cryptocurrency mining.
           </div>
-          <div className="text-2xl text-primary font-semibold my-2">
+          <div className="text-2xl text-primary font-semibold my-2 hidden md:block">
             Follow us
           </div>
-          <div className="flex">
+          <div className="md:flex hidden">
             <Button variant="ghost" size="icon">
               <Facebook className="text-primary w-5 h-5" />
             </Button>
@@ -98,11 +98,11 @@ export function SiteFooter() {
             </Button>
           </div>
         </div>
-        <div className="w-[20%]">
+        <div className="md:w-[20%] w-full !mx-0">
           <div className="text-2xl text-primary font-semibold my-2">
             Important Links
           </div>
-          <div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:grid-cols-1">
             {siteConfig.footerLinks.map((link, index) => (
               <Link
                 key={index}
@@ -114,7 +114,7 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
-        <div className="w-[20%]">
+        <div className="md:w-[20%] w-full !mx-0">
           <div className="text-2xl text-primary font-semibold my-2">
             Contact Us
           </div>
@@ -133,6 +133,25 @@ export function SiteFooter() {
           </div>
           <div className="text-sm text-primary font-mont">
             {siteConfig.contact.address}
+          </div>
+        </div>
+        <div className="!mx-0 md:hidden">
+          <div className="text-2xl text-primary font-semibold my-2">
+            Follow us
+          </div>
+          <div className="flex">
+            <Button variant="ghost" size="icon">
+              <Facebook className="text-primary w-5 h-5" />
+            </Button>
+            <Button variant="ghost" size="icon">
+              <Instagram className="text-primary w-5 h-5" />
+            </Button>
+            <Button variant="ghost" size="icon">
+              <Twitter className="text-primary w-5 h-5" />
+            </Button>
+            <Button variant="ghost" size="icon">
+              <Linkedin className="text-primary w-5 h-5" />
+            </Button>
           </div>
         </div>
       </div>
