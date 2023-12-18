@@ -41,6 +41,9 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  react-verification-input:
+    specifier: ^4.0.0
+    version: 4.0.0(react-dom@18.2.0)(react@18.2.0)
   sharp:
     specifier: ^0.31.3
     version: 0.31.3
@@ -3158,6 +3161,16 @@ packages:
       invariant: 2.2.4
       react: 18.2.0
       tslib: 2.6.2
+    dev: false
+
+  /react-verification-input@4.0.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-P69fAaKzp+7wDJFdNwwb0x/LZ4RCnsckhxTXNdOWSe4HbvhB0b/9ppH6PxBbR615KXouJGE3lrUSguO1t49cPw==}
+    peerDependencies:
+      react: 16.8.0 - 18.x.x
+      react-dom: 16.8.0 - 18.x.x
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react@18.2.0:

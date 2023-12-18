@@ -19,6 +19,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 import { SignInModal } from "../auth/signin"
 import { SignUpModal } from "../auth/signup"
+import { VerifyModal } from "../auth/verify"
 
 export function SiteHeader() {
   return (
@@ -35,7 +36,7 @@ export function SiteHeader() {
         >
           Sign In
         </Button>
-        <SignUpModal />
+        <VerifyModal />
         <Select defaultValue="en">
           <SelectTrigger className="w-auto">
             <SelectValue placeholder="Select a fruit" />
