@@ -22,7 +22,7 @@ export default function HeroSection() {
             <div className="text-gray-400 font-mont">Sunbelt Miners</div>
           </div>
           <h1
-            className="font-bold text-5xl tracking-[-2%] pb-1 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-7xl xl:leading-[72px]"
+            className="font-bold text-5xl tracking-[-2%] pb-1 sm:mt-5 sm:text-6xl lg:mt-6 xl:leading-[72px]"
             style={{
               background:
                 "conic-gradient(from 99.79deg at 0 0,#2f55ff 0deg,#47a8fe 1.91deg,#24bafe 4.21deg,#2b77ff 1turn),#175cd3",
