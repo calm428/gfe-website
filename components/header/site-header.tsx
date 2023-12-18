@@ -16,6 +16,7 @@ import {
 import { MainNav } from "@/components/header/main-nav"
 import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { SignInModal } from "../auth/signin"
 
 export function SiteHeader() {
   return (
@@ -32,6 +33,7 @@ export function SiteHeader() {
         >
           Sign In
         </Button>
+        <SignInModal />
         <Select defaultValue="en">
           <SelectTrigger className="w-auto">
             <SelectValue placeholder="Select a fruit" />
@@ -43,6 +45,7 @@ export function SiteHeader() {
               <SelectItem value="ru">Russian</SelectItem>
             </SelectGroup>
           </SelectContent>
+          <ThemeToggle />
         </Select>
       </div>
     </header>
