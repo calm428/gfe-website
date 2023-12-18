@@ -14,12 +14,16 @@ export default function HeroSection() {
       <div className="space-y-10">
         <div className="flex flex-col items-start gap-2">
           <div className="flex items-center gap-2">
-            <Badge className="p-2 text-primary bg-white">SUNBELT</Badge>
+            <Badge className="p-2" variant="secondary">
+              SUNBELT
+            </Badge>
             <Separator
               orientation="vertical"
-              className="h-6 w-[2px] bg-gray-400"
+              className="h-6 w-[2px] bg-muted-foreground"
             />
-            <div className="text-gray-400 font-mont">Sunbelt Miners</div>
+            <div className="text-muted-foreground font-mont">
+              Sunbelt Miners
+            </div>
           </div>
           <h1
             className="font-bold text-5xl tracking-[-2%] pb-1 sm:mt-5 sm:text-6xl lg:mt-6 xl:leading-[72px]"

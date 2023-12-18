@@ -85,7 +85,7 @@ const miners: Miner[] = [
 
 function MinerCard({ miner }: { miner: Miner }) {
   return (
-    <div className="flex flex-col items-start gap-4 bg-[#E7F0FD] p-4 min-w-[350px] rounded-xl">
+    <div className="flex flex-col items-start gap-4 bg-[#E7F0FD] p-4 min-w-[350px] w-auto rounded-xl">
       <Image
         src={miner.avatar}
         alt={miner.name}
@@ -154,7 +154,7 @@ function MinerCard({ miner }: { miner: Miner }) {
 export default function MinerListSection() {
   return (
     <div className="flex flex-col items-center gap-6 justify-between">
-      <div className="text-2xl font-semibold my-8 text-primary mx-auto">
+      <div className="text-2xl font-semibold my-4 text-primary mx-auto">
         List of Miners
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">

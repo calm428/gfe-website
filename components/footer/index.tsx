@@ -32,7 +32,7 @@ import { VerifyModal } from "../auth/verify"
 
 export function SiteFooter() {
   return (
-    <footer className="relative z-40 w-full border-b bg-primary/5 mt-20">
+    <footer className="relative z-40 w-full border-b bg-primary/5">
       <div
         className="grid grid-cols-1 sm:grid-cols-2 bg-primary max-w-5xl p-10 lg:mx-auto -mt-20 rounded-3xl mx-8"
         style={{
