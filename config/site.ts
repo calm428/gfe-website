@@ -32,10 +32,6 @@ export const siteConfig = {
   ],
   footerLinks: [
     {
-      title: "Home",
-      href: "/",
-    },
-    {
       title: "SUNBELT Miners",
       href: "/miners",
     },
