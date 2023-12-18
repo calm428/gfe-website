@@ -17,6 +17,10 @@ import { MainNav } from "@/components/header/main-nav"
 import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
 
+import { SignInModal } from "../auth/signin"
+import { SignUpModal } from "../auth/signup"
+import { VerifyModal } from "../auth/verify"
+
 export function SiteHeader() {
   return (
     <header className="bg-background sticky top-0 z-40 w-full border-b">
@@ -32,6 +36,7 @@ export function SiteHeader() {
         >
           Sign In
         </Button>
+        <VerifyModal />
         <Select defaultValue="en">
           <SelectTrigger className="w-auto">
             <SelectValue placeholder="Select a fruit" />
@@ -43,6 +48,7 @@ export function SiteHeader() {
               <SelectItem value="ru">Russian</SelectItem>
             </SelectGroup>
           </SelectContent>
+          <ThemeToggle />
         </Select>
       </div>
     </header>
