@@ -16,7 +16,9 @@ import {
 import { MainNav } from "@/components/header/main-nav"
 import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
+
 import { SignInModal } from "../auth/signin"
+import { SignUpModal } from "../auth/signup"
 
 export function SiteHeader() {
   return (
@@ -33,7 +35,7 @@ export function SiteHeader() {
         >
           Sign In
         </Button>
-        <SignInModal />
+        <SignUpModal />
         <Select defaultValue="en">
           <SelectTrigger className="w-auto">
             <SelectValue placeholder="Select a fruit" />

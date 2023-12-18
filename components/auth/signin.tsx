@@ -53,7 +53,7 @@ export function SignInModal() {
               <Icons.google className="mr-2 h-4 w-4" />
               Continue with Google
             </Button>
-            <div className="flex items-center justify-center gap-2 relative">
+            <div className="flex items-center justify-center gap-2 relative my-1">
               <div className="p-4 bg-white z-10">OR</div>
               <Separator
                 orientation="vertical"
