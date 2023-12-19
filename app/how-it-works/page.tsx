@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
+import GuideSection from "@/components/how-it-works/guide"
 import HeroSection from "@/components/how-it-works/hero"
 import WorkFlowSection from "@/components/how-it-works/workflow"
 import InvestSection from "@/components/miner/invest"
@@ -31,14 +32,9 @@ export default function IndexPage() {
           <WorkFlowSection />
         </div>
       </section>
-      <section
-        className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat"
-        style={{
-          background: "url(/images/miners/bg2.png)",
-        }}
-      >
+      <section className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat">
         <div className="container">
-          <InvestSection />
+          <GuideSection />
         </div>
       </section>
     </div>
