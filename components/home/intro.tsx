@@ -8,7 +8,7 @@ import { Icons } from "@/components/icons"
 
 export default function HomeSection() {
   return (
-    <div className="flex flex-col md:flex-row gap-20 md:gap-6 justify-between py-12 md:py-28">
+    <div className="flex flex-col md:flex-row gap-20 md:gap-6 justify-between py-12 md:py-24">
       <div className="space-y-14">
         <div className="flex flex-col items-start gap-2">
           {/* TODO: Gradient is confusing */}
