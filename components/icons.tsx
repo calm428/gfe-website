@@ -28,6 +28,7 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  play: () => (<img src={"/icons/play-icon.png"} alt="Logo" width={20} />),
   google: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

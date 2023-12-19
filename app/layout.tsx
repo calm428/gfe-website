@@ -2,7 +2,7 @@ import "@/styles/globals.css"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
-import { fontMono, fontMont, fontSans } from "@/lib/fonts"
+import { fontMono, fontMont, fontMonumentExtended, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteFooter } from "@/components/footer"
 import { SiteHeader } from "@/components/header/site-header"
@@ -40,7 +40,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             "min-h-screen bg-background font-sans antialiased",
             fontSans.variable,
             fontMono.variable,
-            fontMont.variable
+            fontMont.variable,
+            fontMonumentExtended.variable,
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

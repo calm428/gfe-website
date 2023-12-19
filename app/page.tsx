@@ -1,8 +1,5 @@
-import Link from "next/link"
-
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
 import HomeSection from "@/components/home/intro"
+import SpecsSection from "@/components/home/specs"
 
 export default function IndexPage() {
   return (
@@ -14,6 +11,7 @@ export default function IndexPage() {
     >
       <div className="container">
         <HomeSection />
+        <SpecsSection />
       </div>
     </section>
   )
