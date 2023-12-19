@@ -16,7 +16,7 @@ export default function HomeSection() {
             Bitcoin Mining <br className="hidden sm:inline" />
             Ecosystem
           </h1>
-          <p className="text-2xl max-w-xl text-muted-foreground font-mont">
+          <p className="md:text-2xl text-lg max-w-xl text-muted-foreground font-mont">
             Reliable and profitable platform, providing several new miner
             hosting service for end users.
           </p>
@@ -39,7 +39,7 @@ export default function HomeSection() {
             href={siteConfig.links.docs}
             target="_blank"
             rel="noreferrer"
-            className={cn(buttonVariants(), "font-monument tracking-widest md:hidden text-lg")}
+            className={cn(buttonVariants(), "font-monument tracking-widest pt-2.5 font-normal md:hidden")}
             style={{
               background:
                 "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",

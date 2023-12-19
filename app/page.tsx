@@ -9,7 +9,7 @@ export default function IndexPage() {
         background: "url(/images/bg-gradient.webp)",
       }}
     >
-      <div className="container">
+      <div className="container px-5 md:px-8">
         <HomeSection />
         <SpecsSection />
       </div>
