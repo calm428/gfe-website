@@ -1,3 +1,4 @@
+import AdvantagesSection from "@/components/home/advantages"
 import HomeSection from "@/components/home/intro"
 import SliderSection from "@/components/home/slider"
 import SpecsSection from "@/components/home/specs"
@@ -12,6 +13,7 @@ export default function IndexPage() {
         <HomeSection />
         <SliderSection />
         <SpecsSection />
+        <AdvantagesSection/>
       </div>
     </section>
   )

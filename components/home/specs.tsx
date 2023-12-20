@@ -38,7 +38,7 @@ export default function SpecsSection() {
 
     return (<div className="pb-14 pt-10 md:pt-24">
         <div className="md:pb-14 pb-10">
-            <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2">Mining Ecosystem</h1>
+            <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">Mining Ecosystem</h1>
             <h3 className="font-mont font-medium text-lg md:text-xl text-center">Step into a comprehensive mining ecosystem designed to maximize efficiency, sustainability, and profitability. Our integrated platform offers a seamless blend of cutting-edge technology, sustainable practices, and user-friendly tools.</h3>
         </div>
 
