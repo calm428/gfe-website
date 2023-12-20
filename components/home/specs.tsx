@@ -46,6 +46,7 @@ export default function SpecsSection() {
         <div className="flex flex-col xl:flex-row gap-4">
             {CARDS_DATA.map((data, index: number) => (
                 <div
+                    key={index}
                     className={`!bg-cover !bg-no-repeat min-w-[256px] rounded-lg h-fit xl:h-[400px] transition-all duration-500 p-8 flex flex-col relative ${isCurrent(index) ? "flex-1 ease-out" : "ease-in"}`}
                     style={{
                         background: `url(${data.image})`,

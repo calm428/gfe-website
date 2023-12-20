@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 export const fontMont = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
-  weight: ["400"]
+  weight: ["400", "500", "600", "700", "800"]
 });
 
 export const fontSans = FontSans({
