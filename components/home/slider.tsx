@@ -36,7 +36,7 @@ const SliderSection = () => {
 
     return (
         <div className='pb-52 hidden lg:block'>
-            <div className='absolute w-full left-0'>
+            <div className='absolute w-[1900px] right-0'>
                 <div
                     className='h-[230px] !bg-cover !bg-no-repeat w-full flex items-center relative'
                     style={{
