@@ -56,6 +56,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         mont: ["var(--font-mont)"],
+        monument: ["var(--font-monument)"],
       },
       keyframes: {
         "accordion-down": {
@@ -74,4 +75,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
