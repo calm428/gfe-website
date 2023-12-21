@@ -1,15 +1,7 @@
 "use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { ChevronLeft, ChevronRight, Lock } from "lucide-react"
-
-import { siteConfig } from "@/config/site"
-import { Badge } from "@/components/ui/badge"
-import { Button, buttonVariants } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator";
-import Slider from "react-slick";
-import { useState } from "react"
+import { Lock } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export interface Miner {
   id: number

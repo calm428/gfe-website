@@ -41,7 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable,
             fontMono.variable,
             fontMont.variable,
-            fontMonumentExtended.variable,
+            fontMonumentExtended.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
