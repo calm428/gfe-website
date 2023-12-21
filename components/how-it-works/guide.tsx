@@ -87,7 +87,7 @@ function StepComponent({ step }: { step: Step }) {
 
 export default function GuideSection() {
   return (
-    <div className="flex flex-col items-center justify-between pb-32">
+    <div className="flex flex-col items-center justify-between pb-4">
       <div className="text-2xl text-center font-monument uppercase mt-4 text-primary mx-auto">
         Mining Steb-by-Step
       </div>
