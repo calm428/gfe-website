@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { Chart as ChartJS, ArcElement, CategoryScale, LinearScale, PointElement, LineElement, Filler, Tooltip, Legend, ScriptableContext, } from "chart.js";
+import { Chart as ChartJS, ChartOptions, ArcElement, CategoryScale, LinearScale, PointElement, LineElement, Filler, Tooltip, Legend, ScriptableContext, } from "chart.js";
 import { Chart as ReactChart, Line } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Filler, Legend, CategoryScale, LinearScale, PointElement, LineElement);
 
@@ -42,7 +42,7 @@ const HistoricalPowerGraph = () => {
                 grid: {
                     display: false,
                 },
-                position: "right"
+                position: "right",
             },
         },
         plugins: {
@@ -59,6 +59,7 @@ const HistoricalPowerGraph = () => {
     return (
         <div className='xl:w-1/2 w-full p-10 drop-shadow-2xl bg-white space-y-5 flex flex-col justify-between'>
             <h1 className='text-xl font-monument tracking-wider text-primary'>Historical Power Graph (per kwh)</h1>
+            {/* @ts-ignore */}
             <Line id="myChart" data={data} options={options} />
         </div>
     );
