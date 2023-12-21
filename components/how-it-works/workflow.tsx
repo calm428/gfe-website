@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function WorkFlowSection() {
   return (
     <div className="flex flex-col items-center justify-between">
-      <div className="text-2xl text-center uppercase font-semibold mt-4 text-primary mx-auto">
+      <div className="text-2xl text-center font-monument uppercase mt-4 text-primary mx-auto">
         How Sunbelt miners work
       </div>
       <div className="text-md max-w-5xl text-center font-mont text-muted-foreground">
