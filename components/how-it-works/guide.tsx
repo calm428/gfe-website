@@ -57,7 +57,7 @@ const steps: Step[] = [
 function StepComponent({ step }: { step: Step }) {
   return (
     <div className="relative max-w-xl mx-auto flex items-start gap-4 my-2 p-8 bg-white rounded-xl shadow-md">
-      <div className="absolute top-3 right-2 text-2xl font-bold text-black/5">
+      <div className="absolute top-3 right-2 text-2xl font-monument font-bold text-black/5">
         0{step.index}
       </div>
       <div
@@ -76,7 +76,7 @@ function StepComponent({ step }: { step: Step }) {
         />
       </div>
       <div className="flex flex-col gap-2">
-        <div className="text-xl font-semibold">{step.title}</div>
+        <div className="text-xl font-monument">{step.title}</div>
         <div className="text-sm font-mont text-muted-foreground">
           {step.description}
         </div>
@@ -87,8 +87,8 @@ function StepComponent({ step }: { step: Step }) {
 
 export default function GuideSection() {
   return (
-    <div className="flex flex-col items-center justify-between pb-32">
-      <div className="text-2xl text-center uppercase font-semibold mt-4 text-primary mx-auto">
+    <div className="flex flex-col items-center justify-between pb-4">
+      <div className="text-2xl text-center font-monument uppercase mt-4 text-primary mx-auto">
         Mining Steb-by-Step
       </div>
       <div className="text-md max-w-5xl text-center font-mont text-muted-foreground">

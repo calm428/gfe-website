@@ -45,10 +45,10 @@ export function SiteFooter() {
           <div className="text-sm text-white font-mont font-medium my-1">
             Subscribe to be informed
           </div>
-          <div className="text-3xl text-white font-bold">Stay Informed</div>
+          <div className="text-3xl text-white font-monument">Stay Informed</div>
         </div>
         <div>
-          <div className="text-sm text-white font-mont font-medium my-1">
+          <div className="text-sm text-white font-monument my-1">
             Newsletter
           </div>
           <div className="flex w-full max-w-sm items-center">
@@ -60,7 +60,7 @@ export function SiteFooter() {
             <Button
               type="submit"
               variant="secondary"
-              className="rounded-l-none"
+              className="rounded-l-none font-monument"
             >
               Subscribe
             </Button>
@@ -69,7 +69,7 @@ export function SiteFooter() {
       </div>
       <div className="container flex md:flex-row flex-col items-start space-x-4 sm:justify-between sm:space-x-0 py-8">
         <div className="md:w-[40%] w-full">
-          <div className="text-2xl text-primary font-semibold my-2">
+          <div className="text-xl text-primary font-monument my-2">
             About us
           </div>
           <div className="text-sm text-primary font-mont">
@@ -80,7 +80,7 @@ export function SiteFooter() {
             for all levels of miners. Join us in shaping the future of
             sustainable and advanced cryptocurrency mining.
           </div>
-          <div className="text-2xl text-primary font-semibold my-2 hidden md:block">
+          <div className="text-xl text-primary font-monument my-2 hidden md:block">
             Follow us
           </div>
           <div className="md:flex hidden">
@@ -99,7 +99,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="md:w-[20%] w-full !mx-0">
-          <div className="text-2xl text-primary font-semibold my-2">
+          <div className="text-xl text-primary font-monument my-2">
             Important Links
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:grid-cols-1">
@@ -107,7 +107,7 @@ export function SiteFooter() {
               <Link
                 key={index}
                 href={link.href}
-                className="flex items-center text-md font-mont text-primary my-2 rounded-lg hover:text-primary"
+                className="flex items-center text-sm font-mont text-primary my-2 rounded-lg hover:text-primary"
               >
                 {link.title}
               </Link>
@@ -115,7 +115,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="md:w-[20%] w-full !mx-0">
-          <div className="text-2xl text-primary font-semibold my-2">
+          <div className="text-xl text-primary font-monument my-2">
             Contact Us
           </div>
           <div>
@@ -128,15 +128,13 @@ export function SiteFooter() {
               {siteConfig.contact.email}
             </div>
           </div>
-          <div className="text-2xl text-primary font-semibold my-2">
-            Address
-          </div>
+          <div className="text-xl text-primary font-monument my-2">Address</div>
           <div className="text-sm text-primary font-mont">
             {siteConfig.contact.address}
           </div>
         </div>
         <div className="!mx-0 md:hidden">
-          <div className="text-2xl text-primary font-semibold my-2">
+          <div className="text-xl text-primary font-monument my-2">
             Follow us
           </div>
           <div className="flex">

@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="space-y-10">
         <div className="flex flex-col items-center gap-2">
           <div className="flex items-center gap-2">
-            <Badge className="p-2" variant="secondary">
+            <Badge className="p-2 font-monument" variant="secondary">
               SUNBELT
             </Badge>
             <Separator
@@ -21,7 +21,7 @@ export default function HeroSection() {
             </div>
           </div>
           <h1
-            className="font-bold text-5xl text-center tracking-[-2%] pb-1 sm:mt-5 sm:text-6xl lg:mt-6 xl:leading-[72px]"
+            className="font-medium text-5xl text-center font-monument tracking-[-2%] pb-1 sm:mt-5 sm:text-6xl lg:mt-6 xl:leading-[72px]"
             style={{
               background: "linear-gradient(180deg, #2BADFD 0%, #1570EF 88.02%)",
               backgroundClip: "text!important",
