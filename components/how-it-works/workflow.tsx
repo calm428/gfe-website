@@ -1,13 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
-import { Lock } from "lucide-react"
-
-import { siteConfig } from "@/config/site"
-import { Badge } from "@/components/ui/badge"
-import { Button, buttonVariants } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 
 export default function WorkFlowSection() {
   return (

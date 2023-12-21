@@ -1,11 +1,6 @@
 "use client"
 
-import Image from "next/image"
-import Link from "next/link"
-
-import { siteConfig } from "@/config/site"
 import { Badge } from "@/components/ui/badge"
-import { buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
 export default function HeroSection() {

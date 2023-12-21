@@ -1,12 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 
-import { siteConfig } from "@/config/site"
-import { Badge } from "@/components/ui/badge"
-import { Button, buttonVariants } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
+import { Button } from "@/components/ui/button"
 
 export default function InvestSection() {
   return (

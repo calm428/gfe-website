@@ -1,13 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
-import { Lock } from "lucide-react"
-
-import { siteConfig } from "@/config/site"
-import { Badge } from "@/components/ui/badge"
-import { Button, buttonVariants } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 
 type Step = {
   index: number
@@ -15,14 +8,6 @@ type Step = {
   description: string
   icon: string
 }
-;[
-  "Sign Up",
-  "Buy Power",
-  "Write Mining Plan",
-  "Mining Pool",
-  "Get Reward",
-  "Maintenance",
-]
 
 const steps: Step[] = [
   {
