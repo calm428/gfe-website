@@ -1,4 +1,5 @@
 import React from 'react';
+import { AdvantageCard } from './advantage-card';
 
 const AdvantagesSection = () => {
   return (
@@ -14,15 +15,15 @@ const AdvantagesSection = () => {
           <AdvantageCard icon='/images/home/EnergyEfficiency-icon.png' title='Energy Efficiency' text='SUNBELT miners are designed to be energy-efficient, minimizing wasted energy and making them cost-effective in terms of electricity consumption over the long run.' />
         </div>
 
-        <div className='rounded-3xl relative flex items-center flex-col min-h-[500px]'
+        <div className='rounded-3xl relative flex items-center flex-col min-h-[525px]'
           style={{
             background:
               "linear-gradient(0deg, #2D79FF 10%, #22B4FD 50%)",
           }}
         >
-          <div className='p-5'>
-            <h1 className="text-xl text-accent font-monument mt-5 tracking-wider">SUNBELT MINER</h1>
-            <p className="mt-2 text-white text-sm transition-all duration-500">SUNBELT (Application-Specific Integrated Circuit) miners offer several advantages in the context of cryptocurrency mining compared to other types of mining hardware, such as CPUs or GPUs.</p>
+          <div className='p-10'>
+            <h1 className="text-xl text-accent font-monument tracking-wider">SUNBELT MINER</h1>
+            <p className="mt-2 text-white transition-all duration-500">SUNBELT (Application-Specific Integrated Circuit) miners offer several advantages in the context of cryptocurrency mining compared to other types of mining hardware, such as CPUs or GPUs.</p>
           </div>
           <img className="max-w-[350px] w-full absolute bottom-0 px-2.5" src={"/images/home/miner.png"}></img>
         </div>
@@ -36,14 +37,5 @@ const AdvantagesSection = () => {
   );
 };
 
-function AdvantageCard({ icon, title, text }: { icon: string, title: string, text: string }) {
-  return (
-    <div className='bg-accent p-5 rounded-3xl'>
-      <img className="w-16" src={icon}></img>
-      <h2 className="text-xl font-monument mt-5 tracking-wider">{title}</h2>
-      <p className="mt-2 text-muted-foreground text-sm transition-all duration-500">{text}</p>
-    </div>
-  );
-};
 
 export default AdvantagesSection;   

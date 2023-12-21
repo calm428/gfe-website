@@ -75,7 +75,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -88,6 +88,11 @@
     margin: 0;
     -moz-appearance: textfield !important;
   }
+}
+
+.slick-dots{
+  bottom: -40px !important;
+  z-index: -10 !important;
 }
 
 /* This will change the scrollbar color for Webkit browsers like Chrome, Safari */

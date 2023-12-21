@@ -1,8 +1,6 @@
-"use client"
+"use client";
 
-import Image from "next/image"
 import { Lock } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 
 export interface Miner {
@@ -81,7 +79,7 @@ const miners: Miner[] = [
 
 function MinerCard({ miner }: { miner: Miner }) {
   return (
-    <div className="flex flex-col items-start gap-4 bg-[#E7F0FD] p-4 min-w-[350px] w-auto rounded-xl">
+    <div className="flex flex-col items-start gap-4 bg-[#E7F0FD] p-4 max-w-[350px] w-full rounded-xl mx-auto">
       <Image
         src={miner.avatar}
         alt={miner.name}
@@ -144,19 +142,72 @@ function MinerCard({ miner }: { miner: Miner }) {
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default function MinerListSection() {
+  const [slider, setSlider] = useState<any>(null);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const next = () => {
+    slider?.slickNext();
+  };
+
+  const previous = () => {
+    slider?.slickPrev();
+  };
+
+
   return (
-    <div className="flex flex-col items-center gap-6 justify-between">
-      <div className="text-2xl font-semibold my-4 text-primary mx-auto">
+    <div className="flex flex-col items-center gap-10 justify-between md:mt-5">
+      <div className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">
         List of Miners
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-        {miners.map((miner) => (
-          <MinerCard key={miner.id} miner={miner} />
-        ))}
+
+      <div className="w-full max-w-[375px] md:max-w-[750px] lg:max-w-[1100px] ">
+        <Slider {...settings} ref={(c) => setSlider(c)}>
+          {miners.map((miner) => (
+            <MinerCard key={miner.id} miner={miner} />
+          ))}
+        </Slider>
+
+        <div className="w-fit mx-auto space-x-48 flex mt-[17px]">
+          <button onClick={previous} className="cursor-pointer">
+            <ChevronLeft color="#1570EF" />
+          </button>
+
+          <button onClick={next} className="cursor-pointer">
+            <ChevronRight color="#1570EF" className="cursor-pointer" />
+          </button>
+        </div>
+
+        <div className="w-full flex justify-center mt-10">
+          <Button style={{
+              background:
+                "linear-gradient(9deg, #22B4FD 32.53%, #2D79FF 77.26%)",
+            }}>Plan For Mining</Button>
+        </div>
       </div>
     </div>
   )
