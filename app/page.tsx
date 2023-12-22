@@ -12,9 +12,7 @@ import MinerListSection from "@/components/miner/miner-list";
 
 export default function IndexPage() {
   return (
-    <section
-      className="grid items-center gap-4 pb-8 pt-6 md:py-10"
-    >
+    <section className="grid items-center gap-4 pb-8 pt-6 md:py-10">
       <div className="container px-5 md:px-8">
         <img src="/images/bg-gradient.webp" alt="" className="absolute w-full top-0 left-0 -z-10" />
         <HomeSection />
@@ -27,7 +25,7 @@ export default function IndexPage() {
         <IncomeComparison />
         <MainBenifitSection />
       </div>
-      
+
       <LogoSection />
 
       <div className="container px-5 md:px-8">
