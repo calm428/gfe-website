@@ -1,6 +1,9 @@
 "use client";
 
-import { Lock } from "lucide-react"
+import Image from "next/image"
+import Slider from "react-slick"
+import { useState } from "react"
+import { Lock, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export interface Miner {
