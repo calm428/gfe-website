@@ -46,11 +46,12 @@ const page: FC<PageProps> = async ({ params }) => {
         <div className="mt-16">
             <div className="flex justify-between">
                 <h1 className="text-center font-monument font-normal text-xl text-primary md:pb-3 pb-2 uppercase">Stay in the loop</h1>
-                
-                <Link style={{
-                    background:
-                        "linear-gradient(15deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-                }}
+
+                <Link
+                    style={{
+                        background:
+                            "linear-gradient(15deg, #22B4FD 32.53%, #2D79FF 77.26%)",
+                    }}
                     className={cn(buttonVariants(), "font-monument tracking-widest pt-2.5 font-normal hidden md:block")}
                     href={"/blogs-and-news"}
                 >
