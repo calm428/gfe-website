@@ -10,10 +10,6 @@ export const siteConfig = {
       href: "/",
     },
     {
-      title: "SUNBELT Miners",
-      href: "/miners",
-    },
-    {
       title: "How It Works",
       href: "/how-it-works",
     },
@@ -32,8 +28,8 @@ export const siteConfig = {
   ],
   footerLinks: [
     {
-      title: "SUNBELT Miners",
-      href: "/miners",
+      title: "Home",
+      href: "/",
     },
     {
       title: "How It Works",
