@@ -125,3 +125,23 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
+
+.pagination {
+  @apply flex w-full;
+}
+
+.page-item {
+  @apply px-3 hidden lg:block font-monument text-[#727C8F] mt-0.5;
+}
+
+.previous {
+  @apply flex-1;
+}
+
+.next {
+  @apply flex-1 flex justify-end;
+}
+
+ul.react-paginate {
+  @apply flex w-full flex-row justify-between items-center;
+}
