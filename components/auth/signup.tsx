@@ -1,34 +1,25 @@
+import { useContext } from "react"
 import Image from "next/image"
+import { SunbeltContext } from "@/context/context"
 import { Check } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Icons } from "@/components/icons"
 
-export function SignUpModal() {
+export function SignUpModal({
+  open: open,
+  setOpen: setOpen,
+}: {
+  open: boolean
+  setOpen: (open: boolean) => void
+}) {
+  const { setSignInModalOpen, setSignUpModalOpen } = useContext(SunbeltContext)
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
-      </DialogTrigger>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="max-w-[900px] mx-auto w-[90%] p-0">
-        {/* <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
-        </DialogHeader> */}
         <div className="flex">
           <div
             className="w-[55%] hidden md:flex justify-center items-center bg-no-repeat bg-cover bg-center"
@@ -91,15 +82,19 @@ export function SignUpModal() {
             </div>
             <div>
               Already have an account?{" "}
-              <Button variant="link" className="">
+              <Button
+                variant="link"
+                className=""
+                onClick={() => {
+                  setSignInModalOpen(true)
+                  setSignUpModalOpen(false)
+                }}
+              >
                 Sign In Now
               </Button>
             </div>
           </div>
         </div>
-        {/* <DialogFooter>
-          <Button type="submit">Save changes</Button>
-        </DialogFooter> */}
       </DialogContent>
     </Dialog>
   )

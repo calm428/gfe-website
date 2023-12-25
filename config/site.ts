@@ -18,8 +18,8 @@ export const siteConfig = {
       href: "/company",
     },
     {
-      title: "Blogs",
-      href: "/blogs",
+      title: "Blogs and News",
+      href: "/blogs-and-news",
     },
     {
       title: "Contact",

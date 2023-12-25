@@ -39,7 +39,7 @@ export function MainNav({ items }: MainNavProps) {
                     "flex items-center text-sm font-medium font-mont text-muted-foreground px-2 rounded-lg hover:text-primary",
                     item.disabled && "cursor-not-allowed opacity-80",
                     item.href === pathname &&
-                      "text-primary bg-secondary font-semibold",
+                      "text-primary bg-primary/5 font-semibold",
                     item.href === "/contact" && "ml-auto"
                   )}
                 >

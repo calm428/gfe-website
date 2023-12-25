@@ -1,6 +1,8 @@
 "use client"
 
+import { useContext, useState } from "react"
 import Link from "next/link"
+import { SunbeltContext } from "@/context/context"
 
 import { siteConfig } from "@/config/site"
 import { Button, buttonVariants } from "@/components/ui/button"
@@ -20,8 +22,18 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { SignInModal } from "../auth/signin"
 import { SignUpModal } from "../auth/signup"
 import { VerifyModal } from "../auth/verify"
+import { LanguageSelector } from "./language"
 
 export function SiteHeader() {
+  const {
+    signInModalOpen,
+    setSignInModalOpen,
+    signUpModalOpen,
+    setSignUpModalOpen,
+    verifyModalOpen,
+    setVerifyModalOpen,
+  } = useContext(SunbeltContext)
+
   return (
     <header className="bg-background sticky top-0 z-40 w-full border-b">
       <div className="container flex h-20 items-center space-x-4 sm:justify-between sm:space-x-0">
@@ -33,24 +45,16 @@ export function SiteHeader() {
             background:
               "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
           }}
+          onClick={() => setSignInModalOpen(true)}
         >
           Sign In
         </Button>
-        <VerifyModal />
-        <Select defaultValue="en">
-          <SelectTrigger className="w-auto">
-            <SelectValue placeholder="Select a fruit" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectItem value="en">English</SelectItem>
-              <SelectItem value="fr">Spain</SelectItem>
-              <SelectItem value="ru">Russian</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-          <ThemeToggle />
-        </Select>
+        <LanguageSelector />
       </div>
+
+      <SignInModal open={signInModalOpen} setOpen={setSignInModalOpen} />
+      <SignUpModal open={signUpModalOpen} setOpen={setSignUpModalOpen} />
+      <VerifyModal open={verifyModalOpen} setOpen={setVerifyModalOpen} />
     </header>
   )
 }

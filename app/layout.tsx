@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+import App from "@/provider/provider"
 
 import { siteConfig } from "@/config/site"
 import { fontMono, fontMont, fontMonumentExtended, fontSans } from "@/lib/fonts"
@@ -32,7 +33,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
+    <App>
       <html lang="en" suppressHydrationWarning>
         <head />
         <body
@@ -54,6 +55,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </ThemeProvider>
         </body>
       </html>
-    </>
+    </App>
   )
 }
