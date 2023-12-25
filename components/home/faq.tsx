@@ -35,9 +35,7 @@ const FaqSection = () => {
 
             <Accordion type="single" collapsible className='space-y-5 mt-5'>
                 {FAQS.map((faq, index) => (
-                    <AccordionItem value={index.toString()} className='flex items-start'>
-                        {/* <h3 className='py-4 mr-4 font-monument text-primary text-lg'>{index}</h3> */}
-
+                    <AccordionItem key={index} value={index.toString()} className='flex items-start'>
                         <div className='w-full'>
                             <AccordionTrigger>{faq.question}</AccordionTrigger>
                             <AccordionContent>

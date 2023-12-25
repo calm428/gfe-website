@@ -12,7 +12,7 @@ import Image from 'next/image';
 const page = () => {
     return (
         <>
-            <div className='container flex gap-10 mt-16'>
+            <div className='container flex flex-col md:flex-row gap-10 mt-16'>
                 <div className='w-full'>
                     <AspectRatio ratio={1} className="conta">
                         <Image
@@ -25,7 +25,7 @@ const page = () => {
                 </div>
 
                 <div className='w-full'>
-                    <h1 className='font-monument text-primary tracking-wider text-2xl'>Ready to add blockchain solutions to your business or government agency?</h1>
+                    <h1 className='font-monument text-primary tracking-wider text-xl md:text-2xl'>Ready to add blockchain solutions to your business or government agency?</h1>
 
                     <p className='mt-5'>Send us a message and let us know about your needs.</p>
 

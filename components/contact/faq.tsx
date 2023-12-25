@@ -31,13 +31,11 @@ const FAQS = [
 const FaqSection = () => {
     return (
         <div className='mb-32 container mt-16'>
-            <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">Getting Started with SUNBELT Miners</h1>
+            <h1 className="text-center font-monument font-normal text-xl md:text-2xl text-primary md:pb-3 pb-2 uppercase">Getting Started with SUNBELT Miners</h1>
 
             <Accordion type="single" collapsible className='space-y-5 mt-5'>
                 {FAQS.map((faq, index) => (
-                    <AccordionItem value={index.toString()} className='flex items-start'>
-                        {/* <h3 className='py-4 mr-4 font-monument text-primary text-lg'>{index}</h3> */}
-
+                    <AccordionItem key={index} value={index.toString()} className='flex items-start'>
                         <div className='w-full'>
                             <AccordionTrigger>{faq.question}</AccordionTrigger>
                             <AccordionContent>
