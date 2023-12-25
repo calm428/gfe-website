@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export default function InvestSection() {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-6 justify-between pb-32">
+    <div className="flex flex-col md:flex-row items-center gap-6 justify-between">
       <div className="relative bg-[#E7F0FD] px-8 py-12 rounded-xl">
         <div className="text-2xl font-semibold my-4 text-primary">
           Willing to Invest More Than $100K?
