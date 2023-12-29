@@ -34,7 +34,7 @@ export function SiteFooter() {
   return (
     <footer className="relative z-40 w-full border-b bg-primary/5">
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 bg-primary max-w-5xl p-10 lg:mx-auto -mt-20 rounded-3xl mx-8"
+        className="grid grid-cols-1 sm:grid-cols-2 bg-primary max-w-5xl p-5 sm:p-5 md:p-10 lg:mx-auto -mt-20 rounded-3xl mx-4 sm:mx-6 md:mx-8"
         style={{
           background:
             "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%), #1570EF",
@@ -51,7 +51,7 @@ export function SiteFooter() {
           <div className="text-sm text-white font-monument my-1">
             Newsletter
           </div>
-          <div className="flex w-full max-w-sm items-center">
+          <div className="flex w-full  items-center">
             <Input
               type="email"
               placeholder="Email"
