@@ -25,9 +25,10 @@ export default function HeroSection() {
           <h1
             className="font-monument text-3xl text-center md:text-left tracking-[-2%] pb-1 sm:mt-5 md:text-5xl lg:mt-6 xl:leading-[72px]"
             style={{
-              background: "linear-gradient(180deg, #2BADFD 0%, #1570EF 88.02%)",
+              // background: "linear-gradient(180deg, #2BADFD 0%, #1570EF 88.02%)",
               backgroundClip: "text!important",
-              color: "transparent",
+              // color: "transparent",
+              color: "white",
             }}
           >
             Discover SUNBELT Miners

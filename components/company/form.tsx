@@ -10,7 +10,7 @@ const FormSection = () => {
         <div className='mb-32 mt-16 w-full bg-[#E7F0FD] p-5 rounded-xl'>
             <h1 className='text-center text-primary font-monument tracking-wide text-3xl leading-relaxed'>Fill in the form and get a personal offer from our consultant</h1>
 
-            <div className='flex w-full gap-5 mt-10'>
+            <div className='flex flex-col sm:flex-row w-full gap-5 mt-10'>
                 <div className='w-full'>
                     <Label>First Name</Label>
                     <Input placeholder='Name'></Input>
@@ -22,7 +22,7 @@ const FormSection = () => {
                 </div>
             </div>
 
-            <div className='flex w-full gap-5 mt-5'>
+            <div className='flex flex-col sm:flex-row w-full gap-5 mt-5'>
                 <div className='w-full'>
                     <Label>Email</Label>
                     <Input placeholder='Email' type='email'></Input>
