@@ -9,12 +9,15 @@ interface IProps {
 
 const App: React.FC<IProps> = ({ children }) => {
   const [signInModalOpen, setSignInModalOpen] = useState<boolean>(false)
+  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
   const [signUpModalOpen, setSignUpModalOpen] = useState<boolean>(false)
   const [verifyModalOpen, setVerifyModalOpen] = useState<boolean>(false)
 
   return (
     <SunbeltContext.Provider
       value={{
+        mobileNavOpen,
+        setMobileNavOpen,
         signInModalOpen,
         setSignInModalOpen,
         signUpModalOpen,

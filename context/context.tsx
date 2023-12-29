@@ -7,6 +7,8 @@ export type GlobalContent = {
   setSignUpModalOpen: (open: boolean) => void
   verifyModalOpen: boolean
   setVerifyModalOpen: (open: boolean) => void
+  mobileNavOpen: boolean
+  setMobileNavOpen: (open: boolean) => void
 }
 export const SunbeltContext = createContext<GlobalContent>({
   signInModalOpen: false,
@@ -15,5 +17,7 @@ export const SunbeltContext = createContext<GlobalContent>({
   setSignUpModalOpen: () => {},
   verifyModalOpen: false,
   setVerifyModalOpen: () => {},
+  mobileNavOpen: false,
+  setMobileNavOpen: () => {},
 })
 export const useSunbeltContext = () => useContext(SunbeltContext)

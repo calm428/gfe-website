@@ -24,10 +24,10 @@ export function MainNav({ items }: MainNavProps) {
       </Link>
       <Separator
         orientation="vertical"
-        className="h-10 my-auto w-[2px] bg-[#2BADFD] hidden md:block"
+        className="h-10 my-auto w-[2px] bg-[#2BADFD] hidden lg:block"
       />
       {items?.length ? (
-        <nav className="hidden md:flex w-full  gap-6">
+        <nav className="hidden lg:flex w-full  gap-6">
           {items?.map(
             (item, index) =>
               item.href && (
