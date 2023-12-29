@@ -23,18 +23,14 @@ const page = () => {
                         />
                     </AspectRatio>
                 </div>
-
                 <div className='w-full'>
                     <h1 className='font-monument text-primary tracking-wider text-xl md:text-2xl'>Ready to add blockchain solutions to your business or government agency?</h1>
-
                     <p className='mt-5'>Send us a message and let us know about your needs.</p>
-
                     <div className='flex w-full gap-5 mt-10'>
                         <div className='w-full'>
                             <Label>First Name</Label>
                             <Input placeholder='Name'></Input>
                         </div>
-
                         <div className='w-full'>
                             <Label>Last Name</Label>
                             <Input placeholder='Name'></Input>

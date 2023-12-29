@@ -17,18 +17,17 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   const pathname = usePathname()
-
   return (
     <div className="w-full flex gap-6 md:gap-10">
-      <Link href="/" className="flex items-center space-x-2">
+      <Link href="/" className="w-[150px] flex items-center justify-center">
         <Image src="/logo.svg" alt="Logo" width={256} height={32} />
       </Link>
       <Separator
         orientation="vertical"
-        className="h-10 my-auto w-[2px] bg-[#2BADFD]"
+        className="h-10 my-auto w-[2px] bg-[#2BADFD] hidden md:block"
       />
       {items?.length ? (
-        <nav className="w-full flex gap-6">
+        <nav className="hidden md:flex w-full  gap-6">
           {items?.map(
             (item, index) =>
               item.href && (
