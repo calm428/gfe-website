@@ -43,7 +43,11 @@ export function SignUpModal({
             </div>
             <Button variant="outline" className="w-full mt-4">
               <Icons.google className="mr-2 h-4 w-4" />
-              Continue with Google
+              Sign Up with Google
+            </Button>
+            <Button variant="outline" className="w-full mt-4">
+              <Icons.apple className="mr-2 h-5 w-5" />
+              Sign Up with Apple
             </Button>
             <div className="flex items-center justify-center gap-2 relative my-1">
               <div className="p-4 bg-white z-10">OR</div>
@@ -52,7 +56,7 @@ export function SignUpModal({
                 className="absolute w-full mr-auto h-[1px] border-0"
               />
             </div>
-            <div className="space-y-4 mb-12">
+            <div className="space-y-4 mb-4">
               <Input type="username" placeholder="Username" />
               <Input type="email" placeholder="Email" />
               <Input type="password" placeholder="Password" />
