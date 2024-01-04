@@ -9,10 +9,8 @@ import Card from './Card';
 const BlogsSection = () => {
     return (
         <div className='container py-14'>
-            <h1 className='font-monument tracking-wider text-center mb-5 text-2xl text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]'>Blogs</h1>
-
+            <h1 className='font-monument tracking-wider  text-2xl text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]'>Blogs</h1>
             <HighlightsSection />
-
             <div className='mt-8 grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
                 <Card />
                 <Card />
@@ -29,7 +27,7 @@ export default BlogsSection;
 
 function HighlightsSection() {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 md:gap-8 max-w-3xl md:max-w-none mt-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 md:gap-8 max-w-3xl md:max-w-none mt-5'>
             <AspectRatio ratio={16 / 9} className="bg-muted">
                 <Image
                     src="/images/blogs-and-news/highlights.png"
