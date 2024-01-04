@@ -28,28 +28,16 @@ export const siteConfig = {
   ],
   footerLinks: [
     {
-      title: "Home",
-      href: "/",
+      title: "Services",
+      href: "/services",
     },
     {
-      title: "How It Works",
-      href: "/how-it-works",
+      title: "Community",
+      href: "/community",
     },
     {
-      title: "Company",
-      href: "/company",
-    },
-    {
-      title: "Investors",
-      href: "/investors",
-    },
-    {
-      title: "Contact Us",
-      href: "/contact",
-    },
-    {
-      title: "Blogs",
-      href: "/blogs",
+      title: "Blogs && News",
+      href: "/blog-and-news",
     },
   ],
   links: {
@@ -58,8 +46,8 @@ export const siteConfig = {
     docs: "https://ui.shadcn.com",
   },
   contact: {
-    phone: "+1 (555) 123-4567",
+    phone: "+44 687 120 967 2",
     email: "info@sunbelt.com",
-    address: "1254 Cherry Blossom Road, Springfield, IL 63201, United States",
-  }
+    address: "83 McDonald Road, City of Edinburgh, Alba / Scotland, EH7 4NQ, United Kingdom",
+  },
 }
