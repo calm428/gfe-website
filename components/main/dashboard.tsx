@@ -3,8 +3,10 @@
 import React from "react"
 
 import { Icons } from "../icons"
-import TransactionHistory from "./transaction"
 import Balance from "./balance"
+import BuyDapp from "./buyDapp"
+import BuyGfeToken from "./buyGfe"
+import TransactionHistory from "./transaction"
 
 const Dashboard = () => {
   return (
@@ -25,6 +27,10 @@ const Dashboard = () => {
       <div className="flex flex-col md:flex-row gap-5 mt-5">
         <Balance />
         <TransactionHistory />
+      </div>
+      <div className="flex flex-col md:flex-row gap-5 mt-5">
+        <BuyGfeToken />
+        <BuyDapp />
       </div>
     </div>
   )
