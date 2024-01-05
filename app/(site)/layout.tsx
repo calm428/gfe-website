@@ -31,29 +31,11 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function SiteLayout({ children }: RootLayoutProps) {
   return (
-    <App>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body
-          className={cn(
-            "min-h-screen bg-background font-mont antialiased ",
-            fontSans.variable,
-            fontMono.variable,
-            fontMont.variable,
-            fontMonumentExtended.variable
-          )}
-        >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
-            </div>
-            <TailwindIndicator />
-          </ThemeProvider>
-        </body>
-      </html>
-    </App>
+    <div className="relative flex min-h-screen flex-col">
+      <div className="flex-1">{children}</div>
+      <SiteFooter />
+    </div>
   )
 }
