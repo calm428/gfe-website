@@ -22,7 +22,7 @@ const Dashboard = () => {
           <p>United Kingdom</p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-5">
+      <div className="flex flex-col md:flex-row gap-5 mt-5">
         <Balance />
         <TransactionHistory />
       </div>

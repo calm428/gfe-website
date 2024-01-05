@@ -28,6 +28,56 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  deposit: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      {...props}
+    >
+      <circle cx="12" cy="12" r="12" fill="url(#paint0_linear_27_8060)" />
+      <path
+        d="M10.2491 14.4334L7.81661 12.0009L6.98828 12.8234L10.2491 16.0842L17.2491 9.08422L16.4266 8.26172L10.2491 14.4334Z"
+        fill="white"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_27_8060"
+          x1="3.99411"
+          y1="26.02"
+          x2="19.9793"
+          y2="5.03642"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#22B4FD" />
+          <stop offset="1" stop-color="#2D79FF" />
+        </linearGradient>
+      </defs>
+    </svg>
+  ),
+  withdraw: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      {...props}
+    >
+      <circle cx="12" cy="12" r="12" fill="#5A6778" />
+      <g opacity="0.9">
+        <path
+          d="M7.33398 14.3327L7.33398 14.916C7.33398 15.8825 8.11749 16.666 9.08398 16.666L14.9173 16.666C15.8838 16.666 16.6673 15.8825 16.6673 14.916L16.6673 14.3327M14.334 9.66601L12.0007 7.33268M12.0007 7.33268L9.66732 9.66602M12.0007 7.33268L12.0007 14.3327"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+    </svg>
+  ),
   location: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
