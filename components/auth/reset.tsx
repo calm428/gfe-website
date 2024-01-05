@@ -11,14 +11,14 @@ import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { Icons } from "@/components/icons"
 
-export function ForgotPwModal({
+export function ResetModal({
   open: open,
   setOpen: setOpen,
 }: {
   open: boolean
   setOpen: (open: boolean) => void
 }) {
-  const { setSignInModalOpen, setResetModalOpen, setForgotPwModalOpen } =
+  const { setSignInModalOpen, setForgotPwModalOpen } =
     useContext(SunbeltContext)
 
   return (
@@ -42,23 +42,16 @@ export function ForgotPwModal({
           </div>
           <div className="md:w-[45%] w-full p-8 sm:p-24 md:p-8 !py-24">
             <div className="my-4 text-center">
-              <div className="text-3xl font-bold ">Check Email</div>
-              <div> Verify your account</div>
+              <div className="text-3xl font-bold ">Reset Password</div>
+              <div>Change your password</div>
             </div>
             <div className="space-y-4 mb-4">
-              <Input type="email" placeholder="Email" />
-              <Button
-                className="w-full"
-                onClick={() => {
-                  setForgotPwModalOpen(false)
-                  setResetModalOpen(true)
-                }}
-              >
-                Reset Password
-              </Button>
+              <Input type="password" placeholder="New Password" />
+              <Input type="password" placeholder="Confirm Password" />
+              <Button className="w-full">Change Password</Button>
             </div>
             <div>
-              Remember your password?{" "}
+              Didn’t receive code yet?{" "}
               <Button
                 variant="link"
                 className=""

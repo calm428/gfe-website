@@ -27,9 +27,12 @@ import { SignInModal } from "../auth/signin"
 import { SignUpModal } from "../auth/signup"
 import { VerifyModal } from "../auth/verify"
 import { LanguageSelector } from "./language"
+import { ResetModal } from "../auth/reset"
 
 export function SiteHeader() {
   const {
+    resetModalOpen,
+    setResetModalOpen,
     forgotPwModalOpen,
     setForgotPwModalOpen,
     signInModalOpen,
@@ -114,6 +117,7 @@ export function SiteHeader() {
       <ForgotPwModal open={forgotPwModalOpen} setOpen={setForgotPwModalOpen} />
       <SignUpModal open={signUpModalOpen} setOpen={setSignUpModalOpen} />
       <VerifyModal open={verifyModalOpen} setOpen={setVerifyModalOpen} />
+      <ResetModal open={resetModalOpen} setOpen={setResetModalOpen} />
     </header>
   )
 }
