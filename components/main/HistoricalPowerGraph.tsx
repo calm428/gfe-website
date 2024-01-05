@@ -57,8 +57,8 @@ const HistoricalPowerGraph = () => {
 
 
     return (
-        <div className='xl:w-1/2 w-full p-10 drop-shadow-2xl bg-white space-y-5 flex flex-col justify-between'>
-            <h1 className='text-xl font-monument tracking-wider text-primary'>Historical Power Graph (per kwh)</h1>
+        <div className='xl:w-1/3 w-full p-3 drop-shadow-2xl bg-[#FAFAFA]  '>
+            <h1 className='text-[#1A202C] font-normal tracking-wider  text-base'>Historical Power Graph (per kwh)</h1>
             {/* @ts-ignore */}
             <Line id="myChart" data={data} options={options} />
         </div>
