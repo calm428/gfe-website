@@ -1,5 +1,6 @@
 import AdvantagesSection from "@/components/home/advantages"
 import CalculatorSection from "@/components/home/calculator"
+import CommunitySection from "@/components/home/community"
 import FaqSection from "@/components/home/faq"
 import IncomeComparison from "@/components/home/income-comparison"
 import HomeSection from "@/components/home/intro"
@@ -32,6 +33,7 @@ export default function IndexPage() {
       <LogoSection />
       <div className="container px-5 md:px-8">
         <FaqSection />
+        <CommunitySection />
       </div>
     </section>
   )

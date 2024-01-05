@@ -11,14 +11,15 @@ export default function HomeSection() {
     <div className="flex flex-col md:flex-row gap-20 md:gap-6 justify-between items-center py-12 md:py-24">
       <div className="space-y-14">
         <div className="flex flex-col items-start gap-2">
-          {/* TODO: Gradient is confusing */}
-          <h1 className="text-3xl md:text-4xl font-monument font-normal">
-            Bitcoin Mining <br className="hidden sm:inline" />
-            Ecosystem
+          <h1 className="text-3xl md:text-4xl font-monument font-normal text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+            Green Fungible <br className="hidden sm:inline" />
+            Energy - GFE
           </h1>
           <p className="md:text-2xl text-lg max-w-xl text-muted-foreground font-mont">
-            Reliable and profitable platform, providing several new miner
-            hosting service for end users.
+            GFE is trailblazing initiative designed to tokenize green energy,
+            Providing a unique investment opportunity that bridges the gap
+            between environmental impact and economic incentive, while bringing
+            the first global prospective to electrical costs.
           </p>
         </div>
         <div className="flex md:gap-10">
@@ -35,7 +36,7 @@ export default function HomeSection() {
                 "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
             }}
           >
-            Buy Energy
+            Audit
           </Link>
 
           <Link
@@ -64,7 +65,7 @@ export default function HomeSection() {
             )}
           >
             <Icons.play />
-            <span className="ml-4">Intro to Sunbelt</span>
+            <span className="ml-4">Whitepaper</span>
           </Link>
         </div>
       </div>
