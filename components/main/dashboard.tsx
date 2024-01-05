@@ -7,6 +7,8 @@ import { Button } from "../ui/button"
 import Balance from "./balance"
 import BuyDapp from "./buyDapp"
 import BuyGfeToken from "./buyGfe"
+import BuyToken from "./buyToken"
+import MiningPlan from "./miningPlan"
 import TransactionHistory from "./transaction"
 
 const Dashboard = () => {
@@ -35,7 +37,7 @@ const Dashboard = () => {
       </div>
       <div className=" mt-5">
         <p className="text-[#1E293B] text-3xl font-semibold">Btc Mining</p>
-        <div className="flex gap-5">
+        <div className="flex gap-5 mt-5">
           <div className="w-1/4 flex flex-col gap-4">
             <div
               className="p-3 rounded-md w-full text-[#64748B] bg-white border border-[#E7F0FD]"
@@ -98,8 +100,12 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="w-2/4"></div>
-          <div className="w-1/4"></div>
+          <div className="w-2/4">
+            <MiningPlan />
+          </div>
+          <div className="w-1/4">
+            <BuyToken />
+          </div>
         </div>
       </div>
     </div>
