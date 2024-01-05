@@ -15,7 +15,7 @@ const dummyData: OneTransaction[] = [
 
 const TransactionHistory = () => {
   return (
-    <div className="rounded-md p-4 bg-white border border-[#E7F0FD] shadow-md">
+    <div className="rounded-md p-4 bg-white border border-[#E7F0FD] shadow-md w-3/5">
       <div className="flex justify-between items-center">
         <p className="text-xl text-[#383838] font-semibold">
           Transaction History
@@ -40,7 +40,7 @@ interface OneTransaction {
 
 const ATransaction: React.FC<OneTransaction> = ({ id, type, date, amount }) => {
   return (
-    <div className="flex items-center justify-between my-1 font-semibold">
+    <div className="flex items-center justify-between my-1 font-semibold ">
       <div className="flex items-center gap-2">
         {type === "Deposit" ? <Icons.deposit /> : <Icons.withdraw />}
         <div>
