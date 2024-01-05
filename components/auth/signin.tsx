@@ -18,7 +18,8 @@ export function SignInModal({
   open: boolean
   setOpen: (open: boolean) => void
 }) {
-  const { setSignInModalOpen, setSignUpModalOpen } = useContext(SunbeltContext)
+  const { setSignInModalOpen, setSignUpModalOpen, setForgotPwModalOpen } =
+    useContext(SunbeltContext)
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -67,7 +68,7 @@ export function SignInModal({
                   className="text-[#333] text-sm hover:underline transition-all duration-300"
                   onClick={() => {
                     setSignInModalOpen(false)
-                    setForgotPasswordModalOpen(true)
+                    setForgotPwModalOpen(true)
                   }}
                 >
                   Forgot Password

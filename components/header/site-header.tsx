@@ -22,6 +22,7 @@ import { MainNav } from "@/components/header/main-nav"
 import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
 
+import { ForgotPwModal } from "../auth/forgot"
 import { SignInModal } from "../auth/signin"
 import { SignUpModal } from "../auth/signup"
 import { VerifyModal } from "../auth/verify"
@@ -29,6 +30,8 @@ import { LanguageSelector } from "./language"
 
 export function SiteHeader() {
   const {
+    forgotPwModalOpen,
+    setForgotPwModalOpen,
     signInModalOpen,
     setSignInModalOpen,
     mobileNavOpen,
@@ -108,6 +111,7 @@ export function SiteHeader() {
         </Button>
       </div>
       <SignInModal open={signInModalOpen} setOpen={setSignInModalOpen} />
+      <ForgotPwModal open={forgotPwModalOpen} setOpen={setForgotPwModalOpen} />
       <SignUpModal open={signUpModalOpen} setOpen={setSignUpModalOpen} />
       <VerifyModal open={verifyModalOpen} setOpen={setVerifyModalOpen} />
     </header>

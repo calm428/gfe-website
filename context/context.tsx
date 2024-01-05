@@ -1,6 +1,8 @@
 import { createContext, useContext } from "react"
 
 export type GlobalContent = {
+  forgotPwModalOpen: boolean
+  setForgotPwModalOpen: (open: boolean) => void
   signInModalOpen: boolean
   setSignInModalOpen: (open: boolean) => void
   signUpModalOpen: boolean
@@ -11,6 +13,8 @@ export type GlobalContent = {
   setMobileNavOpen: (open: boolean) => void
 }
 export const SunbeltContext = createContext<GlobalContent>({
+  forgotPwModalOpen: false,
+  setForgotPwModalOpen: () => {},
   signInModalOpen: false,
   setSignInModalOpen: () => {},
   signUpModalOpen: false,
