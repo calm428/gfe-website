@@ -1,18 +1,12 @@
 "use client"
 
 import React from "react"
+import Image from "next/image"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 
-import { Button, buttonVariants } from "../ui/button"
+import { Button} from "../ui/button"
 
 const FAQS = [
   {
@@ -39,15 +33,13 @@ const FAQS = [
 
 const CommunitySection = () => {
   return (
-    <div className="my-56">
-      <div
-        className="flex flex-col sm:flex-row justify-between gap-5 items-center  max-w-5xl p-5 sm:p-5 md:p-10 lg:mx-auto -mt-20 rounded-3xl mx-4 sm:mx-6 md:mx-8 bg-[rgba(255,255,255,0.04)]"
-      >
-        <div className="w-full ">
+    <div className="py-[60px]">
+      <div className="p-[60px] flex flex-col md:flex-row justify-between bg-muted rounded-xl">
+        <div className="flex flex-col gap-4 lg:w-[60%]">
           <div className="text-3xl  font-monument  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
             Join our Community
           </div>
-          <div className="text-sm  font-mont font-medium my-1">
+          <div className=" text-sm md:text-base  font-mont auth mb-5 md:mb-0 my-1">
             By joining the GFE project, investors and environmental advocates
             alike can contribute to the development of a sustainable energy
             ecosystem while receiving the economic benefits afforded by
@@ -56,52 +48,49 @@ const CommunitySection = () => {
             power.
           </div>
         </div>
-        <div className="w-full sm:w-fit flex flex-col gap-4">
-          <Link
-            href={siteConfig.links.docs}
-            target="_blank"
-            rel="noreferrer"
-            className={cn(
-              buttonVariants(),
-              "font-monument tracking-widest pt-2.5 font-normal hidden md:block px-10"
-            )}
-            style={{
-              background:
-                "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-            }}
-          >
-            Discord
-          </Link>
-          <Link
-            href={siteConfig.links.docs}
-            target="_blank"
-            rel="noreferrer"
-            className={cn(
-              buttonVariants(),
-              "font-monument tracking-widest pt-2.5 font-normal hidden md:block px-10"
-            )}
-            style={{
-              background:
-                "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-            }}
-          >
-            Telegram
-          </Link>
-          <Link
-            href={siteConfig.links.docs}
-            target="_blank"
-            rel="noreferrer"
-            className={cn(
-              buttonVariants(),
-              "font-monument tracking-widest pt-2.5 font-normal hidden md:block px-10"
-            )}
-            style={{
-              background:
-                "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-            }}
-          >
-            Twitter
-          </Link>
+        <div className="flex flex-col gap-5 md:w-[30%]">
+          <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+            <Link
+              href={siteConfig.links.docs}
+              className="flex items-center gap-3"
+            >
+              <Image
+                src={"/icons/discord.svg"}
+                width={20}
+                height={20}
+                alt="x"
+              />
+              Discord
+            </Link>
+          </Button>
+          <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+            <Link
+              href={siteConfig.links.docs}
+              className="flex items-center gap-3"
+            >
+              <Image
+                src={"/icons/Telegram.svg"}
+                width={20}
+                height={20}
+                alt="x"
+              />
+              Telegram
+            </Link>
+          </Button>
+          <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+            <Link
+              href={siteConfig.links.docs}
+              className="flex items-center gap-3"
+            >
+              <Image
+                src={"/icons/twitter.svg"}
+                width={20}
+                height={20}
+                alt="x"
+              />
+              Twitter
+            </Link>
+          </Button>
         </div>
       </div>
     </div>

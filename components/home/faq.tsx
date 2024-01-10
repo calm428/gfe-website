@@ -39,42 +39,34 @@ const FAQS = [
 
 const FaqSection = () => {
   return (
-    <div className="mb-32">
-      <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">
+    <div className="py-[100px]">
+      <h1 className="text-center  font-monument font-normal text-2xl text-primary pb-[50px] uppercase">
         Get to know <br className="hidden sm:inline" />
         Green Fungible Energy - GFE
       </h1>
 
-      <Accordion type="single" collapsible className="space-y-5 mt-5">
+      <Accordion type="single" collapsible className="space-y-5 mt-5 auth">
         {FAQS.map((faq, index) => (
           <AccordionItem
             key={index}
-            value={index.toString()}
-            className="flex items-start"
+            value={("0"+(index+1)).toString()}
+            className="flex items-start rounded-lg auth accordion"
           >
             <div className="w-full">
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionTrigger className="auth font-semibold text-secondary-foreground hover:no-underline">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-base auth text-muted-foreground">
+                {faq.answer}
+              </AccordionContent>
             </div>
           </AccordionItem>
         ))}
       </Accordion>
-      <div className="flex items-center justify-center py-5">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={cn(
-            buttonVariants(),
-            "font-monument tracking-widest pt-2.5 font-normal hidden md:block"
-          )}
-          style={{
-            background:
-              "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-          }}
-        >
-          View More
-        </Link>
+      <div className="flex items-center justify-center pt-[50px]">
+        <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+          <Link href={siteConfig.links.docs}>View More</Link>
+        </Button>
       </div>
     </div>
   )

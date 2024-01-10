@@ -1,3 +1,4 @@
+import PartnersSection from "@/components/home/PartnersSection"
 import AdvantagesSection from "@/components/home/advantages"
 import CalculatorSection from "@/components/home/calculator"
 import CommunitySection from "@/components/home/community"
@@ -13,25 +14,21 @@ import MinerListSection from "@/components/miner/miner-list"
 
 export default function IndexPage() {
   return (
-    <section className="grid items-center gap-4 pb-8 pt-6 md:py-10">
-      <div className="container px-5 md:px-8">
-        <img
-          src="/images/bg-gradient.webp"
-          alt=""
-          className="absolute w-full top-0 left-0 -z-10"
-        />
+    <section className="grid items-center gap-4 pb-8">
+      <div>
         <HomeSection />
         <SliderSection />
         <SpecsSection />
-        <AdvantagesSection />
+         <AdvantagesSection /> 
         <CalculatorSection />
-        <MinerListSection />
-        <WhySunbeltSection />
-        <IncomeComparison />
-        <MainBenifitSection />
+        <PartnersSection/>
+        {/* <MinerListSection /> */}
+        {/* <WhySunbeltSection /> */}
+        {/* <IncomeComparison /> */}
+        {/* <MainBenifitSection /> */}
       </div>
-      <LogoSection />
-      <div className="container px-5 md:px-8">
+      {/* <LogoSection /> */}
+      <div className=" px-5 lg:px-24 bg-[url('/bgs/bg.svg')] bg-cover pb-[300px] md:pb-[150px]">
         <FaqSection />
         <CommunitySection />
       </div>

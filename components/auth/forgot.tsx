@@ -23,7 +23,7 @@ export function ForgotPwModal({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-[900px] mx-auto w-[90%] p-0">
+      <DialogContent className="max-w-[900px] mx-auto w-[90%] p-0 auth">
         <div className="flex">
           <div
             className="w-[55%] hidden md:flex justify-center items-center bg-no-repeat bg-cover bg-center"
