@@ -11,32 +11,37 @@ import Counter from "./Counter"
 
 export default function HomeSection() {
   return (
-    <div className="relative px-5 lg:px-24 flex flex-col lg:flex-row justify-between  lg:pt-24 pb-20 lg:pb-56 bg-cover bg-center"
-    style={{
-      backgroundImage:"url('/bgs/Patterns.svg'),url('/bgs/intro.jpg')",
-    }}
+    <div
+      className="relative px-5 lg:px-12 flex flex-col lg:flex-row justify-between  lg:pt-24 pb-20 lg:pb-56 bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/bgs/Patterns.svg'),url('/bgs/intro.jpg')",
+      }}
     >
       <div className="w-full lg:w-[45%] xl:w-[55%] flex flex-col justify-between">
         <div className="flex flex-col items-start gap-[56px] mb-5">
           <div className="flex flex-col gap-[16px]">
-            <h1 className="text-[42px] xl:text-[50px] font-monument font-normal text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+            <h1 className="text-[42px] md:text-[52px] xl:text-[62px] font-monument font-normal text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
               Green Fungible <br className="hidden sm:inline" />
               Energy - GFE
             </h1>
-            <p className="lg:text-[18px] xl:text-[20px] pr-5  text-muted-foreground font-mont auth">
+            <p className="lg:text-[18px] xl:text-[20px] pr-5 font-semibold text-muted-foreground font-mont auth">
               GFE is trailblazing initiative designed to tokenize green energy,
               Providing a unique investment opportunity that bridges the gap
               between environmental impact and economic incentive, while
               bringing the first global prospective to electrical costs.
             </p>
           </div>
-          <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 auth mb-7 md:mb-0">
-            <Button className=" bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+          <div className="w-full flex flex-col md:flex-row gap-2 md:gap-3 auth mb-7 md:mb-0">
+            <Button className="w-[130px] h-[50px] bg-gradient-to-l from-[#2BADFD] to-[#1570EF] font-bold">
               <Link href={siteConfig.links.docs}>Audit</Link>
             </Button>
-            <Button className="bg-backround hover:bg-muted border border-secondary-foreground text-secondary-foreground">
-              <Link href={siteConfig.links.docs} className="flex items-center justify-between gap-3">
-                <Icons.play />
+
+            <Button className="h-[50px] bg-backround bg-white hover:bg-muted border border-secondary-foreground text-muted-foreground font-bold">
+              <Link
+                href={siteConfig.links.docs}
+                className="flex items-center justify-between gap-3"
+              >
+                <Icons.paper />
                 <span>Whitepaper</span>
               </Link>
             </Button>

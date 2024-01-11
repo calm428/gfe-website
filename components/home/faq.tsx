@@ -53,7 +53,7 @@ const FaqSection = () => {
             className="flex items-start rounded-lg auth accordion"
           >
             <div className="w-full">
-              <AccordionTrigger className="auth font-semibold text-secondary-foreground hover:no-underline">
+              <AccordionTrigger className="auth font-semibold hover:no-underline text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-base auth text-muted-foreground">

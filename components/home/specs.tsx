@@ -105,13 +105,13 @@ export default function SpecsSection() {
         <h1 className=" font-monument text-[30px] md:text-[45px] font-normal text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
           Functionalities
         </h1>
-        <p className="auth text-base lg:text-[20px] text-muted-foreground lg:w-1/2">
+        <p className="auth text-base lg:text-[20px] text-muted-foreground lg:w-1/2 font-medium">
           This twofold implication of GFE tokens mean that not only do they
           serve as tradable assets with income, they are reflective of
           sustainable practices and have tangible, real-world utility.
         </p>
       </div>
-      <div className=" relative grid  lg:grid-cols-4 gap-6 z-30">
+      <div className=" relative grid lg:grid-cols-2 xl:grid-cols-4  gap-6 z-30">
         {features.map((feature) => (
           <FeatureDiv
             icon={feature.icon}
@@ -121,9 +121,17 @@ export default function SpecsSection() {
           />
         ))}
       </div>
-      <img src="/bgs/grid.jpg" alt="bg" className=" hidden lg:block absolute top-0 left-0 w-1/2 " />
-      <img src="/bgs/global.jpg" alt="bg" className=" absolute bottom-0 xl:top-0 -right-[100px] opacity-50 " />
-        <img src="/bgs/right1.png" alt="bgs" className="absolute -bottom-5" />
+      <img
+        src="/bgs/grid.jpg"
+        alt="bg"
+        className=" hidden lg:block absolute top-0 left-0 w-1/2 "
+      />
+      <img
+        src="/bgs/global.jpg"
+        alt="bg"
+        className=" absolute bottom-0 xl:top-0 -right-[100px] opacity-50 "
+      />
+      <img src="/bgs/right1.png" alt="bgs" className="absolute -bottom-5 w-full" />
     </div>
   )
 }

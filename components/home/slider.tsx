@@ -36,14 +36,14 @@ const SLIDE_DATA = [
 ]
 
 const SliderSection = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-    };
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  }
 
   return (
     // <div className=' container pb-52 hidden lg:block'>
@@ -87,9 +87,7 @@ const SliderSection = () => {
           practices and have tangible, real-world utility.
         </p>
       </div>
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   )
 }

@@ -280,6 +280,7 @@ export const Icons = {
     <img src={"/icons/ada.png"} alt="eth" width={20} />
   ),
   play: () => <img src={"/icons/play-icon.png"} alt="Logo" width={20} />,
+  paper: () => <img src={"/icons/paper.png"} alt="paper" width={14} />,
   google: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

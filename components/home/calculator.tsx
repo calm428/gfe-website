@@ -78,8 +78,8 @@ function CalculatorSection() {
       {/* main */}
       <div className="flex flex-col gap-12 lg:w-1/2">
         <div className="flex flex-col gap-6">
-          <div>
-            <h1 className="font-medium auth py-[8px] px-[16px] text-base md:text-[20px] w-fit rounded-sm bg-[#EEF5FF] text-primary">
+          <div className="bg-[#EEF5FF] w-[100px] rounded-sm">
+            <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]  font-medium auth py-[8px] px-[16px] text-base md:text-[20px] w-fit ">
               Future
             </h1>
           </div>
@@ -114,6 +114,11 @@ function CalculatorSection() {
           </Button>
         </div>
       </div>
+      {/* <img
+        src="/bgs/global.jpg"
+        alt="bg"
+        className=" absolute bottom-0 xl:top-0 -right-[100px] opacity-50 "
+      /> */}
     </div>
   )
 }

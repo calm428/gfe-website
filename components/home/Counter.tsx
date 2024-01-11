@@ -47,8 +47,8 @@ function Counter() {
   }
   const payments = siteConfig.payments
   return (
-    <div className="pb-[32px] auth font-mont w-full lg:w-[500px] xl:w-[480px] bg-background rounded-lg overflow-hidden shadow-lg">
-      <div className="p-[32px] flex flex-col gap-[24px] bg-muted">
+    <div className="mx-auto pb-[32px] auth font-mont w-full lg:w-[500px] xl:w-[480px] bg-background rounded-lg overflow-hidden shadow-lg">
+      <div className="p-[32px] flex flex-col gap-[24px] bg-[#F9FCFF]">
         <div className="text-center">
           <h2 className="text-[24px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
             Buy In Before Price Increases!
@@ -72,7 +72,7 @@ function Counter() {
             {payments.map((payment) => (
               <div
                 key={payment.name}
-                className=" text-xs flex py-[9px] p-[9px] gap-[5px] items-center bg-muted rounded-[5px]"
+                className=" text-xs flex py-[5px] pr-[24px] pl-[] gap-[5px] items-center bg-muted rounded-[5px]"
               >
                 <Image
                   src={payment.icon}
@@ -102,7 +102,7 @@ function Counter() {
               <Input type="number" placeholder="0" />
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-[16px]">
+          <div className="flex flex-col justify-center items-center gap-[5px]">
             <h1 className=" text-muted-foreground font-medium">
               USDT Raised:
               <span className="font-bold">$5,667,950.07 / $6,258,616</span>

@@ -19,7 +19,7 @@ function AdvantageDiv({ title, desc, image }: Props) {
           <p className="auth text-base font-medium w-[80%] ">{desc}</p>
         </div>
         <div>
-          <Button className="bg-gradient-to-l auth from-[#2BADFD] to-[#1570EF] py-4 px-8">
+          <Button className="bg-gradient-to-l auth from-[#2BADFD] to-[#1570EF] py-4 px-5">
             Read More
           </Button>
         </div>

@@ -19,9 +19,9 @@ export default function IndexPage() {
         <HomeSection />
         <SliderSection />
         <SpecsSection />
-         <AdvantagesSection /> 
+        <AdvantagesSection />
         <CalculatorSection />
-        <PartnersSection/>
+        <PartnersSection />
         {/* <MinerListSection /> */}
         {/* <WhySunbeltSection /> */}
         {/* <IncomeComparison /> */}
