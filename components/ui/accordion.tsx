@@ -12,10 +12,15 @@ const AccordionItem = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("data-[state=closed]:bg-[#E7F0FD] data-[state=open]:shadow-md px-5", className)}
+    className={cn(
+      "data-[state=closed]:bg-[#E7F0FD] data-[state=open]:shadow-md px-5",
+      className
+    )}
     {...props}
   >
-    <h3 className='py-4 mr-4 font-monument  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]    text-2xl'>{props.value}</h3>
+    <h3 className="py-4 mr-4 font-monument  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]    text-2xl">
+      {props.value}
+    </h3>
     {children}
   </AccordionPrimitive.Item>
 ))

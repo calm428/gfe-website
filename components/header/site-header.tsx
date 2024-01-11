@@ -90,20 +90,19 @@ export function SiteHeader() {
             <LanguageSelector />
           </div>
           <div className="flex lg:hidden gap-1">
-            <LanguageSelector  />
-          <Button
-            variant="default"
-            className="block lg:hidden whitespace-nowrap font-semibold font-mont !mx-2"
-            style={{
-              background:
-                "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-            }}
-            onClick={(e) => setMobileNavOpen(true)}
-          >
-            <Menu />
-          </Button>
+            <LanguageSelector />
+            <Button
+              variant="default"
+              className="block lg:hidden whitespace-nowrap font-semibold font-mont !mx-2"
+              style={{
+                background:
+                  "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
+              }}
+              onClick={(e) => setMobileNavOpen(true)}
+            >
+              <Menu />
+            </Button>
           </div>
-          
         </div>
         <SignInModal open={signInModalOpen} setOpen={setSignInModalOpen} />
         <ForgotPwModal
@@ -296,16 +295,16 @@ export function SiteHeader() {
                 Blogs and News
               </Link>
               <Button
-              variant="default"
-              className="whitespace-nowrap font-semibold font-mont w-[80%]"
-              style={{
-                background:
-                  "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-              }}
-              onClick={() => setSignInModalOpen(true)}
-            >
-              Sign In
-            </Button>
+                variant="default"
+                className="whitespace-nowrap font-semibold font-mont w-[80%]"
+                style={{
+                  background:
+                    "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
+                }}
+                onClick={() => setSignInModalOpen(true)}
+              >
+                Sign In
+              </Button>
               <Link
                 href={"/contacts"}
                 className={`${navMenuStyle} ${

@@ -4,13 +4,13 @@ import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
 import BecomeAMemberSection from "@/components/company/become-a-member"
 import CertificateSection from "@/components/company/certificate"
+import FormSection from "@/components/company/form"
 import GoalSection from "@/components/company/goal"
 import HeroSection from "@/components/company/hero"
 import InvestSection from "@/components/company/invest"
 import LocationSection from "@/components/company/location"
 import OverviewSection from "@/components/company/overview"
 import UpcomingEventsSection from "@/components/company/upcoming-events"
-import FormSection from "@/components/company/form"
 
 export default function IndexPage() {
   return (
@@ -60,9 +60,7 @@ export default function IndexPage() {
           <CertificateSection />
         </div>
       </section>
-      <section
-        className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat"
-      >
+      <section className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat">
         <div className="container">
           <UpcomingEventsSection />
         </div>

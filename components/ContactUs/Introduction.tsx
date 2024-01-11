@@ -97,9 +97,7 @@ function Introduction() {
             </div>
             <div>
               <h2>Subject</h2>
-              <Textarea
-                placeholder="Tell us about what you think..."
-              />
+              <Textarea placeholder="Tell us about what you think..." />
             </div>
           </div>
           <Button className=" font-mont auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">

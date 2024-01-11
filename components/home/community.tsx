@@ -6,7 +6,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 
-import { Button} from "../ui/button"
+import { Button } from "../ui/button"
 
 const FAQS = [
   {

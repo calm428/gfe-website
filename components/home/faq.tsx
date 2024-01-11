@@ -49,7 +49,7 @@ const FaqSection = () => {
         {FAQS.map((faq, index) => (
           <AccordionItem
             key={index}
-            value={("0"+(index+1)).toString()}
+            value={("0" + (index + 1)).toString()}
             className="flex items-start rounded-lg auth accordion"
           >
             <div className="w-full">
