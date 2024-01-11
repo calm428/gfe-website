@@ -1,13 +1,14 @@
 import React from "react"
+import Image from "next/image"
 
 function AboutDappr() {
   return (
-    <div className=" relative pt-24 xl:pl-24 xl:flex gap-12 bg-[url('/bgs/bg2.svg')] bg-cover pb-[720px]">
+    <div className="relative pt-24 xl:pl-24 xl:flex gap-12 bg-[url('/images/nft/bg1.png')] bg-cover bg-no-repeat bg-center pb-[1500px] xl:pb-[900px]">
       <div className="flex px-5 lg:px-24  xl:px-0 flex-col gap-6 xl:w-1/2">
         <h1 className="font-medium auth py-[8px] px-[16px] text-base md:text-[20px] w-fit rounded-sm bg-[#EEF5FF] text-primary">
           About DAPPr NFT
         </h1>
-        <h1 className="  text-[45px] font-monument text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+        <h1 className="text-5xl font-goldman text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
           About DAPPr NFT
         </h1>
         <p className="auth text-base md:text-lg font-mont ">
@@ -51,8 +52,14 @@ function AboutDappr() {
           </span>
         </p>
       </div>
-      <div className=" pl-16 lg:pl-0 flex justify-center bg-opacity-45 backdrop-blur">
-        <img src="/images/222.svg" alt="image" className="" />
+      <div className="pl-16 lg:pl-0 flex justify-center items-center bg-opacity-45 backdrop-blur">
+        <Image
+          src="/images/nft/dappr.svg"
+          alt="image"
+          width={769}
+          height={771}
+          className=""
+        />
       </div>
     </div>
   )

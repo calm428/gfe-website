@@ -8,7 +8,7 @@ function Step({ step, desc }: Props) {
   return (
     <div className="flex flex-col items-center gap-4">
       <div
-        className={`block lg:hidden p-8 border-[20px] rounded-full ${
+        className={`block md:hidden p-8 border-[20px] rounded-full ${
           step <= 2
             ? "border-[#019CF0]"
             : step === 3
@@ -18,7 +18,7 @@ function Step({ step, desc }: Props) {
             : "border-[#BAC82E]"
         }`}
       >
-        <h1
+        <div
           className={` font-mont auth text-[24px] font-semibold ${
             step <= 2
               ? "text-[#019CF0]"
@@ -30,9 +30,9 @@ function Step({ step, desc }: Props) {
           }`}
         >
           S {step}
-        </h1>
+        </div>
       </div>
-      <h1
+      <div
         className={`  ${
           step <= 2
             ? "text-[#019CF0]"
@@ -44,8 +44,8 @@ function Step({ step, desc }: Props) {
         } font-monument font-semibold text-lg xl:text-[24px]`}
       >
         Stage {step}
-      </h1>
-      <p className="auth text-base text-center">{desc}</p>
+      </div>
+      <p className="auth text-center lg:text-lg text-sm">{desc}</p>
     </div>
   )
 }

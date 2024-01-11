@@ -3,7 +3,13 @@ import { Metadata } from "next"
 import App from "@/provider/provider"
 
 import { siteConfig } from "@/config/site"
-import { fontMono, fontMont, fontMonumentExtended, fontSans } from "@/lib/fonts"
+import {
+  fontGoldman,
+  fontMono,
+  fontMont,
+  fontMonumentExtended,
+  fontSans,
+} from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteFooter } from "@/components/footer"
 import { SiteHeader } from "@/components/header/site-header"
@@ -42,6 +48,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable,
             fontMono.variable,
             fontMont.variable,
+            fontGoldman.variable,
             fontMonumentExtended.variable
           )}
         >

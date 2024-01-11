@@ -51,7 +51,7 @@ function FAQ() {
   return (
     <div className="py-24 px-5  flex flex-col gap-[50px]">
       <div className="flex flex-col gap-4 items-center">
-        <h1 className="text-[45px] font-monument text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+        <h1 className="text-5xl font-goldman text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
           FAQ
         </h1>
         <p className="auth text-lg font-mont auth">
