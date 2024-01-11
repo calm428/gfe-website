@@ -41,7 +41,7 @@ export function SiteFooter() {
             className=" absolute -top-10 left-7"
           />
           <div className="w-full md:w-[50%]">
-            <div className="text-3xl text-white font-monument">
+            <div className="text-3xl text-white font-mont font-semibold">
               Not a member of our exclusive newsletter?
             </div>
             <div className="text-base text-white font-mont auth font-normal mt-4">
@@ -51,7 +51,7 @@ export function SiteFooter() {
             </div>
           </div>
           <div className="w-full sm:w-[50%]">
-            <div className="text-base text-white font-monument my-1">
+            <div className="text-base text-white font-mont font-medium my-1">
               Newsletter
             </div>
             <div className="flex w-full  items-center auth">
@@ -158,7 +158,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="w-full text-center text-xs uppercase text-primary font-medium auth py-4 bg-primary/10">
-        COPYRIGHT © 2023 TRADEVISION. ALL RIGHTS RESERVED
+        © 2024 GFE Foundation. ALL RIGHTS RESERVED
       </div>
     </footer>
   )
