@@ -57,7 +57,10 @@ export function MainNav({ items }: MainNavProps) {
                       token functionalities
                     </h1>
                     {token_functionalities.map((functionality) => (
-                      <Link href={"#"} className="flex gap-2 py-[10px]">
+                      <Link
+                        href={functionality.href}
+                        className="flex gap-2 py-[10px]"
+                      >
                         <div>
                           <Image
                             src={functionality.icon}
@@ -86,24 +89,27 @@ export function MainNav({ items }: MainNavProps) {
                       Industries
                     </h1>
                     <div className="grid grid-cols-2 gap-2">
-                      {industry.map((functionality) => (
-                        <Link href={"#"} className="flex gap-2 py-[10px]">
+                      {industry.map((industry) => (
+                        <Link
+                          href={industry.href}
+                          className="flex gap-2 py-[10px]"
+                        >
                           <div>
                             <Image
-                              src={functionality.icon}
+                              src={industry.icon}
                               width={20}
                               height={20}
-                              alt={functionality.title}
+                              alt={industry.title}
                               className=" min-w-5"
                             />
                           </div>
                           <div>
-                            <p key={functionality.title}>
+                            <p key={industry.title}>
                               <p className=" font-mont text-[14px] font-semibold capitalize">
-                                {functionality.title}
+                                {industry.title}
                               </p>
                               <ExpandableText
-                                children={functionality.desc}
+                                children={industry.desc}
                                 maxChars={60}
                               />
                             </p>
