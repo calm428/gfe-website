@@ -3,7 +3,7 @@ import { AdvantageCard } from './advantage-card';
 
 const WhySunbeltSection = () => {
     return (
-        <div className='md:pt-20 pt-12'>
+        <div className=' container md:pt-20 pt-12'>
             <div className="md:pb-14 pb-10">
                 <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">Why Sunbelt?</h1>
                 <h3 className="font-mont text-lg text-center">Our own power plant, strong team, the best partners support to form our unique infrastructure that provides sustainable mining service to users with reliability, stability, profitability and confidence in the future.</h3>

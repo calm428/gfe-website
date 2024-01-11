@@ -183,7 +183,7 @@ export default function MinerListSection() {
 
 
   return (
-    <div className="flex flex-col items-center gap-10 justify-between md:mt-5">
+    <div className=" container flex flex-col items-center gap-10 justify-between md:mt-5">
       <div className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">
         List of Miners
       </div>

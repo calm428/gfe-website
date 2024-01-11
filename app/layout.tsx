@@ -3,7 +3,13 @@ import { Metadata } from "next"
 import App from "@/provider/provider"
 
 import { siteConfig } from "@/config/site"
-import { fontMono, fontMont, fontMonumentExtended, fontSans } from "@/lib/fonts"
+import {
+  fontGoldman,
+  fontMono,
+  fontMont,
+  fontMonumentExtended,
+  fontSans,
+} from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteFooter } from "@/components/footer"
 import { SiteHeader } from "@/components/header/site-header"
@@ -42,14 +48,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable,
             fontMono.variable,
             fontMont.variable,
+            fontGoldman.variable,
             fontMonumentExtended.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <div className="flex-1">{children}</div>
-              <SiteFooter />
             </div>
             <TailwindIndicator />
           </ThemeProvider>

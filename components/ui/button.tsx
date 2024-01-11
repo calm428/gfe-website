@@ -37,14 +37,24 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
+  gradient?: boolean  // Add a gradient prop
+
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false,gradient, ...props }, ref) => {
+
+
     const Comp = asChild ? Slot : "button"
+
+    const gradientStyles = gradient ? {backgroundImage: 'linear-gradient(276.95deg, #22B4FD 32.53%, #2D79FF 77.26%)'} : {};
+
+
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
+        style={{ ...gradientStyles }} 
         ref={ref}
         {...props}
       />

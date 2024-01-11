@@ -1,4 +1,4 @@
-import { JetBrains_Mono as FontMono, Inter as FontSans, Montserrat } from "next/font/google";
+import { JetBrains_Mono as FontMono, Inter as FontSans, Montserrat, Goldman as FontGoldman } from "next/font/google";
 import localFont from 'next/font/local';
 
 export const fontMont = Montserrat({
@@ -15,6 +15,12 @@ export const fontSans = FontSans({
 export const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono",
+});
+
+export const fontGoldman = FontGoldman({
+  subsets: ["latin"],
+  variable: "--font-goldman",
+  weight: ["400", "700"]
 });
 
 export const fontMonumentExtended = localFont({

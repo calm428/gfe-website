@@ -2,7 +2,7 @@ import React from 'react';
 
 const IncomeComparison = () => {
     return (
-        <div className='py-10 md:py-16'>
+        <div className=' container py-10 md:py-16'>
             <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">Income Comparison With Major Vendors</h1>
 
             <div className='py-10 grid grid-cols-1 xl:grid-cols-10 gap-7 '>

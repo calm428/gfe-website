@@ -3,7 +3,7 @@ import { AdvantageCard } from './advantage-card';
 
 const MainBenifitSection = () => {
   return (
-    <div className='py-10 grid grid-cols-1 xl:grid-cols-5'>
+    <div className=' container py-10 grid grid-cols-1 xl:grid-cols-5'>
       <div className="md:pb-14 pb-10 col-span-4">
         <h1 className="text-start font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">Main Benefit </h1>
         <h3 className="font-mont font-medium text-muted-foreground md:text-xl text-start">We secure our future by promoting renewable energy resources. Our expert team take care of the regular maintenance and warranty servicing of your machine.</h3>
