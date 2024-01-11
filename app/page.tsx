@@ -1,38 +1,37 @@
-import Link from "next/link"
-
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import AdvantagesSection from "@/components/home/advantages"
+import CalculatorSection from "@/components/home/calculator"
+import FaqSection from "@/components/home/faq"
+import IncomeComparison from "@/components/home/income-comparison"
+import HomeSection from "@/components/home/intro"
+import LogoSection from "@/components/home/logo-section"
+import MainBenifitSection from "@/components/home/main-benifit"
+import SliderSection from "@/components/home/slider"
+import SpecsSection from "@/components/home/specs"
+import WhySunbeltSection from "@/components/home/why-sunbelt"
+import MinerListSection from "@/components/miner/miner-list"
 
 export default function IndexPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
-        </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
+    <section className="grid items-center gap-4 pb-8 pt-6 md:py-10">
+      <div className="container px-5 md:px-8">
+        <img
+          src="/images/bg-gradient.webp"
+          alt=""
+          className="absolute w-full top-0 left-0 -z-10"
+        />
+        <HomeSection />
+        <SliderSection />
+        <SpecsSection />
+        <AdvantagesSection />
+        <CalculatorSection />
+        <MinerListSection />
+        <WhySunbeltSection />
+        <IncomeComparison />
+        <MainBenifitSection />
       </div>
-      <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants()}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline" })}
-        >
-          GitHub
-        </Link>
+      <LogoSection />
+      <div className="container px-5 md:px-8">
+        <FaqSection />
       </div>
     </section>
   )
