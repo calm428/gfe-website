@@ -40,7 +40,7 @@ const FAQS = [
 const FaqSection = () => {
   return (
     <div className="py-[100px]">
-      <h1 className="text-center  font-monument font-normal text-2xl text-primary pb-[50px] uppercase">
+      <h1 className="text-center font-goldman text-3xl text-primary pb-[50px] uppercase">
         Get to know <br className="hidden sm:inline" />
         Green Fungible Energy - GFE
       </h1>
