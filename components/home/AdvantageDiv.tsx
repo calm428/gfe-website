@@ -24,8 +24,20 @@ function AdvantageDiv({ title, desc, image }: Props) {
           </Button>
         </div>
       </div>
-      <Image src={image} width={639} height={500} alt={title} className=" self-end" />
-      <Image src={"/advantages/grid.svg"} width={539} height={400} alt="img" className="absolute bottom-0 right-0"/>
+      <Image
+        src={image}
+        width={639}
+        height={500}
+        alt={title}
+        className=" self-end"
+      />
+      <Image
+        src={"/advantages/grid.svg"}
+        width={539}
+        height={400}
+        alt="img"
+        className="absolute bottom-0 right-0"
+      />
     </div>
   )
 }

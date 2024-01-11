@@ -90,7 +90,7 @@ export function SignInModal({
               </Link>
             </p>
             <div className=" text-xs flex items-center justify-center">
-             <p> Don't have an account?</p>
+              <p> Don't have an account?</p>
               <Button
                 variant="link"
                 className="text-xs"

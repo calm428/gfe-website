@@ -1,11 +1,12 @@
 "use client"
 
 import react from "react"
+import Image from "next/image"
 
 const AboutGFE = () => {
   return (
     <div className=" py-20 lg:py-24 flex flex-col items-center gap-20">
-      <p className="auth  px-5 lg:px-24 font-mont text-base md:text-lg font-semibold text-muted-foreground">
+      <p className="auth px-5 lg:px-24 font-mont text-base md:text-lg font-semibold text-black">
         GFE foundation’s vision started with a simple question: why do we know
         so many people who want solar power, and no one is purchasing it. That
         question is still being answered; but a large part of the answer is
@@ -43,7 +44,12 @@ const AboutGFE = () => {
           </div>
         </div>
         <div className="flex justify-end">
-        <img src="/images/image1.svg" alt="image" className=" md:w-[70%] lg:w-auto" />
+          <Image
+            src="/images/about-us/nft1.svg"
+            alt="image"
+            width={873}
+            height={780}
+          />
         </div>
       </div>
     </div>

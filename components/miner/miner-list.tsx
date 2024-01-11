@@ -1,9 +1,10 @@
-"use client";
+"use client"
 
-import Image from "next/image"
-import Slider from "react-slick"
 import { useState } from "react"
-import { Lock, ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
+import { ChevronLeft, ChevronRight, Lock } from "lucide-react"
+import Slider from "react-slick"
+
 import { Button } from "@/components/ui/button"
 
 export interface Miner {
@@ -145,11 +146,11 @@ function MinerCard({ miner }: { miner: Miner }) {
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default function MinerListSection() {
-  const [slider, setSlider] = useState<any>(null);
+  const [slider, setSlider] = useState<any>(null)
 
   const settings = {
     dots: true,
@@ -171,16 +172,15 @@ export default function MinerListSection() {
         },
       },
     ],
-  };
+  }
 
   const next = () => {
-    slider?.slickNext();
-  };
+    slider?.slickNext()
+  }
 
   const previous = () => {
-    slider?.slickPrev();
-  };
-
+    slider?.slickPrev()
+  }
 
   return (
     <div className=" container flex flex-col items-center gap-10 justify-between md:mt-5">
@@ -206,10 +206,14 @@ export default function MinerListSection() {
         </div>
 
         <div className="w-full flex justify-center mt-10">
-          <Button style={{
+          <Button
+            style={{
               background:
                 "linear-gradient(9deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-            }}>Plan For Mining</Button>
+            }}
+          >
+            Plan For Mining
+          </Button>
         </div>
       </div>
     </div>

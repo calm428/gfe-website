@@ -131,7 +131,11 @@ export default function SpecsSection() {
         alt="bg"
         className=" absolute bottom-0 xl:top-0 -right-[100px] opacity-50 "
       />
-      <img src="/bgs/right1.png" alt="bgs" className="absolute -bottom-5 w-full" />
+      <img
+        src="/bgs/right1.png"
+        alt="bgs"
+        className="absolute -bottom-5 w-full"
+      />
     </div>
   )
 }

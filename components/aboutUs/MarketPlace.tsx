@@ -1,14 +1,13 @@
 "use client"
 
 import React from "react"
+import Image from "next/image"
 
 function MarketPlace() {
   return (
-    <div className=" pt-24 lg:py-24 lg:pl-24 bg-gradient-to-t from-[#2BADFD] to-[#1570EF] grid lg:grid-cols-2 place-items-center gap-[150px]">
+    <div className=" pt-24 lg:py-24 lg:pl-24 bg-gradient-to-t from-[#2BADFD] to-[#1570EF] grid lg:grid-cols-2 place-items-center gap-6">
       <div className="flex px-5 lg:px-0 flex-col gap-8 text-primary-foreground">
-        <h1 className="font-monument text-[40px]">
-          Electricity Market Landscape
-        </h1>
+        <h1 className="text-5xl font-goldman">Electricity Market Landscape</h1>
         <p className=" text-base lg:text-lg auth font-mont">
           The global energy market is estimated to be worth: $2trillion.
           However, it is largely centralized by a few corporations. These
@@ -56,7 +55,12 @@ function MarketPlace() {
         </div>
       </div>
       <div className="">
-        <img src="/images/225.svg" alt="image" className="w-full" />
+        <Image
+          src={"/images/about-us/nft4.svg"}
+          width={808}
+          height={943}
+          alt="image"
+        />
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 
 function FaqSection() {
   return (
@@ -32,7 +33,13 @@ function FaqSection() {
         </div>
       </div>
       <div className="flex items-center justify-center xl:justify-start">
-        <img src="/images/Image.jpg" alt="image" className="xl:h-[80%] xl:-ml-5" />
+        <Image
+          src="/images/about-us/person.png"
+          alt="image"
+          width={534}
+          height={654}
+          className="w-auto xl:h-[80%] xl:-ml-5"
+        />
       </div>
     </div>
   )

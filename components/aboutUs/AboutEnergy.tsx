@@ -1,12 +1,13 @@
 "use client"
 
 import React from "react"
+import Image from "next/image"
 
 function AboutEnergy() {
   return (
     <div className="pt-24 bg-[#F9FCFF]">
       <div className="flex flex-col items-center gap-6 px-5 lg:px-24 ">
-        <h1 className=" text-[40px] lg:text-[45px] font-monument text-center text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+        <h1 className="text-5xl font-goldman text-center text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
           Views on energy
         </h1>
         <p className="auth font-mont text-base md:text-lg font-medium lg:w-[1000px] text-center">
@@ -19,7 +20,13 @@ function AboutEnergy() {
       </div>
       <div className="flex flex-col lg:flex-row pt-14">
         <div>
-          <img src="/images/555.svg" alt="image" className="lg:w-[90%]" />
+          <Image
+            src="/images/about-us/nft2.svg"
+            alt="image"
+            width={838}
+            height={689}
+            className="lg:w-[90%]"
+          />
         </div>
         <div className="flex flex-col gap-8 px-5 lg:px-0 lg:pr-24 lg:w-1/2">
           <p className="auth font-mont text-base md:text-lg font-medium">
@@ -58,14 +65,26 @@ function AboutEnergy() {
           </p>
         </div>
         <div className="flex justify-end">
-          <img src="/images/223.svg" alt="image" className="lg:w-[90%]" />
+          <Image
+            src="/images/about-us/nft3.svg"
+            alt="image"
+            width={849}
+            height={629}
+            className="lg:w-[90%]"
+          />
         </div>
       </div>
-      <div className="pt-24">
+      <div className="pt-24 bg-[url('/images/about-us/bg2.png')] bg-cover bg-center bg-no-repeat">
         <div className="px-5 lg:px-24">
-        <img src="/images/image49.svg" alt="image" />
+          <Image
+            src="/images/about-us/energy.png"
+            width={1520}
+            height={452}
+            alt="energy"
+            className="mx-auto"
+          />
         </div>
-        <div className="bg-[url('/images/image60.svg')] md:bg-[url('/images/image50.svg')] bg-cover px-5 lg:px-24 pb-[350px]">
+        <div className="px-5 lg:px-24 pb-24">
           <div className="grid lg:grid-cols-2 gap-14 pt-20">
             <div className=" flex flex-col gap-3">
               <p className="auth font-mont text-base lg:text-lg font-medium text-accent-foreground">
