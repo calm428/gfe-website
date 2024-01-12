@@ -19,10 +19,10 @@ export function SignUpModal({
   const { setSignInModalOpen, setSignUpModalOpen } = useContext(SunbeltContext)
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-[900px] mx-auto h-[91%]  w-[90%] p-0 auth">
+      <DialogContent className="auth mx-auto h-[91%]  w-[90%] max-w-[900px] p-0">
         <div className="flex h-[90%]">
           <div
-            className="w-[50%] h-[100%] hidden md:flex justify-center items-center bg-no-repeat bg-cover bg-center overflow-hidden"
+            className="hidden h-[100%] w-[50%] items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat md:flex"
             style={{
               background:
                 "url(/images/auth/auth-layer-bg.png), url(/images/bg-gradient.webp)",
@@ -36,27 +36,27 @@ export function SignUpModal({
               className="w-[80%]"
             />
           </div>
-          <div className="md:w-[50%] w-full p-8 sm:px-24 md:p-8 !pb-24">
+          <div className="w-full p-8 !pb-24 sm:px-24 md:w-[50%] md:p-8">
             <div className="my-4 text-center">
               <div className="text-3xl font-bold ">Register Now</div>
               <div>Join us today</div>
             </div>
-            <Button variant="outline" className="w-full mt-4">
+            <Button variant="outline" className="mt-4 w-full">
               <Icons.google className="mr-2 h-4 w-4" />
               Sign Up with Google
             </Button>
-            <Button variant="outline" className="w-full mt-4">
+            <Button variant="outline" className="mt-4 w-full">
               <Icons.apple className="mr-2 h-5 w-5" />
               Sign Up with Apple
             </Button>
-            <div className="flex items-center justify-center gap-2 relative my-1">
-              <div className="p-4 bg-white z-10">OR</div>
+            <div className="relative my-1 flex items-center justify-center gap-2">
+              <div className="z-10 bg-white p-4">OR</div>
               <Separator
                 orientation="vertical"
-                className="absolute w-full mr-auto h-[1px] border-0"
+                className="absolute mr-auto h-[1px] w-full border-0"
               />
             </div>
-            <div className="space-y-4 mb-4">
+            <div className="mb-4 space-y-4">
               <Input type="username" placeholder="Username" />
               <Input type="email" placeholder="Email" />
               <Input type="password" placeholder="Password" />
@@ -84,7 +84,7 @@ export function SignUpModal({
               </div>
               <Button className="w-full">Sign Up</Button>
             </div>
-            <div className=" text-xs flex items-center justify-center">
+            <div className=" flex items-center justify-center text-xs">
               <p>Already have an account?</p>
               <Button
                 variant="link"

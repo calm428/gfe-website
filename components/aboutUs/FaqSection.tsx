@@ -1,15 +1,14 @@
-import React from "react"
 import Image from "next/image"
 
 function FaqSection() {
   return (
-    <div className="py-14 flex flex-col-reverse xl:flex-row">
-      <div className="p-11 border border-border rounded-[20px] shadow-lg z-20 bg-background -mt-[30%] xl:mt-0 xl:w-[80%]">
-        <h1 className=" font-monument text-[30px] text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+    <div className="flex flex-col-reverse py-14 xl:flex-row">
+      <div className="z-20 -mt-[30%] rounded-[20px] border border-border bg-background p-11 shadow-lg xl:mt-0 xl:w-[80%]">
+        <h1 className=" bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-monument text-[30px] text-transparent">
           La Paz BCS example:
         </h1>
-        <div className="flex flex-col gap-4 auth">
-          <p className=" text-base lg:text-lg font-medium">
+        <div className="auth flex flex-col gap-4">
+          <p className=" text-base font-medium lg:text-lg">
             The local utility generates XX mw of power a year. It is used for
             industry, residential, and desalination loads for water. The power
             is in the form of oil. There is no ship sized storage capacity, so
@@ -38,7 +37,7 @@ function FaqSection() {
           alt="image"
           width={534}
           height={654}
-          className="w-auto xl:h-[80%] xl:-ml-5"
+          className="w-auto xl:-ml-5 xl:h-[80%]"
         />
       </div>
     </div>

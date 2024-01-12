@@ -1,15 +1,13 @@
-import React from "react"
-
 import { AdvantageCard } from "./advantage-card"
 
 const WhySunbeltSection = () => {
   return (
-    <div className=" container md:pt-20 pt-12">
-      <div className="md:pb-14 pb-10">
-        <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">
+    <div className=" container pt-12 md:pt-20">
+      <div className="pb-10 md:pb-14">
+        <h1 className="pb-2 text-center font-monument text-2xl font-normal uppercase text-primary md:pb-3">
           Why Sunbelt?
         </h1>
-        <h3 className="font-mont text-lg text-center">
+        <h3 className="text-center font-mont text-lg">
           Our own power plant, strong team, the best partners support to form
           our unique infrastructure that provides sustainable mining service to
           users with reliability, stability, profitability and confidence in the
@@ -17,7 +15,7 @@ const WhySunbeltSection = () => {
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
         <AdvantageCard
           icon="/images/home/RenewableEnergy-icon.png"
           title="Renewable Energy"

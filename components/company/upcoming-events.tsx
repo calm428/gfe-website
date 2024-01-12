@@ -1,4 +1,3 @@
-import React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 import Card from "../blogs-and-news/Card"
@@ -8,11 +7,11 @@ const UpcomingEventsSection = () => {
   return (
     <div>
       <div className="flex gap-5">
-        <div className="md:pb-14 pb-10">
-          <div className="text-xl text-primary font-monument mt-4">
+        <div className="pb-10 md:pb-14">
+          <div className="mt-4 font-monument text-xl text-primary">
             UPCOMING EVENTS
           </div>
-          <div className="text-md text-muted-foreground font-mont">
+          <div className="text-md font-mont text-muted-foreground">
             Stay tuned for our next exciting event, where innovation meets
             community! Join us for an enriching experience filled with insights,
             networking opportunities, and the latest developments in the world
@@ -21,7 +20,7 @@ const UpcomingEventsSection = () => {
         </div>
 
         <Button
-          className="font-monument tracking-wider whitespace-nowrap"
+          className="whitespace-nowrap font-monument tracking-wider"
           style={{
             background:
               "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
@@ -31,17 +30,17 @@ const UpcomingEventsSection = () => {
         </Button>
       </div>
 
-      <div className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-2">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
         <Card />
         <Card />
       </div>
 
-      <div className="flex justify-between mt-16">
-        <div className="flex gap-3 items-center font-monument text-[#727C8F]">
+      <div className="mt-16 flex justify-between">
+        <div className="flex items-center gap-3 font-monument text-[#727C8F]">
           <ChevronLeft />
           <span className="pt-0.5">Previous</span>
         </div>
-        <div className="flex gap-3 items-center font-monument text-[#727C8F]">
+        <div className="flex items-center gap-3 font-monument text-[#727C8F]">
           <span className="pt-0.5">Next</span>
           <ChevronRight />
         </div>

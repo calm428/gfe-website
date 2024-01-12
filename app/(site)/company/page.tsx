@@ -1,7 +1,3 @@
-import Link from "next/link"
-
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
 import BecomeAMemberSection from "@/components/company/become-a-member"
 import CertificateSection from "@/components/company/certificate"
 import FormSection from "@/components/company/form"
@@ -16,7 +12,7 @@ export default function IndexPage() {
   return (
     <div>
       <section
-        className="grid items-center gap-4 pt-6 md:py-10 !pb-0 !bg-cover !bg-no-repeat"
+        className="grid items-center gap-4 !bg-cover !bg-no-repeat !pb-0 pt-6 md:py-10"
         style={{
           background: "url(/images/bg-gradient.webp)",
         }}
@@ -26,7 +22,7 @@ export default function IndexPage() {
         </div>
       </section>
       <section
-        className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat"
+        className="grid items-center gap-4 !bg-cover !bg-no-repeat py-4"
         style={{
           background: "url(/images/bg-gradient.webp)",
         }}
@@ -36,7 +32,7 @@ export default function IndexPage() {
         </div>
       </section>
       <section
-        className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat"
+        className="grid items-center gap-4 !bg-cover !bg-no-repeat py-4"
         style={{
           background: "url(/images/company/bg1.png)",
         }}
@@ -45,13 +41,13 @@ export default function IndexPage() {
           <GoalSection />
         </div>
       </section>
-      <section className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat">
+      <section className="grid items-center gap-4 !bg-cover !bg-no-repeat py-4">
         <div className="container">
           <LocationSection />
         </div>
       </section>
       <section
-        className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat"
+        className="grid items-center gap-4 !bg-cover !bg-no-repeat py-4"
         style={{
           background: "url(/images/company/bg2.png)",
         }}
@@ -60,13 +56,13 @@ export default function IndexPage() {
           <CertificateSection />
         </div>
       </section>
-      <section className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat">
+      <section className="grid items-center gap-4 !bg-cover !bg-no-repeat py-4">
         <div className="container">
           <UpcomingEventsSection />
         </div>
       </section>
       <section
-        className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat"
+        className="grid items-center gap-4 !bg-cover !bg-no-repeat py-4"
         style={{
           background: "url(/images/company/bg3.png)",
         }}
@@ -76,7 +72,7 @@ export default function IndexPage() {
         </div>
       </section>
       <section
-        className="grid items-center gap-4 py-4 !bg-cover !bg-no-repeat"
+        className="grid items-center gap-4 !bg-cover !bg-no-repeat py-4"
         style={{
           background: "url(/images/miners/bg2.png)",
         }}

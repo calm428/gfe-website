@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
@@ -49,29 +48,29 @@ const FAQS = [
 
 function FAQ() {
   return (
-    <div className="py-24 px-5  flex flex-col gap-[50px]">
-      <div className="flex flex-col gap-4 items-center">
-        <h1 className="text-5xl font-goldman text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+    <div className="flex flex-col  gap-[50px] px-5 py-24">
+      <div className="flex flex-col items-center gap-4">
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-5xl text-transparent">
           FAQ
         </h1>
-        <p className="auth text-lg font-mont auth">
+        <p className="auth font-mont text-lg">
           Belows are the FAQs regarding our NFT’s with answers
         </p>
       </div>
       <div>
         {/* <div className="py-[50px]"> */}
-        <Accordion type="single" collapsible className="space-y-5 mt-5 auth">
+        <Accordion type="single" collapsible className="auth mt-5 space-y-5">
           {FAQS.map((faq, index) => (
             <AccordionItem
               key={index}
               value={("0" + (index + 1)).toString()}
-              className="flex items-start rounded-lg auth accordion"
+              className="auth accordion flex items-start rounded-lg"
             >
               <div className="w-full">
                 <AccordionTrigger className="auth font-semibold text-secondary-foreground hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-base auth text-muted-foreground">
+                <AccordionContent className="auth text-base text-muted-foreground">
                   {faq.answer}
                 </AccordionContent>
               </div>
@@ -79,7 +78,7 @@ function FAQ() {
           ))}
         </Accordion>
         <div className="flex items-center justify-center pt-[50px]">
-          <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+          <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4">
             <Link href={siteConfig.links.docs}>View More</Link>
           </Button>
         </div>

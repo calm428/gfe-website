@@ -83,65 +83,65 @@ const miners: Miner[] = [
 
 function MinerCard({ miner }: { miner: Miner }) {
   return (
-    <div className="flex flex-col items-start gap-4 bg-[#E7F0FD] p-4 max-w-[350px] w-full rounded-xl mx-auto">
+    <div className="mx-auto flex w-full max-w-[350px] flex-col items-start gap-4 rounded-xl bg-[#E7F0FD] p-4">
       <Image
         src={miner.avatar}
         alt={miner.name}
         width={200}
         height={200}
-        className="w-auto h-[120px]"
+        className="h-[120px] w-auto"
       />
       <div className="text-2xl font-semibold">{miner.name}</div>
-      <div className="w-full py-2 border-b border-primary/60">
-        <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground auth font-medium">
+      <div className="w-full border-b border-primary/60 py-2">
+        <div className="flex w-full justify-between">
+          <div className="auth text-sm font-medium text-muted-foreground">
             Hashrate:
           </div>
-          <div className="text-md text-primary font-semibold auth">
+          <div className="text-md auth font-semibold text-primary">
             {miner.hashrate} TH/s
           </div>
         </div>
-        <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground auth font-medium">
+        <div className="flex w-full justify-between">
+          <div className="auth text-sm font-medium text-muted-foreground">
             Income:
           </div>
-          <div className="text-md text-primary font-semibold auth">
+          <div className="text-md auth font-semibold text-primary">
             {miner.income} BTC/year
           </div>
         </div>
       </div>
-      <div className="w-full py-2 border-b border-primary/60">
-        <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground auth font-medium">
+      <div className="w-full border-b border-primary/60 py-2">
+        <div className="flex w-full justify-between">
+          <div className="auth text-sm font-medium text-muted-foreground">
             Machine Price:
           </div>
-          <div className="text-md text-primary font-semibold auth">
+          <div className="text-md auth font-semibold text-primary">
             {miner.machine_price} USD
           </div>
         </div>
-        <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground auth font-medium">
+        <div className="flex w-full justify-between">
+          <div className="auth text-sm font-medium text-muted-foreground">
             Accessory Price:
           </div>
-          <div className="text-md text-primary font-semibold auth">
+          <div className="text-md auth font-semibold text-primary">
             {miner.accessory_price} USD
           </div>
         </div>
       </div>
       <div className="w-full py-2">
-        <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground auth font-medium">
+        <div className="flex w-full justify-between">
+          <div className="auth text-sm font-medium text-muted-foreground">
             Price:
           </div>
-          <div className="text-md text-primary font-semibold auth">
+          <div className="text-md auth font-semibold text-primary">
             {miner.machine_price + miner.accessory_price} USD
           </div>
         </div>
-        <div className="text-sm text-right text-muted-foreground auth font-medium">
+        <div className="auth text-right text-sm font-medium text-muted-foreground">
           +{miner.profit} USD Energy annually
         </div>
       </div>
-      <div className="w-full flex justify-between py-2">
+      <div className="flex w-full justify-between py-2">
         <Button type="button" variant="secondary" className="font-bold">
           View Details
         </Button>
@@ -164,7 +164,7 @@ export default function MinerListSection() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 2,
         },
@@ -187,50 +187,52 @@ export default function MinerListSection() {
   }
 
   return (
-    <div className=" container flex flex-col items-center gap-10 justify-between md:mt-5">
-      <div className="text-center font-goldman font-normal text-5xl md:pb-10 pb-5  text-primary">
-        List of Miners
-      </div>
-
-      <div className="w-full max-w-[375px] md:max-w-[750px] lg:max-w-[1100px] ">
-        <Slider {...settings} ref={(c) => setSlider(c)}>
-          {miners.map((miner) => (
-            <MinerCard key={miner.id} miner={miner} />
-          ))}
-        </Slider>
-
-        <style jsx global>{`
-          .slick-dots {
-            bottom: -48px !important;
-          }
-
-          .slick-dots li button:before {
-            content: " ";
-            border: 1px solid #5093f3;
-            line-height: 2px;
-            height: 2px;
-          }
-        `}</style>
-
-        <div className="w-fit mx-auto space-x-48 flex mt-[17px]">
-          <button onClick={previous} className="cursor-pointer">
-            <ChevronLeft color="#1570EF" />
-          </button>
-
-          <button onClick={next} className="cursor-pointer">
-            <ChevronRight color="#1570EF" className="cursor-pointer" />
-          </button>
+    <div className="bg-[url('/images/miner-hosting/bg3.png')] bg-cover bg-bottom bg-no-repeat">
+      <div className="container flex flex-col items-center justify-between gap-10 px-10 py-16">
+        <div className="pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
+          List of Miners
         </div>
 
-        <div className="w-full flex justify-center mt-10">
-          <Button
-            style={{
-              background:
-                "linear-gradient(9deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-            }}
-          >
-            Plan For Mining
-          </Button>
+        <div className="mx-auto w-full max-w-[375px] md:max-w-[750px] lg:max-w-[968px] xl:max-w-6xl">
+          <Slider {...settings} ref={(c) => setSlider(c)}>
+            {miners.map((miner) => (
+              <MinerCard key={miner.id} miner={miner} />
+            ))}
+          </Slider>
+
+          <style jsx global>{`
+            .slick-dots {
+              bottom: -48px !important;
+            }
+
+            .slick-dots li button:before {
+              content: " ";
+              border: 1px solid #5093f3;
+              line-height: 2px;
+              height: 2px;
+            }
+          `}</style>
+
+          <div className="mx-auto mt-[17px] flex w-fit space-x-48">
+            <button onClick={previous} className="cursor-pointer">
+              <ChevronLeft color="#1570EF" />
+            </button>
+
+            <button onClick={next} className="cursor-pointer">
+              <ChevronRight color="#1570EF" className="cursor-pointer" />
+            </button>
+          </div>
+
+          <div className="mt-10 flex w-full justify-center">
+            <Button
+              style={{
+                background:
+                  "linear-gradient(9deg, #22B4FD 32.53%, #2D79FF 77.26%)",
+              }}
+            >
+              Plan For Mining
+            </Button>
+          </div>
         </div>
       </div>
     </div>

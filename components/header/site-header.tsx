@@ -1,30 +1,19 @@
 "use client"
 
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { SunbeltContext } from "@/context/context"
 import { CaretDownIcon } from "@radix-ui/react-icons"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
-import { Divide, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@/components/ui/button"
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { MainNav } from "@/components/header/main-nav"
-import { Icons } from "@/components/icons"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 import { ForgotPwModal } from "../auth/forgot"
 import { ResetModal } from "../auth/reset"
@@ -59,7 +48,7 @@ export function SiteHeader() {
   // nav style menu
 
   const navMenuStyle = cn(
-    "flex items-center text-sm font-medium font-mont text-muted-foreground px-2 py-2 rounded-lg hover:text-primary"
+    "flex items-center rounded-lg p-2 font-mont text-sm font-medium text-muted-foreground hover:text-primary"
   )
 
   // menulist items
@@ -70,15 +59,15 @@ export function SiteHeader() {
   return (
     <>
       <header
-        className="siteheader bg-background sticky top-0 z-50 w-full border-b px-0 font-mont"
+        className="siteheader sticky top-0 z-50 w-full border-b bg-background px-0 font-mont"
         onClick={() => mobileNavOpen && setMobileNavOpen(false)}
       >
         <div className="container flex h-20 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={siteConfig.mainNav} />
-          <div className="hidden lg:flex space-x-4">
+          <div className="hidden space-x-4 lg:flex">
             <Button
               variant="default"
-              className="whitespace-nowrap font-semibold font-mont !mx-2"
+              className="!mx-2 whitespace-nowrap font-mont font-semibold"
               style={{
                 background:
                   "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
@@ -89,11 +78,11 @@ export function SiteHeader() {
             </Button>
             <LanguageSelector />
           </div>
-          <div className="flex lg:hidden gap-1">
+          <div className="flex gap-1 lg:hidden">
             <LanguageSelector />
             <Button
               variant="default"
-              className="block lg:hidden whitespace-nowrap font-semibold font-mont !mx-2"
+              className="!mx-2 block whitespace-nowrap font-mont font-semibold lg:hidden"
               style={{
                 background:
                   "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
@@ -119,19 +108,19 @@ export function SiteHeader() {
         onClick={handleClose}
         className={` ${
           mobileNavOpen ? "block" : "hidden"
-        } absolute inset-0 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden z-50`}
+        } absolute inset-0 z-50 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden`}
       >
         <div
           className={`${
             mobileNavOpen ? "right-0 " : "-right-[360px]"
-          } lg:hidden z-30  fixed max-w-[360px] min-w-[360px] h-full bg-background transition-all`}
+          } fixed z-30  h-full min-w-[360px] max-w-[360px] bg-background transition-all lg:hidden`}
         >
-          <div className="h-full flex flex-col">
+          <div className="flex h-full flex-col">
             <div className="sticky top-0 z-50 bg-background pt-5">
               <div className="flex justify-between">
                 <Link
                   href="/"
-                  className="w-[150px] flex flex-col justify-center items-center gap-1"
+                  className="flex w-[150px] flex-col items-center justify-center gap-1"
                 >
                   <div className="flex flex-col gap-1">
                     <Image src="/GFE.svg" alt="Logo" width={80} height={32} />
@@ -145,7 +134,7 @@ export function SiteHeader() {
                 </Link>
                 <Button
                   variant="default"
-                  className="block lg:hidden whitespace-nowrap font-semibold font-mont !mx-2"
+                  className="!mx-2 block whitespace-nowrap font-mont font-semibold lg:hidden"
                   style={{
                     background:
                       "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
@@ -157,16 +146,16 @@ export function SiteHeader() {
               </div>
               <Separator
                 orientation="vertical"
-                className="h-[3px] my-[16px] mx-auto w-[90%] bg-[#2BADFD] block"
+                className="mx-auto my-[16px] block h-[3px] w-[90%] bg-[#2BADFD]"
               />
             </div>
 
-            <nav className="flex flex-col w-full  gap-6 items-center auth">
+            <nav className="auth flex w-full  flex-col items-center gap-6">
               <NavigationMenu.Root>
                 <NavigationMenu.List>
                   <NavigationMenu.Item>
                     <NavigationMenu.Trigger
-                      className={` ${navMenuStyle} w-full flex justify-center items-center`}
+                      className={` ${navMenuStyle} flex w-full items-center justify-center`}
                     >
                       Ecosystem
                       <CaretDownIcon className="CaretDown" aria-hidden />
@@ -174,7 +163,7 @@ export function SiteHeader() {
                     <NavigationMenu.Content className="NavigationMenuContent h-fit">
                       <div className=" flex flex-col border border-border bg-background">
                         <div className="p-[24px]">
-                          <h1 className="font-mont text-[14px] text-center font-medium capitalize text-muted-foreground">
+                          <h1 className="text-center font-mont text-[14px] font-medium capitalize text-muted-foreground">
                             token functionalities
                           </h1>
                           {token_functionalities.map((functionality) => (
@@ -194,7 +183,7 @@ export function SiteHeader() {
                                     {functionality.title}
                                   </p>
                                   <ExpandableText
-                                    children={functionality.desc}
+                                    description={functionality.desc}
                                     maxChars={60}
                                   />
                                 </p>
@@ -202,8 +191,8 @@ export function SiteHeader() {
                             </Link>
                           ))}
                         </div>
-                        <div className="p-[24px] border-l border-l-border">
-                          <h1 className="font-mont text-[14px] text-center font-medium capitalize text-muted-foreground">
+                        <div className="border-l border-l-border p-[24px]">
+                          <h1 className="text-center font-mont text-[14px] font-medium capitalize text-muted-foreground">
                             Industries
                           </h1>
                           <div className=" gap-2">
@@ -224,7 +213,7 @@ export function SiteHeader() {
                                       {functionality.title}
                                     </p>
                                     <ExpandableText
-                                      children={functionality.desc}
+                                      description={functionality.desc}
                                       maxChars={60}
                                     />
                                   </p>
@@ -242,7 +231,7 @@ export function SiteHeader() {
                 href={"/NFT"}
                 className={` ${navMenuStyle} ${
                   "/NFT" === pathname &&
-                  "text-primary bg-primary/5 font-semibold"
+                  "bg-primary/5 font-semibold text-primary"
                 }`}
               >
                 NFT
@@ -255,7 +244,7 @@ export function SiteHeader() {
                       <CaretDownIcon className="CaretDown" aria-hidden />
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="NavigationMenuContent">
-                      <div className=" p-3 w-full bg-background">
+                      <div className=" w-full bg-background p-3">
                         {community.map((community) => (
                           <Link href={"#"} className="flex gap-2 py-2">
                             <Image
@@ -279,7 +268,7 @@ export function SiteHeader() {
                   href={"/about-us"}
                   className={` ${navMenuStyle} ${
                     "/about-us" === pathname &&
-                    "text-primary bg-primary/5 font-semibold"
+                    "bg-primary/5 font-semibold text-primary"
                   }`}
                 >
                   About us
@@ -289,14 +278,14 @@ export function SiteHeader() {
                 href={"/blogs-and-news"}
                 className={` ${navMenuStyle} ${
                   "/blogs-and-news" === pathname &&
-                  "text-primary bg-primary/5 font-semibold"
+                  "bg-primary/5 font-semibold text-primary"
                 }`}
               >
                 Blogs and News
               </Link>
               <Button
                 variant="default"
-                className="whitespace-nowrap font-semibold font-mont w-[80%]"
+                className="w-[80%] whitespace-nowrap font-mont font-semibold"
                 style={{
                   background:
                     "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
@@ -309,7 +298,7 @@ export function SiteHeader() {
                 href={"/contacts"}
                 className={`${navMenuStyle} ${
                   "/contacts" === pathname &&
-                  "text-primary bg-primary/5 font-semibold"
+                  "bg-primary/5 font-semibold text-primary"
                 }`}
               >
                 Contacts

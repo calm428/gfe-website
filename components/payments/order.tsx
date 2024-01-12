@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState } from "react"
 import { CreditCard, HelpCircle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -22,31 +22,31 @@ const OrderSection = () => {
 
   return (
     <div className="container">
-      <h1 className="font-monument tracking-wider text-[#2BADFD] text-2xl">
+      <h1 className="font-monument text-2xl tracking-wider text-[#2BADFD]">
         Your Order
       </h1>
 
       <div className="flex flex-col items-end gap-5">
         <div className="lg:w-[525px]">
-          <div className="flex items-center gap-2 float-right pb-3">
+          <div className="float-right flex items-center gap-2 pb-3">
             <p className="text-sm">You are almost done!</p>
-            <p className="text-sm text-white px-2 rounded-full py-0.5 bg-[#68DE99]">
+            <p className="rounded-full bg-[#68DE99] px-2 py-0.5 text-sm text-white">
               {progress}%
             </p>
           </div>
           <Progress
             value={progress}
-            className="w-full h-2 bg-[#E3E3E3] [&>div]:bg-[#68DE99]"
+            className="h-2 w-full bg-[#E3E3E3] [&>div]:bg-[#68DE99]"
           />
         </div>
 
-        <div className="flex w-full lg:flex-row flex-col gap-5">
+        <div className="flex w-full flex-col gap-5 lg:flex-row">
           <div className="flex-1">
-            <h2 className="font-monument tracking-wider text-xl mb-5">
+            <h2 className="mb-5 font-monument text-xl tracking-wider">
               Contract Details
             </h2>
-            <div className="p-5 rounded-lg bg-[#E7F0FD] space-y-2">
-              <div className="gap-2 flex">
+            <div className="space-y-2 rounded-lg bg-[#E7F0FD] p-5">
+              <div className="flex gap-2">
                 <h3>Mining Plan:</h3>
                 <h4 className="font-monument text-primary">140 TH/S</h4>
               </div>
@@ -54,23 +54,23 @@ const OrderSection = () => {
               <h4>Plan is based on s19 K pro 106 TH/s</h4>
               <div className="w-full border-b border-primary" />
 
-              <div className="py-2 space-y-4">
-                <div className="justify-between flex">
+              <div className="space-y-4 py-2">
+                <div className="flex justify-between">
                   <h3>Total Mining Power: </h3>
                   <h4 className="font-monument text-primary">11.75 TH/s</h4>
                 </div>
 
-                <div className="justify-between flex">
+                <div className="flex justify-between">
                   <h3>Bonus Mining Power:</h3>
                   <h4 className="font-monument text-primary">0.45 Th/s</h4>
                 </div>
 
-                <div className="justify-between flex">
+                <div className="flex justify-between">
                   <h3>Duration:</h3>
                   <h4 className="font-monument text-primary">60 months</h4>
                 </div>
 
-                <div className="justify-between flex">
+                <div className="flex justify-between">
                   <h3 className="flex items-center gap-2">
                     Service fee
                     <TooltipProvider>
@@ -90,9 +90,9 @@ const OrderSection = () => {
 
               <div className="w-full border-b-2 border-primary" />
 
-              <div className="justify-between flex pt-3">
+              <div className="flex justify-between pt-3">
                 <h3>Price:</h3>
-                <h4 className="font-monument text-primary text-xl">
+                <h4 className="font-monument text-xl text-primary">
                   7,470 USD
                 </h4>
               </div>
@@ -100,23 +100,23 @@ const OrderSection = () => {
           </div>
 
           <div className="">
-            <h2 className="font-monument tracking-wider text-xl mb-5">
+            <h2 className="mb-5 font-monument text-xl tracking-wider">
               Contract Details
             </h2>
-            <div className="p-5 rounded-md bg-[#E7F0FD] space-y-5 min-w-[525px] w-full">
-              <div className="bg-white rounded-sm flex gap-5 px-5 py-3">
-                <h4 className="flex gap-2 items-center py-2.5 px-2">
+            <div className="w-full min-w-[525px] space-y-5 rounded-md bg-[#E7F0FD] p-5">
+              <div className="flex gap-5 rounded-sm bg-white px-5 py-3">
+                <h4 className="flex items-center gap-2 px-2 py-2.5">
                   <CreditCard className="text-primary" />
                   VISA / MasterCard
                 </h4>
 
-                <h4 className="flex gap-2 items-center py-2.5 px-2">
+                <h4 className="flex items-center gap-2 px-2 py-2.5">
                   <Icons.invoice height={18} className="text-primary" />
                   Invoice
                 </h4>
               </div>
 
-              <div className="bg-white px-5 py-3 rounded-sm flex gap-3">
+              <div className="flex gap-3 rounded-sm bg-white px-5 py-3">
                 <Coin
                   icon={<Icons.btc height={22} />}
                   name="BTC"
@@ -137,7 +137,7 @@ const OrderSection = () => {
                 />
               </div>
 
-              <div className="bg-white px-5 py-3 rounded-sm flex gap-3">
+              <div className="flex gap-3 rounded-sm bg-white px-5 py-3">
                 <Coin
                   icon={<Icons.trc height={22} />}
                   name="USDT trc20"
@@ -189,7 +189,7 @@ const OrderSection = () => {
                   Buy Now
                 </Button>
 
-                <p className="text-muted-foreground text-sm mt-2">
+                <p className="mt-2 text-sm text-muted-foreground">
                   Your contract will be activated after 24h after payment
                 </p>
               </div>
@@ -218,8 +218,8 @@ function Coin({
     <button
       onClick={() => setSelected(name)}
       className={cn(
-        "flex gap-2 py-2.5 px-2 items-center rounded-md hover:bg-[#E7F0FD] border-[2px] border-transparent",
-        `${name == selected && "bg-[#E7F0FD] border-primary"}`
+        "flex items-center gap-2 rounded-md border-[2px] border-transparent px-2 py-2.5 hover:bg-[#E7F0FD]",
+        `${name == selected && "border-primary bg-[#E7F0FD]"}`
       )}
     >
       {icon}

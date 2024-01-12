@@ -1,14 +1,8 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState } from "react"
 
-import { cn } from "@/lib/utils"
-
-import { Button, buttonVariants } from "../ui/button"
-import { Input } from "../ui/input"
-import { Label } from "../ui/label"
-import { Slider } from "../ui/slider"
-import HistoricalPowerGraph from "./HistoricalPowerGraph"
+import { Button } from "../ui/button"
 import ListItem from "./ListItem"
 
 function CalculatorSection() {
@@ -65,11 +59,11 @@ function CalculatorSection() {
     //     </div>
     //   </div>
     // </div>
-    <div className=" relative sm:pt-[100px] pb-60  px-5 lg:px-24 flex flex-col-reverse items-center lg:flex-row gap-40 bg-[url('/bgs/Features.svg')] bg-cover">
+    <div className=" relative flex flex-col-reverse  items-center gap-40 bg-[url('/bgs/Features.svg')] bg-cover px-5 pb-60 sm:pt-[100px] lg:flex-row lg:px-24">
       <img
         src="/advantages/hue.svg"
         alt="bg"
-        className="absolute top-0 -left-5"
+        className="absolute -left-5 top-0"
       />
       {/* image */}
       <div className="flex items-center justify-center lg:w-1/2">
@@ -78,15 +72,15 @@ function CalculatorSection() {
       {/* main */}
       <div className="flex flex-col gap-12 lg:w-1/2">
         <div className="flex flex-col gap-6">
-          <div className="bg-[#EEF5FF] w-[100px] rounded-sm">
-            <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]  font-medium auth py-[8px] px-[16px] text-base md:text-[20px] w-fit ">
+          <div className="w-[100px] rounded-sm bg-[#EEF5FF]">
+            <h1 className="auth w-fit bg-gradient-to-b from-[#2BADFD] to-[#1570EF]  bg-clip-text px-[16px] py-[8px] text-base font-medium text-transparent md:text-[20px] ">
               Future
             </h1>
           </div>
           <h1 className="font-goldman  text-6xl font-normal text-primary">
             Building a better future
           </h1>
-          <p className=" text-muted-foreground auth text-lg font-medium">
+          <p className=" auth text-lg font-medium text-muted-foreground">
             By increasing our capacity, we not only enhance the value of GFE
             tokens but also contribute to a larger societal shift towards
             renewable energy usage. Our planet benefits every time a power
@@ -109,7 +103,7 @@ function CalculatorSection() {
           </div>
         </div>
         <div>
-          <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+          <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4">
             Read More About Project
           </Button>
         </div>

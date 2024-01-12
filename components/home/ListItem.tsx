@@ -1,4 +1,3 @@
-import React from "react"
 import Image from "next/image"
 
 interface Props {
@@ -6,9 +5,9 @@ interface Props {
 }
 function ListItem({ text }: Props) {
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex items-center gap-4">
       <Image src={"/advantages/check.svg"} width={20} height={20} alt="icon" />
-      <h2 className="font-muted-foreground text-base auth">{text}</h2>
+      <h2 className="font-muted-foreground auth text-base">{text}</h2>
     </div>
   )
 }

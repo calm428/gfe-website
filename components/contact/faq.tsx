@@ -1,7 +1,5 @@
 "use client"
 
-import React from "react"
-
 import {
   Accordion,
   AccordionContent,
@@ -34,12 +32,12 @@ const FAQS = [
 
 const FaqSection = () => {
   return (
-    <div className="mb-32 container mt-16">
-      <h1 className="text-center font-monument font-normal text-xl md:text-2xl text-primary md:pb-3 pb-2 uppercase">
+    <div className="container mb-32 mt-16">
+      <h1 className="pb-2 text-center font-monument text-xl font-normal uppercase text-primary md:pb-3 md:text-2xl">
         Getting Started with SUNBELT Miners
       </h1>
 
-      <Accordion type="single" collapsible className="space-y-5 mt-5">
+      <Accordion type="single" collapsible className="mt-5 space-y-5">
         {FAQS.map((faq, index) => (
           <AccordionItem
             key={index}

@@ -1,19 +1,17 @@
 "use client"
 
-import React from "react"
-
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { Label } from "../ui/label"
 
 const FormSection = () => {
   return (
-    <div className="mb-32 mt-16 w-full bg-[#E7F0FD] p-5 rounded-xl">
-      <h1 className="text-center text-primary font-monument tracking-wide text-3xl leading-relaxed">
+    <div className="mb-32 mt-16 w-full rounded-xl bg-[#E7F0FD] p-5">
+      <h1 className="text-center font-monument text-3xl leading-relaxed tracking-wide text-primary">
         Fill in the form and get a personal offer from our consultant
       </h1>
 
-      <div className="flex flex-col sm:flex-row w-full gap-5 mt-10">
+      <div className="mt-10 flex w-full flex-col gap-5 sm:flex-row">
         <div className="w-full">
           <Label>First Name</Label>
           <Input placeholder="Name"></Input>
@@ -25,7 +23,7 @@ const FormSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row w-full gap-5 mt-5">
+      <div className="mt-5 flex w-full flex-col gap-5 sm:flex-row">
         <div className="w-full">
           <Label>Email</Label>
           <Input placeholder="Email" type="email"></Input>
@@ -37,7 +35,7 @@ const FormSection = () => {
         </div>
       </div>
 
-      <div className="w-fit mx-auto mt-10">
+      <div className="mx-auto mt-10 w-fit">
         <Button
           className="font-monument tracking-wider"
           style={{

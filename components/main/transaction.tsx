@@ -15,9 +15,9 @@ const dummyData: OneTransaction[] = [
 
 const TransactionHistory = () => {
   return (
-    <div className="rounded-md p-4 bg-white border border-[#E7F0FD] shadow-md w-3/5">
-      <div className="flex justify-between items-center">
-        <p className="text-xl text-[#383838] font-semibold">
+    <div className="w-3/5 rounded-md border border-[#E7F0FD] bg-white p-4 shadow-md">
+      <div className="flex items-center justify-between">
+        <p className="text-xl font-semibold text-[#383838]">
           Transaction History
         </p>
         <Button variant="link" className="">
@@ -40,26 +40,26 @@ interface OneTransaction {
 
 const ATransaction: React.FC<OneTransaction> = ({ id, type, date, amount }) => {
   return (
-    <div className="flex items-center justify-between my-1 font-semibold ">
+    <div className="my-1 flex items-center justify-between font-semibold ">
       <div className="flex items-center gap-2">
         {type === "Deposit" ? <Icons.deposit /> : <Icons.withdraw />}
         <div>
-          <p className="text-[#111113] text-sm">
+          <p className="text-sm text-[#111113]">
             {type === "Deposit" ? "Deposit" : "Withdraw"} # {id}
           </p>
-          <p className="text-[#64748B] text-xs">
+          <p className="text-xs text-[#64748B]">
             {formatCustomDate(new Date(date))}
           </p>
         </div>
       </div>
       <div>
-        <p className="text-[#111113] text-xs">
+        <p className="text-xs text-[#111113]">
           {type === "Deposit" ? "+" : "-"} $ {amount}
         </p>
         <p
           className={`text-xs  ${
             type === "Deposit"
-              ? " text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]"
+              ? " bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent"
               : "text-[#5A6778]"
           }`}
         >

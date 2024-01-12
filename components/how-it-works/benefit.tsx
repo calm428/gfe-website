@@ -1,7 +1,5 @@
 "use client"
 
-import Image from "next/image"
-
 const CARDS_DATA = [
   {
     title: "High Income",
@@ -23,25 +21,25 @@ function BenefitCard({
   description: string
 }) {
   return (
-    <div className="bg-accent p-5 rounded-3xl">
-      <h2 className="text-xl font-monument mt-5 tracking-wider">{title}</h2>
-      <p className="mt-2 text-muted-foreground text-sm mb-5">{description}</p>
+    <div className="rounded-3xl bg-accent p-5">
+      <h2 className="mt-5 font-monument text-xl tracking-wider">{title}</h2>
+      <p className="mb-5 mt-2 text-sm text-muted-foreground">{description}</p>
     </div>
   )
 }
 
 export default function BenefitSection() {
   return (
-    <div className="flex flex-col md:flex-row items-stretch gap-4 justify-center pb-32">
+    <div className="container flex flex-col items-stretch justify-center gap-4 pb-32 md:flex-row">
       <div
-        className="md:w-2/5 max-w-sm mx-auto h-96 md:h-auto md:mx-0 bg-primary p-4 bg-cover bg-center bg-no-repeat rounded-xl"
+        className="mx-auto h-96 max-w-sm rounded-xl bg-primary bg-cover bg-center bg-no-repeat p-4 md:mx-0 md:h-auto md:w-2/5"
         style={{ backgroundImage: "url(/images/how-it-works/bg2.png)" }}
       >
-        <div className="text-2xl text-white font-monument">
+        <div className="font-monument text-2xl text-white">
           Benefits of hosting in our data center and green ecosystem
         </div>
       </div>
-      <div className="w-full md:w-3/5 space-y-4">
+      <div className="w-full space-y-4 md:w-3/5">
         {CARDS_DATA.map((card) => (
           <BenefitCard
             key={card.title}

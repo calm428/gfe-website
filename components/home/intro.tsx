@@ -1,10 +1,8 @@
-import Image from "next/image"
 import Link from "next/link"
 import { ChevronRightIcon } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
 import Counter from "./Counter"
@@ -12,31 +10,31 @@ import Counter from "./Counter"
 export default function HomeSection() {
   return (
     <div
-      className="relative px-5 lg:px-12 flex flex-col lg:flex-row justify-between  lg:pt-24 pb-20 lg:pb-56 bg-cover bg-center"
+      className="relative flex flex-col justify-between bg-cover bg-center px-5  pb-20 lg:flex-row lg:px-12 lg:pb-56 lg:pt-24"
       style={{
         backgroundImage: "url('/bgs/Patterns.svg'),url('/bgs/intro.jpg')",
       }}
     >
-      <div className="w-full lg:w-[45%] xl:w-[55%] flex flex-col justify-between">
-        <div className="flex flex-col items-start gap-[56px] mb-5">
+      <div className="flex w-full flex-col justify-between lg:w-[45%] xl:w-[55%]">
+        <div className="mb-5 flex flex-col items-start gap-[56px]">
           <div className="flex flex-col gap-[16px]">
-            <h1 className="text-[42px] md:text-[52px] xl:text-[62px] font-goldman font-normal text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+            <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-[42px] font-normal text-transparent md:text-[52px] xl:text-[62px]">
               Green Fungible <br className="hidden sm:inline" />
               Energy - GFE
             </h1>
-            <p className="lg:text-[18px] xl:text-[20px] pr-5 font-semibold text-muted-foreground font-mont auth">
+            <p className="auth pr-5 font-mont font-semibold text-muted-foreground lg:text-[18px] xl:text-[20px]">
               GFE is trailblazing initiative designed to tokenize green energy,
               Providing a unique investment opportunity that bridges the gap
               between environmental impact and economic incentive, while
               bringing the first global prospective to electrical costs.
             </p>
           </div>
-          <div className="w-full flex flex-col md:flex-row gap-2 md:gap-3 auth mb-7 md:mb-0">
-            <Button className="w-32 h-12 bg-gradient-to-l from-[#2BADFD] to-[#1570EF] font-bold">
+          <div className="auth mb-7 flex w-full flex-col gap-2 md:mb-0 md:flex-row md:gap-3">
+            <Button className="h-12 w-32 bg-gradient-to-l from-[#2BADFD] to-[#1570EF] font-bold">
               <Link href={siteConfig.links.docs}>Audit</Link>
             </Button>
 
-            <Button className="h-12 bg-backround bg-white hover:bg-muted border border-secondary-foreground text-muted-foreground font-bold">
+            <Button className="bg-backround h-12 border border-secondary-foreground bg-white font-bold text-muted-foreground hover:bg-muted">
               <Link
                 href={siteConfig.links.docs}
                 className="flex items-center justify-between gap-3"
@@ -49,21 +47,21 @@ export default function HomeSection() {
         </div>
         {/* new nft landing page link be placed here */}
         <div>
-          <div className=" relative auth flex justify-between items-center bg-background rounded-3xl md:rounded-full py-[25px]  md:py-[8px] pr-[16px] pl-[8px] shadow-lg">
-            <Button className="absolute -top-3 md:top-0 left-5 md:left-0 md:relative rounded-full py-[8px] px-[16px] bg-gradient-to-l from-[#2BADFD] to-[#1570EF] ">
+          <div className=" auth relative flex items-center justify-between rounded-3xl bg-background py-[25px] pl-[8px]  pr-[16px] shadow-lg md:rounded-full md:py-[8px]">
+            <Button className="absolute -top-3 left-5 rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
               New
             </Button>
-            <h1 className="text-muted-foreground font-mont mt-2 md:mt-0 md:text-[20px] font-medium">
+            <h1 className="mt-2 font-mont font-medium text-muted-foreground md:mt-0 md:text-[20px]">
               NFT Official landing page has officially launched!🎉
             </h1>
             <ChevronRightIcon />
           </div>
         </div>
       </div>
-      <div className=" w-full mt-7 lg:mt-0 lg:w-[55%] xl:w-[45%] lg:flex lg:flex-col xl:items-end">
+      <div className=" mt-7 w-full lg:mt-0 lg:flex lg:w-[55%] lg:flex-col xl:w-[45%] xl:items-end">
         <Counter />
       </div>
-      <div className="absolute -bottom-6  md:-bottom-10 lg:-bottom-16 w-full left-0 flex z-0">
+      <div className="absolute -bottom-6  left-0 z-0 flex w-full md:-bottom-10 lg:-bottom-16">
         <img src="/bgs/right.svg" alt="bg" className="w-1/2" />
         <img src="/bgs/left.svg" alt="bg" className="w-1/2" />
       </div>

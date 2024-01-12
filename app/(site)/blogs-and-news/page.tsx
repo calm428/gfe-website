@@ -1,5 +1,3 @@
-import React from "react"
-
 import ContactUs from "@/components/NFT/ContactUs"
 import BlogsSection from "@/components/blogs-and-news/blogs"
 import HeroSection from "@/components/blogs-and-news/hero"

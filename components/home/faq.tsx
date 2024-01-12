@@ -1,10 +1,8 @@
 "use client"
 
-import React from "react"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
 import {
   Accordion,
   AccordionContent,
@@ -12,7 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-import { Button, buttonVariants } from "../ui/button"
+import { Button } from "../ui/button"
 
 const FAQS = [
   {
@@ -40,23 +38,23 @@ const FAQS = [
 const FaqSection = () => {
   return (
     <div className="py-[100px]">
-      <h1 className="text-center font-goldman text-3xl text-primary pb-[50px] uppercase">
+      <h1 className="pb-[50px] text-center font-goldman text-3xl uppercase text-primary">
         Get to know <br className="hidden sm:inline" />
         Green Fungible Energy - GFE
       </h1>
 
-      <Accordion type="single" collapsible className="space-y-5 mt-5 auth">
+      <Accordion type="single" collapsible className="auth mt-5 space-y-5">
         {FAQS.map((faq, index) => (
           <AccordionItem
             key={index}
             value={("0" + (index + 1)).toString()}
-            className="flex items-start rounded-lg auth accordion"
+            className="auth accordion flex items-start rounded-lg"
           >
             <div className="w-full">
-              <AccordionTrigger className="auth font-semibold hover:no-underline text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+              <AccordionTrigger className="auth bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-semibold text-transparent hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-base auth text-muted-foreground">
+              <AccordionContent className="auth text-base text-muted-foreground">
                 {faq.answer}
               </AccordionContent>
             </div>
@@ -64,7 +62,7 @@ const FaqSection = () => {
         ))}
       </Accordion>
       <div className="flex items-center justify-center pt-[50px]">
-        <Button className="font-bold auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+        <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-bold">
           <Link href={siteConfig.links.docs}>View All</Link>
         </Button>
       </div>

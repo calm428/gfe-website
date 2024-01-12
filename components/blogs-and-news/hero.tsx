@@ -1,4 +1,3 @@
-import React from "react"
 import Image from "next/image"
 import { Search } from "lucide-react"
 
@@ -12,24 +11,24 @@ function HeroSection() {
         background:
           "url('/images/bg-gradient.webp'),url(/images/blogs-and-news/background.png)",
       }}
-      className="relative pb-[100px]  px-5 lg:px-0  pt-[50px] lg:pt-[100px] flex flex-col gap-12 items-center bg-cover "
+      className="relative flex  flex-col items-center  gap-12 bg-cover px-5 pb-[100px] pt-[50px] lg:px-0 lg:pt-[100px] "
     >
-      <div className="py-16 md:py-28 max-w-3xl mx-auto">
-        <div className="px-4 py-2 bg-primary/5 w-fit rounded-md mx-auto">
-          <h1 className="font-medium text-center auth text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+      <div className="mx-auto max-w-3xl py-16 md:py-28">
+        <div className="mx-auto w-fit rounded-md bg-primary/5 px-4 py-2">
+          <h1 className="auth bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-medium text-transparent">
             Blogs and News
           </h1>
         </div>
 
-        <h1 className="font-goldman tracking-wider text-center mt-3 text-3xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+        <h1 className="mt-3 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-3xl tracking-wider text-transparent md:text-6xl">
           Blogs and News
         </h1>
 
-        <p className="auth font-medium md:text-xl text-center mt-3">
+        <p className="auth mt-3 text-center font-medium md:text-xl">
           In the ever-evolving realm of Bitcoin mining and the broader
           ecosystem, our blogs and news serve as a dynamic platform.
         </p>
-        <div className="flex max-w-sm mx-auto mt-10 items-center justify-center gap-3">
+        <div className="mx-auto mt-10 flex max-w-sm items-center justify-center gap-3">
           <Input type="text" placeholder="Search" className=" rounded-r-none" />
           <Button
             type="submit"
@@ -42,7 +41,7 @@ function HeroSection() {
           </Button>
         </div>
       </div>
-      <div className="absolute -bottom-6  md:-bottom-10 lg:-bottom-16 w-full left-0 flex z-0">
+      <div className="absolute -bottom-6  left-0 z-0 flex w-full md:-bottom-10 lg:-bottom-16">
         <Image
           src="/images/about-us/bottom.svg"
           alt="bottom"

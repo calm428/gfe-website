@@ -1,4 +1,3 @@
-import React from "react"
 import Image from "next/image"
 
 import { Button } from "../ui/button"
@@ -11,15 +10,15 @@ interface Props {
 function AdvantageDiv({ title, desc, image }: Props) {
   return (
     <div className=" relative flex flex-col overflow-hidden rounded-md border border-border bg-muted">
-      <div className="py-[50px] pl-[50px] flex flex-col gap-8">
+      <div className="flex flex-col gap-8 py-[50px] pl-[50px]">
         <div className="flex flex-col gap-4">
-          <h1 className="font-goldman text-4xl capitalize text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-4xl capitalize text-transparent">
             {title}
           </h1>
-          <p className="auth text-base font-medium w-[80%] ">{desc}</p>
+          <p className="auth w-[80%] text-base font-medium ">{desc}</p>
         </div>
         <div>
-          <Button className="bg-gradient-to-l auth from-[#2BADFD] to-[#1570EF] py-4 px-5">
+          <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-5 py-4">
             Read More
           </Button>
         </div>

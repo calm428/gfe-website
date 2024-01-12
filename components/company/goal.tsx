@@ -42,9 +42,9 @@ export default function GoalSection() {
 
   return (
     <div className="pb-14 pt-10 md:pt-24">
-      <div className="md:pb-14 pb-10">
-        <div className="text-xl text-primary font-monument mt-4">Our Goal</div>
-        <div className="text-md text-muted-foreground font-mont">
+      <div className="pb-10 md:pb-14">
+        <div className="mt-4 font-monument text-xl text-primary">Our Goal</div>
+        <div className="text-md font-mont text-muted-foreground">
           At SUNBELT Miner, our goal is a multifaceted commitment to lead the
           way in the cryptocurrency mining landscape. We strive to pioneer
           sustainability by adopting eco-friendly practices, drive innovation
@@ -54,11 +54,11 @@ export default function GoalSection() {
       </div>
 
       {/* cards */}
-      <div className="flex flex-col xl:flex-row gap-4">
+      <div className="flex flex-col gap-4 xl:flex-row">
         {CARDS_DATA.map((data, index: number) => (
           <div
             key={index}
-            className={`!bg-cover !bg-no-repeat min-w-[256px] rounded-lg h-fit xl:h-[400px] transition-all duration-500 p-8 flex flex-col relative ${
+            className={`relative flex h-fit min-w-[256px] flex-col rounded-lg !bg-cover !bg-no-repeat p-8 transition-all duration-500 xl:h-[400px] ${
               isCurrent(index) ? "flex-1 ease-out" : "ease-in"
             }`}
             style={{
@@ -68,7 +68,7 @@ export default function GoalSection() {
             onMouseOver={() => setCurrentCard(index)}
           >
             <div
-              className={`xl:absolute transition-all duration-500 ${
+              className={`transition-all duration-500 xl:absolute ${
                 isCurrent(index) ? "bottom-6 ease-out" : "-bottom-20 ease-in"
               }`}
             >
@@ -81,10 +81,10 @@ export default function GoalSection() {
                 dangerouslySetInnerHTML={{ __html: data.title }}
               ></h2>
               <p
-                className={`text-white mt-2 xl:mt-3 xl:w-80 transition-all duration-500 ${
+                className={`mt-2 text-white transition-all duration-500 xl:mt-3 xl:w-80 ${
                   isCurrent(index)
                     ? "text-opacity-100 ease-out"
-                    : "xl:text-opacity-0 ease-in"
+                    : "ease-in xl:text-opacity-0"
                 }`}
               >
                 {data.description}

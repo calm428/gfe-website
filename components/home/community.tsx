@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -34,12 +33,12 @@ const FAQS = [
 const CommunitySection = () => {
   return (
     <div className="py-[60px]">
-      <div className="p-[60px] flex flex-col md:flex-row justify-between bg-muted rounded-xl">
+      <div className="flex flex-col justify-between rounded-xl bg-muted p-[60px] md:flex-row">
         <div className="flex flex-col gap-4 lg:w-[60%]">
-          <div className="text-3xl  font-monument  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+          <div className="bg-gradient-to-b  from-[#2BADFD]  to-[#1570EF] bg-clip-text font-monument text-3xl text-transparent">
             Join our Community
           </div>
-          <div className=" text-sm md:text-base font-medium font-mont auth mb-5 md:mb-0 my-1">
+          <div className=" auth my-1 mb-5 font-mont text-sm font-medium md:mb-0 md:text-base">
             By joining the GFE project, investors and environmental advocates
             alike can contribute to the development of a sustainable energy
             ecosystem while receiving the economic benefits afforded by
@@ -49,7 +48,7 @@ const CommunitySection = () => {
           </div>
         </div>
         <div className="flex flex-col gap-5 md:w-[30%]">
-          <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+          <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4">
             <Link
               href={siteConfig.links.docs}
               className="flex items-center gap-3"
@@ -63,7 +62,7 @@ const CommunitySection = () => {
               Discord
             </Link>
           </Button>
-          <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+          <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4">
             <Link
               href={siteConfig.links.docs}
               className="flex items-center gap-3"
@@ -77,7 +76,7 @@ const CommunitySection = () => {
               Telegram
             </Link>
           </Button>
-          <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+          <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4">
             <Link
               href={siteConfig.links.docs}
               className="flex items-center gap-3"

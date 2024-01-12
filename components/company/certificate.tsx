@@ -1,27 +1,24 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Lock } from "lucide-react"
-import Slider from "react-slick"
 
 import { Button } from "@/components/ui/button"
 
 export default function CertificateSection() {
   return (
-    <div className="flex flex-col items-center gap-4 justify-between md:mt-5">
-      <div className="md:pb-14 pb-10">
-        <div className="text-xl text-primary text-center font-monument mt-4">
+    <div className="flex flex-col items-center justify-between gap-4 md:mt-5">
+      <div className="pb-10 md:pb-14">
+        <div className="mt-4 text-center font-monument text-xl text-primary">
           Our Certificates
         </div>
-        <div className="text-md text-muted-foreground text-center font-mont">
+        <div className="text-md text-center font-mont text-muted-foreground">
           Celebrate your achievement with our Certificate of Excellence, a
           testament to your commitment to success in the world of cryptocurrency
           mining. This certificate recognizes your proficiency, dedication, and
           contributions to the mining community.
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-4">
+      <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2">
         <div>
           <Image
             src="/images/company/certificate.png"
@@ -31,10 +28,10 @@ export default function CertificateSection() {
           />
         </div>
         <div>
-          <div className="text-xl text-primary font-monument my-4">
+          <div className="my-4 font-monument text-xl text-primary">
             Calculate of Excellence
           </div>
-          <div className="text-md text-muted-foreground font-mont">
+          <div className="text-md font-mont text-muted-foreground">
             {`Celebrate your achievement with our Certificate of Excellence, a testament to your commitment to success in the world of cryptocurrency mining. This certificate recognizes your proficiency, dedication, and contributions to the mining community. Showcase your expertise and accomplishments proudly, demonstrating a commitment to excellence and innovation in the evolving landscape of digital assets. Elevate your standing with our prestigious Certificate of Excellence, a symbol of your mastery in the realm of cryptocurrency.`}
           </div>
           <div>
@@ -52,12 +49,12 @@ export default function CertificateSection() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-4">
+      <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2">
         <div>
-          <div className="text-xl text-primary font-monument my-4">
+          <div className="my-4 font-monument text-xl text-primary">
             Calculate of Excellence
           </div>
-          <div className="text-md text-muted-foreground font-mont">
+          <div className="text-md font-mont text-muted-foreground">
             {`Celebrate your achievement with our Certificate of Excellence, a testament to your commitment to success in the world of cryptocurrency mining. This certificate recognizes your proficiency, dedication, and contributions to the mining community. Showcase your expertise and accomplishments proudly, demonstrating a commitment to excellence and innovation in the evolving landscape of digital assets. Elevate your standing with our prestigious Certificate of Excellence, a symbol of your mastery in the realm of cryptocurrency.`}
           </div>
           <div>

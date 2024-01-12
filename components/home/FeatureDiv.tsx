@@ -1,4 +1,3 @@
-import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
@@ -14,15 +13,15 @@ function FeatureDiv({ icon, title, desc, link }: Props) {
     <div
       className={` ${
         title === "Staking reward"
-          ? " !text-muted bg-gradient-to-bl from-[#2BADFD] to-[#1570EF]"
+          ? " bg-gradient-to-bl from-[#2BADFD] to-[#1570EF] !text-muted"
           : "bg-background"
-      } p-6 auth shadow-lg rounded-md flex flex-col gap-8 justify-between`}
+      } auth flex flex-col justify-between gap-8 rounded-md p-6 shadow-lg`}
     >
       <div className="flex flex-col gap-3">
         {/* icon */}
         <Image src={icon} width={50} height={50} alt={title} />
         {/* title */}
-        <h1 className=" font-semibold text-[18px]">{title}</h1>
+        <h1 className=" text-[18px] font-semibold">{title}</h1>
         <p
           className={`${
             title === "Staking reward"
@@ -38,8 +37,8 @@ function FeatureDiv({ icon, title, desc, link }: Props) {
           className={`${
             title === "Staking reward"
               ? "text-muted"
-              : "text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]"
-          }  text-base font-semibold flex items-center gap-5`}
+              : "bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent"
+          }  flex items-center gap-5 text-base font-semibold`}
           href={link}
         >
           Read more{" "}
@@ -49,7 +48,7 @@ function FeatureDiv({ icon, title, desc, link }: Props) {
                 title === "Staking reward"
                   ? "text-muted "
                   : "text-secondary-foreground"
-              } w-[20px] h-[20px] `}
+              } h-[20px] w-[20px] `}
             />
           </span>
         </Link>

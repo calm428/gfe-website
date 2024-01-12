@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import Image from "next/image"
 
 import { AspectRatio } from "../ui/aspect-ratio"
@@ -10,11 +9,11 @@ import Card from "./Card"
 const BlogsSection = () => {
   return (
     <div className="container py-14">
-      <h1 className="font-goldman tracking-wider  text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+      <h1 className="bg-gradient-to-b from-[#2BADFD]  to-[#1570EF] bg-clip-text font-goldman text-5xl tracking-wider text-transparent">
         Blogs
       </h1>
       <HighlightsSection />
-      <div className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         <Card />
         <Card />
         <Card />
@@ -30,7 +29,7 @@ export default BlogsSection
 
 function HighlightsSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 max-w-3xl md:max-w-none mt-5">
+    <div className="mt-5 grid max-w-3xl grid-cols-1 md:max-w-none md:grid-cols-2 md:gap-8">
       <AspectRatio ratio={16 / 9} className="bg-muted">
         <Image
           src="/images/blogs-and-news/highlights.png"
@@ -40,14 +39,14 @@ function HighlightsSection() {
         />
       </AspectRatio>
       <div className="pt-8">
-        <h2 className="font-goldman tracking-wider mb-3 text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+        <h2 className="mb-3 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-lg tracking-wider text-transparent">
           Highlights
         </h2>
-        <h2 className="font-goldman  tracking-wider mb-5 text-2xl">
+        <h2 className="mb-5  font-goldman text-2xl tracking-wider">
           Omniscape Unveils Cutting-Edge AR Metaverse: A Revolutionary Leap into
           Interactive Realities
         </h2>
-        <p className="text-muted-foreground font-medium">
+        <p className="font-medium text-muted-foreground">
           In a groundbreaking announcement, Omniscape has introduced a
           state-of-the-art Augmented Reality (AR) Metaverse, redefining the way
           we perceive and interact with digital spaces. The platform promises to
@@ -56,7 +55,7 @@ function HighlightsSection() {
         </p>
         <Button
           variant={"ghost"}
-          className=" px-0 mt-5 text-primary text-base font-goldman tracking-wider"
+          className=" mt-5 px-0 font-goldman text-base tracking-wider text-primary"
         >
           Read More
         </Button>

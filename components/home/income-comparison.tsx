@@ -1,27 +1,25 @@
-import React from "react"
-
 const IncomeComparison = () => {
   return (
     <div className=" container py-10 md:py-16">
-      <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">
+      <h1 className="pb-2 text-center font-monument text-2xl font-normal uppercase text-primary md:pb-3">
         Income Comparison With Major Vendors
       </h1>
 
-      <div className="py-10 grid grid-cols-1 xl:grid-cols-10 gap-7 ">
-        <div className="bg-[#E7F0FD] p-7 rounded-3xl col-span-1 xl:col-span-3 gap-10 flex flex-col justify-between">
+      <div className="grid grid-cols-1 gap-7 py-10 xl:grid-cols-10 ">
+        <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-[#E7F0FD] p-7 xl:col-span-3">
           <img className="w-24" src={"/images/home/ecos.am-logo.png"}></img>
 
           <div>
-            <h2 className="text-lg text-muted-foreground font-monument tracking-wider">
+            <h2 className="font-monument text-lg tracking-wider text-muted-foreground">
               ecos.am
             </h2>
 
-            <div className="space-y-3 mt-5">
+            <div className="mt-5 space-y-3">
               <div className="flex justify-between">
                 <span className="font-mont text-muted-foreground">
                   Hashrate Renting Price
                 </span>
-                <span className="font-monument text-primary tracking-wider ml-3">
+                <span className="ml-3 font-monument tracking-wider text-primary">
                   83.6USD
                 </span>
               </div>
@@ -29,7 +27,7 @@ const IncomeComparison = () => {
                 <span className="font-mont text-muted-foreground">
                   Service Fee
                 </span>
-                <span className="font-monument text-primary tracking-wider ml-3">
+                <span className="ml-3 font-monument tracking-wider text-primary">
                   250USD
                 </span>
               </div>
@@ -37,7 +35,7 @@ const IncomeComparison = () => {
                 <span className="font-mont text-muted-foreground">
                   Bandwidth
                 </span>
-                <span className="font-monument text-primary tracking-wider ml-3">
+                <span className="ml-3 font-monument tracking-wider text-primary">
                   120TH/s, 1month
                 </span>
               </div>
@@ -45,34 +43,34 @@ const IncomeComparison = () => {
           </div>
         </div>
 
-        <div className="col-span-1 xl:col-span-4 bg-primary p-8 rounded-3xl gap-10 flex flex-col justify-between">
-          <h1 className="text-muted font-monument tracking-wide text-5xl xl:text-6xl">
+        <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-primary p-8 xl:col-span-4">
+          <h1 className="font-monument text-5xl tracking-wide text-muted xl:text-6xl">
             SUNBELT
           </h1>
 
           <div>
-            <h2 className="text-muted text-lg font-monument tracking-widest">
+            <h2 className="font-monument text-lg tracking-widest text-muted">
               OUR COMPANY
             </h2>
 
-            <div className="space-y-3 mt-5">
+            <div className="mt-5 space-y-3">
               <div className="flex justify-between">
                 <span className="font-mont text-muted">
                   Hashrate Renting Price
                 </span>
-                <span className="font-monument text-muted tracking-wider ml-3">
+                <span className="ml-3 font-monument tracking-wider text-muted">
                   83.6USD
                 </span>
               </div>
               <div className="flex justify-between">
                 <span className="font-mont text-muted">Service Fee</span>
-                <span className="font-monument text-muted tracking-wider ml-3">
+                <span className="ml-3 font-monument tracking-wider text-muted">
                   250USD
                 </span>
               </div>
               <div className="flex justify-between">
                 <span className="font-mont text-muted">Bandwidth</span>
-                <span className="font-monument text-muted tracking-wider ml-3">
+                <span className="ml-3 font-monument tracking-wider text-muted">
                   120TH/s, 1month
                 </span>
               </div>
@@ -80,19 +78,19 @@ const IncomeComparison = () => {
           </div>
         </div>
 
-        <div className="bg-[#E7F0FD] p-7 rounded-3xl col-span-1 xl:col-span-3 gap-10 flex flex-col justify-between">
+        <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-[#E7F0FD] p-7 xl:col-span-3">
           <img className="w-24" src={"/images/home/bitfufu.com-logo.png"}></img>
           <div>
-            <h2 className="text-lg text-muted-foreground font-monument tracking-wider">
+            <h2 className="font-monument text-lg tracking-wider text-muted-foreground">
               bitfufu.com
             </h2>
 
-            <div className="space-y-3 mt-5">
+            <div className="mt-5 space-y-3">
               <div className="flex justify-between">
                 <span className="font-mont text-muted-foreground">
                   Hashrate Renting Price
                 </span>
-                <span className="font-monument text-primary tracking-wider ml-3">
+                <span className="ml-3 font-monument tracking-wider text-primary">
                   83.6USD
                 </span>
               </div>
@@ -100,7 +98,7 @@ const IncomeComparison = () => {
                 <span className="font-mont text-muted-foreground">
                   Service Fee
                 </span>
-                <span className="font-monument text-primary tracking-wider ml-3">
+                <span className="ml-3 font-monument tracking-wider text-primary">
                   250USD
                 </span>
               </div>
@@ -108,7 +106,7 @@ const IncomeComparison = () => {
                 <span className="font-mont text-muted-foreground">
                   Bandwidth
                 </span>
-                <span className="font-monument text-primary tracking-wider ml-3">
+                <span className="ml-3 font-monument tracking-wider text-primary">
                   120TH/s, 1month
                 </span>
               </div>

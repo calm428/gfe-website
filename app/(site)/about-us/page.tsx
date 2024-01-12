@@ -1,7 +1,5 @@
 "use client"
 
-import React from "react"
-
 import AboutEnergy from "@/components/aboutUs/AboutEnergy"
 import AboutGFE from "@/components/aboutUs/AboutGFE"
 import CommunitySection from "@/components/aboutUs/CommunitySection"
@@ -18,7 +16,7 @@ function page() {
       <AboutEnergy />
       <MarketPlace />
       <PowerProduction />
-      <div className=" px-5 lg:px-24 bg-[url('/images/nft/bg2.png')] bg-cover pb-[300px] md:pb-[150px]">
+      <div className=" bg-[url('/images/nft/bg2.png')] bg-cover px-5 pb-[300px] md:pb-[150px] lg:px-24">
         <FaqSection />
         <CommunitySection />
       </div>

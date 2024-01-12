@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState } from "react"
 
 import "@radix-ui/react-icons"
 import Image from "next/image"
 
-import { SiteConfig, siteConfig } from "@/config/site"
+import { siteConfig } from "@/config/site"
 
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
@@ -47,13 +47,13 @@ function Counter() {
   }
   const payments = siteConfig.payments
   return (
-    <div className="mx-auto pb-[32px] auth font-mont w-full lg:w-[500px] xl:w-[480px] bg-background rounded-lg overflow-hidden shadow-lg">
-      <div className="p-[32px] flex flex-col gap-[24px] bg-[#F9FCFF]">
+    <div className="auth mx-auto w-full overflow-hidden rounded-lg bg-background pb-[32px] font-mont shadow-lg lg:w-[500px] xl:w-[480px]">
+      <div className="flex flex-col gap-[24px] bg-[#F9FCFF] p-[32px]">
         <div className="text-center">
-          <h2 className="text-[24px] font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+          <h2 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
             Buy In Before Price Increases!
           </h2>
-          <p className="font-mont font-medium text-[14px]">
+          <p className="font-mont text-[14px] font-medium">
             countdown until price increases
           </p>
         </div>
@@ -66,13 +66,13 @@ function Counter() {
         </div>
       </div>
       {/* bottom div */}
-      <div className="pt-[20px] px-[32px]">
+      <div className="px-[32px] pt-[20px]">
         <div className="flex flex-col gap-[20px]">
           <div className="flex justify-between gap-1">
             {payments.map((payment) => (
               <div
                 key={payment.name}
-                className=" text-xs flex py-[5px] pr-[24px] pl-[] gap-[5px] items-center bg-muted rounded-[5px]"
+                className=" flex items-center gap-[5px] rounded-[5px] bg-muted py-[5px] pl-[] pr-[24px] text-xs"
               >
                 <Image
                   src={payment.icon}
@@ -86,7 +86,7 @@ function Counter() {
           </div>
           <div className="flex gap-[10px]">
             <div className="flex flex-col gap-[8px]">
-              <h2 className=" text-muted-foreground font-semibold text-sm">
+              <h2 className=" text-sm font-semibold text-muted-foreground">
                 Pay with BTC
               </h2>
               <Input
@@ -96,31 +96,31 @@ function Counter() {
               />
             </div>
             <div className="flex flex-col gap-[8px]">
-              <h2 className=" text-muted-foreground font-semibold text-sm">
+              <h2 className=" text-sm font-semibold text-muted-foreground">
                 Receive GFE
               </h2>
               <Input type="number" placeholder="0" />
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-[5px]">
-            <h1 className=" text-muted-foreground font-medium">
+          <div className="flex flex-col items-center justify-center gap-[5px]">
+            <h1 className=" font-medium text-muted-foreground">
               USDT Raised:
               <span className="font-bold">$5,667,950.07 / $6,258,616</span>
             </h1>
-            <h1 className=" text-muted-foreground font-medium">
+            <h1 className=" font-medium text-muted-foreground">
               Your Purchased GEF= <span className="font-bold">0</span>
             </h1>
-            <h1 className=" text-muted-foreground font-medium">
+            <h1 className=" font-medium text-muted-foreground">
               Your Stakeable GEF= <span className="font-bold">0</span>
             </h1>
-            <h1 className=" text-muted-foreground font-medium">
+            <h1 className=" font-medium text-muted-foreground">
               1 GEF = <span className="font-bold">$0.12 </span>
             </h1>
           </div>
         </div>
 
         {/* button */}
-        <Button className="mt-[32px] w-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] py-[16px] px-[32px]">
+        <Button className="mt-[32px] w-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[32px] py-[16px]">
           Buy Now
         </Button>
       </div>

@@ -23,10 +23,10 @@ export function SignInModal({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-[900px] mx-auto w-[90%] h-[91%] p-0 auth">
+      <DialogContent className="auth mx-auto h-[91%] w-[90%] max-w-[900px] p-0">
         <div className="flex h-[90%]">
           <div
-            className="w-[50%] hidden md:flex justify-center items-center bg-no-repeat bg-cover bg-center"
+            className="hidden w-[50%] items-center justify-center bg-cover bg-center bg-no-repeat md:flex"
             style={{
               background:
                 "url(/images/auth/auth-layer-bg.png), url(/images/bg-gradient.webp)",
@@ -40,32 +40,32 @@ export function SignInModal({
               className="w-[80%]"
             />
           </div>
-          <div className="md:w-[50%] w-full p-8 sm:p-24 md:p-8 !py-24">
+          <div className="w-full p-8 !py-24 sm:p-24 md:w-[50%] md:p-8">
             <div className="my-4 text-center">
               <div className="text-3xl font-bold ">Welcome Back!</div>
               <div> Continue Your Journey</div>
             </div>
-            <Button variant="outline" className="w-full mt-4">
+            <Button variant="outline" className="mt-4 w-full">
               <Icons.google className="mr-2 h-4 w-4" />
               Continue with Google
             </Button>
-            <Button variant="outline" className="w-full mt-4">
+            <Button variant="outline" className="mt-4 w-full">
               <Icons.apple className="mr-2 h-5 w-5" />
               Continue with Apple
             </Button>
-            <div className="flex items-center justify-center gap-2 relative my-1">
-              <div className="p-4 bg-white z-10">OR</div>
+            <div className="relative my-1 flex items-center justify-center gap-2">
+              <div className="z-10 bg-white p-4">OR</div>
               <Separator
                 orientation="vertical"
-                className="absolute w-full mr-auto h-[1px] border-0"
+                className="absolute mr-auto h-[1px] w-full border-0"
               />
             </div>
-            <div className="space-y-4 mb-4">
+            <div className="mb-4 space-y-4">
               <Input type="email" placeholder="Username or email" />
               <Input type="password" placeholder="Password" />
               <div className="flex justify-end">
                 <button
-                  className="text-[#333] text-sm hover:underline transition-all duration-300"
+                  className="text-sm text-[#333] transition-all duration-300 hover:underline"
                   onClick={() => {
                     setSignInModalOpen(false)
                     setForgotPwModalOpen(true)
@@ -76,21 +76,21 @@ export function SignInModal({
               </div>
               <Button className="w-full">Sign In</Button>
             </div>
-            <p className="text-[#333] text-sm">
+            <p className="text-sm text-[#333]">
               By signing up, you agree to the{" "}
-              <Link href={"/"} className="underline text-[#111]">
+              <Link href={"/"} className="text-[#111] underline">
                 Terms of Service and
               </Link>{" "}
-              <Link href={"/"} className="underline text-[#111]">
+              <Link href={"/"} className="text-[#111] underline">
                 Privacy Policy
               </Link>
               , including{" "}
-              <Link href={"/"} className="underline text-[#111]">
+              <Link href={"/"} className="text-[#111] underline">
                 cookie use.
               </Link>
             </p>
-            <div className=" text-xs flex items-center justify-center">
-              <p> Don't have an account?</p>
+            <div className=" flex items-center justify-center text-xs">
+              <p> Don{"'"}t have an account?</p>
               <Button
                 variant="link"
                 className="text-xs"

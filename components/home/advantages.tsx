@@ -1,7 +1,4 @@
-import React from "react"
-
 import AdvantageDiv from "./AdvantageDiv"
-import { AdvantageCard } from "./advantage-card"
 
 const AdvantagesSection = () => {
   return (
@@ -36,7 +33,7 @@ const AdvantagesSection = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="py-24 px-5 lg:px-24 grid md:grid-cols-2 gap-[50px]">
+    <div className="grid gap-[50px] px-5 py-24 md:grid-cols-2 lg:px-24">
       <AdvantageDiv
         title="DAPPs Units"
         desc="Our Journey began with the design and construction of a sustainably-run server hosting environment prototype."

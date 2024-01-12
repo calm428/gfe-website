@@ -1,11 +1,9 @@
 "use client"
 
-import React from "react"
 import {
   ArcElement,
   CategoryScale,
   Chart as ChartJS,
-  ChartOptions,
   Filler,
   Legend,
   LineElement,
@@ -14,7 +12,7 @@ import {
   ScriptableContext,
   Tooltip,
 } from "chart.js"
-import { Line, Chart as ReactChart } from "react-chartjs-2"
+import { Line } from "react-chartjs-2"
 
 ChartJS.register(
   ArcElement,
@@ -81,8 +79,8 @@ const HistoricalPowerGraph = () => {
   }
 
   return (
-    <div className="xl:w-1/2 w-full p-10 drop-shadow-2xl bg-white space-y-5 flex flex-col justify-between">
-      <h1 className="text-sm auth font-semibold tracking-wider text-primary">
+    <div className="flex w-full flex-col justify-between space-y-5 bg-white p-10 drop-shadow-2xl">
+      <h1 className="auth text-sm font-semibold tracking-wider text-primary">
         Historical Power Graph (per kwh)
       </h1>
       {/* @ts-ignore */}

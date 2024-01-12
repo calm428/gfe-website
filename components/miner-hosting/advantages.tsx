@@ -1,23 +1,21 @@
-import React from "react"
-
 import { AdvantageCard } from "./advantage-card"
 
 const AdvantagesSection = () => {
   return (
-    <div className="py-10">
-      <div className="md:pb-14 pb-10">
-        <h1 className="text-center font-goldman font-normal text-5xl md:pb-3 pb-2  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+    <div className="container py-10">
+      <div className="pb-10 md:pb-14">
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-2 text-center  font-goldman text-5xl font-normal text-transparent md:pb-3">
           Advantages of <br className="hidden sm:inline" /> GFE Foundation
           renewable mining
         </h1>
-        <h3 className="font-mont font-medium text-lg md:text-xl text-center text-muted-foreground">
+        <h3 className="text-center font-mont text-lg font-medium text-muted-foreground md:text-xl">
           Focused on sustainable mining and eco-friendly options, contribute to
           making the world better
         </h3>
       </div>
 
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
-        <div className="grid grid-rows-2 grid-cols-1 gap-5">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+        <div className="grid grid-cols-1 grid-rows-2 gap-5">
           <AdvantageCard
             icon="/images/home/Specialization-icon.png"
             title="Specialization"
@@ -31,28 +29,28 @@ const AdvantagesSection = () => {
         </div>
 
         <div
-          className="rounded-3xl relative flex items-center flex-col min-h-[525px]"
+          className="relative flex min-h-[525px] flex-col items-center rounded-3xl"
           style={{
             background: "linear-gradient(0deg, #2D79FF 10%, #22B4FD 50%)",
           }}
         >
           <div className="p-10">
-            <h1 className="text-xl auth text-secondary font-bold tracking-wider">
+            <h1 className="auth text-xl font-bold tracking-wider text-secondary">
               SUNBELT MINER
             </h1>
-            <p className="mt-2 text-white auth font-medium transition-all duration-500">
+            <p className="auth mt-2 font-medium text-white transition-all duration-500">
               SUNBELT (Application-Specific Integrated Circuit) miners offer
               several advantages in the context of cryptocurrency mining
               compared to other types of mining hardware, such as CPUs or GPUs.
             </p>
           </div>
           <img
-            className="max-w-[350px] w-full absolute bottom-0 px-2.5"
+            className="absolute bottom-0 w-full max-w-[350px] px-2.5"
             src={"/images/home/miner.png"}
           ></img>
         </div>
 
-        <div className="grid grid-rows-2 grid-cols-1 gap-5">
+        <div className="grid grid-cols-1 grid-rows-2 gap-5">
           <AdvantageCard
             icon="/images/home/HighHashrate-icon.png"
             title="High Hashrate"

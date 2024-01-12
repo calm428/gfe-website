@@ -1,26 +1,24 @@
 "use client"
 
-import React from "react"
-
 import Card from "./Card"
 
 const UpcomingSection = () => {
   return (
-    <div className="container bg-background-lighten-10 mt-5">
-      <h1 className="font-goldman tracking-wider text-5xl mt-20 text-primary">
+    <div className="bg-background-lighten-10 container mt-5">
+      <h1 className="mt-20 font-goldman text-5xl tracking-wider text-primary">
         UPCOMING EVENTS
       </h1>
-      <p className="font-semibold auth my-6">
+      <p className="auth my-6 font-semibold">
         Stay tuned for our next exciting event, where innovation meets
         community! Join us for an enriching experience filled with insights,
         networking opportunities, and the latest developments in the world of
         cryptocurrency mining.
       </p>
-      <div className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-2">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
         <Card />
         <Card />
       </div>
-      <div className="border my-12"></div>
+      <div className="my-12 border"></div>
     </div>
   )
 }

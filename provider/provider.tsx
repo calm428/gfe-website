@@ -2,6 +2,9 @@
 
 import React, { ReactNode, useState } from "react"
 import { SunbeltContext } from "@/context/context"
+import { QueryClient, QueryClientProvider } from "react-query"
+
+const queryClient = new QueryClient()
 
 interface IProps {
   children: ReactNode
@@ -32,7 +35,7 @@ const App: React.FC<IProps> = ({ children }) => {
         setVerifyModalOpen,
       }}
     >
-      {children}
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </SunbeltContext.Provider>
   )
 }

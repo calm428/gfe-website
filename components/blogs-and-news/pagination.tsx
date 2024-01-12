@@ -17,13 +17,13 @@ function PaginatedItems() {
     <div className="container mt-10">
       <ReactPaginate
         breakLabel={
-          <div className="tracking-[0.5em] text-[#727C8F] px-6 xl:px-12 font-extrabold text-xl hidden lg:block -mt-1.5">
+          <div className="-mt-1.5 hidden px-6 text-xl font-extrabold tracking-[0.5em] text-[#727C8F] lg:block xl:px-12">
             .....
           </div>
         }
         nextLabel={
-          <div className="flex gap-3 items-center font-monument text-[#727C8F]">
-            <span className="hidden lg:block pt-0.5">Next</span>
+          <div className="flex items-center gap-3 font-monument text-[#727C8F]">
+            <span className="hidden pt-0.5 lg:block">Next</span>
             <ArrowRight />
           </div>
         }
@@ -31,9 +31,9 @@ function PaginatedItems() {
         pageRangeDisplayed={5}
         pageCount={pageCount}
         previousLabel={
-          <div className="flex gap-3 items-center font-monument text-[#727C8F]">
+          <div className="flex items-center gap-3 font-monument text-[#727C8F]">
             <ArrowLeft />
-            <span className="hidden lg:block pt-0.5">Previous</span>
+            <span className="hidden pt-0.5 lg:block">Previous</span>
           </div>
         }
         renderOnZeroPageCount={null}

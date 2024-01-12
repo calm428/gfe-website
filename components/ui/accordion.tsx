@@ -13,12 +13,12 @@ const AccordionItem = React.forwardRef<
   <AccordionPrimitive.Item
     ref={ref}
     className={cn(
-      "data-[state=closed]:bg-[#E7F0FD] data-[state=open]:shadow-md px-5",
+      "px-5 data-[state=closed]:bg-[#E7F0FD] data-[state=open]:shadow-md",
       className
     )}
     {...props}
   >
-    <h3 className="py-4 mr-4 font-monument  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]    text-2xl">
+    <h3 className="mr-4 bg-gradient-to-b from-[#2BADFD]  to-[#1570EF] bg-clip-text py-4 font-monument text-2xl    text-transparent">
       {props.value}
     </h3>
     {children}
@@ -40,11 +40,11 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <span id="plus" className="bg-white text-primary p-1.5 rounded-full">
+      <span id="plus" className="rounded-full bg-white p-1.5 text-primary">
         <Plus className="h-4 w-4 shrink-0 transition-transform duration-200" />
       </span>
 
-      <span id="minus" className="bg-primary text-white p-1.5 rounded-full">
+      <span id="minus" className="rounded-full bg-primary p-1.5 text-white">
         <Minus className="h-4 w-4 shrink-0 transition-transform duration-200" />
       </span>
     </AccordionPrimitive.Trigger>
@@ -58,7 +58,7 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden mr-9 text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className="mr-9 overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>

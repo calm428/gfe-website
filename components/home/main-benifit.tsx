@@ -1,22 +1,20 @@
-import React from "react"
-
 import { AdvantageCard } from "./advantage-card"
 
-const MainBenifitSection = () => {
+const MainBenefitSection = () => {
   return (
-    <div className=" container py-10 grid grid-cols-1 xl:grid-cols-5">
-      <div className="md:pb-14 pb-10 col-span-4">
-        <h1 className="text-start font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">
+    <div className=" container grid grid-cols-1 py-10 xl:grid-cols-5">
+      <div className="col-span-4 pb-10 md:pb-14">
+        <h1 className="pb-2 text-start font-monument text-2xl font-normal uppercase text-primary md:pb-3">
           Main Benefit{" "}
         </h1>
-        <h3 className="font-mont font-medium text-muted-foreground md:text-xl text-start">
+        <h3 className="text-start font-mont font-medium text-muted-foreground md:text-xl">
           We secure our future by promoting renewable energy resources. Our
           expert team take care of the regular maintenance and warranty
           servicing of your machine.
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 col-span-4 gap-10">
+      <div className="col-span-4 grid grid-cols-1 gap-10 lg:grid-cols-3">
         <AdvantageCard
           icon="/images/home/Safety-icon.png"
           title="Safety"
@@ -37,4 +35,4 @@ const MainBenifitSection = () => {
   )
 }
 
-export default MainBenifitSection
+export default MainBenefitSection

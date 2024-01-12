@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 const CARDS_DATA = [
   {
@@ -41,58 +42,66 @@ export default function SpecsSection() {
   }
 
   return (
-    <div className="pb-14 pt-10 md:pt-24">
-      <div className="md:pb-14 pb-10">
-        <h1 className="text-center font-goldman font-normal text-5xl md:pb-3 pb-2  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
-          Mining Ecosystem
-        </h1>
-        <h3 className="font-mont font-medium text-lg md:text-xl text-center text-muted-foreground">
-          Step into a comprehensive mining ecosystem designed to maximize
-          efficiency, sustainability, and profitability. Our integrated platform
-          offers a seamless blend of cutting-edge technology, sustainable
-          practices, and user-friendly tools.
-        </h3>
-      </div>
+    <div className="bg-[url('/images/miner-hosting/bg2.png')] bg-cover bg-bottom bg-no-repeat pb-14 pt-10 md:pt-24">
+      <div className="container">
+        <div className="pb-10 md:pb-14">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-2 text-center  font-goldman text-5xl font-normal text-transparent md:pb-3">
+            Mining Ecosystem
+          </h1>
+          <h3 className="text-center font-mont text-lg font-medium text-muted-foreground md:text-xl">
+            Step into a comprehensive mining ecosystem designed to maximize
+            efficiency, sustainability, and profitability. Our integrated
+            platform offers a seamless blend of cutting-edge technology,
+            sustainable practices, and user-friendly tools.
+          </h3>
+        </div>
 
-      {/* cards */}
-      <div className="flex flex-col xl:flex-row gap-4">
-        {CARDS_DATA.map((data, index: number) => (
-          <div
-            key={index}
-            className={`!bg-cover !bg-no-repeat min-w-[256px] rounded-lg h-fit xl:h-[400px] transition-all duration-500 p-8 flex flex-col relative ${
-              isCurrent(index) ? "flex-1 ease-out" : "ease-in"
-            }`}
-            style={{
-              background: `url(${data.image})`,
-              backgroundSize: "cover",
-            }}
-            onMouseOver={() => setCurrentCard(index)}
-          >
+        {/* cards */}
+        <div className="flex flex-col justify-center gap-4 xl:flex-row">
+          {CARDS_DATA.map((data, index: number) => (
             <div
-              className={`xl:absolute transition-all duration-500 ${
-                isCurrent(index) ? "bottom-6 ease-out" : "-bottom-20 ease-in"
+              key={index}
+              className={`relative flex h-fit min-w-[256px] flex-col rounded-lg !bg-cover !bg-no-repeat p-8 transition-all duration-500 xl:h-[400px] ${
+                isCurrent(index) ? "flex-1 ease-out" : "ease-in"
               }`}
+              style={{
+                background: `url(${data.image})`,
+                backgroundSize: "cover",
+              }}
+              onMouseOver={() => setCurrentCard(index)}
             >
-              <img className="w-16" src={data.icon}></img>
-              <h2
-                className={
-                  "text-xl auth font-bold text-white mt-6 xl:mt-8 tracking-wider " +
-                  `${isCurrent(index) ? "" : ""}`
-                }
-                dangerouslySetInnerHTML={{ __html: data.title }}
-              ></h2>
-              <p
-                className={`text-white mt-2 xl:mt-3 xl:w-80 transition-all duration-500 ${
-                  isCurrent(index)
-                    ? "text-opacity-100 ease-out"
-                    : "xl:text-opacity-0 ease-in"
+              <div
+                className={`transition-all duration-500 xl:absolute ${
+                  isCurrent(index) ? "bottom-6 ease-out" : "-bottom-20 ease-in"
                 }`}
               >
-                {data.description}
-              </p>
+                <Image
+                  src={data.icon}
+                  className="w-16"
+                  alt="icon"
+                  width={50}
+                  height={50}
+                />
+                <h2
+                  className={
+                    "text-xl auth font-bold text-white mt-6 xl:mt-8 tracking-wider " +
+                    `${isCurrent(index) ? "" : ""}`
+                  }
+                  dangerouslySetInnerHTML={{ __html: data.title }}
+                ></h2>
+                <p
+                  className={`mt-2 text-white transition-all duration-500 xl:mt-3 xl:w-80 ${
+                    isCurrent(index)
+                      ? "text-opacity-100 ease-out"
+                      : "ease-in xl:text-opacity-0"
+                  }`}
+                >
+                  {data.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )

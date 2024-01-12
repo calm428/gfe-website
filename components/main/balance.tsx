@@ -1,12 +1,10 @@
-import React from "react"
-
 import { Icons } from "../icons"
 import { Button } from "../ui/button"
 
 const Balance = () => {
   return (
     <div
-      className="p-4 rounded-md w-2/5 text-white"
+      className="w-2/5 rounded-md p-4 text-white"
       style={{
         background:
           "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%), #1570EF",
@@ -14,12 +12,12 @@ const Balance = () => {
       }}
     >
       <Icons.balance />
-      <p className="text-sm font-medium mt-3 mb-4">Current Balance</p>
-      <p className="font-semibold text-4xl mb-2">$99,118.5</p>
-      <div className="flex justify-between items-center mb-4">
+      <p className="mb-4 mt-3 text-sm font-medium">Current Balance</p>
+      <p className="mb-2 text-4xl font-semibold">$99,118.5</p>
+      <div className="mb-4 flex items-center justify-between">
         <p className="font-medium">Current Balance</p>
         <div
-          className="px-2 py-1 rounded-md text-[#70FF29] flex gap-1 items-center "
+          className="flex items-center gap-1 rounded-md px-2 py-1 text-[#70FF29] "
           style={{ background: "rgba(46, 255, 92, 0.08)" }}
         >
           <Icons.up />
@@ -27,7 +25,7 @@ const Balance = () => {
         </div>
       </div>
       <div
-        className="h-1 w-full my-3"
+        className="my-3 h-1 w-full"
         style={{ background: "rgba(46, 255, 92, 0.08)" }}
       ></div>
       <div className="grid grid-cols-2 gap-5">

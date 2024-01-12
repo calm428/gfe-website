@@ -1,14 +1,13 @@
 "use client"
 
-import React from "react"
 import Image from "next/image"
 
 function MarketPlace() {
   return (
-    <div className=" pt-24 lg:py-24 lg:pl-24 bg-gradient-to-t from-[#2BADFD] to-[#1570EF] grid lg:grid-cols-2 place-items-center gap-6">
-      <div className="flex px-5 lg:px-0 flex-col gap-8 text-primary-foreground">
-        <h1 className="text-5xl font-goldman">Electricity Market Landscape</h1>
-        <p className=" text-base lg:text-lg auth font-mont">
+    <div className=" grid place-items-center gap-6 bg-gradient-to-t from-[#2BADFD] to-[#1570EF] pt-24 lg:grid-cols-2 lg:py-24 lg:pl-24">
+      <div className="flex flex-col gap-8 px-5 text-primary-foreground lg:px-0">
+        <h1 className="font-goldman text-5xl">Electricity Market Landscape</h1>
+        <p className=" auth font-mont text-base lg:text-lg">
           The global energy market is estimated to be worth: $2trillion.
           However, it is largely centralized by a few corporations. These
           corporations often call themselves energy companies; but in our
@@ -21,7 +20,7 @@ function MarketPlace() {
           them money, and corporations are mandated by law to seek profit. They
           want to do things the same way.
         </p>
-        <p className=" text-base lg:text-lg auth font-mont">
+        <p className=" auth font-mont text-base lg:text-lg">
           The intensely local monopoly market for electricity is built for
           stability and convenience. Monopolies trade amongst themselves, at
           market rates, for concurrent delivery. The market price in the UK is
@@ -33,14 +32,14 @@ function MarketPlace() {
         <div className="flex flex-col gap-6">
           <div className="flex gap-3">
             <img src="/icons/check.svg" alt="image" />
-            <p className="text-base lg:text-lg auth font-mont">
+            <p className="auth font-mont text-base lg:text-lg">
               Consumption of power is convenient at the location a business
               operates.
             </p>
           </div>
           <div className="flex gap-3">
             <img src="/icons/check.svg" alt="image" />
-            <p className="text-base lg:text-lg auth font-mont">
+            <p className="auth font-mont text-base lg:text-lg">
               Assembly plants often use steel produced from Chinese power for
               assembly in part due to the intensive energy requirements for
               steel.
@@ -48,7 +47,7 @@ function MarketPlace() {
           </div>
           <div className="flex gap-3">
             <img src="/icons/check.svg" alt="image" />
-            <p className="text-base lg:text-lg auth font-mont">
+            <p className="auth font-mont text-base lg:text-lg">
               Office spaces use servers powered in Iceland.
             </p>
           </div>

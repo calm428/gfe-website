@@ -1,10 +1,10 @@
 "use client"
 
-import React from "react"
+import Image from "next/image"
 import Slider from "react-slick"
 
-import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
 
 const SLIDE_DATA = [
   {
@@ -47,30 +47,44 @@ const SliderSection = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          vertical: true,
+          verticalSwiping: true,
+        },
+      },
+    ],
   }
 
   return (
-    <div className="pb-52 hidden lg:block">
-      <div className="absolute w-[1900px] right-0">
-        <div
-          className="h-[230px] !bg-cover !bg-no-repeat w-full flex items-center relative"
-          style={{
-            background: "url(/images/home/slider-bg.png)",
-          }}
-        >
-          <div className="absolute right-0 w-[900px] h-fit">
-            <Slider arrows={false} {...settings}>
-              {SLIDE_DATA.map((data, index) => (
-                <div className="!flex items-center gap-6" key={index}>
-                  <img src={data.icon} />
-                  <div className="flex flex-col gap-2.5">
-                    <h1 className="text-3xl font-goldman">{data.title}</h1>
-                    <p className="">{data.text}</p>
-                  </div>
+    <div className="-mt-[100px] w-full">
+      <div className="relative flex h-[300px] w-full items-center bg-[url('/images/miner-hosting/slider-bg.svg')] bg-cover bg-center bg-no-repeat sm:h-[200px]">
+        <div className="absolute right-0 h-fit w-[60%] sm:w-[78%] lg:w-[70%] xl:w-[60%]">
+          <Slider arrows={false} {...settings}>
+            {SLIDE_DATA.map((data, index) => (
+              <div className="!flex items-center gap-3" key={index}>
+                <Image
+                  src={data.icon}
+                  alt="icon"
+                  width={50}
+                  height={50}
+                  className="h-14 w-14"
+                />
+                <div className="flex flex-col gap-2.5">
+                  <h1 className="font-goldman text-2xl">{data.title}</h1>
+                  <p className="">{data.text}</p>
                 </div>
-              ))}
-            </Slider>
-          </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </div>

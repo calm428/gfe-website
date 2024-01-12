@@ -7,9 +7,9 @@ import { Separator } from "@/components/ui/separator"
 
 export default function HeroSection() {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-6 justify-between">
+    <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
       <div className="space-y-10">
-        <div className="flex flex-col items-center md:items-start gap-2">
+        <div className="flex flex-col items-center gap-2 md:items-start">
           <div className="flex items-center gap-2">
             <Badge className="p-2 font-monument" variant="secondary">
               SUNBELT
@@ -18,12 +18,12 @@ export default function HeroSection() {
               orientation="vertical"
               className="h-6 w-[2px] bg-muted-foreground"
             />
-            <div className="text-muted-foreground font-mont">
+            <div className="font-mont text-muted-foreground">
               Sunbelt Miners
             </div>
           </div>
           <h1
-            className="font-monument text-3xl text-center md:text-left tracking-[-2%] pb-1 sm:mt-5 md:text-5xl lg:mt-6 xl:leading-[72px]"
+            className="pb-1 text-center font-monument text-3xl tracking-[-2%] sm:mt-5 md:text-left md:text-5xl lg:mt-6 xl:leading-[72px]"
             style={{
               background: "linear-gradient(180deg, #2BADFD 0%, #1570EF 88.02%)",
               backgroundClip: "text!important",
@@ -32,7 +32,7 @@ export default function HeroSection() {
           >
             Discover SUNBELT Miners
           </h1>
-          <p className="text-md md:text-2xl max-w-xl font-mont text-muted-foreground">
+          <p className="text-md max-w-xl font-mont text-muted-foreground md:text-2xl">
             Our goal is to offer the opportunity to invest in machines and then
             mine cryptocurrencies available to the general public
           </p>

@@ -1,16 +1,13 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Lock } from "lucide-react"
-import Slider from "react-slick"
 
 import { Button } from "@/components/ui/button"
 
 export default function OverviewSection() {
   return (
-    <div className="flex flex-col items-center gap-10 justify-between md:mt-5">
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
+    <div className="flex flex-col items-center justify-between gap-10 md:mt-5">
+      <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-2">
         <div>
           <Image
             src="/images/company/sunbelt-box.png"
@@ -20,10 +17,10 @@ export default function OverviewSection() {
           />
         </div>
         <div>
-          <div className="text-xl text-primary font-monument my-4">
+          <div className="my-4 font-monument text-xl text-primary">
             {"DAPPr (decentralized Anonymous Power Producing Renewable)"}
           </div>
-          <div className="text-md text-muted-foreground font-mont">
+          <div className="text-md font-mont text-muted-foreground">
             {`Introducing DAPPr (decentralized Anonymous Power Producing
             Renewable) Azure Phoenix—a revolutionary container designed for
             decentralized, anonymous, and power-producing renewable mining. Our
@@ -49,12 +46,12 @@ export default function OverviewSection() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
+      <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-2">
         <div>
-          <div className="text-xl text-primary font-monument my-4">
+          <div className="my-4 font-monument text-xl text-primary">
             {"SUNBELT’s ECO SYSTEM"}
           </div>
-          <div className="text-md text-muted-foreground font-mont">
+          <div className="text-md font-mont text-muted-foreground">
             {`Immerse yourself in our comprehensive mining ecosystem, meticulously
             crafted for efficiency, sustainability, and profitability. From
             state-of-the-art ASIC miners to eco-friendly energy solutions, our

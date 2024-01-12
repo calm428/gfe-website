@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-import { SiteConfig, siteConfig } from "@/config/site"
+import { siteConfig } from "@/config/site"
 
 import FeatureDiv from "./FeatureDiv"
 
@@ -100,18 +100,18 @@ export default function SpecsSection() {
     //     ))}
     //   </div>
     // </div>
-    <div className="relative px-5 lg:px-[96px] py-[100px] lg:py-[207px] bg-background flex flex-col  gap-12">
-      <div className=" relative flex flex-col gap-[24px] z-30">
-        <h1 className=" font-goldman text-[30px] md:text-[45px] font-normal text-primary">
+    <div className="relative flex flex-col gap-12 bg-background px-5 py-[100px] lg:px-[96px]  lg:py-[207px]">
+      <div className=" relative z-30 flex flex-col gap-[24px]">
+        <h1 className=" font-goldman text-[30px] font-normal text-primary md:text-[45px]">
           Functionalities
         </h1>
-        <p className="auth text-base lg:text-[20px] text-muted-foreground lg:w-1/2 font-medium">
+        <p className="auth text-base font-medium text-muted-foreground lg:w-1/2 lg:text-[20px]">
           This twofold implication of GFE tokens mean that not only do they
           serve as tradable assets with income, they are reflective of
           sustainable practices and have tangible, real-world utility.
         </p>
       </div>
-      <div className=" relative grid lg:grid-cols-2 xl:grid-cols-4  gap-6 z-30">
+      <div className=" relative z-30 grid gap-6  lg:grid-cols-2 xl:grid-cols-4">
         {features.map((feature) => (
           <FeatureDiv
             icon={feature.icon}
@@ -124,12 +124,12 @@ export default function SpecsSection() {
       <img
         src="/bgs/grid.jpg"
         alt="bg"
-        className=" hidden lg:block absolute top-0 left-0 w-1/2 "
+        className=" absolute left-0 top-0 hidden w-1/2 lg:block "
       />
       <img
         src="/bgs/global.jpg"
         alt="bg"
-        className=" absolute bottom-0 xl:top-0 -right-[100px] opacity-50 "
+        className=" absolute -right-[100px] bottom-0 opacity-50 xl:top-0 "
       />
       <img
         src="/bgs/right1.png"

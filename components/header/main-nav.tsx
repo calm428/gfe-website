@@ -11,7 +11,6 @@ import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
-import { Icons } from "@/components/icons"
 
 import ExpandableText from "./ExpandableText"
 
@@ -27,13 +26,13 @@ export function MainNav({ items }: MainNavProps) {
   const community = siteConfig.community
 
   const navMenuStyle = cn(
-    "flex items-center text-sm font-medium font-mont text-muted-foreground px-2 py-2 rounded-lg hover:text-primary"
+    "flex items-center rounded-lg p-2 font-mont text-sm font-medium text-muted-foreground hover:text-primary"
   )
   return (
-    <div className="w-full flex gap-6 md:gap-10">
+    <div className="flex w-full gap-6 md:gap-10">
       <Link
         href="/"
-        className="w-[150px] flex flex-col justify-center items-center gap-1"
+        className="flex w-[150px] flex-col items-center justify-center gap-1"
       >
         <div className="flex flex-col gap-1">
           <Image src="/GFE.svg" alt="Logo" width={154} height={49} />
@@ -41,9 +40,9 @@ export function MainNav({ items }: MainNavProps) {
       </Link>
       <Separator
         orientation="vertical"
-        className="h-10 my-auto w-[2px] bg-[#2BADFD] hidden lg:block"
+        className="my-auto hidden h-10 w-[2px] bg-[#2BADFD] lg:block"
       />
-      <nav className="hidden lg:flex w-full  gap-6 items-center">
+      <nav className="hidden w-full items-center  gap-6 lg:flex">
         <NavigationMenu.Root>
           <NavigationMenu.List>
             <NavigationMenu.Item>
@@ -51,7 +50,7 @@ export function MainNav({ items }: MainNavProps) {
                 Ecosystem <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute top-[59px]  lg:-left-36 xl:left-0 ">
-                <div className="w-[900px] rounded-bl-[20px]  rounded-br-[20px] flex border border-border bg-background">
+                <div className="flex w-[900px]  rounded-b-[20px] border border-border bg-background">
                   <div className="p-[24px]">
                     <h1 className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
                       token functionalities
@@ -76,7 +75,7 @@ export function MainNav({ items }: MainNavProps) {
                               {functionality.title}
                             </p>
                             <ExpandableText
-                              children={functionality.desc}
+                              description={functionality.desc}
                               maxChars={60}
                             />
                           </p>
@@ -84,7 +83,7 @@ export function MainNav({ items }: MainNavProps) {
                       </Link>
                     ))}
                   </div>
-                  <div className="p-[24px] border-l border-l-border">
+                  <div className="border-l border-l-border p-[24px]">
                     <h1 className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
                       Industries
                     </h1>
@@ -109,7 +108,7 @@ export function MainNav({ items }: MainNavProps) {
                                 {industry.title}
                               </p>
                               <ExpandableText
-                                children={industry.desc}
+                                description={industry.desc}
                                 maxChars={60}
                               />
                             </p>
@@ -126,7 +125,7 @@ export function MainNav({ items }: MainNavProps) {
         <Link
           href={"/NFT"}
           className={` ${navMenuStyle} ${
-            "/NFT" === pathname && "text-primary bg-primary/5 font-semibold"
+            "/NFT" === pathname && "bg-primary/5 font-semibold text-primary"
           }`}
         >
           NFT
@@ -137,8 +136,8 @@ export function MainNav({ items }: MainNavProps) {
               <NavigationMenu.Trigger className={navMenuStyle}>
                 Community <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
-              <NavigationMenu.Content className="NavigationMenuContent absolute top-[59px] left-0 ">
-                <div className="border border-border p-3 rounded-br-[10px] rounded-bl-[10px] bg-background">
+              <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
+                <div className="rounded-b-[10px] border border-border bg-background p-3">
                   {community.map((community) => (
                     <Link href={"#"} className="flex gap-2 py-2">
                       <Image
@@ -162,7 +161,7 @@ export function MainNav({ items }: MainNavProps) {
             href={"/about-us"}
             className={` ${navMenuStyle} ${
               "/about-us" === pathname &&
-              "text-primary bg-primary/5 font-semibold"
+              "bg-primary/5 font-semibold text-primary"
             }`}
           >
             About us
@@ -172,7 +171,7 @@ export function MainNav({ items }: MainNavProps) {
           href={"/blogs-and-news"}
           className={` ${navMenuStyle} ${
             "/blogs-and-news" === pathname &&
-            "text-primary bg-primary/5 font-semibold"
+            "bg-primary/5 font-semibold text-primary"
           }`}
         >
           Blogs and News
@@ -181,7 +180,7 @@ export function MainNav({ items }: MainNavProps) {
           href={"/contacts"}
           className={` ml-auto ${navMenuStyle} ${
             "/contacts" === pathname &&
-            "text-primary bg-primary/5 font-semibold"
+            "bg-primary/5 font-semibold text-primary"
           }`}
         >
           Contacts

@@ -1,5 +1,3 @@
-import React from "react"
-
 import HeroSection from "@/components/payments/hero"
 import OrderSection from "@/components/payments/order"
 

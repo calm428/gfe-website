@@ -1,15 +1,14 @@
-import React from "react"
 import Image from "next/image"
 
 function PartnersSection() {
   return (
-    <div className=" px-5 lg:px-24 py-[100px] lg:flex items-center gap-6 bg-muted">
-      <h1 className="font-goldman text-3xl capitalize text-center mb-4 lg:mb-0 text-primary">
+    <div className=" items-center gap-6 bg-muted px-5 py-[100px] lg:flex lg:px-24">
+      <h1 className="mb-4 text-center font-goldman text-3xl capitalize text-primary lg:mb-0">
         Partners
       </h1>
-      <div className="flex ml-20 flex-wrap sm:grid-cols-2 md:grid-cols-5 gap-3">
+      <div className="ml-20 flex flex-wrap gap-3 sm:grid-cols-2 md:grid-cols-5">
         {/* company logos */}
-        <div className="py-4 rounded-md px-6 flex items-center justify-center bg-background">
+        <div className="flex items-center justify-center rounded-md bg-background px-6 py-4">
           <Image
             src={"/logos/logo2.svg"}
             width={200}
@@ -17,7 +16,7 @@ function PartnersSection() {
             alt="company"
           />
         </div>
-        <div className="py-4 rounded-md px-6 flex items-center justify-center bg-background">
+        <div className="flex items-center justify-center rounded-md bg-background px-6 py-4">
           <Image
             src={"/logos/logo3.svg"}
             width={200}
@@ -25,7 +24,7 @@ function PartnersSection() {
             alt="company"
           />
         </div>
-        <div className="py-4 rounded-md px-6 flex items-center justify-center bg-background">
+        <div className="flex items-center justify-center rounded-md bg-background px-6 py-4">
           <Image
             src={"/logos/logo4.svg"}
             width={100}
@@ -33,7 +32,7 @@ function PartnersSection() {
             alt="company"
           />
         </div>
-        <div className="py-4 rounded-md px-6 flex items-center justify-center bg-background ">
+        <div className="flex items-center justify-center rounded-md bg-background px-6 py-4 ">
           <Image
             src={"/logos/logo1.svg"}
             width={120}
@@ -42,7 +41,7 @@ function PartnersSection() {
           />
         </div>
 
-        <div className="py-4 rounded-md px-6 flex items-center justify-center bg-background">
+        <div className="flex items-center justify-center rounded-md bg-background px-6 py-4">
           <Image
             src={"/logos/logo5.svg"}
             width={100}

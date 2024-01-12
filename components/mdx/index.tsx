@@ -13,7 +13,7 @@ const components = {
   h1: ({ className, ...props }: any) => (
     <h1
       className={cn(
-        "mt-2 scroll-m-20 text-4xl font-bold font-monument tracking-wider",
+        "mt-2 scroll-m-20 font-monument text-4xl font-bold tracking-wider",
         className
       )}
       {...props}
@@ -22,7 +22,7 @@ const components = {
   h2: ({ className, ...props }: any) => (
     <h2
       className={cn(
-        "mt-10 scroll-m-20 pb-1 text-3xl font-semibold first:mt-0 font-monument tracking-wider",
+        "mt-10 scroll-m-20 pb-1 font-monument text-3xl font-semibold tracking-wider first:mt-0",
         className
       )}
       {...props}
@@ -31,7 +31,7 @@ const components = {
   h3: ({ className, ...props }: any) => (
     <h3
       className={cn(
-        "mt-8 scroll-m-20 text-2xl font-semibold font-monument tracking-wider",
+        "mt-8 scroll-m-20 font-monument text-2xl font-semibold tracking-wider",
         className
       )}
       {...props}
@@ -40,7 +40,7 @@ const components = {
   h4: ({ className, ...props }: any) => (
     <h4
       className={cn(
-        "mt-8 scroll-m-20 text-xl font-semibold font-monument tracking-wider",
+        "mt-8 scroll-m-20 font-monument text-xl font-semibold tracking-wider",
         className
       )}
       {...props}
@@ -49,7 +49,7 @@ const components = {
   h5: ({ className, ...props }: any) => (
     <h5
       className={cn(
-        "mt-8 scroll-m-20 text-lg font-semibold font-monument tracking-wider",
+        "mt-8 scroll-m-20 font-monument text-lg font-semibold tracking-wider",
         className
       )}
       {...props}
@@ -58,7 +58,7 @@ const components = {
   h6: ({ className, ...props }: any) => (
     <h6
       className={cn(
-        "mt-8 scroll-m-20 text-base font-semibold font-monument tracking-wider",
+        "mt-8 scroll-m-20 font-monument text-base font-semibold tracking-wider",
         className
       )}
       {...props}

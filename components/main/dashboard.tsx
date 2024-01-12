@@ -1,9 +1,6 @@
 "use client"
 
-import React from "react"
-
 import { Icons } from "../icons"
-import { Button } from "../ui/button"
 import Balance from "./balance"
 import BuyDapp from "./buyDapp"
 import BuyGfeToken from "./buyGfe"
@@ -14,10 +11,10 @@ import TransactionHistory from "./transaction"
 const Dashboard = () => {
   return (
     <div className="bg-[#FAFAFA] px-16 py-12">
-      <p className="text-[#1E293B] font-semibold text-5xl">
+      <p className="text-5xl font-semibold text-[#1E293B]">
         Hello, Jesse Lawson
       </p>
-      <div className="flex items center gap-2 text-sm text-[#64748B] font-medium">
+      <div className="items center flex gap-2 text-sm font-medium text-[#64748B]">
         <div className="flex items-center gap-1">
           <Icons.mail />
           <p>Jesselawson@gmail.com</p>
@@ -27,24 +24,24 @@ const Dashboard = () => {
           <p>United Kingdom</p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-5 mt-5">
+      <div className="mt-5 flex flex-col gap-5 md:flex-row">
         <Balance />
         <TransactionHistory />
       </div>
-      <div className="flex flex-col md:flex-row gap-5 mt-5">
+      <div className="mt-5 flex flex-col gap-5 md:flex-row">
         <BuyGfeToken />
         <BuyDapp />
       </div>
       <div className=" mt-5">
-        <p className="text-[#1E293B] text-3xl font-semibold">Btc Mining</p>
-        <div className="flex gap-5 mt-5">
-          <div className="w-1/4 flex flex-col gap-4">
+        <p className="text-3xl font-semibold text-[#1E293B]">Btc Mining</p>
+        <div className="mt-5 flex gap-5">
+          <div className="flex w-1/4 flex-col gap-4">
             <div
-              className="p-3 rounded-md w-full text-[#64748B] bg-white border border-[#E7F0FD]"
+              className="w-full rounded-md border border-[#E7F0FD] bg-white p-3 text-[#64748B]"
               style={{ boxShadow: "0px 1px 2px 0px rgba(51, 65, 86, 0.08)" }}
             >
               <div
-                className="p-2 rounded-md w-fit"
+                className="w-fit rounded-md p-2"
                 style={{
                   background:
                     "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%), #1570EF",
@@ -53,14 +50,14 @@ const Dashboard = () => {
               >
                 <Icons.miningProfit />
               </div>
-              <p className="text-sm font-medium mt-3 mb-4">Mining profit</p>
-              <p className="font-semibold text-4xl mb-2 text-[#2C3B50]">
+              <p className="mb-4 mt-3 text-sm font-medium">Mining profit</p>
+              <p className="mb-2 text-4xl font-semibold text-[#2C3B50]">
                 $99,118.5
               </p>
-              <div className="flex justify-between items-center mb-4">
+              <div className="mb-4 flex items-center justify-between">
                 <p className="font-medium">0.981239712 BTC</p>
                 <div
-                  className="px-2 py-1 rounded-md text-[#70FF29] flex gap-1 items-center "
+                  className="flex items-center gap-1 rounded-md px-2 py-1 text-[#70FF29] "
                   style={{ background: "rgba(103, 194, 58, 0.08)" }}
                 >
                   <Icons.up />
@@ -69,11 +66,11 @@ const Dashboard = () => {
               </div>
             </div>
             <div
-              className="p-3 rounded-md w-full text-[#64748B] bg-white border border-[#E7F0FD]"
+              className="w-full rounded-md border border-[#E7F0FD] bg-white p-3 text-[#64748B]"
               style={{ boxShadow: "0px 1px 2px 0px rgba(51, 65, 86, 0.08)" }}
             >
               <div
-                className="p-2 rounded-md w-fit"
+                className="w-fit rounded-md p-2"
                 style={{
                   background:
                     "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%), #1570EF",
@@ -82,16 +79,16 @@ const Dashboard = () => {
               >
                 <Icons.minTransLevel />
               </div>
-              <p className="text-sm font-medium mt-3 mb-4">
+              <p className="mb-4 mt-3 text-sm font-medium">
                 Minimum Transaction Level
               </p>
-              <p className="font-semibold text-4xl mb-2 text-[#2C3B50]">
+              <p className="mb-2 text-4xl font-semibold text-[#2C3B50]">
                 $99,118.5
               </p>
-              <div className="flex justify-between items-center mb-4">
+              <div className="mb-4 flex items-center justify-between">
                 <p className="font-medium">0.981239712 BTC</p>
                 <div
-                  className="px-2 py-1 rounded-md text-[#1570EF] flex gap-1 items-center "
+                  className="flex items-center gap-1 rounded-md px-2 py-1 text-[#1570EF] "
                   style={{ background: "rgba(21, 112, 239, 0.08)" }}
                 >
                   <Icons.minLevelTrue />

@@ -1,34 +1,26 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 
-import { siteConfig } from "@/config/site"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { buttonVariants } from "@/components/ui/button"
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { MainNav } from "@/components/header/main-nav"
-import { Icons } from "@/components/icons"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 export function LanguageSelector() {
   return (
     <Select defaultValue="en">
-      <SelectTrigger className="w-auto rounded-full gap-4">
+      <SelectTrigger className="w-auto gap-4 rounded-full">
         <SelectValue placeholder="Select a language" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
           <SelectItem value="en">
-            <div className="w-full flex items-center pr-4">
+            <div className="flex w-full items-center pr-4">
               <Image
                 src="https://flagcdn.com/us.svg"
                 alt="en"
@@ -46,7 +38,7 @@ export function LanguageSelector() {
                 alt="ru"
                 width={24}
                 height={24}
-                className="mr-2 w-4 h-auto"
+                className="mr-2 h-auto w-4"
               />
               Russian
             </div>
@@ -58,7 +50,7 @@ export function LanguageSelector() {
                 alt="ge"
                 width={24}
                 height={24}
-                className="mr-2 w-4 h-auto"
+                className="mr-2 h-auto w-4"
               />
               Georgian
             </div>
@@ -70,7 +62,7 @@ export function LanguageSelector() {
                 alt="es"
                 width={24}
                 height={24}
-                className="mr-2 w-4 h-auto"
+                className="mr-2 h-auto w-4"
               />
               Spanish
             </div>

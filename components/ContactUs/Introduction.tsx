@@ -1,4 +1,3 @@
-import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -19,22 +18,22 @@ import { Textarea } from "../ui/textarea"
 
 function Introduction() {
   return (
-    <div className="w-full px-10 py-24 bg-[url('/images/bg-gradient.webp')] bg-cover bg-center bg-no-repeat auth">
-      <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 rounded-xl overflow-hidden">
-        <div className="p-8 bg-primary/10">
+    <div className="auth w-full bg-[url('/images/bg-gradient.webp')] bg-cover bg-center bg-no-repeat px-10 py-24">
+      <div className="mx-auto grid w-full max-w-7xl overflow-hidden rounded-xl lg:grid-cols-2">
+        <div className="bg-primary/10 p-8">
           <div>
-            <div className="text-5xl font-goldman text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+            <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-5xl text-transparent">
               Book a meeting
             </div>
-            <p className="font-mont auth text-base lg:text-lg my-4">
+            <p className="auth my-4 font-mont text-base lg:text-lg">
               Interested in our services and willing to participate in our
-              private sale? That’s why we are here! Book a meeting with our team
-              to discuss in detail, how it works, the pricing. We will do our
-              best to help.
+              private sale? That{"'"}s why we are here! Book a meeting with our
+              team to discuss in detail, how it works, the pricing. We will do
+              our best to help.
             </p>
-            <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row gap-4 mt-4 mb-24">
+            <div className="mb-24 mt-4 flex flex-col gap-4 md:flex-row lg:flex-col xl:flex-row">
               <Button
-                className=" font-mont auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]"
+                className=" auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-mont"
                 asChild
               >
                 <Link
@@ -45,7 +44,7 @@ function Introduction() {
                 </Link>
               </Button>
               <Button
-                className="auth py-4 px-8 bg-background border border-secondary-foreground hover:bg-muted"
+                className="auth border border-secondary-foreground bg-background px-8 py-4 hover:bg-muted"
                 variant="outline"
                 asChild
               >
@@ -58,51 +57,51 @@ function Introduction() {
                     width={24}
                     height={25}
                     alt="calendly"
-                    className="w-6 h-6"
+                    className="h-6 w-6"
                   />
                   Calendly
                 </Link>
               </Button>
             </div>
           </div>
-          <div className="flex flex-col auth gap-6">
-            <div className="text-2xl font-mont font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+          <div className="auth flex flex-col gap-6">
+            <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-mont text-2xl font-bold text-transparent">
               Contact info
             </div>
-            <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row gap-2">
+            <div className="flex flex-col gap-2 md:flex-row lg:flex-col xl:flex-row">
               <div className="flex flex-col gap-2">
-                <div className="flex gap-4 items-center">
-                  <div className="p-3 rounded-full bg-primary/10">
-                    <Mail className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-4">
+                  <div className="rounded-full bg-primary/10 p-3">
+                    <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <div className="uppercase text-muted-foreground text-sm">
+                    <div className="text-sm uppercase text-muted-foreground">
                       Email us
                     </div>
-                    <div className="text-black text-md font-medium">
+                    <div className="text-md font-medium text-black">
                       info@gfe.foundation
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-4 items-center">
-                  <div className="p-3 rounded-full bg-primary/10">
-                    <Phone className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-4">
+                  <div className="rounded-full bg-primary/10 p-3">
+                    <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <div className="uppercase text-muted-foreground text-sm">
+                    <div className="text-sm uppercase text-muted-foreground">
                       Phone number
                     </div>
-                    <div className="text-black text-md font-medium">
+                    <div className="text-md font-medium text-black">
                       0000000000000
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-4 items-center">
-                  <div className="p-3 rounded-full bg-primary/10">
-                    <MapPin className="w-6 h-6 text-primary" />
+                <div className="flex items-center gap-4">
+                  <div className="rounded-full bg-primary/10 p-3">
+                    <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <div className="text-black text-md font-medium">
+                    <div className="text-md font-medium text-black">
                       83 McDonald Road, City of Edinburgh, Alba / Scotland, EH7
                       4NQ, United Kingdom
                     </div>
@@ -110,31 +109,31 @@ function Introduction() {
                 </div>
               </div>
               <div className="flex flex-col gap-3">
-                <div className="flex gap-2 items-center text-lg font-mont font-medium text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
-                  <div className="w-6 h-[3px] bg-primary"></div>
+                <div className="flex items-center gap-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-mont text-lg font-medium text-transparent">
+                  <div className="h-[3px] w-6 bg-primary"></div>
                   connect with us:
                 </div>
                 <div className="flex gap-2">
-                  <div className="p-2 rounded-lg bg-primary/10">
-                    <Facebook className="w-6 h-6 text-primary" />
+                  <div className="rounded-lg bg-primary/10 p-2">
+                    <Facebook className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="p-2 rounded-lg bg-primary/10">
-                    <Twitter className="w-6 h-6 text-primary" />
+                  <div className="rounded-lg bg-primary/10 p-2">
+                    <Twitter className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="p-2 rounded-lg bg-primary/10">
-                    <Linkedin className="w-6 h-6 text-primary" />
+                  <div className="rounded-lg bg-primary/10 p-2">
+                    <Linkedin className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="p-2 rounded-lg bg-primary/10">
-                    <Instagram className="w-6 h-6 text-primary" />
+                  <div className="rounded-lg bg-primary/10 p-2">
+                    <Instagram className="h-6 w-6 text-primary" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="p-8 px-16 bg-secondary flex flex-col items-center justify-center">
-          <div className="w-full flex flex-col auth gap-6">
-            <div className="w-full flex gap-4">
+        <div className="flex flex-col items-center justify-center bg-secondary p-8 px-16">
+          <div className="auth flex w-full flex-col gap-6">
+            <div className="flex w-full gap-4">
               <div className="w-full">
                 <div className="text-md font-mont text-muted-foreground">
                   Name
@@ -164,7 +163,7 @@ function Introduction() {
               />
             </div>
           </div>
-          <Button className="w-full font-mont auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF] mt-6">
+          <Button className="auth mt-6 w-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-mont">
             Send
           </Button>
         </div>

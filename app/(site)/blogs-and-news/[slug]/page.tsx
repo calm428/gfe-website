@@ -27,23 +27,23 @@ const page: FC<PageProps> = async ({ params }) => {
   console.log(doc.headings)
   return (
     <div className="container mt-10 pb-32">
-      <div className="flex mb-10">
-        <h3 className="px-5 border-r border-muted-foreground font-monument tracking-wider text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+      <div className="mb-10 flex">
+        <h3 className="border-r border-muted-foreground bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text px-5 font-monument tracking-wider text-transparent">
           SUNBELT
         </h3>
-        <h3 className="px-5 border-l border-r border-muted-foreground">
+        <h3 className="border-x border-muted-foreground px-5">
           Blogs and News
         </h3>
-        <h3 className="px-5 border-l border-muted-foreground">Article</h3>
+        <h3 className="border-l border-muted-foreground px-5">Article</h3>
       </div>
 
-      <h1 className="font-monument text-2xl tracking-wider mb-10">
+      <h1 className="mb-10 font-monument text-2xl tracking-wider">
         {doc.title}
       </h1>
 
-      <div className="flex flex-col lg:flex-row-reverse w-full gap-5">
-        <div className="flex flex-col w-80 gap-2">
-          <h1 className="font-monument text-primary mb-3 border-t-2 pt-4">
+      <div className="flex w-full flex-col gap-5 lg:flex-row-reverse">
+        <div className="flex w-80 flex-col gap-2">
+          <h1 className="mb-3 border-t-2 pt-4 font-monument text-primary">
             Table of content
           </h1>
           {doc.headings.map((heading: any, index: number) => (
@@ -57,7 +57,7 @@ const page: FC<PageProps> = async ({ params }) => {
 
       <div className="mt-16">
         <div className="flex justify-between">
-          <h1 className="text-center font-monument font-normal text-xl text-primary md:pb-3 pb-2 uppercase">
+          <h1 className="pb-2 text-center font-monument text-xl font-normal uppercase text-primary md:pb-3">
             Stay in the loop
           </h1>
 
@@ -68,7 +68,7 @@ const page: FC<PageProps> = async ({ params }) => {
             }}
             className={cn(
               buttonVariants(),
-              "font-monument tracking-widest pt-2.5 font-normal hidden md:block"
+              "hidden pt-2.5 font-monument font-normal tracking-widest md:block"
             )}
             href={"/blogs-and-news"}
           >
@@ -76,7 +76,7 @@ const page: FC<PageProps> = async ({ params }) => {
           </Link>
         </div>
 
-        <div className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           <Card />
           <Card />
           <Card />

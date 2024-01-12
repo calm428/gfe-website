@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button"
 
 export default function InvestSection() {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-6 justify-between pb-32">
-      <div className="relative bg-[#E7F0FD] px-8 py-12 rounded-xl">
-        <div className="text-2xl font-semibold my-4 text-primary">
+    <div className="flex flex-col items-center justify-between gap-6 pb-32 md:flex-row">
+      <div className="relative rounded-xl bg-[#E7F0FD] px-8 py-12">
+        <div className="my-4 text-2xl font-semibold text-primary">
           Willing to Invest More Than $100K?
         </div>
-        <div className="w-full md:w-1/2 lg:w-2/3 text-md text-muted-foreground font-mont">
-          If you're ready to invest more than $100K, seize the potential for
+        <div className="text-md w-full font-mont text-muted-foreground md:w-1/2 lg:w-2/3">
+          If you{"'"}re ready to invest more than $100K, seize the potential for
           substantial returns and accelerated growth. Explore strategic
           investment options with us to maximize your financial impact and
           secure a path to long-term success.
@@ -31,7 +31,7 @@ export default function InvestSection() {
           alt="invest"
           width={500}
           height={500}
-          className="md:absolute mt-8 h-80 w-auto mx-auto right-0 -bottom-8"
+          className="-bottom-8 right-0 mx-auto mt-8 h-80 w-auto md:absolute"
         />
       </div>
     </div>

@@ -1,11 +1,7 @@
 "use client"
 
-import React from "react"
-import Slider from "react-slick"
-
-import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Coursel from "./Coursel"
+import "slick-carousel/slick/slick.css"
 
 const SLIDE_DATA = [
   {
@@ -70,15 +66,15 @@ const SliderSection = () => {
     //         </div>
     //     </div>
     // </div>
-    <div className=" px-5 relative pt-[100px] auth bg-background z-10">
-      <div className="flex lg:px-[200px] flex-col gap-[24px] items-center">
-        <h1 className="font-medium py-[8px] px-[16px] text-base md:text-[20px] rounded-sm bg-[#EEF5FF] text-primary">
+    <div className=" auth relative z-10 bg-background px-5 pt-[100px]">
+      <div className="flex flex-col items-center gap-[24px] lg:px-[200px]">
+        <h1 className="rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
           Green Fungible Energy
         </h1>
-        <h1 className="font-monument text-[45px] text-center lg:text-[50px] font-normal capitalize text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-monument text-[45px] font-normal capitalize text-transparent lg:text-[50px]">
           What is GFE?
         </h1>
-        <p className=" text-base lg:text-[20px] text-muted-foreground text-center">
+        <p className=" text-center text-base text-muted-foreground lg:text-[20px]">
           GFE tokens are the digital representation of electrical energy, with
           each token signifying the right to direct the use of [1] 1kWh of green
           energy that will be generated and consumed by our infrastructure. This

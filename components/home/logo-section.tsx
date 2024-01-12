@@ -1,15 +1,13 @@
-import React from "react"
-
 const LogoSection = () => {
   return (
     <div
-      className=" relative h-32 my-10"
+      className=" relative my-10 h-32"
       style={{
         background: "linear-gradient(300deg, #22B4FD 32.53%, #2D79FF 77.26%)",
       }}
     >
-      <div className="bg-primary h-32 rotate-[2.55deg] absolute w-[110vw] -left-2 -z-10" />
-      <div className="contaner items-center h-full flex justify-between font-monument text-lg lg:text-3xl text-muted ">
+      <div className="absolute -left-2 -z-10 h-32 w-[110vw] rotate-[2.55deg] bg-primary" />
+      <div className="contaner flex h-full items-center justify-between font-monument text-lg text-muted lg:text-3xl ">
         <div className="px-5 ">LOGO</div>
         <div className="px-5">LOGO</div>
         <div className="px-5">LOGO</div>

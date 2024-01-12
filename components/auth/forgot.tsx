@@ -2,14 +2,11 @@
 
 import { useContext } from "react"
 import Image from "next/image"
-import Link from "next/link"
 import { SunbeltContext } from "@/context/context"
 
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
-import { Separator } from "@/components/ui/separator"
-import { Icons } from "@/components/icons"
 
 export function ForgotPwModal({
   open: open,
@@ -23,10 +20,10 @@ export function ForgotPwModal({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-[900px] mx-auto w-[90%] p-0 auth">
+      <DialogContent className="auth mx-auto w-[90%] max-w-[900px] p-0">
         <div className="flex">
           <div
-            className="w-[55%] hidden md:flex justify-center items-center bg-no-repeat bg-cover bg-center"
+            className="hidden w-[55%] items-center justify-center bg-cover bg-center bg-no-repeat md:flex"
             style={{
               background:
                 "url(/images/auth/auth-layer-bg.png), url(/images/bg-gradient.webp)",
@@ -40,12 +37,12 @@ export function ForgotPwModal({
               className="w-[80%]"
             />
           </div>
-          <div className="md:w-[45%] w-full p-8 sm:p-24 md:p-8 !py-24">
+          <div className="w-full p-8 !py-24 sm:p-24 md:w-[45%] md:p-8">
             <div className="my-4 text-center">
               <div className="text-3xl font-bold ">Check Email</div>
               <div> Verify your account</div>
             </div>
-            <div className="space-y-4 mb-4">
+            <div className="mb-4 space-y-4">
               <Input type="email" placeholder="Email" />
               <Button
                 className="w-full"

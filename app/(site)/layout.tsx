@@ -1,14 +1,8 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
-import App from "@/provider/provider"
 
 import { siteConfig } from "@/config/site"
-import { fontMono, fontMont, fontMonumentExtended, fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
 import { SiteFooter } from "@/components/footer"
-import { SiteHeader } from "@/components/header/site-header"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: {
