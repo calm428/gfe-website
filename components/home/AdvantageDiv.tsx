@@ -13,7 +13,7 @@ function AdvantageDiv({ title, desc, image }: Props) {
     <div className=" relative flex flex-col overflow-hidden rounded-md border border-border bg-muted">
       <div className="py-[50px] pl-[50px] flex flex-col gap-8">
         <div className="flex flex-col gap-4">
-          <h1 className="font-monument text-xl capitalize text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+          <h1 className="font-goldman text-4xl capitalize text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
             {title}
           </h1>
           <p className="auth text-base font-medium w-[80%] ">{desc}</p>

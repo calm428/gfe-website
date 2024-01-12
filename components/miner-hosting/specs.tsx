@@ -43,10 +43,10 @@ export default function SpecsSection() {
   return (
     <div className="pb-14 pt-10 md:pt-24">
       <div className="md:pb-14 pb-10">
-        <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">
+        <h1 className="text-center font-goldman font-normal text-5xl md:pb-3 pb-2  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
           Mining Ecosystem
         </h1>
-        <h3 className="font-mont font-medium text-lg md:text-xl text-center">
+        <h3 className="font-mont font-medium text-lg md:text-xl text-center text-muted-foreground">
           Step into a comprehensive mining ecosystem designed to maximize
           efficiency, sustainability, and profitability. Our integrated platform
           offers a seamless blend of cutting-edge technology, sustainable
@@ -76,7 +76,7 @@ export default function SpecsSection() {
               <img className="w-16" src={data.icon}></img>
               <h2
                 className={
-                  "text-xl font-monument text-white mt-6 xl:mt-8 tracking-wider " +
+                  "text-xl auth font-bold text-white mt-6 xl:mt-8 tracking-wider " +
                   `${isCurrent(index) ? "" : ""}`
                 }
                 dangerouslySetInnerHTML={{ __html: data.title }}

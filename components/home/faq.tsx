@@ -64,8 +64,8 @@ const FaqSection = () => {
         ))}
       </Accordion>
       <div className="flex items-center justify-center pt-[50px]">
-        <Button className="auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
-          <Link href={siteConfig.links.docs}>View More</Link>
+        <Button className="font-bold auth py-4 px-8 bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
+          <Link href={siteConfig.links.docs}>View All</Link>
         </Button>
       </div>
     </div>

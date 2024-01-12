@@ -6,10 +6,11 @@ const AdvantagesSection = () => {
   return (
     <div className="py-10">
       <div className="md:pb-14 pb-10">
-        <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">
-          Advantages of sunbelt renewable mining
+        <h1 className="text-center font-goldman font-normal text-5xl md:pb-3 pb-2  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+          Advantages of <br className="hidden sm:inline" /> GFE Foundation
+          renewable mining
         </h1>
-        <h3 className="font-mont font-medium text-lg md:text-xl text-center">
+        <h3 className="font-mont font-medium text-lg md:text-xl text-center text-muted-foreground">
           Focused on sustainable mining and eco-friendly options, contribute to
           making the world better
         </h3>
@@ -36,10 +37,10 @@ const AdvantagesSection = () => {
           }}
         >
           <div className="p-10">
-            <h1 className="text-xl text-accent font-monument tracking-wider">
+            <h1 className="text-xl auth text-secondary font-bold tracking-wider">
               SUNBELT MINER
             </h1>
-            <p className="mt-2 text-white transition-all duration-500">
+            <p className="mt-2 text-white auth font-medium transition-all duration-500">
               SUNBELT (Application-Specific Integrated Circuit) miners offer
               several advantages in the context of cryptocurrency mining
               compared to other types of mining hardware, such as CPUs or GPUs.

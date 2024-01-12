@@ -28,7 +28,7 @@ export default function IndexPage() {
         {/* <MainBenifitSection /> */}
       </div>
       {/* <LogoSection /> */}
-      <div className="px-5 lg:px-24 bg-[url('/bgs/bg.svg')] bg-cover pb-[300px] md:pb-[150px]">
+      <div className="px-5 lg:px-24 bg-[url('/images/nft/bg2.png')] bg-cover pb-[300px] md:pb-[150px]">
         <FaqSection />
         <CommunitySection />
       </div>

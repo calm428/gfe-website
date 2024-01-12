@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 // @ts-ignore
 import ReactPaginate from "react-paginate"
 
@@ -24,7 +24,7 @@ function PaginatedItems() {
         nextLabel={
           <div className="flex gap-3 items-center font-monument text-[#727C8F]">
             <span className="hidden lg:block pt-0.5">Next</span>
-            <ChevronRight />
+            <ArrowRight />
           </div>
         }
         onPageChange={handlePageClick}
@@ -32,7 +32,7 @@ function PaginatedItems() {
         pageCount={pageCount}
         previousLabel={
           <div className="flex gap-3 items-center font-monument text-[#727C8F]">
-            <ChevronLeft />
+            <ArrowLeft />
             <span className="hidden lg:block pt-0.5">Previous</span>
           </div>
         }

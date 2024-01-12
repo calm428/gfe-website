@@ -2,6 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
+import { ArrowRightIcon } from "lucide-react"
 
 import { AspectRatio } from "../ui/aspect-ratio"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
@@ -20,10 +21,10 @@ const Card = () => {
       </AspectRatio>
 
       <div className="bg-[#E7F0FD] rounded-3xl rounded-t-none p-5 space-y-3">
-        <h1 className="tracking-wider font-monument text-primary">
+        <h1 className="tracking-wider text-xl font-goldman text-primary">
           BSV Academy: Taking the lead on blockchain education
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground font-medium">
           Renewable energy uses natural resources like sunlight and wind for
           sustainable power, reducing environmental impact and fostering energy
           independence.
@@ -37,16 +38,21 @@ const Card = () => {
             </Avatar>
 
             <div className="flex flex-col text-sm">
-              <span>MICHAEL SPRICK</span>
-              <span>10 DEC 2023</span>
+              <span className="text-muted-foreground font-medium">
+                MICHAEL SPRICK
+              </span>
+              <span className="text-muted-foreground font-medium">
+                10 DEC 2023
+              </span>
             </div>
           </div>
 
           <Button
             variant={"ghost"}
-            className="px-0 py-0 mt-0 text-primary flex items-center font-monument tracking-wider"
+            className="px-0 py-0 mt-0 text-primary flex items-center text-base font-goldman tracking-wider"
           >
             Read More
+            <ArrowRightIcon className="w-[20px] h-[20px] ml-1 stroke-1" />
           </Button>
         </div>
       </div>

@@ -94,51 +94,55 @@ function MinerCard({ miner }: { miner: Miner }) {
       <div className="text-2xl font-semibold">{miner.name}</div>
       <div className="w-full py-2 border-b border-primary/60">
         <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground font-mont">
+          <div className="text-sm text-muted-foreground auth font-medium">
             Hashrate:
           </div>
-          <div className="text-md text-primary font-semibold">
+          <div className="text-md text-primary font-semibold auth">
             {miner.hashrate} TH/s
           </div>
         </div>
         <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground font-mont">Income:</div>
-          <div className="text-md text-primary font-semibold">
+          <div className="text-sm text-muted-foreground auth font-medium">
+            Income:
+          </div>
+          <div className="text-md text-primary font-semibold auth">
             {miner.income} BTC/year
           </div>
         </div>
       </div>
       <div className="w-full py-2 border-b border-primary/60">
         <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground font-mont">
+          <div className="text-sm text-muted-foreground auth font-medium">
             Machine Price:
           </div>
-          <div className="text-md text-primary font-semibold">
+          <div className="text-md text-primary font-semibold auth">
             {miner.machine_price} USD
           </div>
         </div>
         <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground font-mont">
+          <div className="text-sm text-muted-foreground auth font-medium">
             Accessory Price:
           </div>
-          <div className="text-md text-primary font-semibold">
+          <div className="text-md text-primary font-semibold auth">
             {miner.accessory_price} USD
           </div>
         </div>
       </div>
       <div className="w-full py-2">
         <div className="w-full flex justify-between">
-          <div className="text-sm text-muted-foreground font-mont">Price:</div>
-          <div className="text-md text-primary font-semibold">
+          <div className="text-sm text-muted-foreground auth font-medium">
+            Price:
+          </div>
+          <div className="text-md text-primary font-semibold auth">
             {miner.machine_price + miner.accessory_price} USD
           </div>
         </div>
-        <div className="text-sm text-right text-muted-foreground font-mont">
+        <div className="text-sm text-right text-muted-foreground auth font-medium">
           +{miner.profit} USD Energy annually
         </div>
       </div>
       <div className="w-full flex justify-between py-2">
-        <Button type="button" variant="secondary">
+        <Button type="button" variant="secondary" className="font-bold">
           View Details
         </Button>
         <Button type="button" variant="secondary" size="icon">
@@ -184,7 +188,7 @@ export default function MinerListSection() {
 
   return (
     <div className=" container flex flex-col items-center gap-10 justify-between md:mt-5">
-      <div className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">
+      <div className="text-center font-goldman font-normal text-5xl md:pb-10 pb-5  text-primary">
         List of Miners
       </div>
 
@@ -194,6 +198,19 @@ export default function MinerListSection() {
             <MinerCard key={miner.id} miner={miner} />
           ))}
         </Slider>
+
+        <style jsx global>{`
+          .slick-dots {
+            bottom: -48px !important;
+          }
+
+          .slick-dots li button:before {
+            content: " ";
+            border: 1px solid #5093f3;
+            line-height: 2px;
+            height: 2px;
+          }
+        `}</style>
 
         <div className="w-fit mx-auto space-x-48 flex mt-[17px]">
           <button onClick={previous} className="cursor-pointer">

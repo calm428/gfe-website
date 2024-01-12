@@ -83,7 +83,7 @@ function CalculatorSection() {
               Future
             </h1>
           </div>
-          <h1 className="font-monument text-4xl font-normal text-primary">
+          <h1 className="font-goldman  text-6xl font-normal text-primary">
             Building a better future
           </h1>
           <p className=" text-muted-foreground auth text-lg font-medium">

@@ -102,7 +102,7 @@ export default function SpecsSection() {
     // </div>
     <div className="relative px-5 lg:px-[96px] py-[100px] lg:py-[207px] bg-background flex flex-col  gap-12">
       <div className=" relative flex flex-col gap-[24px] z-30">
-        <h1 className=" font-monument text-[30px] md:text-[45px] font-normal text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+        <h1 className=" font-goldman text-[30px] md:text-[45px] font-normal text-primary">
           Functionalities
         </h1>
         <p className="auth text-base lg:text-[20px] text-muted-foreground lg:w-1/2 font-medium">

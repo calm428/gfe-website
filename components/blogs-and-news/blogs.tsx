@@ -10,7 +10,7 @@ import Card from "./Card"
 const BlogsSection = () => {
   return (
     <div className="container py-14">
-      <h1 className="font-monument tracking-wider  text-2xl text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+      <h1 className="font-goldman tracking-wider  text-5xl text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
         Blogs
       </h1>
       <HighlightsSection />
@@ -40,14 +40,14 @@ function HighlightsSection() {
         />
       </AspectRatio>
       <div className="pt-8">
-        <h2 className="font-monument tracking-wider mb-3 text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+        <h2 className="font-goldman tracking-wider mb-3 text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
           Highlights
         </h2>
-        <h2 className="font-monument tracking-wider mb-5 text-lg">
+        <h2 className="font-goldman  tracking-wider mb-5 text-2xl">
           Omniscape Unveils Cutting-Edge AR Metaverse: A Revolutionary Leap into
           Interactive Realities
         </h2>
-        <p>
+        <p className="text-muted-foreground font-medium">
           In a groundbreaking announcement, Omniscape has introduced a
           state-of-the-art Augmented Reality (AR) Metaverse, redefining the way
           we perceive and interact with digital spaces. The platform promises to
@@ -56,7 +56,7 @@ function HighlightsSection() {
         </p>
         <Button
           variant={"ghost"}
-          className=" px-0 mt-5 text-primary font-monument tracking-wider"
+          className=" px-0 mt-5 text-primary text-base font-goldman tracking-wider"
         >
           Read More
         </Button>

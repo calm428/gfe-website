@@ -22,13 +22,28 @@ const SLIDE_DATA = [
     title: "$ 0.000003",
     text: "Transaction Fee",
   },
+  {
+    icon: "/images/home/slide-icon-1.png",
+    title: "1 Satoshis",
+    text: "per Kb data",
+  },
+  {
+    icon: "/images/home/slide-icon-2.png",
+    title: "1.95 Billion",
+    text: "Total Transaction",
+  },
+  {
+    icon: "/images/home/slide-icon-3.png",
+    title: "$ 0.000003",
+    text: "Transaction Fee",
+  },
 ]
 
 const SliderSection = () => {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -43,13 +58,13 @@ const SliderSection = () => {
             background: "url(/images/home/slider-bg.png)",
           }}
         >
-          <div className="absolute right-0 w-[800px] h-fit">
+          <div className="absolute right-0 w-[900px] h-fit">
             <Slider arrows={false} {...settings}>
               {SLIDE_DATA.map((data, index) => (
                 <div className="!flex items-center gap-6" key={index}>
                   <img src={data.icon} />
                   <div className="flex flex-col gap-2.5">
-                    <h1 className="text-2xl font-monument">{data.title}</h1>
+                    <h1 className="text-3xl font-goldman">{data.title}</h1>
                     <p className="">{data.text}</p>
                   </div>
                 </div>

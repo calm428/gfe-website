@@ -34,36 +34,36 @@ export function SiteFooter() {
   return (
     <footer className="relative z-40 w-full border-b bg-primary/5 ">
       <div className=" px-0 lg:px-24">
-        <div className=" relative flex flex-col md:flex-row gap-5 md:items-center bg-primary  lg:mx-auto -mt-72 md:-mt-40 rounded-3xl mx-4 sm:mx-6 md:mx-8 p-[40px] md:p-[60px] bg-gradient-to-br from-[#2BADFD] to-[#1570EF]">
+        <div className=" relative flex flex-col justify-between lg:flex-row gap-5 md:items-center bg-primary  lg:mx-auto -mt-72 md:-mt-40 rounded-3xl mx-4 sm:mx-6 md:mx-8 p-[40px] md:p-[60px] bg-gradient-to-br from-[#2BADFD] to-[#1570EF]">
           <img
             src="/Group 37.svg"
             alt="bg"
             className=" absolute -top-10 left-7"
           />
-          <div className="w-full md:w-[50%]">
-            <div className="text-3xl text-white font-mont font-semibold">
+          <div className="w-full lg:w-[50%] lg:max-w-2xl 	">
+            <div className="text-5xl text-white font-goldman ">
               Not a member of our exclusive newsletter?
             </div>
-            <div className="text-base text-white font-mont auth font-normal mt-4">
+            <div className="text-base text-white font-mont font-semibold auth  mt-4">
               Gain instant access to a series of valuable insights from the
               market, and empower yourself with knowledge that can help you
               seize control of your global energy market.
             </div>
           </div>
-          <div className="w-full sm:w-[50%]">
-            <div className="text-base text-white font-mont font-medium my-1">
+          <div className="w-full lg:w-[50%] lg:max-w-xl ">
+            <div className="text-base auth text-white  font-semibold my-1">
               Newsletter
             </div>
-            <div className="flex w-full  items-center auth">
+            <div className="flex w-full h-12 items-center auth">
               <Input
                 type="email"
                 placeholder="Email"
-                className="bg-transparent auth text-white placeholder:text-white  rounded-r-none"
+                className="bg-transparent auth h-full  text-white placeholder:text-white  rounded-r-none"
               />
               <Button
                 type="submit"
                 variant="secondary"
-                className="rounded-l-none font-mont auth"
+                className="rounded-l-none h-full font-mont auth font-semibold"
               >
                 Subscribe
               </Button>
@@ -72,7 +72,7 @@ export function SiteFooter() {
         </div>
         <div className="container flex md:flex-row flex-col items-start space-x-4 sm:justify-between sm:space-x-0 py-[60px] auth font-mont">
           <div className="md:w-[40%] w-full">
-            <div className="text-xl text-primary font-semibold my-2">
+            <div className="text-xl text-primary font-semibold my-6">
               Our Goal
             </div>
             <div className="text-base text-primary font-mont">
@@ -85,7 +85,7 @@ export function SiteFooter() {
             </div>
           </div>
           <div className="md:w-[20%] w-full !mx-0">
-            <div className="text-xl text-primary  font-semibold my-2">
+            <div className="text-xl text-primary  font-semibold my-6">
               Important Links
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-1  md:grid-cols-1">
@@ -99,42 +99,40 @@ export function SiteFooter() {
                 </Link>
               ))}
             </div>
-            <div className="text-xl text-primary font-semibold  my-2">
-              Contact Us
-            </div>
+            <div className="text-xl text-primary  my-4">Contact Us</div>
             <div>
               <div className="flex text-base font-mont text-primary my-2 gap-2">
-                <PhoneCall />
+                <PhoneCall className="w-5 h-5" />
                 {siteConfig.contact.phone}
               </div>
               <div className="flex text-base font-mont text-primary my-2 gap-2">
-                <Mail />
+                <Mail className="w-5 h-5" />
                 {siteConfig.contact.email}
               </div>
             </div>
           </div>
           <div className="md:w-[20%] w-full !mx-0">
-            <div className="text-xl text-primary  my-2 font-semibold">
+            <div className="text-xl text-primary  my-6 font-semibold">
               Address
             </div>
             <div className="text-base text-primary font-mont">
               {siteConfig.contact.address}
             </div>
-            <div className="text-xl text-primary  my-2 hidden md:block font-semibold">
+            <div className="text-xl text-primary my-4 hidden md:block ">
               Follow us
             </div>
             <div className="md:flex hidden">
               <Button variant="ghost" size="icon">
-                <Facebook className="text-primary w-5 h-5" />
+                <Facebook className="text-primary fill-current w-5 h-5" />
               </Button>
               <Button variant="ghost" size="icon">
                 <Instagram className="text-primary w-5 h-5" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Twitter className="text-primary w-5 h-5" />
+                <Twitter className="text-primary fill-current w-5 h-5" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Linkedin className="text-primary w-5 h-5" />
+                <Linkedin className="text-primary fill-current w-5 h-5" />
               </Button>
             </div>
           </div>
@@ -142,22 +140,22 @@ export function SiteFooter() {
             <div className="text-xl text-primary  my-2">Follow us</div>
             <div className="flex">
               <Button variant="ghost" size="icon">
-                <Facebook className="text-primary w-5 h-5" />
+                <Facebook className="text-primary fill-current  w-5 h-5" />
               </Button>
               <Button variant="ghost" size="icon">
                 <Instagram className="text-primary w-5 h-5" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Twitter className="text-primary w-5 h-5" />
+                <Twitter className="text-primary fill-current w-5 h-5" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Linkedin className="text-primary w-5 h-5" />
+                <Linkedin className="text-primary fill-current w-5 h-5" />
               </Button>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full text-center text-xs uppercase text-primary font-medium auth py-4 bg-primary/10">
+      <div className="w-full text-center text-xs uppercase text-primary font-medium auth py-6 bg-primary/10">
         © 2024 GFE Foundation. ALL RIGHTS RESERVED
       </div>
     </footer>

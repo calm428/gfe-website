@@ -39,7 +39,7 @@ const CommunitySection = () => {
           <div className="text-3xl  font-monument  text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
             Join our Community
           </div>
-          <div className=" text-sm md:text-base  font-mont auth mb-5 md:mb-0 my-1">
+          <div className=" text-sm md:text-base font-medium font-mont auth mb-5 md:mb-0 my-1">
             By joining the GFE project, investors and environmental advocates
             alike can contribute to the development of a sustainable energy
             ecosystem while receiving the economic benefits afforded by

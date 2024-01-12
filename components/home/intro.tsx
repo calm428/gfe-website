@@ -20,7 +20,7 @@ export default function HomeSection() {
       <div className="w-full lg:w-[45%] xl:w-[55%] flex flex-col justify-between">
         <div className="flex flex-col items-start gap-[56px] mb-5">
           <div className="flex flex-col gap-[16px]">
-            <h1 className="text-[42px] md:text-[52px] xl:text-[62px] font-monument font-normal text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+            <h1 className="text-[42px] md:text-[52px] xl:text-[62px] font-goldman font-normal text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
               Green Fungible <br className="hidden sm:inline" />
               Energy - GFE
             </h1>
@@ -32,11 +32,11 @@ export default function HomeSection() {
             </p>
           </div>
           <div className="w-full flex flex-col md:flex-row gap-2 md:gap-3 auth mb-7 md:mb-0">
-            <Button className="w-[130px] h-[50px] bg-gradient-to-l from-[#2BADFD] to-[#1570EF] font-bold">
+            <Button className="w-32 h-12 bg-gradient-to-l from-[#2BADFD] to-[#1570EF] font-bold">
               <Link href={siteConfig.links.docs}>Audit</Link>
             </Button>
 
-            <Button className="h-[50px] bg-backround bg-white hover:bg-muted border border-secondary-foreground text-muted-foreground font-bold">
+            <Button className="h-12 bg-backround bg-white hover:bg-muted border border-secondary-foreground text-muted-foreground font-bold">
               <Link
                 href={siteConfig.links.docs}
                 className="flex items-center justify-between gap-3"

@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
 export default function HomeSection() {
@@ -12,60 +12,33 @@ export default function HomeSection() {
       <div className="space-y-14">
         <div className="flex flex-col items-start gap-2">
           {/* TODO: Gradient is confusing */}
-          <h1 className="text-3xl md:text-4xl font-monument font-normal">
+          <h1 className="text-3xl md:text-7xl	 font-goldman font-normal text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
             Bitcoin Mining <br className="hidden sm:inline" />
             Ecosystem
           </h1>
-          <p className="md:text-2xl text-lg max-w-xl text-muted-foreground font-mont">
+          <p className="md:text-2xl text-lg max-w-xl text-muted-foreground font-semibold font-mont">
             Reliable and profitable platform, providing several new miner
             hosting service for end users.
           </p>
         </div>
-        <div className="flex md:gap-10">
-          <Link
-            href={siteConfig.links.docs}
-            target="_blank"
-            rel="noreferrer"
-            className={cn(
-              buttonVariants(),
-              "font-monument tracking-widest pt-2.5 font-normal hidden md:block"
-            )}
-            style={{
-              background:
-                "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-            }}
-          >
-            Buy Energy
-          </Link>
+        <div className="w-full flex flex-col md:flex-row gap-2 md:gap-3 auth mb-7 md:mb-0">
+          <Button className="w-32 h-12 bg-gradient-to-l from-[#2BADFD] to-[#1570EF] font-bold">
+            <Link href={siteConfig.links.docs} target="_blank" rel="noreferrer">
+              Buy Energy
+            </Link>
+          </Button>
 
-          <Link
-            href={siteConfig.links.docs}
-            target="_blank"
-            rel="noreferrer"
-            className={cn(
-              buttonVariants(),
-              "font-monument tracking-widest pt-2.5 font-normal md:hidden"
-            )}
-            style={{
-              background:
-                "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-            }}
-          >
-            Start Now
-          </Link>
-
-          <Link
-            target="_blank"
-            rel="noreferrer"
-            href={siteConfig.links.github}
-            className={cn(
-              buttonVariants({ variant: "ghost" }),
-              "font-mont font-semibold text-muted-foreground text-lg hidden md:flex"
-            )}
-          >
-            <Icons.play />
-            <span className="ml-4">Intro to Sunbelt</span>
-          </Link>
+          <Button className="h-12 bg-backround bg-white hover:bg-muted border border-secondary-foreground text-muted-foreground font-bold">
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href={siteConfig.links.github}
+              className="flex items-center justify-between gap-3"
+            >
+              <Icons.play />
+              <span>Intro to Sunbelt</span>
+            </Link>
+          </Button>
         </div>
       </div>
       <div className="">
