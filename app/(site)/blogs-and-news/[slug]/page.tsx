@@ -5,7 +5,9 @@ import { allDocs } from "contentlayer/generated"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import ContactUs from "@/components/NFT/ContactUs"
 import Card from "@/components/blogs-and-news/Card"
+import PaginationSection from "@/components/blogs-and-news/pagination"
 import { Mdx } from "@/components/mdx"
 
 interface PageProps {
@@ -28,16 +30,16 @@ const page: FC<PageProps> = async ({ params }) => {
   return (
     <div className="container mt-10 pb-32">
       <div className="mb-10 flex">
-        <h3 className="border-r border-muted-foreground bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text px-5 font-monument tracking-wider text-transparent">
-          SUNBELT
-        </h3>
-        <h3 className="border-x border-muted-foreground px-5">
+        <h3 className="border-r auth font-medium border-muted-foreground bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text px-5  tracking-wider text-transparent">
           Blogs and News
         </h3>
-        <h3 className="border-l border-muted-foreground px-5">Article</h3>
+
+        <h3 className="border-l auth font-medium text-muted-foreground border-muted-foreground px-5">
+          Article
+        </h3>
       </div>
 
-      <h1 className="mb-10 font-monument text-2xl tracking-wider">
+      <h1 className="mb-10 font-goldman text-4xl tracking-wider">
         {doc.title}
       </h1>
 
@@ -57,7 +59,7 @@ const page: FC<PageProps> = async ({ params }) => {
 
       <div className="mt-16">
         <div className="flex justify-between">
-          <h1 className="pb-2 text-center font-monument text-xl font-normal uppercase text-primary md:pb-3">
+          <h1 className="pb-2 text-center font-goldman text-4xl font-normal  md:pb-3 text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
             Stay in the loop
           </h1>
 
@@ -68,7 +70,7 @@ const page: FC<PageProps> = async ({ params }) => {
             }}
             className={cn(
               buttonVariants(),
-              "hidden pt-2.5 font-monument font-normal tracking-widest md:block"
+              "hidden pt-2.5 px-6 auth font-bold tracking-widest md:block"
             )}
             href={"/blogs-and-news"}
           >
@@ -81,6 +83,13 @@ const page: FC<PageProps> = async ({ params }) => {
           <Card />
           <Card />
         </div>
+        <div className="my-12 border"></div>
+
+        <div className="my-20 lg:mb-30">
+          <PaginationSection />
+        </div>
+
+        <ContactUs />
       </div>
     </div>
   )

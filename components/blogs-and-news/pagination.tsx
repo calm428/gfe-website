@@ -23,7 +23,9 @@ function PaginatedItems() {
         }
         nextLabel={
           <div className="flex items-center gap-3 font-monument text-[#727C8F]">
-            <span className="hidden pt-0.5 lg:block">Next</span>
+            <span className="font-goldman text-xl hidden pt-0.5 lg:block">
+              Next
+            </span>
             <ArrowRight />
           </div>
         }
@@ -33,7 +35,9 @@ function PaginatedItems() {
         previousLabel={
           <div className="flex items-center gap-3 font-monument text-[#727C8F]">
             <ArrowLeft />
-            <span className="hidden pt-0.5 lg:block">Previous</span>
+            <span className="font-goldman text-xl font hidden pt-0.5 lg:block">
+              Previous
+            </span>
           </div>
         }
         renderOnZeroPageCount={null}

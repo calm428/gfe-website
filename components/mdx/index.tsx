@@ -31,7 +31,7 @@ const components = {
   h3: ({ className, ...props }: any) => (
     <h3
       className={cn(
-        "mt-8 scroll-m-20 font-monument text-2xl font-semibold tracking-wider",
+        "mt-8 scroll-m-20 font-goldman text-2xl tracking-wider",
         className
       )}
       {...props}
@@ -72,7 +72,10 @@ const components = {
   ),
   p: ({ className, ...props }: any) => (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:my-6", className)}
+      className={cn(
+        "leading-7 text-muted-foreground font-medium [&:not(:first-child)]:my-6",
+        className
+      )}
       {...props}
     />
   ),
@@ -163,7 +166,7 @@ export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code)
 
   return (
-    <div className="mdx flex-1">
+    <div className="mdx flex-1 auth ">
       <Component components={components} />
     </div>
   )
