@@ -1,7 +1,10 @@
 "use client"
 
-import "slick-carousel/slick/slick-theme.css"
+import React from "react"
+import Slider from "react-slick"
+
 import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const SLIDE_DATA = [
   {
@@ -33,48 +36,50 @@ const SLIDE_DATA = [
 
 const SliderSection = () => {
   const settings = {
-    dots: true,
+    className: "center gfe-carousel ",
+    centerMode: true,
     infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    centerPadding: "320px",
+    slidesToShow: 1,
+    draggable: true,
+    swipeToSlide: true,
+    // speed: 500,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerPadding: "150px",
+
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          centerPadding: "100px",
+
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerPadding: "50px",
+
+        }
+      }
+    ]
   }
 
   return (
-    // <div className=' container pb-52 hidden lg:block'>
-    //     <div className='absolute w-[1900px] right-0'>
-    //         <div
-    //             className='h-[230px] !bg-cover !bg-no-repeat w-full flex items-center relative'
-    //             style={{
-    //                 background: "url(/images/home/slider-bg.png)",
-    //             }}
-    //         >
-    //             <div className='absolute right-0 w-[800px] h-fit'>
-    //                 <Slider arrows={false} {...settings}>
-    //                     {SLIDE_DATA.map((data, index) => (
-    //                         <div className='!flex items-center gap-6' key={index}>
-    //                             <img src={data.icon} />
-    //                             <div className='flex flex-col gap-2.5'>
-    //                                 <h1 className='text-2xl font-monument'>{data.title}</h1>
-    //                                 <p className=''>{data.text}</p>
-    //                             </div>
-    //                         </div>
-    //                     ))}
-    //                 </Slider>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>
-    <div className=" auth relative z-10 bg-background px-5 pt-[100px]">
-      <div className="flex flex-col items-center gap-[24px] lg:px-[200px]">
-        <h1 className="rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
+    <div className=" relative pt-[100px] auth bg-background">
+      <div className="flex lg:px-[200px] flex-col gap-[24px] items-center">
+        <h1 className="font-medium py-[8px] px-[16px] text-base md:text-[20px] rounded-sm bg-[#EEF5FF] text-primary">
           Green Fungible Energy
         </h1>
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-monument text-[45px] font-normal capitalize text-transparent lg:text-[50px]">
+        <h1 className="font-monument text-[45px] text-center lg:text-[50px] font-normal capitalize text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
           What is GFE?
         </h1>
-        <p className=" text-center text-base text-muted-foreground lg:text-[20px]">
+        <p className=" text-base lg:text-[20px] text-muted-foreground text-center">
           GFE tokens are the digital representation of electrical energy, with
           each token signifying the right to direct the use of [1] 1kWh of green
           energy that will be generated and consumed by our infrastructure. This
@@ -83,7 +88,43 @@ const SliderSection = () => {
           practices and have tangible, real-world utility.
         </p>
       </div>
-      <div></div>
+
+      <div className="mt-[270px] my-[30px]">
+        <div className="">
+          <div className="w-full flex items-center relative">
+            <div className="h-[500px] absolute w-full ">
+              <Slider
+                arrows={false}
+
+                {...settings}
+              >
+                {SLIDE_DATA.map((data, index) => (
+                  <div key={index} className="px-[40px] rounded-sm ">
+                    <img src={"/images/home/gfe-image.png"} className="h-full w-full object-contain" />
+                  </div>
+                ))}
+              </Slider>
+              <style jsx global>{`
+          .slick-dots {
+            bottom: -48px !important;
+            z-index: 999 !important;
+          }
+
+          .slick-dots li button:before {
+            content: " ";
+            border: 1px solid #1570EF;
+            line-height: 2px;
+            height: 3px;
+            width:25px;
+          }
+          .slick-dots .slick-active button:before {
+            background-color: #1570EF;
+          }
+        `}</style>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
