@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
@@ -47,6 +48,11 @@ const FAQS = [
 ]
 
 function FAQ() {
+  const [openItem, setOpenItem] = useState<number | null>(null)
+
+  const handleAccordionItemClick = (index: number) => {
+    setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
+  }
   return (
     <div className="flex flex-col  gap-[50px] px-5 py-24">
       <div className="flex flex-col items-center gap-4">
@@ -65,9 +71,13 @@ function FAQ() {
               key={index}
               value={("0" + (index + 1)).toString()}
               className="auth accordion flex items-start rounded-lg"
+              isOpen={index === openItem}
             >
               <div className="w-full">
-                <AccordionTrigger className="auth font-semibold text-secondary-foreground hover:no-underline">
+                <AccordionTrigger
+                  onClick={() => handleAccordionItemClick(index)}
+                  className="auth font-semibold text-secondary-foreground hover:no-underline"
+                >
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="auth text-base text-muted-foreground">

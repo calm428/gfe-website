@@ -1,5 +1,7 @@
 "use client"
 
+import { useState } from "react"
+
 import {
   Accordion,
   AccordionContent,
@@ -31,22 +33,35 @@ const FAQS = [
 ]
 
 const FaqSection = () => {
+  const [openItem, setOpenItem] = useState<number | null>(null)
+
+  const handleAccordionItemClick = (index: number) => {
+    setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
+  }
   return (
     <div className="container">
       <h1 className="pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
         Getting Started with sunbelt renewable mining
       </h1>
 
-      <Accordion type="single" collapsible className="mt-5 space-y-5">
+      <Accordion type="single" collapsible className="auth mt-5 space-y-5">
         {FAQS.map((faq, index) => (
           <AccordionItem
             key={index}
-            value={index.toString()}
-            className="flex items-start"
+            value={("0" + (index + 1)).toString()}
+            className="auth accordion flex items-start rounded-lg"
+            isOpen={index === openItem}
           >
             <div className="w-full">
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionTrigger
+                onClick={() => handleAccordionItemClick(index)}
+                className="auth  font-semibold hover:no-underline"
+              >
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="auth text-base text-muted-foreground">
+                {faq.answer}
+              </AccordionContent>
             </div>
           </AccordionItem>
         ))}

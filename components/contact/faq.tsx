@@ -1,5 +1,7 @@
 "use client"
 
+import { useState } from "react"
+
 import {
   Accordion,
   AccordionContent,
@@ -31,6 +33,11 @@ const FAQS = [
 ]
 
 const FaqSection = () => {
+  const [openItem, setOpenItem] = useState<number | null>(null)
+
+  const handleAccordionItemClick = (index: number) => {
+    setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
+  }
   return (
     <div className="container mb-32 mt-16">
       <h1 className="pb-2 text-center font-monument text-xl font-normal uppercase text-primary md:pb-3 md:text-2xl">
@@ -43,9 +50,12 @@ const FaqSection = () => {
             key={index}
             value={index.toString()}
             className="flex items-start"
+            isOpen={index === openItem}
           >
             <div className="w-full">
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
+              <AccordionTrigger onClick={() => handleAccordionItemClick(index)}>
+                {faq.question}
+              </AccordionTrigger>
               <AccordionContent>{faq.answer}</AccordionContent>
             </div>
           </AccordionItem>
