@@ -7,8 +7,8 @@ import Image from "next/image"
 
 import { siteConfig } from "@/config/site"
 
-import { Button } from "../ui/button"
-import { Input } from "../ui/input"
+import { Button } from "../../../ui/button"
+import { Input } from "../../../ui/input"
 import CounterDiv from "./CounterDiv"
 
 function Counter() {

@@ -8,8 +8,10 @@ const Accordion = AccordionPrimitive.Root
 
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
->(({ className, children, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> & {
+    isOpen: boolean
+  }
+>(({ className, children, isOpen, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
     className={cn(
@@ -18,7 +20,13 @@ const AccordionItem = React.forwardRef<
     )}
     {...props}
   >
-    <h3 className="mr-4 bg-gradient-to-b from-[#2BADFD]  to-[#1570EF] bg-clip-text py-4 font-monument text-2xl    text-transparent">
+    <h3
+      className={`mr-4 pt-3 font-monument text-3xl  ${
+        isOpen
+          ? "bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent"
+          : "text-secondary"
+      }`}
+    >
       {props.value}
     </h3>
     {children}
@@ -29,14 +37,19 @@ AccordionItem.displayName = "AccordionItem"
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
+>(({ className, children, onClick, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=closed]>#minus]:hidden [&[data-state=open]>#plus]:hidden",
+        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline ",
+        "[&[data-state=closed]>#minus]:hidden ",
+        "[&[data-state=open]>#plus]:hidden",
+        "from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent data-[state=open]:bg-gradient-to-b",
+        "data-[state=closed]:text-primary",
         className
       )}
+      onClick={onClick}
       {...props}
     >
       {children}
