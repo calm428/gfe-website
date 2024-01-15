@@ -1,11 +1,11 @@
+import AdvantagesSection from "@/components/home/Advantages"
+import CalculatorSection from "@/components/home/Calculator"
+import CommunitySection from "@/components/home/Community"
+import FaqSection from "@/components/home/Faq"
+import HomeSection from "@/components/home/Intro"
 import PartnersSection from "@/components/home/PartnersSection"
-import AdvantagesSection from "@/components/home/advantages"
-import CalculatorSection from "@/components/home/calculator"
-import CommunitySection from "@/components/home/community"
-import FaqSection from "@/components/home/faq"
-import HomeSection from "@/components/home/intro"
-import SliderSection from "@/components/home/slider"
-import SpecsSection from "@/components/home/specs"
+import SliderSection from "@/components/home/Slider"
+import SpecsSection from "@/components/home/Specs"
 
 export default function IndexPage() {
   return (
@@ -17,12 +17,7 @@ export default function IndexPage() {
         <AdvantagesSection />
         <CalculatorSection />
         <PartnersSection />
-        {/* <MinerListSection /> */}
-        {/* <WhySunbeltSection /> */}
-        {/* <IncomeComparison /> */}
-        {/* <MainBenefitSection /> */}
       </div>
-      {/* <LogoSection /> */}
       <div className="bg-[url('/images/nft/bg2.png')] bg-cover px-5 pb-[300px] md:pb-[150px] lg:px-24">
         <FaqSection />
         <CommunitySection />

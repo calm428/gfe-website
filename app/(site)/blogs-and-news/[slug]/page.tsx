@@ -24,7 +24,7 @@ async function getDocFromParams(slug: string) {
   return doc
 }
 
-const page: FC<PageProps> = async ({ params }) => {
+const Page: FC<PageProps> = async ({ params }) => {
   const doc = await getDocFromParams(params.slug)
   console.log(doc.headings)
   return (
@@ -95,4 +95,4 @@ const page: FC<PageProps> = async ({ params }) => {
   )
 }
 
-export default page
+export default Page

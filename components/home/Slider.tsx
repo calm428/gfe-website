@@ -29,7 +29,6 @@ const SliderSection = () => {
   const settings = {
     className: "center gfe-carousel ",
     centerMode: true,
-    // infinite: true,
     centerPadding: "320px",
     slidesToShow: 1,
     draggable: true,
