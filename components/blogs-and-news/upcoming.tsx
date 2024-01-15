@@ -1,6 +1,6 @@
 "use client"
 
-import Card from "./Card"
+import Card from "@/components/common/cards/blog-card"
 
 const UpcomingSection = () => {
   return (

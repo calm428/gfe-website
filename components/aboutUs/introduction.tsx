@@ -3,8 +3,8 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 
-import { Icons } from "../icons"
-import { Button } from "../ui/button"
+import { Icons } from "@/components/icons"
+import { Button } from "@/components/ui/button"
 
 function Introduction() {
   return (

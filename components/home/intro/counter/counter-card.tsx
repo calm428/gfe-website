@@ -2,7 +2,7 @@ interface Props {
   count: number
   title: String
 }
-function CounterDiv({ count, title }: Props) {
+function CounterCard({ count, title }: Props) {
   return (
     <div
       className={`${
@@ -19,4 +19,4 @@ function CounterDiv({ count, title }: Props) {
   )
 }
 
-export default CounterDiv
+export default CounterCard

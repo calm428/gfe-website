@@ -2,7 +2,7 @@
 
 import { siteConfig } from "@/config/site"
 
-import FeatureDiv from "./FeatureDiv"
+import FeatureCard from "./feature-card"
 
 export default function SpecsSection() {
   const features = siteConfig.features
@@ -19,8 +19,9 @@ export default function SpecsSection() {
         </p>
       </div>
       <div className=" relative z-30 grid gap-6  lg:grid-cols-2 xl:grid-cols-4">
-        {features.map((feature) => (
-          <FeatureDiv
+        {features.map((feature, ind) => (
+          <FeatureCard
+            key={ind}
             icon={feature.icon}
             title={feature.title}
             desc={feature.desc}

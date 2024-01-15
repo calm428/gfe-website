@@ -55,8 +55,9 @@ export function MainNav({ items }: MainNavProps) {
                     <h1 className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
                       token functionalities
                     </h1>
-                    {token_functionalities.map((functionality) => (
+                    {token_functionalities.map((functionality, ind) => (
                       <Link
+                        key={ind}
                         href={functionality.href}
                         className="flex gap-2 py-[10px]"
                       >
@@ -88,8 +89,9 @@ export function MainNav({ items }: MainNavProps) {
                       Industries
                     </h1>
                     <div className="grid grid-cols-2 gap-2">
-                      {industry.map((industry) => (
+                      {industry.map((industry, ind) => (
                         <Link
+                          key={ind}
                           href={industry.href}
                           className="flex gap-2 py-[10px]"
                         >
@@ -124,9 +126,8 @@ export function MainNav({ items }: MainNavProps) {
         </NavigationMenu.Root>
         <Link
           href={"/NFT"}
-          className={` ${navMenuStyle} ${
-            "/NFT" === pathname && "bg-primary/5 font-semibold text-primary"
-          }`}
+          className={` ${navMenuStyle} ${"/NFT" === pathname && "bg-primary/5 font-semibold text-primary"
+            }`}
         >
           NFT
         </Link>
@@ -138,8 +139,8 @@ export function MainNav({ items }: MainNavProps) {
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
                 <div className="rounded-b-[10px] border border-border bg-background p-3">
-                  {community.map((community) => (
-                    <Link href={"#"} className="flex gap-2 py-2">
+                  {community.map((community, ind) => (
+                    <Link href={"#"} key={ind} className="flex gap-2 py-2">
                       <Image
                         src={community.icon}
                         width={20}
@@ -159,29 +160,26 @@ export function MainNav({ items }: MainNavProps) {
         <div className="flex items-center ">
           <Link
             href={"/about-us"}
-            className={` ${navMenuStyle} ${
-              "/about-us" === pathname &&
+            className={` ${navMenuStyle} ${"/about-us" === pathname &&
               "bg-primary/5 font-semibold text-primary"
-            }`}
+              }`}
           >
             About us
           </Link>
         </div>
         <Link
           href={"/blogs-and-news"}
-          className={` ${navMenuStyle} ${
-            "/blogs-and-news" === pathname &&
+          className={` ${navMenuStyle} ${"/blogs-and-news" === pathname &&
             "bg-primary/5 font-semibold text-primary"
-          }`}
+            }`}
         >
           Blogs and News
         </Link>
         <Link
           href={"/contacts"}
-          className={` ml-auto ${navMenuStyle} ${
-            "/contacts" === pathname &&
+          className={` ml-auto ${navMenuStyle} ${"/contacts" === pathname &&
             "bg-primary/5 font-semibold text-primary"
-          }`}
+            }`}
         >
           Contacts
         </Link>

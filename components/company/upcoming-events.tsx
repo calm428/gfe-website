@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-import Card from "../blogs-and-news/Card"
-import { Button } from "../ui/button"
+import Card from "@/components/common/cards/blog-card"
+import { Button } from "@/components/ui/button"
 
 const UpcomingEventsSection = () => {
   return (

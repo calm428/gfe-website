@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "../../ui/button"
-import ListItem from "./ListItem"
+import ListItem from "./list-item"
 
 function CalculatorSection() {
   return (

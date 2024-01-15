@@ -7,7 +7,7 @@ interface Props {
   desc: string
   image: string
 }
-function AdvantageDiv({ title, desc, image }: Props) {
+function AdvantageCard({ title, desc, image }: Props) {
   return (
     <div className=" relative flex flex-col overflow-hidden rounded-md border border-border bg-muted">
       <div className="flex flex-col gap-8 py-[50px] pl-[50px]">
@@ -41,4 +41,4 @@ function AdvantageDiv({ title, desc, image }: Props) {
   )
 }
 
-export default AdvantageDiv
+export default AdvantageCard

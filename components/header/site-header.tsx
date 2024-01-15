@@ -106,14 +106,12 @@ export function SiteHeader() {
       <div
         id="sidebar"
         onClick={handleClose}
-        className={` ${
-          mobileNavOpen ? "block" : "hidden"
-        } absolute inset-0 z-50 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden`}
+        className={` ${mobileNavOpen ? "block" : "hidden"
+          } absolute inset-0 z-50 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden`}
       >
         <div
-          className={`${
-            mobileNavOpen ? "right-0 " : "-right-[360px]"
-          } fixed z-30  h-full min-w-[360px] max-w-[360px] bg-background transition-all lg:hidden`}
+          className={`${mobileNavOpen ? "right-0 " : "-right-[360px]"
+            } fixed z-30  h-full min-w-[360px] max-w-[360px] bg-background transition-all lg:hidden`}
         >
           <div className="flex h-full flex-col">
             <div className="sticky top-0 z-50 bg-background pt-5">
@@ -166,8 +164,8 @@ export function SiteHeader() {
                           <h1 className="text-center font-mont text-[14px] font-medium capitalize text-muted-foreground">
                             token functionalities
                           </h1>
-                          {token_functionalities.map((functionality) => (
-                            <Link href={"#"} className="flex gap-2 py-[10px]">
+                          {token_functionalities.map((functionality, ind) => (
+                            <Link href={"#"} key={ind} className="flex gap-2 py-[10px]">
                               <div>
                                 <Image
                                   src={functionality.icon}
@@ -196,8 +194,8 @@ export function SiteHeader() {
                             Industries
                           </h1>
                           <div className=" gap-2">
-                            {industry.map((functionality) => (
-                              <Link href={"#"} className="flex gap-2 py-[10px]">
+                            {industry.map((functionality, ind) => (
+                              <Link href={"#"} key={ind} className="flex gap-2 py-[10px]">
                                 <div>
                                   <Image
                                     src={functionality.icon}
@@ -229,10 +227,9 @@ export function SiteHeader() {
               </NavigationMenu.Root>
               <Link
                 href={"/NFT"}
-                className={` ${navMenuStyle} ${
-                  "/NFT" === pathname &&
+                className={` ${navMenuStyle} ${"/NFT" === pathname &&
                   "bg-primary/5 font-semibold text-primary"
-                }`}
+                  }`}
               >
                 NFT
               </Link>
@@ -245,8 +242,8 @@ export function SiteHeader() {
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="NavigationMenuContent">
                       <div className=" w-full bg-background p-3">
-                        {community.map((community) => (
-                          <Link href={"#"} className="flex gap-2 py-2">
+                        {community.map((community, ind) => (
+                          <Link href={"#"} key={ind} className="flex gap-2 py-2">
                             <Image
                               src={community.icon}
                               width={20}
@@ -266,20 +263,18 @@ export function SiteHeader() {
               <div className="flex items-center ">
                 <Link
                   href={"/about-us"}
-                  className={` ${navMenuStyle} ${
-                    "/about-us" === pathname &&
+                  className={` ${navMenuStyle} ${"/about-us" === pathname &&
                     "bg-primary/5 font-semibold text-primary"
-                  }`}
+                    }`}
                 >
                   About us
                 </Link>
               </div>
               <Link
                 href={"/blogs-and-news"}
-                className={` ${navMenuStyle} ${
-                  "/blogs-and-news" === pathname &&
+                className={` ${navMenuStyle} ${"/blogs-and-news" === pathname &&
                   "bg-primary/5 font-semibold text-primary"
-                }`}
+                  }`}
               >
                 Blogs and News
               </Link>
@@ -296,10 +291,9 @@ export function SiteHeader() {
               </Button>
               <Link
                 href={"/contacts"}
-                className={`${navMenuStyle} ${
-                  "/contacts" === pathname &&
+                className={`${navMenuStyle} ${"/contacts" === pathname &&
                   "bg-primary/5 font-semibold text-primary"
-                }`}
+                  }`}
               >
                 Contacts
               </Link>

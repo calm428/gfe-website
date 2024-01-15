@@ -1,5 +1,5 @@
-import Introduction from "@/components/ContactUs/Introduction"
-import FaqSection from "@/components/home/Faq"
+import Introduction from "@/components/contact-us/introduction"
+import FaqSection from "@/components/home/faq"
 
 function page() {
   return (

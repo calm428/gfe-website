@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-import Counter from "./Counter"
+import Counter from "./counter"
 
 export default function HomeSection() {
   return (

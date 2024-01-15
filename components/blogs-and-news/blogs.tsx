@@ -2,9 +2,9 @@
 
 import Image from "next/image"
 
-import { AspectRatio } from "../ui/aspect-ratio"
-import { Button } from "../ui/button"
-import Card from "./Card"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { Button } from "@/components/ui/button"
+import Card from "@/components/common/cards/blog-card"
 
 const BlogsSection = () => {
   return (

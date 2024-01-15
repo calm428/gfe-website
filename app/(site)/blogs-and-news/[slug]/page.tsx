@@ -5,9 +5,9 @@ import { allDocs } from "contentlayer/generated"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import ContactUs from "@/components/NFT/ContactUs"
-import Card from "@/components/blogs-and-news/Card"
+import Card from "@/components/common/cards/blog-card"
 import PaginationSection from "@/components/blogs-and-news/pagination"
+import ContactUs from "@/components/NFT/ContactUs"
 import { Mdx } from "@/components/mdx"
 
 interface PageProps {
@@ -26,7 +26,6 @@ async function getDocFromParams(slug: string) {
 
 const Page: FC<PageProps> = async ({ params }) => {
   const doc = await getDocFromParams(params.slug)
-  console.log(doc.headings)
   return (
     <div className="container mt-10 pb-32">
       <div className="mb-10 flex">

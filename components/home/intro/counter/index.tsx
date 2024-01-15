@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site"
 
 import { Button } from "../../../ui/button"
 import { Input } from "../../../ui/input"
-import CounterDiv from "./CounterDiv"
+import CounterCard from "./counter-card"
 
 function Counter() {
   const [time, setTime] = useState({
@@ -59,10 +59,10 @@ function Counter() {
         </div>
         {/* countdown */}
         <div className="grid grid-cols-4 gap-1">
-          <CounterDiv count={time.days} title={"Days"} />
-          <CounterDiv count={time.hours} title={"Hours"} />
-          <CounterDiv count={time.minutes} title={"Minutes"} />
-          <CounterDiv count={time.seconds} title={"Seconds"} />
+          <CounterCard count={time.days} title={"Days"} />
+          <CounterCard count={time.hours} title={"Hours"} />
+          <CounterCard count={time.minutes} title={"Minutes"} />
+          <CounterCard count={time.seconds} title={"Seconds"} />
         </div>
       </div>
       {/* bottom div */}

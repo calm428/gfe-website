@@ -8,7 +8,7 @@ interface Props {
   desc: string
   link: string
 }
-function FeatureDiv({ icon, title, desc, link }: Props) {
+function FeatureCard({ icon, title, desc, link }: Props) {
   return (
     <div
       className={` ${
@@ -57,4 +57,4 @@ function FeatureDiv({ icon, title, desc, link }: Props) {
   )
 }
 
-export default FeatureDiv
+export default FeatureCard
