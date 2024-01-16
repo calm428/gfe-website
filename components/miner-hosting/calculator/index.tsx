@@ -12,7 +12,7 @@ function CalculatorSection() {
   const [amount, setAmount] = useState<number | null>(null)
   return (
     <div className="container px-10 py-20">
-      <h1 className="pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
         Buy Our <br className="hidden sm:inline" /> Energy & Save Per Machine
       </h1>
 

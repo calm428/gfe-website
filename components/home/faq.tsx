@@ -45,7 +45,7 @@ const FaqSection = () => {
 
   return (
     <div className="py-[100px]">
-      <h1 className="pb-[50px] text-center font-goldman text-3xl uppercase text-primary">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-[50px] text-center font-goldman text-3xl uppercase text-primary">
         Get to know <br className="hidden sm:inline" />
         Green Fungible Energy - GFE
       </h1>

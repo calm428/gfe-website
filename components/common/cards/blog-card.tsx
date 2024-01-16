@@ -20,7 +20,7 @@ const Card = () => {
       </AspectRatio>
 
       <div className="space-y-3 rounded-3xl rounded-t-none bg-[#E7F0FD] p-5">
-        <h1 className="font-goldman text-xl tracking-wider text-primary">
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman text-xl tracking-wider text-primary">
           BSV Academy: Taking the lead on blockchain education
         </h1>
         <p className="font-medium text-muted-foreground">

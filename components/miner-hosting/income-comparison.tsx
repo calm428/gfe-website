@@ -2,7 +2,7 @@ const IncomeComparison = () => {
   return (
     <div className="bg-[url('/images/miner-hosting/bg4.png')] bg-cover bg-bottom bg-no-repeat py-10 md:py-16">
       <div className="container">
-        <h1 className="pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
           Income Comparison With Major Vendors
         </h1>
 

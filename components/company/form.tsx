@@ -7,7 +7,7 @@ import { Label } from "../ui/label"
 const FormSection = () => {
   return (
     <div className="mb-32 mt-16 w-full rounded-xl bg-[#E7F0FD] p-5">
-      <h1 className="text-center font-monument text-3xl leading-relaxed tracking-wide text-primary">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent text-center font-monument text-3xl leading-relaxed tracking-wide text-primary">
         Fill in the form and get a personal offer from our consultant
       </h1>
 

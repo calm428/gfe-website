@@ -118,7 +118,7 @@ export default function MinerListSection() {
   return (
     <div className="bg-[url('/images/miner-hosting/bg3.png')] bg-cover bg-bottom bg-no-repeat">
       <div className="container flex flex-col items-center justify-between gap-10 px-10 py-16">
-        <div className="pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
+        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
           List of Miners
         </div>
 

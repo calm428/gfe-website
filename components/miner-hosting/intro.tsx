@@ -18,7 +18,7 @@ export default function HomeSection() {
       <div className="container space-y-14">
         <div className="flex flex-col items-start gap-2">
           {/* TODO: Gradient is confusing */}
-          <h1 className="pb-5 font-goldman text-5xl font-normal text-primary  md:pb-10">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 font-goldman text-5xl font-normal text-primary  md:pb-10">
             Bitcoin Mining <br className="hidden sm:inline" />
             Ecosystem
           </h1>

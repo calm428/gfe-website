@@ -43,7 +43,7 @@ export default function GoalSection() {
   return (
     <div className="pb-14 pt-10 md:pt-24">
       <div className="pb-10 md:pb-14">
-        <div className="mt-4 font-monument text-xl text-primary">Our Goal</div>
+        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mt-4 font-monument text-xl text-primary">Our Goal</div>
         <div className="text-md font-mont text-muted-foreground">
           At SUNBELT Miner, our goal is a multifaceted commitment to lead the
           way in the cryptocurrency mining landscape. We strive to pioneer

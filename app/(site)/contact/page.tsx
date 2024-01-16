@@ -24,7 +24,7 @@ const page = () => {
           </AspectRatio>
         </div>
         <div className="w-full">
-          <h1 className="font-monument text-xl tracking-wider text-primary md:text-2xl">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-monument text-xl tracking-wider text-primary md:text-2xl">
             Ready to add blockchain solutions to your business or government
             agency?
           </h1>

@@ -3,7 +3,7 @@ import Image from "next/image"
 function PartnersSection() {
   return (
     <div className=" items-center gap-6 bg-muted px-5 py-[100px] lg:flex lg:px-24">
-      <h1 className="mb-4 text-center font-goldman text-3xl capitalize text-primary lg:mb-0">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mb-4 text-center font-goldman text-3xl capitalize text-primary lg:mb-0">
         Partners
       </h1>
       <div className="ml-20 flex flex-wrap gap-3 sm:grid-cols-2 md:grid-cols-5">
