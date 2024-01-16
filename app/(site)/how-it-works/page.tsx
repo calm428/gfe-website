@@ -1,4 +1,4 @@
-import BenefitSection from "@/components/how-it-works/benefir/benefit"
+import BenefitSection from "@/components/how-it-works/benefit"
 import GuideSection from "@/components/how-it-works/guide"
 import HeroSection from "@/components/how-it-works/hero"
 import WorkFlowSection from "@/components/how-it-works/work-flow"

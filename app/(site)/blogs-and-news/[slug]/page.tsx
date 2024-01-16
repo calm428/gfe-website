@@ -1,3 +1,5 @@
+"use client"
+
 import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -16,7 +18,7 @@ interface PageProps {
   }
 }
 
-async function getDocFromParams(slug: string) {
+function getDocFromParams(slug: string) {
   const doc = allDocs.find((doc) => doc.slugAsParams == slug)
 
   if (!doc) notFound()
@@ -24,8 +26,8 @@ async function getDocFromParams(slug: string) {
   return doc
 }
 
-const Page: FC<PageProps> = async ({ params }) => {
-  const doc = await getDocFromParams(params.slug)
+const Page: FC<PageProps> = ({ params }) => {
+  const doc = getDocFromParams(params.slug)
   return (
     <div className="container mt-10 pb-32">
       <div className="mb-10 flex">
@@ -39,7 +41,7 @@ const Page: FC<PageProps> = async ({ params }) => {
       </div>
 
       <h1 className="mb-10 font-goldman text-4xl tracking-wider">
-        {doc.title}
+        {doc?.title}
       </h1>
 
       <div className="flex w-full flex-col gap-5 lg:flex-row-reverse">
@@ -47,13 +49,13 @@ const Page: FC<PageProps> = async ({ params }) => {
           <h1 className="mb-3 border-t-2 pt-4 font-monument text-primary">
             Table of content
           </h1>
-          {doc.headings.map((heading: any, index: number) => (
+          {doc?.headings?.map((heading: any, index: number) => (
             <Link href={`#${heading.slug}`} className="p-2 hover:bg-accent">
               {heading.text}
             </Link>
           ))}
         </div>
-        <Mdx code={doc.body.code} />
+        <Mdx code={doc?.body?.code} />
       </div>
 
       <div className="mt-16">

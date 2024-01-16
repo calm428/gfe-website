@@ -2,9 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-
-import { Icons } from "@/components/icons"
 import { Button } from "@/components/ui/button"
+import { Icons } from "@/components/icons"
 
 function Introduction() {
   return (

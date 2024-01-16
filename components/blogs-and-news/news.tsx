@@ -2,7 +2,6 @@
 
 import Card from "@/components/common/cards/blog-card"
 
-
 const NewsSection = () => {
   return (
     <div className="bg-[#F9F9F9]">
