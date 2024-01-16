@@ -17,7 +17,7 @@ export default function OverviewSection() {
           />
         </div>
         <div>
-          <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  my-4 font-monument text-xl text-primary">
+          <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  my-4 font-monument text-xl">
             {"DAPPr (decentralized Anonymous Power Producing Renewable)"}
           </div>
           <div className="text-md font-mont text-muted-foreground">
@@ -48,7 +48,7 @@ export default function OverviewSection() {
       </div>
       <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-2">
         <div>
-          <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  my-4 font-monument text-xl text-primary">
+          <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  my-4 font-monument text-xl">
             {"SUNBELT’s ECO SYSTEM"}
           </div>
           <div className="text-md font-mont text-muted-foreground">

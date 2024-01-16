@@ -8,7 +8,7 @@ export default function InvestSection() {
   return (
     <div className="flex flex-col items-center justify-between gap-6 pb-32 md:flex-row">
       <div className="relative rounded-xl bg-[#E7F0FD] px-8 py-12">
-        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  my-4 text-2xl font-semibold text-primary">
+        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  my-4 text-2xl font-semibold">
           Willing to Invest More Than $100K?
         </div>
         <div className="text-md w-full font-mont text-muted-foreground md:w-1/2 lg:w-2/3">

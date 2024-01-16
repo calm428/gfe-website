@@ -29,7 +29,7 @@ function BitcoinRateSection() {
 
   return (
     <div className="container px-10 py-20">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
         Track Bitcoin Rates
       </h1>
 
@@ -37,7 +37,7 @@ function BitcoinRateSection() {
         <BitcoinPriceGraph />
 
         <div className="w-full">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent font-semi bold pb-5 pt-10 font-goldman text-4xl tracking-wider text-primary">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent font-semi bold pb-5 pt-10 font-goldman text-4xl tracking-wider">
             Bitcoin Price
           </h1>
 

@@ -46,7 +46,7 @@ const Page: FC<PageProps> = ({ params }) => {
 
       <div className="flex w-full flex-col gap-5 lg:flex-row-reverse">
         <div className="flex w-80 flex-col gap-2">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mb-3 border-t-2 pt-4 font-monument text-primary">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mb-3 border-t-2 pt-4 font-monument">
             Table of content
           </h1>
           {doc?.headings?.map((heading: any, index: number) => (

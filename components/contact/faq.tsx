@@ -40,7 +40,7 @@ const FaqSection = () => {
   }
   return (
     <div className="container mb-32 mt-16">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-2 text-center font-monument text-xl font-normal uppercase text-primary md:pb-3 md:text-2xl">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-2 text-center font-monument text-xl font-normal uppercase md:pb-3 md:text-2xl">
         Getting Started with SUNBELT Miners
       </h1>
 

@@ -59,7 +59,7 @@ const steps: Step[] = [
 export default function GuideSection() {
   return (
     <div className="flex flex-col items-center justify-between pb-4">
-      <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
+      <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
         Mining Step-by-Step
       </div>
       <div className="text-md max-w-5xl text-center font-mont text-muted-foreground">

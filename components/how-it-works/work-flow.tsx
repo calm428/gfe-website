@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function WorkFlowSection() {
   return (
     <div className="container flex flex-col items-center justify-between py-8">
-      <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
+      <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
         How Sunbelt miners work
       </div>
       <div className="text-md max-w-5xl text-center font-mont text-muted-foreground">

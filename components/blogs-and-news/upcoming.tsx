@@ -5,7 +5,7 @@ import Card from "@/components/common/cards/blog-card"
 const UpcomingSection = () => {
   return (
     <div className="bg-background-lighten-10 container mt-5">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mt-20 font-goldman text-5xl tracking-wider text-primary">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mt-20 font-goldman text-5xl tracking-wider">
         UPCOMING EVENTS
       </h1>
       <p className="auth my-6 font-semibold">

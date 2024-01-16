@@ -4,7 +4,7 @@ const WhySunbeltSection = () => {
   return (
     <div className="container pt-12 md:pt-20">
       <div className="pb-10 md:pb-14">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal text-primary  md:pb-10">
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
           Why Sunbelt?
         </h1>
         <h3 className="text-center font-mont text-lg">

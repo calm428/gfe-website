@@ -23,7 +23,7 @@ function CalculatorSection() {
               Future
             </h1>
           </div>
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman  text-6xl font-normal text-primary">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman  text-6xl font-normal">
             Building a better future
           </h1>
           <p className=" auth text-lg font-medium text-muted-foreground">

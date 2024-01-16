@@ -9,7 +9,7 @@ export default function SpecsSection() {
   return (
     <div className="container relative lg:mt-40 mt-0 flex flex-col gap-12 bg-background py-[100px] lg:py-[207px]">
       <div className=" relative z-30 flex flex-col gap-[24px]">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman text-[30px] font-normal text-primary md:text-[45px]">
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman text-[30px] font-normal md:text-[45px]">
           Functionalities
         </h1>
         <p className="auth text-base font-medium text-muted-foreground lg:w-1/2 lg:text-[20px]">
