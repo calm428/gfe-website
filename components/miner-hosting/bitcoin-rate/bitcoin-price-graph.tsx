@@ -147,7 +147,7 @@ const BitcoinPriceGraph = () => {
         grid: {
           display: false,
         },
-        position: "right",
+        position: "left",
       },
     },
     plugins: {
@@ -162,13 +162,13 @@ const BitcoinPriceGraph = () => {
 
   return (
     <div className="flex w-full flex-col justify-between space-y-5 rounded-xl bg-white p-10 drop-shadow-md">
-      <h1 className="auth text-xl font-semibold tracking-wider text-primary">
+      <h1 className="auth text-xl  tracking-wider text-primary">
         Bitcoin Chart
       </h1>
       <div className="ml-auto flex space-x-3">
         <Button
           className={`rounded-lg px-3 py-2 ${
-            interval === 1 ? "bg-primary/30" : ""
+            interval === 1 ? "bg-primary/10 text-primary" : ""
           }`}
           variant="ghost"
           onClick={() => handleIntervalChange(1)}
@@ -177,7 +177,7 @@ const BitcoinPriceGraph = () => {
         </Button>
         <Button
           className={`rounded-lg px-3 py-2 ${
-            interval === 3 ? "bg-primary/30" : ""
+            interval === 3 ? "bg-primary/10 text-primary" : ""
           }`}
           variant="ghost"
           onClick={() => handleIntervalChange(3)}
@@ -186,21 +186,21 @@ const BitcoinPriceGraph = () => {
         </Button>
         <Button
           className={`rounded-lg px-3 py-2 ${
-            interval === 7 ? "bg-primary/30" : ""
+            interval === 7 ? "bg-primary/10 text-primary" : ""
           }`}
           variant="ghost"
           onClick={() => handleIntervalChange(7)}
         >
-          1w
+          1W
         </Button>
         <Button
           className={`rounded-lg px-3 py-2 ${
-            interval === 30 ? "bg-primary/30" : ""
+            interval === 30 ? "bg-primary/10 text-primary" : ""
           }`}
           variant="ghost"
           onClick={() => handleIntervalChange(30)}
         >
-          1m
+          1M
         </Button>
       </div>
       {/* @ts-ignore */}

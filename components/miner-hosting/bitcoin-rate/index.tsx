@@ -33,11 +33,11 @@ function BitcoinRateSection() {
         Track Bitcoin Rates
       </h1>
 
-      <div className="grid w-full grid-cols-1 gap-10 rounded-xl bg-primary/10 p-4 xl:grid-cols-2">
+      <div className="grid w-full grid-cols-1 gap-10 rounded-xl bg-primary/5 p-4 xl:grid-cols-2">
         <BitcoinPriceGraph />
 
         <div className="w-full">
-          <h1 className="font-semi bold pb-5 pt-10 font-goldman text-3xl tracking-wider text-primary">
+          <h1 className="font-semi bold pb-5 pt-10 font-goldman text-4xl tracking-wider text-primary">
             Bitcoin Price
           </h1>
 
