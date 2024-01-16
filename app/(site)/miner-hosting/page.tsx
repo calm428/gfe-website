@@ -10,10 +10,10 @@ import IncomeComparison from "@/components/miner-hosting/income-comparison"
 import HomeSection from "@/components/miner-hosting/intro"
 import LogoSection from "@/components/miner-hosting/logo-section"
 import MainBenefitSection from "@/components/miner-hosting/main-benefit"
+import MinerListSection from "@/components/miner-hosting/miner-list"
 import SliderSection from "@/components/miner-hosting/slider"
 import SpecsSection from "@/components/miner-hosting/specs"
 import WhySunbeltSection from "@/components/miner-hosting/why-sunbelt"
-import MinerListSection from "@/components/miner/miner-list"
 
 export default function IndexPage() {
   return (
