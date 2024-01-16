@@ -7,7 +7,7 @@ import FeatureCard from "./feature-card"
 export default function SpecsSection() {
   const features = siteConfig.features
   return (
-    <div className="relative lg:mt-40 mt-0 flex flex-col gap-12 bg-background px-5 py-[100px] lg:px-[96px]  lg:py-[207px]">
+    <div className="container relative lg:mt-40 mt-0 flex flex-col gap-12 bg-background py-[100px] lg:py-[207px]">
       <div className=" relative z-30 flex flex-col gap-[24px]">
         <h1 className=" font-goldman text-[30px] font-normal text-primary md:text-[45px]">
           Functionalities

@@ -5,7 +5,7 @@ import ListItem from "./list-item"
 
 function CalculatorSection() {
   return (
-    <div className=" relative flex flex-col-reverse  items-center gap-40 bg-[url('/bgs/Features.svg')] bg-cover px-5 pb-60 sm:pt-[100px] lg:flex-row lg:px-24">
+    <div className=" relative flex flex-col-reverse  items-center gap-40 bg-[url('/bgs/Features.svg')] bg-cover container pb-60 sm:pt-[100px] lg:flex-row">
       <img
         src="/advantages/hue.svg"
         alt="bg"

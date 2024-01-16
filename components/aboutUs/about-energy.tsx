@@ -5,7 +5,7 @@ import Image from "next/image"
 function AboutEnergy() {
   return (
     <div className="bg-[#F9FCFF] pt-24">
-      <div className="flex flex-col items-center gap-6 px-5 lg:px-24 ">
+      <div className="flex flex-col items-center gap-6 container ">
         <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
           Views on energy
         </h1>
@@ -27,7 +27,7 @@ function AboutEnergy() {
             className="lg:w-[90%]"
           />
         </div>
-        <div className="flex flex-col gap-8 px-5 lg:w-1/2 lg:px-0 lg:pr-24">
+        <div className="flex flex-col gap-8 container lg:w-1/2 lg:pr-24">
           <p className="auth font-mont text-base font-medium md:text-lg">
             Small scale storage, for a productive asset consuming a resource,
             has different motivation than a productive asset which has an
@@ -83,7 +83,7 @@ function AboutEnergy() {
             className="mx-auto"
           />
         </div>
-        <div className="px-5 pb-24 lg:px-24">
+        <div className="container pb-24 lg:px-24">
           <div className="grid gap-14 pt-20 lg:grid-cols-2">
             <div className=" flex flex-col gap-3">
               <p className="auth font-mont text-base font-medium text-accent-foreground lg:text-lg">

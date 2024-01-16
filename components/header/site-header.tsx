@@ -106,14 +106,12 @@ export function SiteHeader() {
       <div
         id="sidebar"
         onClick={handleClose}
-        className={` ${
-          mobileNavOpen ? "block" : "hidden"
-        } absolute inset-0 z-50 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden`}
+        className={` ${mobileNavOpen ? "block" : "hidden"
+          } absolute inset-0 z-50 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden`}
       >
         <div
-          className={`${
-            mobileNavOpen ? "right-0 " : "-right-[360px]"
-          } fixed z-30  h-full min-w-[360px] max-w-[360px] bg-background transition-all lg:hidden`}
+          className={`${mobileNavOpen ? "right-0 " : "-right-[360px]"
+            } fixed z-30  h-full min-w-[360px] max-w-[360px] bg-background transition-all lg:hidden`}
         >
           <div className="flex h-full flex-col">
             <div className="sticky top-0 z-50 bg-background pt-5">
@@ -237,10 +235,9 @@ export function SiteHeader() {
               </NavigationMenu.Root>
               <Link
                 href={"/NFT"}
-                className={` ${navMenuStyle} ${
-                  "/NFT" === pathname &&
+                className={` ${navMenuStyle} ${"/NFT" === pathname &&
                   "bg-primary/5 font-semibold text-primary"
-                }`}
+                  }`}
               >
                 NFT
               </Link>
@@ -278,20 +275,18 @@ export function SiteHeader() {
               <div className="flex items-center ">
                 <Link
                   href={"/about-us"}
-                  className={` ${navMenuStyle} ${
-                    "/about-us" === pathname &&
+                  className={` ${navMenuStyle} ${"/about-us" === pathname &&
                     "bg-primary/5 font-semibold text-primary"
-                  }`}
+                    }`}
                 >
                   About us
                 </Link>
               </div>
               <Link
                 href={"/blogs-and-news"}
-                className={` ${navMenuStyle} ${
-                  "/blogs-and-news" === pathname &&
+                className={` ${navMenuStyle} ${"/blogs-and-news" === pathname &&
                   "bg-primary/5 font-semibold text-primary"
-                }`}
+                  }`}
               >
                 Blogs and News
               </Link>
@@ -308,10 +303,9 @@ export function SiteHeader() {
               </Button>
               <Link
                 href={"/contacts"}
-                className={`${navMenuStyle} ${
-                  "/contacts" === pathname &&
-                  "bg-primary/5 font-semibold text-primary"
-                }`}
+                className={`${navMenuStyle} ${"/contacts" === pathname ?
+                    "bg-primary/5 font-semibold text-primary" : ""
+                  }`}
               >
                 Contacts
               </Link>

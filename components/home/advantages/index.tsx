@@ -2,7 +2,7 @@ import AdvantageCard from "./advantage-card"
 
 const AdvantagesSection = () => {
   return (
-    <div className="grid gap-[50px] px-5 py-24 md:grid-cols-2 lg:px-24">
+    <div className="grid gap-[50px] container py-24 md:grid-cols-2">
       <AdvantageCard
         title="DAPPs Units"
         desc="Our Journey began with the design and construction of a sustainably-run server hosting environment prototype."

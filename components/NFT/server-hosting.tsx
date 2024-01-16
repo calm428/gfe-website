@@ -11,7 +11,7 @@ function ServerHosting() {
           height={961}
         />
       </div>
-      <div className=" flex flex-col gap-6 px-5 pt-5 lg:w-1/2">
+      <div className=" flex flex-col gap-6 container pt-5 lg:w-1/2">
         <h1 className="auth w-fit rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
           Future
         </h1>

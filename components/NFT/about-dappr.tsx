@@ -3,7 +3,7 @@ import Image from "next/image"
 function AboutDappr() {
   return (
     <div className="relative gap-12 bg-[url('/images/nft/bg1.png')] bg-cover bg-center bg-no-repeat pb-[1500px] pt-24 xl:flex xl:pb-[900px] xl:pl-24">
-      <div className="flex flex-col gap-6  px-5 lg:px-24 xl:w-1/2 xl:px-0">
+      <div className="flex flex-col gap-6  container lg:px-24 xl:w-1/2 xl:px-0">
         <h1 className="auth w-fit rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
           About DAPPr NFT
         </h1>

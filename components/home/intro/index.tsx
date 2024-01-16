@@ -10,7 +10,7 @@ import Counter from "./counter"
 export default function HomeSection() {
   return (
     <div
-      className="relative flex flex-col justify-between bg-cover bg-center px-5  pb-20 lg:flex-row lg:px-12 lg:pb-56 lg:pt-24"
+      className="relative flex flex-col justify-between bg-cover bg-center container  pb-20 lg:flex-row lg:px-12 lg:pb-56 lg:pt-24"
       style={{
         backgroundImage: "url('/bgs/Patterns.svg'),url('/bgs/intro.jpg')",
       }}

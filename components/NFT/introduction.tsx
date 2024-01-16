@@ -4,8 +4,8 @@ import { Button } from "../ui/button"
 
 function Introduction() {
   return (
-    <div className="relative flex flex-col items-center gap-12 bg-[url('/images/bg-gradient.webp')] bg-cover px-5 pt-[100px] lg:px-24">
-      <div className="flex flex-col items-center gap-8 px-5 lg:px-16">
+    <div className="relative flex flex-col items-center gap-12 bg-[url('/images/bg-gradient.webp')] bg-cover pcontainer pt-[100px] lg:px-24">
+      <div className="flex flex-col items-center gap-8 container lg:px-16">
         <div className="auth relative flex items-center justify-between rounded-3xl bg-primary/10 py-[25px] pl-[8px]  pr-[16px] shadow-lg md:rounded-full md:py-[8px] lg:w-[629px]">
           <Button className="absolute -top-3 left-[40%] rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
             New

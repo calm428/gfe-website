@@ -5,7 +5,7 @@ import Image from "next/image"
 const AboutGFE = () => {
   return (
     <div className=" flex flex-col items-center gap-20 py-20 lg:py-24">
-      <p className="auth px-5 font-mont text-base font-semibold text-black md:text-lg lg:px-24">
+      <p className="auth container font-mont text-base font-semibold text-black md:text-lg">
         GFE foundation’s vision started with a simple question: why do we know
         so many people who want solar power, and no one is purchasing it. That
         question is still being answered; but a large part of the answer is
@@ -14,7 +14,7 @@ const AboutGFE = () => {
         many in this scenario; with monopoly and monopsony relationships with
         the grid it is a questionable trading partner at best.
       </p>
-      <div className="flex  flex-col-reverse gap-12 px-5 lg:flex-row lg:px-0 lg:pl-24">
+      <div className="flex  flex-col-reverse gap-12 container lg:flex-row lg:px-0 lg:pl-24">
         <div className="flex flex-col gap-6 lg:w-2/3">
           <p className="auth font-mont text-base font-semibold text-muted-foreground md:text-lg">
             We sought a work around, and our answer came without use of the

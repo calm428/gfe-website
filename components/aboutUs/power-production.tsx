@@ -12,7 +12,7 @@ function PowerProduction() {
           className="lg:w-[80%]"
         />
       </div>
-      <div className="flex flex-col justify-center gap-8 px-5 lg:w-1/2 lg:px-0 lg:pr-24">
+      <div className="flex flex-col justify-center gap-8 container lg:w-1/2 lg:px-0 lg:pr-24">
         <h1 className=" bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-monument text-[40px] text-transparent">
           Unpriced Externalities in Power Production
         </h1>

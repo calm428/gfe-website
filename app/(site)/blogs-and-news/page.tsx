@@ -13,7 +13,7 @@ const BlogAndNewsPage = () => {
       <NewsSection />
       <UpcomingSection />
       <PaginationSection />
-      <div className=" px-5 lg:px-24">
+      <div className=" container lg:px-24">
         <ContactUs />
       </div>
     </div>

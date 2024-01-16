@@ -4,7 +4,7 @@ import Step from "./step"
 
 function Roadmap() {
   return (
-    <div className="px-5 pb-24 lg:px-24">
+    <div className="container pb-24 lg:px-24">
       <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl capitalize text-transparent">
         GFE Foundation Roadmap
       </h1>
