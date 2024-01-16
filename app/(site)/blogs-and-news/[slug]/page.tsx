@@ -5,9 +5,9 @@ import { allDocs } from "contentlayer/generated"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import Card from "@/components/common/cards/blog-card"
+import ContactUs from "@/components/NFT/contact-us"
 import PaginationSection from "@/components/blogs-and-news/pagination"
-import ContactUs from "@/components/NFT/ContactUs"
+import Card from "@/components/common/cards/blog-card"
 import { Mdx } from "@/components/mdx"
 
 interface PageProps {

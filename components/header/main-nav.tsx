@@ -12,7 +12,7 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 
-import ExpandableText from "./ExpandableText"
+import ExpandableText from "./expandable-text"
 
 interface MainNavProps {
   items?: NavItem[]
@@ -126,8 +126,9 @@ export function MainNav({ items }: MainNavProps) {
         </NavigationMenu.Root>
         <Link
           href={"/NFT"}
-          className={` ${navMenuStyle} ${"/NFT" === pathname && "bg-primary/5 font-semibold text-primary"
-            }`}
+          className={` ${navMenuStyle} ${
+            "/NFT" === pathname && "bg-primary/5 font-semibold text-primary"
+          }`}
         >
           NFT
         </Link>
@@ -160,26 +161,29 @@ export function MainNav({ items }: MainNavProps) {
         <div className="flex items-center ">
           <Link
             href={"/about-us"}
-            className={` ${navMenuStyle} ${"/about-us" === pathname &&
+            className={` ${navMenuStyle} ${
+              "/about-us" === pathname &&
               "bg-primary/5 font-semibold text-primary"
-              }`}
+            }`}
           >
             About us
           </Link>
         </div>
         <Link
           href={"/blogs-and-news"}
-          className={` ${navMenuStyle} ${"/blogs-and-news" === pathname &&
+          className={` ${navMenuStyle} ${
+            "/blogs-and-news" === pathname &&
             "bg-primary/5 font-semibold text-primary"
-            }`}
+          }`}
         >
           Blogs and News
         </Link>
         <Link
           href={"/contacts"}
-          className={` ml-auto ${navMenuStyle} ${"/contacts" === pathname &&
+          className={` ml-auto ${navMenuStyle} ${
+            "/contacts" === pathname &&
             "bg-primary/5 font-semibold text-primary"
-            }`}
+          }`}
         >
           Contacts
         </Link>

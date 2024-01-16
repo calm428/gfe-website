@@ -2,11 +2,11 @@
 
 import { useState } from "react"
 
-import { Button } from "../ui/button"
-import { Input } from "../ui/input"
-import { Label } from "../ui/label"
-import { Slider } from "../ui/slider"
-import HistoricalPowerGraph from "./HistoricalPowerGraph"
+import { Button } from "../../ui/button"
+import { Input } from "../../ui/input"
+import { Label } from "../../ui/label"
+import { Slider } from "../../ui/slider"
+import HistoricalPowerGraph from "./historical-power-graph"
 
 function CalculatorSection() {
   const [amount, setAmount] = useState<number | null>(null)

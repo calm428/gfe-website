@@ -17,7 +17,7 @@ import { format } from "date-fns/format"
 import { Line } from "react-chartjs-2"
 import { useQuery } from "react-query"
 
-import { Button } from "../ui/button"
+import { Button } from "../../ui/button"
 
 ChartJS.register(
   ArcElement,

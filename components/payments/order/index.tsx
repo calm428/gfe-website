@@ -3,18 +3,17 @@
 import { useState } from "react"
 import { CreditCard, HelpCircle } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-
-import { Icons } from "../icons"
-import { Button } from "../ui/button"
-import { Checkbox } from "../ui/checkbox"
-import { Progress } from "../ui/progress"
+import { Icons } from "../../icons"
+import { Button } from "../../ui/button"
+import { Checkbox } from "../../ui/checkbox"
+import { Progress } from "../../ui/progress"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../ui/tooltip"
+} from "../../ui/tooltip"
+import Coin from "./coin"
 
 const OrderSection = () => {
   const [progress, setProgress] = useState(90)
@@ -202,28 +201,3 @@ const OrderSection = () => {
 }
 
 export default OrderSection
-
-function Coin({
-  icon,
-  name,
-  selected,
-  setSelected,
-}: {
-  icon: any
-  name: string
-  selected: string
-  setSelected: Function
-}) {
-  return (
-    <button
-      onClick={() => setSelected(name)}
-      className={cn(
-        "flex items-center gap-2 rounded-md border-[2px] border-transparent px-2 py-2.5 hover:bg-[#E7F0FD]",
-        `${name == selected && "border-primary bg-[#E7F0FD]"}`
-      )}
-    >
-      {icon}
-      {name}
-    </button>
-  )
-}

@@ -1,9 +1,9 @@
-import AboutDappr from "@/components/NFT/AboutDappr"
-import ContactUs from "@/components/NFT/ContactUs"
-import FAQ from "@/components/NFT/FAQ"
-import Introduction from "@/components/NFT/Introduction"
-import Roadmap from "@/components/NFT/Roadmap"
-import ServerHosting from "@/components/NFT/ServerHosting"
+import AboutDappr from "@/components/NFT/about-dappr"
+import ContactUs from "@/components/NFT/contact-us"
+import FAQ from "@/components/NFT/faq"
+import Introduction from "@/components/NFT/introduction"
+import Roadmap from "@/components/NFT/roadmap"
+import ServerHosting from "@/components/NFT/server-hosting"
 
 function page() {
   return (

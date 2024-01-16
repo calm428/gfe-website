@@ -1,4 +1,4 @@
-import ContactUs from "@/components/NFT/ContactUs"
+import ContactUs from "@/components/NFT/contact-us"
 import BlogsSection from "@/components/blogs-and-news/blogs"
 import HeroSection from "@/components/blogs-and-news/hero"
 import NewsSection from "@/components/blogs-and-news/news"

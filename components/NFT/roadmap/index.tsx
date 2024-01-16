@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import Step from "./Step"
+import Step from "./step"
 
 function Roadmap() {
   return (

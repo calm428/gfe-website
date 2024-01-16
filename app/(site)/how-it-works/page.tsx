@@ -1,7 +1,7 @@
-import BenefitSection from "@/components/how-it-works/benefit"
+import BenefitSection from "@/components/how-it-works/benefir/benefit"
 import GuideSection from "@/components/how-it-works/guide"
 import HeroSection from "@/components/how-it-works/hero"
-import WorkFlowSection from "@/components/how-it-works/workflow"
+import WorkFlowSection from "@/components/how-it-works/work-flow"
 
 export default function IndexPage() {
   return (

@@ -1,5 +1,7 @@
 "use client"
 
+import { BenefitCard } from "./benefit-card"
+
 const CARDS_DATA = [
   {
     title: "High Income",
@@ -12,21 +14,6 @@ const CARDS_DATA = [
       "Bitcoin, created in 2009, is a decentralized digital currency facilitating peer-to-peer transactions on a transparent blockchain. Capped at 21 million coins, it serves as a borderless store of value and potential hedge against inflation.",
   },
 ]
-
-function BenefitCard({
-  title,
-  description,
-}: {
-  title: string
-  description: string
-}) {
-  return (
-    <div className="rounded-3xl bg-accent p-5">
-      <h2 className="mt-5 font-monument text-xl tracking-wider">{title}</h2>
-      <p className="mb-5 mt-2 text-sm text-muted-foreground">{description}</p>
-    </div>
-  )
-}
 
 export default function BenefitSection() {
   return (

@@ -2,7 +2,9 @@
 
 import Image from "next/image"
 
-type Step = {
+import StepComponent from "./step"
+
+export type Step = {
   index: number
   title: string
   description: string
@@ -53,37 +55,6 @@ const steps: Step[] = [
     icon: "/images/how-it-works/maintenance.svg",
   },
 ]
-
-function StepComponent({ step }: { step: Step }) {
-  return (
-    <div className="relative mx-auto my-2 flex max-w-xl items-start gap-4 rounded-xl bg-white p-8 shadow-md">
-      <div className="absolute right-2 top-3 font-monument text-2xl font-bold text-black/5">
-        0{step.index}
-      </div>
-      <div
-        className="flex h-12 w-12 items-center justify-center rounded-xl"
-        style={{
-          background: "linear-gradient(37deg, #22B4FD 2.42%, #2D79FF 80.84%)",
-          minWidth: "3rem",
-        }}
-      >
-        <Image
-          src={step.icon}
-          alt={step.title}
-          width={100}
-          height={100}
-          className="h-8 w-8"
-        />
-      </div>
-      <div className="flex flex-col gap-2">
-        <div className="font-monument text-xl">{step.title}</div>
-        <div className="font-mont text-sm text-muted-foreground">
-          {step.description}
-        </div>
-      </div>
-    </div>
-  )
-}
 
 export default function GuideSection() {
   return (

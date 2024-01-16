@@ -2,7 +2,7 @@
 
 import { useQuery } from "react-query"
 
-import BitcoinPriceGraph from "./BitcoinPriceGraph"
+import BitcoinPriceGraph from "./bitcoin-price-graph"
 
 const useGetBitcoinData = (cryptoName: string, options: any) => {
   return useQuery(
