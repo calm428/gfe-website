@@ -65,22 +65,31 @@ const BitcoinPriceGraph = () => {
 
   const formatDate = (value: number) => {
     if (interval === 1) return format(value, "p")
-    else if (interval === 3) return format(value, "MM/dd")
-    else if (interval === 7) return format(value, "MM/dd")
-    else if (interval === 30) return format(value, "MM/dd")
+    else if (interval === 3 || interval === 7 || interval === 30)
+      return format(value, "MM/dd")
   }
 
+  const filteredData =
+    !isLoading && priceData
+      ? priceData.filter(
+          (
+            value: { x: number; y: number },
+            index: number,
+            array: { x: number; y: number }[]
+          ) =>
+            array.findIndex(
+              (item) => formatDate(item.x) === formatDate(value.x)
+            ) === index
+        )
+      : []
+
   const data = {
-    labels:
-      !isLoading && priceData
-        ? priceData.map((item: { x: number; y: number }) => formatDate(item.x))
-        : [],
+    labels: filteredData.map((item: { x: number; y: number }) =>
+      formatDate(item.x)
+    ),
     datasets: [
       {
-        data:
-          !isLoading && priceData
-            ? priceData.map((item: { x: number; y: number }) => item.y)
-            : [],
+        data: filteredData.map((item: { x: number; y: number }) => item.y),
         pointRadius: 2,
         pointHoverRadius: 4,
         backgroundColor: (context: ScriptableContext<"line">) => {
