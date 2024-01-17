@@ -21,11 +21,7 @@ const AccordionItem = React.forwardRef<
     {...props}
   >
     <h3
-      className={`mr-4 pt-3 font-monument text-3xl  ${
-        isOpen
-          ? "bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent"
-          : "text-secondary"
-      }`}
+      className={`mr-4 pt-3 font-monument text-3xl bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent`}
     >
       {props.value}
     </h3>
