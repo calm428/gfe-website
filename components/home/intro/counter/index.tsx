@@ -47,7 +47,7 @@ function Counter() {
   }
   const payments = siteConfig.payments
   return (
-    <div className="auth mx-auto w-full overflow-hidden rounded-lg bg-background pb-[32px] font-mont shadow-lg lg:w-[500px] xl:w-[480px]">
+    <div className="auth  w-full overflow-hidden rounded-lg bg-background pb-[32px] font-mont shadow-lg lg:w-[500px] xl:w-[480px]">
       <div className="flex flex-col gap-[24px] bg-[#F9FCFF] p-[32px]">
         <div className="text-center">
           <h2 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
