@@ -12,9 +12,11 @@ function page() {
       <AboutDappr />
       <ServerHosting />
       <Roadmap />
-      <div className=" bg-[url('/images/nft/bg2.png')] bg-cover px-5 pb-[300px] md:pb-[150px] lg:px-24">
+      <div className=" bg-[url('/images/nft/bg2.png')] bg-cover pb-[300px] md:pb-[150px] lg:px-24">
+        <div className="container">
         <FAQ />
         <ContactUs />
+        </div>
       </div>
     </section>
   )

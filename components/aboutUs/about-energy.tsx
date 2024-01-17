@@ -17,7 +17,7 @@ function AboutEnergy() {
           consumed at the same time.
         </p>
       </div>
-      <div className="flex flex-col pt-14 lg:flex-row">
+      <div className="flex flex-col pt-14 lg:flex-row justify-between">
         <div>
           <Image
             src="/images/about-us/nft2.svg"
@@ -27,7 +27,7 @@ function AboutEnergy() {
             className="lg:w-[90%]"
           />
         </div>
-        <div className="flex flex-col gap-8 container lg:w-1/2 lg:pr-24">
+        <div className="flex flex-col gap-8 container lg:w-1/2 lg:pr-24 justify-center">
           <p className="auth font-mont text-base font-medium md:text-lg">
             Small scale storage, for a productive asset consuming a resource,
             has different motivation than a productive asset which has an
@@ -45,8 +45,8 @@ function AboutEnergy() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col-reverse pt-14 lg:flex-row">
-        <div className="flex flex-col gap-8 px-5 lg:w-1/2 lg:px-0 lg:pl-24">
+      <div className="flex flex-col-reverse pt-14 lg:flex-row justify-between">
+        <div className="flex flex-col gap-8 px-[2rem] lg:w-1/2 lg:px-0 lg:pl-24 justify-center">
           <p className="auth font-mont text-base font-medium md:text-lg">
             The world{"'"}s diet for energy is in part due to the convenience of
             a grid. Most developing worlds do not have easy access to
@@ -74,67 +74,69 @@ function AboutEnergy() {
         </div>
       </div>
       <div className="bg-[url('/images/about-us/bg2.png')] bg-cover bg-center bg-no-repeat pt-24">
-        <div className="px-5 lg:px-24">
-          <Image
-            src="/images/about-us/energy.png"
-            width={1520}
-            height={452}
-            alt="energy"
-            className="mx-auto"
-          />
-        </div>
-        <div className="container pb-24 lg:px-24">
-          <div className="grid gap-14 pt-20 lg:grid-cols-2">
-            <div className=" flex flex-col gap-3">
-              <p className="auth font-mont text-base font-medium text-accent-foreground lg:text-lg">
-                The more small loads we can partition and remove from their grid
-                leashed defaults in design, the more our world transitions to
-                renewable power
-              </p>
-              <div className="rounded-md  bg-gradient-to-br from-[#2BADFD] to-[#1570EF] p-6">
-                <div className="mb-3 flex gap-6">
-                  <div>
-                    <img
-                      src="/icons/Buttons.svg"
-                      alt="image"
-                      className="w-full"
-                    />
+        <div className="container">
+          <div className=" lg:px-24">
+            <Image
+              src="/images/about-us/energy.png"
+              width={1520}
+              height={452}
+              alt="energy"
+              className="mx-auto"
+            />
+          </div>
+          <div className="pb-24 lg:px-24">
+            <div className="grid gap-14 pt-20 lg:grid-cols-2">
+              <div className=" flex flex-col gap-3">
+                <p className="auth font-mont text-base font-medium text-accent-foreground lg:text-lg">
+                  The more small loads we can partition and remove from their grid
+                  leashed defaults in design, the more our world transitions to
+                  renewable power
+                </p>
+                <div className="rounded-md  bg-gradient-to-br from-[#2BADFD] to-[#1570EF] p-6">
+                  <div className="mb-3 flex gap-6">
+                    <div>
+                      <img
+                        src="/icons/Buttons.svg"
+                        alt="image"
+                        className="w-full"
+                      />
+                    </div>
+                    <p className="auth font-mont text-base font-medium text-primary-foreground">
+                      Small scale renewable hydrocarbon brewing is needed in many
+                      places, this is due to the
+                    </p>
                   </div>
-                  <p className="auth font-mont text-base font-medium text-primary-foreground">
-                    Small scale renewable hydrocarbon brewing is needed in many
-                    places, this is due to the
-                  </p>
-                </div>
-                <div className="flex flex-col gap-6">
-                  <p className="auth font-mont text-base font-medium text-primary-foreground">
-                    intrinsic costs of delivery of extractive energy. Many small
-                    efforts are needed to change things.
-                  </p>
-                  <p className="auth font-mont text-base font-medium text-primary-foreground">
-                    Our transition energy needs rely heavily on hydrogen in many
-                    playbooks. That infrastructure can be built in what ever
-                    manner our global commons chooses.
-                  </p>
+                  <div className="flex flex-col gap-6">
+                    <p className="auth font-mont text-base font-medium text-primary-foreground">
+                      intrinsic costs of delivery of extractive energy. Many small
+                      efforts are needed to change things.
+                    </p>
+                    <p className="auth font-mont text-base font-medium text-primary-foreground">
+                      Our transition energy needs rely heavily on hydrogen in many
+                      playbooks. That infrastructure can be built in what ever
+                      manner our global commons chooses.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className=" flex flex-col gap-4">
-              <p className="auth font-mont text-base font-medium text-accent-foreground md:text-lg">
-                Small scale storage, for a productive asset consuming a
-                resource, has different motivation than a productive asset which
-                has an operating expense from its grid energy appetite. We care
-                for the electricity we make in a different manner than the
-                financial impact felt from a monthly bill. The production and
-                consumption of energy by direction allows the best of all
-                situations.
-              </p>
-              <p className="auth font-mont text-base font-medium text-accent-foreground md:text-lg">
-                The NFT owner is responsible for clean solar panels to maximize
-                her KW. The collective is looking for best impact and highest
-                remuneration for its energy commodity, and the token holders are
-                supporting the process and profiting from a fractional ROI from
-                producing and consuming ethically sourced power for profit.
-              </p>
+              <div className=" flex flex-col gap-4">
+                <p className="auth font-mont text-base font-medium text-accent-foreground md:text-lg">
+                  Small scale storage, for a productive asset consuming a
+                  resource, has different motivation than a productive asset which
+                  has an operating expense from its grid energy appetite. We care
+                  for the electricity we make in a different manner than the
+                  financial impact felt from a monthly bill. The production and
+                  consumption of energy by direction allows the best of all
+                  situations.
+                </p>
+                <p className="auth font-mont text-base font-medium text-accent-foreground md:text-lg">
+                  The NFT owner is responsible for clean solar panels to maximize
+                  her KW. The collective is looking for best impact and highest
+                  remuneration for its energy commodity, and the token holders are
+                  supporting the process and profiting from a fractional ROI from
+                  producing and consuming ethically sourced power for profit.
+                </p>
+              </div>
             </div>
           </div>
         </div>

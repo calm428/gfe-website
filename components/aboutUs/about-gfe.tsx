@@ -14,8 +14,8 @@ const AboutGFE = () => {
         many in this scenario; with monopoly and monopsony relationships with
         the grid it is a questionable trading partner at best.
       </p>
-      <div className="flex  flex-col-reverse gap-12 container lg:flex-row lg:px-0 lg:pl-24">
-        <div className="flex flex-col gap-6 lg:w-2/3">
+      <div className="flex flex-col-reverse justify-betwween gap-12 lg:flex-row lg:px-0 lg:pl-24">
+        <div className="flex flex-col gap-6 lg:w-2/3 justify-center container">
           <p className="auth font-mont text-base font-semibold text-muted-foreground md:text-lg">
             We sought a work around, and our answer came without use of the
             local marketplace. I would much rather sell power to Yemen; it costs

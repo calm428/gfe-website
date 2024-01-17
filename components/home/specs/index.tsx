@@ -7,8 +7,8 @@ import FeatureCard from "./feature-card"
 export default function SpecsSection() {
   const features = siteConfig.features
   return (
-    <div className=" relative  bg-background ">
-      <div className="container lg:mt-40 mt-0 py-[100px] lg:py-[207px] flex-col gap-12 space-y-14 flex pb-20   lg:pb-56 lg:pt-24 justify-between">
+    <div className="relative bg-background	 lg:mt-40 mt-0 overflow-hidden	">
+      <div className="container  flex-col gap-12 space-y-14 flex justify-between py-[100px] lg:py-[207px] pb-20 lg:pb-56 lg:pt-24">
         <div className=" relative z-30 flex flex-col gap-[24px]">
           <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman text-[30px] font-normal md:text-[45px]">
             Functionalities
@@ -35,17 +35,17 @@ export default function SpecsSection() {
       <img
         src="/bgs/grid.jpg"
         alt="bg"
-        className=" absolute left-0 top-0 hidden w-1/2 lg:block "
+        className="absolute left-0 top-0 hidden w-1/2 lg:block "
       />
       <img
         src="/bgs/global.jpg"
         alt="bg"
-        className=" absolute -right-[100px] bottom-0 opacity-50 xl:top-0 "
+        className="absolute right-0 bottom-0 opacity-50 xl:top-0 "
       />
       <img
         src="/bgs/right1.png"
         alt="bgs"
-        className="absolute -bottom-6 w-full"
+        className="absolute bottom-0 w-full"
       />
     </div>
   )

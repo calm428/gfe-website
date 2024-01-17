@@ -18,9 +18,11 @@ export default function IndexPage() {
         <CalculatorSection />
         <PartnersSection />
       </div>
-      <div className="bg-[url('/images/nft/bg2.png')] bg-cover container pb-[300px] md:pb-[150px] ">
-        <FaqSection />
-        <CommunitySection />
+      <div className="bg-[url('/images/nft/bg2.png')] bg-cover pb-[300px] md:pb-[150px] ">
+        <div className="container">
+          <FaqSection />
+          <CommunitySection />
+        </div>
       </div>
     </section>
   )

@@ -3,7 +3,7 @@ import Image from "next/image"
 function ServerHosting() {
   return (
     <div className="relative mb-24 flex flex-col-reverse gap-12 lg:flex-row lg:px-0">
-      <div className="flex items-center justify-center lg:w-1/2">
+      <div className="flex items-center justify-between lg:w-1/2">
         <Image
           src="/images/nft/server-hosting.svg"
           alt="image"
@@ -11,7 +11,7 @@ function ServerHosting() {
           height={961}
         />
       </div>
-      <div className=" flex flex-col gap-6 container pt-5 lg:w-1/2">
+      <div className="flex flex-col gap-6 container pt-5 lg:w-1/2 justify-center">
         <h1 className="auth w-fit rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
           Future
         </h1>
