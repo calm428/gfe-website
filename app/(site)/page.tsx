@@ -19,7 +19,7 @@ export default function IndexPage() {
         <PartnersSection />
       </div>
       <div className="bg-[url('/images/nft/bg2.png')] bg-cover pb-[300px] md:pb-[150px] ">
-        <div className="container">
+        <div className="px-10 container ">
           <FaqSection />
           <CommunitySection />
         </div>
