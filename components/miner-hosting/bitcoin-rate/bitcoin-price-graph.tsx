@@ -72,24 +72,29 @@ const BitcoinPriceGraph = () => {
   const filteredData =
     !isLoading && priceData
       ? priceData.filter(
-          (
-            value: { x: number; y: number },
-            index: number,
-            array: { x: number; y: number }[]
-          ) =>
-            array.findIndex(
-              (item) => formatDate(item.x) === formatDate(value.x)
-            ) === index
-        )
+        (
+          value: { x: number; y: number },
+          index: number,
+          array: { x: number; y: number }[]
+        ) =>
+          array.findIndex(
+            (item) => formatDate(item.x) === formatDate(value.x)
+          ) === index
+      )
       : []
 
+  const labels = (priceData ?? [])?.reduce((acc: string[], p: { x: number; y: number }) => {
+    const formatedLabel = formatDate(p.x) as string
+    const itemTobeAddedd = acc.includes(formatedLabel) ? "" : formatedLabel
+    acc.push(itemTobeAddedd)
+    return acc
+  }, [])
+
   const data = {
-    labels: filteredData.map((item: { x: number; y: number }) =>
-      formatDate(item.x)
-    ),
+    labels: labels,
     datasets: [
       {
-        data: filteredData.map((item: { x: number; y: number }) => item.y),
+        data: priceData?.map((item: { x: number; y: number }) => item.y),
         pointRadius: 2,
         pointHoverRadius: 4,
         backgroundColor: (context: ScriptableContext<"line">) => {
@@ -178,7 +183,7 @@ const BitcoinPriceGraph = () => {
         <Button
           className={`rounded-lg px-3 py-2 ${
             interval === 1 ? "bg-primary/10 text-primary" : ""
-          }`}
+            }`}
           variant="ghost"
           onClick={() => handleIntervalChange(1)}
         >
@@ -187,7 +192,7 @@ const BitcoinPriceGraph = () => {
         <Button
           className={`rounded-lg px-3 py-2 ${
             interval === 3 ? "bg-primary/10 text-primary" : ""
-          }`}
+            }`}
           variant="ghost"
           onClick={() => handleIntervalChange(3)}
         >
@@ -196,7 +201,7 @@ const BitcoinPriceGraph = () => {
         <Button
           className={`rounded-lg px-3 py-2 ${
             interval === 7 ? "bg-primary/10 text-primary" : ""
-          }`}
+            }`}
           variant="ghost"
           onClick={() => handleIntervalChange(7)}
         >
@@ -205,7 +210,7 @@ const BitcoinPriceGraph = () => {
         <Button
           className={`rounded-lg px-3 py-2 ${
             interval === 30 ? "bg-primary/10 text-primary" : ""
-          }`}
+            }`}
           variant="ghost"
           onClick={() => handleIntervalChange(30)}
         >
