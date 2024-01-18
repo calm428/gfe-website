@@ -16,8 +16,8 @@ function page() {
       <AboutEnergy />
       <MarketPlace />
       <PowerProduction />
-      <FaqSection />
-      <div className=" bg-[url('/images/nft/bg2.png')] bg-cover container pb-[300px] md:pb-[150px] lg:px-24">
+      <div className=" bg-[url('/images/nft/bg2.png')] bg-cover  pb-[300px] md:pb-[150px] ">
+        <FaqSection />
         <CommunitySection />
       </div>
     </section>

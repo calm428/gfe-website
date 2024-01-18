@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 function CommunitySection() {
   return (
-    <div className="py-[60px]">
+    <div className="py-[60px] lg:px-24">
       <div className="flex flex-col justify-between rounded-xl bg-muted p-[60px] md:flex-row">
         <div className="flex flex-col gap-4 lg:w-[60%]">
           <div className="bg-gradient-to-b  from-[#2BADFD]  to-[#1570EF] bg-clip-text font-monument text-3xl text-transparent">
