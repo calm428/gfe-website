@@ -3,7 +3,7 @@ import Image from "next/image"
 function AboutDappr() {
   return (
     <div className="relative bg-[url('/images/nft/bg1.png')] bg-cover bg-center bg-no-repeat pb-[1500px] pt-24 xl:pb-[900px]">
-      <div className="xl:flex gap-12 container justify-between items-cnter">
+      <div className="xl:flex gap-12 container justify-between items-center">
         <div className="flex flex-col gap-6 lg:px-24 xl:w-1/2 xl:px-0">
           <h1 className="auth w-fit rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
             About DAPPr NFT
@@ -14,8 +14,8 @@ function AboutDappr() {
           <p className="auth font-mont text-base md:text-lg ">
             <span className="font-medium">
               DAPPr unit - This is a solar/wind energy resource, an island of
-              stability in an already stressed grid ecosystem so common in sunbelt
-              countries.
+              stability in an already stressed grid ecosystem so common in
+              sunbelt countries.
             </span>
             <span className="font-muted-foreground">
               This unit will provide 150kw daytime renewable energy input and
@@ -27,23 +27,23 @@ function AboutDappr() {
           </p>
           <p className="auth font-mont text-base md:text-lg ">
             <span className="font-medium">
-              The NFT our collective produces is a DAPPr unit, but the collective
-              extends membership to any renewable producer
+              The NFT our collective produces is a DAPPr unit, but the
+              collective extends membership to any renewable producer
             </span>
             <span className="font-muted-foreground">
               By owning the DAPPr unit, you provide the land it sits upon, the
-              solar panels, and maintain the solar panels on your site. Income is
-              earned daily from collective operation of the units provided kw. We
-              will manage the systems maintenance and operations on our side with
-              fractional income. With DAPPr NFT, you can enjoy all of the benefits
-              of our unit and contribute to the sustainable world. Its similar to
-              owning a small farm, your crop is sunlight.
+              solar panels, and maintain the solar panels on your site. Income
+              is earned daily from collective operation of the units provided
+              kw. We will manage the systems maintenance and operations on our
+              side with fractional income. With DAPPr NFT, you can enjoy all of
+              the benefits of our unit and contribute to the sustainable world.
+              Its similar to owning a small farm, your crop is sunlight.
             </span>
           </p>
           <p className="auth font-mont text-base md:text-lg ">
             <span className="font-medium">
-              We are the first to merge blockchain and real assets - It will be a
-              unique chance for individuals
+              We are the first to merge blockchain and real assets - It will be
+              a unique chance for individuals
             </span>
             <span className="font-muted-foreground">
               You can become a DAO member in our group and contribute positively
@@ -56,8 +56,8 @@ function AboutDappr() {
           <Image
             src="/images/nft/dappr.svg"
             alt="image"
-            width={769}
-            height={771}
+            width={559}
+            height={686}
             className=""
           />
         </div>
