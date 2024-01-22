@@ -27,7 +27,7 @@ const CommunitySection = () => {
         <div className="flex flex-col gap-5 md:w-[30%]">
           <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4">
             <Link
-              href={siteConfig.links.docs}
+              href={siteConfig.links.discord}
               className="flex items-center gap-3"
             >
               <Image
@@ -41,7 +41,7 @@ const CommunitySection = () => {
           </Button>
           <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4">
             <Link
-              href={siteConfig.links.docs}
+              href={siteConfig.links.telegram}
               className="flex items-center gap-3"
             >
               <Image

@@ -77,14 +77,17 @@ export const siteConfig = {
   community: [
     {
       icon: "/icons/community/discord.svg",
+      href: "https://discord.gg/mkr95bfA",
       title: "Discord",
     },
     {
       icon: "/icons/community/Telegram.svg",
+      href: "https://t.me/gfefoundation",
       title: "Telgram",
     },
     {
       icon: "/icons/community/twitter.svg",
+      href: "#",
       title: "Twitter",
     },
   ],
@@ -198,6 +201,8 @@ export const siteConfig = {
     twitter: "https://twitter.com/shadcn",
     github: "https://github.com/shadcn/ui",
     docs: "https://ui.shadcn.com",
+    discord: "https://discord.gg/mkr95bfA",
+    telegram: "https://t.me/gfefoundation",
   },
   contact: {
     phone: "+44 687 120 967 2",

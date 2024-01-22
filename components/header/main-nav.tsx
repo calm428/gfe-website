@@ -141,7 +141,11 @@ export function MainNav({ items }: MainNavProps) {
               <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
                 <div className="rounded-b-[10px] border border-border bg-background p-3">
                   {community.map((community, ind) => (
-                    <Link href={"#"} key={ind} className="flex gap-2 py-2">
+                    <Link
+                      href={community.href}
+                      key={ind}
+                      className="flex gap-2 py-2"
+                    >
                       <Image
                         src={community.icon}
                         width={20}
