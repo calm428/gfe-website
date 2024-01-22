@@ -1,7 +1,7 @@
-import ContactUs from "@/components/NFT/ContactUs"
-import BenefitSection from "@/components/how-it-works/benefit"
-import GuideSection from "@/components/how-it-works/guide"
-import WorkFlowSection from "@/components/how-it-works/workflow"
+import ContactUs from "@/components/NFT/contact-us"
+import BenefitSection from "@/components/miner-hosting/benefit"
+import GuideSection from "@/components/miner-hosting/guide"
+import WorkFlowSection from "@/components/miner-hosting/work-flow"
 import AdvantagesSection from "@/components/miner-hosting/advantages"
 import BitcoinRateSection from "@/components/miner-hosting/bitcoin-rate"
 import CalculatorSection from "@/components/miner-hosting/calculator"
@@ -10,10 +10,10 @@ import IncomeComparison from "@/components/miner-hosting/income-comparison"
 import HomeSection from "@/components/miner-hosting/intro"
 import LogoSection from "@/components/miner-hosting/logo-section"
 import MainBenefitSection from "@/components/miner-hosting/main-benefit"
+import MinerListSection from "@/components/miner-hosting/miner-list"
 import SliderSection from "@/components/miner-hosting/slider"
 import SpecsSection from "@/components/miner-hosting/specs"
 import WhySunbeltSection from "@/components/miner-hosting/why-sunbelt"
-import MinerListSection from "@/components/miner/miner-list"
 
 export default function IndexPage() {
   return (

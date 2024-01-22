@@ -1,11 +1,11 @@
-import Introduction from "@/components/ContactUs/Introduction"
-import FaqSection from "@/components/home/Faq"
+import Introduction from "@/components/contact-us/introduction"
+import FaqSection from "@/components/home/faq"
 
 function page() {
   return (
     <section>
       <Introduction />
-      <div className="px-5 pb-[300px] md:pb-[150px] lg:px-24">
+      <div className="container pb-[300px] md:pb-[150px] lg:px-24">
         <FaqSection />
       </div>
     </section>

@@ -1,4 +1,4 @@
-import ContactUs from "@/components/NFT/ContactUs"
+import ContactUs from "@/components/NFT/contact-us"
 import BlogsSection from "@/components/blogs-and-news/blogs"
 import HeroSection from "@/components/blogs-and-news/hero"
 import NewsSection from "@/components/blogs-and-news/news"
@@ -13,7 +13,7 @@ const BlogAndNewsPage = () => {
       <NewsSection />
       <UpcomingSection />
       <PaginationSection />
-      <div className=" px-5 lg:px-24">
+      <div className=" container lg:px-24">
         <ContactUs />
       </div>
     </div>

@@ -14,7 +14,7 @@ const MainBenefitSection = () => {
       </div> */}
       <div className="container flex flex-col items-start justify-start px-10">
         <div className="pb-10 md:pb-14">
-          <h1 className="pb-5 font-goldman text-5xl font-normal text-primary  md:pb-10">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 font-goldman text-5xl font-normal md:pb-10">
             Main Benefit{" "}
           </h1>
           <h3 className="text-start font-mont font-medium text-muted-foreground md:text-xl">

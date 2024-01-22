@@ -68,7 +68,7 @@ export default function BecomeAMemberSection() {
   return (
     <div className="flex flex-col items-center justify-between gap-4 pb-10 md:mt-5">
       <div className="pb-10 md:pb-14">
-        <div className="mt-4 text-center font-monument text-xl text-primary">
+        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mt-4 text-center font-monument text-xl">
           Become a Member
         </div>
         <div className="text-md text-center font-mont text-muted-foreground">

@@ -8,7 +8,7 @@ export default function CertificateSection() {
   return (
     <div className="flex flex-col items-center justify-between gap-4 md:mt-5">
       <div className="pb-10 md:pb-14">
-        <div className="mt-4 text-center font-monument text-xl text-primary">
+        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mt-4 text-center font-monument text-xl">
           Our Certificates
         </div>
         <div className="text-md text-center font-mont text-muted-foreground">
@@ -28,7 +28,7 @@ export default function CertificateSection() {
           />
         </div>
         <div>
-          <div className="my-4 font-monument text-xl text-primary">
+          <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  my-4 font-monument text-xl">
             Calculate of Excellence
           </div>
           <div className="text-md font-mont text-muted-foreground">
@@ -51,7 +51,7 @@ export default function CertificateSection() {
       </div>
       <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2">
         <div>
-          <div className="my-4 font-monument text-xl text-primary">
+          <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  my-4 font-monument text-xl">
             Calculate of Excellence
           </div>
           <div className="text-md font-mont text-muted-foreground">

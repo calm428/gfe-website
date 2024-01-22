@@ -6,7 +6,7 @@ export default function LocationSection() {
   return (
     <div className="pb-14 pt-10 md:pt-24">
       <div className="pb-10 md:pb-14">
-        <div className="mt-4 text-center font-monument text-xl uppercase text-primary">
+        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mt-4 text-center font-monument text-xl uppercase">
           Where We mine Our hosting
         </div>
         <div className="text-md text-center font-mont text-muted-foreground">

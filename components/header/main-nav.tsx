@@ -12,7 +12,7 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 
-import ExpandableText from "./ExpandableText"
+import ExpandableText from "./expandable-text"
 
 interface MainNavProps {
   items?: NavItem[]
@@ -55,8 +55,9 @@ export function MainNav({ items }: MainNavProps) {
                     <h1 className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
                       token functionalities
                     </h1>
-                    {token_functionalities.map((functionality) => (
+                    {token_functionalities.map((functionality, ind) => (
                       <Link
+                        key={ind}
                         href={functionality.href}
                         className="flex gap-2 py-[10px]"
                       >
@@ -88,8 +89,9 @@ export function MainNav({ items }: MainNavProps) {
                       Industries
                     </h1>
                     <div className="grid grid-cols-2 gap-2">
-                      {industry.map((industry) => (
+                      {industry.map((industry, ind) => (
                         <Link
+                          key={ind}
                           href={industry.href}
                           className="flex gap-2 py-[10px]"
                         >
@@ -138,8 +140,8 @@ export function MainNav({ items }: MainNavProps) {
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
                 <div className="rounded-b-[10px] border border-border bg-background p-3">
-                  {community.map((community) => (
-                    <Link href={"#"} className="flex gap-2 py-2">
+                  {community.map((community, ind) => (
+                    <Link href={"#"} key={ind} className="flex gap-2 py-2">
                       <Image
                         src={community.icon}
                         width={20}

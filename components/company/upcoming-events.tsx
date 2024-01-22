@@ -1,14 +1,14 @@
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-import Card from "../blogs-and-news/Card"
-import { Button } from "../ui/button"
+import { Button } from "@/components/ui/button"
+import Card from "@/components/common/cards/blog-card"
 
 const UpcomingEventsSection = () => {
   return (
     <div>
       <div className="flex gap-5">
         <div className="pb-10 md:pb-14">
-          <div className="mt-4 font-monument text-xl text-primary">
+          <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mt-4 font-monument text-xl">
             UPCOMING EVENTS
           </div>
           <div className="text-md font-mont text-muted-foreground">
