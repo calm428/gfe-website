@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "GFE Foundation",
   description:
     "Beautifully designed components built with Radix UI and Tailwind CSS.",
   token_functionalities: [
