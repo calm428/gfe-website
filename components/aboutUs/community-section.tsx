@@ -1,24 +1,22 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 
 function CommunitySection() {
+  const { t } = useTranslation()
+
   return (
-    <div className="py-[60px] lg:px-24">
-      <div className="flex flex-col justify-between rounded-xl bg-muted p-[60px] md:flex-row">
+    <div className="py-[60px] ">
+      <div className="container flex flex-col justify-between rounded-xl bg-muted p-[60px] md:flex-row">
         <div className="flex flex-col gap-4 lg:w-[60%]">
           <div className="bg-gradient-to-b  from-[#2BADFD]  to-[#1570EF] bg-clip-text font-monument text-3xl text-transparent">
-            Join our Community
+            {t("footer_section.section1.title")}
           </div>
           <div className=" auth my-1  mb-5 font-mont text-sm md:mb-0 md:text-base">
-            By joining the GFE project, investors and environmental advocates
-            alike can contribute to the development of a sustainable energy
-            ecosystem while receiving the economic benefits afforded by
-            blockchain technology and server hosting with an ecologically sound
-            and ethically backed global commodity price for extraction free
-            power.
+            {t("footer_section.section1.description")}
           </div>
         </div>
         <div className="flex flex-col gap-5 md:w-[30%]">

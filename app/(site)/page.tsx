@@ -1,3 +1,4 @@
+'use client';
 import AdvantagesSection from "@/components/home/advantages"
 import CalculatorSection from "@/components/home/calculator"
 import CommunitySection from "@/components/home/community"
@@ -6,8 +7,8 @@ import HomeSection from "@/components/home/intro"
 import PartnersSection from "@/components/home/partnersSection"
 import SliderSection from "@/components/home/slider"
 import SpecsSection from "@/components/home/specs"
-
-export default function IndexPage() {
+import { appWithTranslation } from "next-i18next"
+ function IndexPage() {
   return (
     <section className="grid items-center gap-4 pb-8">
       <div>
@@ -27,3 +28,5 @@ export default function IndexPage() {
     </section>
   )
 }
+// export default IndexPage
+export default appWithTranslation(IndexPage)

@@ -6,7 +6,7 @@ function AboutEnergy() {
   return (
     <div className="bg-[#F9FCFF] pt-24">
       <div className="flex flex-col items-center gap-6 container ">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
+        <h1 className=" bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
           Views on energy
         </h1>
         <p className="auth text-center font-mont text-base font-medium md:text-lg lg:w-[1000px]">
@@ -17,7 +17,7 @@ function AboutEnergy() {
           consumed at the same time.
         </p>
       </div>
-      <div className="flex flex-col pt-14 lg:flex-row justify-between">
+      <div className="container flex flex-col px-0 pt-14 lg:flex-row justify-between">
         <div>
           <Image
             src="/images/about-us/nft2.svg"
@@ -45,8 +45,8 @@ function AboutEnergy() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col-reverse pt-14 lg:flex-row justify-between">
-        <div className="flex flex-col gap-8 px-[2rem] lg:w-1/2 lg:px-0 lg:pl-24 justify-center">
+      <div className="container flex flex-col-reverse px-0 pt-14 lg:flex-row justify-between">
+        <div className="flex flex-col gap-8 px-0 lg:w-1/2 lg:px-0  justify-center">
           <p className="auth font-mont text-base font-medium md:text-lg">
             The world{"'"}s diet for energy is in part due to the convenience of
             a grid. Most developing worlds do not have easy access to

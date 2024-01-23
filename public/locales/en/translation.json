@@ -1,0 +1,80 @@
+{
+  "fullform": "Green Fungible Energy",
+  "Future": "Future",
+  "view_all": "View All",
+  "audit": "Audit",
+  "whitepaper": "Whitepaper",
+  "days": "Days",
+  "hours": "Hours",
+  "minutes": "Minutes",
+  "seconds": "Seconds",
+  "buy_now": "Buy Now",
+  "launch_text":"NFT Official landing page has officially launched!🎉",
+  "home_page": {
+    "section1": {
+      "title": "Green Fungible",
+      "subtitle": "Energy - GFE",
+      "description": "GFE is a trailblazing initiative designed to tokenize green energy. Providing a unique investment opportunity that bridges the gap between environmental impact and economic incentive, while bringing the first global perspective to electrical costs."
+    },
+    "converter_section": {
+      "title": "Buy In Before Price Increases!",
+      "subtitle": "countdown until price increases"
+    },
+    "section2": {
+      "title": "Functionalities",
+      "description": "This twofold implication of GFE tokens means that not only do they serve as tradable assets with income, but they are also reflective of sustainable practices and have tangible, real-world utility.",
+      "card1title": "Staking Reward",
+      "card1description": "Register staking contract and get reward from our infrastructure.",
+      "card2title": "Climate Change",
+      "card2description": "Each unit completely offsets grid inefficiencies with guilt-free energy.",
+      "card3title": "Energy Trading",
+      "card3description": "Buy and sell our token and participate in server hosting income.",
+      "card4title": "DAO Governance",
+      "card4description": "Participate in the community-driven decision-making."
+    },
+    "section3": {
+      "card1title": "DAPPs Units",
+      "card1description": "Our journey began with the design and construction of a sustainably-run server hosting environment prototype.",
+      "card2title": "NFT",
+      "card2description": "NFT holders have the ownership of these units and earn a daily income."
+    },
+    "section4": {
+      "title": "Building a Better Future",
+      "description": "By increasing our capacity, we not only enhance the value of GFE tokens but also contribute to a larger societal shift towards renewable energy usage. Our planet benefits every time a power-intensive industry is moved to renewable in a way that carbon offsets can't provide. Industries we are examining for KW fungibility.",
+      "description2": "We are going to participate in energy-intensive industries and market our effluent heat energy.",
+      "serverHosting": "Server hosting",
+      "districtRuralPower": "District rural power",
+      "EVCharging": "EV charging",
+      "hydrocarbonProduction": "Hydrocarbon Production",
+      "brewingAndDistillation": "Brewing and distillation",
+      "fishFarming": "Fish farming",
+      "commercialLaundry": "Commercial laundry"
+    },
+    "section5": {
+      "title": "GET TO KNOW",
+      "subtitle": "GREEN FUNGIBLE ENERGY - GFE",
+      "question1": "What is Green Fungible Energy?",
+      "answer1": "GFE tokens are the digital representation of electrical energy, with each token signifying the right to direct the use of 1kWh of green energy that will be generated and consumed by our infrastructure. This twofold implication of GFE tokens means that not only do they serve as tradable assets with income, but they are also reflective of sustainable practices and have tangible, real-world utility.",
+      "question2": "Is Bitcoin mining profitable?",
+      "answer2": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+      "question3": "How to start mining Bitcoins?",
+      "answer3": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+      "question4": "How does Bitcoin mining work in a company?",
+      "answer4": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
+    }
+  },
+  "footer_section": {
+    "section1": {
+      "title": "Join our Community",
+      "description": "By joining the GFE project, investors and environmental advocates alike can contribute to the development of a sustainable energy ecosystem while receiving the economic benefits afforded by blockchain technology and server hosting with an ecologically sound and ethically backed global commodity price for extraction-free power."
+    },
+    "section2": {
+      "title": "Not a member of our exclusive newsletter?",
+      "description": "Gain instant access to a series of valuable insights from the market, and empower yourself with knowledge that can help you seize control of your global energy market."
+    },
+    "goalSection": {
+      "title": "Our Goal",
+      "description": "GFE tokens are the digital representation of electrical energy, with each token signifying the right to use a kW of green energy that will be generated by our infrastructure. This twofold implication of GFE tokens means that not only do they serve as tradable assets reflective of sustainable practices, but they also have tangible, real-world utility."
+    }
+  }
+}

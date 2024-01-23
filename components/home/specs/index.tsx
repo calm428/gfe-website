@@ -1,22 +1,24 @@
 "use client"
 
+import { useTranslation } from "next-i18next"
+
 import { siteConfig } from "@/config/site"
 
 import FeatureCard from "./feature-card"
 
 export default function SpecsSection() {
   const features = siteConfig.features
+  const { t } = useTranslation()
+
   return (
     <div className="relative bg-background	 lg:mt-40 mt-0 overflow-hidden	">
       <div className="container  flex-col gap-12 space-y-14 flex justify-between py-[100px] lg:py-[207px] pb-20 lg:pb-56 lg:pt-24">
         <div className=" relative z-30 flex flex-col gap-[24px]">
           <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman text-[30px] font-normal md:text-[45px]">
-            Functionalities
+            {t("home_page.section2.title")}
           </h1>
           <p className="auth text-base font-medium text-muted-foreground lg:w-1/2 lg:text-[20px]">
-            This twofold implication of GFE tokens mean that not only do they
-            serve as tradable assets with income, they are reflective of
-            sustainable practices and have tangible, real-world utility.
+            {t("home_page.section2.description")}
           </p>
         </div>
         <div className=" relative z-30 grid gap-6  lg:grid-cols-2 xl:grid-cols-4">
@@ -24,8 +26,8 @@ export default function SpecsSection() {
             <FeatureCard
               key={ind}
               icon={feature.icon}
-              title={feature.title}
-              desc={feature.desc}
+              title={t(feature.title)}
+              desc={t(feature.desc)}
               link={feature.link}
             />
           ))}

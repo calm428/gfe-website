@@ -1,9 +1,12 @@
 "use client"
 
+import { useTranslation } from "react-i18next"
 import { Button } from "../../ui/button"
 import ListItem from "./list-item"
 
 function CalculatorSection() {
+  const { t } = useTranslation()
+  
   return (
     <div className=" relative bg-[url('/bgs/Features.svg')] bg-cover pb-60 sm:pt-[100px]">
       <img
@@ -22,32 +25,27 @@ function CalculatorSection() {
           <div className="flex flex-col gap-6">
             <div className="w-[100px] rounded-sm bg-[#EEF5FF]">
               <h1 className="auth w-fit bg-gradient-to-b from-[#2BADFD] to-[#1570EF]  bg-clip-text px-[16px] py-[8px] text-base font-medium text-transparent md:text-[20px] ">
-                Future
+              {t("Future")}
               </h1>
             </div>
             <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman  text-6xl font-normal">
-              Building a better future
+            {t("home_page.section4.title")}
             </h1>
             <p className=" auth text-lg font-medium text-muted-foreground">
-              By increasing our capacity, we not only enhance the value of GFE
-              tokens but also contribute to a larger societal shift towards
-              renewable energy usage. Our planet benefits every time a power
-              intensive industry is moved to renewable in a way that carbon
-              offsets can’t provide. Industries we are examining for KW
-              fungability.
+            {t("home_page.section4.description")}
             </p>
             <p className="auth text-lg font-medium">
-              We are going to participate in energy intensive industries and
-              market our effluent heat energy
+            {t("home_page.section4.description2")}
+
             </p>
             <div className="grid  sm:grid-cols-2">
-              <ListItem text="Server hosting" />
-              <ListItem text="District rural power" />
-              <ListItem text="EV charging" />
-              <ListItem text="Hydrocarbon Production" />
-              <ListItem text="Brewing and distillation" />
-              <ListItem text="Fish farming" />
-              <ListItem text="Commercial laundry" />
+              <ListItem text={t("serverHosting")}/>
+              <ListItem text={t("districtRuralPower")}/>
+              <ListItem text={t("EVCharging")}/>
+              <ListItem text={t("hydrocarbonProduction")}/>
+              <ListItem text={t("brewingAndDistillation")}/>
+              <ListItem text={t("fishFarming")}/>
+              <ListItem text={t("commercialLaundry")}/>
             </div>
           </div>
           <div>

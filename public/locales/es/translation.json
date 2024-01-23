@@ -1,0 +1,80 @@
+{
+  "fullform": "Energía Fungible Verde",
+  "Future": "Futuro",
+  "view_all": "Ver Todo",
+  "audit": "Auditoría",
+  "whitepaper": "Libro Blanco",
+  "days": "Días",
+  "hours": "Horas",
+  "minutes": "Minutos",
+  "seconds": "Segundos",
+  "buy_now": "Comprar Ahora",
+  "launch_text": "¡La página de aterrizaje oficial de NFT ha sido lanzada oficialmente! 🎉",
+  "home_page": {
+    "section1": {
+      "title": "Green Fungible",
+      "subtitle": "Energy - GFE",
+      "description": "GFE es una iniciativa innovadora diseñada para tokenizar la energía verde. Proporciona una oportunidad única de inversión que reduce la brecha entre el impacto ambiental y el incentivo económico, al tiempo que aporta la primera perspectiva global a los costos eléctricos."
+    },
+    "section2": {
+      "title": "Funcionalidades",
+      "description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables con ingresos, sino que también son reflejo de prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "card1title": "Recompensa por participación",
+      "card1description": "Registre el contrato de participación y obtenga recompensas de nuestra infraestructura.",
+      "card2title": "Cambio climático",
+      "card2description": "Cada unidad compensa completamente las ineficiencias de la red con energía libre de culpa.",
+      "card3title": "Comercio de energía",
+      "card3description": "Compre y venda nuestro token y participe en los ingresos por alojamiento de servidores.",
+      "card4title": "Gobernanza DAO",
+      "card4description": "Participa en la toma de decisiones impulsada por la comunidad."
+    },
+    "section3": {
+      "card1title": "Unidades de DAPPs",
+      "card1description": "Nuestro viaje comenzó con el diseño y construcción de un prototipo de entorno de alojamiento de servidores sostenible.",
+      "card2title": "NFT",
+      "card2description": "Los titulares de NFT tienen la propiedad de estas unidades y obtienen ingresos diarios."
+    },
+    "section4": {
+      "title": "Construyendo un Futuro Mejor",
+      "description": "Al aumentar nuestra capacidad, no solo mejoramos el valor de los tokens GFE, sino que también contribuimos a un cambio societal más amplio hacia el uso de energía renovable. Nuestro planeta se beneficia cada vez que una industria intensiva en energía se traslada a renovable de una manera que las compensaciones de carbono no pueden proporcionar. Industrias que estamos examinando para la fungibilidad de KW.",
+      "description2": "Vamos a participar en industrias intensivas en energía y comercializar nuestra energía de calor de efluente.",
+      "serverHosting": "Alojamiento de servidores",
+      "districtRuralPower": "Energía rural del distrito",
+      "EVCharging": "Carga de vehículos eléctricos",
+      "hydrocarbonProduction": "Producción de hidrocarburos",
+      "brewingAndDistillation": "Cervecería y destilación",
+      "fishFarming": "Acuicultura",
+      "commercialLaundry": "Lavandería comercial"
+    },
+    "section5": {
+      "title": "CONOCE",
+      "subtitle": "LA ENERGÍA FUNGIBLE VERDE - GFE",
+      "question1": "¿Qué es la Energía Fungible Verde?",
+      "answer1": "Los tokens GFE son la representación digital de la energía eléctrica, con cada token significando el derecho a dirigir el uso de 1 kWh de energía verde que será generada y consumida por nuestra infraestructura. Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables con ingresos, sino que también son reflejo de prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "question2": "¿Es rentable la minería de Bitcoin?",
+      "answer2": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se agregan transacciones al blockchain, un libro de contabilidad descentralizado de todas las transacciones en la red Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red.",
+      "question3": "¿Cómo empezar a minar Bitcoins?",
+      "answer3": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se agregan transacciones al blockchain, un libro de contabilidad descentralizado de todas las transacciones en la red Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red.",
+      "question4": "¿Cómo funciona la minería de Bitcoin en una empresa?",
+      "answer4": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se agregan transacciones al blockchain, un libro de contabilidad descentralizado de todas las transacciones en la red Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "converter_section": {
+      "title": "¡Compra Antes del Aumento de Precio!",
+      "subtitle": "Cuenta regresiva hasta que aumente el precio"
+    }
+  },
+  "footer_section": {
+    "section1": {
+      "title": "Únete a nuestra Comunidad",
+      "description": "Al unirte al proyecto GFE, tanto los inversores como los defensores del medio ambiente pueden contribuir al desarrollo de un ecosistema de energía sostenible, mientras reciben los beneficios económicos proporcionados por la tecnología blockchain y el alojamiento de servidores con un precio global de mercancía ecológica y éticamente respaldado para la energía sin extracción."
+    },
+    "section2": {
+      "title": "¿No eres miembro de nuestro boletín exclusivo?",
+      "description": "Obtén acceso instantáneo a una serie de ideas valiosas del mercado y empodérate con conocimientos que pueden ayudarte a tomar el control de tu mercado global de energía."
+    },
+    "goalSection": {
+      "title": "Nuestro Objetivo",
+      "description": "Los tokens GFE son la representación digital de la energía eléctrica, con cada token significando el derecho de utilizar 1 kW de energía verde que será generada por nuestra infraestructura. Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables reflejo de prácticas sostenibles, sino que también tienen una utilidad tangible en el mundo real."
+    }
+  }
+}

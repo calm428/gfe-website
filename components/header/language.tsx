@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 import {
   Select,
@@ -12,8 +13,18 @@ import {
 } from "@/components/ui/select"
 
 export function LanguageSelector() {
+  const { i18n } = useTranslation()
+  const changeLang = (lang: string) => {
+    i18n.changeLanguage(lang)
+    console.log(i18n.languages)
+  }
   return (
-    <Select defaultValue="en">
+    <Select
+      onValueChange={(value) => {
+        changeLang(value)
+      }}
+      defaultValue="en"
+    >
       <SelectTrigger className="w-auto gap-4 rounded-full">
         <SelectValue placeholder="Select a language" />
       </SelectTrigger>
