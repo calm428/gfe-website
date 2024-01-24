@@ -76,5 +76,29 @@
       "title": "Nuestro Objetivo",
       "description": "Los tokens GFE son la representación digital de la energía eléctrica, con cada token significando el derecho de utilizar 1 kW de energía verde que será generada por nuestra infraestructura. Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables reflejo de prácticas sostenibles, sino que también tienen una utilidad tangible en el mundo real."
     }
+  },
+  "contactus_page": {
+    "bookMeetingTitle": "Agenda una Reunión",
+    "bookMeetingCEO": "Agendar una Reunión con el CEO",
+    "bookMeetingDescription": "¿Interesado en nuestros servicios y dispuesto a participar en nuestra venta privada? ¡Por eso estamos aquí! Agenda una reunión con nuestro equipo para discutir en detalle cómo funciona, la tarificación. Haremos nuestro mejor esfuerzo para ayudarte.",
+    "contactInfo": {
+      "title": "Información de Contacto",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono"
+    },
+    "formFields": {
+      "name": {
+        "title": "Nombre",
+        "placeholder": "Ingrese su nombre completo"
+      },
+      "subject": {
+        "title": "Asunto",
+        "placeholder": "Ingrese el asunto"
+      },
+      "message": {
+        "title": "Mensaje",
+        "placeholder": "Cuéntenos lo que piensa..."
+      }
+    }
   }
 }
