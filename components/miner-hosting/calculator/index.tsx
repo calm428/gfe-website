@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 import { Button } from "../../ui/button"
 import { Input } from "../../ui/input"
@@ -10,10 +11,11 @@ import HistoricalPowerGraph from "./historical-power-graph"
 
 function CalculatorSection() {
   const [amount, setAmount] = useState<number | null>(null)
+  const { t } = useTranslation()
   return (
     <div className="container px-10 py-20">
       <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
-        Buy Our <br className="hidden sm:inline" /> Energy & Save Per Machine
+        {t("minerHosting.buyOurEnergy.title")}
       </h1>
 
       <div className="grid w-full grid-cols-1 gap-10 xl:grid-cols-2">
@@ -21,19 +23,19 @@ function CalculatorSection() {
 
         <div className="w-full">
           <h1 className="auth pb-5 pt-10 text-sm font-semibold tracking-wider text-primary">
-            Calculate
+            {t('minerHosting.calculate')}
           </h1>
 
           <div className="flex items-start gap-3">
             <div className="w-full">
               <div className="auth w-full space-y-2">
                 <Label className="auth font-semibold text-muted-foreground">
-                  Amount
+                  {t('minerHosting.amount')}
                 </Label>
                 <div className="relative flex h-full w-full items-center">
                   <Input
                     type="number"
-                    placeholder="Enter amount"
+                    placeholder={t('minerHosting.enterAmount')}
                     className={
                       "w-full h-14 text-primary font-mont text-lg " +
                       `${amount && amount > 0 && "font-bold text-lg"}`
@@ -53,7 +55,7 @@ function CalculatorSection() {
 
             <div className="space-y-2">
               <Label className="auth font-semibold text-muted-foreground">
-                Bonus
+                {t('minerHosting.bonus')}
               </Label>
               <span className="flex items-center justify-center bg-[#D8FFB4] px-5 py-[13px] font-mont text-lg font-bold text-[#479A0B]">
                 11%
@@ -64,7 +66,7 @@ function CalculatorSection() {
           <div className="grid grid-cols-1  gap-3">
             <div className="flex justify-between rounded-md bg-accent p-4">
               <span className="auth text-lg font-medium text-muted-foreground">
-                Bonus Energy
+                {t('minerHosting.bonusEnergy')}
               </span>
               <span className="auth text-lg font-bold text-primary">
                 2720 Kwh
@@ -73,7 +75,7 @@ function CalculatorSection() {
 
             <div className="flex justify-between rounded-md bg-accent p-4">
               <span className="auth text-lg font-medium text-muted-foreground">
-                Total Energy
+                {t('minerHosting.totalEnergy')}
               </span>
               <span className="auth text-lg font-bold text-primary">
                 2720 Kwh
@@ -83,7 +85,7 @@ function CalculatorSection() {
 
           <div className="mt-5 flex justify-between rounded-md bg-blue-100 p-4">
             <span className="auth text-lg font-medium text-muted-foreground">
-              Price
+              {t('minerHosting.price')}
             </span>
             <span className="auth text-lg font-bold text-primary">$ 2720</span>
           </div>

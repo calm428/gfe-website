@@ -173,5 +173,228 @@
       "question6": "¿Mi ingreso es fijo?",
       "answer6": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones al blockchain, un registro descentralizado de todas las transacciones en la red de Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
     }
+  },
+  "minerHosting":{
+    "bitcoinMining": {
+      "title": "Ecosistema de Minería de Bitcoin",
+      "description": "Plataforma confiable y rentable que proporciona varios servicios de alojamiento para nuevos mineros para usuarios finales."
+    },
+    "buyEnergy": "Comprar Energía",
+    "introToSunbelt": "Introducción a Sunbelt",
+    "transactionFee": "Tarifa de Transacción",
+    "perKbData": "por Datos en Kb",
+    "totalTransaction": "Transacción Total",
+    "miningEcosystem": {
+      "title": "Ecosistema de Minería",
+      "subtitle": null,
+      "description": "Adéntrate en un ecosistema de minería integral diseñado para maximizar eficiencia, sostenibilidad y rentabilidad. Nuestra plataforma integrada ofrece una combinación perfecta de tecnología de vanguardia, prácticas sostenibles y herramientas fáciles de usar."
+    },
+    "solarPower": {
+      "title": "Energía Solar",
+      "subtitle": null,
+      "description": "La energía solar aprovecha la luz solar a través de celdas fotovoltaicas o sistemas térmicos solares, proporcionando electricidad renovable y calor con un impacto ambiental mínimo."
+    },
+    "immersionCooling": {
+      "title": "Enfriamiento por<br>Inmersión",
+      "subtitle": null,
+      "description": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética."
+    },
+    "geothermalHeatPump": {
+      "title": "Bomba de Calor Geotérmica",
+      "subtitle": null,
+      "description": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética."
+    },
+    "earthshipBuilding": {
+      "title": "Construcción de<br> Earthship",
+      "subtitle": null,
+      "description": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética."
+    },
+    "advantagesOfGFEMining": {
+      "title": "Ventajas de la Minería Renovable de la Fundación GFE",
+      "subtitle": null,
+      "description": "Enfocados en la minería sostenible y opciones respetuosas con el medio ambiente, contribuyen a mejorar el mundo."
+    },
+    "specialization": {
+      "title": "Especialización",
+      "subtitle": null,
+      "description": "Los mineros SUNBELT están diseñados específicamente para algoritmos de criptomonedas, brindando un rendimiento superior y eficiencia en comparación con hardware de propósito general como CPUs o GPUs."
+    },
+    "energyEfficiency": {
+      "title": "Eficiencia Energética",
+      "subtitle": null,
+      "description": "Los mineros SUNBELT están diseñados para ser eficientes en energía, minimizando el desperdicio de energía y haciéndolos rentables en cuanto al consumo de electricidad a largo plazo."
+    },
+    "sunbeltMiner": {
+      "title": "Minero SUNBELT",
+      "subtitle": "(Circuito Integrado Específico de Aplicación)",
+      "description": "Los mineros SUNBELT ofrecen varias ventajas en el contexto de la minería de criptomonedas en comparación con otros tipos de hardware de minería, como CPUs o GPUs."
+    },
+    "highHashrate": {
+      "title": "Alto Hashrate",
+      "subtitle": null,
+      "description": "Los SUNBELTs ofrecen un hashrate significativamente más alto, permitiendo una minería de criptomonedas más rápida y eficiente, lo que resulta en una mayor probabilidad de minar con éxito un bloque."
+    },
+    "realTimeTrading": {
+      "title": "Negociación en Tiempo Real",
+      "subtitle": null,
+      "description": "Los mineros SUNBELT son dispositivos dedicados, lo que lleva a una mayor estabilidad y confiabilidad en las operaciones mineras. Su propósito singular contribuye a un rendimiento consistente con el tiempo."
+    },
+    "buyOurEnergy": {
+      "title": "Compre Nuestra Energía y Ahorre Por Máquina",
+      "subtitle": null,
+      "description": null
+    },
+    "historicalPowerGraph": {
+      "title": "Gráfico Histórico de Energía (por kWh)",
+      "subtitle": null,
+      "description": null
+    },
+    "Calculate": "Calcular",
+    "Amount": "Monto",
+    "Bonus": "Bono",
+    "enterAmount": "Ingrese la cantidad",
+    "BonusEnergy": "Energía de Bono",
+    "TotalEnergy": "Energía Total",
+    "Price": "Precio",
+    "Next": "Siguiente",
+    "minerList": "Lista de Mineros",
+    "hashRate": "Tasa de Hash",
+    "income": "Ingresos",
+    "machinePrice": "Precio de la Máquina",
+    "AccessoryPrice": "Precio del Accesorio",
+    "price": "Precio",
+    "energyAnnually": "Energía Anual",
+    "viewDetail": "Ver Detalles",
+    "planForMining": "Plan para la Minería",
+    "howSunbeltMinersWork": {
+      "title": "Cómo Funcionan los Mineros de Sunbelt",
+      "subtitle": "Descubre la simplicidad de nuestro proceso simplificado. Desde la consulta hasta la ejecución, nuestra plataforma fácil de usar te guía en cada paso de tu viaje de minería de criptomonedas.",
+      "description": null
+    },
+    "miningStepByStep": {
+      "title": "Minería Paso a Paso",
+      "subtitle": "Embárcate en tu viaje de minería con nuestra guía intuitiva paso a paso. Desde la configuración de tu equipo hasta la selección del pool de minería adecuado, nuestra plataforma te acompaña en cada etapa crucial del proceso.",
+      "description": null
+    },
+    "signUp": {
+      "title": "Registro",
+      "subtitle": "Comienza tu viaje completando nuestro sencillo y seguro proceso de registro. Inicia tu experiencia hoy y da el primer paso hacia el crecimiento financiero y la oportunidad.",
+      "description": null
+    },
+    "buyPower": {
+      "title": "Comprar Energía",
+      "subtitle": "Adquiere poder de minería sin esfuerzo a través de una variedad de métodos convenientes. Nuestra plataforma ofrece una variedad de opciones flexibles para comprar poder.",
+      "description": null
+    },
+    "writeMiningPlan": {
+      "title": "Escribir Plan de Minería",
+      "subtitle": "Redactar un plan de minería personalizado es la clave para el éxito. Nuestra plataforma te guía a través del proceso de crear un plan estratégico de minería adaptado a tus objetivos.",
+      "description": null
+    },
+    "miningPool": {
+      "title": "Pool de Minería",
+      "subtitle": "Toma el control de tu experiencia de minería al configurar tu pool de minería preferido y parámetros de pago. Ajusta la configuración de pago para alinearte con tus objetivos financieros.",
+      "description": null
+    },
+    "getReward": {
+      "title": "Obtener Recompensa",
+      "subtitle": "Disfruta de los frutos de tus esfuerzos de minería sin esfuerzo a medida que acumulas recompensas. Nuestra plataforma garantiza un proceso sin problemas para recibir tus merecidos retornos.",
+      "description": null
+    },
+    "maintenance": {
+      "title": "Mantenimiento",
+      "subtitle": "Disfruta de una experiencia de minería sin problemas con nuestra plataforma fácil de usar que simplifica la operación y el mantenimiento de la máquina. Nuestras herramientas intuitivas te permiten optimizar.",
+      "description": null
+    },
+    "benefitsOfHosting": {
+      "title": "Beneficios de Hospedaje en Nuestro Centro de Datos y Ecosistema Verde",
+      "subtitle": null,
+      "description": null
+    },
+    "highIncome": {
+      "title": "Ingresos Altos",
+      "subtitle": "Embárcate en tu viaje de minería con nuestra guía paso a paso intuitiva. Desde la configuración de tu equipo hasta la selección del pool de minería adecuado, nuestra plataforma te acompaña en cada etapa crucial del proceso. Obtén una comprensión integral de la minería de criptomonedas mientras sigues nuestros pasos fáciles de usar, asegurando una experiencia fluida y gratificante.",
+      "description": null
+    },
+    "makeTheWorldBetter": {
+      "title": "Haz un Mundo Mejor",
+      "subtitle": "Bitcoin, creado en 2009, es una moneda digital descentralizada que facilita transacciones entre pares en una cadena de bloques transparente. Con un límite de 21 millones de monedas, sirve como una reserva de valor sin fronteras y un posible refugio contra la inflación.",
+      "description": null
+    },
+    "whySunbelt": {
+      "title": "¿Por Qué Sunbelt?",
+      "subtitle": "Nuestra propia planta de energía, un equipo sólido y el mejor apoyo de socios para formar nuestra infraestructura única que brinda servicios de minería sostenible a los usuarios con confiabilidad, estabilidad, rentabilidad y confianza en el futuro.",
+      "description": null
+    },
+    "renewableEnergy": {
+      "title": "Energía Renovable",
+      "subtitle": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética.",
+      "description": null
+    },
+    "geothermalCooling": {
+      "title": "Enfriamiento Geotérmico",
+      "subtitle": "La energía renovable utiliza recursos naturales como la energía geotérmica para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética.",
+      "description": null
+    },
+    "afterSaleService": {
+      "title": "Servicio Postventa",
+      "description": "El servicio postventa es el soporte continuo al cliente proporcionado por un negocio después de la compra. Incluye asistencia técnica, orientación de mantenimiento y evaluación del impacto ambiental."
+    },
+    "lowFeeHighProfit": {
+      "title": "Baja Tarifa y Alta Ganancia",
+      "description": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética."
+    },
+    "incomeComparison": {
+      "title": "Comparación de Ingresos con Principales Proveedores",
+      "description": null
+    },
+    "HashrateRentingPrice": "Precio de Alquiler de Tasa de Hash",
+    "ServiceFee": "Tarifa de Servicio",
+    "Bandwidth": "Ancho de Banda",
+    "OURCOMPANY": "NUESTRA EMPRESA",
+    "mainBenefit": {
+      "title": "Principal Beneficio",
+      "description": "Aseguramos nuestro futuro promoviendo recursos de energía renovable. Nuestro equipo de expertos se encarga del mantenimiento regular y del servicio de garantía de tu máquina."
+    },
+    "safety": {
+      "title": "SEGURIDAD",
+      "description": "Nuestro compromiso es fortalecer el panorama de seguridad para los mineros. Empleamos protocolos de vanguardia, llevando a cabo."
+    },
+    "sustainability": {
+      "title": "SOSTENIBILIDAD",
+      "description": "En el dinámico ámbito de la minería de Bitcoin, nuestra perspectiva de la industria gira en torno a la sostenibilidad como piedra angular de un crecimiento responsable."
+    },
+    "max_profit": {
+      "title": "MÁXIMA GANANCIA",
+      "description": "En el competitivo panorama de la minería de Bitcoin, nuestra perspectiva de la industria se centra en lograr máximas ganancias mientras se mantiene."
+    },
+    "TrackBitcoinRates": "Seguir Tasas de Bitcoin",
+    "bitcoin_price": {
+      "title": "Precio de Bitcoin",
+      "description": "Bitcoin, creado en 2009, es una moneda digital descentralizada que facilita transacciones entre pares en una cadena de bloques transparente. Con un límite de 21 millones de monedas, sirve como una reserva de valor sin fronteras y un posible refugio contra la inflación."
+    },
+    "CurrentPrice": "Precio Actual",
+    "MarketCap": "Capitalización de Mercado",
+    "sunbeltRenewableMining": "Empezando con Sunbelt Renewable Mining",
+    "bitcoin_mining01": {
+      "question": "¿Qué es la minería de Bitcoin?",
+      "answer": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones a la cadena de bloques, un registro descentralizado de todas las transacciones en la red de Bitcoin. Implica resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "bitcoin_mining02": {
+      "question": "¿Qué es la minería de Bitcoin?",
+      "answer": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones a la cadena de bloques, un registro descentralizado de todas las transacciones en la red de Bitcoin. Implica resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "bitcoin_mining03": {
+      "question": "¿Qué es la minería de Bitcoin?",
+      "answer": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones a la cadena de bloques, un registro descentralizado de todas las transacciones en la red de Bitcoin. Implica resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "bitcoin_mining04": {
+      "question": "¿Qué es la minería de Bitcoin?",
+      "answer": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones a la cadena de bloques, un registro descentralizado de todas las transacciones en la red de Bitcoin. Implica resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "contact_us": {
+      "message": "Para obtener más información, contáctanos por correo electrónico en"
+    },
+    "Contact": "Contacto"
   }
 }

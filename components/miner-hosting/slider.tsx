@@ -1,45 +1,14 @@
 "use client"
 
 import Image from "next/image"
+import { useTranslation } from "react-i18next"
 import Slider from "react-slick"
 
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 
-const SLIDE_DATA = [
-  {
-    icon: "/images/home/slide-icon-1.png",
-    title: "1 Satoshis",
-    text: "per Kb data",
-  },
-  {
-    icon: "/images/home/slide-icon-2.png",
-    title: "1.95 Billion",
-    text: "Total Transaction",
-  },
-  {
-    icon: "/images/home/slide-icon-3.png",
-    title: "$ 0.000003",
-    text: "Transaction Fee",
-  },
-  {
-    icon: "/images/home/slide-icon-1.png",
-    title: "1 Satoshis",
-    text: "per Kb data",
-  },
-  {
-    icon: "/images/home/slide-icon-2.png",
-    title: "1.95 Billion",
-    text: "Total Transaction",
-  },
-  {
-    icon: "/images/home/slide-icon-3.png",
-    title: "$ 0.000003",
-    text: "Transaction Fee",
-  },
-]
-
 const SliderSection = () => {
+  const { t } = useTranslation()
   const settings = {
     dots: false,
     infinite: true,
@@ -63,6 +32,39 @@ const SliderSection = () => {
       },
     ],
   }
+
+  const SLIDE_DATA = [
+    {
+      icon: "/images/home/slide-icon-1.png",
+      title: "1 Satoshis",
+      text: t("minerHosting.perKbData"),
+    },
+    {
+      icon: "/images/home/slide-icon-2.png",
+      title: "1.95 Billion",
+      text: t("minerHosting.totalTransaction"),
+    },
+    {
+      icon: "/images/home/slide-icon-3.png",
+      title: "$ 0.000003",
+      text: t('minerHosting.transactionFee'),
+    },
+    {
+      icon: "/images/home/slide-icon-1.png",
+      title: "1 Satoshis",
+      text: t("minerHosting.perKbData"),
+    },
+    {
+      icon: "/images/home/slide-icon-2.png",
+      title: "1.95 Billion",
+      text: t("minerHosting.totalTransaction"),
+    },
+    {
+      icon: "/images/home/slide-icon-3.png",
+      title: "$ 0.000003",
+      text: t('minerHosting.transactionFee'),
+    },
+  ]
 
   return (
     <div className="-mt-[100px] w-full">

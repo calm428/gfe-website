@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 import {
   Accordion,
@@ -9,39 +10,36 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-const FAQS = [
-  {
-    question: "What is Bitcoin mining?",
-    answer:
-      "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
-  },
-  {
-    question: "What is Bitcoin mining?",
-    answer:
-      "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
-  },
-  {
-    question: "What is Bitcoin mining?",
-    answer:
-      "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
-  },
-  {
-    question: "What is Bitcoin mining?",
-    answer:
-      "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
-  },
-]
-
 const FaqSection = () => {
+  const { t } = useTranslation()
   const [openItem, setOpenItem] = useState<number | null>(null)
 
   const handleAccordionItemClick = (index: number) => {
     setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
   }
+
+  const FAQS = [
+    {
+      question: t("minerHosting.bitcoin_mining01.question"),
+      answer: t("minerHosting.bitcoin_mining01.answer"),
+    },
+    {
+      question: t("minerHosting.bitcoin_mining02.question"),
+      answer: t("minerHosting.bitcoin_mining02.answer"),
+    },
+    {
+      question: t("minerHosting.bitcoin_mining03.question"),
+      answer: t("minerHosting.bitcoin_mining03.answer"),
+    },
+    {
+      question: t("minerHosting.bitcoin_mining04.question"),
+      answer: t("minerHosting.bitcoin_mining04.answer"),
+    },
+  ]
   return (
     <div className="container">
       <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
-        Getting Started with sunbelt renewable mining
+        {t("minerHosting.sunbeltRenewableMining")}
       </h1>
 
       <Accordion type="single" collapsible className="auth mt-5 space-y-5">

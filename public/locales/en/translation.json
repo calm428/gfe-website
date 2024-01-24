@@ -173,5 +173,230 @@
       "question6": "Is my revenue fixed?",
       "answer6": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
     }
+  },
+  "minerHosting":{
+    "bitcoinMining": {
+      "title": "Bitcoin Mining Ecosystem",
+      "description": "Reliable and profitable platform, providing several new miner hosting services for end users."
+    },
+    "buyEnergy":"Buy Energy",
+    "introToSunbelt":"Intro to Sunbelt",
+    "transactionFee":"Transaction Fee",
+    "perKbData":"per Kb data",
+    "totalTransaction":"Total Transaction",
+    "miningEcosystem": {
+      "title": "Mining Ecosystem",
+      "subtitle": null,
+      "description": "Step into a comprehensive mining ecosystem designed to maximize efficiency, sustainability, and profitability. Our integrated platform offers a seamless blend of cutting-edge technology, sustainable practices, and user-friendly tools."
+    },
+    "solarPower": {
+      "title": "Solar Power",
+      "subtitle": null,
+      "description": "Solar energy harnesses sunlight through photovoltaic cells or solar thermal systems, providing renewable electricity and heat with minimal environmental impact."
+    },
+    "immersionCooling": {
+      "title": "Immersion<br>Cooling",
+      "subtitle": null,
+      "description": "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence."
+    },
+    "geothermalHeatPump": {
+      "title": "Geothermal Heat Pump",
+      "subtitle": null,
+      "description": "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence."
+    },
+    "earthshipBuilding": {
+      "title": "Earthship<br>Building",
+      "subtitle": null,
+      "description": "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence."
+    },
+    "advantagesOfGFEMining": {
+      "title": "Advantages of\nGFE Foundation Renewable Mining",
+      "subtitle": null,
+      "description": "Focused on sustainable mining and eco-friendly options, contribute to making the world better."
+    },
+    "specialization": {
+      "title": "Specialization",
+      "subtitle": null,
+      "description": "SUNBELT miners are purpose-built for specific cryptocurrency algorithms, providing superior performance and efficiency compared to general-purpose hardware like CPUs or GPUs."
+    },
+    "energyEfficiency": {
+      "title": "Energy Efficiency",
+      "subtitle": null,
+      "description": "SUNBELT miners are designed to be energy-efficient, minimizing wasted energy and making them cost-effective in terms of electricity consumption over the long run."
+    },
+    "sunbeltMiner": {
+      "title": "SUNBELT Miner",
+      "subtitle": null,
+      "description": "SUNBELT (Application-Specific Integrated Circuit) miners offer several advantages in the context of cryptocurrency mining compared to other types of mining hardware, such as CPUs or GPUs."
+    },
+    "highHashrate": {
+      "title": "High Hashrate",
+      "subtitle": null,
+      "description": "SUNBELTs offer a significantly higher hashrate, enabling faster and more efficient mining of cryptocurrency, resulting in a higher probability of successfully mining a block."
+    },
+    "realTimeTrading": {
+      "title": "Real-Time Trading",
+      "subtitle": null,
+      "description": "SUNBELT miners are dedicated devices, leading to increased stability and reliability in mining operations. Their singular purpose contributes to consistent performance over time."
+    },
+    "buyOurEnergy": {
+      "title": "Buy Our Energy & Save Per Machine",
+      "subtitle": null,
+      "description": null
+    },
+    "historicalPowerGraph": {
+      "title": "Historical Power Graph (per kWh)",
+      "subtitle": null,
+      "description": null
+    },
+    "Calculate":"Calculate",
+    "Amount":"Amount",
+    "Bonus":"Bonus",
+    "enterAmount":"Enter amount",
+    "BonusEnergy":"Bonus Energy",
+    "TotalEnergy":"Total Energy",
+    "Price":"Price",
+    "Next":"Next",
+    "minerList":"List of Miners",
+    "hashRate":"Hashrate",
+    "income":"Income",
+    "machinePrice":"Machine Price",
+    "AccessoryPrice":"Accessory Price",
+    "price":"Price",
+    "energyAnnually":"Energy annually",
+    "viewDetail":"View Details",
+    "planForMining":"Plan For Mining",
+    "howSunbeltMinersWork": {
+      "title": "How Sunbelt Miners Work",
+      "subtitle": "Unlock the simplicity of our streamlined process. From consultation to execution, our user-friendly platform guides you through every step of your cryptocurrency mining journey.",
+      "description": null
+    },
+    "miningStepByStep": {
+      "title": "Mining Step-by-Step",
+      "subtitle": "Embark on your mining journey with our intuitive step-by-step guide. From setting up your equipment to selecting the right mining pool, our platform walks you through each crucial stage of the process.",
+      "description": null
+    },
+    "signUp": {
+      "title": "Sign Up",
+      "subtitle": "Embark on your journey by completing our simple and secure registration process. Start your experience today and take the first step towards financial growth and opportunity.",
+      "description": null
+    },
+    "buyPower": {
+      "title": "Buy Power",
+      "subtitle": "Acquire mining power effortlessly through a variety of convenient methods. Our platform offers a range of flexible options for purchasing power.",
+      "description": null
+    },
+    
+    "writeMiningPlan": {
+      "title": "Write Mining Plan",
+      "subtitle": "Drafting a customized mining plan is your key to success. Our platform guides you through the process of creating a strategic mining plan tailored to your goals.",
+      "description": null
+    },
+    "miningPool": {
+      "title": "Mining Pool",
+      "subtitle": "Take control of your mining experience by setting your preferred mining pool and payout parameters. Tailor your payout settings to align with your financial goals.",
+      "description": null
+    },
+    "getReward": {
+      "title": "Get Reward",
+      "subtitle": "Reap the fruits of your mining efforts effortlessly as you accumulate rewards. Our platform ensures a seamless process for receiving your well-deserved returns.",
+      "description": null
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "subtitle": "Enjoy a smooth mining experience with our user-friendly platform that simplifies machine operation and maintenance. Our intuitive tools empower you to optimize.",
+      "description": null
+    },
+    "benefitsOfHosting": {
+      "title": "Benefits of Hosting in our Data Center and Green Ecosystem",
+      "subtitle": null,
+      "description": null
+    },
+    "highIncome": {
+      "title": "High Income",
+      "subtitle": "Embark on your mining journey with our intuitive step-by-step guide. From setting up your equipment to selecting the right mining pool, our platform walks you through each crucial stage of the process. Gain a comprehensive understanding of cryptocurrency mining as you follow our user-friendly steps, ensuring a smooth and rewarding experience.",
+      "description": null
+    },
+    "makeTheWorldBetter": {
+      "title": "Make The World Better",
+      "subtitle": "Bitcoin, created in 2009, is a decentralized digital currency facilitating peer-to-peer transactions on a transparent blockchain. Capped at 21 million coins, it serves as a borderless store of value and potential hedge against inflation.",
+      "description": null
+    },
+    "whySunbelt": {
+      "title": "Why Sunbelt?",
+      "subtitle": "Our own power plant, strong team, the best partners support to form our unique infrastructure that provides sustainable mining service to users with reliability, stability, profitability and confidence in the future.",
+      "description": null
+    },
+    "renewableEnergy": {
+      "title": "Renewable Energy",
+      "subtitle": "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence.",
+      "description": null
+    },
+    "geothermalCooling": {
+      "title": "Geothermal Cooling",
+      "subtitle": "Renewable energy uses natural resources like geothermal energy for sustainable power, reducing environmental impact and fostering energy independence.",
+      "description": null
+    },
+    "afterSaleService": {
+      "title": "After Sale Service",
+      "description": "After-sale service is ongoing customer support provided by a business post-purchase. It includes technical assistance, maintenance guidance, and environmental impact assessment."
+    },
+    "lowFeeHighProfit": {
+      "title": "Low Fee & High Profit",
+      "description": "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence."
+    },
+    "incomeComparison": {
+      "title": "Income Comparison With Major Vendors",
+      "description": null
+    },
+    "HashrateRentingPrice":"Hashrate Renting Price",
+    "ServiceFee":"Service Fee",
+    "Bandwidth":"Bandwidth",
+    "OURCOMPANY":"OUR COMPANY",
+    "mainBenefit": {
+      "title": "Main Benefit",
+      "description": "We secure our future by promoting renewable energy resources. Our expert team takes care of the regular maintenance and warranty servicing of your machine."
+    },
+    "safety": {
+      "title": "SAFETY",
+      "description": "Our commitment is to fortify the security landscape for miners. We employ cutting-edge protocols, conducting."
+    },
+    "sustainability": {
+      "title": "SUSTAINABILITY",
+      "description": "In the dynamic realm of Bitcoin mining, our industry perspective revolves around sustainability as a cornerstone of responsible growth."
+    },
+    "max_profit": {
+      "title": "MAX PROFIT",
+      "description": "In the competitive landscape of Bitcoin mining, our industry perspective centers on achieving maximum profit while upholding."
+    },
+    "TrackBitcoinRates":"Track Bitcoin Rates",
+    "bitcoin_price": {
+      "title": "Bitcoin Price",
+      "description": "Bitcoin, created in 2009, is a decentralized digital currency facilitating peer-to-peer transactions on a transparent blockchain. Capped at 21 million coins, it serves as a borderless store of value and potential hedge against inflation."
+    },
+    "CurrentPrice":"Current Price",
+    "MarketCap":"Market Cap",
+    "sunbeltRenewableMining":"Getting Started with sunbelt renewable mining",
+    "bitcoin_mining01": {
+      "question": "What is Bitcoin mining?",
+      "answer": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
+    },
+    "bitcoin_mining02": {
+      "question": "What is Bitcoin mining?",
+      "answer": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
+    },
+    "bitcoin_mining03": {
+      "question": "What is Bitcoin mining?",
+      "answer": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
+    },
+    "bitcoin_mining04": {
+      "question": "What is Bitcoin mining?",
+      "answer": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
+    },
+    "contact_us": {
+      "message": "For further information, please contact us by email at"
+    },
+    "Contact":"Contact"
+
   }
 }
