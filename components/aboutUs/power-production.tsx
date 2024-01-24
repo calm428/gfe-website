@@ -1,6 +1,9 @@
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 function PowerProduction() {
+  const { t } = useTranslation()
+
   return (
     <div className="flex flex-col-reverse justify-center pt-14 lg:flex-row">
       <div className=" h-fit">
@@ -14,13 +17,10 @@ function PowerProduction() {
       </div>
       <div className="flex flex-col justify-center gap-8 container lg:w-1/2 lg:px-0 lg:pr-24">
         <h1 className=" bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-monument text-[40px] text-transparent">
-          Unpriced Externalities in Power Production
+          {t("about_us_page.power_section.title")}
         </h1>
         <p className="auth text-center font-mont text-base font-medium md:text-lg">
-          Externalities are costs that are not present in the market price.
-          There are externalities in production, transportation, consumption and
-          disposal. Global warming and colonialism are in part attributable to
-          these classifications of economic forces.
+          {t("about_us_page.power_section.description")}
         </p>
       </div>
     </div>

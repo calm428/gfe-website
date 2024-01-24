@@ -1,8 +1,12 @@
+"use client"
 import Image from "next/image"
 
 import { Button } from "../ui/button"
+import { useTranslation } from "next-i18next"
 
 function Introduction() {
+  const { t } = useTranslation()
+
   return (
     <div className="relative flex flex-col items-center gap-12 bg-[url('/images/bg-gradient.webp')] bg-cover pcontainer pt-[100px] lg:px-24">
       <div className="flex flex-col items-center gap-8 container lg:px-16">
@@ -16,13 +20,11 @@ function Introduction() {
         </div>
         <div className="flex flex-col items-center gap-4">
           <h1 className="xs:text-5xl bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-4xl font-medium capitalize text-transparent md:text-5xl">
-            Reshape the future of <br />
-            clean energy with DAPPr NFT
+          {t("nft_page.title")} <br />
+          {t("nft_page.subtitle")}
           </h1>
           <p className="auth text-md w-full text-center font-semibold text-muted-foreground">
-            Our Journey began with the design and construction of a
-            sustainably-run server hosting environment prototype. NFT holders
-            have the ownership of these units and earn a daily income.
+          {t("nft_page.description")}
           </p>
         </div>
       </div>

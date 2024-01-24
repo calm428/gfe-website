@@ -9,7 +9,7 @@
   "minutes": "Minutes",
   "seconds": "Seconds",
   "buy_now": "Buy Now",
-  "launch_text":"NFT Official landing page has officially launched!🎉",
+  "launch_text": "NFT Official landing page has officially launched!🎉",
   "home_page": {
     "section1": {
       "title": "Green Fungible",
@@ -87,18 +87,91 @@
       "phone": "Phone"
     },
     "formFields": {
-      "name":{
+      "name": {
         "title": "Name",
         "placeholder": "Enter your full name"
       },
-      "subject":{
+      "subject": {
         "title": "Subject",
         "placeholder": "Enter the subject"
       },
-     "message": {
+      "message": {
         "title": "Message",
         "placeholder": "Tell us what you think..."
       }
+    }
+  },
+  "about_us_page": {
+    "name": "About us",
+    "title": "Innovative",
+    "subtitle": "approach to global energy",
+    "GFE_section": {
+      "para1": "The foundation's vision began with a simple question: why do we know so many people who want solar power, and no one is purchasing it? This question is still being answered, but a large part of the answer is market friction. A typical homeowner installation offsets the home's consumption of power and uses the grid as storage. The problems are many in this scenario; with monopoly and monopsony relationships with the grid, it is a questionable trading partner at best.",
+      "para2": "In our quest for a workaround, the answer came without the use of the local marketplace. We would much rather sell power to Yemen; it costs more there, and they really need power. This global commons perspective framed our efforts, and scaling our DAPPr unit into a productive scale solved several problems.",
+      "para3": "Our solar farm capacity allows us to generate electricity for local consumption operations. The scale of our ambitions, to move the world’s energy capacity to renewable power, needs global momentum and will provide profitability to our members while making the world better. You don’t need the grid; the grid needs you. Break free of your convenience leash and make the world better.",
+      "para4": "Our prototype unit will work to normalize utility-scale electrical capacity without the grid's necessity. The unit produces global currency-backed local production to mostly edit."
+    },
+    "energy_section": {
+      "title": "Views on energy",
+      "para1": "Electricity is a production commodity due to its structure. Current technology to store it is not ready to scale to meet our grid based distribution technology. This state of affairs makes sales linked to consumption in most markets: nearly all electricity is sold and consumed at the same time.",
+      "para2": "Small scale storage, for a productive asset consuming a resource, has different motivation than a productive asset which has an operating expense from its grid energy appetite. We care for the electricity we make in a different manner than the financial impact felt from a monthly bill. The production and consumption of energy by direction allows the best of all situations.",
+      "para3": "The NFT owner is responsible for clean solar panels to maximize her KW. The collective is looking for best impact and highest remuneration for its energy commodity, and the token holders are supporting the process and profiting from a fractional ROI from producing and consuming ethically sourced power for profit.",
+      "para4": "The world's diet for energy is in part due to the convenience of a grid. Most developing worlds do not have easy access to electricity to facilitate using a clothes dryer. Often they dry their clothes outside.",
+      "para5": "Being able to run a dryer 24/7/365 is part of the promise of a grid in the US, but a reluctant addition to a home owner's solar system. Providing for a grid requires capacity for everything. In the US this results in many plants running at low (inefficient) power levels to stand by for demand loads. These plants are often coal fired, and even more inefficient (but less polluting) by running at standby.",
+      "para6": "The more small loads we can partition and remove from their grid leashed defaults in design, the more our world transitions to renewable power",
+      "para7": "Small scale storage, for a productive asset consuming a resource, has different motivation than a productive asset which has an operating expense from its grid energy appetite. We care for the electricity we make in a different manner than the financial impact felt from a monthly bill. The production and consumption of energy by direction allows the best of all situations.",
+      "para8": "The NFT owner is responsible for clean solar panels to maximize her KW. The collective is looking for best impact and highest remuneration for its energy commodity, and the token holders are supporting the process and profiting from a fractional ROI from producing and consuming ethically sourced power for profit.",
+      "point1": "Small scale renewable hydrocarbon brewing is needed in many places, this is due to the",
+      "point2": "intrinsic costs of delivery of extractive energy. Many small efforts are needed to change things.",
+      "point3": "Our transition energy needs rely heavily on hydrogen in many playbooks. That infrastructure can be built in what ever manner our global commons chooses."
+    },
+    "market_section": {
+      "title": "Electricity Market Landscape",
+      "para1": "The global energy market is estimated to be worth: $2trillion. However, it is largely centralized by a few corporations. These corporations often call themselves energy companies; but in our lifetime have migrated into profitable areas of the energy industry. They are drilling companies supplying an unfettered demand from grids. Energy is not oil, Oil is a profitable sector of the energy market. Our world needs to look beyond profit oriented corporate mandates. A corporation will not come naturally to a conversation about unpriced externalities in their process. Those conversations will only cost them money, and corporations are mandated by law to seek profit. They want to do things the same way.",
+      "para2": "The intensely local monopoly market for electricity is built for stability and convenience. Monopolies trade amongst themselves, at market rates, for concurrent delivery. The market price in the UK is near to .45 usd per kw and China’s power market is around .04 per kw. The power in the UK is not aging coal fired power, and China power is not deliverable to the UK. There is no global commodity market for electricity.",
+      "point1": "Consumption of power is convenient at the location a business operates.",
+      "point2": "Assembly plants often use steel produced from Chinese power for assembly in part due to the intensive energy requirements for steel.",
+      "point3": "Office spaces use servers powered in Iceland."
+    },
+    "power_section": {
+      "title": "Unpriced Externalities in Power Production",
+      "description": "Externalities are costs that are not present in the market price. There are externalities in production, transportation, consumption and disposal. Global warming and colonialism are in part attributable to these classifications of economic forces."
+    },
+    "faq_section": {
+      "question1": "The local utility generates XX mw of power a year. It is used for industry, residential, and desalination loads for water. The power is in the form of oil. There is no ship sized storage capacity, so 1-3 small tankers are kept near shore to service the transactions and the unloading and storage of large tankers that park off shore.",
+      "question2": "This energy is distributed throughout various areas of BCS, along with the water utility. Often delivery is via trucks. The city has a high overhead consumption of power to maintain life in the location.",
+      "question3": "Using the rural area adjacent to La Paz for DAPPr units can provide 1-2 mw of power. In 5-7 years this many units can be coordinated to feed the district power after infrastructure development. This feeding of the grid from various small producers as one decentralized entity can put a huge dent in the oil consumption of the community. It will reduce global warming and bring a western economy income to local means of production, a sunlight farmer"
+    }
+  },
+  "nft_page": {
+    "title": "Reshape The Future Of",
+    "subtitle": "clean energy with DAPPr NFT",
+    "description": "Our Journey began with the design and construction of a sustainably-run server hosting environment prototype. NFT holders have the ownership of these units and earn a daily income.",
+    "about_section": {
+      "title": "About DAPPr NFT",
+      "para1": "DAPPr unit - This is a solar/wind energy resource, an island of stability in an already stressed grid ecosystem so common in sunbelt countries.This unit will provide 150kw daytime renewable energy input and power storage for overnight operations. Utilizing cutting-edge technology, it delivers the best performance with high hash rate mining equipment and a novel and efficient cooling system that is evaporation free and mostly passive.",
+      "para2": "The NFT our collective produces is a DAPPr unit, but the collective extends membership to any renewable producerBy owning the DAPPr unit, you provide the land it sits upon, the solar panels, and maintain the solar panels on your site. Income is earned daily from collective operation of the units provided kw. We will manage the systems maintenance and operations on our side with fractional income. With DAPPr NFT, you can enjoy all of the benefits of our unit and contribute to the sustainable world. Its similar to owning a small farm, your crop is sunlight.",
+      "para3": "We are the first to merge blockchain and real assets - It will be a unique chance for individualsYou can become a DAO member in our group and contribute positively to a renewable future and enjoy tangible benefits from making the world better."
+    },
+    "hosting_section": {
+      "title": "Blockchain and server hosting",
+      "para1": "The world cost of electricity is determined by local monopolies. We have no global market to draw a value measurement for decentralized power. Market prices are based on many factors, in our case we need a global process that consumes power around the world to measure against. This energy use needs to provide a product that is fungible globally. We see the energy and hash power related to blockchain earnings as an ideal situation for analysis, it consumes around 1% of the world's energy.",
+      "para2": "This hash power and energy conversion to FIAT currency occurs in London and China, the equipment is very similar and the energy is the biggest geographic component variable. Often mining environments (servers, electrical infrastructure, cooling equipment and housing) are de-commissioned based on the cost of power vs the productive output. The environment and equipment requirements are so similar it's hard to tell the difference between server hosting and mining. The collective doesn't discriminate in our server hosting; we sell our power to all. We provide ethically sourced power one KW at a time to global commons consumers."
+    },
+    "faq_section": {
+      "description":"Belows are the FAQs regarding our NFT’s with answers",
+      "question1": "What is DAPPr NFT?",
+      "answer1": "GFE tokens are the digital representation of electrical energy, with each token signifying the right to direct the use of [1] 1kWh of green energy that will be generated and consumed by our infrastructure. This twofold implication of GFE tokens mean that not only do they serve as tradable assets with income, they are reflective of sustainable practices and have tangible, real-world utility.",
+      "question2": "What exactly will I get by purchasing an NFT from your marketplace?",
+      "answer2": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+      "question3": "What is the minimum cost of NFT?",
+      "answer3": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+      "question4": "Where is DAPPr located?",
+      "answer4": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+      "question5": "How much income will I get from NFT?",
+      "answer5": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+      "question6": "Is my revenue fixed?",
+      "answer6": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
     }
   }
 }
