@@ -1,47 +1,68 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
+import { formatCustomDate, getInitials } from "@/lib/utils"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 
-const Card = () => {
+export interface BlogCardDataType {
+  id: string
+  title: string
+  desc: string
+  image: string
+  author: {
+    name: string
+    image: string
+  }
+  date: Date
+}
+
+export default function BlogCard({
+  id,
+  title,
+  desc,
+  image,
+  author,
+  date,
+}: BlogCardDataType) {
   return (
-    <div className="">
-      <AspectRatio ratio={16 / 9} className="">
+    <div className="relative w-full h-full max-w-[320px] sm:max-w-[400px] mx-auto flex flex-col">
+      <AspectRatio ratio={16 / 9} className="relative">
         <Image
-          src="/images/blogs-and-news/highlights.png"
+          src={image}
           alt="Photo by Drew Beamer"
           fill
           className="rounded-3xl rounded-b-none object-cover"
         />
       </AspectRatio>
 
-      <div className="space-y-3 rounded-3xl rounded-t-none bg-[#E7F0FD] p-5">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman text-xl tracking-wider ">
-          BSV Academy: Taking the lead on blockchain education
-        </h1>
-        <p className="font-medium text-muted-foreground">
-          Renewable energy uses natural resources like sunlight and wind for
-          sustainable power, reducing environmental impact and fostering energy
-          independence.
-        </p>
+      <div className="relative space-y-3 rounded-3xl rounded-t-none bg-[#E7F0FD] p-5 h-full flex flex-col justify-between">
+        <div>
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] line-clamp-2 bg-clip-text text-transparent font-goldman text-xl tracking-wider ">
+            {title}
+          </h1>
+          <p className="font-medium text-muted-foreground line-clamp-3">
+            {desc}
+          </p>
+        </div>
 
-        <div className="flex items-end justify-between">
-          <div className="flex gap-2">
+        <div className="relative mt-auto flex items-end justify-between">
+          <div className="flex gap-2 mt-auto">
             <Avatar className="h-[50px] w-[50px]">
-              <AvatarImage src="/images/blogs-and-news/avatar.png" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarImage src={author?.image} />
+              <AvatarFallback>{getInitials(author?.name)}</AvatarFallback>
             </Avatar>
 
-            <div className="flex flex-col text-sm">
+            <div className="flex flex-col text-sm justify-center">
               <span className="font-medium text-muted-foreground">
-                MICHAEL SPRICK
+                {author?.name}
               </span>
               <span className="font-medium text-muted-foreground">
-                10 DEC 2023
+                {formatCustomDate(date || new Date())}
               </span>
             </div>
           </div>
@@ -49,14 +70,15 @@ const Card = () => {
           <Button
             variant={"ghost"}
             className="mt-0 flex items-center p-0 font-goldman text-base tracking-wider text-primary"
+            asChild
           >
-            Read More
-            <ArrowRightIcon className="ml-1 h-[20px] w-[20px] stroke-1" />
+            <Link href="/blogs-and-news/[slug]" as={`/blogs-and-news/${id}`}>
+              Read More
+              <ArrowRightIcon className="ml-1 h-[20px] w-[20px] stroke-1" />
+            </Link>
           </Button>
         </div>
       </div>
     </div>
   )
 }
-
-export default Card
