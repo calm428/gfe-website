@@ -13,10 +13,9 @@ i18n.use(initReactI18next).init({
     es: {
       translation: Spanish_JSON,
     },
-    // other languages...
   },
-  lng: "en",
-  fallbackLng: "en",
+  lng: localStorage.getItem("lang") || "en",
+  fallbackLng: localStorage.getItem("lang") || "en",
 
   interpolation: {
     escapeValue: false,

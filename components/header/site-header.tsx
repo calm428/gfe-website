@@ -74,7 +74,8 @@ export function SiteHeader() {
                 background:
                   "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
               }}
-              onClick={() => setSignInModalOpen(true)}
+              // onClick={() => setSignInModalOpen(true)}
+              onClick={() => window.open("http://www.google.com")}
             >
               {t("navbar_section.sign_in")}
             </Button>
@@ -238,9 +239,9 @@ export function SiteHeader() {
                 </NavigationMenu.List>
               </NavigationMenu.Root>
               <Link
-                href={"/NFT"}
+                href={"/nft"}
                 className={` ${navMenuStyle} ${
-                  "/NFT" === pathname &&
+                  "/nft" === pathname &&
                   "bg-primary/5 font-semibold text-primary"
                 }`}
               >
@@ -304,7 +305,8 @@ export function SiteHeader() {
                   background:
                     "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
                 }}
-                onClick={() => setSignInModalOpen(true)}
+                // onClick={() => setSignInModalOpen(true)}
+                onClick={() => window.open("http://www.google.com")}
               >
                 {t("navbar_section.sign_in")}
               </Button>

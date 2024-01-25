@@ -129,9 +129,9 @@ export function MainNav({ items }: MainNavProps) {
           </NavigationMenu.List>
         </NavigationMenu.Root>
         <Link
-          href={"/NFT"}
+          href={"/nft"}
           className={` ${navMenuStyle} ${
-            "/NFT" === pathname && "bg-primary/5 font-semibold text-primary"
+            "/nft" === pathname && "bg-primary/5 font-semibold text-primary"
           }`}
         >
           {t("navbar_section.nft")}

@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import { useTranslation } from "next-i18next"
 
@@ -14,15 +15,25 @@ import {
 
 export function LanguageSelector() {
   const { i18n } = useTranslation()
+  const [langauge, setLanguage] = useState("en")
   const changeLang = (lang: string) => {
     i18n.changeLanguage(lang)
-    console.log(i18n.languages)
+    setLanguage(lang)
+    localStorage.setItem("lang", lang)
   }
+  useEffect(() => {
+    let lang = localStorage.getItem("lang")
+    if (lang) {
+      setLanguage(lang)
+      i18n.changeLanguage(lang)
+    }
+  }, [])
   return (
     <Select
       onValueChange={(value) => {
         changeLang(value)
       }}
+      value={langauge}
       defaultValue="en"
     >
       <SelectTrigger className="w-auto gap-4 rounded-full">
