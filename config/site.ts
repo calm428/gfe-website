@@ -185,15 +185,15 @@ export const siteConfig = {
   ],
   footerLinks: [
     {
-      title: "Services",
+      title: "footer_section.services",
       href: "/services",
     },
     {
-      title: "Community",
+      title: "footer_section.community",
       href: "/community",
     },
     {
-      title: "Blogs && News",
+      title: "footer_section.blogs_news",
       href: "/blog-and-news",
     },
   ],

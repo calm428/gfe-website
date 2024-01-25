@@ -75,7 +75,16 @@
     "goalSection": {
       "title": "Nuestro Objetivo",
       "description": "Los tokens GFE son la representación digital de la energía eléctrica, con cada token significando el derecho de utilizar 1 kW de energía verde que será generada por nuestra infraestructura. Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables reflejo de prácticas sostenibles, sino que también tienen una utilidad tangible en el mundo real."
-    }
+    },
+    "important_links": "Enlaces Importantes",
+    "services": "Servicios",
+    "community": "Comunidad",
+    "blogs_news": "Blogs y Noticias",
+    "address": "Dirección",
+    "newsletter": "Boletín",
+    "follow_us": "Síguenos",
+    "contact_us": "Contáctanos",
+    "contact_detail_line": "Para obtener más información, por favor contáctenos por correo electrónico a"
   },
   "contactus_page": {
     "bookMeetingTitle": "Agenda una Reunión",
@@ -159,7 +168,7 @@
       "para2": "Esta conversión de hash power y energía a moneda FIAT ocurre en Londres y China, el equipo es muy similar y la energía es la mayor variable geográfica. A menudo, los entornos de minería (servidores, infraestructura eléctrica, equipos de enfriamiento y viviendas) se dan de baja según el costo de la energía frente a la producción productiva. El entorno y los requisitos de equipo son tan similares que es difícil distinguir la diferencia entre el alojamiento de servidores y la minería. El colectivo no discrimina en nuestro alojamiento de servidores; vendemos nuestra energía a todos. Proporcionamos energía obtenida éticamente un kW a la vez a los consumidores del bien común global."
     },
     "faq_section": {
-      "description":"A continuación se encuentran las preguntas frecuentes sobre nuestros NFT con respuestas.",
+      "description": "A continuación se encuentran las preguntas frecuentes sobre nuestros NFT con respuestas.",
       "question1": "¿Qué es DAPPr NFT?",
       "answer1": "Los tokens GFE son la representación digital de la energía eléctrica, con cada token significando el derecho a dirigir el uso de [1] 1 kWh de energía verde que será generada y consumida por nuestra infraestructura. Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables con ingresos, sino que también reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
       "question2": "¿Qué obtendré exactamente al comprar un NFT en su mercado?",
@@ -174,7 +183,7 @@
       "answer6": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones al blockchain, un registro descentralizado de todas las transacciones en la red de Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
     }
   },
-  "minerHosting":{
+  "minerHosting": {
     "bitcoinMining": {
       "title": "Ecosistema de Minería de Bitcoin",
       "description": "Plataforma confiable y rentable que proporciona varios servicios de alojamiento para nuevos mineros para usuarios finales."
@@ -249,19 +258,19 @@
       "subtitle": null,
       "description": null
     },
-    "Calculate": "Calcular",
-    "Amount": "Monto",
-    "Bonus": "Bono",
+    "calculate": "Calcular",
+    "amount": "Monto",
+    "bonus": "Bono",
     "enterAmount": "Ingrese la cantidad",
-    "BonusEnergy": "Energía de Bono",
-    "TotalEnergy": "Energía Total",
+    "bonusEnergy": "Energía de Bono",
+    "totalEnergy": "Energía Total",
     "Price": "Precio",
     "Next": "Siguiente",
     "minerList": "Lista de Mineros",
     "hashRate": "Tasa de Hash",
     "income": "Ingresos",
     "machinePrice": "Precio de la Máquina",
-    "AccessoryPrice": "Precio del Accesorio",
+    "accessoryPrice": "Precio del Accesorio",
     "price": "Precio",
     "energyAnnually": "Energía Anual",
     "viewDetail": "Ver Detalles",
@@ -351,7 +360,7 @@
     "HashrateRentingPrice": "Precio de Alquiler de Tasa de Hash",
     "ServiceFee": "Tarifa de Servicio",
     "Bandwidth": "Ancho de Banda",
-    "OURCOMPANY": "NUESTRA EMPRESA",
+    "ourCompany": "NUESTRA EMPRESA",
     "mainBenefit": {
       "title": "Principal Beneficio",
       "description": "Aseguramos nuestro futuro promoviendo recursos de energía renovable. Nuestro equipo de expertos se encarga del mantenimiento regular y del servicio de garantía de tu máquina."
@@ -396,5 +405,14 @@
       "message": "Para obtener más información, contáctanos por correo electrónico en"
     },
     "Contact": "Contacto"
+  },
+  "navbar_section": {
+    "ecosystem": "Ecosistema",
+    "nft": "NFT",
+    "community": "Comunidad",
+    "about_us": "Sobre nosotros",
+    "blogs_and_news": "Blogs y Noticias",
+    "contacts": "Contactos",
+    "sign_in": "Iniciar sesión"
   }
 }

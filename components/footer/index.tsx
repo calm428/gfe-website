@@ -9,11 +9,11 @@ import {
   PhoneCall,
   Twitter,
 } from "lucide-react"
+import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { useTranslation } from "next-i18next"
 
 export function SiteFooter() {
   const { t } = useTranslation()
@@ -29,15 +29,15 @@ export function SiteFooter() {
           />
           <div className="w-full lg:w-[50%] lg:max-w-2xl 	">
             <div className="font-goldman text-5xl text-white ">
-            {t("footer_section.section2.title")}
+              {t("footer_section.section2.title")}
             </div>
             <div className="auth mt-4 font-mont text-base font-semibold  text-white">
-            {t("footer_section.section2.description")}
+              {t("footer_section.section2.description")}
             </div>
           </div>
           <div className="w-full lg:w-[50%] lg:max-w-xl ">
             <div className="auth my-1 text-base  font-semibold text-white">
-              Newsletter
+              {t("footer_section.newsletter")}
             </div>
             <div className="auth flex h-12 w-full items-center">
               <Input
@@ -58,17 +58,15 @@ export function SiteFooter() {
         <div className="auth container flex flex-col items-start space-x-4 py-[60px] font-mont sm:justify-between sm:space-x-0 md:flex-row">
           <div className="w-full md:w-[40%]">
             <div className="my-6 text-xl font-semibold text-primary">
-            {t("footer_section.goalSection.title")}
-
+              {t("footer_section.goalSection.title")}
             </div>
             <div className="font-mont text-base text-primary">
-            {t("footer_section.goalSection.description")}
-
+              {t("footer_section.goalSection.description")}
             </div>
           </div>
           <div className="!mx-0 w-full md:w-[20%]">
             <div className="my-6 text-xl  font-semibold text-primary">
-              Important Links
+              {t("footer_section.important_links")}
             </div>
             <div className="grid grid-cols-2 gap-1 sm:grid-cols-3  md:grid-cols-1">
               {siteConfig.footerLinks.map((link, index) => (
@@ -77,11 +75,14 @@ export function SiteFooter() {
                   href={link.href}
                   className="  flex items-center rounded-lg font-mont text-base  text-primary hover:text-primary"
                 >
-                  {link.title}
+                  {t(link.title)}
                 </Link>
               ))}
             </div>
-            <div className="my-4 text-xl  text-primary">Contact Us</div>
+            <div className="my-4 text-xl  text-primary">
+              {" "}
+              {t("footer_section.contact_us")}
+            </div>
             <div>
               <div className="my-2 flex gap-2 font-mont text-base text-primary">
                 <PhoneCall className="h-5 w-5" />
@@ -95,13 +96,13 @@ export function SiteFooter() {
           </div>
           <div className="!mx-0 w-full md:w-[20%]">
             <div className="my-6 text-xl  font-semibold text-primary">
-              Address
+              {t("footer_section.address")}
             </div>
             <div className="font-mont text-base text-primary">
               {siteConfig.contact.address}
             </div>
             <div className="my-4 hidden text-xl text-primary md:block ">
-              Follow us
+              {t("footer_section.follow_us")}
             </div>
             <div className="hidden md:flex">
               <Button variant="ghost" size="icon">
@@ -119,7 +120,10 @@ export function SiteFooter() {
             </div>
           </div>
           <div className="!mx-0 md:hidden">
-            <div className="my-2 text-xl  text-primary">Follow us</div>
+            <div className="my-2 text-xl  text-primary">
+              {" "}
+              {t("footer_section.follow_us")}
+            </div>
             <div className="flex">
               <Button variant="ghost" size="icon">
                 <Facebook className="h-5 w-5  fill-current text-primary" />

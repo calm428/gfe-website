@@ -6,6 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { CaretDownIcon } from "@radix-ui/react-icons"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
+import { useTranslation } from "next-i18next"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
@@ -20,6 +21,8 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   const pathname = usePathname()
+  let { t } = useTranslation()
+
   const [ecoMenuOpen, setEcomenuOpen] = React.useState(false)
   const token_functionalities = siteConfig.token_functionalities
   const industry = siteConfig.industry
@@ -47,7 +50,8 @@ export function MainNav({ items }: MainNavProps) {
           <NavigationMenu.List>
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className={navMenuStyle}>
-                Ecosystem <CaretDownIcon className="CaretDown" aria-hidden />
+                {t("navbar_section.ecosystem")}{" "}
+                <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute top-[59px]  lg:-left-36 xl:left-0 ">
                 <div className="flex w-[900px]  rounded-b-[20px] border border-border bg-background">
@@ -130,13 +134,14 @@ export function MainNav({ items }: MainNavProps) {
             "/NFT" === pathname && "bg-primary/5 font-semibold text-primary"
           }`}
         >
-          NFT
+          {t("navbar_section.nft")}
         </Link>
         <NavigationMenu.Root>
           <NavigationMenu.List>
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className={navMenuStyle}>
-                Community <CaretDownIcon className="CaretDown" aria-hidden />
+                {t("navbar_section.community")}{" "}
+                <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
                 <div className="rounded-b-[10px] border border-border bg-background p-3">
@@ -170,7 +175,7 @@ export function MainNav({ items }: MainNavProps) {
               "bg-primary/5 font-semibold text-primary"
             }`}
           >
-            About us
+            {t("navbar_section.about_us")}
           </Link>
         </div>
         <Link
@@ -180,7 +185,7 @@ export function MainNav({ items }: MainNavProps) {
             "bg-primary/5 font-semibold text-primary"
           }`}
         >
-          Blogs and News
+          {t("navbar_section.blogs_and_news")}
         </Link>
         <Link
           href={"/contacts"}
@@ -189,7 +194,7 @@ export function MainNav({ items }: MainNavProps) {
             "bg-primary/5 font-semibold text-primary"
           }`}
         >
-          Contacts
+          {t("navbar_section.contacts")}
         </Link>
       </nav>
     </div>
