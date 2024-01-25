@@ -4,8 +4,10 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
+import { useTranslation } from "next-i18next"
 
 function Introduction() {
+  const { t } = useTranslation()
   return (
     <div
       className="relative flex flex-col items-center gap-12  bg-cover px-5 pb-[100px] pt-[50px] lg:px-0 lg:pb-[300px] lg:pt-[100px] "
@@ -16,12 +18,12 @@ function Introduction() {
     >
       <div className="flex flex-col items-center gap-8 px-5 lg:px-16">
         <h1 className="auth w-fit rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
-          About Us
+          {t("about_us_page.name")}
         </h1>
         <div className="flex flex-col items-center gap-4">
           <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
-            Innovative <br />
-            approach to global energy
+          {t("about_us_page.title")} <br />
+          {t("about_us_page.subtitle")}
           </h1>
           <Button className="font mont auth border border-secondary-foreground bg-background text-secondary-foreground hover:bg-muted">
             <Link
@@ -29,7 +31,7 @@ function Introduction() {
               className="flex items-center justify-between gap-3"
             >
               <Icons.play />
-              <span>Whitepaper</span>
+              <span>{t("whitepaper")}</span>
             </Link>
           </Button>
         </div>

@@ -1,16 +1,20 @@
 "use client"
 
-import { FC } from "react"
+import { FC, useEffect, useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import axios from "axios"
 import { allDocs } from "contentlayer/generated"
+import useSWR from "swr"
 
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
 import ContactUs from "@/components/NFT/contact-us"
-import PaginationSection from "@/components/blogs-and-news/pagination"
-import Card from "@/components/common/cards/blog-card"
-import { Mdx } from "@/components/mdx"
+
+import "react-quill/dist/quill.bubble.css"
+
+const ReactQuill =
+  typeof window === "object" ? require("react-quill") : () => false
 
 interface PageProps {
   params: {
@@ -26,72 +30,112 @@ function getDocFromParams(slug: string) {
   return doc
 }
 
+interface BlogDataType {
+  title: string
+  desc: string
+  content: string
+  image: string
+  author: {
+    name: string
+    image: string
+  }
+  date: Date
+}
+
+const fetcher = (url: string) => axios.get(url).then((res) => res.data)
+
 const Page: FC<PageProps> = ({ params }) => {
-  const doc = getDocFromParams(params.slug)
+  // const doc = getDocFromParams(params.slug)
+  const [blogData, setBlogData] = useState<BlogDataType>({} as BlogDataType)
+
+  const { data: fetchedData, error } = useSWR(
+    `/api/blogs/get?id=${params.slug}`,
+    fetcher
+  )
+
+  const modules = {
+    toolbar: false,
+  }
+
+  useEffect(() => {
+    if (!error && fetchedData) {
+      setBlogData({
+        title: fetchedData?.blog?.title,
+        desc: fetchedData?.blog?.subtitle,
+        content: fetchedData?.blog?.content,
+        image: fetchedData?.blog?.previewImage,
+        author: {
+          name: fetchedData?.blog?.author?.name,
+          image: "",
+        },
+        date: new Date(fetchedData?.blog?.createAt),
+      })
+
+      console.log(fetchedData)
+    }
+  }, [fetchedData])
+
   return (
     <div className="container mt-10 pb-32">
       <div className="mb-10 flex">
-        <h3 className="border-r auth font-medium border-muted-foreground bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text px-5  tracking-wider text-transparent">
+        <Link
+          href="/blogs-and-news"
+          className="border-r auth font-medium border-muted-foreground bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text px-5  tracking-wider text-transparent"
+        >
           Blogs and News
-        </h3>
+        </Link>
 
-        <h3 className="border-l auth font-medium text-muted-foreground border-muted-foreground px-5">
-          Article
-        </h3>
+        <div className="border-l auth font-medium text-muted-foreground border-muted-foreground px-5">
+          {blogData?.author?.name}
+        </div>
       </div>
 
-      <h1 className="mb-10 font-goldman text-4xl tracking-wider">
-        {doc?.title}
-      </h1>
+      {!error ? (
+        fetchedData && blogData ? (
+          <>
+            <div className="relative mb-10 w-full h-[300px] mx-auto">
+              <Image
+                src={blogData?.image}
+                alt="Photo by Drew Beamer"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
 
-      <div className="flex w-full flex-col gap-5 lg:flex-row-reverse">
-        <div className="flex w-80 flex-col gap-2">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mb-3 border-t-2 pt-4 font-monument">
-            Table of content
-          </h1>
-          {doc?.headings?.map((heading: any, index: number) => (
-            <Link href={`#${heading.slug}`} className="p-2 hover:bg-accent">
-              {heading.text}
-            </Link>
-          ))}
-        </div>
-        <Mdx code={doc?.body?.code} />
-      </div>
+            <div className="font-goldman text-4xl tracking-wider">
+              {blogData?.title}
+            </div>
 
-      <div className="mt-16">
-        <div className="flex justify-between">
-          <h1 className="pb-2 text-center font-goldman text-4xl font-normal  md:pb-3 text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
-            Stay in the loop
-          </h1>
-
-          <Link
-            style={{
-              background:
-                "linear-gradient(15deg, #22B4FD 32.53%, #2D79FF 77.26%)",
-            }}
-            className={cn(
-              buttonVariants(),
-              "hidden pt-2.5 px-6 auth font-bold tracking-widest md:block"
-            )}
-            href={"/blogs-and-news"}
-          >
-            View All News
-          </Link>
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-          <Card />
-          <Card />
-          <Card />
-        </div>
-        <div className="my-12 border"></div>
-
-        <div className="my-20 lg:mb-30">
-          <PaginationSection />
-        </div>
-
-        <ContactUs />
-      </div>
+            <div className="w-full">
+              {/* <div className="flex w-80 flex-col gap-2">
+                <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mb-3 border-t-2 pt-4 font-monument">
+                  Table of content
+                </h1>
+                {doc?.headings?.map((heading: any, index: number) => (
+                  <Link
+                    href={`#${heading.slug}`}
+                    className="p-2 hover:bg-accent"
+                  >
+                    {heading.text}
+                  </Link>
+                ))}
+              </div> */}
+              <ReactQuill
+                theme="bubble"
+                value={blogData?.content}
+                modules={modules}
+                readOnly
+                placeholder="Type your content here..."
+              />
+            </div>
+          </>
+        ) : (
+          <div>loading...</div>
+        )
+      ) : (
+        <></>
+      )}
+      <ContactUs />
     </div>
   )
 }

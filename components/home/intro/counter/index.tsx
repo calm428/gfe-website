@@ -10,8 +10,11 @@ import { siteConfig } from "@/config/site"
 import { Button } from "../../../ui/button"
 import { Input } from "../../../ui/input"
 import CounterCard from "./counter-card"
+import { useTranslation } from "next-i18next"
 
 function Counter() {
+  const { t } = useTranslation()
+
   const [time, setTime] = useState({
     days: 0,
     hours: 0,
@@ -51,18 +54,20 @@ function Counter() {
       <div className="flex flex-col gap-[24px] bg-[#F9FCFF] p-[32px]">
         <div className="text-center">
           <h2 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
-            Buy In Before Price Increases!
+          {t("home_page.converter_section.title")}
+
           </h2>
           <p className="font-mont text-[14px] font-medium">
-            countdown until price increases
+          {t("home_page.converter_section.subtitle")}
+
           </p>
         </div>
         {/* countdown */}
         <div className="grid grid-cols-4 gap-1">
-          <CounterCard count={time.days} title={"Days"} />
-          <CounterCard count={time.hours} title={"Hours"} />
-          <CounterCard count={time.minutes} title={"Minutes"} />
-          <CounterCard count={time.seconds} title={"Seconds"} />
+          <CounterCard count={time.days} title={t("days")} />
+          <CounterCard count={time.hours} title={t("hours")} />
+          <CounterCard count={time.minutes} title={t("minutes")} />
+          <CounterCard count={time.seconds} title={t("seconds")} />
         </div>
       </div>
       {/* bottom div */}
@@ -121,7 +126,7 @@ function Counter() {
 
         {/* button */}
         <Button className="mt-[32px] w-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[32px] py-[16px]">
-          Buy Now
+          {t("buy_now")}
         </Button>
       </div>
     </div>

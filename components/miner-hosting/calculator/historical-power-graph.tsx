@@ -13,6 +13,7 @@ import {
   Tooltip,
 } from "chart.js"
 import { Line } from "react-chartjs-2"
+import { useTranslation } from "react-i18next"
 
 ChartJS.register(
   ArcElement,
@@ -26,6 +27,7 @@ ChartJS.register(
 )
 
 const HistoricalPowerGraph = () => {
+  const { t } = useTranslation()
   const data = {
     labels: ["2017", "2018", "2019", "2020", "2021", "2022", "2023"],
     datasets: [
@@ -81,7 +83,7 @@ const HistoricalPowerGraph = () => {
   return (
     <div className="flex w-full flex-col justify-between space-y-5 bg-white p-10 drop-shadow-2xl">
       <h1 className="auth text-sm font-semibold tracking-wider text-primary">
-        Historical Power Graph (per kwh)
+        {t('minerHosting.historicalPowerGraph.title')}
       </h1>
       {/* @ts-ignore */}
       <Line id="myChart" data={data} options={options} />

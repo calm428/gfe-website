@@ -1,6 +1,9 @@
+"use client"
+import { useTranslation } from "react-i18next"
 import { AdvantageCard } from "./advantage-card"
 
 const MainBenefitSection = () => {
+  const {t} = useTranslation()
   return (
     <div className="relative py-24">
       {/* <div className="overflow-hidden">
@@ -15,30 +18,28 @@ const MainBenefitSection = () => {
       <div className="container flex flex-col items-start justify-start px-10">
         <div className="pb-10 md:pb-14">
           <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 font-goldman text-5xl font-normal md:pb-10">
-            Main Benefit{" "}
+            {t('minerHosting.mainBenefit.title')}
           </h1>
           <h3 className="text-start font-mont font-medium text-muted-foreground md:text-xl">
-            We secure our future by promoting renewable energy resources. Our
-            expert team take care of the regular maintenance and warranty
-            servicing of your machine.
+            {t('minerHosting.mainBenefit.description')}
           </h3>
         </div>
 
         <div className="grid w-auto grid-cols-1 justify-start gap-6 sm:grid-cols-2 xl:grid-cols-3">
           <AdvantageCard
             icon="/images/home/Safety-icon.png"
-            title="Safety"
-            text="Our commitment is to fortify the security landscape for miners. We employ cutting-edge  protocols, conducting."
+            title={t('minerHosting.safety.title')}
+            text={t('minerHosting.safety.description')}
           />
           <AdvantageCard
             icon="/images/home/Sustainability-icon.png"
-            title="Sustainability"
-            text="In the dynamic realm of Bitcoin mining, our industry perspective revolves around sustainability as a cornerstone of responsible growth. "
+            title={t('minerHosting.sustainability.title')}
+            text={t('minerHosting.sustainability.description')}
           />
           <AdvantageCard
             icon="/images/home/MaxProfit-icon.png"
-            title="Max Profit"
-            text="In the competitive landscape of Bitcoin mining, our industry perspective centers on achieving maximum profit while upholding."
+            title={t('minerHosting.max_profit.title')}
+            text={t('minerHosting.max_profit.description')}
           />
         </div>
       </div>

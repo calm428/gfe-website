@@ -1,23 +1,21 @@
 "use client"
 
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 function AboutEnergy() {
+  let { t } = useTranslation()
   return (
     <div className="bg-[#F9FCFF] pt-24">
       <div className="flex flex-col items-center gap-6 container ">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
-          Views on energy
+        <h1 className=" bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
+          {t("about_us_page.energy_section.title")}
         </h1>
         <p className="auth text-center font-mont text-base font-medium md:text-lg lg:w-[1000px]">
-          Electricity is a production commodity due to its structure. Current
-          technology to store it is not ready to scale to meet our grid based
-          distribution technology. This state of affairs makes sales linked to
-          consumption in most markets: nearly all electricity is sold and
-          consumed at the same time.
+          {t("about_us_page.energy_section.para1")}
         </p>
       </div>
-      <div className="flex flex-col pt-14 lg:flex-row justify-between">
+      <div className="container flex flex-col px-0 pt-14 lg:flex-row justify-between">
         <div>
           <Image
             src="/images/about-us/nft2.svg"
@@ -29,38 +27,20 @@ function AboutEnergy() {
         </div>
         <div className="flex flex-col gap-8 container lg:w-1/2 lg:pr-24 justify-center">
           <p className="auth font-mont text-base font-medium md:text-lg">
-            Small scale storage, for a productive asset consuming a resource,
-            has different motivation than a productive asset which has an
-            operating expense from its grid energy appetite. We care for the
-            electricity we make in a different manner than the financial impact
-            felt from a monthly bill. The production and consumption of energy
-            by direction allows the best of all situations.
+            {t("about_us_page.energy_section.para2")}
           </p>
           <p className="auth font-mont text-base font-medium md:text-lg">
-            The NFT owner is responsible for clean solar panels to maximize her
-            KW. The collective is looking for best impact and highest
-            remuneration for its energy commodity, and the token holders are
-            supporting the process and profiting from a fractional ROI from
-            producing and consuming ethically sourced power for profit.
+            {t("about_us_page.energy_section.para3")}
           </p>
         </div>
       </div>
-      <div className="flex flex-col-reverse pt-14 lg:flex-row justify-between">
-        <div className="flex flex-col gap-8 px-[2rem] lg:w-1/2 lg:px-0 lg:pl-24 justify-center">
+      <div className="container flex flex-col-reverse px-0 pt-14 lg:flex-row justify-between">
+        <div className="flex flex-col gap-8 px-0 lg:w-1/2 lg:px-0  justify-center">
           <p className="auth font-mont text-base font-medium md:text-lg">
-            The world{"'"}s diet for energy is in part due to the convenience of
-            a grid. Most developing worlds do not have easy access to
-            electricity to facilitate using a clothes dryer. Often they dry
-            their clothes outside.
+            {t("about_us_page.energy_section.para4")}
           </p>
           <p className="auth font-mont text-base font-medium md:text-lg">
-            Being able to run a dryer 24/7/365 is part of the promise of a grid
-            in the US, but a reluctant addition to a home owner{"'"}s solar
-            system. Providing for a grid requires capacity for everything. In
-            the US this results in many plants running at low (inefficient)
-            power levels to stand by for demand loads. These plants are often
-            coal fired, and even more inefficient (but less polluting) by
-            running at standby.
+            {t("about_us_page.energy_section.para5")}
           </p>
         </div>
         <div className="flex justify-end">
@@ -88,9 +68,7 @@ function AboutEnergy() {
             <div className="grid gap-14 pt-20 lg:grid-cols-2">
               <div className=" flex flex-col gap-3">
                 <p className="auth font-mont text-base font-medium text-accent-foreground lg:text-lg">
-                  The more small loads we can partition and remove from their grid
-                  leashed defaults in design, the more our world transitions to
-                  renewable power
+                  {t("about_us_page.energy_section.para6")}
                 </p>
                 <div className="rounded-md  bg-gradient-to-br from-[#2BADFD] to-[#1570EF] p-6">
                   <div className="mb-3 flex gap-6">
@@ -102,39 +80,25 @@ function AboutEnergy() {
                       />
                     </div>
                     <p className="auth font-mont text-base font-medium text-primary-foreground">
-                      Small scale renewable hydrocarbon brewing is needed in many
-                      places, this is due to the
+                      {t("about_us_page.energy_section.point1")}
                     </p>
                   </div>
                   <div className="flex flex-col gap-6">
                     <p className="auth font-mont text-base font-medium text-primary-foreground">
-                      intrinsic costs of delivery of extractive energy. Many small
-                      efforts are needed to change things.
+                      {t("about_us_page.energy_section.point2")}
                     </p>
                     <p className="auth font-mont text-base font-medium text-primary-foreground">
-                      Our transition energy needs rely heavily on hydrogen in many
-                      playbooks. That infrastructure can be built in what ever
-                      manner our global commons chooses.
+                      {t("about_us_page.energy_section.point3")}
                     </p>
                   </div>
                 </div>
               </div>
               <div className=" flex flex-col gap-4">
                 <p className="auth font-mont text-base font-medium text-accent-foreground md:text-lg">
-                  Small scale storage, for a productive asset consuming a
-                  resource, has different motivation than a productive asset which
-                  has an operating expense from its grid energy appetite. We care
-                  for the electricity we make in a different manner than the
-                  financial impact felt from a monthly bill. The production and
-                  consumption of energy by direction allows the best of all
-                  situations.
+                  {t("about_us_page.energy_section.para7")}
                 </p>
                 <p className="auth font-mont text-base font-medium text-accent-foreground md:text-lg">
-                  The NFT owner is responsible for clean solar panels to maximize
-                  her KW. The collective is looking for best impact and highest
-                  remuneration for its energy commodity, and the token holders are
-                  supporting the process and profiting from a fractional ROI from
-                  producing and consuming ethically sourced power for profit.
+                  {t("about_us_page.energy_section.para8")}
                 </p>
               </div>
             </div>

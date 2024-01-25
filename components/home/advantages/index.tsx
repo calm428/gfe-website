@@ -1,16 +1,19 @@
+import { useTranslation } from "next-i18next"
 import AdvantageCard from "./advantage-card"
 
 const AdvantagesSection = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="grid gap-[50px] container py-24 md:grid-cols-2">
       <AdvantageCard
-        title="DAPPs Units"
-        desc="Our Journey began with the design and construction of a sustainably-run server hosting environment prototype."
+        title={t("home_page.section3.card1title")}
+        desc={t("home_page.section3.card1description")}
         image="/advantages/adv2.svg"
       />
       <AdvantageCard
-        title="NFT"
-        desc="NFT holders have the ownership of these units and earn a daily income."
+        title={t("home_page.section3.card2title")}
+        desc={t("home_page.section3.card2description")}
         image="/advantages/adv1.svg"
       />
     </div>

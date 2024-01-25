@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -9,6 +11,7 @@ import {
   Phone,
   Twitter,
 } from "lucide-react"
+import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 
@@ -17,19 +20,18 @@ import { Input } from "../ui/input"
 import { Textarea } from "../ui/textarea"
 
 function Introduction() {
+  const { t } = useTranslation()
+
   return (
     <div className="auth w-full bg-[url('/images/bg-gradient.webp')] bg-cover bg-center bg-no-repeat px-10 py-24">
       <div className="mx-auto grid w-full max-w-7xl overflow-hidden rounded-xl lg:grid-cols-2">
         <div className="bg-primary/10 p-8">
           <div>
             <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-5xl text-transparent">
-              Book a meeting
+              {t("contactus_page.bookMeetingTitle")}
             </div>
             <p className="auth my-4 font-mont text-base lg:text-lg">
-              Interested in our services and willing to participate in our
-              private sale? That{"'"}s why we are here! Book a meeting with our
-              team to discuss in detail, how it works, the pricing. We will do
-              our best to help.
+              {t("contactus_page.bookMeetingDescription")}
             </p>
             <div className="mb-24 mt-4 flex flex-col gap-4 md:flex-row lg:flex-col xl:flex-row">
               <Button
@@ -40,7 +42,7 @@ function Introduction() {
                   href={siteConfig.links.docs}
                   className="flex items-center gap-3"
                 >
-                  Book a meeting with CEO
+                  {t("contactus_page.bookMeetingCEO")}
                 </Link>
               </Button>
               <Button
@@ -66,7 +68,7 @@ function Introduction() {
           </div>
           <div className="auth flex flex-col gap-6">
             <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-mont text-2xl font-bold text-transparent">
-              Contact info
+              {t("contactus_page.contactInfo.title")}
             </div>
             <div className="flex flex-col gap-2 md:flex-row lg:flex-col xl:flex-row">
               <div className="flex flex-col gap-2">
@@ -76,7 +78,7 @@ function Introduction() {
                   </div>
                   <div>
                     <div className="text-sm uppercase text-muted-foreground">
-                      Email us
+                      {t("contactus_page.contactInfo.email")}
                     </div>
                     <div className="text-md font-medium text-black">
                       info@gfe.foundation
@@ -89,7 +91,7 @@ function Introduction() {
                   </div>
                   <div>
                     <div className="text-sm uppercase text-muted-foreground">
-                      Phone number
+                      {t("contactus_page.contactInfo.phone")}
                     </div>
                     <div className="text-md font-medium text-black">
                       0000000000000
@@ -136,29 +138,29 @@ function Introduction() {
             <div className="flex w-full gap-4">
               <div className="w-full">
                 <div className="text-md font-mont text-muted-foreground">
-                  Name
+                {t("contactus_page.formFields.name.title")}
                 </div>
-                <Input type="text" placeholder="Fullname" />
+                <Input type="text" placeholder= {t("contactus_page.formFields.name.placeholder")} />
               </div>
               <div className="w-full">
                 <div className="text-md font-mont text-muted-foreground">
-                  Email
+                {t("contactus_page.contactInfo.email")}
                 </div>
                 <Input type="email" placeholder="Email address" />
               </div>
             </div>
             <div>
               <div className="text-md font-mont text-muted-foreground">
-                Subject
+              {t("contactus_page.formFields.subject.title")}
               </div>
-              <Input type="text" placeholder="Subject" />
+              <Input type="text" placeholder={t("contactus_page.formFields.subject.placeholder")} />
             </div>
             <div>
               <div className="text-md font-mont text-muted-foreground">
-                Message
+              {t("contactus_page.formFields.message.title")}
               </div>
               <Textarea
-                placeholder="Tell us about what you think..."
+                placeholder= {t("contactus_page.formFields.message.placeholder")}
                 rows={10}
               />
             </div>

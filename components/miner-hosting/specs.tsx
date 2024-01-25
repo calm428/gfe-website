@@ -2,57 +2,49 @@
 
 import { useState } from "react"
 import Image from "next/image"
-
-const CARDS_DATA = [
-  {
-    image: "/images/home/SolarPower.png",
-    icon: "/images/home/SolarPower-icon.png",
-    title: "Solar Power",
-    description:
-      "Solar energy harnesses sunlight through photovoltaic cells or solar thermal systems, providing renewable electricity and heat with minimal environmental impact.",
-  },
-  {
-    image: "/images/home/ImmersionCooling.png",
-    icon: "/images/home/ImmersionCooling-icon.png",
-    title: "Immersion<br>Cooling",
-    description:
-      "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence.",
-  },
-  {
-    image: "/images/home/GeothermalHeatPump.png",
-    icon: "/images/home/GeothermalHeatPump-icon.png",
-    title: "Geothermal<br>Heat Pump",
-    description:
-      "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence.",
-  },
-  {
-    image: "/images/home/EarthshipBuilding.png",
-    icon: "/images/home/EarthshipBuilding-icon.png",
-    title: "Earthship<br>Building",
-    description:
-      "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence.",
-  },
-]
+import { useTranslation } from "react-i18next"
 
 export default function SpecsSection() {
   const [currentCard, setCurrentCard] = useState(0)
-
+  const { t } = useTranslation()
   const isCurrent = (index: number) => {
     return index == currentCard
   }
-
+  const CARDS_DATA = [
+    {
+      image: "/images/home/SolarPower.png",
+      icon: "/images/home/SolarPower-icon.png",
+      title: t("minerHosting.solarPower.title"),
+      description: t("minerHosting.solarPower.description"),
+    },
+    {
+      image: "/images/home/ImmersionCooling.png",
+      icon: "/images/home/ImmersionCooling-icon.png",
+      title: t("minerHosting.immersionCooling.title"),
+      description: t("minerHosting.immersionCooling.description"),
+    },
+    {
+      image: "/images/home/GeothermalHeatPump.png",
+      icon: "/images/home/GeothermalHeatPump-icon.png",
+      title: t("minerHosting.geothermalHeatPump.title"),
+      description: t("minerHosting.geothermalHeatPump.description"),
+    },
+    {
+      image: "/images/home/EarthshipBuilding.png",
+      icon: "/images/home/EarthshipBuilding-icon.png",
+      title: t("minerHosting.earthshipBuilding.title"),
+      description: t("minerHosting.earthshipBuilding.description"),
+    },
+  ]
   return (
     <div className="bg-[url('/images/miner-hosting/bg2.png')] bg-cover bg-bottom bg-no-repeat pb-14 pt-10 md:pt-24">
       <div className="container">
         <div className="pb-10 md:pb-14">
           <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-2 text-center  font-goldman text-5xl font-normal text-transparent md:pb-3">
-            Mining Ecosystem
+            {t("minerHosting.miningEcosystem.title")}
           </h1>
           <h3 className="text-center font-mont text-lg font-medium text-muted-foreground md:text-xl">
-            Step into a comprehensive mining ecosystem designed to maximize
-            efficiency, sustainability, and profitability. Our integrated
-            platform offers a seamless blend of cutting-edge technology,
-            sustainable practices, and user-friendly tools.
+            {t("minerHosting.miningEcosystem.description")}
           </h3>
         </div>
 

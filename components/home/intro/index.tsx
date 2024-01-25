@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link"
 import { ChevronRightIcon } from "lucide-react"
+import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
@@ -8,6 +11,7 @@ import { Icons } from "@/components/icons"
 import Counter from "./counter"
 
 export default function HomeSection() {
+  const { t, i18n } = useTranslation()
   return (
     <div
       className="relative  bg-cover bg-center  "
@@ -20,19 +24,17 @@ export default function HomeSection() {
           <div className="mb-5 flex flex-col items-start gap-[56px]">
             <div className="flex flex-col gap-[16px]">
               <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-[42px] font-normal text-transparent md:text-[52px] xl:text-[62px]">
-                Green Fungible <br className="hidden sm:inline" />
-                Energy - GFE
+                {t("home_page.section1.title")}{" "}
+                <br className="hidden sm:inline" />
+                {t("home_page.section1.subtitle")}
               </h1>
               <p className="auth pr-5 font-mont font-semibold text-muted-foreground lg:text-[18px] xl:text-[20px]">
-                GFE is trailblazing initiative designed to tokenize green
-                energy, Providing a unique investment opportunity that bridges
-                the gap between environmental impact and economic incentive,
-                while bringing the first global prospective to electrical costs.
+                {t("home_page.section1.description")}
               </p>
             </div>
             <div className="auth mb-7 flex w-full flex-col gap-2 md:mb-0 md:flex-row md:gap-3">
               <Button className="h-12 w-32 bg-gradient-to-l from-[#2BADFD] to-[#1570EF] font-bold">
-                <Link href={siteConfig.links.docs}>Audit</Link>
+                <Link href={siteConfig.links.docs}>{t("audit")}</Link>
               </Button>
 
               <Button className="bg-backround h-12 border border-secondary-foreground bg-white font-bold text-muted-foreground hover:bg-muted">
@@ -41,7 +43,7 @@ export default function HomeSection() {
                   className="flex items-center justify-between gap-3"
                 >
                   <Icons.paper />
-                  <span>Whitepaper</span>
+                  <span>{t("whitepaper")}</span>
                 </Link>
               </Button>
             </div>
@@ -52,8 +54,8 @@ export default function HomeSection() {
               <Button className="absolute -top-3 left-5 rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
                 New
               </Button>
-              <h1 className="mt-2 font-mont font-medium text-muted-foreground md:mt-0 md:text-[20px]">
-                NFT Official landing page has officially launched!🎉
+              <h1 className="mt-2 font-mont font-medium text-muted-foreground md:mt-0 md:text-[16px]">
+              {t("launch_text")}
               </h1>
               <ChevronRightIcon />
             </div>

@@ -8,6 +8,7 @@ import { SunbeltContext } from "@/context/context"
 import { CaretDownIcon } from "@radix-ui/react-icons"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import { Menu, X } from "lucide-react"
+import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -24,6 +25,7 @@ import ExpandableText from "./expandable-text"
 import { LanguageSelector } from "./language"
 
 export function SiteHeader() {
+  let { t } = useTranslation()
   const {
     resetModalOpen,
     setResetModalOpen,
@@ -72,9 +74,10 @@ export function SiteHeader() {
                 background:
                   "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
               }}
-              onClick={() => setSignInModalOpen(true)}
+              // onClick={() => setSignInModalOpen(true)}
+              onClick={() => window.open("http://www.google.com")}
             >
-              Sign In
+              {t("navbar_section.sign_in")}
             </Button>
             <LanguageSelector />
           </div>
@@ -106,12 +109,14 @@ export function SiteHeader() {
       <div
         id="sidebar"
         onClick={handleClose}
-        className={` ${mobileNavOpen ? "block" : "hidden"
-          } absolute inset-0 z-50 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden`}
+        className={` ${
+          mobileNavOpen ? "block" : "hidden"
+        } absolute inset-0 z-50 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden`}
       >
         <div
-          className={`${mobileNavOpen ? "right-0 " : "-right-[360px]"
-            } fixed z-30  h-full min-w-[360px] max-w-[360px] bg-background transition-all lg:hidden`}
+          className={`${
+            mobileNavOpen ? "right-0 " : "-right-[360px]"
+          } fixed z-30  h-full min-w-[360px] max-w-[360px] bg-background transition-all lg:hidden`}
         >
           <div className="flex h-full flex-col">
             <div className="sticky top-0 z-50 bg-background pt-5">
@@ -155,7 +160,7 @@ export function SiteHeader() {
                     <NavigationMenu.Trigger
                       className={` ${navMenuStyle} flex w-full items-center justify-center`}
                     >
-                      Ecosystem
+                      {t("navbar_section.ecosystem")}
                       <CaretDownIcon className="CaretDown" aria-hidden />
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="NavigationMenuContent h-fit">
@@ -234,18 +239,19 @@ export function SiteHeader() {
                 </NavigationMenu.List>
               </NavigationMenu.Root>
               <Link
-                href={"/NFT"}
-                className={` ${navMenuStyle} ${"/NFT" === pathname &&
+                href={"/nft"}
+                className={` ${navMenuStyle} ${
+                  "/nft" === pathname &&
                   "bg-primary/5 font-semibold text-primary"
-                  }`}
+                }`}
               >
-                NFT
+                {t("navbar_section.nft")}
               </Link>
               <NavigationMenu.Root>
                 <NavigationMenu.List>
                   <NavigationMenu.Item>
                     <NavigationMenu.Trigger className={navMenuStyle}>
-                      Community{" "}
+                      {t("navbar_section.community")}{" "}
                       <CaretDownIcon className="CaretDown" aria-hidden />
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="NavigationMenuContent">
@@ -275,20 +281,22 @@ export function SiteHeader() {
               <div className="flex items-center ">
                 <Link
                   href={"/about-us"}
-                  className={` ${navMenuStyle} ${"/about-us" === pathname &&
+                  className={` ${navMenuStyle} ${
+                    "/about-us" === pathname &&
                     "bg-primary/5 font-semibold text-primary"
-                    }`}
+                  }`}
                 >
-                  About us
+                  {t("navbar_section.about_us")}
                 </Link>
               </div>
               <Link
                 href={"/blogs-and-news"}
-                className={` ${navMenuStyle} ${"/blogs-and-news" === pathname &&
+                className={` ${navMenuStyle} ${
+                  "/blogs-and-news" === pathname &&
                   "bg-primary/5 font-semibold text-primary"
-                  }`}
+                }`}
               >
-                Blogs and News
+                {t("navbar_section.blogs_and_news")}
               </Link>
               <Button
                 variant="default"
@@ -297,17 +305,20 @@ export function SiteHeader() {
                   background:
                     "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
                 }}
-                onClick={() => setSignInModalOpen(true)}
+                // onClick={() => setSignInModalOpen(true)}
+                onClick={() => window.open("http://www.google.com")}
               >
-                Sign In
+                {t("navbar_section.sign_in")}
               </Button>
               <Link
                 href={"/contacts"}
-                className={`${navMenuStyle} ${"/contacts" === pathname ?
-                    "bg-primary/5 font-semibold text-primary" : ""
-                  }`}
+                className={`${navMenuStyle} ${
+                  "/contacts" === pathname
+                    ? "bg-primary/5 font-semibold text-primary"
+                    : ""
+                }`}
               >
-                Contacts
+                {t("navbar_section.contacts")}
               </Link>
             </nav>
           </div>

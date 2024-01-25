@@ -160,40 +160,40 @@ export const siteConfig = {
   features: [
     {
       icon: "/features/div.png",
-      title: "Staking reward",
-      desc: "Register staking contract and get reward from our infrastructure",
+      title: "home_page.section2.card1title",
+      desc: "home_page.section2.card1description",
       link: "#",
     },
     {
       icon: "/features/div-1.png",
-      title: "Climate change",
-      desc: "Each unit completely offsets grid inefficiencies with guilt free energy.",
+      title: "home_page.section2.card2title",
+      desc: "home_page.section2.card2description",
       link: "#",
     },
     {
       icon: "/features/div-2.png",
-      title: "Energy trading",
-      desc: "Buy and sell our token and participate in server hosting income",
+      title: "home_page.section2.card3title",
+      desc: "home_page.section2.card3description",
       link: "#",
     },
     {
       icon: "/features/div-3.png",
-      title: "DAO governance",
-      desc: "Participate into the community driven decision making",
+      title: "home_page.section2.card4title",
+      desc: "home_page.section2.card4description",
       link: "#",
     },
   ],
   footerLinks: [
     {
-      title: "Services",
+      title: "footer_section.services",
       href: "/services",
     },
     {
-      title: "Community",
+      title: "footer_section.community",
       href: "/community",
     },
     {
-      title: "Blogs && News",
+      title: "footer_section.blogs_news",
       href: "/blog-and-news",
     },
   ],

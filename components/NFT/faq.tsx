@@ -12,44 +12,38 @@ import {
   AccordionTrigger,
 } from "../ui/accordion"
 import { Button } from "../ui/button"
+import { useTranslation } from "next-i18next"
 
 const FAQS = [
   {
-    question: "What is DAPPr NFT?",
-    answer:
-      "GFE tokens are the digital representation of electrical energy, with each token signifying the right to direct the use of [1] 1kWh of green energy that will be generated and consumed by our infrastructure. This twofold implication of GFE tokens mean that not only do they serve as tradable assets with income, they are reflective of sustainable practices and have tangible, real-world utility.",
+    question: "nft_page.faq_section.question1",
+    answer: "nft_page.faq_section.answer1",
   },
   {
-    question:
-      "What exactly will I get by purchasing an NFT from your marketplace?",
-    answer:
-      "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+    question: "nft_page.faq_section.question2",
+    answer: "nft_page.faq_section.answer2",
   },
   {
-    question: "What is the minimum cost of NFT?",
-    answer:
-      "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+    question: "nft_page.faq_section.question3",
+    answer: "nft_page.faq_section.answer3",
   },
   {
-    question: "Where is DAPPr located?",
-    answer:
-      "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+    question: "nft_page.faq_section.question4",
+    answer: "nft_page.faq_section.answer4",
   },
   {
-    question: "How much income will I get from NFT?",
-    answer:
-      "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+    question: "nft_page.faq_section.question5",
+    answer: "nft_page.faq_section.answer5",
   },
   {
-    question: "Is my revenue fixed?",
-    answer:
-      "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network.",
+    question: "nft_page.faq_section.question6",
+    answer: "nft_page.faq_section.answer6",
   },
 ]
 
 function FAQ() {
   const [openItem, setOpenItem] = useState<number | null>(null)
-
+const {t} = useTranslation()
   const handleAccordionItemClick = (index: number) => {
     setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
   }
@@ -60,7 +54,7 @@ function FAQ() {
           FAQ
         </h1>
         <p className="auth font-mont text-lg">
-          Belows are the FAQs regarding our NFT’s with answers
+          {t("nft_page.faq_section.description")}
         </p>
       </div>
       <div>
@@ -78,10 +72,10 @@ function FAQ() {
                   onClick={() => handleAccordionItemClick(index)}
                   className="auth font-semibold text-secondary-foreground hover:no-underline"
                 >
-                  {faq.question}
+                  {t(faq.question)}
                 </AccordionTrigger>
                 <AccordionContent className="auth text-base text-muted-foreground">
-                  {faq.answer}
+                  {t(faq.answer)}
                 </AccordionContent>
               </div>
             </AccordionItem>
