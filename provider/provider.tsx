@@ -2,12 +2,19 @@
 
 import React, { ReactNode, useState } from "react"
 import { SunbeltContext } from "@/context/context"
+import { QueryClient, QueryClientProvider } from "react-query"
+import { I18nextProvider } from "react-i18next"
+import i18n from "@/i18n"
+
+const queryClient = new QueryClient()
 
 interface IProps {
   children: ReactNode
 }
 
 const App: React.FC<IProps> = ({ children }) => {
+  const [resetModalOpen, setResetModalOpen] = useState<boolean>(false)
+  const [forgotPwModalOpen, setForgotPwModalOpen] = useState<boolean>(false)
   const [signInModalOpen, setSignInModalOpen] = useState<boolean>(false)
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
   const [signUpModalOpen, setSignUpModalOpen] = useState<boolean>(false)
@@ -16,6 +23,10 @@ const App: React.FC<IProps> = ({ children }) => {
   return (
     <SunbeltContext.Provider
       value={{
+        resetModalOpen,
+        setResetModalOpen,
+        forgotPwModalOpen,
+        setForgotPwModalOpen,
         mobileNavOpen,
         setMobileNavOpen,
         signInModalOpen,
@@ -26,7 +37,9 @@ const App: React.FC<IProps> = ({ children }) => {
         setVerifyModalOpen,
       }}
     >
-      {children}
+      <I18nextProvider i18n={i18n}>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+      </I18nextProvider>
     </SunbeltContext.Provider>
   )
 }

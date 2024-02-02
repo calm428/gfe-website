@@ -1,49 +1,119 @@
 "use client"
 
-import Image from 'next/image';
-import React from 'react';
-import { AspectRatio } from '../ui/aspect-ratio';
-import { Button } from '../ui/button';
-import Card from './Card';
+import { useEffect, useState } from "react"
+import Image from "next/image"
+import axios from "axios"
+import useSWR from "swr"
+
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { Button } from "@/components/ui/button"
+import { PaginationComponent } from "@/components/blogs-and-news/pagination"
+import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
+
+import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
+
+const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
 const BlogsSection = () => {
-    return (
-        <div className='container py-14'>
-            <h1 className='font-monument tracking-wider text-center mb-5 text-2xl text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]'>Blogs</h1>
+  const [blogsData, setBlogsData] = useState<BlogCardDataType[]>([])
+  const [highlightBlog, setHighlightBlog] = useState<BlogCardDataType | null>()
+  const { data: fetchedData, error } = useSWR("/api/blogs/get", fetcher)
 
-            <HighlightsSection />
+  const numberOfBlogsPerPage = 6
 
-            <div className='mt-8 grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </div>
-        </div>
-    );
-};
+  const [currentPage, setCurrentPage] = useState(1)
 
-export default BlogsSection;
+  useEffect(() => {
+    if (!error && fetchedData) {
+      const _blogsData: BlogCardDataType[] = fetchedData.blogs.map(
+        (blog: any) => {
+          return {
+            id: blog._id,
+            title: blog.title,
+            desc: blog.subtitle,
+            image: blog.previewImage,
+            author: {
+              name: blog.author.name,
+              image: "",
+            },
+            date: new Date(blog.createdAt),
+          }
+        }
+      )
 
-function HighlightsSection() {
-    return (
-        <div className='grid grid-cols-1 md:grid-cols-2 md:gap-8 max-w-3xl md:max-w-none mt-16'>
-            <AspectRatio ratio={16 / 9} className="bg-muted">
-                <Image
-                    src="/images/blogs-and-news/highlights.png"
-                    alt="Photo by Drew Beamer"
-                    fill
-                    className="rounded-3xl object-cover"
-                />
-            </AspectRatio>
-            <div className='pt-8'>
-                <h2 className='font-monument tracking-wider mb-3 text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]'>Highlights</h2>
-                <h2 className='font-monument tracking-wider mb-5 text-lg'>Omniscape Unveils Cutting-Edge AR Metaverse: A Revolutionary Leap into Interactive Realities</h2>
-                <p>In a groundbreaking announcement, Omniscape has introduced a state-of-the-art Augmented Reality (AR) Metaverse, redefining the way we perceive and interact with digital spaces. The platform promises to revolutionize immersive experiences by seamlessly blending the physical and virtual worlds </p>
-                <Button variant={"ghost"} className=' px-0 mt-5 text-primary font-monument tracking-wider'>Read More</Button>
-            </div>
-        </div>
-    );
-};
+      setHighlightBlog(_blogsData[0] || {})
+      setBlogsData(_blogsData.slice(1))
+    }
+  }, [fetchedData])
+
+  return (
+    <div className="container py-14">
+      <h1 className="bg-gradient-to-b from-[#2BADFD]  to-[#1570EF] bg-clip-text font-goldman text-5xl tracking-wider text-transparent">
+        Blogs
+      </h1>
+      {highlightBlog && <HighlightsSection {...highlightBlog} />}
+      <div className="grid mt-8 grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {!error ? (
+          fetchedData && blogsData ? (
+            blogsData
+              .slice(
+                (currentPage - 1) * numberOfBlogsPerPage,
+                currentPage * numberOfBlogsPerPage
+              )
+              .map((blog) => <BlogCard {...blog} />)
+          ) : (
+            <>
+              <BlogCardSkeleton />
+              <BlogCardSkeleton className="hidden md:flex" />
+              <BlogCardSkeleton className="hidden xl:flex" />
+            </>
+          )
+        ) : (
+          <div></div>
+        )}
+      </div>
+      <PaginationComponent
+        currentPage={currentPage}
+        maxPage={Math.ceil(blogsData.length / numberOfBlogsPerPage)}
+        gotoPage={(page) => setCurrentPage(page)}
+      />
+    </div>
+  )
+}
+
+export default BlogsSection
+
+function HighlightsSection({
+  id,
+  title,
+  desc,
+  image,
+  author,
+  date,
+}: BlogCardDataType) {
+  return (
+    <div className="mt-5 grid max-w-3xl grid-cols-1 md:max-w-none md:grid-cols-2 md:gap-8">
+      <AspectRatio ratio={16 / 9} className="bg-muted">
+        <Image
+          src={image}
+          alt="Photo by Drew Beamer"
+          fill
+          className="rounded-3xl object-cover"
+        />
+      </AspectRatio>
+      <div className="pt-8">
+        <h2 className="mb-3 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-lg tracking-wider text-transparent">
+          Highlights
+        </h2>
+        <h2 className="mb-5  font-goldman text-2xl tracking-wider">{title}</h2>
+        <p className="font-medium text-muted-foreground">{desc}</p>
+        <Button
+          variant={"ghost"}
+          className=" mt-5 px-0 font-goldman text-base tracking-wider text-primary"
+        >
+          Read More
+        </Button>
+      </div>
+    </div>
+  )
+}

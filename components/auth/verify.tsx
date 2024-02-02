@@ -13,10 +13,10 @@ export function VerifyModal({
 }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-[900px] mx-auto w-[90%] p-0">
+      <DialogContent className="mx-auto w-[90%] max-w-[900px] p-0">
         <div className="flex">
           <div
-            className="w-[55%] hidden md:flex justify-center items-center bg-no-repeat bg-cover bg-center"
+            className="hidden w-[55%] items-center justify-center bg-cover bg-center bg-no-repeat md:flex"
             style={{
               background:
                 "url(/images/auth/auth-layer-bg.png), url(/images/bg-gradient.webp)",
@@ -30,7 +30,7 @@ export function VerifyModal({
               className="w-[80%]"
             />
           </div>
-          <div className="md:w-[45%] w-full p-8 sm:p-24 md:p-8 !py-24">
+          <div className="w-full p-8 !py-24 sm:p-24 md:w-[45%] md:p-8">
             <div className="my-4">
               <div className="text-3xl font-bold">Verification</div>
               <div>Verify your number</div>
@@ -48,7 +48,7 @@ export function VerifyModal({
             </div>
             <Button className="w-full">Confirm</Button>
             <div className="mt-12">
-              Didn't receive code?{" "}
+              Didn{"'"}t receive code?{" "}
               <Button variant="link" className="">
                 Resend
               </Button>

@@ -1,52 +1,82 @@
-"use client";
+"use client"
 
-import React from 'react';
+import { useState } from "react"
+import Link from "next/link"
+import { useTranslation } from "next-i18next"
 
+import { siteConfig } from "@/config/site"
 import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from "@/components/ui/accordion"
 
+import { Button } from "../ui/button"
+
 const FAQS = [
-    {
-        question: "What is Bitcoin mining?",
-        answer: "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
-    },
-    {
-        question: "What is Bitcoin mining?",
-        answer: "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
-    },
-    {
-        question: "What is Bitcoin mining?",
-        answer: "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
-    },
-    {
-        question: "What is Bitcoin mining?",
-        answer: "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
-    }
-];
+  {
+    question: "home_page.section5.question1",
+    answer: "home_page.section5.answer1",
+  },
+  {
+    question: "home_page.section5.question2",
+    answer: "home_page.section5.answer2",
+  },
+  {
+    question: "home_page.section5.question3",
+    answer: "home_page.section5.answer3",
+  },
+  {
+    question: "home_page.section5.question4",
+    answer: "home_page.section5.answer4",
+  },
+]
 
 const FaqSection = () => {
-    return (
-        <div className='mb-32'>
-            <h1 className="text-center font-monument font-normal text-2xl text-primary md:pb-3 pb-2 uppercase">Getting Started with sunbelt renewable mining</h1>
+  const [openItem, setOpenItem] = useState<number | null>(null)
+  const { t } = useTranslation()
 
-            <Accordion type="single" collapsible className='space-y-5 mt-5'>
-                {FAQS.map((faq, index) => (
-                    <AccordionItem key={index} value={index.toString()} className='flex items-start'>
-                        <div className='w-full'>
-                            <AccordionTrigger>{faq.question}</AccordionTrigger>
-                            <AccordionContent>
-                                {faq.answer}
-                            </AccordionContent>
-                        </div>
-                    </AccordionItem>
-                ))}
-            </Accordion>
-        </div>
-    );
-};
+  const handleAccordionItemClick = (index: number) => {
+    setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
+  }
 
-export default FaqSection;
+  return (
+    <div className="py-[100px]">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-[50px] text-center font-goldman text-3xl uppercase">
+        {t("home_page.section5.title")} <br className="hidden sm:inline" />
+        {t("home_page.section5.subtitle")}
+      </h1>
+
+      <Accordion type="single" collapsible className="auth mt-5 space-y-5">
+        {FAQS.map((faq, index) => (
+          <AccordionItem
+            key={index}
+            value={("0" + (index + 1)).toString()}
+            className="auth accordion flex items-start rounded-lg"
+            isOpen={index === openItem}
+          >
+            <div className="w-full">
+              <AccordionTrigger
+                onClick={() => handleAccordionItemClick(index)}
+                className="auth  font-semibold hover:no-underline"
+              >
+                {t(faq.question)}
+              </AccordionTrigger>
+              <AccordionContent className="auth text-base text-muted-foreground">
+                {t(faq.answer)}
+              </AccordionContent>
+            </div>
+          </AccordionItem>
+        ))}
+      </Accordion>
+      <div className="flex items-center justify-center pt-[50px]">
+        <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-bold">
+          <Link href={siteConfig.links.docs}>View All</Link>
+        </Button>
+      </div>
+    </div>
+  )
+}
+
+export default FaqSection

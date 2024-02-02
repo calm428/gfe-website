@@ -1,0 +1,418 @@
+{
+  "fullform": "Energía Fungible Verde",
+  "Future": "Futuro",
+  "view_all": "Ver Todo",
+  "audit": "Auditoría",
+  "whitepaper": "Libro Blanco",
+  "days": "Días",
+  "hours": "Horas",
+  "minutes": "Minutos",
+  "seconds": "Segundos",
+  "buy_now": "Comprar Ahora",
+  "launch_text": "¡La página de aterrizaje oficial de NFT ha sido lanzada oficialmente! 🎉",
+  "home_page": {
+    "section1": {
+      "title": "Green Fungible",
+      "subtitle": "Energy - GFE",
+      "description": "GFE es una iniciativa innovadora diseñada para tokenizar la energía verde. Proporciona una oportunidad única de inversión que reduce la brecha entre el impacto ambiental y el incentivo económico, al tiempo que aporta la primera perspectiva global a los costos eléctricos."
+    },
+    "section2": {
+      "title": "Funcionalidades",
+      "description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables con ingresos, sino que también son reflejo de prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "card1title": "Recompensa por participación",
+      "card1description": "Registre el contrato de participación y obtenga recompensas de nuestra infraestructura.",
+      "card2title": "Cambio climático",
+      "card2description": "Cada unidad compensa completamente las ineficiencias de la red con energía libre de culpa.",
+      "card3title": "Comercio de energía",
+      "card3description": "Compre y venda nuestro token y participe en los ingresos por alojamiento de servidores.",
+      "card4title": "Gobernanza DAO",
+      "card4description": "Participa en la toma de decisiones impulsada por la comunidad."
+    },
+    "section3": {
+      "card1title": "Unidades de DAPPs",
+      "card1description": "Nuestro viaje comenzó con el diseño y construcción de un prototipo de entorno de alojamiento de servidores sostenible.",
+      "card2title": "NFT",
+      "card2description": "Los titulares de NFT tienen la propiedad de estas unidades y obtienen ingresos diarios."
+    },
+    "section4": {
+      "title": "Construyendo un Futuro Mejor",
+      "description": "Al aumentar nuestra capacidad, no solo mejoramos el valor de los tokens GFE, sino que también contribuimos a un cambio societal más amplio hacia el uso de energía renovable. Nuestro planeta se beneficia cada vez que una industria intensiva en energía se traslada a renovable de una manera que las compensaciones de carbono no pueden proporcionar. Industrias que estamos examinando para la fungibilidad de KW.",
+      "description2": "Vamos a participar en industrias intensivas en energía y comercializar nuestra energía de calor de efluente.",
+      "serverHosting": "Alojamiento de servidores",
+      "districtRuralPower": "Energía rural del distrito",
+      "EVCharging": "Carga de vehículos eléctricos",
+      "hydrocarbonProduction": "Producción de hidrocarburos",
+      "brewingAndDistillation": "Cervecería y destilación",
+      "fishFarming": "Acuicultura",
+      "commercialLaundry": "Lavandería comercial"
+    },
+    "section5": {
+      "title": "CONOCE",
+      "subtitle": "LA ENERGÍA FUNGIBLE VERDE - GFE",
+      "question1": "¿Qué es la Energía Fungible Verde?",
+      "answer1": "Los tokens GFE son la representación digital de la energía eléctrica, con cada token significando el derecho a dirigir el uso de 1 kWh de energía verde que será generada y consumida por nuestra infraestructura. Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables con ingresos, sino que también son reflejo de prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "question2": "¿Es rentable la minería de Bitcoin?",
+      "answer2": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se agregan transacciones al blockchain, un libro de contabilidad descentralizado de todas las transacciones en la red Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red.",
+      "question3": "¿Cómo empezar a minar Bitcoins?",
+      "answer3": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se agregan transacciones al blockchain, un libro de contabilidad descentralizado de todas las transacciones en la red Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red.",
+      "question4": "¿Cómo funciona la minería de Bitcoin en una empresa?",
+      "answer4": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se agregan transacciones al blockchain, un libro de contabilidad descentralizado de todas las transacciones en la red Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "converter_section": {
+      "title": "¡Compra Antes del Aumento de Precio!",
+      "subtitle": "Cuenta regresiva hasta que aumente el precio"
+    }
+  },
+  "footer_section": {
+    "section1": {
+      "title": "Únete a nuestra Comunidad",
+      "description": "Al unirte al proyecto GFE, tanto los inversores como los defensores del medio ambiente pueden contribuir al desarrollo de un ecosistema de energía sostenible, mientras reciben los beneficios económicos proporcionados por la tecnología blockchain y el alojamiento de servidores con un precio global de mercancía ecológica y éticamente respaldado para la energía sin extracción."
+    },
+    "section2": {
+      "title": "¿No eres miembro de nuestro boletín exclusivo?",
+      "description": "Obtén acceso instantáneo a una serie de ideas valiosas del mercado y empodérate con conocimientos que pueden ayudarte a tomar el control de tu mercado global de energía."
+    },
+    "goalSection": {
+      "title": "Nuestro Objetivo",
+      "description": "Los tokens GFE son la representación digital de la energía eléctrica, con cada token significando el derecho de utilizar 1 kW de energía verde que será generada por nuestra infraestructura. Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables reflejo de prácticas sostenibles, sino que también tienen una utilidad tangible en el mundo real."
+    },
+    "important_links": "Enlaces Importantes",
+    "services": "Servicios",
+    "community": "Comunidad",
+    "blogs_news": "Blogs y Noticias",
+    "address": "Dirección",
+    "newsletter": "Boletín",
+    "follow_us": "Síguenos",
+    "contact_us": "Contáctanos",
+    "contact_detail_line": "Para obtener más información, por favor contáctenos por correo electrónico a"
+  },
+  "contactus_page": {
+    "bookMeetingTitle": "Agenda una Reunión",
+    "bookMeetingCEO": "Agendar una Reunión con el CEO",
+    "bookMeetingDescription": "¿Interesado en nuestros servicios y dispuesto a participar en nuestra venta privada? ¡Por eso estamos aquí! Agenda una reunión con nuestro equipo para discutir en detalle cómo funciona, la tarificación. Haremos nuestro mejor esfuerzo para ayudarte.",
+    "contactInfo": {
+      "title": "Información de Contacto",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono"
+    },
+    "formFields": {
+      "name": {
+        "title": "Nombre",
+        "placeholder": "Ingrese su nombre completo"
+      },
+      "subject": {
+        "title": "Asunto",
+        "placeholder": "Ingrese el asunto"
+      },
+      "message": {
+        "title": "Mensaje",
+        "placeholder": "Cuéntenos lo que piensa..."
+      }
+    }
+  },
+  "about_us_page": {
+    "name": "Sobre nosotros",
+    "title": "Enfoque innovador",
+    "subtitle": "para la energía global",
+    "GFE_section": {
+      "para1": "La visión de la fundación comenzó con una pregunta simple: ¿por qué conocemos a tantas personas que quieren energía solar y nadie la está comprando? Esta pregunta aún se está respondiendo, pero una gran parte de la respuesta es la fricción del mercado. Una instalación típica para propietarios de viviendas compensa el consumo de energía del hogar y utiliza la red como almacenamiento. Los problemas son muchos en este escenario; con relaciones de monopolio y monopsonio con la red, es un socio comercial cuestionable en el mejor de los casos.",
+      "para2": "En nuestra búsqueda de una solución alternativa, la respuesta llegó sin el uso del mercado local. Preferiríamos vender energía a Yemen; cuesta más allí y realmente necesitan energía. Esta perspectiva global de bienes comunes enmarcó nuestros esfuerzos, y escalar nuestra unidad DAPPr a una escala productiva resolvió varios problemas.",
+      "para3": "Nuestra capacidad de granja solar nos permite generar electricidad para operaciones de consumo local. La escala de nuestras ambiciones, para mover la capacidad energética mundial a energía renovable, necesita impulso global y proporcionará rentabilidad a nuestros miembros mientras mejora el mundo. No necesitas la red; la red te necesita. Libérate de tu correa de conveniencia y haz que el mundo sea mejor.",
+      "para4": "Nuestra unidad prototipo trabajará para normalizar la capacidad eléctrica a escala de servicios públicos sin la necesidad de la red. La unidad produce producción local respaldada por moneda global para editar en su mayoría."
+    },
+    "energy_section": {
+      "title": "Perspectivas sobre la energía",
+      "para1": "La electricidad es una mercancía de producción debido a su estructura. La tecnología actual para almacenarla no está lista para escalar y satisfacer nuestra tecnología de distribución basada en la red. Esta situación hace que las ventas estén vinculadas al consumo en la mayoría de los mercados: casi toda la electricidad se vende y se consume al mismo tiempo.",
+      "para2": "El almacenamiento a pequeña escala, para un activo productivo que consume un recurso, tiene una motivación diferente que un activo productivo que tiene un gasto operativo por su apetito de energía de la red. Nos preocupamos por la electricidad que generamos de manera diferente al impacto financiero sentido por una factura mensual. La producción y el consumo de energía por dirección permiten la mejor de todas las situaciones.",
+      "para3": "El propietario de NFT es responsable de paneles solares limpios para maximizar su KW. El colectivo busca el mejor impacto y la mayor remuneración por su mercancía de energía, y los titulares de tokens respaldan el proceso y obtienen un rendimiento fraccional de la producción y el consumo ético de energía obtenida con fines de lucro.",
+      "para4": "La dieta mundial de energía se debe en parte a la conveniencia de una red. La mayoría de los países en desarrollo no tienen fácil acceso a la electricidad para facilitar el uso de una secadora de ropa. A menudo secan la ropa al aire libre.",
+      "para5": "Poder hacer funcionar una secadora las 24 horas, los 7 días de la semana, los 365 días del año es parte de la promesa de una red en los Estados Unidos, pero una adición reacia a un sistema solar para propietarios de viviendas. Proporcionar una red requiere capacidad para todo. En los Estados Unidos, esto resulta en que muchas plantas funcionen a niveles de potencia bajos (ineficientes) para estar preparadas para las cargas de demanda. Estas plantas suelen funcionar con carbón y son aún más ineficientes (pero menos contaminantes) al funcionar en espera.",
+      "para6": "Cuanto más cargas pequeñas podamos particionar y eliminar de sus configuraciones predeterminadas en la red, más nuestro mundo hace la transición a la energía renovable.",
+      "para7": "El almacenamiento a pequeña escala, para un activo productivo que consume un recurso, tiene una motivación diferente que un activo productivo que tiene un gasto operativo por su apetito de energía de la red. Nos preocupamos por la electricidad que generamos de manera diferente al impacto financiero sentido por una factura mensual. La producción y el consumo de energía por dirección permiten la mejor de todas las situaciones.",
+      "para8": "El propietario de NFT es responsable de paneles solares limpios para maximizar su KW. El colectivo busca el mejor impacto y la mayor remuneración por su mercancía de energía, y los titulares de tokens respaldan el proceso y obtienen un rendimiento fraccional de la producción y el consumo ético de energía obtenida con fines de lucro.",
+      "point1": "Se necesita producción a pequeña escala de hidrocarburos renovables en muchos lugares, esto se debe a",
+      "point2": "los costos intrínsecos de la entrega de energía extractiva. Se necesitan muchos esfuerzos pequeños para cambiar las cosas.",
+      "point3": "Nuestras necesidades de transición energética dependen en gran medida del hidrógeno en muchos planes. Esa infraestructura se puede construir de la manera que nuestro bien común global elija."
+    },
+    "market_section": {
+      "title": "Panorama del Mercado Eléctrico",
+      "para1": "Se estima que el mercado energético global vale: 2 billones de dólares. Sin embargo, está en gran medida centralizado por unas pocas corporaciones. Estas corporaciones a menudo se autodenominan empresas energéticas; pero en nuestra vida, han migrado a áreas rentables de la industria energética. Son empresas de perforación que suministran una demanda desenfrenada de las redes. La energía no es petróleo, el petróleo es un sector rentable del mercado energético. Nuestro mundo necesita mirar más allá de los mandatos corporativos orientados al lucro. A una corporación no le resultará natural hablar de externalidades no valoradas en su proceso. Esas conversaciones solo les costarán dinero, y por ley, las corporaciones están obligadas a buscar ganancias. Quieren hacer las cosas de la misma manera.",
+      "para2": "El mercado intensamente local de monopolio para la electricidad está construido para la estabilidad y conveniencia. Los monopolios comercian entre sí, a tasas de mercado, para la entrega simultánea. El precio del mercado en el Reino Unido está cerca de 0.45 USD por kW y el mercado de energía de China está alrededor de 0.04 por kW. La energía en el Reino Unido no es de carbón envejecido, y la energía de China no es entregable al Reino Unido. No hay un mercado global de commodities para la electricidad.",
+      "point1": "El consumo de energía es conveniente en la ubicación donde opera un negocio.",
+      "point2": "Las plantas de ensamblaje a menudo utilizan acero producido a partir de energía china para el ensamblaje, en parte debido a los intensos requisitos de energía para el acero.",
+      "point3": "Los espacios de oficina utilizan servidores alimentados en Islandia."
+    },
+    "power_section": {
+      "title": "Externalidades No Valoradas en la Producción de Energía",
+      "description": "Las externalidades son costos que no están presentes en el precio de mercado. Hay externalidades en la producción, transporte, consumo y eliminación. El calentamiento global y el colonialismo se atribuyen en parte a estas clasificaciones de fuerzas económicas."
+    },
+    "faq_section": {
+      "question1": "La empresa de servicios públicos local genera XX MW de energía al año. Se utiliza para la industria, residencias y cargas de desalinización de agua. La energía está en forma de petróleo. No hay capacidad de almacenamiento de tamaño de barco, por lo que se mantienen de 1 a 3 pequeños petroleros cerca de la costa para atender las transacciones y la descarga y almacenamiento de grandes petroleros que se estacionan en alta mar.",
+      "question2": "Esta energía se distribuye en diversas áreas de BCS, junto con la empresa de servicios de agua. A menudo, la entrega se realiza mediante camiones. La ciudad tiene un alto consumo de energía para mantener la vida en la ubicación.",
+      "question3": "El uso del área rural adyacente a La Paz para unidades DAPPr puede proporcionar de 1 a 2 MW de energía. En 5-7 años, muchas unidades pueden coordinarse para alimentar el poder del distrito después del desarrollo de la infraestructura. Este suministro a la red desde varios pequeños productores como una entidad descentralizada puede reducir significativamente el consumo de petróleo en la comunidad. Reducirá el calentamiento global y llevará ingresos de una economía occidental a los medios locales de producción, un agricultor solar."
+    }
+  },
+  "nft_page": {
+    "title": "Dar Forma al Futuro de",
+    "subtitle": "energía limpia con DAPPr NFT",
+    "description": "Nuestro viaje comenzó con el diseño y construcción de un prototipo de entorno de alojamiento de servidores gestionado de manera sostenible. Los titulares de NFT tienen la propiedad de estas unidades y obtienen ingresos diarios.",
+    "about_section": {
+      "title": "Acerca de DAPPr NFT",
+      "para1": "Unidad DAPPr - Esta es una fuente de energía solar/eólica, una isla de estabilidad en un ecosistema de red ya estresado, tan común en los países con cinturones solares. Esta unidad proporcionará una entrada de energía renovable de 150 kW durante el día y almacenamiento de energía para operaciones nocturnas. Utilizando tecnología de vanguardia, ofrece el mejor rendimiento con equipos de minería de alta tasa de hash y un sistema de enfriamiento novedoso y eficiente que no requiere evaporación y es en su mayoría pasivo.",
+      "para2": "El NFT que produce nuestro colectivo es una unidad DAPPr, pero el colectivo extiende la membresía a cualquier productor de energía renovable. Al ser propietario de la unidad DAPPr, proporcionas el terreno en el que se encuentra, los paneles solares y mantienes los paneles solares en tu sitio. Se obtienen ingresos diarios por la operación colectiva de las unidades proporcionadas por kW. Nosotros gestionaremos el mantenimiento y las operaciones del sistema desde nuestro lado con ingresos fraccionados. Con DAPPr NFT, puedes disfrutar de todos los beneficios de nuestra unidad y contribuir a un mundo sostenible. Es similar a ser dueño de una pequeña granja, tu cultivo es la luz del sol.",
+      "para3": "Somos los primeros en fusionar blockchain y activos reales. Será una oportunidad única para los individuos. Puedes convertirte en miembro de DAO en nuestro grupo y contribuir positivamente a un futuro renovable y disfrutar de beneficios tangibles al mejorar el mundo."
+    },
+    "hosting_section": {
+      "title": "Blockchain y alojamiento de servidores",
+      "para1": "El costo mundial de la electricidad está determinado por monopolios locales. No tenemos un mercado global para obtener una medición de valor para la energía descentralizada. Los precios de mercado se basan en muchos factores, en nuestro caso, necesitamos un proceso global que consuma energía en todo el mundo para medirlo. Este uso de energía necesita proporcionar un producto fungible a nivel mundial. Vemos la energía y el hash power relacionado con las ganancias de blockchain como una situación ideal para el análisis, consume alrededor del 1% de la energía mundial.",
+      "para2": "Esta conversión de hash power y energía a moneda FIAT ocurre en Londres y China, el equipo es muy similar y la energía es la mayor variable geográfica. A menudo, los entornos de minería (servidores, infraestructura eléctrica, equipos de enfriamiento y viviendas) se dan de baja según el costo de la energía frente a la producción productiva. El entorno y los requisitos de equipo son tan similares que es difícil distinguir la diferencia entre el alojamiento de servidores y la minería. El colectivo no discrimina en nuestro alojamiento de servidores; vendemos nuestra energía a todos. Proporcionamos energía obtenida éticamente un kW a la vez a los consumidores del bien común global."
+    },
+    "faq_section": {
+      "description": "A continuación se encuentran las preguntas frecuentes sobre nuestros NFT con respuestas.",
+      "question1": "¿Qué es DAPPr NFT?",
+      "answer1": "Los tokens GFE son la representación digital de la energía eléctrica, con cada token significando el derecho a dirigir el uso de [1] 1 kWh de energía verde que será generada y consumida por nuestra infraestructura. Esta doble implicación de los tokens GFE significa que no solo sirven como activos negociables con ingresos, sino que también reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "question2": "¿Qué obtendré exactamente al comprar un NFT en su mercado?",
+      "answer2": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones al blockchain, un registro descentralizado de todas las transacciones en la red de Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red.",
+      "question3": "¿Cuál es el costo mínimo de un NFT?",
+      "answer3": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones al blockchain, un registro descentralizado de todas las transacciones en la red de Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red.",
+      "question4": "¿Dónde se encuentra DAPPr?",
+      "answer4": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones al blockchain, un registro descentralizado de todas las transacciones en la red de Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red.",
+      "question5": "¿Cuántos ingresos obtendré de un NFT?",
+      "answer5": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones al blockchain, un registro descentralizado de todas las transacciones en la red de Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red.",
+      "question6": "¿Mi ingreso es fijo?",
+      "answer6": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones al blockchain, un registro descentralizado de todas las transacciones en la red de Bitcoin. Involucra resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    }
+  },
+  "minerHosting": {
+    "bitcoinMining": {
+      "title": "Ecosistema de Minería de Bitcoin",
+      "description": "Plataforma confiable y rentable que proporciona varios servicios de alojamiento para nuevos mineros para usuarios finales."
+    },
+    "buyEnergy": "Comprar Energía",
+    "introToSunbelt": "Introducción a Sunbelt",
+    "transactionFee": "Tarifa de Transacción",
+    "perKbData": "por Datos en Kb",
+    "totalTransaction": "Transacción Total",
+    "miningEcosystem": {
+      "title": "Ecosistema de Minería",
+      "subtitle": null,
+      "description": "Adéntrate en un ecosistema de minería integral diseñado para maximizar eficiencia, sostenibilidad y rentabilidad. Nuestra plataforma integrada ofrece una combinación perfecta de tecnología de vanguardia, prácticas sostenibles y herramientas fáciles de usar."
+    },
+    "solarPower": {
+      "title": "Energía Solar",
+      "subtitle": null,
+      "description": "La energía solar aprovecha la luz solar a través de celdas fotovoltaicas o sistemas térmicos solares, proporcionando electricidad renovable y calor con un impacto ambiental mínimo."
+    },
+    "immersionCooling": {
+      "title": "Enfriamiento por<br>Inmersión",
+      "subtitle": null,
+      "description": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética."
+    },
+    "geothermalHeatPump": {
+      "title": "Bomba de Calor Geotérmica",
+      "subtitle": null,
+      "description": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética."
+    },
+    "earthshipBuilding": {
+      "title": "Construcción de<br> Earthship",
+      "subtitle": null,
+      "description": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética."
+    },
+    "advantagesOfGFEMining": {
+      "title": "Ventajas de la Minería Renovable de la Fundación GFE",
+      "subtitle": null,
+      "description": "Enfocados en la minería sostenible y opciones respetuosas con el medio ambiente, contribuyen a mejorar el mundo."
+    },
+    "specialization": {
+      "title": "Especialización",
+      "subtitle": null,
+      "description": "Los mineros SUNBELT están diseñados específicamente para algoritmos de criptomonedas, brindando un rendimiento superior y eficiencia en comparación con hardware de propósito general como CPUs o GPUs."
+    },
+    "energyEfficiency": {
+      "title": "Eficiencia Energética",
+      "subtitle": null,
+      "description": "Los mineros SUNBELT están diseñados para ser eficientes en energía, minimizando el desperdicio de energía y haciéndolos rentables en cuanto al consumo de electricidad a largo plazo."
+    },
+    "sunbeltMiner": {
+      "title": "Minero SUNBELT",
+      "subtitle": "(Circuito Integrado Específico de Aplicación)",
+      "description": "Los mineros SUNBELT ofrecen varias ventajas en el contexto de la minería de criptomonedas en comparación con otros tipos de hardware de minería, como CPUs o GPUs."
+    },
+    "highHashrate": {
+      "title": "Alto Hashrate",
+      "subtitle": null,
+      "description": "Los SUNBELTs ofrecen un hashrate significativamente más alto, permitiendo una minería de criptomonedas más rápida y eficiente, lo que resulta en una mayor probabilidad de minar con éxito un bloque."
+    },
+    "realTimeTrading": {
+      "title": "Negociación en Tiempo Real",
+      "subtitle": null,
+      "description": "Los mineros SUNBELT son dispositivos dedicados, lo que lleva a una mayor estabilidad y confiabilidad en las operaciones mineras. Su propósito singular contribuye a un rendimiento consistente con el tiempo."
+    },
+    "buyOurEnergy": {
+      "title": "Compre Nuestra Energía y Ahorre Por Máquina",
+      "subtitle": null,
+      "description": null
+    },
+    "historicalPowerGraph": {
+      "title": "Gráfico Histórico de Energía (por kWh)",
+      "subtitle": null,
+      "description": null
+    },
+    "calculate": "Calcular",
+    "amount": "Monto",
+    "bonus": "Bono",
+    "enterAmount": "Ingrese la cantidad",
+    "bonusEnergy": "Energía de Bono",
+    "totalEnergy": "Energía Total",
+    "Price": "Precio",
+    "Next": "Siguiente",
+    "minerList": "Lista de Mineros",
+    "hashRate": "Tasa de Hash",
+    "income": "Ingresos",
+    "machinePrice": "Precio de la Máquina",
+    "accessoryPrice": "Precio del Accesorio",
+    "price": "Precio",
+    "energyAnnually": "Energía Anual",
+    "viewDetail": "Ver Detalles",
+    "planForMining": "Plan para la Minería",
+    "howSunbeltMinersWork": {
+      "title": "Cómo Funcionan los Mineros de Sunbelt",
+      "subtitle": "Descubre la simplicidad de nuestro proceso simplificado. Desde la consulta hasta la ejecución, nuestra plataforma fácil de usar te guía en cada paso de tu viaje de minería de criptomonedas.",
+      "description": null
+    },
+    "miningStepByStep": {
+      "title": "Minería Paso a Paso",
+      "subtitle": "Embárcate en tu viaje de minería con nuestra guía intuitiva paso a paso. Desde la configuración de tu equipo hasta la selección del pool de minería adecuado, nuestra plataforma te acompaña en cada etapa crucial del proceso.",
+      "description": null
+    },
+    "signUp": {
+      "title": "Registro",
+      "subtitle": "Comienza tu viaje completando nuestro sencillo y seguro proceso de registro. Inicia tu experiencia hoy y da el primer paso hacia el crecimiento financiero y la oportunidad.",
+      "description": null
+    },
+    "buyPower": {
+      "title": "Comprar Energía",
+      "subtitle": "Adquiere poder de minería sin esfuerzo a través de una variedad de métodos convenientes. Nuestra plataforma ofrece una variedad de opciones flexibles para comprar poder.",
+      "description": null
+    },
+    "writeMiningPlan": {
+      "title": "Escribir Plan de Minería",
+      "subtitle": "Redactar un plan de minería personalizado es la clave para el éxito. Nuestra plataforma te guía a través del proceso de crear un plan estratégico de minería adaptado a tus objetivos.",
+      "description": null
+    },
+    "miningPool": {
+      "title": "Pool de Minería",
+      "subtitle": "Toma el control de tu experiencia de minería al configurar tu pool de minería preferido y parámetros de pago. Ajusta la configuración de pago para alinearte con tus objetivos financieros.",
+      "description": null
+    },
+    "getReward": {
+      "title": "Obtener Recompensa",
+      "subtitle": "Disfruta de los frutos de tus esfuerzos de minería sin esfuerzo a medida que acumulas recompensas. Nuestra plataforma garantiza un proceso sin problemas para recibir tus merecidos retornos.",
+      "description": null
+    },
+    "maintenance": {
+      "title": "Mantenimiento",
+      "subtitle": "Disfruta de una experiencia de minería sin problemas con nuestra plataforma fácil de usar que simplifica la operación y el mantenimiento de la máquina. Nuestras herramientas intuitivas te permiten optimizar.",
+      "description": null
+    },
+    "benefitsOfHosting": {
+      "title": "Beneficios de Hospedaje en Nuestro Centro de Datos y Ecosistema Verde",
+      "subtitle": null,
+      "description": null
+    },
+    "highIncome": {
+      "title": "Ingresos Altos",
+      "subtitle": "Embárcate en tu viaje de minería con nuestra guía paso a paso intuitiva. Desde la configuración de tu equipo hasta la selección del pool de minería adecuado, nuestra plataforma te acompaña en cada etapa crucial del proceso. Obtén una comprensión integral de la minería de criptomonedas mientras sigues nuestros pasos fáciles de usar, asegurando una experiencia fluida y gratificante.",
+      "description": null
+    },
+    "makeTheWorldBetter": {
+      "title": "Haz un Mundo Mejor",
+      "subtitle": "Bitcoin, creado en 2009, es una moneda digital descentralizada que facilita transacciones entre pares en una cadena de bloques transparente. Con un límite de 21 millones de monedas, sirve como una reserva de valor sin fronteras y un posible refugio contra la inflación.",
+      "description": null
+    },
+    "whySunbelt": {
+      "title": "¿Por Qué Sunbelt?",
+      "subtitle": "Nuestra propia planta de energía, un equipo sólido y el mejor apoyo de socios para formar nuestra infraestructura única que brinda servicios de minería sostenible a los usuarios con confiabilidad, estabilidad, rentabilidad y confianza en el futuro.",
+      "description": null
+    },
+    "renewableEnergy": {
+      "title": "Energía Renovable",
+      "subtitle": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética.",
+      "description": null
+    },
+    "geothermalCooling": {
+      "title": "Enfriamiento Geotérmico",
+      "subtitle": "La energía renovable utiliza recursos naturales como la energía geotérmica para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética.",
+      "description": null
+    },
+    "afterSaleService": {
+      "title": "Servicio Postventa",
+      "description": "El servicio postventa es el soporte continuo al cliente proporcionado por un negocio después de la compra. Incluye asistencia técnica, orientación de mantenimiento y evaluación del impacto ambiental."
+    },
+    "lowFeeHighProfit": {
+      "title": "Baja Tarifa y Alta Ganancia",
+      "description": "La energía renovable utiliza recursos naturales como la luz solar y el viento para obtener energía sostenible, reduciendo el impacto ambiental y fomentando la independencia energética."
+    },
+    "incomeComparison": {
+      "title": "Comparación de Ingresos con Principales Proveedores",
+      "description": null
+    },
+    "HashrateRentingPrice": "Precio de Alquiler de Tasa de Hash",
+    "ServiceFee": "Tarifa de Servicio",
+    "Bandwidth": "Ancho de Banda",
+    "ourCompany": "NUESTRA EMPRESA",
+    "mainBenefit": {
+      "title": "Principal Beneficio",
+      "description": "Aseguramos nuestro futuro promoviendo recursos de energía renovable. Nuestro equipo de expertos se encarga del mantenimiento regular y del servicio de garantía de tu máquina."
+    },
+    "safety": {
+      "title": "SEGURIDAD",
+      "description": "Nuestro compromiso es fortalecer el panorama de seguridad para los mineros. Empleamos protocolos de vanguardia, llevando a cabo."
+    },
+    "sustainability": {
+      "title": "SOSTENIBILIDAD",
+      "description": "En el dinámico ámbito de la minería de Bitcoin, nuestra perspectiva de la industria gira en torno a la sostenibilidad como piedra angular de un crecimiento responsable."
+    },
+    "max_profit": {
+      "title": "MÁXIMA GANANCIA",
+      "description": "En el competitivo panorama de la minería de Bitcoin, nuestra perspectiva de la industria se centra en lograr máximas ganancias mientras se mantiene."
+    },
+    "TrackBitcoinRates": "Seguir Tasas de Bitcoin",
+    "bitcoin_price": {
+      "title": "Precio de Bitcoin",
+      "description": "Bitcoin, creado en 2009, es una moneda digital descentralizada que facilita transacciones entre pares en una cadena de bloques transparente. Con un límite de 21 millones de monedas, sirve como una reserva de valor sin fronteras y un posible refugio contra la inflación."
+    },
+    "CurrentPrice": "Precio Actual",
+    "MarketCap": "Capitalización de Mercado",
+    "sunbeltRenewableMining": "Empezando con Sunbelt Renewable Mining",
+    "bitcoin_mining01": {
+      "question": "¿Qué es la minería de Bitcoin?",
+      "answer": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones a la cadena de bloques, un registro descentralizado de todas las transacciones en la red de Bitcoin. Implica resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "bitcoin_mining02": {
+      "question": "¿Qué es la minería de Bitcoin?",
+      "answer": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones a la cadena de bloques, un registro descentralizado de todas las transacciones en la red de Bitcoin. Implica resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "bitcoin_mining03": {
+      "question": "¿Qué es la minería de Bitcoin?",
+      "answer": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones a la cadena de bloques, un registro descentralizado de todas las transacciones en la red de Bitcoin. Implica resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "bitcoin_mining04": {
+      "question": "¿Qué es la minería de Bitcoin?",
+      "answer": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se añaden transacciones a la cadena de bloques, un registro descentralizado de todas las transacciones en la red de Bitcoin. Implica resolver problemas matemáticos complejos que validan y aseguran transacciones en la red."
+    },
+    "contact_us": {
+      "message": "Para obtener más información, contáctanos por correo electrónico en"
+    },
+    "Contact": "Contacto"
+  },
+  "navbar_section": {
+    "ecosystem": "Ecosistema",
+    "nft": "NFT",
+    "community": "Comunidad",
+    "about_us": "Sobre nosotros",
+    "blogs_and_news": "Blogs y Noticias",
+    "contacts": "Contactos",
+    "sign_in": "Iniciar sesión"
+  }
+}
