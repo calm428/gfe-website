@@ -1,0 +1,23 @@
+name: Deploy to VPS Instance
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+
+            - name: Set up SSH agent
+              uses: webfactory/ssh-agent@v0.5.3
+              with:
+                  ssh-private-key: ${{ secrets.SSH_KEY }}
+
+            - name: Deploy to VPS Instance
+              run: |
+                  ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd ~/gfe-foundation/gfe-landing-page && git checkout main && git pull origin main && source ~/.nvm/nvm.sh && nvm use 18 && yarn && yarn build && pm2 reload 'GFE-LANDING-PAGE'"
