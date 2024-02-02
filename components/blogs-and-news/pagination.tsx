@@ -1,51 +1,91 @@
-"use client"
+import React from "react"
 
-import { ArrowLeft, ArrowRight } from "lucide-react"
-// @ts-ignore
-import ReactPaginate from "react-paginate"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
 
-// @ts-ignore
-const items: number[] = [...Array(33).keys()]
+export function PaginationComponent({
+  currentPage,
+  maxPage,
+  gotoPage,
+}: {
+  currentPage: number
+  maxPage: number
+  gotoPage: (page: number) => void
+}) {
+  const pagination = paginate({ current: currentPage, max: maxPage })
 
-function PaginatedItems() {
-  const pageCount = 78
-  const handlePageClick = (event: any) => {
-    // event.selected
-  }
+  if (!pagination) return null
+
+  const { current, prev, next, items } = pagination
 
   return (
-    <div className="container mt-10">
-      <ReactPaginate
-        breakLabel={
-          <div className="-mt-1.5 hidden px-6 text-xl font-extrabold tracking-[0.5em] text-[#727C8F] lg:block xl:px-12">
-            .....
-          </div>
-        }
-        nextLabel={
-          <div className="flex items-center gap-3 font-monument text-[#727C8F]">
-            <span className="font-goldman text-xl hidden pt-0.5 lg:block">
-              Next
-            </span>
-            <ArrowRight />
-          </div>
-        }
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel={
-          <div className="flex items-center gap-3 font-monument text-[#727C8F]">
-            <ArrowLeft />
-            <span className="font-goldman text-xl font hidden pt-0.5 lg:block">
-              Previous
-            </span>
-          </div>
-        }
-        renderOnZeroPageCount={null}
-        containerClassName="pagination"
-        pageClassName="page-item"
-      />
-    </div>
+    <Pagination className="my-4">
+      <PaginationContent>
+        {prev && (
+          <PaginationItem
+            onClick={() => gotoPage(prev)}
+            className="cursor-pointer"
+          >
+            <PaginationPrevious />
+          </PaginationItem>
+        )}
+
+        {items.map((item) =>
+          typeof item === "number" ? (
+            <PaginationItem
+              key={item}
+              onClick={() => gotoPage(item)}
+              className="cursor-pointer"
+            >
+              <PaginationLink isActive={current === item}>
+                {item}
+              </PaginationLink>
+            </PaginationItem>
+          ) : (
+            <PaginationItem key={Math.random()} className="cursor-pointer">
+              <PaginationEllipsis />
+            </PaginationItem>
+          )
+        )}
+
+        {next && (
+          <PaginationItem
+            onClick={() => gotoPage(next)}
+            className="cursor-pointer"
+          >
+            <PaginationNext />
+          </PaginationItem>
+        )}
+      </PaginationContent>
+    </Pagination>
   )
 }
 
-export default PaginatedItems
+function paginate({ current, max }: { current: number; max: number }) {
+  if (!current || !max) return null
+
+  let prev = current === 1 ? null : current - 1,
+    next = current === max ? null : current + 1,
+    items: (string | number)[] = [1]
+
+  if (current === 1 && max === 1) return { current, prev, next, items }
+  if (current > 4) items.push("...")
+
+  let r = 2,
+    r1 = current - r,
+    r2 = current + r
+
+  for (let i = r1 > 2 ? r1 : 2; i <= Math.min(max, r2); i++) items.push(i)
+
+  if (r2 + 1 < max) items.push("...")
+  if (r2 < max) items.push(max)
+
+  return { current, prev, next, items }
+}

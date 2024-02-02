@@ -4,7 +4,10 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import useSWR from "swr"
 
+import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
+
+import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
@@ -14,6 +17,10 @@ const UpcomingSection = () => {
     "/api/blogs/get?category=event",
     fetcher
   )
+
+  const numberOfEventsPerPage = 6
+
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     if (!error && fetchedData) {
@@ -48,14 +55,28 @@ const UpcomingSection = () => {
       <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
         {!error ? (
           fetchedData && eventsData ? (
-            eventsData.map((event) => <BlogCard {...event} />)
+            eventsData
+              .slice(
+                (currentPage - 1) * numberOfEventsPerPage,
+                currentPage * numberOfEventsPerPage
+              )
+              .map((event) => <BlogCard {...event} />)
           ) : (
-            <div>loading...</div>
+            <>
+              <BlogCardSkeleton />
+              <BlogCardSkeleton className="hidden md:flex" />
+              <BlogCardSkeleton className="hidden xl:flex" />
+            </>
           )
         ) : (
           <></>
         )}
       </div>
+      <PaginationComponent
+        currentPage={currentPage}
+        maxPage={Math.ceil(eventsData.length / numberOfEventsPerPage)}
+        gotoPage={(page) => setCurrentPage(page)}
+      />
       <div className="my-12 border"></div>
     </div>
   )

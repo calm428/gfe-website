@@ -7,18 +7,26 @@ import useSWR from "swr"
 
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Button } from "@/components/ui/button"
+import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
+
+import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
 const BlogsSection = () => {
   const [blogsData, setBlogsData] = useState<BlogCardDataType[]>([])
+  const [highlightBlog, setHighlightBlog] = useState<BlogCardDataType | null>()
   const { data: fetchedData, error } = useSWR("/api/blogs/get", fetcher)
+
+  const numberOfBlogsPerPage = 6
+
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     if (!error && fetchedData) {
-      setBlogsData(
-        fetchedData.blogs.map((blog: any) => {
+      const _blogsData: BlogCardDataType[] = fetchedData.blogs.map(
+        (blog: any) => {
           return {
             id: blog._id,
             title: blog.title,
@@ -30,8 +38,11 @@ const BlogsSection = () => {
             },
             date: new Date(blog.createdAt),
           }
-        })
+        }
       )
+
+      setHighlightBlog(_blogsData[0] || {})
+      setBlogsData(_blogsData.slice(1))
     }
   }, [fetchedData])
 
@@ -40,20 +51,32 @@ const BlogsSection = () => {
       <h1 className="bg-gradient-to-b from-[#2BADFD]  to-[#1570EF] bg-clip-text font-goldman text-5xl tracking-wider text-transparent">
         Blogs
       </h1>
-      {blogsData && blogsData.length > 0 && (
-        <HighlightsSection {...blogsData[blogsData.length - 1]} />
-      )}
+      {highlightBlog && <HighlightsSection {...highlightBlog} />}
       <div className="grid mt-8 grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {!error ? (
           fetchedData && blogsData ? (
-            blogsData.map((blog) => <BlogCard {...blog} />)
+            blogsData
+              .slice(
+                (currentPage - 1) * numberOfBlogsPerPage,
+                currentPage * numberOfBlogsPerPage
+              )
+              .map((blog) => <BlogCard {...blog} />)
           ) : (
-            <div>loading...</div>
+            <>
+              <BlogCardSkeleton />
+              <BlogCardSkeleton className="hidden md:flex" />
+              <BlogCardSkeleton className="hidden xl:flex" />
+            </>
           )
         ) : (
-          <></>
+          <div></div>
         )}
       </div>
+      <PaginationComponent
+        currentPage={currentPage}
+        maxPage={Math.ceil(blogsData.length / numberOfBlogsPerPage)}
+        gotoPage={(page) => setCurrentPage(page)}
+      />
     </div>
   )
 }

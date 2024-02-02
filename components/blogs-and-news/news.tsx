@@ -4,7 +4,10 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import useSWR from "swr"
 
+import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
+
+import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
@@ -14,6 +17,10 @@ const NewsSection = () => {
     "/api/blogs/get?category=news",
     fetcher
   )
+
+  const numberOfNewsPerPage = 6
+
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     if (!error && fetchedData) {
@@ -43,14 +50,28 @@ const NewsSection = () => {
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {!error ? (
             fetchedData && newsData ? (
-              newsData.map((news) => <BlogCard {...news} />)
+              newsData
+                .slice(
+                  (currentPage - 1) * numberOfNewsPerPage,
+                  currentPage * numberOfNewsPerPage
+                )
+                .map((news) => <BlogCard {...news} />)
             ) : (
-              <div>loading...</div>
+              <>
+                <BlogCardSkeleton />
+                <BlogCardSkeleton className="hidden md:flex" />
+                <BlogCardSkeleton className="hidden xl:flex" />
+              </>
             )
           ) : (
-            <></>
+            <div></div>
           )}
         </div>
+        <PaginationComponent
+          currentPage={currentPage}
+          maxPage={Math.ceil(newsData.length / numberOfNewsPerPage)}
+          gotoPage={(page) => setCurrentPage(page)}
+        />
       </div>
     </div>
   )
