@@ -203,6 +203,7 @@ export const siteConfig = {
     docs: "https://ui.shadcn.com",
     discord: "https://discord.gg/mkr95bfA",
     telegram: "https://t.me/gfefoundation",
+    calcom: "https://cal.com/oliver-cawson-duzqyh/meet-ceo-of-gfe-foundation",
   },
   contact: {
     phone: "+44 687 120 967 2",

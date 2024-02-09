@@ -39,13 +39,14 @@ function Introduction() {
                 asChild
               >
                 <Link
-                  href={siteConfig.links.docs}
+                  href={siteConfig.links.calcom}
                   className="flex items-center gap-3"
+                  target="_blank"
                 >
                   {t("contactus_page.bookMeetingCEO")}
                 </Link>
               </Button>
-              <Button
+              {/* <Button
                 className="auth border border-secondary-foreground bg-background px-8 py-4 hover:bg-muted"
                 variant="outline"
                 asChild
@@ -63,7 +64,7 @@ function Introduction() {
                   />
                   Calendly
                 </Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
           <div className="auth flex flex-col gap-6">
@@ -138,29 +139,35 @@ function Introduction() {
             <div className="flex w-full gap-4">
               <div className="w-full">
                 <div className="text-md font-mont text-muted-foreground">
-                {t("contactus_page.formFields.name.title")}
+                  {t("contactus_page.formFields.name.title")}
                 </div>
-                <Input type="text" placeholder= {t("contactus_page.formFields.name.placeholder")} />
+                <Input
+                  type="text"
+                  placeholder={t("contactus_page.formFields.name.placeholder")}
+                />
               </div>
               <div className="w-full">
                 <div className="text-md font-mont text-muted-foreground">
-                {t("contactus_page.contactInfo.email")}
+                  {t("contactus_page.contactInfo.email")}
                 </div>
                 <Input type="email" placeholder="Email address" />
               </div>
             </div>
             <div>
               <div className="text-md font-mont text-muted-foreground">
-              {t("contactus_page.formFields.subject.title")}
+                {t("contactus_page.formFields.subject.title")}
               </div>
-              <Input type="text" placeholder={t("contactus_page.formFields.subject.placeholder")} />
+              <Input
+                type="text"
+                placeholder={t("contactus_page.formFields.subject.placeholder")}
+              />
             </div>
             <div>
               <div className="text-md font-mont text-muted-foreground">
-              {t("contactus_page.formFields.message.title")}
+                {t("contactus_page.formFields.message.title")}
               </div>
               <Textarea
-                placeholder= {t("contactus_page.formFields.message.placeholder")}
+                placeholder={t("contactus_page.formFields.message.placeholder")}
                 rows={10}
               />
             </div>
