@@ -1,6 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import { zodResolver } from "@hookform/resolvers/zod"
+import axios, { AxiosError } from "axios"
 import {
   Facebook,
   Instagram,
@@ -10,13 +12,56 @@ import {
   Twitter,
 } from "lucide-react"
 import { useTranslation } from "next-i18next"
+import { useForm } from "react-hook-form"
+import toast from "react-hot-toast"
+import * as z from "zod"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+
+const formSchema = z.object({
+  email: z.string().email("Please enter a valid email"),
+})
+
+type UserFormValue = z.infer<typeof formSchema>
 
 export function SiteFooter() {
   const { t } = useTranslation()
+
+  const form = useForm<UserFormValue>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      email: "",
+    },
+  })
+
+  const onSubmit = async (data: UserFormValue) => {
+    try {
+      await axios.post("/api/subscribe", data)
+
+      toast.success("Subscribed successfully", {
+        position: "top-right",
+      })
+
+      form.reset()
+    } catch (error) {
+      const axiosError = error as AxiosError | any
+      toast.error(
+        axiosError.response?.data?.message ?? "Something went wrong",
+        {
+          position: "top-right",
+        }
+      )
+    }
+  }
 
   return (
     <footer className="relative z-40 w-full border-b bg-primary/5 ">
@@ -39,20 +84,36 @@ export function SiteFooter() {
             <div className="auth my-1 text-base  font-semibold text-white">
               {t("footer_section.newsletter")}
             </div>
-            <div className="auth flex h-12 w-full items-center">
-              <Input
-                type="email"
-                placeholder="Email"
-                className="auth h-full rounded-r-none  bg-transparent text-white  placeholder:text-white"
-              />
-              <Button
-                type="submit"
-                variant="secondary"
-                className="auth h-full rounded-l-none font-mont font-semibold"
-              >
-                Subscribe
-              </Button>
-            </div>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)}>
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <div className="auth flex h-12 w-full items-center">
+                          <Input
+                            type="email"
+                            placeholder="Email"
+                            {...field}
+                            className="auth h-full rounded-r-none  bg-transparent text-white  placeholder:text-white"
+                          />
+                          <Button
+                            type="submit"
+                            variant="secondary"
+                            className="auth h-full rounded-l-none font-mont font-semibold"
+                          >
+                            Subscribe
+                          </Button>
+                        </div>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </form>
+            </Form>
           </div>
         </div>
         <div className="auth container flex flex-col items-start space-x-4 py-[60px] font-mont sm:justify-between sm:space-x-0 md:flex-row">
