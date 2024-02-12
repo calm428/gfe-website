@@ -66,7 +66,7 @@ export function SiteFooter() {
   return (
     <footer className="relative z-40 w-full border-b bg-primary/5 ">
       <div className=" px-0 lg:px-24">
-        <div className="container relative mx-4 -mt-72 flex flex-col justify-between gap-5 rounded-3xl  bg-primary bg-gradient-to-br from-[#2BADFD] to-[#1570EF] p-[40px] sm:mx-6 md:mx-8 md:-mt-40 md:items-center md:p-[60px] lg:mx-auto lg:flex-row">
+        <div className="relative mx-4 -mt-72 flex flex-col justify-between gap-5 rounded-3xl  bg-primary bg-gradient-to-br from-[#2BADFD] to-[#1570EF] p-[40px] sm:mx-6 md:mx-8 md:-mt-40 md:items-center md:p-[60px] lg:mx-auto lg:flex-row">
           {/* <img
             src="/Group 37.svg"
             alt="bg"

@@ -48,33 +48,9 @@ export function LanguageSelector() {
                 alt="en"
                 width={24}
                 height={24}
-                className="mr-2 h-4 w-4"
+                className="mr-2 size-4"
               />
               English
-            </div>
-          </SelectItem>
-          <SelectItem value="ru">
-            <div className="flex items-center pr-4">
-              <Image
-                src="https://flagcdn.com/ru.svg"
-                alt="ru"
-                width={24}
-                height={24}
-                className="mr-2 h-auto w-4"
-              />
-              Russian
-            </div>
-          </SelectItem>
-          <SelectItem value="ge">
-            <div className="flex items-center pr-4">
-              <Image
-                src="https://flagcdn.com/ge.svg"
-                alt="ge"
-                width={24}
-                height={24}
-                className="mr-2 h-auto w-4"
-              />
-              Georgian
             </div>
           </SelectItem>
           <SelectItem value="es">
