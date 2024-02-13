@@ -84,7 +84,11 @@
     "newsletter": "Boletín",
     "follow_us": "Síguenos",
     "contact_us": "Contáctanos",
-    "contact_detail_line": "Para obtener más información, por favor contáctenos por correo electrónico a"
+    "contact_detail_line": "Para obtener más información, por favor contáctenos por correo electrónico a",
+    "enter_valid_email": "Por favor ingresa una dirección de correo electrónico válida.",
+    "subscribe": "Suscribirse",
+    "subscribe_success": "Te has suscrito con éxito a nuestro boletín.",
+    "subscribe_email_already_exists": "Esta dirección de correo electrónico ya está suscrita."
   },
   "contactus_page": {
     "bookMeetingTitle": "Agenda una Reunión",
@@ -414,6 +418,13 @@
     "blogs_and_news": "Blogs y Noticias",
     "contacts": "Contactos",
     "sign_in": "Iniciar sesión"
+  },
+  "unsubscribe": {
+    "unsubscribe": "Cancelar suscripción",
+    "unsubscribe_content": "¿Deseas dejar de recibir nuestras actualizaciones? No hay problema, tienes control total sobre tu estado de suscripción. Para dejar de recibir correos electrónicos, información financiera y tendencias del mercado, haz clic en el botón 'Cancelar suscripción' a continuación.",
+    "unsubscribe_success": "Te has dado de baja con éxito de nuestro boletín.",
+    "unsubscribe_email_not_exist": "No estás suscrito a nuestro boletín.",
+    "enter_valid_email": "Por favor ingresa una dirección de correo electrónico válida."
   },
   "privacy": {
     "privacy_policy": "Política de privacidad",

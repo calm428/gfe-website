@@ -207,7 +207,7 @@ export const siteConfig = {
   },
   contact: {
     phone: "+44 687 120 967 2",
-    email: "info@sunbelt.com",
+    email: "contact@gfe.foundation",
     address:
       "83 McDonald Road, City of Edinburgh, Alba / Scotland, EH7 4NQ, United Kingdom",
   },

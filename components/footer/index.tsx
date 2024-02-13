@@ -27,14 +27,14 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 
-const formSchema = z.object({
-  email: z.string().email("Please enter a valid email"),
-})
-
-type UserFormValue = z.infer<typeof formSchema>
-
 export function SiteFooter() {
   const { t } = useTranslation()
+
+  const formSchema = z.object({
+    email: z.string().email(t("enter_valid_email")),
+  })
+
+  type UserFormValue = z.infer<typeof formSchema>
 
   const form = useForm<UserFormValue>({
     resolver: zodResolver(formSchema),
@@ -54,12 +54,15 @@ export function SiteFooter() {
       form.reset()
     } catch (error) {
       const axiosError = error as AxiosError | any
-      toast.error(
-        axiosError.response?.data?.message ?? "Something went wrong",
-        {
+      if (axiosError.response?.data?.message === "EMAIL_ALREADY_SUBSCRIBED") {
+        toast.error(t("footer_section.subscribe_email_already_exists"), {
           position: "top-right",
-        }
-      )
+        })
+      } else {
+        toast.error(t("footer_section.something_went_wrong"), {
+          position: "top-right",
+        })
+      }
     }
   }
 
@@ -104,7 +107,7 @@ export function SiteFooter() {
                             variant="secondary"
                             className="auth h-full rounded-l-none font-mont font-semibold"
                           >
-                            Subscribe
+                            {t("subscribe")}
                           </Button>
                         </div>
                       </FormControl>
@@ -116,7 +119,7 @@ export function SiteFooter() {
             </Form>
           </div>
         </div>
-        <div className="auth container flex flex-col items-start space-x-4 py-[60px] font-mont sm:justify-between sm:space-x-0 md:flex-row">
+        <div className="auth container flex flex-col items-start gap-4 py-[60px] font-mont sm:justify-between md:flex-row">
           <div className="w-full md:w-[40%]">
             <div className="my-6 text-xl font-semibold text-primary">
               {t("footer_section.goalSection.title")}
@@ -125,7 +128,7 @@ export function SiteFooter() {
               {t("footer_section.goalSection.description")}
             </div>
           </div>
-          <div className="!mx-0 w-full md:w-[20%]">
+          <div className="!mx-0 w-full md:w-[30%]">
             <div className="my-6 text-xl  font-semibold text-primary">
               {t("footer_section.important_links")}
             </div>
@@ -146,16 +149,16 @@ export function SiteFooter() {
             </div>
             <div>
               <div className="my-2 flex gap-2 font-mont text-base text-primary">
-                <PhoneCall className="h-5 w-5" />
+                <PhoneCall className="size-5" />
                 {siteConfig.contact.phone}
               </div>
               <div className="my-2 flex gap-2 font-mont text-base text-primary">
-                <Mail className="h-5 w-5" />
+                <Mail className="size-5" />
                 {siteConfig.contact.email}
               </div>
             </div>
           </div>
-          <div className="!mx-0 w-full md:w-[20%]">
+          <div className="!mx-0 w-full md:w-[30%]">
             <div className="my-6 text-xl  font-semibold text-primary">
               {t("footer_section.address")}
             </div>
@@ -167,16 +170,16 @@ export function SiteFooter() {
             </div>
             <div className="hidden md:flex">
               <Button variant="ghost" size="icon">
-                <Facebook className="h-5 w-5 fill-current text-primary" />
+                <Facebook className="size-5 fill-current text-primary" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Instagram className="h-5 w-5 text-primary" />
+                <Instagram className="size-5 text-primary" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Twitter className="h-5 w-5 fill-current text-primary" />
+                <Twitter className="size-5 fill-current text-primary" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Linkedin className="h-5 w-5 fill-current text-primary" />
+                <Linkedin className="size-5 fill-current text-primary" />
               </Button>
             </div>
           </div>
@@ -187,16 +190,16 @@ export function SiteFooter() {
             </div>
             <div className="flex">
               <Button variant="ghost" size="icon">
-                <Facebook className="h-5 w-5  fill-current text-primary" />
+                <Facebook className="size-5  fill-current text-primary" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Instagram className="h-5 w-5 text-primary" />
+                <Instagram className="size-5 text-primary" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Twitter className="h-5 w-5 fill-current text-primary" />
+                <Twitter className="size-5 fill-current text-primary" />
               </Button>
               <Button variant="ghost" size="icon">
-                <Linkedin className="h-5 w-5 fill-current text-primary" />
+                <Linkedin className="size-5 fill-current text-primary" />
               </Button>
             </div>
           </div>
