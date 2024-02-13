@@ -2,11 +2,11 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
-import { useTranslation } from "next-i18next"
 
 export default function HomeSection() {
   let { t } = useTranslation()
@@ -22,10 +22,10 @@ export default function HomeSection() {
       <div className="container space-y-14">
         <div className="flex flex-col items-start gap-2">
           {/* TODO: Gradient is confusing */}
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 font-goldman text-5xl font-normal md:pb-10">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  font-goldman text-5xl font-normal text-transparent md:pb-10">
             {/* Bitcoin Mining <br className="hidden sm:inline" />
             Ecosystem */}
-            {t('minerHosting.bitcoinMining.title')}
+            {t("minerHosting.bitcoinMining.title")}
           </h1>
           <p className="max-w-xl font-mont text-lg font-semibold text-muted-foreground md:text-2xl">
             {t("minerHosting.bitcoinMining.description")}
@@ -46,7 +46,7 @@ export default function HomeSection() {
               className="flex items-center justify-between gap-3"
             >
               <Icons.play />
-              <span>{t('minerHosting.introToSunbelt')}</span>
+              <span>{t("minerHosting.introToSunbelt")}</span>
             </Link>
           </Button>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 
@@ -12,7 +13,6 @@ import {
   AccordionTrigger,
 } from "../ui/accordion"
 import { Button } from "../ui/button"
-import { useTranslation } from "next-i18next"
 
 const FAQS = [
   {
@@ -43,7 +43,7 @@ const FAQS = [
 
 function FAQ() {
   const [openItem, setOpenItem] = useState<number | null>(null)
-const {t} = useTranslation()
+  const { t } = useTranslation()
   const handleAccordionItemClick = (index: number) => {
     setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
   }

@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
-import { useTranslation } from "next-i18next"
 
 function Introduction() {
   const { t } = useTranslation()
@@ -22,8 +22,8 @@ function Introduction() {
         </h1>
         <div className="flex flex-col items-center gap-4">
           <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
-          {t("about_us_page.title")} <br />
-          {t("about_us_page.subtitle")}
+            {t("about_us_page.title")} <br />
+            {t("about_us_page.subtitle")}
           </h1>
           <Button className="font mont auth border border-secondary-foreground bg-background text-secondary-foreground hover:bg-muted">
             <Link

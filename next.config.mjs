@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-import { redirect } from "next/dist/server/api-utils/index.js"
 
 import pkg from "./next-i18next.config.js"
 

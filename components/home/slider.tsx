@@ -61,23 +61,23 @@ const SliderSection = () => {
   }
 
   return (
-    <div className=" relative pt-[100px] auth bg-background">
-      <div className="flex lg:px-[200px] flex-col gap-[24px] items-center">
-        <h1 className="font-medium py-[8px] px-[16px] text-base md:text-[20px] rounded-sm bg-[#EEF5FF] text-primary">
+    <div className=" auth relative bg-background pt-[100px]">
+      <div className="flex flex-col items-center gap-[24px] lg:px-[200px]">
+        <h1 className="rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
           Green Fungible Energy
         </h1>
-        <h1 className="font-monument text-[45px] text-center lg:text-[50px] font-normal capitalize text-transparent bg-clip-text bg-gradient-to-b from-[#2BADFD] to-[#1570EF]">
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-monument text-[45px] font-normal capitalize text-transparent lg:text-[50px]">
           What is GFE?
         </h1>
       </div>
 
-      <div className="mt-[270px] my-[30px]">
+      <div className="my-[30px] mt-[270px]">
         <div className="">
-          <div className="w-full flex items-center relative">
-            <div className="h-[500px] mt-20 absolute w-full ">
+          <div className="relative flex w-full items-center">
+            <div className="absolute mt-20 h-[500px] w-full ">
               <Slider arrows={false} {...settings}>
                 {SLIDE_DATA.map((data, index) => (
-                  <div key={index} className="px-[40px]  rounded-sm ">
+                  <div key={index} className="rounded-sm  px-[40px] ">
                     <Image
                       src={"/images/home/gfe-image.png"}
                       className="h-full w-full object-contain"

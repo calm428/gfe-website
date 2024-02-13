@@ -1,10 +1,22 @@
-import Image from "next/image"
-import { Search } from "lucide-react"
+"use client"
 
-import { Button } from "../ui/button"
+import Image from "next/image"
+
+import { useRouter, useSearchParams } from "next/navigation"
 import { Input } from "../ui/input"
 
 function HeroSection() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const handleSearch = (keyword: string) => {
+    console.log(keyword)
+    const params = new URLSearchParams();
+    params.set("q", keyword.trim());
+    
+    router.push(`/blogs-and-news?${params.toString()}`)
+  }
+  
   return (
     <div
       style={{
@@ -29,16 +41,7 @@ function HeroSection() {
           ecosystem, our blogs and news serve as a dynamic platform.
         </p>
         <div className="mx-auto mt-10 flex max-w-sm items-center justify-center gap-3">
-          <Input type="text" placeholder="Search" className=" rounded-r-none" />
-          <Button
-            type="submit"
-            className="w-12"
-            style={{
-              background: "linear-gradient(175deg, #2D79FF 10%, #22B4FD 90%)",
-            }}
-          >
-            <Search />
-          </Button>
+          <Input type="text" placeholder="Search" onChange={(e) => handleSearch(e.target.value)} />
         </div>
       </div>
       <div className="absolute -bottom-6  left-0 z-0 flex w-full md:-bottom-10 lg:-bottom-16">

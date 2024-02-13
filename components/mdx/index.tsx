@@ -73,7 +73,7 @@ const components = {
   p: ({ className, ...props }: any) => (
     <p
       className={cn(
-        "leading-7 text-muted-foreground font-medium [&:not(:first-child)]:my-6",
+        "font-medium leading-7 text-muted-foreground [&:not(:first-child)]:my-6",
         className
       )}
       {...props}
@@ -166,7 +166,7 @@ export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code)
 
   return (
-    <div className="mdx flex-1 auth ">
+    <div className="mdx auth flex-1 ">
       <Component components={components} />
     </div>
   )

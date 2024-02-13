@@ -76,7 +76,7 @@ export default function SpecsSection() {
                 />
                 <h2
                   className={
-                    "text-xl auth font-bold text-white mt-6 xl:mt-8 tracking-wider " +
+                    "auth mt-6 text-xl font-bold tracking-wider text-white xl:mt-8 " +
                     `${isCurrent(index) ? "" : ""}`
                   }
                   dangerouslySetInnerHTML={{ __html: data.title }}

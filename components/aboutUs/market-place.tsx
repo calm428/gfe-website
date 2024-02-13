@@ -8,7 +8,7 @@ function MarketPlace() {
 
   return (
     <div className=" grid place-items-center  gap-6 bg-gradient-to-t from-[#2BADFD] to-[#1570EF] pt-24 lg:grid-cols-2 lg:py-24 lg:pl-24">
-      <div className="flex flex-col gap-8 container text-primary-foreground lg:px-0">
+      <div className="container flex flex-col gap-8 text-primary-foreground lg:px-0">
         <h1 className="font-goldman text-5xl">
           {t("about_us_page.market_section.title")}
         </h1>

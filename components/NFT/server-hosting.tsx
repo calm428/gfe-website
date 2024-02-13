@@ -18,7 +18,7 @@ function ServerHosting() {
             className="mx-auto h-auto w-full"
           />
         </div>
-        <div className="flex flex-col gap-6 container pt-5 max-w-xl justify-center">
+        <div className="container flex max-w-xl flex-col justify-center gap-6 pt-5">
           <h1 className="auth w-fit rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
             {t("Future")}
           </h1>

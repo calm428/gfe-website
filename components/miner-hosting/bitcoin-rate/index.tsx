@@ -1,9 +1,9 @@
 "use client"
 
+import { useTranslation } from "react-i18next"
 import { useQuery } from "react-query"
 
 import BitcoinPriceGraph from "./bitcoin-price-graph"
-import { useTranslation } from "react-i18next"
 
 const useGetBitcoinData = (cryptoName: string, options: any) => {
   return useQuery(
@@ -31,7 +31,7 @@ function BitcoinRateSection() {
 
   return (
     <div className="container px-10 py-20">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
         {t("minerHosting.TrackBitcoinRates")}
       </h1>
 
@@ -39,25 +39,25 @@ function BitcoinRateSection() {
         <BitcoinPriceGraph />
 
         <div className="w-full">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent font-semi bold pb-5 pt-10 font-goldman text-4xl tracking-wider">
-            {t('minerHosting.bitcoin_price.title')}
+          <h1 className="font-semi bold bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5 pt-10 font-goldman text-4xl tracking-wider text-transparent">
+            {t("minerHosting.bitcoin_price.title")}
           </h1>
 
           <div className="text-md mb-4">
-          {t('minerHosting.bitcoin_price.description')}
+            {t("minerHosting.bitcoin_price.description")}
           </div>
           <div className="flex w-full justify-between">
             <div>
               <div className="font-mont text-xl font-semibold text-primary">
                 $ {!isLoading && priceData ? priceData.price : 0}
               </div>
-              <div className="text-md">{t('minerHosting.CurrentPrice')}</div>
+              <div className="text-md">{t("minerHosting.CurrentPrice")}</div>
             </div>
             <div>
               <div className="font-mont text-xl font-semibold text-primary">
                 $ {!isLoading && priceData ? priceData.marketCap : 0} B
               </div>
-              <div className="text-md">{t('minerHosting.MarketCap')}</div>
+              <div className="text-md">{t("minerHosting.MarketCap")}</div>
             </div>
           </div>
         </div>

@@ -54,13 +54,13 @@ const AdvantagesSection = () => {
         <div className="grid grid-cols-1 grid-rows-2 gap-5">
           <AdvantageCard
             icon="/images/home/HighHashrate-icon.png"
-            title={t('minerHosting.highHashrate.title')}
-            text={t('minerHosting.highHashrate.description')}
+            title={t("minerHosting.highHashrate.title")}
+            text={t("minerHosting.highHashrate.description")}
           />
           <AdvantageCard
             icon="/images/home/RealTimeTrading-icon.png"
-            title={t('minerHosting.realTimeTrading.title')}
-            text={t('minerHosting.realTimeTrading.description')}
+            title={t("minerHosting.realTimeTrading.title")}
+            text={t("minerHosting.realTimeTrading.description")}
           />
         </div>
       </div>

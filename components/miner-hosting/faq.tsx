@@ -38,7 +38,7 @@ const FaqSection = () => {
   ]
   return (
     <div className="container">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5 text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
         {t("minerHosting.sunbeltRenewableMining")}
       </h1>
 

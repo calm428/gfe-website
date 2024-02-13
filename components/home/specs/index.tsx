@@ -11,10 +11,10 @@ export default function SpecsSection() {
   const { t } = useTranslation()
 
   return (
-    <div className="relative bg-background	 lg:mt-40 mt-0 overflow-hidden	">
-      <div className="container  flex-col gap-12 space-y-14 flex justify-between py-[100px] lg:py-[207px] pb-20 lg:pb-56 lg:pt-24">
+    <div className="relative mt-0	 overflow-hidden bg-background lg:mt-40	">
+      <div className="container  flex flex-col justify-between gap-12 space-y-14 py-[100px] pb-20 lg:py-[207px] lg:pb-56 lg:pt-24">
         <div className=" relative z-30 flex flex-col gap-[24px]">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  font-goldman text-[30px] font-normal md:text-[45px]">
+          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman  text-[30px] font-normal text-transparent md:text-[45px]">
             {t("home_page.section2.title")}
           </h1>
           <p className="auth text-base font-medium text-muted-foreground lg:w-1/2 lg:text-[20px]">
@@ -42,7 +42,7 @@ export default function SpecsSection() {
       <img
         src="/bgs/global.jpg"
         alt="bg"
-        className="absolute right-0 bottom-0 opacity-50 xl:top-0 "
+        className="absolute bottom-0 right-0 opacity-50 xl:top-0 "
       />
       <img
         src="/bgs/right1.png"

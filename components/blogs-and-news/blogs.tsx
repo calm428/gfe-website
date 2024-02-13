@@ -11,20 +11,23 @@ import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
 
 import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
+import { useSearchParams } from "next/navigation"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
 const BlogsSection = () => {
+  const searchParams = useSearchParams();
+
   const [blogsData, setBlogsData] = useState<BlogCardDataType[]>([])
   const [highlightBlog, setHighlightBlog] = useState<BlogCardDataType | null>()
-  const { data: fetchedData, error } = useSWR("/api/blogs/get", fetcher)
+  const { data: fetchedData, error } = useSWR(`/api/blogs/get${searchParams?.get("q") ? `?keyword=${searchParams?.get("q")}` : ""}`, fetcher)
 
   const numberOfBlogsPerPage = 6
 
   const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
-    if (!error && fetchedData) {
+    if (fetchedData) {
       const _blogsData: BlogCardDataType[] = fetchedData.blogs.map(
         (blog: any) => {
           return {
@@ -52,7 +55,7 @@ const BlogsSection = () => {
         Blogs
       </h1>
       {highlightBlog && <HighlightsSection {...highlightBlog} />}
-      <div className="grid mt-8 grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {!error ? (
           fetchedData && blogsData ? (
             blogsData
@@ -60,7 +63,7 @@ const BlogsSection = () => {
                 (currentPage - 1) * numberOfBlogsPerPage,
                 currentPage * numberOfBlogsPerPage
               )
-              .map((blog) => <BlogCard {...blog} />)
+              .map((blog) => <BlogCard key={blog.id} {...blog} />)
           ) : (
             <>
               <BlogCardSkeleton />

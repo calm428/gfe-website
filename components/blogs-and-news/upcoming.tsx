@@ -8,13 +8,16 @@ import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
 
 import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
+import { useSearchParams } from "next/navigation"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
 const UpcomingSection = () => {
+  const searchParams = useSearchParams();
+
   const [eventsData, setEventsData] = useState<BlogCardDataType[]>([])
   const { data: fetchedData, error } = useSWR(
-    "/api/blogs/get?category=event",
+    `/api/blogs/get?category=event${searchParams?.get("q") ? `&keyword=${searchParams?.get("q")}` : ""}`,
     fetcher
   )
 
@@ -23,7 +26,7 @@ const UpcomingSection = () => {
   const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
-    if (!error && fetchedData) {
+    if (fetchedData) {
       setEventsData(
         fetchedData.blogs.map((event: any) => {
           return {
@@ -43,7 +46,7 @@ const UpcomingSection = () => {
 
   return (
     <div className="bg-background-lighten-10 container mt-5">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mt-20 font-goldman text-5xl tracking-wider">
+      <h1 className="mt-20 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text  font-goldman text-5xl tracking-wider text-transparent">
         UPCOMING EVENTS
       </h1>
       <p className="auth my-6 font-semibold">
@@ -60,7 +63,7 @@ const UpcomingSection = () => {
                 (currentPage - 1) * numberOfEventsPerPage,
                 currentPage * numberOfEventsPerPage
               )
-              .map((event) => <BlogCard {...event} />)
+              .map((event) => <BlogCard key={event.id} {...event} />)
           ) : (
             <>
               <BlogCardSkeleton />
