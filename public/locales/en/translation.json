@@ -10,6 +10,7 @@
   "seconds": "Seconds",
   "buy_now": "Buy Now",
   "launch_text": "NFT Official landing page has officially launched!🎉",
+  "something_went_wrong": "Something went wrong!",
   "home_page": {
     "section1": {
       "title": "Green Fungible",
@@ -84,7 +85,11 @@
     "newsletter": "Newsletter",
     "follow_us": "Follow us",
     "contact_us": "Contact Us",
-    "contact_detail_line": "For further information, plz contact us by email at"
+    "contact_detail_line": "For further information, plz contact us by email at",
+    "enter_valid_email": "Please enter a valid email address.",
+    "subscribe": "Subscribe",
+    "subscribe_success": "You have successfully subscribed to our newsletter.",
+    "subscribe_email_already_exists": "This email address is already subscribed."
   },
   "contactus_page": {
     "bookMeetingTitle": "Book a meeting",
@@ -414,6 +419,13 @@
     "blogs_and_news": "Blogs and News",
     "contacts": "Contacts",
     "sign_in": "Sign In"
+  },
+  "unsubscribe": {
+    "unsubscribe": "Unsubscribe",
+    "unsubscribe_content": "Wish to stop receiving our updates? No problem, you have absolute control over your subscription status. To stop receiving any further emails, financial insights, and market trends, click on the 'unsubscribe' button below.",
+    "unsubscribe_success": "You have successfully unsubscribed from our newsletter.",
+    "unsubscribe_email_not_exist": "Your are not subscribed to our newsletter.",
+    "enter_valid_email": "Please enter a valid email address."
   },
   "privacy": {
     "privacy_policy": "Privacy Policy",
