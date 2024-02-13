@@ -107,7 +107,7 @@ export function SiteFooter() {
                             variant="secondary"
                             className="auth h-full rounded-l-none font-mont font-semibold"
                           >
-                            {t("subscribe")}
+                            {t("footer_section.subscribe")}
                           </Button>
                         </div>
                       </FormControl>
