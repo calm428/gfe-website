@@ -1,14 +1,11 @@
 "use client"
 
-import { FC, useEffect, useState } from "react"
+import axios from "axios"
 import Image from "next/image"
 import Link from "next/link"
-import { notFound } from "next/navigation"
-import axios from "axios"
-import { allDocs } from "contentlayer/generated"
+import { FC, useEffect, useState } from "react"
 import useSWR from "swr"
 
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 import ContactUs from "@/components/NFT/contact-us"
 
 import "react-quill/dist/quill.bubble.css"
@@ -20,14 +17,6 @@ interface PageProps {
   params: {
     slug: string
   }
-}
-
-function getDocFromParams(slug: string) {
-  const doc = allDocs.find((doc) => doc.slugAsParams == slug)
-
-  if (!doc) notFound()
-
-  return doc
 }
 
 interface BlogDataType {

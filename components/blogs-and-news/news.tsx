@@ -8,13 +8,16 @@ import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
 
 import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
+import { useSearchParams } from "next/navigation"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
 const NewsSection = () => {
+  const searchParams = useSearchParams();
+
   const [newsData, setNewsData] = useState<BlogCardDataType[]>([])
   const { data: fetchedData, error } = useSWR(
-    "/api/blogs/get?category=news",
+    `/api/blogs/get?category=news${searchParams?.get("q") ? `&keyword=${searchParams?.get("q")}` : ""}`,
     fetcher
   )
 
@@ -23,7 +26,7 @@ const NewsSection = () => {
   const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
-    if (!error && fetchedData) {
+    if (fetchedData) {
       setNewsData(
         fetchedData.blogs.map((news: any) => {
           return {
@@ -55,7 +58,7 @@ const NewsSection = () => {
                   (currentPage - 1) * numberOfNewsPerPage,
                   currentPage * numberOfNewsPerPage
                 )
-                .map((news) => <BlogCard {...news} />)
+                .map((news) => <BlogCard key={news.id} {...news} />)
             ) : (
               <>
                 <BlogCardSkeleton />

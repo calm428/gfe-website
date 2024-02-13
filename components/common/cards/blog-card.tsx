@@ -30,7 +30,7 @@ export default function BlogCard({
   date,
 }: BlogCardDataType) {
   return (
-    <div className="relative mx-auto flex h-full w-full max-w-[320px] flex-col sm:max-w-[400px]">
+    <div className="relative mx-auto flex size-full max-w-[320px] flex-col sm:max-w-[400px]">
       <AspectRatio ratio={16 / 9} className="relative">
         <Image
           src={image}
@@ -52,7 +52,7 @@ export default function BlogCard({
 
         <div className="relative mt-auto flex items-end justify-between">
           <div className="mt-auto flex gap-2">
-            <Avatar className="h-[50px] w-[50px]">
+            <Avatar className="size-[50px]">
               <AvatarImage src={author?.image} />
               <AvatarFallback>{getInitials(author?.name)}</AvatarFallback>
             </Avatar>
@@ -74,7 +74,7 @@ export default function BlogCard({
           >
             <Link href="/blogs-and-news/[slug]" as={`/blogs-and-news/${id}`}>
               Read More
-              <ArrowRightIcon className="ml-1 h-[20px] w-[20px] stroke-1" />
+              <ArrowRightIcon className="ml-1 size-[20px] stroke-1" />
             </Link>
           </Button>
         </div>
