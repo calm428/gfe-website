@@ -19,7 +19,7 @@ export default function HomeSection() {
         backgroundImage: "url('/bgs/Patterns.svg'),url('/bgs/intro.jpg')",
       }}
     >
-      <div className="container space-y-14 flex pb-20 lg:flex-row  lg:pb-56 lg:pt-24 flex-col justify-between">
+      <div className="container flex flex-col justify-between space-y-14  pb-20 lg:flex-row lg:pb-56 lg:pt-24">
         <div className="flex  w-full flex-col justify-between lg:w-[45%] xl:w-[55%]">
           <div className="mb-5 flex flex-col items-start gap-[56px]">
             <div className="flex flex-col gap-[16px]">
@@ -55,13 +55,13 @@ export default function HomeSection() {
                 New
               </Button>
               <h1 className="mt-2 font-mont font-medium text-muted-foreground md:mt-0 md:text-[16px]">
-              {t("launch_text")}
+                {t("launch_text")}
               </h1>
               <ChevronRightIcon />
             </div>
           </div>
         </div>
-        <div className=" mt-7 items-end w-full lg:mt-0 lg:flex lg:w-[55%] lg:flex-col xl:w-[45%] xl:items-end">
+        <div className=" mt-7 w-full items-end lg:mt-0 lg:flex lg:w-[55%] lg:flex-col xl:w-[45%] xl:items-end">
           <Counter />
         </div>
       </div>

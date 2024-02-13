@@ -52,7 +52,7 @@ const BlogsSection = () => {
         Blogs
       </h1>
       {highlightBlog && <HighlightsSection {...highlightBlog} />}
-      <div className="grid mt-8 grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {!error ? (
           fetchedData && blogsData ? (
             blogsData

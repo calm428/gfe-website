@@ -43,7 +43,7 @@ const UpcomingSection = () => {
 
   return (
     <div className="bg-background-lighten-10 container mt-5">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  mt-20 font-goldman text-5xl tracking-wider">
+      <h1 className="mt-20 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text  font-goldman text-5xl tracking-wider text-transparent">
         UPCOMING EVENTS
       </h1>
       <p className="auth my-6 font-semibold">

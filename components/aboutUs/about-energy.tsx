@@ -7,7 +7,7 @@ function AboutEnergy() {
   let { t } = useTranslation()
   return (
     <div className="bg-[#F9FCFF] pt-24">
-      <div className="flex flex-col items-center gap-6 container ">
+      <div className="container flex flex-col items-center gap-6 ">
         <h1 className=" bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
           {t("about_us_page.energy_section.title")}
         </h1>
@@ -15,7 +15,7 @@ function AboutEnergy() {
           {t("about_us_page.energy_section.para1")}
         </p>
       </div>
-      <div className="container flex flex-col px-0 pt-14 lg:flex-row justify-between">
+      <div className="container flex flex-col justify-between px-0 pt-14 lg:flex-row">
         <div>
           <Image
             src="/images/about-us/nft2.svg"
@@ -25,7 +25,7 @@ function AboutEnergy() {
             className="lg:w-[90%]"
           />
         </div>
-        <div className="flex flex-col gap-8 container lg:w-1/2 lg:pr-24 justify-center">
+        <div className="container flex flex-col justify-center gap-8 lg:w-1/2 lg:pr-24">
           <p className="auth font-mont text-base font-medium md:text-lg">
             {t("about_us_page.energy_section.para2")}
           </p>
@@ -34,8 +34,8 @@ function AboutEnergy() {
           </p>
         </div>
       </div>
-      <div className="container flex flex-col-reverse px-0 pt-14 lg:flex-row justify-between">
-        <div className="flex flex-col gap-8 px-0 lg:w-1/2 lg:px-0  justify-center">
+      <div className="container flex flex-col-reverse justify-between px-0 pt-14 lg:flex-row">
+        <div className="flex flex-col justify-center gap-8 px-0 lg:w-1/2  lg:px-0">
           <p className="auth font-mont text-base font-medium md:text-lg">
             {t("about_us_page.energy_section.para4")}
           </p>

@@ -2,9 +2,9 @@
 
 import React, { ReactNode, useState } from "react"
 import { SunbeltContext } from "@/context/context"
-import { QueryClient, QueryClientProvider } from "react-query"
-import { I18nextProvider } from "react-i18next"
 import i18n from "@/i18n"
+import { I18nextProvider } from "react-i18next"
+import { QueryClient, QueryClientProvider } from "react-query"
 
 const queryClient = new QueryClient()
 
@@ -38,7 +38,9 @@ const App: React.FC<IProps> = ({ children }) => {
       }}
     >
       <I18nextProvider i18n={i18n}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
       </I18nextProvider>
     </SunbeltContext.Provider>
   )

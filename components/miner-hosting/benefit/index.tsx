@@ -1,22 +1,19 @@
 "use client"
 
 import { useTranslation } from "react-i18next"
+
 import { BenefitCard } from "./benefit-card"
 
-
-
 export default function BenefitSection() {
-  const {t} = useTranslation()
+  const { t } = useTranslation()
   const CARDS_DATA = [
     {
-      title: t('minerHosting.highIncome.title'),
-      description:
-        t('minerHosting.highIncome.subtitle'),
+      title: t("minerHosting.highIncome.title"),
+      description: t("minerHosting.highIncome.subtitle"),
     },
     {
-      title: t('minerHosting.makeTheWorldBetter.title'),
-      description:
-        t('minerHosting.makeTheWorldBetter.subtitle'),
+      title: t("minerHosting.makeTheWorldBetter.title"),
+      description: t("minerHosting.makeTheWorldBetter.subtitle"),
     },
   ]
   return (
@@ -26,7 +23,7 @@ export default function BenefitSection() {
         style={{ backgroundImage: "url(/images/how-it-works/bg2.png)" }}
       >
         <div className="font-monument text-2xl text-white">
-          {t('minerHosting.benefitsOfHosting.title')}
+          {t("minerHosting.benefitsOfHosting.title")}
         </div>
       </div>
       <div className="w-full space-y-4 md:w-3/5">

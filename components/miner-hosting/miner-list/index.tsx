@@ -120,8 +120,8 @@ export default function MinerListSection() {
   return (
     <div className="bg-[url('/images/miner-hosting/bg3.png')] bg-cover bg-bottom bg-no-repeat">
       <div className="container flex flex-col items-center justify-between gap-10 px-10 py-16">
-        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
-          {t('minerHosting.minerList')}
+        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
+          {t("minerHosting.minerList")}
         </div>
 
         <div className="mx-auto w-full max-w-[375px] md:max-w-[750px] lg:max-w-[968px] xl:max-w-6xl">
@@ -161,7 +161,7 @@ export default function MinerListSection() {
                   "linear-gradient(9deg, #22B4FD 32.53%, #2D79FF 77.26%)",
               }}
             >
-              {t('minerHosting.planForMining')}
+              {t("minerHosting.planForMining")}
             </Button>
           </div>
         </div>

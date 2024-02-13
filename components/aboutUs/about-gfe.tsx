@@ -11,8 +11,8 @@ const AboutGFE = () => {
       <p className="auth container font-mont text-base font-semibold text-black md:text-lg">
         {t("about_us_page.GFE_section.para1")}
       </p>
-      <div className="container flex flex-col-reverse justify-betwween  lg:flex-row ">
-        <div className="flex flex-col p-0 gap-6 lg:w-2/3 justify-center container">
+      <div className="justify-betwween container flex flex-col-reverse  lg:flex-row ">
+        <div className="container flex flex-col justify-center gap-6 p-0 lg:w-2/3">
           <p className="auth font-mont text-base font-semibold text-muted-foreground md:text-lg">
             {t("about_us_page.GFE_section.para2")}
           </p>

@@ -1,13 +1,14 @@
 "use client"
+
 import { useTranslation } from "react-i18next"
 
 const IncomeComparison = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation()
   return (
     <div className="bg-[url('/images/miner-hosting/bg4.png')] bg-cover bg-bottom bg-no-repeat py-10 md:py-16">
       <div className="container">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
-          {t('minerHosting.incomeComparison.title')}
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5 text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
+          {t("minerHosting.incomeComparison.title")}
         </h1>
 
         <div className="grid grid-cols-1 gap-7 py-10 xl:grid-cols-10 ">
@@ -22,7 +23,7 @@ const IncomeComparison = () => {
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t('minerHosting.HashrateRentingPrice')}
+                    {t("minerHosting.HashrateRentingPrice")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     83.6USD
@@ -30,7 +31,7 @@ const IncomeComparison = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t('minerHosting.ServiceFee')}
+                    {t("minerHosting.ServiceFee")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     250USD
@@ -38,7 +39,7 @@ const IncomeComparison = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t('minerHosting.Bandwidth')}
+                    {t("minerHosting.Bandwidth")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     120TH/s, 1month
@@ -55,26 +56,30 @@ const IncomeComparison = () => {
 
             <div>
               <h2 className="font-monument text-lg tracking-widest text-muted">
-                {t('minerHosting.ourCompany')}
+                {t("minerHosting.ourCompany")}
               </h2>
 
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
                   <span className="font-mont text-muted">
-                  {t('minerHosting.HashrateRentingPrice')}
+                    {t("minerHosting.HashrateRentingPrice")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-muted">
                     83.6USD
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted">{t('minerHosting.ServiceFee')}</span>
+                  <span className="font-mont text-muted">
+                    {t("minerHosting.ServiceFee")}
+                  </span>
                   <span className="ml-3 font-monument tracking-wider text-muted">
                     250USD
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted">{t('minerHosting.Bandwidth')}</span>
+                  <span className="font-mont text-muted">
+                    {t("minerHosting.Bandwidth")}
+                  </span>
                   <span className="ml-3 font-monument tracking-wider text-muted">
                     120TH/s, 1month
                   </span>
@@ -96,7 +101,7 @@ const IncomeComparison = () => {
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                  {t('minerHosting.HashrateRentingPrice')}
+                    {t("minerHosting.HashrateRentingPrice")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     83.6USD
@@ -104,7 +109,7 @@ const IncomeComparison = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t('minerHosting.ServiceFee')}
+                    {t("minerHosting.ServiceFee")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     250USD
@@ -112,7 +117,7 @@ const IncomeComparison = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t('minerHosting.Bandwidth')}
+                    {t("minerHosting.Bandwidth")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     120TH/s, 1month

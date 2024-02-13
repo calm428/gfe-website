@@ -30,7 +30,7 @@ export default function BlogCard({
   date,
 }: BlogCardDataType) {
   return (
-    <div className="relative w-full h-full max-w-[320px] sm:max-w-[400px] mx-auto flex flex-col">
+    <div className="relative mx-auto flex h-full w-full max-w-[320px] flex-col sm:max-w-[400px]">
       <AspectRatio ratio={16 / 9} className="relative">
         <Image
           src={image}
@@ -40,24 +40,24 @@ export default function BlogCard({
         />
       </AspectRatio>
 
-      <div className="relative space-y-3 rounded-3xl rounded-t-none bg-[#E7F0FD] p-5 h-full flex flex-col justify-between">
+      <div className="relative flex h-full flex-col justify-between space-y-3 rounded-3xl rounded-t-none bg-[#E7F0FD] p-5">
         <div>
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] line-clamp-2 bg-clip-text text-transparent font-goldman text-xl tracking-wider ">
+          <h1 className="line-clamp-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-xl tracking-wider text-transparent ">
             {title}
           </h1>
-          <p className="font-medium text-muted-foreground line-clamp-3">
+          <p className="line-clamp-3 font-medium text-muted-foreground">
             {desc}
           </p>
         </div>
 
         <div className="relative mt-auto flex items-end justify-between">
-          <div className="flex gap-2 mt-auto">
+          <div className="mt-auto flex gap-2">
             <Avatar className="h-[50px] w-[50px]">
               <AvatarImage src={author?.image} />
               <AvatarFallback>{getInitials(author?.name)}</AvatarFallback>
             </Avatar>
 
-            <div className="flex flex-col text-sm justify-center">
+            <div className="flex flex-col justify-center text-sm">
               <span className="font-medium text-muted-foreground">
                 {author?.name}
               </span>

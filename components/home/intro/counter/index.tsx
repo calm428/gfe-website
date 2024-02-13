@@ -4,13 +4,13 @@ import { useState } from "react"
 
 import "@radix-ui/react-icons"
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 
 import { Button } from "../../../ui/button"
 import { Input } from "../../../ui/input"
 import CounterCard from "./counter-card"
-import { useTranslation } from "next-i18next"
 
 function Counter() {
   const { t } = useTranslation()
@@ -54,12 +54,10 @@ function Counter() {
       <div className="flex flex-col gap-[24px] bg-[#F9FCFF] p-[32px]">
         <div className="text-center">
           <h2 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
-          {t("home_page.converter_section.title")}
-
+            {t("home_page.converter_section.title")}
           </h2>
           <p className="font-mont text-[14px] font-medium">
-          {t("home_page.converter_section.subtitle")}
-
+            {t("home_page.converter_section.subtitle")}
           </p>
         </div>
         {/* countdown */}

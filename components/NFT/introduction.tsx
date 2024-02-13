@@ -1,15 +1,16 @@
 "use client"
+
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 import { Button } from "../ui/button"
-import { useTranslation } from "next-i18next"
 
 function Introduction() {
   const { t } = useTranslation()
 
   return (
-    <div className="relative flex flex-col items-center gap-12 bg-[url('/images/bg-gradient.webp')] bg-cover pcontainer pt-[100px] lg:px-24">
-      <div className="flex flex-col items-center gap-8 container lg:px-16">
+    <div className="pcontainer relative flex flex-col items-center gap-12 bg-[url('/images/bg-gradient.webp')] bg-cover pt-[100px] lg:px-24">
+      <div className="container flex flex-col items-center gap-8 lg:px-16">
         <div className="auth relative flex items-center justify-between rounded-3xl bg-primary/10 py-[25px] pl-[8px]  pr-[16px] shadow-lg md:rounded-full md:py-[8px] lg:w-[629px]">
           <Button className="absolute -top-3 left-[40%] rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
             New
@@ -20,11 +21,11 @@ function Introduction() {
         </div>
         <div className="flex flex-col items-center gap-4">
           <h1 className="xs:text-5xl bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-4xl font-medium capitalize text-transparent md:text-5xl">
-          {t("nft_page.title")} <br />
-          {t("nft_page.subtitle")}
+            {t("nft_page.title")} <br />
+            {t("nft_page.subtitle")}
           </h1>
           <p className="auth text-md w-full text-center font-semibold text-muted-foreground">
-          {t("nft_page.description")}
+            {t("nft_page.description")}
           </p>
         </div>
       </div>

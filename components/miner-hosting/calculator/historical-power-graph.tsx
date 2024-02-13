@@ -83,7 +83,7 @@ const HistoricalPowerGraph = () => {
   return (
     <div className="flex w-full flex-col justify-between space-y-5 bg-white p-10 drop-shadow-2xl">
       <h1 className="auth text-sm font-semibold tracking-wider text-primary">
-        {t('minerHosting.historicalPowerGraph.title')}
+        {t("minerHosting.historicalPowerGraph.title")}
       </h1>
       {/* @ts-ignore */}
       <Line id="myChart" data={data} options={options} />

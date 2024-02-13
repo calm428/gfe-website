@@ -43,7 +43,7 @@ const FaqSection = () => {
 
   return (
     <div className="py-[100px]">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-[50px] text-center font-goldman text-3xl uppercase">
+      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-[50px]  text-center font-goldman text-3xl uppercase text-transparent">
         {t("home_page.section5.title")} <br className="hidden sm:inline" />
         {t("home_page.section5.subtitle")}
       </h1>

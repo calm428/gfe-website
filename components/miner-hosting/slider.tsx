@@ -47,7 +47,7 @@ const SliderSection = () => {
     {
       icon: "/images/home/slide-icon-3.png",
       title: "$ 0.000003",
-      text: t('minerHosting.transactionFee'),
+      text: t("minerHosting.transactionFee"),
     },
     {
       icon: "/images/home/slide-icon-1.png",
@@ -62,7 +62,7 @@ const SliderSection = () => {
     {
       icon: "/images/home/slide-icon-3.png",
       title: "$ 0.000003",
-      text: t('minerHosting.transactionFee'),
+      text: t("minerHosting.transactionFee"),
     },
   ]
 

@@ -29,7 +29,7 @@ function HeroSection() {
           ecosystem, our blogs and news serve as a dynamic platform.
         </p>
         <div className="mx-auto mt-10 flex max-w-sm items-center justify-center gap-3">
-          <Input type="text" placeholder="Search" className=" rounded-r-none" />
+          <Input type="text" placeholder="Search" className="rounded-r-none" />
           <Button
             type="submit"
             className="w-12"

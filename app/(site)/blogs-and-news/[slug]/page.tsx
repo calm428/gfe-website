@@ -80,12 +80,12 @@ const Page: FC<PageProps> = ({ params }) => {
       <div className="mb-10 flex">
         <Link
           href="/blogs-and-news"
-          className="border-r auth font-medium border-muted-foreground bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text px-5  tracking-wider text-transparent"
+          className="auth border-r border-muted-foreground bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text px-5 font-medium  tracking-wider text-transparent"
         >
           Blogs and News
         </Link>
 
-        <div className="border-l auth font-medium text-muted-foreground border-muted-foreground px-5">
+        <div className="auth border-l border-muted-foreground px-5 font-medium text-muted-foreground">
           {blogData?.author?.name}
         </div>
       </div>
@@ -93,7 +93,7 @@ const Page: FC<PageProps> = ({ params }) => {
       {!error ? (
         fetchedData && blogData ? (
           <>
-            <div className="relative mb-10 w-full h-[300px] mx-auto">
+            <div className="relative mx-auto mb-10 h-[300px] w-full">
               <Image
                 src={blogData?.image}
                 alt="Photo by Drew Beamer"

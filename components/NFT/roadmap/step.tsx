@@ -10,10 +10,10 @@ function Step({ step, desc }: Props) {
           step <= 2
             ? "border-[#019CF0]"
             : step === 3
-            ? "border-[#F4A120]"
-            : step === 3
-            ? "border-[#BBDE00]"
-            : "border-[#BAC82E]"
+              ? "border-[#F4A120]"
+              : step === 3
+                ? "border-[#BBDE00]"
+                : "border-[#BAC82E]"
         }`}
       >
         <div
@@ -21,10 +21,10 @@ function Step({ step, desc }: Props) {
             step <= 2
               ? "text-[#019CF0]"
               : step === 3
-              ? "text-[#F4A120]"
-              : step === 3
-              ? "text-[#BBDE00]"
-              : "text-[#BAC82E]"
+                ? "text-[#F4A120]"
+                : step === 3
+                  ? "text-[#BBDE00]"
+                  : "text-[#BAC82E]"
           }`}
         >
           S {step}
@@ -35,10 +35,10 @@ function Step({ step, desc }: Props) {
           step <= 2
             ? "text-[#019CF0]"
             : step === 3
-            ? "text-[#F4A120]"
-            : step === 3
-            ? "text-[#BBDE00]"
-            : "text-[#BAC82E]"
+              ? "text-[#F4A120]"
+              : step === 3
+                ? "text-[#BBDE00]"
+                : "text-[#BAC82E]"
         } font-monument text-lg font-semibold xl:text-[24px]`}
       >
         Stage {step}

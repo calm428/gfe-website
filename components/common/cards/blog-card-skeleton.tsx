@@ -17,29 +17,29 @@ export default function BlogCardSkeleton({
 }) {
   return (
     <div
-      className={`relative w-full h-full max-w-[320px] sm:max-w-[400px] mx-auto flex flex-col border rounded-3xl overflow-hidden ${className}`}
+      className={`relative mx-auto flex h-full w-full max-w-[320px] flex-col overflow-hidden rounded-3xl border sm:max-w-[400px] ${className}`}
     >
-      <Skeleton className="w-full h-48 rounded-none" />
+      <Skeleton className="h-48 w-full rounded-none" />
 
-      <div className="relative space-y-3 p-5 flex flex-col">
+      <div className="relative flex flex-col space-y-3 p-5">
         <div>
-          <Skeleton className="w-2/3 h-6 mb-2" />
-          <Skeleton className="w-full h-5 mb-1" />
-          <Skeleton className="w-full h-5 mb-1" />
-          <Skeleton className="w-full h-5 mb-1" />
+          <Skeleton className="mb-2 h-6 w-2/3" />
+          <Skeleton className="mb-1 h-5 w-full" />
+          <Skeleton className="mb-1 h-5 w-full" />
+          <Skeleton className="mb-1 h-5 w-full" />
         </div>
 
         <div className="relative flex items-end justify-between">
-          <div className="flex gap-2 mt-auto">
-            <Skeleton className="w-20 h-20 rounded-full" />
+          <div className="mt-auto flex gap-2">
+            <Skeleton className="h-20 w-20 rounded-full" />
 
-            <div className="flex flex-col text-sm justify-center space-y-2">
-              <Skeleton className="w-28 h-5" />
-              <Skeleton className="w-16 h-4" />
+            <div className="flex flex-col justify-center space-y-2 text-sm">
+              <Skeleton className="h-5 w-28" />
+              <Skeleton className="h-4 w-16" />
             </div>
           </div>
 
-          <Skeleton className="w-24 h-6" />
+          <Skeleton className="h-6 w-24" />
         </div>
       </div>
     </div>

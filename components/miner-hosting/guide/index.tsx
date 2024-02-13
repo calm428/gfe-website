@@ -30,35 +30,32 @@ export default function GuideSection() {
     },
     {
       index: 3,
-      title: t('minerHosting.writeMiningPlan.title'),
-      description:t('minerHosting.writeMiningPlan.subtitle'),
+      title: t("minerHosting.writeMiningPlan.title"),
+      description: t("minerHosting.writeMiningPlan.subtitle"),
       icon: "/images/how-it-works/write-mining-plan.svg",
     },
     {
       index: 4,
-      title: t('minerHosting.miningPool.title'),
-      description:
-        t('minerHosting.miningPool.subtitle'),
+      title: t("minerHosting.miningPool.title"),
+      description: t("minerHosting.miningPool.subtitle"),
       icon: "/images/how-it-works/mining-pool.svg",
     },
     {
       index: 5,
-      title: t('minerHosting.getReward.title'),
-      description:
-        t('minerHosting.getReward.subtitle'),
+      title: t("minerHosting.getReward.title"),
+      description: t("minerHosting.getReward.subtitle"),
       icon: "/images/how-it-works/get-reward.svg",
     },
     {
       index: 6,
-      title: t('minerHosting.maintenance.title'),
-      description:
-        t('minerHosting.maintenance.subtitle'),
+      title: t("minerHosting.maintenance.title"),
+      description: t("minerHosting.maintenance.subtitle"),
       icon: "/images/how-it-works/maintenance.svg",
     },
   ]
   return (
     <div className="flex flex-col items-center justify-between pb-4">
-      <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent  pb-5 text-center font-goldman text-5xl font-normal md:pb-10">
+      <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
         {t("minerHosting.miningStepByStep.title")}
       </div>
       <div className="text-md max-w-5xl text-center font-mont text-muted-foreground">
