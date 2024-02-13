@@ -419,6 +419,20 @@
     "contacts": "Contactos",
     "sign_in": "Iniciar sesión"
   },
+  "blogs_and_news": {
+    "blogs_and_news": "Blogs y Noticias",
+    "blogs_and_news_description": "En el mundo en constante evolución de la minería de Bitcoin y el ecosistema en general, nuestros blogs y noticias sirven como una plataforma dinámica.",
+    "search": "Buscar",
+    "blogs": "Blogs",
+    "news": "Noticias",
+    "upcoming_events": "Próximos Eventos",
+    "upcoming_events_description": "¡Manténgase informado de nuestro próximo evento emocionante, donde la innovación se encuentra con la comunidad! Únase a nosotros para una experiencia enriquecedora llena de conocimientos, oportunidades de networking y los últimos avances en el mundo de la minería de criptomonedas.",
+    "no_blogs_found": "No se encontraron blogs",
+    "no_news_found": "No se encontraron noticias",
+    "no_upcoming_events_found": "No se encontraron próximos eventos",
+    "read_more": "Leer más",
+    "highlights": "Aspectos destacados"
+  },
   "unsubscribe": {
     "unsubscribe": "Cancelar suscripción",
     "unsubscribe_content": "¿Deseas dejar de recibir nuestras actualizaciones? No hay problema, tienes control total sobre tu estado de suscripción. Para dejar de recibir correos electrónicos, información financiera y tendencias del mercado, haz clic en el botón 'Cancelar suscripción' a continuación.",
