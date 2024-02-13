@@ -1,9 +1,9 @@
 "use client"
 
-import axios from "axios"
+import { FC, useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { FC, useEffect, useState } from "react"
+import axios from "axios"
 import useSWR from "swr"
 
 import ContactUs from "@/components/NFT/contact-us"

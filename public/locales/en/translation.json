@@ -427,6 +427,20 @@
     "unsubscribe_email_not_exist": "Your are not subscribed to our newsletter.",
     "enter_valid_email": "Please enter a valid email address."
   },
+  "blogs_and_news": {
+    "blogs_and_news": "Blogs and News",
+    "blogs_and_news_description": "In the ever-evolving realm of Bitcoin mining and the broader ecosystem, our blogs and news serve as a dynamic platform.",
+    "search": "Search",
+    "blogs": "Blogs",
+    "news": "News",
+    "upcoming_events": "Upcoming Events",
+    "upcoming_events_description": "Stay tuned for our next exciting event, where innovation meets community! Join us for an enriching experience filled with insights, networking opportunities, and the latest developments in the world of cryptocurrency mining.",
+    "no_blogs_found": "No blogs found",
+    "no_news_found": "No news found",
+    "no_upcoming_events_found": "No upcoming events found",
+    "read_more": "Read More",
+    "highlights": "Highlights"
+  },
   "privacy": {
     "privacy_policy": "Privacy Policy",
     "last_updated": "Last Updated",

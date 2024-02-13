@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
+import { useTranslation } from "next-i18next"
 
 import { formatCustomDate, getInitials } from "@/lib/utils"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
@@ -29,6 +30,8 @@ export default function BlogCard({
   author,
   date,
 }: BlogCardDataType) {
+  const { t } = useTranslation()
+
   return (
     <div className="relative mx-auto flex size-full max-w-[320px] flex-col sm:max-w-[400px]">
       <AspectRatio ratio={16 / 9} className="relative">
@@ -73,7 +76,7 @@ export default function BlogCard({
             asChild
           >
             <Link href="/blogs-and-news/[slug]" as={`/blogs-and-news/${id}`}>
-              Read More
+              {t("blogs_and_news.read_more")}
               <ArrowRightIcon className="ml-1 size-[20px] stroke-1" />
             </Link>
           </Button>

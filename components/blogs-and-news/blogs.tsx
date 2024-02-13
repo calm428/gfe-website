@@ -2,7 +2,10 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { useSearchParams } from "next/navigation"
 import axios from "axios"
+import { useTranslation } from "next-i18next"
+import { MdOutlineSpeakerNotesOff } from "react-icons/md"
 import useSWR from "swr"
 
 import { AspectRatio } from "@/components/ui/aspect-ratio"
@@ -11,16 +14,19 @@ import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
 
 import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
-import { useSearchParams } from "next/navigation"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
 const BlogsSection = () => {
-  const searchParams = useSearchParams();
+  const { t } = useTranslation()
+  const searchParams = useSearchParams()
 
   const [blogsData, setBlogsData] = useState<BlogCardDataType[]>([])
   const [highlightBlog, setHighlightBlog] = useState<BlogCardDataType | null>()
-  const { data: fetchedData, error } = useSWR(`/api/blogs/get${searchParams?.get("q") ? `?keyword=${searchParams?.get("q")}` : ""}`, fetcher)
+  const { data: fetchedData, error } = useSWR(
+    `/api/blogs/get${searchParams?.get("q") ? `?keyword=${searchParams?.get("q")}` : ""}`,
+    fetcher
+  )
 
   const numberOfBlogsPerPage = 6
 
@@ -44,7 +50,7 @@ const BlogsSection = () => {
         }
       )
 
-      setHighlightBlog(_blogsData[0] || {})
+      setHighlightBlog(_blogsData[0] || null)
       setBlogsData(_blogsData.slice(1))
     }
   }, [fetchedData])
@@ -52,18 +58,27 @@ const BlogsSection = () => {
   return (
     <div className="container py-14">
       <h1 className="bg-gradient-to-b from-[#2BADFD]  to-[#1570EF] bg-clip-text font-goldman text-5xl tracking-wider text-transparent">
-        Blogs
+        {t("blogs_and_news.blogs")}
       </h1>
       {highlightBlog && <HighlightsSection {...highlightBlog} />}
       <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {!error ? (
           fetchedData && blogsData ? (
-            blogsData
-              .slice(
-                (currentPage - 1) * numberOfBlogsPerPage,
-                currentPage * numberOfBlogsPerPage
-              )
-              .map((blog) => <BlogCard key={blog.id} {...blog} />)
+            highlightBlog || blogsData.length > 0 ? (
+              blogsData
+                .slice(
+                  (currentPage - 1) * numberOfBlogsPerPage,
+                  currentPage * numberOfBlogsPerPage
+                )
+                .map((blog) => <BlogCard key={blog.id} {...blog} />)
+            ) : (
+              <div className="flex h-60 w-full items-center justify-center rounded-lg bg-muted md:col-span-2 xl:col-span-3">
+                <div className="flex flex-col items-center gap-2">
+                  <MdOutlineSpeakerNotesOff className="size-16 text-muted-foreground" />
+                  {t("blogs_and_news.no_blogs_found")}
+                </div>
+              </div>
+            )
           ) : (
             <>
               <BlogCardSkeleton />
@@ -94,6 +109,7 @@ function HighlightsSection({
   author,
   date,
 }: BlogCardDataType) {
+  const { t } = useTranslation()
   return (
     <div className="mt-5 grid max-w-3xl grid-cols-1 md:max-w-none md:grid-cols-2 md:gap-8">
       <AspectRatio ratio={16 / 9} className="bg-muted">
@@ -106,7 +122,7 @@ function HighlightsSection({
       </AspectRatio>
       <div className="pt-8">
         <h2 className="mb-3 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-lg tracking-wider text-transparent">
-          Highlights
+          {t("blogs_and_news.highlights")}
         </h2>
         <h2 className="mb-5  font-goldman text-2xl tracking-wider">{title}</h2>
         <p className="font-medium text-muted-foreground">{desc}</p>
@@ -114,7 +130,7 @@ function HighlightsSection({
           variant={"ghost"}
           className=" mt-5 px-0 font-goldman text-base tracking-wider text-primary"
         >
-          Read More
+          {t("blogs_and_news.read_more")}
         </Button>
       </div>
     </div>
