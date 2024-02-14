@@ -147,7 +147,7 @@ function Introduction() {
                       {t("contactus_page.contactInfo.email")}
                     </div>
                     <div className="text-md font-medium text-black">
-                      info@gfe.foundation
+                      {siteConfig.emails.info}
                     </div>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ function Introduction() {
                       {t("contactus_page.contactInfo.phone")}
                     </div>
                     <div className="text-md font-medium text-black">
-                      0000000000000
+                      {siteConfig.contact.phone}
                     </div>
                   </div>
                 </div>
@@ -170,8 +170,7 @@ function Introduction() {
                   </div>
                   <div>
                     <div className="text-md font-medium text-black">
-                      83 McDonald Road, City of Edinburgh, Alba / Scotland, EH7
-                      4NQ, United Kingdom
+                      {siteConfig.contact.address}
                     </div>
                   </div>
                 </div>
