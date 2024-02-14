@@ -98,12 +98,17 @@
     "contactInfo": {
       "title": "Contact info",
       "email": "Email Us",
-      "phone": "Phone"
+      "phone": "Phone",
+      "connect_with_us": "Connect with us"
     },
     "formFields": {
       "name": {
         "title": "Name",
         "placeholder": "Enter your full name"
+      },
+      "email": {
+        "title": "Email",
+        "placeholder": "Enter your email address"
       },
       "subject": {
         "title": "Subject",
@@ -112,7 +117,14 @@
       "message": {
         "title": "Message",
         "placeholder": "Tell us what you think..."
-      }
+      },
+      "send": "Send",
+      "success": "Your message has been sent successfully.",
+      "error": "Something went wrong. Please try again later.",
+      "invalidEmail": "Please enter a valid email address.",
+      "invalidName": "Please enter a valid name.",
+      "invalidSubject": "Please enter a valid subject.",
+      "invalidMessage": "Please enter a valid message."
     }
   },
   "about_us_page": {

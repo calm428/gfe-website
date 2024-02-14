@@ -1,6 +1,5 @@
 "use client"
 
-import ErrorPage from "next/error"
 import { useSearchParams } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios, { AxiosError } from "axios"
@@ -19,12 +18,6 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-
-const validateEmail = (email: string) => {
-  // Email Regex Pattern
-  let regexPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
-  return regexPattern.test(String(email).toLowerCase())
-}
 
 function Page() {
   const { t } = useTranslation()
