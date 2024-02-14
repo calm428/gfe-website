@@ -89,7 +89,9 @@
     "enter_valid_email": "Please enter a valid email address.",
     "subscribe": "Subscribe",
     "subscribe_success": "You have successfully subscribed to our newsletter.",
-    "subscribe_email_already_exists": "This email address is already subscribed."
+    "subscribe_email_already_exists": "This email address is already subscribed.",
+    "privacy_policy": "Privacy Policy",
+    "terms_and_conditions": "Terms & Conditions"
   },
   "contactus_page": {
     "bookMeetingTitle": "Book a meeting",

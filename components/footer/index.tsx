@@ -205,8 +205,18 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      <div className="auth w-full bg-primary/10 py-6 text-center text-xs font-medium uppercase text-primary">
-        © 2024 GFE Foundation. ALL RIGHTS RESERVED
+      <div className="auth flex w-full flex-col items-center justify-between gap-2 bg-primary/10 p-6 py-3 text-xs font-medium uppercase text-primary md:flex-row md:py-6">
+        <p className="order-last">
+          © 2024 GFE Foundation. ALL RIGHTS RESERVED
+        </p>
+        <div className="flex gap-4">
+          <Link href="/privacy" target="_blank">
+            {t("footer_section.privacy_policy")}
+          </Link>
+          <Link href="/terms" target="_blank">
+            {t("footer_section.terms_and_conditions")}
+          </Link>
+        </div>
       </div>
     </footer>
   )
