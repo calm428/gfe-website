@@ -1,19 +1,34 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { zodResolver } from "@hookform/resolvers/zod"
+import axios, { AxiosError } from "axios"
 import {
   Facebook,
   Instagram,
   Linkedin,
+  Loader2,
   Mail,
   MapPin,
   Phone,
   Twitter,
 } from "lucide-react"
 import { useTranslation } from "next-i18next"
+import { useForm } from "react-hook-form"
+import toast from "react-hot-toast"
+import * as z from "zod"
 
 import { siteConfig } from "@/config/site"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
 
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
@@ -21,6 +36,56 @@ import { Textarea } from "../ui/textarea"
 
 function Introduction() {
   const { t } = useTranslation()
+
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+
+  const formSchema = z.object({
+    name: z
+      .string()
+      .min(1, { message: t("contactus_page.formFields.invalidName") }),
+    email: z.string().email(t("contactus_page.formFields.invalidEmail")),
+    subject: z
+      .string()
+      .min(1, { message: t("contactus_page.formFields.invalidSubject") }),
+    message: z
+      .string()
+      .min(1, { message: t("contactus_page.formFields.invalidMessage") }),
+  })
+
+  type UserFormValue = z.infer<typeof formSchema>
+
+  const form = useForm<UserFormValue>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  })
+
+  const onSubmit = async (data: UserFormValue) => {
+    setIsLoading(true)
+
+    try {
+      await axios.post("/api/feedback", {
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+      })
+
+      toast.success(t("contactus_page.formFields.success"), {
+        position: "top-right",
+      })
+    } catch (error) {
+      toast.error(t("contactus_page.formFields.error"), {
+        position: "top-right",
+      })
+    }
+
+    setIsLoading(false)
+  }
 
   return (
     <div className="auth w-full bg-[url('/images/bg-gradient.webp')] bg-cover bg-center bg-no-repeat px-10 py-24">
@@ -60,7 +125,7 @@ function Introduction() {
                     width={24}
                     height={25}
                     alt="calendly"
-                    className="h-6 w-6"
+                    className="size-6"
                   />
                   Calendly
                 </Link>
@@ -75,7 +140,7 @@ function Introduction() {
               <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-4">
                   <div className="rounded-full bg-primary/10 p-3">
-                    <Mail className="h-6 w-6 text-primary" />
+                    <Mail className="size-6 text-primary" />
                   </div>
                   <div>
                     <div className="text-sm uppercase text-muted-foreground">
@@ -88,7 +153,7 @@ function Introduction() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="rounded-full bg-primary/10 p-3">
-                    <Phone className="h-6 w-6 text-primary" />
+                    <Phone className="size-6 text-primary" />
                   </div>
                   <div>
                     <div className="text-sm uppercase text-muted-foreground">
@@ -101,7 +166,7 @@ function Introduction() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="rounded-full bg-primary/10 p-3">
-                    <MapPin className="h-6 w-6 text-primary" />
+                    <MapPin className="size-6 text-primary" />
                   </div>
                   <div>
                     <div className="text-md font-medium text-black">
@@ -112,70 +177,131 @@ function Introduction() {
                 </div>
               </div>
               <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-mont text-lg font-medium text-transparent">
+                <div className="flex items-center gap-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-mont text-lg font-medium lowercase text-transparent">
                   <div className="h-[3px] w-6 bg-primary"></div>
-                  connect with us:
+                  {t("contactus_page.contactInfo.connect_with_us")}
                 </div>
                 <div className="flex gap-2">
                   <div className="rounded-lg bg-primary/10 p-2">
-                    <Facebook className="h-6 w-6 text-primary" />
+                    <Facebook className="size-6 text-primary" />
                   </div>
                   <div className="rounded-lg bg-primary/10 p-2">
-                    <Twitter className="h-6 w-6 text-primary" />
+                    <Twitter className="size-6 text-primary" />
                   </div>
                   <div className="rounded-lg bg-primary/10 p-2">
-                    <Linkedin className="h-6 w-6 text-primary" />
+                    <Linkedin className="size-6 text-primary" />
                   </div>
                   <div className="rounded-lg bg-primary/10 p-2">
-                    <Instagram className="h-6 w-6 text-primary" />
+                    <Instagram className="size-6 text-primary" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center bg-secondary p-8 px-16">
-          <div className="auth flex w-full flex-col gap-6">
-            <div className="flex w-full gap-4">
-              <div className="w-full">
-                <div className="text-md font-mont text-muted-foreground">
-                  {t("contactus_page.formFields.name.title")}
-                </div>
-                <Input
-                  type="text"
-                  placeholder={t("contactus_page.formFields.name.placeholder")}
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="flex flex-col items-center justify-center bg-secondary p-8 px-16"
+          >
+            <div className="auth flex w-full flex-col gap-6">
+              <div className="flex w-full gap-4">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem className="w-full">
+                      <FormLabel className="text-md font-mont text-muted-foreground">
+                        {t("contactus_page.formFields.name.title")}
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          type="text"
+                          {...field}
+                          placeholder={t(
+                            "contactus_page.formFields.name.placeholder"
+                          )}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="w-full">
+                      <FormLabel className="text-md font-mont text-muted-foreground">
+                        {t("contactus_page.formFields.email.title")}
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          type="text"
+                          {...field}
+                          placeholder={t(
+                            "contactus_page.formFields.email.placeholder"
+                          )}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
               </div>
-              <div className="w-full">
-                <div className="text-md font-mont text-muted-foreground">
-                  {t("contactus_page.contactInfo.email")}
-                </div>
-                <Input type="email" placeholder="Email address" />
-              </div>
-            </div>
-            <div>
-              <div className="text-md font-mont text-muted-foreground">
-                {t("contactus_page.formFields.subject.title")}
-              </div>
-              <Input
-                type="text"
-                placeholder={t("contactus_page.formFields.subject.placeholder")}
+              <FormField
+                control={form.control}
+                name="subject"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <FormLabel className="text-md font-mont text-muted-foreground">
+                      {t("contactus_page.formFields.subject.title")}
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        type="text"
+                        {...field}
+                        placeholder={t(
+                          "contactus_page.formFields.subject.placeholder"
+                        )}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-md font-mont text-muted-foreground">
+                      {t("contactus_page.formFields.message.title")}
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        {...field}
+                        placeholder={t(
+                          "contactus_page.formFields.message.placeholder"
+                        )}
+                        rows={10}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
             </div>
-            <div>
-              <div className="text-md font-mont text-muted-foreground">
-                {t("contactus_page.formFields.message.title")}
-              </div>
-              <Textarea
-                placeholder={t("contactus_page.formFields.message.placeholder")}
-                rows={10}
-              />
-            </div>
-          </div>
-          <Button className="auth mt-6 w-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-mont">
-            Send
-          </Button>
-        </div>
+            <Button
+              type="submit"
+              disabled={isLoading}
+              className="auth mt-6 w-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-mont"
+            >
+              {isLoading && <Loader2 className="mr-2 size-4 animate-spin" />}
+              {t("contactus_page.formFields.send")}
+            </Button>
+          </form>
+        </Form>
       </div>
     </div>
   )

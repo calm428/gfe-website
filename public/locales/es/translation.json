@@ -97,12 +97,17 @@
     "contactInfo": {
       "title": "Información de Contacto",
       "email": "Correo Electrónico",
-      "phone": "Teléfono"
+      "phone": "Teléfono",
+      "connect_with_us": "Conectar con Nosotros"
     },
     "formFields": {
       "name": {
         "title": "Nombre",
         "placeholder": "Ingrese su nombre completo"
+      },
+      "email": {
+        "title": "Correo Electrónico",
+        "placeholder": "Ingrese su correo electrónico"
       },
       "subject": {
         "title": "Asunto",
@@ -111,7 +116,14 @@
       "message": {
         "title": "Mensaje",
         "placeholder": "Cuéntenos lo que piensa..."
-      }
+      },
+      "send": "Enviar",
+      "success": "Tu mensaje se ha enviado correctamente.",
+      "error": "Algo salió mal. Por favor, inténtalo de nuevo más tarde.",
+      "invalidEmail": "Por favor, introduce una dirección de correo electrónico válida.",
+      "invalidName": "Por favor, introduce un nombre válido.",
+      "invalidSubject": "Por favor, introduce un asunto válido.",
+      "invalidMessage": "Por favor, introduce un mensaje válido."
     }
   },
   "about_us_page": {
