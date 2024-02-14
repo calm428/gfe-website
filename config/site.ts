@@ -206,9 +206,13 @@ export const siteConfig = {
     calcom: "https://cal.com/peter-chen-0302/meet-ceo-of-gfe-foundation",
   },
   contact: {
-    phone: "+44 687 120 967 2",
+    phone: "+1 971 325 7459",
     email: "contact@gfe.foundation",
-    address:
-      "83 McDonald Road, City of Edinburgh, Alba / Scotland, EH7 4NQ, United Kingdom",
+    address: "901 28th Street, Washougal, WA 98671, United States",
+  },
+  emails: {
+    info: "info@gfe.foundation",
+    support: "support@gfe.foundation",
+    contact: "contact@gfe.foundation",
   },
 }

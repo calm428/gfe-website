@@ -17,27 +17,35 @@ import { Button } from "../ui/button"
 const FAQS = [
   {
     question: "nft_page.faq_section.question1",
-    answer: "nft_page.faq_section.answer1",
+    answers: [
+      "nft_page.faq_section.answer1_1",
+      "nft_page.faq_section.answer1_2",
+      "nft_page.faq_section.answer1_3",
+      "nft_page.faq_section.answer1_4",
+    ],
   },
   {
     question: "nft_page.faq_section.question2",
-    answer: "nft_page.faq_section.answer2",
+    answers: [
+      "nft_page.faq_section.answer2_1",
+      "nft_page.faq_section.answer2_2",
+    ],
   },
   {
     question: "nft_page.faq_section.question3",
-    answer: "nft_page.faq_section.answer3",
+    answers: [
+      "nft_page.faq_section.answer3_1",
+      "nft_page.faq_section.answer3_2",
+      "nft_page.faq_section.answer3_3",
+    ],
   },
   {
     question: "nft_page.faq_section.question4",
-    answer: "nft_page.faq_section.answer4",
-  },
-  {
-    question: "nft_page.faq_section.question5",
-    answer: "nft_page.faq_section.answer5",
-  },
-  {
-    question: "nft_page.faq_section.question6",
-    answer: "nft_page.faq_section.answer6",
+    answers: [
+      "nft_page.faq_section.answer4_1",
+      "nft_page.faq_section.answer4_2",
+      "nft_page.faq_section.answer4_3",
+    ],
   },
 ]
 
@@ -74,8 +82,12 @@ function FAQ() {
                 >
                   {t(faq.question)}
                 </AccordionTrigger>
-                <AccordionContent className="auth text-base text-muted-foreground">
-                  {t(faq.answer)}
+                <AccordionContent className="auth flex flex-col gap-4 text-base text-muted-foreground">
+                  {faq.answers.map((answer, index) => (
+                    <p key={index} className="auth text-justify">
+                      {t(answer)}
+                    </p>
+                  ))}
                 </AccordionContent>
               </div>
             </AccordionItem>
