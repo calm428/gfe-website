@@ -19,10 +19,10 @@ function ContactUs() {
           <div className=" auth my-1 mb-5 text-sm font-medium md:mb-0 md:text-base">
             {t("footer_section.contact_detail_line")}{" "}
             <Link
-              href={`mailto:${siteConfig.emails.info}`}
+              href={`mailto:${siteConfig.emails.contact}`}
               className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-transparent"
             >
-              {siteConfig.emails.info}
+              {siteConfig.emails.contact}
             </Link>
           </div>
         </div>
