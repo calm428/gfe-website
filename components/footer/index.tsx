@@ -206,7 +206,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="auth flex w-full flex-col items-center justify-between gap-2 bg-primary/10 p-6 py-3 text-xs font-medium uppercase text-primary md:flex-row md:py-6">
-        <p className="order-last">
+        <p className="order-last md:order-first">
           © 2024 GFE Foundation. ALL RIGHTS RESERVED
         </p>
         <div className="flex gap-4">
