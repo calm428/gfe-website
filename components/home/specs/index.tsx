@@ -21,7 +21,7 @@ export default function SpecsSection() {
             {t("home_page.section2.description")}
           </p>
         </div>
-        <div className=" relative z-30 grid gap-6  lg:grid-cols-2 xl:grid-cols-4">
+        <div className=" relative z-30 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {features.map((feature, ind) => (
             <FeatureCard
               key={ind}

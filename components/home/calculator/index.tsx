@@ -23,10 +23,13 @@ function CalculatorSection() {
         {/* main */}
         <div className="px:[16rem] flex flex-col gap-12 lg:w-1/2">
           <div className="flex flex-col gap-6">
-            <div className="w-[100px] rounded-sm bg-[#EEF5FF]">
-              <h1 className="auth w-fit bg-gradient-to-b from-[#2BADFD] to-[#1570EF]  bg-clip-text px-[16px] py-[8px] text-base font-medium text-transparent md:text-[20px] ">
-                {t("Future")}
-              </h1>
+            <div className="mr-auto rounded-sm bg-[#EEF5FF]">
+              <div className="rounded-md bg-primary/10 p-2">
+                <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
+                  <span className="actual-text">{t("Future")}</span>
+                  <span className="front-text">{t("Future")}</span>
+                </p>
+              </div>
             </div>
             <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman  text-6xl  font-normal text-transparent">
               {t("home_page.section4.title")}

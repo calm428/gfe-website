@@ -99,18 +99,13 @@ function Introduction() {
               {t("contactus_page.bookMeetingDescription")}
             </p>
             <div className="mb-24 mt-4 flex flex-col gap-4 md:flex-row lg:flex-col xl:flex-row">
-              <Button
-                className=" auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-mont"
-                asChild
+              <Link
+                href={siteConfig.links.calcom}
+                className="button-86 !w-fit"
+                target="_blank"
               >
-                <Link
-                  href={siteConfig.links.calcom}
-                  className="flex items-center gap-3"
-                  target="_blank"
-                >
-                  {t("contactus_page.bookMeetingCEO")}
-                </Link>
-              </Button>
+                {t("contactus_page.bookMeetingCEO")}
+              </Link>
               {/* <Button
                 className="auth border border-secondary-foreground bg-background px-8 py-4 hover:bg-muted"
                 variant="outline"

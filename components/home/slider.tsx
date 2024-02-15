@@ -63,10 +63,13 @@ const SliderSection = () => {
   return (
     <div className=" auth relative bg-background pt-[100px]">
       <div className="flex flex-col items-center gap-[24px] lg:px-[200px]">
-        <h1 className="rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
-          Green Fungible Energy
-        </h1>
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-monument text-[45px] font-normal capitalize text-transparent lg:text-[50px]">
+        <div className="rounded-md bg-primary/10 p-2">
+          <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
+            <span className="actual-text">Green Fungible Energy</span>
+            <span className="front-text">Green Fungible Energy</span>
+          </p>
+        </div>
+        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl font-normal capitalize text-transparent lg:text-[50px]">
           What is GFE?
         </h1>
       </div>
@@ -80,7 +83,7 @@ const SliderSection = () => {
                   <div key={index} className="rounded-sm  px-[40px] ">
                     <Image
                       src={"/images/home/gfe-image.png"}
-                      className="h-full w-full object-contain"
+                      className="size-full object-contain"
                       width={500}
                       height={300}
                       alt="slider"

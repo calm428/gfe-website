@@ -10,9 +10,16 @@ function AboutDappr() {
     <div className="relative bg-[url('/images/nft/bg1.png')] bg-cover bg-center bg-no-repeat pb-[1500px] pt-24 xl:pb-[900px]">
       <div className="container items-center justify-between gap-12 xl:flex">
         <div className="flex flex-col gap-6 lg:px-24 xl:w-1/2 xl:px-0">
-          <h1 className="auth w-fit rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
-            {t("nft_page.about_section.title")}
-          </h1>
+          <div className="mr-auto rounded-md bg-primary/10 p-2">
+            <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
+              <span className="actual-text">
+                {t("nft_page.about_section.title")}
+              </span>
+              <span className="front-text">
+                {t("nft_page.about_section.title")}
+              </span>
+            </p>
+          </div>
           <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-5xl text-transparent">
             {t("nft_page.about_section.title")}
           </h1>

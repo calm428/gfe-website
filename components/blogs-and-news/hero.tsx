@@ -27,10 +27,15 @@ function HeroSection() {
       className="relative flex  flex-col items-center  gap-12 bg-cover px-5 pb-[100px] pt-[50px] lg:px-0 lg:pt-[100px] "
     >
       <div className="mx-auto max-w-3xl py-16 md:py-28">
-        <div className="mx-auto w-fit rounded-md bg-primary/5 px-4 py-2">
-          <h1 className="auth bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-medium text-transparent">
-            {t("blogs_and_news.blogs_and_news")}
-          </h1>
+        <div className="mx-auto w-fit rounded-md bg-primary/10 p-2">
+          <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
+            <span className="actual-text">
+              {t("blogs_and_news.blogs_and_news")}
+            </span>
+            <span className="front-text">
+              {t("blogs_and_news.blogs_and_news")}
+            </span>
+          </p>
         </div>
 
         <h1 className="mt-3 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-3xl tracking-wider text-transparent md:text-6xl">
