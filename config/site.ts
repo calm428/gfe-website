@@ -194,7 +194,7 @@ export const siteConfig = {
     },
     {
       title: "footer_section.blogs_news",
-      href: "/blog-and-news",
+      href: "/blogs-and-news",
     },
   ],
   links: {
