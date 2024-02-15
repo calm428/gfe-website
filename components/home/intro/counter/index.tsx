@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import "@radix-ui/react-icons"
 import Image from "next/image"
@@ -14,6 +14,7 @@ import CounterCard from "./counter-card"
 
 function Counter() {
   const { t } = useTranslation()
+  const countdownInterval = useRef<number | null>(null)
 
   const [time, setTime] = useState({
     days: 0,
@@ -21,14 +22,17 @@ function Counter() {
     minutes: 0,
     seconds: 0,
   })
+
   // counter
   const targetDate = new Date("2024-12-31T00:00:00").getTime()
-  const countdownInterval = setInterval(updateCountdown, 1000)
+
   function updateCountdown() {
     const currentDate = new Date().getTime()
+
     const timeDifference = targetDate - currentDate
-    if (timeDifference <= 0) {
-      clearInterval(countdownInterval)
+
+    if (timeDifference <= 0 && countdownInterval.current) {
+      window.clearInterval(countdownInterval.current)
     } else {
       // Calculate days, hours, minutes, and seconds
       const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
@@ -48,7 +52,17 @@ function Counter() {
       })
     }
   }
+
+  useEffect(() => {
+    countdownInterval.current = window.setInterval(updateCountdown, 1000)
+    return () => {
+      if (countdownInterval.current)
+        window.clearInterval(countdownInterval.current)
+    }
+  }, [])
+
   const payments = siteConfig.payments
+
   return (
     <div className="auth  w-full overflow-hidden rounded-lg bg-background pb-[32px] font-mont shadow-lg lg:w-[500px] xl:w-[480px]">
       <div className="flex flex-col gap-[24px] bg-[#F9FCFF] p-[32px]">
