@@ -1,3 +1,5 @@
+"use client"
+
 import { ScrollToTop } from "react-simple-scroll-up"
 
 import AboutDappr from "@/components/NFT/about-dappr"

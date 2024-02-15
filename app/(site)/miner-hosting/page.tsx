@@ -1,3 +1,5 @@
+"use client"
+
 import { ScrollToTop } from "react-simple-scroll-up"
 
 import ContactUs from "@/components/NFT/contact-us"
