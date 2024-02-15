@@ -1,3 +1,5 @@
+import { ScrollToTop } from "react-simple-scroll-up"
+
 import AboutDappr from "@/components/NFT/about-dappr"
 import ContactUs from "@/components/NFT/contact-us"
 import FAQ from "@/components/NFT/faq"
@@ -18,6 +20,12 @@ function page() {
           <ContactUs />
         </div>
       </div>
+      <ScrollToTop
+        className="!bottom-[50px] z-50"
+        strokeFillColor="#21b4fd"
+        strokeEmptyColor="#21b4fd55"
+        bgColor="#21b4fd99"
+      />
     </section>
   )
 }

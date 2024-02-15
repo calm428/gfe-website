@@ -54,7 +54,7 @@ export default function HomeSection() {
           {/* new nft landing page link be placed here */}
           <div>
             <div className=" auth relative flex items-center justify-between rounded-3xl bg-background py-[25px] pl-[8px]  pr-[16px] shadow-lg md:rounded-full md:py-[8px]">
-              <Button className="button-85 absolute -top-3 left-5 mr-4 rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
+              <Button className="absolute -top-3 left-5 mr-4 rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
                 New
               </Button>
               <h1 className="mt-2 font-mont font-medium text-muted-foreground md:mt-0 md:text-[16px]">
@@ -64,7 +64,7 @@ export default function HomeSection() {
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-7 w-full max-w-md items-end lg:mt-0 lg:flex lg:w-[55%] lg:flex-col xl:w-[45%] xl:items-end">
+        <div className="relative mx-auto mt-7 w-full max-w-md items-end lg:mt-0 lg:flex lg:w-[55%] lg:flex-col xl:w-[45%] xl:items-end">
           <Counter />
         </div>
       </div>
