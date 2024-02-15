@@ -19,9 +19,12 @@ function ServerHosting() {
           />
         </div>
         <div className="container flex max-w-xl flex-col justify-center gap-6 pt-5">
-          <h1 className="auth w-fit rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
-            {t("Future")}
-          </h1>
+          <div className="mr-auto rounded-md bg-primary/10 p-2">
+            <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
+              <span className="actual-text">{t("Future")}</span>
+              <span className="front-text">{t("Future")}</span>
+            </p>
+          </div>
           <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-5xl text-transparent">
             {t("nft_page.hosting_section.title")}
           </h1>

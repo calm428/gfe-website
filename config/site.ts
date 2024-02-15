@@ -206,9 +206,9 @@ export const siteConfig = {
     calcom: "https://cal.com/peter-chen-0302/meet-ceo-of-gfe-foundation",
   },
   contact: {
-    phone: "+1 971 325 7459",
+    phone: "+1 814 419 9935",
     email: "contact@gfe.foundation",
-    address: "901 28th Street, Washougal, WA 98671, United States",
+    address: "1060 W. Addison St. Chicago, IL 60612 United States",
   },
   emails: {
     info: "info@gfe.foundation",

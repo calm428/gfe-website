@@ -17,9 +17,12 @@ function Introduction() {
       }}
     >
       <div className="flex flex-col items-center gap-8 px-5 lg:px-16">
-        <h1 className="auth w-fit rounded-sm bg-[#EEF5FF] px-[16px] py-[8px] text-base font-medium text-primary md:text-[20px]">
-          {t("about_us_page.name")}
-        </h1>
+        <div className="rounded-md bg-primary/10 p-2">
+          <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
+            <span className="actual-text">{t("about_us_page.name")}</span>
+            <span className="front-text">{t("about_us_page.name")}</span>
+          </p>
+        </div>
         <div className="flex flex-col items-center gap-4">
           <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
             {t("about_us_page.title")} <br />

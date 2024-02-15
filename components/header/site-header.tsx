@@ -82,7 +82,6 @@ export function SiteHeader() {
             <LanguageSelector />
           </div>
           <div className="flex gap-1 lg:hidden">
-            <LanguageSelector />
             <Button
               variant="default"
               className="!mx-2 block whitespace-nowrap font-mont font-semibold lg:hidden"
@@ -111,12 +110,12 @@ export function SiteHeader() {
         onClick={handleClose}
         className={` ${
           mobileNavOpen ? "block" : "hidden"
-        } absolute inset-0 z-50 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden`}
+        } fixed inset-0 z-50 bg-[#03375c3d] !bg-opacity-20 backdrop-blur-sm lg:hidden`}
       >
         <div
           className={`${
-            mobileNavOpen ? "right-0 " : "-right-[360px]"
-          } fixed z-30  h-full min-w-[360px] max-w-[360px] bg-background transition-all lg:hidden`}
+            mobileNavOpen ? "right-0 " : "right-[-360px]"
+          } fixed z-30  h-screen min-w-[360px] max-w-[360px] bg-background transition-all lg:hidden`}
         >
           <div className="flex h-full flex-col">
             <div className="sticky top-0 z-50 bg-background pt-5">
@@ -126,13 +125,7 @@ export function SiteHeader() {
                   className="flex w-[150px] flex-col items-center justify-center gap-1"
                 >
                   <div className="flex flex-col gap-1">
-                    <Image src="/GFE.svg" alt="Logo" width={80} height={32} />
-                    <Image
-                      src={"/Foundation.svg"}
-                      alt="sublogo"
-                      width={100}
-                      height={10}
-                    />
+                    <Image src="/GFE.svg" alt="Logo" width={100} height={32} />
                   </div>
                 </Link>
                 <Button
@@ -153,7 +146,7 @@ export function SiteHeader() {
               />
             </div>
 
-            <nav className="auth flex w-full  flex-col items-center gap-6">
+            <nav className="auth flex size-full flex-col items-center gap-6">
               <NavigationMenu.Root>
                 <NavigationMenu.List>
                   <NavigationMenu.Item>
@@ -278,7 +271,7 @@ export function SiteHeader() {
                   </NavigationMenu.Item>
                 </NavigationMenu.List>
               </NavigationMenu.Root>
-              <div className="flex items-center ">
+              <div className="flex items-center">
                 <Link
                   href={"/about-us"}
                   className={` ${navMenuStyle} ${
@@ -298,6 +291,16 @@ export function SiteHeader() {
               >
                 {t("navbar_section.blogs_and_news")}
               </Link>
+              <Link
+                href={"/contacts"}
+                className={`${navMenuStyle} ${
+                  "/contacts" === pathname
+                    ? "bg-primary/5 font-semibold text-primary"
+                    : ""
+                }`}
+              >
+                {t("navbar_section.contacts")}
+              </Link>
               <Button
                 variant="default"
                 className="w-[80%] whitespace-nowrap font-mont font-semibold"
@@ -310,16 +313,9 @@ export function SiteHeader() {
               >
                 {t("navbar_section.sign_in")}
               </Button>
-              <Link
-                href={"/contacts"}
-                className={`${navMenuStyle} ${
-                  "/contacts" === pathname
-                    ? "bg-primary/5 font-semibold text-primary"
-                    : ""
-                }`}
-              >
-                {t("navbar_section.contacts")}
-              </Link>
+              <div className="mb-4 mt-auto">
+                <LanguageSelector />
+              </div>
             </nav>
           </div>
         </div>
