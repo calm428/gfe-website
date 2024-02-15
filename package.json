@@ -56,6 +56,7 @@
     "react-paginate": "^8.2.0",
     "react-query": "^3.39.3",
     "react-quill": "^2.0.0",
+    "react-simple-scroll-up": "^0.2.3",
     "react-slick": "^0.29.0",
     "react-verification-input": "^4.0.0",
     "rehype-autolink-headings": "^7.1.0",

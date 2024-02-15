@@ -9,6 +9,7 @@ import useSWR from "swr"
 import ContactUs from "@/components/NFT/contact-us"
 
 import "react-quill/dist/quill.bubble.css"
+import { ScrollToTop } from "react-simple-scroll-up"
 
 const ReactQuill =
   typeof window === "object" ? require("react-quill") : () => false
@@ -125,6 +126,12 @@ const Page: FC<PageProps> = ({ params }) => {
         <></>
       )}
       <ContactUs />
+      <ScrollToTop
+        className="!bottom-[50px] z-50"
+        strokeFillColor="#21b4fd"
+        strokeEmptyColor="#21b4fd55"
+        bgColor="#21b4fd99"
+      />
     </div>
   )
 }

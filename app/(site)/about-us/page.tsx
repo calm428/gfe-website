@@ -1,5 +1,7 @@
 "use client"
 
+import { ScrollToTop } from "react-simple-scroll-up"
+
 import AboutEnergy from "@/components/aboutUs/about-energy"
 import AboutGFE from "@/components/aboutUs/about-gfe"
 import CommunitySection from "@/components/aboutUs/community-section"
@@ -20,6 +22,12 @@ function page() {
         <LaPazSection />
         <CommunitySection />
       </div>
+      <ScrollToTop
+        className="!bottom-[50px] z-50"
+        strokeFillColor="#21b4fd"
+        strokeEmptyColor="#21b4fd55"
+        bgColor="#21b4fd99"
+      />
     </section>
   )
 }
