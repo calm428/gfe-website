@@ -7,6 +7,12 @@ import { usePathname } from "next/navigation"
 import { CaretDownIcon } from "@radix-ui/react-icons"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import { useTranslation } from "next-i18next"
+import { BiSolidFileDoc } from "react-icons/bi"
+import { FaGuilded } from "react-icons/fa"
+import { GrArticle } from "react-icons/gr"
+import { HiUsers } from "react-icons/hi"
+import { MdArrowOutward } from "react-icons/md"
+import { RiGovernmentFill } from "react-icons/ri"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
@@ -56,9 +62,9 @@ export function MainNav({ items }: MainNavProps) {
               <NavigationMenu.Content className="NavigationMenuContent absolute top-[59px]  lg:-left-36 xl:left-0 ">
                 <div className="flex w-[900px]  rounded-b-[20px] border border-border bg-background">
                   <div className="p-[24px]">
-                    <h1 className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
-                      token functionalities
-                    </h1>
+                    <p className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
+                      {t("navbar_section.token_functionalities")}
+                    </p>
                     {token_functionalities.map((functionality, ind) => (
                       <Link
                         key={ind}
@@ -89,9 +95,9 @@ export function MainNav({ items }: MainNavProps) {
                     ))}
                   </div>
                   <div className="border-l border-l-border p-[24px]">
-                    <h1 className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
-                      Industries
-                    </h1>
+                    <p className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
+                      {t("navbar_section.industries")}
+                    </p>
                     <div className="grid grid-cols-2 gap-2">
                       {industry.map((industry, ind) => (
                         <Link
@@ -144,49 +150,146 @@ export function MainNav({ items }: MainNavProps) {
                 <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
-                <div className="rounded-b-[10px] border border-border bg-background p-3">
-                  {community.map((community, ind) => (
-                    <Link
-                      href={community.href}
-                      key={ind}
-                      className="flex gap-2 py-2"
-                    >
-                      <Image
-                        src={community.icon}
-                        width={20}
-                        height={20}
-                        alt={community.title}
-                      />
-                      <p className="font-mont text-[14px] font-medium text-muted-foreground">
-                        {community.title}
-                      </p>
-                    </Link>
-                  ))}
+                <div className="flex w-[450px]  rounded-b-[20px] border border-border bg-background">
+                  <div className="p-4">
+                    <p className="w-28 font-mont text-[14px] font-medium capitalize text-muted-foreground">
+                      {t("navbar_section.social")}
+                    </p>
+                    {community.map((community, ind) => (
+                      <Link
+                        href={community.href}
+                        key={ind}
+                        className="flex w-fit gap-2 rounded-md p-2 hover:bg-muted-foreground/10"
+                      >
+                        <Image
+                          src={community.icon}
+                          width={20}
+                          height={20}
+                          alt={community.title}
+                        />
+                        <p className="font-mont text-[14px] font-medium text-muted-foreground">
+                          {community.title}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="border-l border-l-border p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      <Link
+                        href={"#"}
+                        className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                      >
+                        <div>
+                          <RiGovernmentFill className="min-w-5 text-[#21b4fd]" />
+                        </div>
+                        <div>
+                          <p>
+                            <p className="font-mont text-[14px] font-semibold capitalize">
+                              {t("navbar_section.governance")}
+                            </p>
+                            <p className="text-xs">
+                              {t("navbar_section.governance_description")}
+                            </p>
+                          </p>
+                        </div>
+                      </Link>
+                      <Link
+                        href={"#"}
+                        className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                      >
+                        <div>
+                          <FaGuilded className="min-w-5 text-[#21b4fd]" />
+                        </div>
+                        <div>
+                          <p>
+                            <p className="font-mont text-[14px] font-semibold capitalize">
+                              {t("navbar_section.guilds")}
+                            </p>
+                            <p className="text-xs">
+                              {t("navbar_section.guilds_description")}
+                            </p>
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </NavigationMenu.Content>
             </NavigationMenu.Item>
           </NavigationMenu.List>
         </NavigationMenu.Root>
-        <div className="flex items-center ">
-          <Link
-            href={"/about-us"}
-            className={` ${navMenuStyle} ${
-              "/about-us" === pathname &&
-              "bg-primary/5 font-semibold text-primary"
-            }`}
-          >
-            {t("navbar_section.about_us")}
-          </Link>
-        </div>
-        <Link
-          href={"/blogs-and-news"}
-          className={` ${navMenuStyle} ${
-            "/blogs-and-news" === pathname &&
-            "bg-primary/5 font-semibold text-primary"
-          }`}
-        >
-          {t("navbar_section.blogs_and_news")}
-        </Link>
+        <NavigationMenu.Root>
+          <NavigationMenu.List>
+            <NavigationMenu.Item>
+              <NavigationMenu.Trigger className={navMenuStyle}>
+                {t("navbar_section.learn")}
+                <CaretDownIcon className="CaretDown" aria-hidden />
+              </NavigationMenu.Trigger>
+              <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
+                <div className="flex w-[300px] rounded-b-[20px] border border-border bg-background">
+                  <div className="grid grid-cols-1 gap-2 p-4">
+                    <Link
+                      href={"/about-us"}
+                      className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                    >
+                      <div>
+                        <HiUsers className="min-w-5 text-[#21b4fd]" />
+                      </div>
+                      <div>
+                        <p>
+                          <p className="font-mont text-[14px] font-semibold capitalize">
+                            {t("navbar_section.about_us")}
+                          </p>
+                          <p className="text-xs">
+                            {t("navbar_section.about_us_description")}
+                          </p>
+                        </p>
+                      </div>
+                    </Link>
+                    <Link
+                      href={"/blogs-and-news"}
+                      className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                    >
+                      <div>
+                        <GrArticle className="min-w-5 text-[#21b4fd]" />
+                      </div>
+                      <div>
+                        <p>
+                          <p className="font-mont text-[14px] font-semibold capitalize">
+                            {t("navbar_section.blogs_and_news")}
+                          </p>
+                          <p className="text-xs">
+                            {t("navbar_section.blogs_and_news_description")}
+                          </p>
+                        </p>
+                      </div>
+                    </Link>
+                    <Link
+                      href="https://docs.gfe.foundation"
+                      target="_blank"
+                      className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                    >
+                      <div>
+                        <BiSolidFileDoc className="min-w-5 text-[#21b4fd]" />
+                      </div>
+                      <div>
+                        <p>
+                          <p className="flex font-mont text-[14px] font-semibold capitalize">
+                            {t("navbar_section.documentation")}
+                            <MdArrowOutward className="size-4" />
+                          </p>
+                          <p className="text-xs">
+                            {t("navbar_section.documentation_description")}
+                          </p>
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </NavigationMenu.Content>
+            </NavigationMenu.Item>
+          </NavigationMenu.List>
+        </NavigationMenu.Root>
         <Link
           href={"/contacts"}
           className={` ml-auto ${navMenuStyle} ${

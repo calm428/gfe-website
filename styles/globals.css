@@ -770,7 +770,6 @@ ul.react-paginate {
   min-width: 150%;
   min-height: 150%;
   background-image: conic-gradient(
-    hsl(60, 100%, 50%),
     hsl(90, 100%, 50%),
     hsl(120, 100%, 50%),
     hsl(150, 100%, 50%),
