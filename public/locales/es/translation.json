@@ -435,9 +435,22 @@
     "nft": "NFT",
     "community": "Comunidad",
     "about_us": "Acerca de nosotros",
+    "about_us_description": "Sumérgete en la misión de la Fundación GFE y el apasionado equipo detrás de ella",
     "blogs_and_news": "Blogs y Noticias",
     "contacts": "Contactos",
-    "sign_in": "Iniciar sesión"
+    "sign_in": "Iniciar sesión",
+    "social": "Social",
+    "governance": "Gobernanza",
+    "governance_description": "Participa en la formación de las iniciativas de energía verde de la Fundación GFE",
+    "guilds": "Gremios",
+    "guilds_description": "Únete a una unidad local de GFE para colaborar en soluciones ambientales",
+    "learn": "Aprender",
+    "learn_description": "Obtén más información sobre nuestros proyectos e iniciativas",
+    "blogs_and_news_description": "Mantente actualizado sobre los avances de blockchain a través de nuestras últimas publicaciones",
+    "documentation": "Documentación",
+    "documentation_description": "Explora nuestros protocolos y tecnologías a través de nuestros recursos detallados",
+    "industries": "Industrias",
+    "token_functionalities": "Funcionalidades del Token"
   },
   "unsubscribe": {
     "unsubscribe": "Desuscribirse",
