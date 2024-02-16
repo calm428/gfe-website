@@ -8,7 +8,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/custom-accordion"
 
 const FaqSection = () => {
   const { t } = useTranslation()
