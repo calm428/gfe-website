@@ -6,13 +6,13 @@ import { useTranslation } from "next-i18next"
 
 import { siteConfig } from "@/config/site"
 
+import { Button } from "../ui/button"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../ui/accordion"
-import { Button } from "../ui/button"
+} from "../ui/custom-accordion"
 
 const FAQS = [
   {
