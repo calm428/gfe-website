@@ -3,7 +3,7 @@
 import i18n from "i18next"
 import { initReactI18next } from "react-i18next"
 
-import { English_JSON, Spanish_JSON } from "./public/locales"
+import { Chinese_JSON, English_JSON, Spanish_JSON } from "./public/locales"
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -12,6 +12,9 @@ i18n.use(initReactI18next).init({
     },
     es: {
       translation: Spanish_JSON,
+    },
+    cn: {
+      translation: Chinese_JSON,
     },
   },
   lng:
