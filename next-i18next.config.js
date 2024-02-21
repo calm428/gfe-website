@@ -2,8 +2,7 @@
 module.exports = {
   debug: true,
   i18n: {
-    locales: ["en", "es"],
+    locales: ["en", "es", "cn"],
     defaultLocale: "en",
   },
-  
 }

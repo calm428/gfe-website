@@ -48,9 +48,21 @@ export function LanguageSelector() {
                 alt="en"
                 width={24}
                 height={24}
-                className="mr-2 size-4"
+                className="mr-2 h-auto w-4"
               />
               English
+            </div>
+          </SelectItem>
+          <SelectItem value="cn">
+            <div className="flex w-full items-center pr-4">
+              <Image
+                src="https://flagcdn.com/cn.svg"
+                alt="cn"
+                width={24}
+                height={24}
+                className="mr-2 h-auto w-4"
+              />
+              Chinese
             </div>
           </SelectItem>
           <SelectItem value="es">

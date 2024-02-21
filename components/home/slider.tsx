@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { useTranslation } from "next-i18next"
 import Slider from "react-slick"
 
 import "slick-carousel/slick/slick.css"
@@ -26,6 +27,7 @@ const SLIDE_DATA = [
 ]
 
 const SliderSection = () => {
+  const { t, i18n } = useTranslation()
   const settings = {
     className: "center gfe-carousel ",
     centerMode: true,
@@ -65,12 +67,16 @@ const SliderSection = () => {
       <div className="flex flex-col items-center gap-[24px] lg:px-[200px]">
         <div className="rounded-md bg-primary/10 p-2">
           <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
-            <span className="actual-text">Green Fungible Energy</span>
-            <span className="front-text">Green Fungible Energy</span>
+            <span className="actual-text">
+              {t("home_page.section?.subtitle")}
+            </span>
+            <span className="front-text">
+              {t("home_page.section?.subtitle")}
+            </span>
           </p>
         </div>
         <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl font-normal capitalize text-transparent lg:text-[50px]">
-          What is GFE?
+          {t("home_page.section?.title")}
         </h1>
       </div>
 
