@@ -241,12 +241,12 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
             href={"/contacts"}
             className={`justify-center ${navMenuStyle} ${
               "/contacts" === pathname &&
-              "bg-primary/5 font-semibold text-primary mt-4"
+              "bg-primary/5 font-semibold text-primary"
             }`}
           >
             {t("navbar_section.contacts")}
           </Link>
-          <div className="mx-auto mb-4 flex justify-center">
+          <div className="mx-auto mb-4 flex justify-center mt-4">
             <LanguageSelector />
           </div>
           <Button
