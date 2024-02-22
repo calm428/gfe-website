@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "GFE Foundation",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "GFE Foundation: Leading the green energy revolution through tokenization. Invest in a sustainable future while maximizing your financial returns",
   token_functionalities: [
     {
       icon: "/icons/token_func/energy.svg",
