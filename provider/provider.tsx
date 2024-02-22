@@ -28,10 +28,10 @@ const App: React.FC<IProps> = ({ children }) => {
 
   useEffect(() => {
     if (!error && fetchedData) {
-      if (fetchedData?.expires && new Date(fetchedData.expires) < new Date()) {
-        setAuthenticated(false)
-      } else {
+      if (fetchedData?.expires && new Date(fetchedData.expires) > new Date()) {
         setAuthenticated(true)
+      } else {
+        setAuthenticated(false)
       }
     }
   }, [fetchedData, error])
