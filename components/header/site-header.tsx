@@ -10,9 +10,12 @@ import { MainNav } from "@/components/header/main-nav"
 
 import { LanguageSelector } from "./language"
 import { MobileMenu } from "./mobile-menu"
+import { useContext } from "react"
+import { SunbeltContext } from "@/context/context"
 
 export function SiteHeader() {
   let { t } = useTranslation()
+  const {authenticated} = useContext(SunbeltContext)
 
   return (
     <>
@@ -30,7 +33,7 @@ export function SiteHeader() {
               asChild
             >
               <Link href="https://platform.gfe.foundation" target="_blank">
-                {t("navbar_section.sign_in")}
+                {authenticated ? t("navbar_section.launch_app") : t("navbar_section.sign_in")}
               </Link>
             </Button>
             <LanguageSelector />
