@@ -1,12 +1,9 @@
-import { useContext } from "react"
+import { SunbeltContext } from "@/context/context"
+import { useTranslation } from "next-i18next"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { SunbeltContext } from "@/context/context"
-import { CaretDownIcon } from "@radix-ui/react-icons"
-import * as NavigationMenu from "@radix-ui/react-navigation-menu"
-import { Menu, X } from "lucide-react"
-import { useTranslation } from "next-i18next"
+import { useContext } from "react"
 import { BiSolidFileDoc } from "react-icons/bi"
 import { FaGuilded } from "react-icons/fa"
 import { GrArticle } from "react-icons/gr"
@@ -14,8 +11,6 @@ import { HiUsers } from "react-icons/hi"
 import { MdArrowOutward } from "react-icons/md"
 import { RiGovernmentFill } from "react-icons/ri"
 
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
 import {
   Accordion,
   AccordionContent,
@@ -23,27 +18,20 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
+  SheetTrigger
 } from "@/components/ui/sheet"
-import { MainNav } from "@/components/header/main-nav"
-
+import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
 import ExpandableText from "./expandable-text"
 import { LanguageSelector } from "./language"
 
 export function MobileMenu({ children }: { children: React.ReactNode }) {
   let { t } = useTranslation()
-
+  const {authenticated} = useContext(SunbeltContext)
   const pathname = usePathname()
 
   // nav style menu
@@ -253,7 +241,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
             href={"/contacts"}
             className={`justify-center ${navMenuStyle} ${
               "/contacts" === pathname &&
-              "bg-primary/5 font-semibold text-primary"
+              "bg-primary/5 font-semibold text-primary mt-4"
             }`}
           >
             {t("navbar_section.contacts")}
@@ -270,8 +258,8 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
             }}
             asChild
           >
-            <Link href="https://platform.gfe.foundation" target="_blank">
-              {t("navbar_section.sign_in")}
+            <Link href="https://platform.gfe.foundation">
+              {authenticated ? t("navbar_section.launch_app") : t("navbar_section.sign_in")}
             </Link>
           </Button>
         </Accordion>
