@@ -32,7 +32,7 @@ export function SiteHeader() {
               }}
               asChild
             >
-              <Link href="https://platform.gfe.foundation" target="_blank">
+              <Link href="https://platform.gfe.foundation">
                 {authenticated ? t("navbar_section.launch_app") : t("navbar_section.sign_in")}
               </Link>
             </Button>
