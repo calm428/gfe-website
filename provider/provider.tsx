@@ -1,16 +1,19 @@
 "use client"
 
-import React, { ReactNode, useState } from "react"
+import React, { ReactNode, useEffect, useState } from "react"
 import { SunbeltContext } from "@/context/context"
-import i18n from "@/i18n"
-import { I18nextProvider } from "react-i18next"
 import { QueryClient, QueryClientProvider } from "react-query"
-
+import { I18nextProvider } from "react-i18next"
+import i18n from "@/i18n"
+import axios from "axios"
+import useSWR from "swr"
 const queryClient = new QueryClient()
 
 interface IProps {
   children: ReactNode
 }
+
+const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
 const App: React.FC<IProps> = ({ children }) => {
   const [resetModalOpen, setResetModalOpen] = useState<boolean>(false)
@@ -19,6 +22,19 @@ const App: React.FC<IProps> = ({ children }) => {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
   const [signUpModalOpen, setSignUpModalOpen] = useState<boolean>(false)
   const [verifyModalOpen, setVerifyModalOpen] = useState<boolean>(false)
+  const [authenticated, setAuthenticated] = useState<boolean>(false)
+  
+  const {data: fetchedData, error} = useSWR('/auth', fetcher)
+
+  useEffect(() => {
+    if (!error && fetchedData) {
+      if (new Date(fetchedData.expires) < new Date()) {
+        setAuthenticated(false)
+      } else {
+        setAuthenticated(true)
+      }
+    }
+  }, [fetchedData, error])
 
   return (
     <SunbeltContext.Provider
@@ -35,12 +51,12 @@ const App: React.FC<IProps> = ({ children }) => {
         setSignUpModalOpen,
         verifyModalOpen,
         setVerifyModalOpen,
+        authenticated,
+        setAuthenticated,
       }}
     >
       <I18nextProvider i18n={i18n}>
-        <QueryClientProvider client={queryClient}>
-          {children}
-        </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
       </I18nextProvider>
     </SunbeltContext.Provider>
   )

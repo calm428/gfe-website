@@ -14,6 +14,10 @@ const nextConfig = {
         source: "/api/:path*",
         destination: "https://admin.gfe.foundation/api/:path*", // Proxy to Backend
       },
+      {
+        source: "/auth",
+        destination: "https://platform.gfe.foundation/api/auth/session", // Proxy to Backend
+      },
     ]
   },
   i18n,
