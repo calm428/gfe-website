@@ -1,14 +1,15 @@
 "use client"
 
 import Image from "next/image"
-import { useTranslation } from "react-i18next"
+import { useTranslations } from "next-intl"
 import Slider from "react-slick"
 
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 
-const SliderSection = () => {
-  const { t } = useTranslation()
+export default function SliderSection() {
+  const t = useTranslations("main")
+
   const settings = {
     dots: false,
     infinite: true,
@@ -92,5 +93,3 @@ const SliderSection = () => {
     </div>
   )
 }
-
-export default SliderSection

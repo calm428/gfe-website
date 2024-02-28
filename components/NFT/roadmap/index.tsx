@@ -1,12 +1,15 @@
 import Image from "next/image"
+import { getTranslations } from "next-intl/server"
 
 import Step from "./step"
 
-function Roadmap() {
+async function Roadmap() {
+  const t = await getTranslations("main")
+
   return (
     <div className="container pb-24 lg:px-24">
       <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl capitalize text-transparent">
-        GFE Foundation Roadmap
+        {t("nft_page.gfe_roadmap")}
       </h1>
       <div className="flex flex-col pt-24 xl:pt-32">
         <Image

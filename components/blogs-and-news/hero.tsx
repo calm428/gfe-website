@@ -1,14 +1,13 @@
 "use client"
 
 import Image from "next/image"
-import { useRouter, useSearchParams } from "next/navigation"
-import { useTranslation } from "next-i18next"
+import { useRouter } from "next/navigation"
+import { useTranslations } from "next-intl"
 
 import { Input } from "../ui/input"
 
-function HeroSection() {
-  const { t } = useTranslation()
-  const searchParams = useSearchParams()
+export default function HeroSection() {
+  const t = useTranslations("main")
   const router = useRouter()
 
   const handleSearch = (keyword: string) => {
@@ -65,5 +64,3 @@ function HeroSection() {
     </div>
   )
 }
-
-export default HeroSection

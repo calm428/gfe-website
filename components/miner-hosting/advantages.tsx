@@ -1,11 +1,12 @@
-"use client"
-
-import { useTranslation } from "react-i18next"
+import Image from "next/image"
+import minerPic from "@/public/images/home/miner.png"
+import { getTranslations } from "next-intl/server"
 
 import { AdvantageCard } from "./advantage-card"
 
-const AdvantagesSection = () => {
-  const { t } = useTranslation()
+export default async function AdvantagesSection() {
+  const t = await getTranslations("main")
+
   return (
     <div className="container py-10">
       <div className="pb-10 md:pb-14">
@@ -45,10 +46,11 @@ const AdvantagesSection = () => {
               {t("minerHosting.sunbeltMiner.description")}
             </p>
           </div>
-          <img
+          <Image
+            src={minerPic}
             className="absolute bottom-0 w-full max-w-[350px] px-2.5"
-            src={"/images/home/miner.png"}
-          ></img>
+            alt="miner image"
+          />
         </div>
 
         <div className="grid grid-cols-1 grid-rows-2 gap-5">
@@ -67,5 +69,3 @@ const AdvantagesSection = () => {
     </div>
   )
 }
-
-export default AdvantagesSection

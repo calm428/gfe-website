@@ -1,14 +1,13 @@
-"use client"
-
 import Image from "next/image"
 import infoButtonPic from "@/public/icons/Buttons.svg"
 import energyPic from "@/public/images/about-us/energy.png"
 import nftPic_2 from "@/public/images/about-us/nft2.svg"
 import nftPic_3 from "@/public/images/about-us/nft3.svg"
-import { useTranslation } from "next-i18next"
+import { getTranslations } from "next-intl/server"
 
-function AboutEnergy() {
-  let { t } = useTranslation()
+export default async function AboutEnergy() {
+  const t = await getTranslations("main")
+
   return (
     <div className="bg-[#F9FCFF] pt-24">
       <div className="container flex flex-col items-center gap-6 ">
@@ -94,5 +93,3 @@ function AboutEnergy() {
     </div>
   )
 }
-
-export default AboutEnergy

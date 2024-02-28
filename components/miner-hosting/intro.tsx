@@ -1,15 +1,14 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { useTranslation } from "next-i18next"
+import { getTranslations } from "next-intl/server"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-export default function HomeSection() {
-  let { t } = useTranslation()
+export default async function HomeSection() {
+  const t = await getTranslations("main")
+
   return (
     <div className="relative flex flex-col items-center justify-between gap-20 bg-[url('/images/bg-gradient.webp')] bg-cover bg-no-repeat py-48 pb-[300px] md:flex-row md:gap-6 md:pb-48">
       <Image

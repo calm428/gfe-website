@@ -1,12 +1,10 @@
-"use client"
-
 import Image from "next/image"
 import infoButtonPic from "@/public/icons/Buttons.svg"
 import nftPic_1 from "@/public/images/about-us/nft1.svg"
-import { useTranslation } from "next-i18next"
+import { getTranslations } from "next-intl/server"
 
-const AboutGFE = () => {
-  const { t } = useTranslation()
+export default async function AboutGFE() {
+  const t = await getTranslations("main")
 
   return (
     <div className=" flex flex-col items-center gap-20 py-20 lg:py-24">
@@ -40,5 +38,3 @@ const AboutGFE = () => {
     </div>
   )
 }
-
-export default AboutGFE

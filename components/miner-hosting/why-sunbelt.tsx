@@ -1,11 +1,10 @@
-"use client"
-
-import { useTranslation } from "react-i18next"
+import { getTranslations } from "next-intl/server"
 
 import { AdvantageCard } from "./advantage-card"
 
-const WhySunbeltSection = () => {
-  const { t } = useTranslation()
+export default async function WhySunbeltSection() {
+  const t = await getTranslations("main")
+
   return (
     <div className="container pt-12 md:pt-20">
       <div className="pb-10 md:pb-14">
@@ -42,5 +41,3 @@ const WhySunbeltSection = () => {
     </div>
   )
 }
-
-export default WhySunbeltSection

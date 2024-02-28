@@ -1,9 +1,8 @@
-"use client"
+import { getTranslations } from "next-intl/server"
 
-import { useTranslation } from "next-i18next"
+export default async function PrivacyPage() {
+  const t = await getTranslations("main")
 
-function Page() {
-  const { t } = useTranslation()
   return (
     <section className="container pb-[300px] pt-10 md:pb-[200px] lg:px-24">
       <h1 className="text-3xl font-bold md:text-5xl">
@@ -80,5 +79,3 @@ function Page() {
     </section>
   )
 }
-
-export default Page

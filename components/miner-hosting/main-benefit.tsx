@@ -1,11 +1,9 @@
-"use client"
-
-import { useTranslation } from "react-i18next"
+import { getTranslations } from "next-intl/server"
 
 import { AdvantageCard } from "./advantage-card"
 
-const MainBenefitSection = () => {
-  const { t } = useTranslation()
+export default async function MainBenefitSection() {
+  const t = await getTranslations("main")
   return (
     <div className="relative py-24">
       {/* <div className="overflow-hidden">
@@ -48,5 +46,3 @@ const MainBenefitSection = () => {
     </div>
   )
 }
-
-export default MainBenefitSection

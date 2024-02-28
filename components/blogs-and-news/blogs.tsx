@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useSearchParams } from "next/navigation"
 import axios from "axios"
 import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 import { MdOutlineSpeakerNotesOff } from "react-icons/md"
 import useSWR from "swr"
 
@@ -18,7 +19,7 @@ import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
 const BlogsSection = () => {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
   const searchParams = useSearchParams()
 
   const [blogsData, setBlogsData] = useState<BlogCardDataType[]>([])

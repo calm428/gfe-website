@@ -1,12 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useTranslations } from "next-intl"
 import Image from "next/image"
-import { useTranslation } from "react-i18next"
+import { useState } from "react"
 
 export default function SpecsSection() {
   const [currentCard, setCurrentCard] = useState(0)
-  const { t } = useTranslation()
+  const t = useTranslations("main")
+  
   const isCurrent = (index: number) => {
     return index == currentCard
   }

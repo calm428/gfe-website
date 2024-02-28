@@ -6,7 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { CaretDownIcon } from "@radix-ui/react-icons"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 import { BiSolidFileDoc } from "react-icons/bi"
 import { FaGuilded } from "react-icons/fa"
 import { GrArticle } from "react-icons/gr"
@@ -27,7 +27,7 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   const pathname = usePathname()
-  let { t } = useTranslation()
+  const t = useTranslations("main")
 
   const [ecoMenuOpen, setEcomenuOpen] = React.useState(false)
   const token_functionalities = siteConfig.token_functionalities
@@ -176,7 +176,7 @@ export function MainNav({ items }: MainNavProps) {
                   <div className="border-l border-l-border p-4">
                     <div className="grid grid-cols-1 gap-2">
                       <Link
-                        href={"#"}
+                        href="/governance"
                         className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                       >
                         <div>
@@ -194,7 +194,7 @@ export function MainNav({ items }: MainNavProps) {
                         </div>
                       </Link>
                       <Link
-                        href={"#"}
+                        href="/guild"
                         className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                       >
                         <div>

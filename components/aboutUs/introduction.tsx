@@ -1,13 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useTranslation } from "next-i18next"
+import { getTranslations } from "next-intl/server"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-function Introduction() {
-  const { t } = useTranslation()
+async function Introduction() {
+  const t = await getTranslations("main")
+
   return (
     <div
       className="relative flex flex-col items-center gap-12  bg-cover px-5 pb-[100px] pt-[50px] lg:px-0 lg:pb-[300px] lg:pt-[100px] "

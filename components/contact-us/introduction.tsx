@@ -1,10 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { zodResolver } from "@hookform/resolvers/zod"
-import axios, { AxiosError } from "axios"
+import axios from "axios"
 import {
   Facebook,
   Instagram,
@@ -15,7 +14,7 @@ import {
   Phone,
   Twitter,
 } from "lucide-react"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import * as z from "zod"
@@ -35,7 +34,7 @@ import { Input } from "../ui/input"
 import { Textarea } from "../ui/textarea"
 
 function Introduction() {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
 
   const [isLoading, setIsLoading] = useState<boolean>(false)
 

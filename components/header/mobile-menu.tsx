@@ -1,9 +1,9 @@
-import { SunbeltContext } from "@/context/context"
-import { useTranslation } from "next-i18next"
+import { useContext } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useContext } from "react"
+import { SunbeltContext } from "@/context/context"
+import { useTranslations } from "next-intl"
 import { BiSolidFileDoc } from "react-icons/bi"
 import { FaGuilded } from "react-icons/fa"
 import { GrArticle } from "react-icons/gr"
@@ -11,6 +11,8 @@ import { HiUsers } from "react-icons/hi"
 import { MdArrowOutward } from "react-icons/md"
 import { RiGovernmentFill } from "react-icons/ri"
 
+import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
 import {
   Accordion,
   AccordionContent,
@@ -19,19 +21,14 @@ import {
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger
-} from "@/components/ui/sheet"
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+
 import ExpandableText from "./expandable-text"
 import { LanguageSelector } from "./language"
 
 export function MobileMenu({ children }: { children: React.ReactNode }) {
-  let { t } = useTranslation()
-  const {authenticated} = useContext(SunbeltContext)
+  const t = useTranslations("main")
+  const { authenticated } = useContext(SunbeltContext)
   const pathname = usePathname()
 
   // nav style menu
@@ -246,7 +243,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
           >
             {t("navbar_section.contacts")}
           </Link>
-          <div className="mx-auto mb-4 flex justify-center mt-4">
+          <div className="mx-auto mb-4 mt-4 flex justify-center">
             <LanguageSelector />
           </div>
           <Button
@@ -259,7 +256,9 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
             asChild
           >
             <Link href="https://platform.gfe.foundation">
-              {authenticated ? t("navbar_section.launch_app") : t("navbar_section.sign_in")}
+              {authenticated
+                ? t("navbar_section.launch_app")
+                : t("navbar_section.sign_in")}
             </Link>
           </Button>
         </Accordion>
