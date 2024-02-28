@@ -1,13 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-async function Introduction() {
-  const t = await getTranslations("main")
+export default function Introduction() {
+  const t = useTranslations("main")
 
   return (
     <div
@@ -52,5 +52,3 @@ async function Introduction() {
     </div>
   )
 }
-
-export default Introduction

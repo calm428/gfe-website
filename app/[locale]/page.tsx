@@ -1,7 +1,4 @@
-"use client"
-
-import { ScrollToTop } from "react-simple-scroll-up"
-
+import ScrollToTop from "@/components/common/scroll-to-top"
 import AdvantagesSection from "@/components/home/advantages"
 import CalculatorSection from "@/components/home/calculator"
 import CommunitySection from "@/components/home/community"
@@ -28,12 +25,7 @@ function IndexPage() {
           <CommunitySection />
         </div>
       </div>
-      <ScrollToTop
-        className="!bottom-[50px] z-50"
-        strokeFillColor="#21b4fd"
-        strokeEmptyColor="#21b4fd55"
-        bgColor="#21b4fd99"
-      />
+      <ScrollToTop />
     </section>
   )
 }

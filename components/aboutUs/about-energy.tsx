@@ -3,10 +3,10 @@ import infoButtonPic from "@/public/icons/Buttons.svg"
 import energyPic from "@/public/images/about-us/energy.png"
 import nftPic_2 from "@/public/images/about-us/nft2.svg"
 import nftPic_3 from "@/public/images/about-us/nft3.svg"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
-export default async function AboutEnergy() {
-  const t = await getTranslations("main")
+export default function AboutEnergy() {
+  const t = useTranslations("main")
 
   return (
     <div className="bg-[#F9FCFF] pt-24">

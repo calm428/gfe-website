@@ -1,10 +1,10 @@
 import Image from "next/image"
 import checkPic from "@/public/icons/check.svg"
 import nftPic_4 from "@/public/images/about-us/nft4.svg"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
-export default async function MarketPlace() {
-  const t = await getTranslations("main")
+export default function MarketPlace() {
+  const t = useTranslations("main")
 
   return (
     <div className=" grid place-items-center  gap-6 bg-gradient-to-t from-[#2BADFD] to-[#1570EF] pt-24 lg:grid-cols-2 lg:py-24 lg:pl-24">

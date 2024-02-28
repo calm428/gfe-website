@@ -1,12 +1,11 @@
 import Image from "next/image"
 import lifeCyclePic from "@/public/images/nft/lifecycle.svg"
-import { useTranslation } from "next-i18next"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import { Button } from "../ui/button"
 
-async function Introduction() {
-  const t = await getTranslations("main")
+function Introduction() {
+  const t = useTranslations("main")
 
   return (
     <div className="pcontainer relative flex flex-col items-center gap-12 bg-[url('/images/bg-gradient.webp')] bg-cover pt-[100px] lg:px-24">

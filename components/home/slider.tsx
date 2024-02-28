@@ -1,12 +1,11 @@
 "use client"
 
-import React from "react"
-import { useTranslation } from "next-i18next"
+import Image from "next/image"
+import { useTranslations } from "next-intl"
 import Slider from "react-slick"
 
-import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Image from "next/image"
+import "slick-carousel/slick/slick.css"
 
 const SLIDE_DATA = [
   {
@@ -27,7 +26,8 @@ const SLIDE_DATA = [
 ]
 
 const SliderSection = () => {
-  const { t, i18n } = useTranslation()
+  const t = useTranslations("main")
+
   const settings = {
     className: "center gfe-carousel ",
     centerMode: true,

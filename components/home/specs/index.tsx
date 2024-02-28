@@ -1,6 +1,8 @@
-"use client"
-
-import { useTranslation } from "next-i18next"
+import Image from "next/image"
+import globalPic from "@/public/bgs/global.jpg"
+import gridPic from "@/public/bgs/grid.jpg"
+import rightPic from "@/public/bgs/right1.png"
+import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 
@@ -8,7 +10,7 @@ import FeatureCard from "./feature-card"
 
 export default function SpecsSection() {
   const features = siteConfig.features
-  const { t } = useTranslation()
+  const t = useTranslations("main")
 
   return (
     <div className="relative mt-0	 overflow-hidden bg-background lg:mt-40	">
@@ -26,29 +28,25 @@ export default function SpecsSection() {
             <FeatureCard
               key={ind}
               icon={feature.icon}
-              title={t(feature.title)}
-              desc={t(feature.desc)}
+              title={t(feature.title as any)}
+              desc={t(feature.desc as any)}
               link={feature.link}
             />
           ))}
         </div>
       </div>
 
-      <img
-        src="/bgs/grid.jpg"
+      <Image
+        src={gridPic}
         alt="bg"
         className="absolute left-0 top-0 hidden w-1/2 lg:block "
       />
-      <img
-        src="/bgs/global.jpg"
+      <Image
+        src={globalPic}
         alt="bg"
         className="absolute bottom-0 right-0 opacity-50 xl:top-0 "
       />
-      <img
-        src="/bgs/right1.png"
-        alt="bgs"
-        className="absolute bottom-0 w-full"
-      />
+      <Image src={rightPic} alt="bgs" className="absolute bottom-0 w-full" />
     </div>
   )
 }
