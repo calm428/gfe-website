@@ -1,34 +1,18 @@
-"use client"
+import { notFound } from "next/navigation"
+import { getRequestConfig } from "next-intl/server"
 
-import i18n from "i18next"
-import { initReactI18next } from "react-i18next"
+import { locales } from "./navigation"
 
-import { Chinese_JSON, English_JSON, Spanish_JSON } from "./public/locales"
+type Locale = "en" | "es" | "cn"
 
-i18n.use(initReactI18next).init({
-  resources: {
-    en: {
-      translation: English_JSON,
-    },
-    es: {
-      translation: Spanish_JSON,
-    },
-    cn: {
-      translation: Chinese_JSON,
-    },
-  },
-  lng:
-    typeof window !== "undefined"
-      ? window.localStorage.getItem("lang") || "en"
-      : "en",
-  fallbackLng:
-    typeof window !== "undefined"
-      ? window.localStorage.getItem("lang") || "en"
-      : "en",
+const getLocaleData = async (locale: Locale) => {
+  return (await import(`./messages/${locale}.json`)).default
+}
 
-  interpolation: {
-    escapeValue: false,
-  },
+export default getRequestConfig(async ({ locale }) => {
+  if (!locales.includes(locale as any)) notFound()
+
+  return {
+    messages: await getLocaleData(locale as Locale),
+  }
 })
-
-export default i18n

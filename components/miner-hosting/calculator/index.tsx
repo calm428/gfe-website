@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useTranslation } from "react-i18next"
+import { useTranslations } from "next-intl"
 
 import { Button } from "../../ui/button"
 import { Input } from "../../ui/input"
@@ -11,7 +11,8 @@ import HistoricalPowerGraph from "./historical-power-graph"
 
 function CalculatorSection() {
   const [amount, setAmount] = useState<number | null>(null)
-  const { t } = useTranslation()
+  const t = useTranslations("main")
+
   return (
     <div className="container px-10 py-20">
       <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">

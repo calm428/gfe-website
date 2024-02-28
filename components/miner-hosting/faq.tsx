@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useTranslation } from "react-i18next"
+import { useTranslations } from "next-intl"
 
 import {
   Accordion,
@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/custom-accordion"
 
 const FaqSection = () => {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
+
   const [openItem, setOpenItem] = useState<number | null>(null)
 
   const handleAccordionItemClick = (index: number) => {

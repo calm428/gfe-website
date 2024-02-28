@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import axios from "axios"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 import { TbNewsOff } from "react-icons/tb"
 import useSWR from "swr"
 
@@ -15,7 +15,8 @@ import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
 const NewsSection = () => {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
+
   const searchParams = useSearchParams()
 
   const [newsData, setNewsData] = useState<BlogCardDataType[]>([])

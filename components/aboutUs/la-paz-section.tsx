@@ -1,10 +1,10 @@
-import Image from "next/image"
 import huePic from "@/public/advantages/hue.svg"
 import personPic from "@/public/images/about-us/person.png"
-import { useTranslation } from "next-i18next"
+import { getTranslations } from "next-intl/server"
+import Image from "next/image"
 
-function LaPazSection() {
-  const { t } = useTranslation()
+export default async function LaPazSection() {
+  const t = await getTranslations("main")
 
   return (
     <div className="relative flex justify-center">
@@ -39,5 +39,3 @@ function LaPazSection() {
     </div>
   )
 }
-
-export default LaPazSection

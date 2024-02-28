@@ -1,11 +1,10 @@
-"use client"
-
 import Image from "next/image"
 import dapprPic from "@/public/images/nft/dappr.svg"
-import { useTranslation } from "next-i18next"
+import { getTranslations } from "next-intl/server"
 
-function AboutDappr() {
-  const { t } = useTranslation()
+async function AboutDappr() {
+  const t = await getTranslations("main")
+
   return (
     <div className="relative bg-[url('/images/nft/bg1.png')] bg-cover bg-center bg-no-repeat pb-[1500px] pt-24 xl:pb-[900px]">
       <div className="container items-center justify-between gap-12 xl:flex">

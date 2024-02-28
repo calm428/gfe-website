@@ -1,6 +1,6 @@
 "use client"
 
-import { useTranslation } from "react-i18next"
+import { useTranslations } from "next-intl"
 import { useQuery } from "react-query"
 
 import BitcoinPriceGraph from "./bitcoin-price-graph"
@@ -19,7 +19,8 @@ const useGetBitcoinData = (cryptoName: string, options: any) => {
 }
 
 function BitcoinRateSection() {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
+
   const { isLoading, data: priceData } = useGetBitcoinData("bitcoin", {
     refetchInterval: 60 * 1000,
     staleTime: 60 * 1000,

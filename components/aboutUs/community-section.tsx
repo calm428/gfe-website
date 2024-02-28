@@ -1,12 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useTranslation } from "next-i18next"
+import { getTranslations } from "next-intl/server"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 
-function CommunitySection() {
-  const { t } = useTranslation()
+export default async function CommunitySection() {
+  const t = await getTranslations("main")
 
   return (
     <div className="py-[60px] ">
@@ -67,5 +67,3 @@ function CommunitySection() {
     </div>
   )
 }
-
-export default CommunitySection

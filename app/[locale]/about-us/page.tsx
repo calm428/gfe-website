@@ -1,7 +1,3 @@
-"use client"
-
-import { ScrollToTop } from "react-simple-scroll-up"
-
 import AboutEnergy from "@/components/aboutUs/about-energy"
 import AboutGFE from "@/components/aboutUs/about-gfe"
 import CommunitySection from "@/components/aboutUs/community-section"
@@ -9,6 +5,7 @@ import Introduction from "@/components/aboutUs/introduction"
 import LaPazSection from "@/components/aboutUs/la-paz-section"
 import MarketPlace from "@/components/aboutUs/market-place"
 import PowerProduction from "@/components/aboutUs/power-production"
+import ScrollToTop from "@/components/common/scroll-to-top"
 
 function page() {
   return (
@@ -22,12 +19,7 @@ function page() {
         <LaPazSection />
         <CommunitySection />
       </div>
-      <ScrollToTop
-        className="!bottom-[50px] z-50"
-        strokeFillColor="#21b4fd"
-        strokeEmptyColor="#21b4fd55"
-        bgColor="#21b4fd99"
-      />
+      <ScrollToTop />
     </section>
   )
 }

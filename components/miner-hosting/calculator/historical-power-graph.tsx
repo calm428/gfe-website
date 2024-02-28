@@ -12,8 +12,8 @@ import {
   ScriptableContext,
   Tooltip,
 } from "chart.js"
+import { useTranslations } from "next-intl"
 import { Line } from "react-chartjs-2"
-import { useTranslation } from "react-i18next"
 
 ChartJS.register(
   ArcElement,
@@ -27,7 +27,8 @@ ChartJS.register(
 )
 
 const HistoricalPowerGraph = () => {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
+
   const data = {
     labels: ["2017", "2018", "2019", "2020", "2021", "2022", "2023"],
     datasets: [
