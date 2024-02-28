@@ -1,15 +1,13 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 
 import { Button } from "../ui/button"
 
-const CommunitySection = () => {
-  const { t } = useTranslation()
+export default function CommunitySection() {
+  const t = useTranslations("main")
 
   return (
     <div className="py-[60px]">
@@ -70,5 +68,3 @@ const CommunitySection = () => {
     </div>
   )
 }
-
-export default CommunitySection

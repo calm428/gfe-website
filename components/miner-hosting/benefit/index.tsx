@@ -1,9 +1,9 @@
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import { BenefitCard } from "./benefit-card"
 
-export default async function BenefitSection() {
-  const t = await getTranslations("main")
+export default function BenefitSection() {
+  const t = useTranslations("main")
 
   const CARDS_DATA = [
     {

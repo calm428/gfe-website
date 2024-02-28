@@ -1,12 +1,12 @@
 import Link from "next/link"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 
 import { Button } from "../ui/button"
 
-async function ContactUs() {
-  const t = await getTranslations("main")
+function ContactUs() {
+  const t = useTranslations("main")
 
   return (
     <div className="py-[60px]">

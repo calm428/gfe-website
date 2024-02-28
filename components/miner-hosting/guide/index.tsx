@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import StepComponent from "./step"
 
@@ -10,8 +10,8 @@ export type Step = {
   icon: string
 }
 
-export default async function GuideSection() {
-  const t = await getTranslations("main")
+export default function GuideSection() {
+  const t = useTranslations("main")
 
   const steps: Step[] = [
     {

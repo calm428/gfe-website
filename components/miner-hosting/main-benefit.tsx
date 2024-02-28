@@ -1,9 +1,9 @@
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import { AdvantageCard } from "./advantage-card"
 
-export default async function MainBenefitSection() {
-  const t = await getTranslations("main")
+export default function MainBenefitSection() {
+  const t = useTranslations("main")
   return (
     <div className="relative py-24">
       {/* <div className="overflow-hidden">

@@ -1,9 +1,9 @@
 import Image from "next/image"
 import nftPic_5 from "@/public/images/about-us/nft5.svg"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
-export default async function PowerProduction() {
-  const t = await getTranslations("main")
+export default function PowerProduction() {
+  const t = useTranslations("main")
 
   return (
     <div className="flex flex-col-reverse justify-center pt-14 lg:flex-row">

@@ -1,10 +1,10 @@
 import Image from "next/image"
 import infoButtonPic from "@/public/icons/Buttons.svg"
 import nftPic_1 from "@/public/images/about-us/nft1.svg"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
-export default async function AboutGFE() {
-  const t = await getTranslations("main")
+export default function AboutGFE() {
+  const t = useTranslations("main")
 
   return (
     <div className=" flex flex-col items-center gap-20 py-20 lg:py-24">

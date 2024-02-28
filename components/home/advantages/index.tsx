@@ -1,9 +1,9 @@
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 
 import AdvantageCard from "./advantage-card"
 
-const AdvantagesSection = () => {
-  const { t } = useTranslation()
+export default function AdvantagesSection() {
+  const t = useTranslations("main")
 
   return (
     <div className="container grid gap-[50px] py-24 md:grid-cols-2">
@@ -20,5 +20,3 @@ const AdvantagesSection = () => {
     </div>
   )
 }
-
-export default AdvantagesSection

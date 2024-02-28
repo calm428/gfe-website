@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 
 import { formatCustomDate, getInitials } from "@/lib/utils"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
@@ -30,7 +30,7 @@ export default function BlogCard({
   author,
   date,
 }: BlogCardDataType) {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
 
   return (
     <div className="relative mx-auto flex size-full max-w-[320px] flex-col sm:max-w-[400px]">

@@ -139,7 +139,7 @@ export function SiteFooter() {
                   href={link.href}
                   className="  flex items-center rounded-lg font-mont text-base  text-primary hover:text-primary"
                 >
-                  {t(link.title as keyof IntlMessages["main"])}
+                  {t(link.title as any)}
                 </Link>
               ))}
             </div>

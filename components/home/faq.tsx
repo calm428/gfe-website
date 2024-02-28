@@ -61,10 +61,10 @@ const FaqSection = () => {
                 onClick={() => handleAccordionItemClick(index)}
                 className="auth  font-semibold hover:no-underline"
               >
-                {t(faq.question as keyof IntlMessages["main"])}
+                {t(faq.question as any)}
               </AccordionTrigger>
               <AccordionContent className="auth text-base text-muted-foreground">
-                {t(faq.answer as keyof IntlMessages["main"])}
+                {t(faq.answer as any)}
               </AccordionContent>
             </div>
           </AccordionItem>

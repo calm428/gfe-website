@@ -1,11 +1,9 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import leftPic from "@/public/bgs/left.svg"
 import rightPic from "@/public/bgs/right.svg"
-import { ChevronDown, ChevronRightIcon } from "lucide-react"
-import { useTranslation } from "next-i18next"
+import { ChevronRightIcon } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
@@ -14,7 +12,7 @@ import { Icons } from "@/components/icons"
 import Counter from "./counter"
 
 export default function HomeSection() {
-  const { t, i18n } = useTranslation()
+  const t = useTranslations("main")
   return (
     <div
       className="relative  bg-cover bg-center  "

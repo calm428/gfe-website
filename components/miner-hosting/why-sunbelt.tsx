@@ -1,9 +1,9 @@
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import { AdvantageCard } from "./advantage-card"
 
-export default async function WhySunbeltSection() {
-  const t = await getTranslations("main")
+export default function WhySunbeltSection() {
+  const t = useTranslations("main")
 
   return (
     <div className="container pt-12 md:pt-20">
