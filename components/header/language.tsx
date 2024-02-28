@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import Image from "next/image"
-import { useTranslation } from "next-i18next"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { useLocale } from "next-intl"
 
 import {
   Select,
@@ -14,27 +14,24 @@ import {
 } from "@/components/ui/select"
 
 export function LanguageSelector() {
-  const { i18n } = useTranslation()
-  const [langauge, setLanguage] = useState("en")
+  const locale = useLocale()
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
   const changeLang = (lang: string) => {
-    i18n.changeLanguage(lang)
-    setLanguage(lang)
-    localStorage.setItem("lang", lang)
+    const newSearchParams = new URLSearchParams(searchParams).toString()
+    router.push(
+      `/${lang}/${pathname}${newSearchParams ? "?" + newSearchParams : ""}`
+    )
   }
-  useEffect(() => {
-    let lang = localStorage.getItem("lang")
-    if (lang) {
-      setLanguage(lang)
-      i18n.changeLanguage(lang)
-    }
-  }, [])
+
   return (
     <Select
       onValueChange={(value) => {
         changeLang(value)
       }}
-      value={langauge}
-      defaultValue="en"
+      defaultValue={locale}
     >
       <SelectTrigger className="w-auto gap-4 rounded-full">
         <SelectValue placeholder="Select a language" />

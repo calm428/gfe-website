@@ -1,10 +1,9 @@
-"use client"
-
 import Image from "next/image"
-import { useTranslation } from "react-i18next"
+import { getTranslations } from "next-intl/server"
 
-export default function WorkFlowSection() {
-  const { t } = useTranslation()
+export default async function WorkFlowSection() {
+  const t = await getTranslations("main")
+
   return (
     <div className="container flex flex-col items-center justify-between py-8">
       <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">

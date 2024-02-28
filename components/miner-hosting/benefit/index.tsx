@@ -1,11 +1,10 @@
-"use client"
-
-import { useTranslation } from "react-i18next"
+import { getTranslations } from "next-intl/server"
 
 import { BenefitCard } from "./benefit-card"
 
-export default function BenefitSection() {
-  const { t } = useTranslation()
+export default async function BenefitSection() {
+  const t = await getTranslations("main")
+
   const CARDS_DATA = [
     {
       title: t("minerHosting.highIncome.title"),

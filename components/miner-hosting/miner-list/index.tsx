@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { useTranslation } from "react-i18next"
+import { useTranslations } from "next-intl"
 import Slider from "react-slick"
 
 import { Button } from "@/components/ui/button"
@@ -85,7 +85,7 @@ const miners: Miner[] = [
 
 export default function MinerListSection() {
   const [slider, setSlider] = useState<any>(null)
-  const { t } = useTranslation()
+  const t = useTranslations("main")
 
   const settings = {
     dots: true,

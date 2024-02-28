@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 import {
@@ -35,7 +35,7 @@ const FAQS = [
 
 const FaqSection = () => {
   const [openItem, setOpenItem] = useState<number | null>(null)
-  const { t } = useTranslation()
+  const t = useTranslations("main")
 
   const handleAccordionItemClick = (index: number) => {
     setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
@@ -61,10 +61,10 @@ const FaqSection = () => {
                 onClick={() => handleAccordionItemClick(index)}
                 className="auth  font-semibold hover:no-underline"
               >
-                {t(faq.question)}
+                {t(faq.question as keyof IntlMessages["main"])}
               </AccordionTrigger>
               <AccordionContent className="auth text-base text-muted-foreground">
-                {t(faq.answer)}
+                {t(faq.answer as keyof IntlMessages["main"])}
               </AccordionContent>
             </div>
           </AccordionItem>

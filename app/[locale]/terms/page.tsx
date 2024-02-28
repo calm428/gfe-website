@@ -1,9 +1,7 @@
-"use client"
+import { getTranslations } from "next-intl/server"
 
-import { useTranslation } from "next-i18next"
-
-function Page() {
-  const { t } = useTranslation()
+export default async function TemrsPage() {
+  const t = await getTranslations("main")
 
   return (
     <section className="container pb-[300px] pt-10 md:pb-[200px] lg:px-24">
@@ -25,13 +23,13 @@ function Page() {
 
       <h2 className="mt-8 text-xl md:text-2xl">2. {t("terms.use_license")}</h2>
 
-      <p className="text-sm md:text-base">
+      <div className="text-sm md:text-base">
         {t("terms.use_license_content")}
         <li>{t("terms.use_license_content_list_1")}</li>
         <li>{t("terms.use_license_content_list_2")}</li>
         <li>{t("terms.use_license_content_list_3")}</li>
         <li>{t("terms.use_license_content_list_4")}</li>
-      </p>
+      </div>
 
       <h2 className="mt-8 text-xl md:text-2xl">3. {t("terms.disclaimer")}</h2>
 
@@ -76,5 +74,3 @@ function Page() {
     </section>
   )
 }
-
-export default Page

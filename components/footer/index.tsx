@@ -11,7 +11,7 @@ import {
   PhoneCall,
   Twitter,
 } from "lucide-react"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import * as z from "zod"
@@ -28,10 +28,10 @@ import {
 import { Input } from "@/components/ui/input"
 
 export function SiteFooter() {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
 
   const formSchema = z.object({
-    email: z.string().email(t("enter_valid_email")),
+    email: z.string().email(t("footer_section.enter_valid_email")),
   })
 
   type UserFormValue = z.infer<typeof formSchema>
@@ -59,7 +59,7 @@ export function SiteFooter() {
           position: "top-right",
         })
       } else {
-        toast.error(t("footer_section.something_went_wrong"), {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -139,7 +139,7 @@ export function SiteFooter() {
                   href={link.href}
                   className="  flex items-center rounded-lg font-mont text-base  text-primary hover:text-primary"
                 >
-                  {t(link.title)}
+                  {t(link.title as keyof IntlMessages["main"])}
                 </Link>
               ))}
             </div>

@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios, { AxiosError } from "axios"
 import { MailX } from "lucide-react"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import * as z from "zod"
@@ -20,7 +20,7 @@ import {
 import { Input } from "@/components/ui/input"
 
 function Page() {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
   const searchParams = useSearchParams()
 
   const formSchema = z.object({
@@ -57,7 +57,7 @@ function Page() {
           position: "top-right",
         })
       } else {
-        toast.error(t("unsubscribe.something_went_wrong"), {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }

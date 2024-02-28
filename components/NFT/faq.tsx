@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 
@@ -51,7 +51,7 @@ const FAQS = [
 
 function FAQ() {
   const [openItem, setOpenItem] = useState<number | null>(null)
-  const { t } = useTranslation()
+  const t = useTranslations("main")
   const handleAccordionItemClick = (index: number) => {
     setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
   }
@@ -80,12 +80,12 @@ function FAQ() {
                   onClick={() => handleAccordionItemClick(index)}
                   className="auth font-semibold text-secondary-foreground hover:no-underline"
                 >
-                  {t(faq.question)}
+                  {t(faq.question as keyof IntlMessages["main"])}
                 </AccordionTrigger>
                 <AccordionContent className="auth flex flex-col gap-4 text-base text-muted-foreground">
                   {faq.answers.map((answer, index) => (
                     <p key={index} className="auth text-justify">
-                      {t(answer)}
+                      {t(answer as keyof IntlMessages["main"])}
                     </p>
                   ))}
                 </AccordionContent>

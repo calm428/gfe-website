@@ -2,14 +2,15 @@
 
 import Image from "next/image"
 import { Lock } from "lucide-react"
-import { useTranslation } from "react-i18next"
+import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
 
 import { Miner } from "."
 
 export default function MinerCard({ miner }: { miner: Miner }) {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
+
   return (
     <div className="mx-auto flex w-full max-w-[350px] flex-col items-start gap-4 rounded-xl bg-[#E7F0FD] p-4">
       <Image

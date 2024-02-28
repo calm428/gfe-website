@@ -1,9 +1,11 @@
-"use client"
+import Image from "next/image"
+import bitfufuLogoPic from "@/public/images/home/bitfufu.com-logo.png"
+import ecosAMLogoPic from "@/public/images/home/ecos.am-logo.png"
+import { getTranslations } from "next-intl/server"
 
-import { useTranslation } from "react-i18next"
+export default async function IncomeComparison() {
+  const t = await getTranslations("main")
 
-const IncomeComparison = () => {
-  const { t } = useTranslation()
   return (
     <div className="bg-[url('/images/miner-hosting/bg4.png')] bg-cover bg-bottom bg-no-repeat py-10 md:py-16">
       <div className="container">
@@ -13,7 +15,11 @@ const IncomeComparison = () => {
 
         <div className="grid grid-cols-1 gap-7 py-10 xl:grid-cols-10 ">
           <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-[#E7F0FD] p-7 xl:col-span-3">
-            <img className="w-24" src={"/images/home/ecos.am-logo.png"}></img>
+            <Image
+              className="w-24"
+              src={ecosAMLogoPic}
+              alt="ecos am logo"
+            ></Image>
 
             <div>
               <h2 className="font-monument text-lg tracking-wider text-muted-foreground">
@@ -89,10 +95,11 @@ const IncomeComparison = () => {
           </div>
 
           <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-[#E7F0FD] p-7 xl:col-span-3">
-            <img
+            <Image
+              src={bitfufuLogoPic}
               className="w-24"
-              src={"/images/home/bitfufu.com-logo.png"}
-            ></img>
+              alt="bitfufu logo"
+            ></Image>
             <div>
               <h2 className="font-monument text-lg tracking-wider text-muted-foreground">
                 bitfufu.com
@@ -131,5 +138,3 @@ const IncomeComparison = () => {
     </div>
   )
 }
-
-export default IncomeComparison

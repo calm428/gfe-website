@@ -1,8 +1,5 @@
-"use client"
-
-import { ScrollToTop } from "react-simple-scroll-up"
-
 import ContactUs from "@/components/NFT/contact-us"
+import ScrollToTop from "@/components/common/scroll-to-top"
 import AdvantagesSection from "@/components/miner-hosting/advantages"
 import BenefitSection from "@/components/miner-hosting/benefit"
 import BitcoinRateSection from "@/components/miner-hosting/bitcoin-rate"
@@ -40,12 +37,7 @@ export default function IndexPage() {
         <FaqSection />
         <ContactUs />
       </div>
-      <ScrollToTop
-        className="!bottom-[50px] z-50"
-        strokeFillColor="#21b4fd"
-        strokeEmptyColor="#21b4fd55"
-        bgColor="#21b4fd99"
-      />
+      <ScrollToTop />
     </section>
   )
 }

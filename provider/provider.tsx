@@ -2,11 +2,10 @@
 
 import React, { ReactNode, useEffect, useState } from "react"
 import { SunbeltContext } from "@/context/context"
-import { QueryClient, QueryClientProvider } from "react-query"
-import { I18nextProvider } from "react-i18next"
-import i18n from "@/i18n"
 import axios from "axios"
+import { QueryClient, QueryClientProvider } from "react-query"
 import useSWR from "swr"
+
 const queryClient = new QueryClient()
 
 interface IProps {
@@ -23,8 +22,8 @@ const App: React.FC<IProps> = ({ children }) => {
   const [signUpModalOpen, setSignUpModalOpen] = useState<boolean>(false)
   const [verifyModalOpen, setVerifyModalOpen] = useState<boolean>(false)
   const [authenticated, setAuthenticated] = useState<boolean>(false)
-  
-  const {data: fetchedData, error} = useSWR('/auth', fetcher)
+
+  const { data: fetchedData, error } = useSWR("/auth", fetcher)
 
   useEffect(() => {
     if (!error && fetchedData) {
@@ -55,9 +54,7 @@ const App: React.FC<IProps> = ({ children }) => {
         setAuthenticated,
       }}
     >
-      <I18nextProvider i18n={i18n}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-      </I18nextProvider>
     </SunbeltContext.Provider>
   )
 }

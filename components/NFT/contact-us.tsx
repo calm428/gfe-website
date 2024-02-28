@@ -1,14 +1,13 @@
-"use client"
-
 import Link from "next/link"
-import { useTranslation } from "next-i18next"
+import { getTranslations } from "next-intl/server"
 
 import { siteConfig } from "@/config/site"
 
 import { Button } from "../ui/button"
 
-function ContactUs() {
-  let { t } = useTranslation()
+async function ContactUs() {
+  const t = await getTranslations("main")
+
   return (
     <div className="py-[60px]">
       <div className="flex flex-col justify-between rounded-xl bg-muted p-[60px] md:flex-row">
