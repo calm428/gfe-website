@@ -1,9 +1,9 @@
 import Image from "next/image"
 import dapprPic from "@/public/images/nft/dappr.svg"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
-async function AboutDappr() {
-  const t = await getTranslations("main")
+function AboutDappr() {
+  const t = useTranslations("main")
 
   return (
     <div className="relative bg-[url('/images/nft/bg1.png')] bg-cover bg-center bg-no-repeat pb-[1500px] pt-24 xl:pb-[900px]">

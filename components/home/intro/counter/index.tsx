@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 
 import "@radix-ui/react-icons"
 import Image from "next/image"
-import { useTranslation } from "next-i18next"
+import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 
@@ -13,7 +13,7 @@ import { Input } from "../../../ui/input"
 import CounterCard from "./counter-card"
 
 function Counter() {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
   const countdownInterval = useRef<number | null>(null)
 
   const [time, setTime] = useState({

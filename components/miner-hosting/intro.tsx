@@ -1,13 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-export default async function HomeSection() {
-  const t = await getTranslations("main")
+export default function HomeSection() {
+  const t = useTranslations("main")
 
   return (
     <div className="relative flex flex-col items-center justify-between gap-20 bg-[url('/images/bg-gradient.webp')] bg-cover bg-no-repeat py-48 pb-[300px] md:flex-row md:gap-6 md:pb-48">

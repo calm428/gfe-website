@@ -1,8 +1,8 @@
 import Image from "next/image"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
-export default async function WorkFlowSection() {
-  const t = await getTranslations("main")
+export default function WorkFlowSection() {
+  const t = useTranslations("main")
 
   return (
     <div className="container flex flex-col items-center justify-between py-8">

@@ -1,11 +1,11 @@
-import Image from "next/image"
 import minerPic from "@/public/images/home/miner.png"
-import { getTranslations } from "next-intl/server"
+import Image from "next/image"
 
+import { useTranslations } from "next-intl"
 import { AdvantageCard } from "./advantage-card"
 
-export default async function AdvantagesSection() {
-  const t = await getTranslations("main")
+export default function AdvantagesSection() {
+  const t = useTranslations("main")
 
   return (
     <div className="container py-10">

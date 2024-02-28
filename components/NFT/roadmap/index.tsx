@@ -1,10 +1,10 @@
 import Image from "next/image"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import Step from "./step"
 
-async function Roadmap() {
-  const t = await getTranslations("main")
+function Roadmap() {
+  const t = useTranslations("main")
 
   return (
     <div className="container pb-24 lg:px-24">

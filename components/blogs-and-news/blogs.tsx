@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import { useSearchParams } from "next/navigation"
 import axios from "axios"
-import { useTranslation } from "next-i18next"
 import { useTranslations } from "next-intl"
 import { MdOutlineSpeakerNotesOff } from "react-icons/md"
 import useSWR from "swr"
@@ -110,7 +109,7 @@ function HighlightsSection({
   author,
   date,
 }: BlogCardDataType) {
-  const { t } = useTranslation()
+  const t = useTranslations("main")
   return (
     <div className="mt-5 grid max-w-3xl grid-cols-1 md:max-w-none md:grid-cols-2 md:gap-8">
       <AspectRatio ratio={16 / 9} className="bg-muted">

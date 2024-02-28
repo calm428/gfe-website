@@ -1,10 +1,10 @@
 import Image from "next/image"
 import bitfufuLogoPic from "@/public/images/home/bitfufu.com-logo.png"
 import ecosAMLogoPic from "@/public/images/home/ecos.am-logo.png"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
-export default async function IncomeComparison() {
-  const t = await getTranslations("main")
+export default function IncomeComparison() {
+  const t = useTranslations("main")
 
   return (
     <div className="bg-[url('/images/miner-hosting/bg4.png')] bg-cover bg-bottom bg-no-repeat py-10 md:py-16">

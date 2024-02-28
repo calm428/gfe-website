@@ -1,10 +1,10 @@
 import Image from "next/image"
 import bottomPic from "@/public/images/bottom.svg"
 import serverHostingPic from "@/public/images/nft/server-hosting.svg"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
-async function ServerHosting() {
-  const t = await getTranslations("main")
+function ServerHosting() {
+  const t = useTranslations("main")
 
   return (
     <div className="relative mb-24 flex flex-col-reverse gap-12 lg:flex-row lg:px-0">
