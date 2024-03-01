@@ -5,6 +5,8 @@ import rightPic from "@/public/bgs/right1.png"
 import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
+import SectionDescription from "@/components/common/section-description"
+import SectionTitle from "@/components/common/section-title"
 
 import FeatureCard from "./feature-card"
 
@@ -16,12 +18,12 @@ export default function SpecsSection() {
     <div className="relative mt-0	 overflow-hidden bg-background lg:mt-40	">
       <div className="container  flex flex-col justify-between gap-12 space-y-14 py-[100px] pb-20 lg:py-[207px] lg:pb-56 lg:pt-24">
         <div className=" relative z-30 flex flex-col gap-[24px]">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman  text-[30px] font-normal text-transparent md:text-[45px]">
+          <SectionTitle align="left">
             {t("home_page.section2.title")}
-          </h1>
-          <p className="auth text-base font-medium text-muted-foreground lg:w-1/2 lg:text-[20px]">
+          </SectionTitle>
+          <SectionDescription align="left">
             {t("home_page.section2.description")}
-          </p>
+          </SectionDescription>
         </div>
         <div className=" relative z-30 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {features.map((feature, ind) => (

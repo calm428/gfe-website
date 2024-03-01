@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic"
 
-import CommunitySection from "@/components/aboutUs/community-section"
+import CommunitySection from "@/components/common/community"
 import ScrollToTop from "@/components/common/scroll-to-top"
 import HowPaticipateSection from "@/components/governance/how-paticipate"
 import BenefitSection from "@/components/guild/benefit"
@@ -15,7 +15,7 @@ const GuildMap = dynamic(() => import("@/components/guild/guild-map"), {
 
 export default function GuildPage() {
   return (
-    <section>
+    <>
       <HeroSection />
       <FeatureSection />
       <LeadGuildSection />
@@ -25,6 +25,6 @@ export default function GuildPage() {
         <CommunitySection />
       </div>
       <ScrollToTop />
-    </section>
+    </>
   )
 }

@@ -5,8 +5,8 @@ import { useTranslations } from "next-intl"
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 
-import SectionDescription from "../common/section-description"
-import SectionTitle from "../common/section-title"
+import SectionDescription from "./section-description"
+import SectionTitle from "./section-title"
 
 export default function CommunitySection() {
   const t = useTranslations("main")

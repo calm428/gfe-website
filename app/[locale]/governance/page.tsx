@@ -1,4 +1,4 @@
-import CommunitySection from "@/components/aboutUs/community-section"
+import CommunitySection from "@/components/common/community"
 import ScrollToTop from "@/components/common/scroll-to-top"
 import AboutGIPSection from "@/components/governance/about-gip"
 import HeroSection from "@/components/governance/hero"

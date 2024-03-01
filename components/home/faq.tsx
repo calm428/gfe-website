@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/custom-accordion"
 
+import SectionTitle from "../common/section-title"
 import { Button } from "../ui/button"
 
 const FAQS = [
@@ -42,11 +43,11 @@ const FaqSection = () => {
   }
 
   return (
-    <div className="py-[100px]">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-[50px]  text-center font-goldman text-3xl uppercase text-transparent">
+    <div className="container py-[100px]">
+      <SectionTitle>
         {t("home_page.section5.title")} <br className="hidden sm:inline" />
         {t("home_page.section5.subtitle")}
-      </h1>
+      </SectionTitle>
 
       <Accordion type="single" collapsible className="auth mt-5 space-y-5">
         {FAQS.map((faq, index) => (

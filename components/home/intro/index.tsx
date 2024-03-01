@@ -7,6 +7,8 @@ import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
+import PageTitle from "@/components/common/page-title"
+import SectionDescription from "@/components/common/section-description"
 import { Icons } from "@/components/icons"
 
 import Counter from "./counter"
@@ -14,7 +16,7 @@ import Counter from "./counter"
 export default function HomeSection() {
   const t = useTranslations("main")
   return (
-    <div
+    <section
       className="relative  bg-cover bg-center  "
       style={{
         backgroundImage: "url('/bgs/Patterns.svg'),url('/bgs/intro.jpg')",
@@ -24,14 +26,14 @@ export default function HomeSection() {
         <div className="flex  w-full flex-col justify-between lg:w-[45%] xl:w-[55%]">
           <div className="mb-5 flex flex-col items-start gap-[56px]">
             <div className="flex flex-col gap-[16px]">
-              <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-[42px] font-normal text-transparent md:text-[52px] xl:text-[62px]">
+              <PageTitle align="left">
                 {t("home_page.section1.title")}{" "}
                 <br className="hidden sm:inline" />
                 {t("home_page.section1.subtitle")}
-              </h1>
-              <p className="auth pr-5 font-mont font-semibold text-muted-foreground lg:text-[18px] xl:text-[20px]">
+              </PageTitle>
+              <SectionDescription align="left">
                 {t("home_page.section1.description")}
-              </p>
+              </SectionDescription>
             </div>
             <div className="auth mb-7 flex w-full flex-col gap-2 md:mb-0 md:flex-row md:gap-3">
               <Link href={siteConfig.links.docs} className="button-86">
@@ -75,6 +77,6 @@ export default function HomeSection() {
         <Image src={rightPic} alt="bg" className="w-1/2" />
         <Image src={leftPic} alt="bg" className="w-1/2" />
       </div>
-    </div>
+    </section>
   )
 }

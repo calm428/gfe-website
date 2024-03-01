@@ -3,6 +3,10 @@ import groupSVG from "@/public/advantages/Group.svg"
 import hueSVG from "@/public/advantages/hue.svg"
 import { useTranslations } from "next-intl"
 
+import SectionBadge from "@/components/common/section-badge"
+import SectionDescription from "@/components/common/section-description"
+import SectionTitle from "@/components/common/section-title"
+
 import { Button } from "../../ui/button"
 import ListItem from "./list-item"
 
@@ -20,23 +24,16 @@ export default function CalculatorSection() {
         {/* main */}
         <div className="px:[16rem] flex flex-col gap-12 lg:w-1/2">
           <div className="flex flex-col gap-6">
-            <div className="mr-auto rounded-sm bg-[#EEF5FF]">
-              <div className="rounded-md bg-primary/10 p-2">
-                <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
-                  <span className="actual-text">{t("Future")}</span>
-                  <span className="front-text">{t("Future")}</span>
-                </p>
-              </div>
-            </div>
-            <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman  text-6xl  font-normal text-transparent">
+            <SectionBadge text={t("Future")} position="left" />
+            <SectionTitle align="left">
               {t("home_page.section4.title")}
-            </h1>
-            <p className=" auth text-lg font-medium text-muted-foreground">
+            </SectionTitle>
+            <SectionDescription align="left">
               {t("home_page.section4.description")}
-            </p>
-            <p className="auth text-lg font-medium">
+            </SectionDescription>
+            <SectionDescription align="left" className="font-medium">
               {t("home_page.section4.description2")}
-            </p>
+            </SectionDescription>
             <div className="grid  sm:grid-cols-2">
               <ListItem text={t("home_page.section4.serverHosting")} />
               <ListItem text={t("home_page.section4.districtRuralPower")} />
