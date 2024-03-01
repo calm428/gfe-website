@@ -57,9 +57,9 @@ export default function HomeSection() {
               <Button className="absolute -top-3 left-5 mr-4 rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
                 {t("nft_page.new")}
               </Button>
-              <h1 className="mt-2 font-mont font-medium text-muted-foreground md:mt-0 md:text-[16px]">
+              <p className="mt-2 font-mont font-medium text-muted-foreground md:mt-0 md:text-[16px]">
                 {t("launch_text")}
-              </h1>
+              </p>
               <ChevronRightIcon />
             </div>
           </div>

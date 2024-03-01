@@ -5,18 +5,19 @@ import nftPic_2 from "@/public/images/about-us/nft2.svg"
 import nftPic_3 from "@/public/images/about-us/nft3.svg"
 import { useTranslations } from "next-intl"
 
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
+
 export default function AboutEnergy() {
   const t = useTranslations("main")
 
   return (
-    <div className="bg-[#F9FCFF] pt-24">
+    <section className="relative bg-[#F9FCFF] pt-24">
       <div className="container flex flex-col items-center gap-6 ">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
-          {t("about_us_page.energy_section.title")}
-        </h1>
-        <p className="auth text-center font-mont text-base font-medium md:text-lg lg:w-[1000px]">
+        <SectionTitle>{t("about_us_page.energy_section.title")}</SectionTitle>
+        <SectionDescription>
           {t("about_us_page.energy_section.para1")}
-        </p>
+        </SectionDescription>
       </div>
       <div className="container flex flex-col justify-between px-0 pt-14 lg:flex-row">
         <div>
@@ -90,6 +91,8 @@ export default function AboutEnergy() {
           </div>
         </div>
       </div>
-    </div>
+      {/* <div className="absolute bottom-0 h-10 w-full bg-gradient-to-b from-transparent to-white"></div>
+      <div className="absolute top-0 h-10 w-full bg-gradient-to-b from-white to-transparent"></div> */}
+    </section>
   )
 }

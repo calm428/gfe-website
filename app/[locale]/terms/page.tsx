@@ -1,13 +1,15 @@
 import { getTranslations } from "next-intl/server"
 
+import SectionTitle from "@/components/common/section-title"
+
 export default async function TemrsPage() {
   const t = await getTranslations("main")
 
   return (
     <section className="container pb-[300px] pt-10 md:pb-[200px] lg:px-24">
-      <h1 className="text-3xl font-bold md:text-5xl">
+      <SectionTitle align="left">
         {t("terms.terms_and_conditions")}
-      </h1>
+      </SectionTitle>
 
       <p className="mt-4 text-sm italic text-gray-500 md:text-base">
         {t("terms.last_updated")}: Feb 12, 2024

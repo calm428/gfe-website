@@ -9,18 +9,18 @@ import ScrollToTop from "@/components/common/scroll-to-top"
 
 function page() {
   return (
-    <section>
+    <>
       <Introduction />
       <AboutGFE />
       <AboutEnergy />
       <MarketPlace />
       <PowerProduction />
-      <div className=" bg-[url('/images/nft/bg2.png')] bg-cover  pb-[300px] md:pb-[150px] ">
+      <div className="bg-[url('/images/nft/bg2.png')] bg-cover pb-[300px] md:pb-[150px]">
         <LaPazSection />
         <CommunitySection />
       </div>
       <ScrollToTop />
-    </section>
+    </>
   )
 }
 

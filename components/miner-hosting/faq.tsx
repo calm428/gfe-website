@@ -10,6 +10,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/custom-accordion"
 
+import SectionTitle from "../common/section-title"
+
 const FaqSection = () => {
   const t = useTranslations("main")
 
@@ -38,10 +40,8 @@ const FaqSection = () => {
     },
   ]
   return (
-    <div className="container">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5 text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
-        {t("minerHosting.sunbeltRenewableMining")}
-      </h1>
+    <section className="container">
+      <SectionTitle>{t("minerHosting.sunbeltRenewableMining")}</SectionTitle>
 
       <Accordion type="single" collapsible className="auth mt-5 space-y-5">
         {FAQS.map((faq, index) => (
@@ -65,7 +65,7 @@ const FaqSection = () => {
           </AccordionItem>
         ))}
       </Accordion>
-    </div>
+    </section>
   )
 }
 

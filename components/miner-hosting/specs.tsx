@@ -1,13 +1,16 @@
 "use client"
 
-import { useTranslations } from "next-intl"
-import Image from "next/image"
 import { useState } from "react"
+import Image from "next/image"
+import { useTranslations } from "next-intl"
+
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
 
 export default function SpecsSection() {
   const [currentCard, setCurrentCard] = useState(0)
   const t = useTranslations("main")
-  
+
   const isCurrent = (index: number) => {
     return index == currentCard
   }
@@ -38,15 +41,13 @@ export default function SpecsSection() {
     },
   ]
   return (
-    <div className="bg-[url('/images/miner-hosting/bg2.png')] bg-cover bg-bottom bg-no-repeat pb-14 pt-10 md:pt-24">
+    <section className="bg-[url('/images/miner-hosting/bg2.png')] bg-cover bg-bottom bg-no-repeat pb-14 pt-10 md:pt-24">
       <div className="container">
         <div className="pb-10 md:pb-14">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-2 text-center  font-goldman text-5xl font-normal text-transparent md:pb-3">
-            {t("minerHosting.miningEcosystem.title")}
-          </h1>
-          <h3 className="text-center font-mont text-lg font-medium text-muted-foreground md:text-xl">
+          <SectionTitle>{t("minerHosting.miningEcosystem.title")}</SectionTitle>
+          <SectionDescription>
             {t("minerHosting.miningEcosystem.description")}
-          </h3>
+          </SectionDescription>
         </div>
 
         {/* cards */}
@@ -96,6 +97,6 @@ export default function SpecsSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

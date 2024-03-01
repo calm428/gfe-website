@@ -18,6 +18,8 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import SectionDescription from "@/components/common/section-description"
+import SectionTitle from "@/components/common/section-title"
 
 function Page() {
   const t = useTranslations("main")
@@ -68,12 +70,10 @@ function Page() {
     <section className="container pb-[300px] pt-10 md:pb-[200px] lg:px-24">
       <div className="text-center">
         <MailX className="mx-auto mb-8 size-16 text-gray-500" />
-        <h1 className="text-3xl font-semibold md:text-5xl">
-          {t("unsubscribe.unsubscribe")}
-        </h1>
-        <p className="mt-4 text-sm italic text-gray-500 md:text-base">
+        <SectionTitle>{t("unsubscribe.unsubscribe")}</SectionTitle>
+        <SectionDescription className="italic text-gray-500 md:text-base">
           {t("unsubscribe.unsubscribe_content")}
-        </p>
+        </SectionDescription>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <FormField

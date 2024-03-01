@@ -1,13 +1,13 @@
 import { getTranslations } from "next-intl/server"
 
+import SectionTitle from "@/components/common/section-title"
+
 export default async function PrivacyPage() {
   const t = await getTranslations("main")
 
   return (
     <section className="container pb-[300px] pt-10 md:pb-[200px] lg:px-24">
-      <h1 className="text-3xl font-bold md:text-5xl">
-        {t("privacy.privacy_policy")}
-      </h1>
+      <SectionTitle align="left">{t("privacy.privacy_policy")}</SectionTitle>
 
       <p className="mt-4 text-sm italic text-gray-500 md:text-base">
         {t("privacy.last_updated")}: Feb 12, 2024

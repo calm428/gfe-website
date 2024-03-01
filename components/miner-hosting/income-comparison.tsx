@@ -3,15 +3,15 @@ import bitfufuLogoPic from "@/public/images/home/bitfufu.com-logo.png"
 import ecosAMLogoPic from "@/public/images/home/ecos.am-logo.png"
 import { useTranslations } from "next-intl"
 
+import SectionTitle from "../common/section-title"
+
 export default function IncomeComparison() {
   const t = useTranslations("main")
 
   return (
-    <div className="bg-[url('/images/miner-hosting/bg4.png')] bg-cover bg-bottom bg-no-repeat py-10 md:py-16">
+    <section className="relative bg-[url('/images/miner-hosting/bg4.png')] bg-cover bg-bottom bg-no-repeat py-10 md:py-16">
       <div className="container">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5 text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
-          {t("minerHosting.incomeComparison.title")}
-        </h1>
+        <SectionTitle>{t("minerHosting.incomeComparison.title")}</SectionTitle>
 
         <div className="grid grid-cols-1 gap-7 py-10 xl:grid-cols-10 ">
           <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-[#E7F0FD] p-7 xl:col-span-3">
@@ -56,14 +56,14 @@ export default function IncomeComparison() {
           </div>
 
           <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-primary p-8 xl:col-span-4">
-            <h1 className="font-monument text-5xl tracking-wide text-muted xl:text-6xl">
+            <h2 className="font-monument text-5xl tracking-wide text-muted xl:text-6xl">
               SUNBELT
-            </h1>
+            </h2>
 
             <div>
-              <h2 className="font-monument text-lg tracking-widest text-muted">
+              <h3 className="font-monument text-lg tracking-widest text-muted">
                 {t("minerHosting.ourCompany")}
-              </h2>
+              </h3>
 
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
@@ -135,6 +135,7 @@ export default function IncomeComparison() {
           </div>
         </div>
       </div>
-    </div>
+      <div className="absolute bottom-0 h-10 w-full bg-gradient-to-b from-transparent to-white"></div>
+    </section>
   )
 }

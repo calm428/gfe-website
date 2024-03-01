@@ -70,9 +70,9 @@ function Counter() {
       <div className="auth relative w-full overflow-hidden rounded-lg bg-background/90 pb-[32px] font-mont shadow-lg backdrop-blur-3xl">
         <div className="flex flex-col gap-[24px] p-[32px]">
           <div className="text-center">
-            <h2 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
+            <h3 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
               {t("home_page.converter_section.title")}
-            </h2>
+            </h3>
             <p className="font-mont text-[14px] font-medium">
               {t("home_page.converter_section.subtitle")}
             </p>
@@ -123,19 +123,19 @@ function Counter() {
               </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-[5px]">
-              <h1 className=" font-medium text-muted-foreground">
+              <p className=" font-medium text-muted-foreground">
                 USDT Raised:
                 <span className="font-bold">$5,667,950.07 / $6,258,616</span>
-              </h1>
-              <h1 className=" font-medium text-muted-foreground">
+              </p>
+              <p className=" font-medium text-muted-foreground">
                 Your Purchased GEF= <span className="font-bold">0</span>
-              </h1>
-              <h1 className=" font-medium text-muted-foreground">
+              </p>
+              <p className=" font-medium text-muted-foreground">
                 Your Stakeable GEF= <span className="font-bold">0</span>
-              </h1>
-              <h1 className=" font-medium text-muted-foreground">
+              </p>
+              <p className=" font-medium text-muted-foreground">
                 1 GEF = <span className="font-bold">$0.12 </span>
-              </h1>
+              </p>
             </div>
           </div>
 

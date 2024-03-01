@@ -179,9 +179,9 @@ const BitcoinPriceGraph = () => {
 
   return (
     <div className="flex w-full flex-col justify-between space-y-5 rounded-xl bg-white p-10 drop-shadow-md">
-      <h1 className="auth text-xl  tracking-wider text-primary">
+      <h3 className="auth text-xl  tracking-wider text-primary">
         Bitcoin Chart
-      </h1>
+      </h3>
       <div className="ml-auto flex space-x-3">
         <Button
           className={`rounded-lg px-3 py-2 ${

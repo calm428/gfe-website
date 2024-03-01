@@ -1,21 +1,23 @@
-import minerPic from "@/public/images/home/miner.png"
 import Image from "next/image"
-
+import minerPic from "@/public/images/home/miner.png"
 import { useTranslations } from "next-intl"
+
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
 import { AdvantageCard } from "./advantage-card"
 
 export default function AdvantagesSection() {
   const t = useTranslations("main")
 
   return (
-    <div className="container py-10">
+    <section className="container py-10">
       <div className="pb-10 md:pb-14">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-2 text-center  font-goldman text-5xl font-normal text-transparent md:pb-3">
+        <SectionTitle>
           {t("minerHosting.advantagesOfGFEMining.title")}
-        </h1>
-        <h3 className="text-center font-mont text-lg font-medium text-muted-foreground md:text-xl">
+        </SectionTitle>
+        <SectionDescription>
           {t("minerHosting.advantagesOfGFEMining.description")}
-        </h3>
+        </SectionDescription>
       </div>
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -39,9 +41,9 @@ export default function AdvantagesSection() {
           }}
         >
           <div className="p-10">
-            <h1 className="auth text-xl font-bold tracking-wider text-secondary">
+            <p className="auth text-xl font-bold tracking-wider text-secondary">
               {t("minerHosting.sunbeltMiner.title")}
-            </h1>
+            </p>
             <p className="auth mt-2 font-medium text-white transition-all duration-500">
               {t("minerHosting.sunbeltMiner.description")}
             </p>
@@ -66,6 +68,6 @@ export default function AdvantagesSection() {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

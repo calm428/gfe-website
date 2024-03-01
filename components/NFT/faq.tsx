@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
 import { Button } from "../ui/button"
 import {
   Accordion,
@@ -56,14 +58,12 @@ function FAQ() {
     setOpenItem((prevOpenItem) => (prevOpenItem === index ? null : index))
   }
   return (
-    <div className="flex flex-col  gap-[50px] px-5 py-24">
+    <section className="flex flex-col  gap-[50px] px-5 py-24">
       <div className="flex flex-col items-center gap-4">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-5xl text-transparent">
-          FAQ
-        </h1>
-        <p className="auth font-mont text-lg">
+        <SectionTitle>FAQ</SectionTitle>
+        <SectionDescription>
           {t("nft_page.faq_section.description")}
-        </p>
+        </SectionDescription>
       </div>
       <div>
         {/* <div className="py-[50px]"> */}
@@ -99,7 +99,7 @@ function FAQ() {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

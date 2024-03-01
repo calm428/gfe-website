@@ -14,6 +14,7 @@ import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
 
 import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
+import SectionTitle from "../common/section-title"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
@@ -56,10 +57,8 @@ const BlogsSection = () => {
   }, [fetchedData])
 
   return (
-    <div className="container py-14">
-      <h1 className="bg-gradient-to-b from-[#2BADFD]  to-[#1570EF] bg-clip-text font-goldman text-5xl tracking-wider text-transparent">
-        {t("blogs_and_news.blogs")}
-      </h1>
+    <section className="container py-14">
+      <SectionTitle align="left">{t("blogs_and_news.blogs")}</SectionTitle>
       {highlightBlog && <HighlightsSection {...highlightBlog} />}
       <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {!error ? (
@@ -95,7 +94,7 @@ const BlogsSection = () => {
         maxPage={Math.ceil(blogsData.length / numberOfBlogsPerPage)}
         gotoPage={(page) => setCurrentPage(page)}
       />
-    </div>
+    </section>
   )
 }
 

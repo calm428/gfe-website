@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { useTranslations } from "next-intl"
 
+import SectionTitle from "@/components/common/section-title"
+
 import { Button } from "../../ui/button"
 import { Input } from "../../ui/input"
 import { Label } from "../../ui/label"
@@ -14,18 +16,16 @@ function CalculatorSection() {
   const t = useTranslations("main")
 
   return (
-    <div className="container px-10 py-20">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
-        {t("minerHosting.buyOurEnergy.title")}
-      </h1>
+    <section className="container px-10 py-20">
+      <SectionTitle>{t("minerHosting.buyOurEnergy.title")}</SectionTitle>
 
       <div className="grid w-full grid-cols-1 gap-10 xl:grid-cols-2">
         <HistoricalPowerGraph />
 
         <div className="w-full">
-          <h1 className="auth pb-5 pt-10 text-sm font-semibold tracking-wider text-primary">
+          <h2 className="auth pb-5 pt-10 text-sm font-semibold tracking-wider text-primary">
             {t("minerHosting.calculate")}
-          </h1>
+          </h2>
 
           <div className="flex items-start gap-3">
             <div className="w-full">
@@ -33,7 +33,7 @@ function CalculatorSection() {
                 <Label className="auth font-semibold text-muted-foreground">
                   {t("minerHosting.amount")}
                 </Label>
-                <div className="relative flex h-full w-full items-center">
+                <div className="relative flex size-full items-center">
                   <Input
                     type="number"
                     placeholder={t("minerHosting.enterAmount")}
@@ -96,7 +96,7 @@ function CalculatorSection() {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

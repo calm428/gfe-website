@@ -45,7 +45,7 @@ export default function GuildMap() {
       </SectionTitle>
       <div className="container relative mt-6 w-full overflow-hidden">
         <MapContainer
-          center={[51.505, -0.09]}
+          center={[24.1422, 110.3108]}
           zoom={7.5}
           scrollWheelZoom={true}
           className="h-[500px] w-full"
@@ -55,7 +55,7 @@ export default function GuildMap() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker
-            position={[51.505, -0.09]}
+            position={[24.1422, 110.3108]}
             icon={icon}
             eventHandlers={{
               click: () => {

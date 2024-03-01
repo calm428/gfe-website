@@ -1,19 +1,19 @@
 import { useTranslations } from "next-intl"
 
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
 import { AdvantageCard } from "./advantage-card"
 
 export default function WhySunbeltSection() {
   const t = useTranslations("main")
 
   return (
-    <div className="container pt-12 md:pt-20">
+    <section className="container pt-12 md:pt-20">
       <div className="pb-10 md:pb-14">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
-          {t("minerHosting.whySunbelt.title")}
-        </h1>
-        <h3 className="text-center font-mont text-lg">
+        <SectionTitle>{t("minerHosting.whySunbelt.title")}</SectionTitle>
+        <SectionDescription>
           {t("minerHosting.whySunbelt.subtitle")}
-        </h3>
+        </SectionDescription>
       </div>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
@@ -38,6 +38,6 @@ export default function WhySunbeltSection() {
           text={t("minerHosting.lowFeeHighProfit.description")}
         />
       </div>
-    </div>
+    </section>
   )
 }

@@ -3,11 +3,14 @@ import bottomPic from "@/public/images/bottom.svg"
 import serverHostingPic from "@/public/images/nft/server-hosting.svg"
 import { useTranslations } from "next-intl"
 
+import SectionBadge from "../common/section-badge"
+import SectionTitle from "../common/section-title"
+
 function ServerHosting() {
   const t = useTranslations("main")
 
   return (
-    <div className="relative mb-24 flex flex-col-reverse gap-12 lg:flex-row lg:px-0">
+    <section className="relative mb-24 flex flex-col-reverse gap-12 lg:flex-row lg:px-0">
       <div className="mt-12 grid w-full grid-cols-1 lg:grid-cols-2">
         <div className="hidden items-center justify-center lg:flex">
           <Image
@@ -17,15 +20,10 @@ function ServerHosting() {
           />
         </div>
         <div className="container flex max-w-xl flex-col justify-center gap-6 pt-5">
-          <div className="mr-auto rounded-md bg-primary/10 p-2">
-            <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
-              <span className="actual-text">{t("Future")}</span>
-              <span className="front-text">{t("Future")}</span>
-            </p>
-          </div>
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-5xl text-transparent">
+          <SectionBadge text={t("Future")} position="left" />
+          <SectionTitle align="left">
             {t("nft_page.hosting_section.title")}
-          </h1>
+          </SectionTitle>
           <p className="auth text-justify font-mont text-lg">
             {t("nft_page.hosting_section.para1")}
           </p>
@@ -40,7 +38,7 @@ function ServerHosting() {
       <div className="absolute bottom-24 left-0 z-0 hidden w-full lg:-bottom-10 lg:flex 2xl:-bottom-6">
         <Image src={bottomPic} alt="bottom" className="w-full" />
       </div>
-    </div>
+    </section>
   )
 }
 

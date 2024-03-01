@@ -43,7 +43,7 @@ const FaqSection = () => {
   }
 
   return (
-    <div className="container py-[100px]">
+    <section className="container py-[100px]">
       <SectionTitle>
         {t("home_page.section5.title")} <br className="hidden sm:inline" />
         {t("home_page.section5.subtitle")}
@@ -76,7 +76,7 @@ const FaqSection = () => {
           <Link href={siteConfig.links.docs}>View All</Link>
         </Button>
       </div>
-    </div>
+    </section>
   )
 }
 

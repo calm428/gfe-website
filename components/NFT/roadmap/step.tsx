@@ -31,7 +31,7 @@ function Step({ step, desc }: Props) {
         </div>
       </div>
       <div
-        className={`  ${
+        className={`${
           step <= 2
             ? "text-[#019CF0]"
             : step === 3
@@ -39,11 +39,11 @@ function Step({ step, desc }: Props) {
               : step === 3
                 ? "text-[#BBDE00]"
                 : "text-[#BAC82E]"
-        } font-monument text-lg font-semibold xl:text-[24px]`}
+        } font-goldman text-lg font-semibold xl:text-[24px]`}
       >
         Stage {step}
       </div>
-      <p className="auth text-center text-sm lg:text-lg">{desc}</p>
+      <p className="auth text-center text-sm lg:text-base">{desc}</p>
     </div>
   )
 }
