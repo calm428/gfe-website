@@ -1,5 +1,19 @@
+import { Metadata } from "next"
+
 import Introduction from "@/components/contact-us/introduction"
 import FaqSection from "@/components/home/faq"
+import SpecsSection from "@/components/home/specs"
+
+import { openGraphImage } from "../../shared-metadata"
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Get in touch with us",
+  openGraph: {
+    ...openGraphImage,
+    title: "Contact",
+  },
+}
 
 function page() {
   return (

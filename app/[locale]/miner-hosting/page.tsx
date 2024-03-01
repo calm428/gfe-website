@@ -1,3 +1,5 @@
+import { Metadata } from "next"
+
 import ContactUs from "@/components/common/contact-us"
 import ScrollToTop from "@/components/common/scroll-to-top"
 import AdvantagesSection from "@/components/miner-hosting/advantages"
@@ -15,6 +17,18 @@ import SliderSection from "@/components/miner-hosting/slider"
 import SpecsSection from "@/components/miner-hosting/specs"
 import WhySunbeltSection from "@/components/miner-hosting/why-sunbelt"
 import WorkFlowSection from "@/components/miner-hosting/work-flow"
+
+import { openGraphImage } from "../../shared-metadata"
+
+export const metadata: Metadata = {
+  title: "Miner Hosting",
+  description:
+    "Reliable and profitable platform, providing several new miner hosting service for end users.",
+  openGraph: {
+    ...openGraphImage,
+    title: "Miner Hosting",
+  },
+}
 
 export default function IndexPage() {
   return (

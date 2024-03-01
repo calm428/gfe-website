@@ -1,5 +1,6 @@
 "use client"
 
+import { Metadata } from "next"
 import { useSearchParams } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios, { AxiosError } from "axios"
@@ -20,6 +21,17 @@ import {
 import { Input } from "@/components/ui/input"
 import SectionDescription from "@/components/common/section-description"
 import SectionTitle from "@/components/common/section-title"
+
+import { openGraphImage } from "../../shared-metadata"
+
+export const metadata: Metadata = {
+  title: "Unsubscribe",
+  description: "Unsubscribe from our mailing list",
+  openGraph: {
+    ...openGraphImage,
+    title: "Unsubscribe",
+  },
+}
 
 function Page() {
   const t = useTranslations("main")
