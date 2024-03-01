@@ -537,7 +537,10 @@
       "learning_resources": "Learning Resources & Guild Guides",
       "meeting_and_learning": "Meeting & Learning From The Core Team",
       "exclusive_merch": "Exclusive Merch, Goodies & NFTs",
-      "discover_the_polygon_guilds_near_you": "Discover the Polygon Guilds near you"
+      "discover_the_polygon_guilds_near_you": "Discover the Polygon Guilds near you",
+      "leader": "Leader",
+      "capacity": "Capacity",
+      "community_channel": "Community Channel"
     },
     "privacy": {
       "privacy_policy": "Privacy Policy",

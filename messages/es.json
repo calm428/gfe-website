@@ -535,7 +535,10 @@
       "learning_resources": "Recursos de aprendizaje y guías de gremios",
       "meeting_and_learning": "Reunirse con el equipo central y aprender",
       "exclusive_merch": "Mercadería, regalos y NFT exclusivos",
-      "discover_the_polygon_guilds_near_you": "Descubre los gremios de Polygon cerca de ti"
+      "discover_the_polygon_guilds_near_you": "Descubre los gremios de Polygon cerca de ti",
+      "leader": "Líder",
+      "capacity": "Capacidad",
+      "community_channel": "Canal Comunitario"
     },
     "privacy": {
       "privacy_policy": "Política de privacidad",
