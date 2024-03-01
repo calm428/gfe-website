@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const LogoSection = () => {
   return (
-    <div
+    <section
       className="relative my-10 h-32 overflow-hidden"
       style={{
         background: "linear-gradient(300deg, #22B4FD 32.53%, #2D79FF 77.26%)",
@@ -26,7 +26,7 @@ const LogoSection = () => {
           <Image src="/GFE_white.svg" alt="logo" width={160} height={50} />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

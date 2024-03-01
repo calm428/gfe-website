@@ -3,11 +3,13 @@ import huePic from "@/public/advantages/hue.svg"
 import personPic from "@/public/images/about-us/person.png"
 import { useTranslations } from "next-intl"
 
+import SectionTitle from "../common/section-title"
+
 export default function LaPazSection() {
   const t = useTranslations("main")
 
   return (
-    <div className="relative flex justify-center">
+    <section className="relative flex justify-center">
       <Image src={huePic} alt="image" className="absolute left-0 h-96" />
       <Image
         src={huePic}
@@ -16,9 +18,7 @@ export default function LaPazSection() {
       />
       <div className="container flex flex-col-reverse py-14 xl:flex-row">
         <div className="z-20 mt-[-30%] rounded-[20px] border border-border bg-background p-11 shadow-lg xl:mt-0 xl:w-[80%]">
-          <h1 className=" bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-monument text-[30px] text-transparent">
-            La Paz BCS example:
-          </h1>
+          <SectionTitle align="left">La Paz BCS example:</SectionTitle>
           <div className="auth flex flex-col gap-4">
             <p className="text-left text-base lg:text-lg">
               {t("about_us_page.faq_section.para1")}
@@ -36,6 +36,6 @@ export default function LaPazSection() {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

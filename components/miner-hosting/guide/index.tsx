@@ -1,6 +1,9 @@
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 
+import SectionDescription from "@/components/common/section-description"
+import SectionTitle from "@/components/common/section-title"
+
 import StepComponent from "./step"
 
 export type Step = {
@@ -52,13 +55,11 @@ export default function GuideSection() {
     },
   ]
   return (
-    <div className="flex flex-col items-center justify-between pb-4">
-      <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
-        {t("minerHosting.miningStepByStep.title")}
-      </div>
-      <div className="text-md max-w-5xl text-center font-mont text-muted-foreground">
+    <section className="flex flex-col items-center justify-between pb-4">
+      <SectionTitle>{t("minerHosting.miningStepByStep.title")}</SectionTitle>
+      <SectionDescription className="max-w-7xl">
         {t("minerHosting.miningStepByStep.subtitle")}
-      </div>
+      </SectionDescription>
       <div className="mt-12 grid w-full grid-cols-1 lg:grid-cols-2">
         <div className="hidden items-center justify-center lg:flex">
           <Image
@@ -75,6 +76,6 @@ export default function GuideSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

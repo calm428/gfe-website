@@ -3,15 +3,17 @@ import checkPic from "@/public/icons/check.svg"
 import nftPic_4 from "@/public/images/about-us/nft4.svg"
 import { useTranslations } from "next-intl"
 
+import SectionTitle from "../common/section-title"
+
 export default function MarketPlace() {
   const t = useTranslations("main")
 
   return (
-    <div className=" grid place-items-center  gap-6 bg-gradient-to-t from-[#2BADFD] to-[#1570EF] pt-24 lg:grid-cols-2 lg:py-24 lg:pl-24">
+    <section className=" grid place-items-center  gap-6 bg-gradient-to-t from-[#2BADFD] to-[#1570EF] pt-24 lg:grid-cols-2 lg:py-24 lg:pl-24">
       <div className="container flex flex-col gap-8 text-primary-foreground lg:px-0">
-        <h1 className="font-goldman text-5xl">
+        <SectionTitle align="left" className="text-white">
           {t("about_us_page.market_section.title")}
-        </h1>
+        </SectionTitle>
         <p className=" auth text-justify font-mont text-base lg:text-lg">
           {t("about_us_page.market_section.para1")}
         </p>
@@ -42,6 +44,6 @@ export default function MarketPlace() {
       <div className="">
         <Image src={nftPic_4} alt="image" />
       </div>
-    </div>
+    </section>
   )
 }

@@ -12,9 +12,9 @@ function AdvantageCard({ title, desc, image }: Props) {
     <div className=" relative flex flex-col overflow-hidden rounded-md border border-border bg-muted">
       <div className="flex flex-col gap-8 py-[50px] pl-[50px]">
         <div className="flex flex-col gap-4">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-4xl capitalize text-transparent">
+          <h3 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-4xl capitalize text-transparent">
             {title}
-          </h1>
+          </h3>
           <p className="auth w-[80%] text-base font-medium ">{desc}</p>
         </div>
         <div>

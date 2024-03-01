@@ -11,6 +11,8 @@ import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
 
 import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
@@ -49,14 +51,14 @@ const UpcomingSection = () => {
   }, [fetchedData])
 
   return (
-    <div className="bg-background-lighten-10 container mt-5">
-      <h1 className="mt-20 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman  text-5xl uppercase tracking-wider text-transparent">
+    <section className="bg-background-lighten-10 container mt-5">
+      <SectionTitle align="left">
         {t("blogs_and_news.upcoming_events")}
-      </h1>
-      <p className="auth my-6 font-semibold">
+      </SectionTitle>
+      <SectionDescription align="left">
         {t("blogs_and_news.upcoming_events_description")}
-      </p>
-      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+      </SectionDescription>
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {!error ? (
           fetchedData && eventsData ? (
             eventsData.length > 0 ? (
@@ -90,8 +92,7 @@ const UpcomingSection = () => {
         maxPage={Math.ceil(eventsData.length / numberOfEventsPerPage)}
         gotoPage={(page) => setCurrentPage(page)}
       />
-      <div className="my-12 border"></div>
-    </div>
+    </section>
   )
 }
 

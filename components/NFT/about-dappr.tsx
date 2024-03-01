@@ -2,26 +2,23 @@ import Image from "next/image"
 import dapprPic from "@/public/images/nft/dappr.svg"
 import { useTranslations } from "next-intl"
 
+import SectionBadge from "../common/section-badge"
+import SectionTitle from "../common/section-title"
+
 function AboutDappr() {
   const t = useTranslations("main")
 
   return (
-    <div className="relative bg-[url('/images/nft/bg1.png')] bg-cover bg-center bg-no-repeat pb-[1500px] pt-24 xl:pb-[900px]">
+    <section className="relative bg-[url('/images/nft/bg1.png')] bg-cover bg-center bg-no-repeat pb-[1500px] pt-24 xl:pb-[900px]">
       <div className="container items-center justify-between gap-12 xl:flex">
         <div className="flex flex-col gap-6 lg:px-24 xl:w-1/2 xl:px-0">
-          <div className="mr-auto rounded-md bg-primary/10 p-2">
-            <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
-              <span className="actual-text">
-                {t("nft_page.about_section.title")}
-              </span>
-              <span className="front-text">
-                {t("nft_page.about_section.title")}
-              </span>
-            </p>
-          </div>
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-5xl text-transparent">
+          <SectionBadge
+            text={t("nft_page.about_section.title")}
+            position="left"
+          />
+          <SectionTitle align="left">
             {t("nft_page.about_section.title")}
-          </h1>
+          </SectionTitle>
           <p className="auth text-justify font-mont text-base md:text-lg">
             {t("nft_page.about_section.para1")}
           </p>
@@ -40,7 +37,7 @@ function AboutDappr() {
           <Image src={dapprPic} alt="image" className="" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

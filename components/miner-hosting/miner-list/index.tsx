@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl"
 import Slider from "react-slick"
 
 import { Button } from "@/components/ui/button"
+import SectionTitle from "@/components/common/section-title"
 
 import MinerCard from "./miner-card"
 
@@ -118,11 +119,9 @@ export default function MinerListSection() {
   }
 
   return (
-    <div className="bg-[url('/images/miner-hosting/bg3.png')] bg-cover bg-bottom bg-no-repeat">
+    <section className="relative bg-[url('/images/miner-hosting/bg3.png')] bg-cover bg-bottom bg-no-repeat">
       <div className="container flex flex-col items-center justify-between gap-10 px-10 py-16">
-        <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
-          {t("minerHosting.minerList")}
-        </div>
+        <SectionTitle>{t("minerHosting.minerList")}</SectionTitle>
 
         <div className="mx-auto w-full max-w-[375px] md:max-w-[750px] lg:max-w-[968px] xl:max-w-6xl">
           <Slider {...settings} ref={(c) => setSlider(c)}>
@@ -166,6 +165,7 @@ export default function MinerListSection() {
           </div>
         </div>
       </div>
-    </div>
+      <div className="absolute bottom-0 h-10 w-full bg-gradient-to-b from-transparent to-white"></div>
+    </section>
   )
 }

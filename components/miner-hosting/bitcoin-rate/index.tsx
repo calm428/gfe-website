@@ -3,6 +3,8 @@
 import { useTranslations } from "next-intl"
 import { useQuery } from "react-query"
 
+import SectionTitle from "@/components/common/section-title"
+
 import BitcoinPriceGraph from "./bitcoin-price-graph"
 
 const useGetBitcoinData = (cryptoName: string, options: any) => {
@@ -31,18 +33,16 @@ function BitcoinRateSection() {
   })
 
   return (
-    <div className="container px-10 py-20">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
-        {t("minerHosting.TrackBitcoinRates")}
-      </h1>
+    <section className="container px-10 py-20">
+      <SectionTitle>{t("minerHosting.TrackBitcoinRates")}</SectionTitle>
 
-      <div className="grid w-full grid-cols-1 gap-10 rounded-xl bg-primary/5 p-4 xl:grid-cols-2">
+      <div className="mt-4 grid w-full grid-cols-1 gap-10 rounded-xl bg-primary/5 p-4 xl:grid-cols-2">
         <BitcoinPriceGraph />
 
         <div className="w-full">
-          <h1 className="font-semi bold bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5 pt-10 font-goldman text-4xl tracking-wider text-transparent">
+          <h3 className="font-semi bold bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5 pt-10 font-goldman text-4xl tracking-wider text-transparent">
             {t("minerHosting.bitcoin_price.title")}
-          </h1>
+          </h3>
 
           <div className="text-md mb-4">
             {t("minerHosting.bitcoin_price.description")}
@@ -63,7 +63,7 @@ function BitcoinRateSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

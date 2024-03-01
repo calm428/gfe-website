@@ -68,8 +68,8 @@ export default function SliderSection() {
   ]
 
   return (
-    <div className="-mt-[100px] w-full">
-      <div className="relative flex h-[300px] w-full items-center bg-[url('/images/miner-hosting/slider-bg.svg')] bg-cover bg-center bg-no-repeat sm:h-[200px]">
+    <section className="mt-[-100px] w-full">
+      <div className="relative flex h-[300px] w-full items-center bg-[url('/images/miner-hosting/slider-bg.svg')] bg-[length:100%] bg-center bg-no-repeat sm:h-[200px]">
         <div className="absolute right-0 h-fit w-[60%] sm:w-[78%] lg:w-[70%] xl:w-[60%]">
           <Slider arrows={false} {...settings}>
             {SLIDE_DATA.map((data, index) => (
@@ -79,10 +79,10 @@ export default function SliderSection() {
                   alt="icon"
                   width={50}
                   height={50}
-                  className="h-14 w-14"
+                  className="size-14"
                 />
                 <div className="flex flex-col gap-2.5">
-                  <h1 className="font-goldman text-2xl">{data.title}</h1>
+                  <p className="font-goldman text-2xl">{data.title}</p>
                   <p className="">{data.text}</p>
                 </div>
               </div>
@@ -90,6 +90,6 @@ export default function SliderSection() {
           </Slider>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

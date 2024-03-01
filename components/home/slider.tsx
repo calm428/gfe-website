@@ -6,6 +6,8 @@ import Slider from "react-slick"
 
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
+import SectionBadge from "../common/section-badge"
+import SectionTitle from "../common/section-title"
 
 const SLIDE_DATA = [
   {
@@ -65,19 +67,8 @@ const SliderSection = () => {
   return (
     <div className=" auth relative bg-background pt-[100px]">
       <div className="flex flex-col items-center gap-[24px] lg:px-[200px]">
-        <div className="rounded-md bg-primary/10 p-2">
-          <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
-            <span className="actual-text">
-              {t("home_page.section?.subtitle")}
-            </span>
-            <span className="front-text">
-              {t("home_page.section?.subtitle")}
-            </span>
-          </p>
-        </div>
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl font-normal capitalize text-transparent lg:text-[50px]">
-          {t("home_page.section?.title")}
-        </h1>
+        <SectionBadge text={t("home_page.section?.subtitle")} />
+        <SectionTitle>{t("home_page.section?.title")}</SectionTitle>
       </div>
 
       <div className="my-[30px] mt-[270px]">

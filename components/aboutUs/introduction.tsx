@@ -6,11 +6,14 @@ import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
+import SectionBadge from "../common/section-badge"
+import SectionTitle from "../common/section-title"
+
 export default function Introduction() {
   const t = useTranslations("main")
 
   return (
-    <div
+    <section
       className="relative flex flex-col items-center gap-12  bg-cover px-5 pb-[100px] pt-[50px] lg:px-0 lg:pb-[300px] lg:pt-[100px] "
       style={{
         backgroundImage:
@@ -18,17 +21,12 @@ export default function Introduction() {
       }}
     >
       <div className="flex flex-col items-center gap-8 px-5 lg:px-16">
-        <div className="rounded-md bg-primary/10 p-2">
-          <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
-            <span className="actual-text">{t("about_us_page.name")}</span>
-            <span className="front-text">{t("about_us_page.name")}</span>
-          </p>
-        </div>
+        <SectionBadge text={t("about_us_page.name")} />
         <div className="flex flex-col items-center gap-4">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl text-transparent">
+          <SectionTitle>
             {t("about_us_page.title")} <br />
             {t("about_us_page.subtitle")}
-          </h1>
+          </SectionTitle>
           <Button className="font mont auth border border-secondary-foreground bg-background text-secondary-foreground hover:bg-muted">
             <Link
               href={siteConfig.links.docs}
@@ -49,6 +47,6 @@ export default function Introduction() {
           className="w-full"
         />
       </div>
-    </div>
+    </section>
   )
 }

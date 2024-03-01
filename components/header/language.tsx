@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
+import { usePathname } from "@/navigation"
 import { useLocale } from "next-intl"
 
 import {

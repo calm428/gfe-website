@@ -16,12 +16,12 @@ export default function BenefitSection() {
     },
   ]
   return (
-    <div className="container flex flex-col items-stretch justify-center gap-4 pb-32 md:flex-row">
+    <section className="container flex flex-col items-stretch justify-center gap-4 pb-32 md:flex-row">
       <div
         className="mx-auto h-96 max-w-sm rounded-xl bg-primary bg-cover bg-center bg-no-repeat p-4 md:mx-0 md:h-auto md:w-2/5"
         style={{ backgroundImage: "url(/images/how-it-works/bg2.png)" }}
       >
-        <div className="font-monument text-2xl text-white">
+        <div className="font-goldman text-2xl text-white">
           {t("minerHosting.benefitsOfHosting.title")}
         </div>
       </div>
@@ -34,6 +34,6 @@ export default function BenefitSection() {
           />
         ))}
       </div>
-    </div>
+    </section>
   )
 }

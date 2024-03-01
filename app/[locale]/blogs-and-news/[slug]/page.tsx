@@ -6,7 +6,7 @@ import Link from "next/link"
 import axios from "axios"
 import useSWR from "swr"
 
-import ContactUs from "@/components/NFT/contact-us"
+import ContactUs from "@/components/common/contact-us"
 
 import "react-quill/dist/quill.bubble.css"
 import { ScrollToTop } from "react-simple-scroll-up"
@@ -66,7 +66,7 @@ const Page: FC<PageProps> = ({ params }) => {
   }, [fetchedData])
 
   return (
-    <div className="container mt-10 pb-32">
+    <section className="container mt-10 pb-32">
       <div className="mb-10 flex">
         <Link
           href="/blogs-and-news"
@@ -132,7 +132,7 @@ const Page: FC<PageProps> = ({ params }) => {
         strokeEmptyColor="#21b4fd55"
         bgColor="#21b4fd99"
       />
-    </div>
+    </section>
   )
 }
 

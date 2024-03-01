@@ -45,9 +45,9 @@ export default function BlogCard({
 
       <div className="relative flex h-full flex-col justify-between space-y-3 rounded-3xl rounded-t-none bg-[#E7F0FD] p-5">
         <div>
-          <h1 className="line-clamp-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-xl tracking-wider text-transparent ">
+          <h2 className="line-clamp-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-xl tracking-wider text-transparent ">
             {title}
-          </h1>
+          </h2>
           <p className="line-clamp-3 font-medium text-muted-foreground">
             {desc}
           </p>

@@ -1,16 +1,16 @@
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 
+import SectionTitle from "@/components/common/section-title"
+
 import Step from "./step"
 
 function Roadmap() {
   const t = useTranslations("main")
 
   return (
-    <div className="container pb-24 lg:px-24">
-      <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center font-goldman text-5xl capitalize text-transparent">
-        {t("nft_page.gfe_roadmap")}
-      </h1>
+    <section className="container pb-24 lg:px-24">
+      <SectionTitle>{t("nft_page.gfe_roadmap")}</SectionTitle>
       <div className="flex flex-col pt-24 xl:pt-32">
         <Image
           src="/images/nft/roadmap.svg"
@@ -42,7 +42,7 @@ function Roadmap() {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -11,6 +11,7 @@ import { PaginationComponent } from "@/components/blogs-and-news/pagination"
 import BlogCard, { BlogCardDataType } from "@/components/common/cards/blog-card"
 
 import BlogCardSkeleton from "../common/cards/blog-card-skeleton"
+import SectionTitle from "../common/section-title"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
@@ -49,11 +50,9 @@ const NewsSection = () => {
   }, [fetchedData])
 
   return (
-    <div className="bg-[#F9F9F9]">
+    <section className="bg-[#F9F9F9]">
       <div className="container py-24 ">
-        <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman  text-5xl tracking-wider  text-transparent">
-          {t("blogs_and_news.news")}
-        </h1>
+        <SectionTitle align="left">{t("blogs_and_news.news")}</SectionTitle>
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {!error ? (
             fetchedData && newsData ? (
@@ -89,7 +88,7 @@ const NewsSection = () => {
           gotoPage={(page) => setCurrentPage(page)}
         />
       </div>
-    </div>
+    </section>
   )
 }
 

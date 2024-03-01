@@ -27,6 +27,9 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
+
 export function SiteFooter() {
   const t = useTranslations("main")
 
@@ -70,18 +73,16 @@ export function SiteFooter() {
     <footer className="relative z-40 w-full border-b bg-primary/5 ">
       <div className=" px-0 lg:px-24">
         <div className="relative mx-4 -mt-72 flex flex-col justify-between gap-5 rounded-3xl  bg-primary bg-gradient-to-br from-[#2BADFD] to-[#1570EF] p-[40px] sm:mx-6 md:mx-8 md:-mt-40 md:items-center md:p-[60px] lg:mx-auto lg:flex-row">
-          {/* <img
-            src="/Group 37.svg"
-            alt="bg"
-            className=" absolute -top-10 left-7"
-          /> */}
           <div className="w-full lg:w-[50%] lg:max-w-2xl 	">
-            <div className="font-goldman text-5xl text-white ">
+            <SectionTitle className="text-white" align="left">
               {t("footer_section.section2.title")}
-            </div>
-            <div className="auth mt-4 font-mont text-base font-semibold  text-white">
+            </SectionTitle>
+            <SectionDescription
+              className="text-white xl:text-base"
+              align="left"
+            >
               {t("footer_section.section2.description")}
-            </div>
+            </SectionDescription>
           </div>
           <div className="w-full lg:w-[50%] lg:max-w-xl ">
             <div className="auth my-1 text-base  font-semibold text-white">

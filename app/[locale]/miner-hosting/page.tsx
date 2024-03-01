@@ -1,4 +1,4 @@
-import ContactUs from "@/components/NFT/contact-us"
+import ContactUs from "@/components/common/contact-us"
 import ScrollToTop from "@/components/common/scroll-to-top"
 import AdvantagesSection from "@/components/miner-hosting/advantages"
 import BenefitSection from "@/components/miner-hosting/benefit"
@@ -18,7 +18,7 @@ import WorkFlowSection from "@/components/miner-hosting/work-flow"
 
 export default function IndexPage() {
   return (
-    <section className="grid items-center gap-4">
+    <>
       <HomeSection />
       <SliderSection />
       <SpecsSection />
@@ -38,6 +38,6 @@ export default function IndexPage() {
         <ContactUs />
       </div>
       <ScrollToTop />
-    </section>
+    </>
   )
 }

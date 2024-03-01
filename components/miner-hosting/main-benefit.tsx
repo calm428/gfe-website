@@ -1,11 +1,13 @@
 import { useTranslations } from "next-intl"
 
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
 import { AdvantageCard } from "./advantage-card"
 
 export default function MainBenefitSection() {
   const t = useTranslations("main")
   return (
-    <div className="relative py-24">
+    <section className="relative py-10">
       {/* <div className="overflow-hidden">
         <Image
           src="/images/miner-hosting/globe.gif"
@@ -17,12 +19,12 @@ export default function MainBenefitSection() {
       </div> */}
       <div className="container flex flex-col items-start justify-start px-10">
         <div className="pb-10 md:pb-14">
-          <h1 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  font-goldman text-5xl font-normal text-transparent md:pb-10">
+          <SectionTitle align="left">
             {t("minerHosting.mainBenefit.title")}
-          </h1>
-          <h3 className="text-start font-mont font-medium text-muted-foreground md:text-xl">
+          </SectionTitle>
+          <SectionDescription align="left">
             {t("minerHosting.mainBenefit.description")}
-          </h3>
+          </SectionDescription>
         </div>
 
         <div className="grid w-auto grid-cols-1 justify-start gap-6 sm:grid-cols-2 xl:grid-cols-3">
@@ -43,6 +45,6 @@ export default function MainBenefitSection() {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

@@ -1,17 +1,20 @@
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
+
 export default function WorkFlowSection() {
   const t = useTranslations("main")
 
   return (
-    <div className="container flex flex-col items-center justify-between py-8">
-      <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5  text-center font-goldman text-5xl font-normal text-transparent md:pb-10">
+    <section className="container flex flex-col items-center justify-between py-8 pt-10">
+      <SectionTitle>
         {t("minerHosting.howSunbeltMinersWork.title")}
-      </div>
-      <div className="text-md max-w-5xl text-center font-mont text-muted-foreground">
+      </SectionTitle>
+      <SectionDescription>
         {t("minerHosting.howSunbeltMinersWork.subtitle")}
-      </div>
+      </SectionDescription>
       <div className="mt-12 w-full">
         <Image
           src="/images/how-it-works/workflow.png"
@@ -21,6 +24,6 @@ export default function WorkFlowSection() {
           className="mx-auto h-auto w-full max-w-5xl"
         />
       </div>
-    </div>
+    </section>
   )
 }

@@ -29,6 +29,8 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 
+import SectionDescription from "../common/section-description"
+import SectionTitle from "../common/section-title"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { Textarea } from "../ui/textarea"
@@ -87,16 +89,16 @@ function Introduction() {
   }
 
   return (
-    <div className="auth w-full bg-[url('/images/bg-gradient.webp')] bg-cover bg-center bg-no-repeat px-10 py-24">
+    <section className="auth w-full bg-[url('/images/bg-gradient.webp')] bg-cover bg-center bg-no-repeat px-10 py-24">
       <div className="mx-auto grid w-full max-w-7xl overflow-hidden rounded-xl lg:grid-cols-2">
         <div className="bg-primary/10 p-8">
           <div>
-            <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-5xl text-transparent">
+            <SectionTitle align="left">
               {t("contactus_page.bookMeetingTitle")}
-            </div>
-            <p className="auth my-4 font-mont text-base lg:text-lg">
+            </SectionTitle>
+            <SectionDescription align="left">
               {t("contactus_page.bookMeetingDescription")}
-            </p>
+            </SectionDescription>
             <div className="mb-24 mt-4 flex flex-col gap-4 md:flex-row lg:flex-col xl:flex-row">
               <Link
                 href={siteConfig.links.calcom}
@@ -296,7 +298,7 @@ function Introduction() {
           </form>
         </Form>
       </div>
-    </div>
+    </section>
   )
 }
 

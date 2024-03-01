@@ -7,7 +7,7 @@ export default function AboutGFE() {
   const t = useTranslations("main")
 
   return (
-    <div className=" flex flex-col items-center gap-20 py-20 lg:py-24">
+    <section className=" flex flex-col items-center gap-20 py-20 lg:py-24">
       <p className="auth container text-justify font-mont text-base font-semibold text-black md:text-lg">
         {t("about_us_page.GFE_section.para1")}
       </p>
@@ -35,6 +35,6 @@ export default function AboutGFE() {
           <Image src={nftPic_1} alt="image" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
