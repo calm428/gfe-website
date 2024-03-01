@@ -22,6 +22,8 @@ export default function HeroSection() {
       style={{
         background:
           "url('/images/bg-gradient.webp'),url(/images/blogs-and-news/background.png)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
       className="relative flex  flex-col items-center  gap-12 bg-cover px-5 pb-[100px] pt-[50px] lg:px-0 lg:pt-[100px] "
     >
