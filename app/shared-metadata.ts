@@ -1,1 +1,1 @@
-export const openGraphImage = { images: [{ url: "/preview.png" }] }
+export const openGraphImage = { images: ["https://gfe.foundation/preview.png"] }

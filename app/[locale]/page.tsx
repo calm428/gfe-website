@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 
+import { siteConfig } from "@/config/site"
 import CommunitySection from "@/components/common/community"
 import ScrollToTop from "@/components/common/scroll-to-top"
 import AdvantagesSection from "@/components/home/advantages"
@@ -13,11 +14,12 @@ import SpecsSection from "@/components/home/specs"
 import { openGraphImage } from "../shared-metadata"
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "Green Fungible Energy - GFE",
+  title: siteConfig.name,
+  description: siteConfig.description,
   openGraph: {
     ...openGraphImage,
-    title: "Home",
+    title: siteConfig.name,
+    description: siteConfig.description,
   },
 }
 
