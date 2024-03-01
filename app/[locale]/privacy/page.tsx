@@ -1,6 +1,18 @@
+import { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 
 import SectionTitle from "@/components/common/section-title"
+
+import { openGraphImage } from "../../shared-metadata"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Privacy Policy",
+  openGraph: {
+    ...openGraphImage,
+    title: "Privacy Policy",
+  },
+}
 
 export default async function PrivacyPage() {
   const t = await getTranslations("main")

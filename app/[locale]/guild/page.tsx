@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import dynamic from "next/dynamic"
 
 import CommunitySection from "@/components/common/community"
@@ -8,6 +9,17 @@ import FeatureSection from "@/components/guild/feature"
 // import GuildMap from "@/components/guild/guild-map"
 import HeroSection from "@/components/guild/hero"
 import LeadGuildSection from "@/components/guild/lead-guild"
+
+import { openGraphImage } from "../../shared-metadata"
+
+export const metadata: Metadata = {
+  title: "Guild",
+  description: "Join the GFE Guild",
+  openGraph: {
+    ...openGraphImage,
+    title: "Guild",
+  },
+}
 
 const GuildMap = dynamic(() => import("@/components/guild/guild-map"), {
   ssr: false,

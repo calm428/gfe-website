@@ -1,3 +1,5 @@
+import { Metadata } from "next"
+
 import CommunitySection from "@/components/common/community"
 import ScrollToTop from "@/components/common/scroll-to-top"
 import AdvantagesSection from "@/components/home/advantages"
@@ -7,6 +9,17 @@ import HomeSection from "@/components/home/intro"
 import PartnersSection from "@/components/home/partnersSection"
 import SliderSection from "@/components/home/slider"
 import SpecsSection from "@/components/home/specs"
+
+import { openGraphImage } from "../shared-metadata"
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Green Fungible Energy - GFE",
+  openGraph: {
+    ...openGraphImage,
+    title: "Home",
+  },
+}
 
 function IndexPage() {
   return (

@@ -1,6 +1,18 @@
+import { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 
 import SectionTitle from "@/components/common/section-title"
+
+import { openGraphImage } from "../../shared-metadata"
+
+export const metadata: Metadata = {
+  title: "Terms of Use",
+  description: "Terms of Use",
+  openGraph: {
+    ...openGraphImage,
+    title: "Terms of Use",
+  },
+}
 
 export default async function TemrsPage() {
   const t = await getTranslations("main")
