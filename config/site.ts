@@ -4,6 +4,7 @@ export const siteConfig = {
   name: "Green Fungible Energy",
   description:
     "At GFE Foundation, we're pioneering the green energy revolution by merging sustainability with profitable investments through tokenization. Dive into a world where your investment fuels renewable energy projects and offers attractive returns. Join us in shaping a sustainable future, one token at a time. Invest smart, impact the planet.",
+  url: "https://www.gfe.foundation",
   token_functionalities: [
     {
       icon: "/icons/token_func/energy.svg",
@@ -204,6 +205,8 @@ export const siteConfig = {
     discord: "https://discord.gg/mkr95bfA",
     telegram: "https://t.me/gfefoundation",
     calcom: "https://cal.com/peter-chen-0302/meet-ceo-of-gfe-foundation",
+    googleForm:
+      "https://docs.google.com/forms/d/e/1FAIpQLSch45pUKLZTOwvBSTP6CNVmdqzO3WZbeuDW51z33sD3CtH86Q/viewform",
   },
   contact: {
     phone: "+1 814 419 9935",
