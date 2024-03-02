@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: 
 
-Sitemap: https://gfe.foundation/sitemap.xml
+Sitemap: https://www.gfe.foundation/sitemap.xml

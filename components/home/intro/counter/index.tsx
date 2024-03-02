@@ -100,15 +100,15 @@ function Counter() {
                     height={20}
                     alt={payment.name}
                   />
-                  <h2>{payment.title}</h2>
+                  <p>{payment.title}</p>
                 </div>
               ))}
             </div>
             <div className="flex gap-[10px]">
               <div className="flex flex-col gap-[8px]">
-                <h2 className=" text-sm font-semibold text-muted-foreground">
+                <p className=" text-sm font-semibold text-muted-foreground">
                   Pay with BTC
-                </h2>
+                </p>
                 <Input
                   type="number"
                   placeholder="0"
@@ -116,9 +116,9 @@ function Counter() {
                 />
               </div>
               <div className="flex flex-col gap-[8px]">
-                <h2 className=" text-sm font-semibold text-muted-foreground">
+                <p className=" text-sm font-semibold text-muted-foreground">
                   Receive GFE
-                </h2>
+                </p>
                 <Input type="number" placeholder="0" />
               </div>
             </div>
