@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function AdvantageCard({
   icon,
   title,
@@ -9,7 +11,13 @@ export function AdvantageCard({
 }) {
   return (
     <div className="container max-w-[350px] rounded-3xl bg-[#E7F0FD] p-8">
-      <img className="w-16" src={icon}></img>
+      <Image
+        width={50}
+        height={50}
+        className="w-16"
+        src={icon}
+        alt="icon"
+      ></Image>
       <h2 className="auth mt-5 text-xl font-bold uppercase tracking-wider">
         {title}
       </h2>
