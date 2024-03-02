@@ -186,11 +186,11 @@ export const siteConfig = {
   footerLinks: [
     {
       title: "footer_section.services",
-      href: "/services",
+      href: "#",
     },
     {
       title: "footer_section.community",
-      href: "/community",
+      href: "#",
     },
     {
       title: "footer_section.blogs_news",

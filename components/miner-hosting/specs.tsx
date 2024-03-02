@@ -76,13 +76,13 @@ export default function SpecsSection() {
                   width={50}
                   height={50}
                 />
-                <h2
+                <h3
                   className={
                     "auth mt-6 text-xl font-bold tracking-wider text-white xl:mt-8 " +
                     `${isCurrent(index) ? "" : ""}`
                   }
                   dangerouslySetInnerHTML={{ __html: data.title }}
-                ></h2>
+                ></h3>
                 <p
                   className={`mt-2 text-white transition-all duration-500 xl:mt-3 xl:w-80 ${
                     isCurrent(index)

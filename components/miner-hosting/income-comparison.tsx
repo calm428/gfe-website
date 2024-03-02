@@ -22,9 +22,9 @@ export default function IncomeComparison() {
             ></Image>
 
             <div>
-              <h2 className="font-monument text-lg tracking-wider text-muted-foreground">
+              <h3 className="font-monument text-lg tracking-wider text-muted-foreground">
                 ecos.am
-              </h2>
+              </h3>
 
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
@@ -56,9 +56,9 @@ export default function IncomeComparison() {
           </div>
 
           <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-primary p-8 xl:col-span-4">
-            <h2 className="font-monument text-5xl tracking-wide text-muted xl:text-6xl">
+            <h3 className="font-monument text-5xl tracking-wide text-muted xl:text-6xl">
               SUNBELT
-            </h2>
+            </h3>
 
             <div>
               <h3 className="font-monument text-lg tracking-widest text-muted">
@@ -101,9 +101,9 @@ export default function IncomeComparison() {
               alt="bitfufu logo"
             ></Image>
             <div>
-              <h2 className="font-monument text-lg tracking-wider text-muted-foreground">
+              <h3 className="font-monument text-lg tracking-wider text-muted-foreground">
                 bitfufu.com
-              </h2>
+              </h3>
 
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
