@@ -7,6 +7,8 @@ import { LiaPuzzlePieceSolid } from "react-icons/lia"
 import { RiRoadMapFill } from "react-icons/ri"
 import { Tb3DCubeSphere } from "react-icons/tb"
 
+import { siteConfig } from "@/config/site"
+
 import PageTitle from "../common/page-title"
 import SectionBadge from "../common/section-badge"
 import SectionDescription from "../common/section-description"
@@ -35,9 +37,12 @@ export default function HeroSection() {
           <Button
             variant="default"
             className="bg-gradient-to-l from-[#2BADFD] to-[#1570EF]"
+            asChild
           >
-            <FiPlus className="mr-2 size-5" />
-            {t("guild.start_guild")}
+            <Link href={siteConfig.links.googleForm} target="_blank">
+              <FiPlus className="mr-2 size-5" />
+              {t("guild.start_guild")}
+            </Link>
           </Button>
           <Button variant="outline" className="border-primary bg-white" asChild>
             <Link href="#guild-map">

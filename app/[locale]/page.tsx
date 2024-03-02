@@ -14,11 +14,11 @@ import SpecsSection from "@/components/home/specs"
 import { openGraphImage } from "../shared-metadata"
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
+  title: "Green Fungible Energy",
   description: siteConfig.description,
   openGraph: {
     ...openGraphImage,
-    title: siteConfig.name,
+    title: "Green Fungible Energy - GFE Foundation",
     description: siteConfig.description,
   },
 }
