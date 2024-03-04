@@ -3,7 +3,7 @@ import { getRequestConfig } from "next-intl/server"
 
 import { locales } from "./navigation"
 
-type Locale = "en" | "es" | "cn"
+type Locale = "en" | "es" | "cn" | "in"
 
 const getLocaleData = async (locale: Locale) => {
   return (await import(`./messages/${locale}.json`)).default

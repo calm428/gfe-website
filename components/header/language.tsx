@@ -42,7 +42,7 @@ export function LanguageSelector() {
           <SelectItem value="en">
             <div className="flex w-full items-center pr-4">
               <Image
-                src="https://flagcdn.com/us.svg"
+                src="/images/flags/us.svg"
                 alt="en"
                 width={24}
                 height={24}
@@ -54,7 +54,7 @@ export function LanguageSelector() {
           <SelectItem value="cn">
             <div className="flex w-full items-center pr-4">
               <Image
-                src="https://flagcdn.com/cn.svg"
+                src="/images/flags/cn.svg"
                 alt="cn"
                 width={24}
                 height={24}
@@ -66,13 +66,25 @@ export function LanguageSelector() {
           <SelectItem value="es">
             <div className="flex items-center pr-4">
               <Image
-                src="https://flagcdn.com/es.svg"
+                src="/images/flags/es.svg"
                 alt="es"
                 width={24}
                 height={24}
                 className="mr-2 h-auto w-4"
               />
               Spanish
+            </div>
+          </SelectItem>
+          <SelectItem value="in">
+            <div className="flex items-center pr-4">
+              <Image
+                src="/images/flags/in.svg"
+                alt="es"
+                width={24}
+                height={24}
+                className="mr-2 h-auto w-4"
+              />
+              Hindi
             </div>
           </SelectItem>
         </SelectGroup>
