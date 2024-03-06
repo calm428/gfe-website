@@ -64,7 +64,7 @@ export default function HomeSection() {
             </div>
           </div>
         </div>
-        <div className="relative mx-auto mt-7 w-full max-w-md items-end lg:mt-0 lg:flex lg:w-[55%] lg:flex-col xl:w-[45%] xl:items-end">
+        <div className="relative mx-auto mt-7 w-full max-w-md items-end lg:mt-0 lg:flex lg:w-[55%] lg:flex-col xl:w-[50%] xl:items-end">
           <Counter />
         </div>
       </div>

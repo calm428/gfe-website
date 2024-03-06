@@ -55,7 +55,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-mont antialiased ",
+            "min-h-screen bg-background font-mont antialiased",
             fontSans.variable,
             fontMono.variable,
             fontMont.variable,
@@ -63,7 +63,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontMonumentExtended.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="light">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+          >
             <Toaster />
             <div className="relative flex min-h-screen flex-col">
               <div className="flex-1">{children}</div>
