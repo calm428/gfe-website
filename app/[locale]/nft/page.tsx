@@ -11,6 +11,7 @@ import ScrollToTop from "@/components/common/scroll-to-top"
 import { openGraphImage } from "../../shared-metadata"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "NFT",
   description: "Reshape the future of clean energy with DAPPr NFT",
   openGraph: {
