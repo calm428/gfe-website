@@ -14,6 +14,7 @@ export default async function checkAuthentication() {
       return false
     }
   } catch (error) {
+    console.log(error)
     return false
   }
 }
