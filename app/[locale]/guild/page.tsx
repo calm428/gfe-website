@@ -13,6 +13,7 @@ import LeadGuildSection from "@/components/guild/lead-guild"
 import { openGraphImage } from "../../shared-metadata"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "Guild",
   description: "Join the GFE Guild",
   openGraph: {

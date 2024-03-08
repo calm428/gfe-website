@@ -6,6 +6,7 @@ import SectionTitle from "@/components/common/section-title"
 import { openGraphImage } from "../../shared-metadata"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "Privacy Policy",
   description: "Privacy Policy",
   openGraph: {

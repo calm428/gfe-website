@@ -14,6 +14,7 @@ import SpecsSection from "@/components/home/specs"
 import { openGraphImage } from "../shared-metadata"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "Green Fungible Energy",
   description: siteConfig.description,
   openGraph: {
