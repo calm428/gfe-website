@@ -78,7 +78,7 @@ function Counter() {
     } else {
       if (selectedPayment === "matic") {
         if (chainData.tokenPerMatic > 0)
-          paymentValue = Number(value) / chainData.tokenPerMatic / 100
+          paymentValue = Number(value) / chainData.tokenPerMatic * 100
       } else {
         paymentValue = Number(inputPaymentValue || 0)
       }
