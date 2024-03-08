@@ -35,7 +35,7 @@ function Counter() {
   const t = useTranslations("main")
   const countdownInterval = useRef<number | null>(null)
   const { status, address, chainData } = useICOWebSocket(
-    `${process.env.NODE_ENV === "production" ? "wss://" : "ws://"}${process.env.NEXT_PUBLIC_WEBSOCKET_HOST}`
+    `${process.env.NEXT_PUBLIC_ENVIRONMENT === "production" ? "wss://" : "ws://"}${process.env.NEXT_PUBLIC_WEBSOCKET_HOST}`
   )
   const [time, setTime] = useState({
     days: 0,
@@ -78,7 +78,7 @@ function Counter() {
     } else {
       if (selectedPayment === "matic") {
         if (chainData.tokenPerMatic > 0)
-          paymentValue = Number(value) / chainData.tokenPerMatic * 100
+          paymentValue = (Number(value) / chainData.tokenPerMatic) * 100
       } else {
         paymentValue = Number(inputPaymentValue || 0)
       }
