@@ -14,7 +14,7 @@ export default function CalculatorSection() {
   const t = useTranslations("main")
 
   return (
-    <div className=" relative bg-[url('/bgs/Features.svg')] bg-cover pb-60 sm:pt-[100px]">
+    <div className=" relative bg-[url('/bgs/Features.png')] bg-cover pb-60 sm:pt-[100px]">
       <Image src={hueSVG} alt="bg" className="absolute -left-5 top-0" />
       {/* image */}
       <div className="container flex flex-col-reverse  items-center justify-between  lg:flex-row">
