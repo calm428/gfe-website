@@ -6,6 +6,8 @@ import axios from "axios"
 import { QueryClient, QueryClientProvider } from "react-query"
 import useSWR from "swr"
 
+import checkAuthentication from "@/lib/actions/checkAuthentication"
+
 const queryClient = new QueryClient()
 
 interface IProps {
@@ -23,17 +25,9 @@ const App: React.FC<IProps> = ({ children }) => {
   const [verifyModalOpen, setVerifyModalOpen] = useState<boolean>(false)
   const [authenticated, setAuthenticated] = useState<boolean>(false)
 
-  const { data: fetchedData, error } = useSWR("/auth", fetcher)
-
   useEffect(() => {
-    if (!error && fetchedData) {
-      if (fetchedData?.expires && new Date(fetchedData.expires) > new Date()) {
-        setAuthenticated(true)
-      } else {
-        setAuthenticated(false)
-      }
-    }
-  }, [fetchedData, error])
+    checkAuthentication().then((res) => setAuthenticated(res))
+  }, [])
 
   return (
     <SunbeltContext.Provider
