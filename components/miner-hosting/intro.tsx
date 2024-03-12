@@ -41,7 +41,7 @@ export default function HomeSection() {
             <Link
               target="_blank"
               rel="noreferrer"
-              href={siteConfig.links.github}
+              href="#"
               className="flex items-center justify-between gap-3"
             >
               <Icons.play />
