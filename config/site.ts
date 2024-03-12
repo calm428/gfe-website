@@ -78,7 +78,7 @@ export const siteConfig = {
   community: [
     {
       icon: "/icons/community/discord.svg",
-      href: "https://discord.gg/mkr95bfA",
+      href: "https://discord.gg/FQzPFyV5",
       title: "Discord",
     },
     {
@@ -199,11 +199,14 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
-    discord: "https://discord.gg/mkr95bfA",
+    linkedin: "https://www.linkedin.com/",
+    facebook: "https://www.facebook.com/",
+    instagram: "https://www.instagram.com/",
+    twitter: "https://twitter.com/",
+    discord: "https://discord.gg/FQzPFyV5",
     telegram: "https://t.me/gfefoundation",
+    youtube: "https://www.youtube.com/@GFEFoundation",
+    docs: "https://www.gfe.foundation",
     calcom: "https://cal.com/peter-chen-0302/meet-ceo-of-gfe-foundation",
     googleForm:
       "https://docs.google.com/forms/d/e/1FAIpQLSch45pUKLZTOwvBSTP6CNVmdqzO3WZbeuDW51z33sD3CtH86Q/viewform",

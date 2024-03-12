@@ -3,17 +3,12 @@
 import Link from "next/link"
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios, { AxiosError } from "axios"
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  PhoneCall,
-  Twitter,
-} from "lucide-react"
+import { Facebook, Instagram, Linkedin, Mail, PhoneCall } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
+import { FaDiscord, FaTelegramPlane } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import * as z from "zod"
 
 import { siteConfig } from "@/config/site"
@@ -171,16 +166,52 @@ export function SiteFooter() {
             </div>
             <div className="hidden md:flex">
               <Button variant="ghost" size="icon">
-                <Facebook className="size-5 fill-current text-primary" />
+                <Link
+                  href={siteConfig.links.facebook}
+                  className="flex items-center gap-3"
+                >
+                  <Facebook className="size-5  fill-current text-primary" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon">
-                <Instagram className="size-5 text-primary" />
+                <Link
+                  href={siteConfig.links.instagram}
+                  className="flex items-center gap-3"
+                >
+                  <Instagram className="size-5 text-primary" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon">
-                <Twitter className="size-5 fill-current text-primary" />
+                <Link
+                  href={siteConfig.links.twitter}
+                  className="flex items-center gap-3"
+                >
+                  <FaXTwitter className="size-5 fill-current text-primary" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon">
-                <Linkedin className="size-5 fill-current text-primary" />
+                <Link
+                  href={siteConfig.links.linkedin}
+                  className="flex items-center gap-3"
+                >
+                  <Linkedin className="size-5 fill-current text-primary" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Link
+                  href={siteConfig.links.telegram}
+                  className="flex items-center gap-3"
+                >
+                  <FaTelegramPlane className="size-5 fill-current text-primary" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Link
+                  href={siteConfig.links.discord}
+                  className="flex items-center gap-3"
+                >
+                  <FaDiscord className="size-5 fill-current text-primary" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -191,22 +222,58 @@ export function SiteFooter() {
             </div>
             <div className="flex">
               <Button variant="ghost" size="icon">
-                <Facebook className="size-5  fill-current text-primary" />
+                <Link
+                  href={siteConfig.links.facebook}
+                  className="flex items-center gap-3"
+                >
+                  <Facebook className="size-5  fill-current text-primary" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon">
-                <Instagram className="size-5 text-primary" />
+                <Link
+                  href={siteConfig.links.instagram}
+                  className="flex items-center gap-3"
+                >
+                  <Instagram className="size-5 text-primary" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon">
-                <Twitter className="size-5 fill-current text-primary" />
+                <Link
+                  href={siteConfig.links.twitter}
+                  className="flex items-center gap-3"
+                >
+                  <FaXTwitter className="size-5 fill-current text-primary" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon">
-                <Linkedin className="size-5 fill-current text-primary" />
+                <Link
+                  href={siteConfig.links.linkedin}
+                  className="flex items-center gap-3"
+                >
+                  <Linkedin className="size-5 fill-current text-primary" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Link
+                  href={siteConfig.links.telegram}
+                  className="flex items-center gap-3"
+                >
+                  <FaTelegramPlane className="size-5 fill-current text-primary" />
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Link
+                  href={siteConfig.links.discord}
+                  className="flex items-center gap-3"
+                >
+                  <FaDiscord className="size-5 fill-current text-primary" />
+                </Link>
               </Button>
             </div>
           </div>
         </div>
       </div>
-      <div className="auth flex w-full flex-col items-center justify-between gap-2 bg-primary/10 p-6 py-3 text-xs font-medium uppercase text-primary md:flex-row md:py-6">
+      <div className="auth flex w-full flex-col items-center justify-between gap-2 bg-primary/5 p-6 py-3 text-xs font-semibold uppercase text-primary md:flex-row md:py-6">
         <p className="order-last md:order-first">
           © 2024 GFE Foundation. ALL RIGHTS RESERVED
         </p>
