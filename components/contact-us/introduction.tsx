@@ -43,14 +43,14 @@ function Introduction() {
   const formSchema = z.object({
     name: z
       .string()
-      .min(1, { message: t("contactus_page.formFields.invalidName") }),
-    email: z.string().email(t("contactus_page.formFields.invalidEmail")),
+      .min(1, { message: t("contact_us.formFields.invalidName") }),
+    email: z.string().email(t("contact_us.formFields.invalidEmail")),
     subject: z
       .string()
-      .min(1, { message: t("contactus_page.formFields.invalidSubject") }),
+      .min(1, { message: t("contact_us.formFields.invalidSubject") }),
     message: z
       .string()
-      .min(1, { message: t("contactus_page.formFields.invalidMessage") }),
+      .min(1, { message: t("contact_us.formFields.invalidMessage") }),
   })
 
   type UserFormValue = z.infer<typeof formSchema>
@@ -76,11 +76,11 @@ function Introduction() {
         message: data.message,
       })
 
-      toast.success(t("contactus_page.formFields.success"), {
+      toast.success(t("contact_us.formFields.success"), {
         position: "top-right",
       })
     } catch (error) {
-      toast.error(t("contactus_page.formFields.error"), {
+      toast.error(t("contact_us.formFields.error"), {
         position: "top-right",
       })
     }
@@ -94,10 +94,10 @@ function Introduction() {
         <div className="bg-primary/10 p-8">
           <div>
             <SectionTitle align="left">
-              {t("contactus_page.bookMeetingTitle")}
+              {t("contact_us.bookMeetingTitle")}
             </SectionTitle>
             <SectionDescription align="left">
-              {t("contactus_page.bookMeetingDescription")}
+              {t("contact_us.bookMeetingDescription")}
             </SectionDescription>
             <div className="mb-24 mt-4 flex flex-col gap-4 md:flex-row lg:flex-col xl:flex-row">
               <Link
@@ -105,7 +105,7 @@ function Introduction() {
                 className="button-86 !w-fit"
                 target="_blank"
               >
-                {t("contactus_page.bookMeetingCEO")}
+                {t("contact_us.bookMeetingCEO")}
               </Link>
               {/* <Button
                 className="auth border border-secondary-foreground bg-background px-8 py-4 hover:bg-muted"
@@ -130,7 +130,7 @@ function Introduction() {
           </div>
           <div className="auth flex flex-col gap-6">
             <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-mont text-2xl font-bold text-transparent">
-              {t("contactus_page.contactInfo.title")}
+              {t("contact_us.contactInfo.title")}
             </div>
             <div className="flex flex-col gap-2 md:flex-row lg:flex-col xl:flex-row">
               <div className="flex flex-col gap-2">
@@ -140,7 +140,7 @@ function Introduction() {
                   </div>
                   <div>
                     <div className="text-sm uppercase text-muted-foreground">
-                      {t("contactus_page.contactInfo.email")}
+                      {t("contact_us.contactInfo.email")}
                     </div>
                     <div className="text-md font-medium text-black">
                       {siteConfig.emails.info}
@@ -153,7 +153,7 @@ function Introduction() {
                   </div>
                   <div>
                     <div className="text-sm uppercase text-muted-foreground">
-                      {t("contactus_page.contactInfo.phone")}
+                      {t("contact_us.contactInfo.phone")}
                     </div>
                     <div className="text-md font-medium text-black">
                       {siteConfig.contact.phone}
@@ -174,7 +174,7 @@ function Introduction() {
               <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-mont text-lg font-medium lowercase text-transparent">
                   <div className="h-[3px] w-6 bg-primary"></div>
-                  {t("contactus_page.contactInfo.connect_with_us")}
+                  {t("contact_us.contactInfo.connect_with_us")}
                 </div>
                 <div className="flex gap-2">
                   <div className="rounded-lg bg-primary/10 p-2">
@@ -207,7 +207,7 @@ function Introduction() {
                   render={({ field }) => (
                     <FormItem className="w-full">
                       <FormLabel className="text-md font-mont text-muted-foreground">
-                        {t("contactus_page.formFields.name.title")}
+                        {t("contact_us.formFields.name.title")}
                       </FormLabel>
                       <FormControl>
                         <Input
@@ -215,7 +215,7 @@ function Introduction() {
                           aria-label="Name"
                           {...field}
                           placeholder={t(
-                            "contactus_page.formFields.name.placeholder"
+                            "contact_us.formFields.name.placeholder"
                           )}
                         />
                       </FormControl>
@@ -229,7 +229,7 @@ function Introduction() {
                   render={({ field }) => (
                     <FormItem className="w-full">
                       <FormLabel className="text-md font-mont text-muted-foreground">
-                        {t("contactus_page.formFields.email.title")}
+                        {t("contact_us.formFields.email.title")}
                       </FormLabel>
                       <FormControl>
                         <Input
@@ -237,7 +237,7 @@ function Introduction() {
                           aria-label="Email"
                           {...field}
                           placeholder={t(
-                            "contactus_page.formFields.email.placeholder"
+                            "contact_us.formFields.email.placeholder"
                           )}
                         />
                       </FormControl>
@@ -252,7 +252,7 @@ function Introduction() {
                 render={({ field }) => (
                   <FormItem className="w-full">
                     <FormLabel className="text-md font-mont text-muted-foreground">
-                      {t("contactus_page.formFields.subject.title")}
+                      {t("contact_us.formFields.subject.title")}
                     </FormLabel>
                     <FormControl>
                       <Input
@@ -260,7 +260,7 @@ function Introduction() {
                         aria-label="Subject"
                         {...field}
                         placeholder={t(
-                          "contactus_page.formFields.subject.placeholder"
+                          "contact_us.formFields.subject.placeholder"
                         )}
                       />
                     </FormControl>
@@ -274,13 +274,13 @@ function Introduction() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-md font-mont text-muted-foreground">
-                      {t("contactus_page.formFields.message.title")}
+                      {t("contact_us.formFields.message.title")}
                     </FormLabel>
                     <FormControl>
                       <Textarea
                         {...field}
                         placeholder={t(
-                          "contactus_page.formFields.message.placeholder"
+                          "contact_us.formFields.message.placeholder"
                         )}
                         rows={10}
                       />
@@ -296,7 +296,7 @@ function Introduction() {
               className="auth mt-6 w-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-mont"
             >
               {isLoading && <Loader2 className="mr-2 size-4 animate-spin" />}
-              {t("contactus_page.formFields.send")}
+              {t("contact_us.formFields.send")}
             </Button>
           </form>
         </Form>

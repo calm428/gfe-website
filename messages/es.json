@@ -12,7 +12,7 @@
     "buy_now": "Comprar Ahora",
     "launch_text": "¡La página oficial de lanzamiento de NFT se ha lanzado oficialmente! 🎉",
     "something_went_wrong": "¡Algo salió mal!",
-    "home_page": {
+    "home": {
       "section1": {
         "title": "Energía Fungible Verde",
         "subtitle": "Energía - GFE",
@@ -69,7 +69,7 @@
         "answer4": "La minería de Bitcoin es el proceso mediante el cual se crean nuevos bitcoins y se agregan transacciones al blockchain, un libro de contabilidad descentralizado de todas las transacciones en la red de Bitcoin. Implica resolver problemas matemáticos complejos que validan y aseguran las transacciones en la red."
       }
     },
-    "footer_section": {
+    "footer": {
       "section1": {
         "title": "Únete a nuestra Comunidad",
         "description": "Al unirte al proyecto GFE, tanto los inversores como los defensores del medio ambiente pueden contribuir al desarrollo de un ecosistema energético sostenible mientras reciben los beneficios económicos que ofrece la tecnología blockchain y el alojamiento de servidores con un precio global de mercancía respaldado ecológicamente y éticamente para una energía libre de extracciones."
@@ -96,7 +96,7 @@
       "subscribe_success": "Te has suscrito satisfactoriamente a nuestro boletín.",
       "subscribe_email_already_exists": "Esta dirección de correo electrónico ya está suscrita."
     },
-    "contactus_page": {
+    "contact_us": {
       "bookMeetingTitle": "Reservar una reunión",
       "bookMeetingCEO": "Reservar una reunión con el CEO",
       "bookMeetingDescription": "¿Interesado en nuestros servicios y dispuesto a participar en nuestra venta privada? ¡Eso es por qué estamos aquí! Reserve una reunión con nuestro equipo para discutir en detalle cómo funciona, los precios. Haremos todo lo posible para ayudar.",
@@ -132,7 +132,7 @@
         "invalidMessage": "Por favor, ingresa un mensaje válido."
       }
     },
-    "about_us_page": {
+    "about_us": {
       "name": "Acerca de nosotros",
       "title": "Innovador",
       "subtitle": "enfoque hacia la energía global",
@@ -174,7 +174,7 @@
         "para2": "Utilizar el área rural adyacente a La Paz para unidades DAPPr puede proporcionar un paquete de estabilidad de red en 5-7 años. Estos activos de producción de energía descentralizada pueden coordinarse para suministrar energía de estabilidad de distrito y de la red, después del desarrollo de la infraestructura. Esta alimentación de la red desde varios pequeños productores como una entidad puede reducir considerablemente el consumo de petróleo de la comunidad. Reducirá el calentamiento global y convertirá a una economía occidental en una fuente de ingresos local, un agricultor de la luz solar."
       }
     },
-    "nft_page": {
+    "nft": {
       "new": "Nuevo",
       "badge": "¡La página de inicio oficial de NFT ha sido lanzada oficialmente!🎉",
       "title": "Transforma el futuro de",
@@ -213,7 +213,7 @@
         "answer4_3": "Cada activo es propiedad de 4 partes: el propietario del terreno, el gremio, el ecosistema y el DAO miembro de la región. El valor del activo se basa en su diseño de bus eléctrico; 350 kW en un contenedor de 20 pies."
       }
     },
-    "minerHosting": {
+    "miner_hosting": {
       "bitcoinMining": {
         "title": "Bitcoin Mining Ecosystem",
         "description": "Plataforma confiable y rentable que ofrece varios servicios de alojamiento de mineros para usuarios finales."
@@ -436,7 +436,7 @@
       },
       "Contact": "Contacto"
     },
-    "navbar_section": {
+    "header": {
       "ecosystem": "Ecosistema",
       "nft": "NFT",
       "community": "Comunidad",

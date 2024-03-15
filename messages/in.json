@@ -12,7 +12,7 @@
     "buy_now": "Buy Now",
     "launch_text": "NFT Official landing page has officially launched!🎉",
     "something_went_wrong": "Something went wrong!",
-    "home_page": {
+    "home": {
       "section1": {
         "title": "Green Fungible",
         "subtitle": "Energy - GFE",
@@ -69,7 +69,7 @@
         "answer4": "Bitcoin mining is the process by which new bitcoins are created and transactions are added to the blockchain, a decentralized ledger of all transactions in the Bitcoin network. It involves solving complex mathematical problems that validate and secure transactions on the network."
       }
     },
-    "footer_section": {
+    "footer": {
       "section1": {
         "title": "Join our Community",
         "description": "By joining the GFE project, investors and environmental advocates alike can contribute to the development of a sustainable energy ecosystem while receiving the economic benefits afforded by blockchain technology and server hosting with an ecologically sound and ethically backed global commodity price for extraction-free power."
@@ -98,7 +98,7 @@
       "privacy_policy": "Privacy Policy",
       "terms_and_conditions": "Terms & Conditions"
     },
-    "contactus_page": {
+    "contact_us": {
       "bookMeetingTitle": "Book a meeting",
       "bookMeetingCEO": "Book a meeting with CEO",
       "bookMeetingDescription": "Interested in our services and willing to participate in our private sale? That's why we are here! Book a meeting with our team to discuss in detail, how it works, the pricing. We will do our best to help.",
@@ -134,7 +134,7 @@
         "invalidMessage": "Please enter a valid message."
       }
     },
-    "about_us_page": {
+    "about_us": {
       "name": "About us",
       "title": "Innovative",
       "subtitle": "approach to global energy",
@@ -176,7 +176,7 @@
         "para2": "Using the rural area adjacent to La Paz for DAPPr units can provide a grid stability package in 5-7 years. Thes decentralized power producing assets can be coordinated to feed district and grid stability power, after infrastructure development. This feeding of the grid from various small producers as one entity can put a huge dent in the oil consumption of the community. It will reduce global warming and bring a western economy income to a local means of of global production, a sunlight farmer."
       }
     },
-    "nft_page": {
+    "nft": {
       "new": "New",
       "badge": "NFT Official landing page has officially launched!🎉",
       "title": "Reshape The Future Of",
@@ -215,7 +215,7 @@
         "answer4_3": "Each asset is owned by 4 parties, The land owner, the guild, the eco system, and the member DAO for the region. The asset is valued by its electrical bus design; 350kw in a 20’ container."
       }
     },
-    "minerHosting": {
+    "miner_hosting": {
       "bitcoinMining": {
         "title": "Bitcoin Mining Ecosystem",
         "description": "Reliable and profitable platform, providing several new miner hosting services for end users."
@@ -438,7 +438,7 @@
       },
       "Contact": "Contact"
     },
-    "navbar_section": {
+    "header": {
       "ecosystem": "Ecosystem",
       "nft": "NFT",
       "community": "Community",

@@ -10,7 +10,7 @@ function Roadmap() {
 
   return (
     <section className="container pb-24 lg:px-24">
-      <SectionTitle>{t("nft_page.gfe_roadmap")}</SectionTitle>
+      <SectionTitle>{t("nft.gfe_roadmap")}</SectionTitle>
       <div className="flex flex-col pt-24 xl:pt-32">
         <Image
           src="/images/nft/roadmap.svg"

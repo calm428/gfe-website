@@ -66,7 +66,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
         <Accordion type="single" collapsible className="relative h-full px-2">
           <AccordionItem value="item-1" className="border-none">
             <AccordionTrigger className="justify-center text-muted-foreground !no-underline hover:text-primary">
-              {t("navbar_section.ecosystem")}
+              {t("header.ecosystem")}
             </AccordionTrigger>
             <AccordionContent className="bg-muted p-0">
               <div className="p-2">
@@ -107,11 +107,11 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
               "/nft" === pathname && "bg-primary/5 font-semibold text-primary"
             }`}
           >
-            {t("navbar_section.nft")}
+            {t("header.nft")}
           </Link>
           <AccordionItem value="item-2" className="border-none">
             <AccordionTrigger className="justify-center text-muted-foreground !no-underline hover:text-primary">
-              {t("navbar_section.community")}
+              {t("header.community")}
             </AccordionTrigger>
             <AccordionContent className="bg-muted p-0">
               <div className="p-2">
@@ -125,10 +125,10 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   <div>
                     <p>
                       <p className="font-mont text-[14px] font-semibold capitalize">
-                        {t("navbar_section.governance")}
+                        {t("header.governance")}
                       </p>
                       <p className="text-xs">
-                        {t("navbar_section.governance_description")}
+                        {t("header.governance_description")}
                       </p>
                     </p>
                   </div>
@@ -143,10 +143,10 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   <div>
                     <p>
                       <p className="font-mont text-[14px] font-semibold capitalize">
-                        {t("navbar_section.guilds")}
+                        {t("header.guilds")}
                       </p>
                       <p className="text-xs">
-                        {t("navbar_section.guilds_description")}
+                        {t("header.guilds_description")}
                       </p>
                     </p>
                   </div>
@@ -172,7 +172,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
           </AccordionItem>
           <AccordionItem value="item-3" className="border-none">
             <AccordionTrigger className="justify-center text-muted-foreground !no-underline hover:text-primary">
-              {t("navbar_section.learn")}
+              {t("header.learn")}
             </AccordionTrigger>
             <AccordionContent className="bg-muted p-0">
               <div className="grid grid-cols-1 gap-2 p-2">
@@ -186,10 +186,10 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   <div>
                     <p>
                       <p className="font-mont text-[14px] font-semibold capitalize">
-                        {t("navbar_section.about_us")}
+                        {t("header.about_us")}
                       </p>
                       <p className="text-xs">
-                        {t("navbar_section.about_us_description")}
+                        {t("header.about_us_description")}
                       </p>
                     </p>
                   </div>
@@ -204,10 +204,10 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   <div>
                     <p>
                       <p className="font-mont text-[14px] font-semibold capitalize">
-                        {t("navbar_section.blogs_and_news")}
+                        {t("header.blogs_and_news")}
                       </p>
                       <p className="text-xs">
-                        {t("navbar_section.blogs_and_news_description")}
+                        {t("header.blogs_and_news_description")}
                       </p>
                     </p>
                   </div>
@@ -223,11 +223,11 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   <div>
                     <p>
                       <p className="flex font-mont text-[14px] font-semibold capitalize">
-                        {t("navbar_section.documentation")}
+                        {t("header.documentation")}
                         <MdArrowOutward className="size-4" />
                       </p>
                       <p className="text-xs">
-                        {t("navbar_section.documentation_description")}
+                        {t("header.documentation_description")}
                       </p>
                     </p>
                   </div>
@@ -242,7 +242,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
               "bg-primary/5 font-semibold text-primary"
             }`}
           >
-            {t("navbar_section.contacts")}
+            {t("header.contacts")}
           </Link>
           <div className="mx-auto mb-4 mt-4 flex justify-center">
             <LanguageSelector />
@@ -257,9 +257,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
             asChild
           >
             <Link href="https://platform.gfe.foundation">
-              {authenticated
-                ? t("navbar_section.launch_app")
-                : t("navbar_section.sign_in")}
+              {authenticated ? t("header.launch_app") : t("header.sign_in")}
             </Link>
           </Button>
         </Accordion>

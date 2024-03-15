@@ -20,28 +20,28 @@ export default function MainBenefitSection() {
       <div className="container flex flex-col items-start justify-start px-10">
         <div className="pb-10 md:pb-14">
           <SectionTitle align="left">
-            {t("minerHosting.mainBenefit.title")}
+            {t("miner_hosting.mainBenefit.title")}
           </SectionTitle>
           <SectionDescription align="left">
-            {t("minerHosting.mainBenefit.description")}
+            {t("miner_hosting.mainBenefit.description")}
           </SectionDescription>
         </div>
 
         <div className="grid w-auto grid-cols-1 justify-start gap-6 sm:grid-cols-2 xl:grid-cols-3">
           <AdvantageCard
             icon="/images/home/Safety-icon.png"
-            title={t("minerHosting.safety.title")}
-            text={t("minerHosting.safety.description")}
+            title={t("miner_hosting.safety.title")}
+            text={t("miner_hosting.safety.description")}
           />
           <AdvantageCard
             icon="/images/home/Sustainability-icon.png"
-            title={t("minerHosting.sustainability.title")}
-            text={t("minerHosting.sustainability.description")}
+            title={t("miner_hosting.sustainability.title")}
+            text={t("miner_hosting.sustainability.description")}
           />
           <AdvantageCard
             icon="/images/home/MaxProfit-icon.png"
-            title={t("minerHosting.max_profit.title")}
-            text={t("minerHosting.max_profit.description")}
+            title={t("miner_hosting.max_profit.title")}
+            text={t("miner_hosting.max_profit.description")}
           />
         </div>
       </div>

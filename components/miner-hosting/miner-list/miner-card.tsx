@@ -24,7 +24,7 @@ export default function MinerCard({ miner }: { miner: Miner }) {
       <div className="w-full border-b border-primary/60 py-2">
         <div className="flex w-full justify-between">
           <div className="auth text-sm font-medium text-muted-foreground">
-            {t("minerHosting.hashRate")}:
+            {t("miner_hosting.hashRate")}:
           </div>
           <div className="text-md auth font-semibold text-primary">
             {miner.hashrate} TH/s
@@ -32,7 +32,7 @@ export default function MinerCard({ miner }: { miner: Miner }) {
         </div>
         <div className="flex w-full justify-between">
           <div className="auth text-sm font-medium text-muted-foreground">
-            {t("minerHosting.income")}:
+            {t("miner_hosting.income")}:
           </div>
           <div className="text-md auth font-semibold text-primary">
             {miner.income} BTC/year
@@ -42,7 +42,7 @@ export default function MinerCard({ miner }: { miner: Miner }) {
       <div className="w-full border-b border-primary/60 py-2">
         <div className="flex w-full justify-between">
           <div className="auth text-sm font-medium text-muted-foreground">
-            {t("minerHosting.machinePrice")}:
+            {t("miner_hosting.machinePrice")}:
           </div>
           <div className="text-md auth font-semibold text-primary">
             {miner.machine_price} USD
@@ -50,7 +50,7 @@ export default function MinerCard({ miner }: { miner: Miner }) {
         </div>
         <div className="flex w-full justify-between">
           <div className="auth text-sm font-medium text-muted-foreground">
-            {t("minerHosting.accessoryPrice")}:
+            {t("miner_hosting.accessoryPrice")}:
           </div>
           <div className="text-md auth font-semibold text-primary">
             {miner.accessory_price} USD
@@ -60,19 +60,19 @@ export default function MinerCard({ miner }: { miner: Miner }) {
       <div className="w-full py-2">
         <div className="flex w-full justify-between">
           <div className="auth text-sm font-medium text-muted-foreground">
-            {t("minerHosting.price")}:
+            {t("miner_hosting.price")}:
           </div>
           <div className="text-md auth font-semibold text-primary">
             {miner.machine_price + miner.accessory_price} USD
           </div>
         </div>
         <div className="auth text-right text-sm font-medium text-muted-foreground">
-          +{miner.profit} USD {t("minerHosting.energyAnnually")}
+          +{miner.profit} USD {t("miner_hosting.energyAnnually")}
         </div>
       </div>
       <div className="flex w-full justify-between py-2">
         <Button type="button" variant="secondary" className="font-bold">
-          {t("minerHosting.viewDetail")}
+          {t("miner_hosting.viewDetail")}
         </Button>
         <Button type="button" variant="secondary" size="icon" aria-label="Lock">
           <Lock />

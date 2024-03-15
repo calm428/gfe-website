@@ -15,11 +15,9 @@ export default function CommunitySection() {
     <div className="py-[60px]">
       <div className="container flex flex-col justify-between gap-4 rounded-xl bg-muted p-[60px] md:flex-row md:items-end">
         <div className="flex flex-col gap-4 lg:w-[60%]">
-          <SectionTitle align="left">
-            {t("footer_section.section1.title")}
-          </SectionTitle>
+          <SectionTitle align="left">{t("footer.section1.title")}</SectionTitle>
           <SectionDescription align="left" className="xl:text-base">
-            {t("footer_section.section1.description")}
+            {t("footer.section1.description")}
           </SectionDescription>
         </div>
         <div className="flex flex-col gap-2 md:w-[30%]">

@@ -19,46 +19,46 @@ export default function GuideSection() {
   const steps: Step[] = [
     {
       index: 1,
-      title: t("minerHosting.signUp.title"),
-      description: t("minerHosting.signUp.subtitle"),
+      title: t("miner_hosting.signUp.title"),
+      description: t("miner_hosting.signUp.subtitle"),
       icon: "/images/how-it-works/signup.svg",
     },
     {
       index: 2,
-      title: t("minerHosting.buyPower.title"),
-      description: t("minerHosting.buyPower.subtitle"),
+      title: t("miner_hosting.buyPower.title"),
+      description: t("miner_hosting.buyPower.subtitle"),
       icon: "/images/how-it-works/buy-power.svg",
     },
     {
       index: 3,
-      title: t("minerHosting.writeMiningPlan.title"),
-      description: t("minerHosting.writeMiningPlan.subtitle"),
+      title: t("miner_hosting.writeMiningPlan.title"),
+      description: t("miner_hosting.writeMiningPlan.subtitle"),
       icon: "/images/how-it-works/write-mining-plan.svg",
     },
     {
       index: 4,
-      title: t("minerHosting.miningPool.title"),
-      description: t("minerHosting.miningPool.subtitle"),
+      title: t("miner_hosting.miningPool.title"),
+      description: t("miner_hosting.miningPool.subtitle"),
       icon: "/images/how-it-works/mining-pool.svg",
     },
     {
       index: 5,
-      title: t("minerHosting.getReward.title"),
-      description: t("minerHosting.getReward.subtitle"),
+      title: t("miner_hosting.getReward.title"),
+      description: t("miner_hosting.getReward.subtitle"),
       icon: "/images/how-it-works/get-reward.svg",
     },
     {
       index: 6,
-      title: t("minerHosting.maintenance.title"),
-      description: t("minerHosting.maintenance.subtitle"),
+      title: t("miner_hosting.maintenance.title"),
+      description: t("miner_hosting.maintenance.subtitle"),
       icon: "/images/how-it-works/maintenance.svg",
     },
   ]
   return (
     <section className="flex flex-col items-center justify-between pb-4">
-      <SectionTitle>{t("minerHosting.miningStepByStep.title")}</SectionTitle>
+      <SectionTitle>{t("miner_hosting.miningStepByStep.title")}</SectionTitle>
       <SectionDescription className="max-w-7xl">
-        {t("minerHosting.miningStepByStep.subtitle")}
+        {t("miner_hosting.miningStepByStep.subtitle")}
       </SectionDescription>
       <div className="mt-12 grid w-full grid-cols-1 lg:grid-cols-2">
         <div className="hidden items-center justify-center lg:flex">

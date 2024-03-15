@@ -11,7 +11,7 @@ export default function IncomeComparison() {
   return (
     <section className="relative bg-[url('/images/miner-hosting/bg4.png')] bg-cover bg-bottom bg-no-repeat py-10 md:py-16">
       <div className="container">
-        <SectionTitle>{t("minerHosting.incomeComparison.title")}</SectionTitle>
+        <SectionTitle>{t("miner_hosting.incomeComparison.title")}</SectionTitle>
 
         <div className="grid grid-cols-1 gap-7 py-10 xl:grid-cols-10 ">
           <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-[#E7F0FD] p-7 xl:col-span-3">
@@ -29,7 +29,7 @@ export default function IncomeComparison() {
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t("minerHosting.HashrateRentingPrice")}
+                    {t("miner_hosting.HashrateRentingPrice")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     83.6USD
@@ -37,7 +37,7 @@ export default function IncomeComparison() {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t("minerHosting.ServiceFee")}
+                    {t("miner_hosting.ServiceFee")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     250USD
@@ -45,7 +45,7 @@ export default function IncomeComparison() {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t("minerHosting.Bandwidth")}
+                    {t("miner_hosting.Bandwidth")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     120TH/s, 1month
@@ -62,13 +62,13 @@ export default function IncomeComparison() {
 
             <div>
               <h3 className="font-monument text-lg tracking-widest text-muted">
-                {t("minerHosting.ourCompany")}
+                {t("miner_hosting.ourCompany")}
               </h3>
 
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
                   <span className="font-mont text-muted">
-                    {t("minerHosting.HashrateRentingPrice")}
+                    {t("miner_hosting.HashrateRentingPrice")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-muted">
                     83.6USD
@@ -76,7 +76,7 @@ export default function IncomeComparison() {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted">
-                    {t("minerHosting.ServiceFee")}
+                    {t("miner_hosting.ServiceFee")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-muted">
                     250USD
@@ -84,7 +84,7 @@ export default function IncomeComparison() {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted">
-                    {t("minerHosting.Bandwidth")}
+                    {t("miner_hosting.Bandwidth")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-muted">
                     120TH/s, 1month
@@ -108,7 +108,7 @@ export default function IncomeComparison() {
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t("minerHosting.HashrateRentingPrice")}
+                    {t("miner_hosting.HashrateRentingPrice")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     83.6USD
@@ -116,7 +116,7 @@ export default function IncomeComparison() {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t("minerHosting.ServiceFee")}
+                    {t("miner_hosting.ServiceFee")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     250USD
@@ -124,7 +124,7 @@ export default function IncomeComparison() {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-mont text-muted-foreground">
-                    {t("minerHosting.Bandwidth")}
+                    {t("miner_hosting.Bandwidth")}
                   </span>
                   <span className="ml-3 font-monument tracking-wider text-primary">
                     120TH/s, 1month

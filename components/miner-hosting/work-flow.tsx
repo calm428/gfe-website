@@ -10,10 +10,10 @@ export default function WorkFlowSection() {
   return (
     <section className="container flex flex-col items-center justify-between py-8 pt-10">
       <SectionTitle>
-        {t("minerHosting.howSunbeltMinersWork.title")}
+        {t("miner_hosting.howSunbeltMinersWork.title")}
       </SectionTitle>
       <SectionDescription>
-        {t("minerHosting.howSunbeltMinersWork.subtitle")}
+        {t("miner_hosting.howSunbeltMinersWork.subtitle")}
       </SectionDescription>
       <div className="mt-12 w-full">
         <Image

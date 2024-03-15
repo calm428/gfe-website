@@ -27,12 +27,11 @@ export default function HomeSection() {
           <div className="mb-5 flex flex-col items-start gap-[56px]">
             <div className="flex flex-col gap-[16px]">
               <PageTitle align="left">
-                {t("home_page.section1.title")}{" "}
-                <br className="hidden sm:inline" />
-                {t("home_page.section1.subtitle")}
+                {t("home.section1.title")} <br className="hidden sm:inline" />
+                {t("home.section1.subtitle")}
               </PageTitle>
               <SectionDescription align="left">
-                {t("home_page.section1.description")}
+                {t("home.section1.description")}
               </SectionDescription>
             </div>
             <div className="auth mb-7 flex w-full flex-col gap-2 md:mb-0 md:flex-row md:gap-3">
@@ -55,7 +54,7 @@ export default function HomeSection() {
           <div>
             <div className=" auth relative flex items-center justify-between rounded-3xl bg-background py-[25px] pl-[8px]  pr-[16px] shadow-lg md:rounded-full md:py-[8px]">
               <Button className="absolute -top-3 left-5 mr-4 rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
-                {t("nft_page.new")}
+                {t("nft.new")}
               </Button>
               <p className="mt-2 font-mont font-medium text-muted-foreground md:mt-0 md:text-[16px]">
                 {t("launch_text")}

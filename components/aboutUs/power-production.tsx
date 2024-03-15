@@ -14,9 +14,9 @@ export default function PowerProduction() {
         <Image src={nftPic_5} alt="image" className="lg:w-[80%]" />
       </div>
       <div className="container flex flex-col justify-center gap-8 lg:w-1/2 lg:px-0 lg:pr-24">
-        <SectionTitle>{t("about_us_page.power_section.title")}</SectionTitle>
+        <SectionTitle>{t("about_us.power_section.title")}</SectionTitle>
         <SectionDescription align="left">
-          {t("about_us_page.power_section.description")}
+          {t("about_us.power_section.description")}
         </SectionDescription>
       </div>
     </section>

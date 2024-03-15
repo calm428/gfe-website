@@ -22,16 +22,16 @@ function ServerHosting() {
         <div className="container flex max-w-xl flex-col justify-center gap-6 pt-5">
           <SectionBadge text={t("Future")} position="left" />
           <SectionTitle align="left">
-            {t("nft_page.hosting_section.title")}
+            {t("nft.hosting_section.title")}
           </SectionTitle>
           <p className="auth text-justify font-mont text-lg">
-            {t("nft_page.hosting_section.para1")}
+            {t("nft.hosting_section.para1")}
           </p>
           <p className="auth text-justify font-mont text-lg">
-            {t("nft_page.hosting_section.para2")}
+            {t("nft.hosting_section.para2")}
           </p>
           <p className="auth text-justify font-mont text-lg">
-            {t("nft_page.hosting_section.para3")}
+            {t("nft.hosting_section.para3")}
           </p>
         </div>
       </div>

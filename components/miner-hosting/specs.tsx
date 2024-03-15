@@ -18,35 +18,37 @@ export default function SpecsSection() {
     {
       image: "/images/home/SolarPower.png",
       icon: "/images/home/SolarPower-icon.png",
-      title: t("minerHosting.solarPower.title"),
-      description: t("minerHosting.solarPower.description"),
+      title: t("miner_hosting.solarPower.title"),
+      description: t("miner_hosting.solarPower.description"),
     },
     {
       image: "/images/home/ImmersionCooling.png",
       icon: "/images/home/ImmersionCooling-icon.png",
-      title: t("minerHosting.immersionCooling.title"),
-      description: t("minerHosting.immersionCooling.description"),
+      title: t("miner_hosting.immersionCooling.title"),
+      description: t("miner_hosting.immersionCooling.description"),
     },
     {
       image: "/images/home/GeothermalHeatPump.png",
       icon: "/images/home/GeothermalHeatPump-icon.png",
-      title: t("minerHosting.geothermalHeatPump.title"),
-      description: t("minerHosting.geothermalHeatPump.description"),
+      title: t("miner_hosting.geothermalHeatPump.title"),
+      description: t("miner_hosting.geothermalHeatPump.description"),
     },
     {
       image: "/images/home/EarthshipBuilding.png",
       icon: "/images/home/EarthshipBuilding-icon.png",
-      title: t("minerHosting.earthshipBuilding.title"),
-      description: t("minerHosting.earthshipBuilding.description"),
+      title: t("miner_hosting.earthshipBuilding.title"),
+      description: t("miner_hosting.earthshipBuilding.description"),
     },
   ]
   return (
     <section className="bg-[url('/images/miner-hosting/bg2.png')] bg-cover bg-bottom bg-no-repeat pb-14 pt-10 md:pt-24">
       <div className="container">
         <div className="pb-10 md:pb-14">
-          <SectionTitle>{t("minerHosting.miningEcosystem.title")}</SectionTitle>
+          <SectionTitle>
+            {t("miner_hosting.miningEcosystem.title")}
+          </SectionTitle>
           <SectionDescription>
-            {t("minerHosting.miningEcosystem.description")}
+            {t("miner_hosting.miningEcosystem.description")}
           </SectionDescription>
         </div>
 

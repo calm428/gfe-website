@@ -21,11 +21,11 @@ export default function Introduction() {
       }}
     >
       <div className="flex flex-col items-center gap-8 px-5 lg:px-16">
-        <SectionBadge text={t("about_us_page.name")} />
+        <SectionBadge text={t("about_us.name")} />
         <div className="flex flex-col items-center gap-4">
           <SectionTitle>
-            {t("about_us_page.title")} <br />
-            {t("about_us_page.subtitle")}
+            {t("about_us.title")} <br />
+            {t("about_us.subtitle")}
           </SectionTitle>
           <Button className="font mont auth border border-secondary-foreground bg-background text-secondary-foreground hover:bg-muted">
             <Link

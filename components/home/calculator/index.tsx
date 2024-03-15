@@ -25,23 +25,21 @@ export default function CalculatorSection() {
         <div className="px:[16rem] flex flex-col gap-12 lg:w-1/2">
           <div className="flex flex-col gap-6">
             <SectionBadge text={t("Future")} position="left" />
-            <SectionTitle align="left">
-              {t("home_page.section4.title")}
-            </SectionTitle>
+            <SectionTitle align="left">{t("home.section4.title")}</SectionTitle>
             <SectionDescription align="left">
-              {t("home_page.section4.description")}
+              {t("home.section4.description")}
             </SectionDescription>
             <SectionDescription align="left" className="font-medium">
-              {t("home_page.section4.description2")}
+              {t("home.section4.description2")}
             </SectionDescription>
             <div className="grid  sm:grid-cols-2">
-              <ListItem text={t("home_page.section4.serverHosting")} />
-              <ListItem text={t("home_page.section4.districtRuralPower")} />
-              <ListItem text={t("home_page.section4.EVCharging")} />
-              <ListItem text={t("home_page.section4.hydrocarbonProduction")} />
-              <ListItem text={t("home_page.section4.brewingAndDistillation")} />
-              <ListItem text={t("home_page.section4.fishFarming")} />
-              <ListItem text={t("home_page.section4.commercialLaundry")} />
+              <ListItem text={t("home.section4.serverHosting")} />
+              <ListItem text={t("home.section4.districtRuralPower")} />
+              <ListItem text={t("home.section4.EVCharging")} />
+              <ListItem text={t("home.section4.hydrocarbonProduction")} />
+              <ListItem text={t("home.section4.brewingAndDistillation")} />
+              <ListItem text={t("home.section4.fishFarming")} />
+              <ListItem text={t("home.section4.commercialLaundry")} />
             </div>
           </div>
           <div>

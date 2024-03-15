@@ -18,11 +18,9 @@ export default function SpecsSection() {
     <div className="relative mt-0	 overflow-hidden bg-background lg:mt-40	">
       <div className="container  flex flex-col justify-between gap-12 space-y-14 py-[100px] pb-20 lg:py-[207px] lg:pb-56 lg:pt-24">
         <div className=" relative z-30 flex flex-col gap-[24px]">
-          <SectionTitle align="left">
-            {t("home_page.section2.title")}
-          </SectionTitle>
+          <SectionTitle align="left">{t("home.section2.title")}</SectionTitle>
           <SectionDescription align="left">
-            {t("home_page.section2.description")}
+            {t("home.section2.description")}
           </SectionDescription>
         </div>
         <div className=" relative z-30 grid gap-6 md:grid-cols-2 xl:grid-cols-4">

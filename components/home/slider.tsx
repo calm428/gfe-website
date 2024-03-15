@@ -67,8 +67,8 @@ const SliderSection = () => {
   return (
     <div className=" auth relative bg-background pt-[100px]">
       <div className="flex flex-col items-center gap-[24px] lg:px-[200px]">
-        <SectionBadge text={t("home_page.section?.subtitle")} />
-        <SectionTitle>{t("home_page.section?.title")}</SectionTitle>
+        <SectionBadge text={t("home.section?.subtitle")} />
+        <SectionTitle>{t("home.section?.title")}</SectionTitle>
       </div>
 
       <div className="my-[30px] mt-[270px]">

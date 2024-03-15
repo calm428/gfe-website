@@ -18,35 +18,32 @@ import {
 
 const FAQS = [
   {
-    question: "nft_page.faq_section.question1",
+    question: "nft.faq_section.question1",
     answers: [
-      "nft_page.faq_section.answer1_1",
-      "nft_page.faq_section.answer1_2",
-      "nft_page.faq_section.answer1_3",
-      "nft_page.faq_section.answer1_4",
+      "nft.faq_section.answer1_1",
+      "nft.faq_section.answer1_2",
+      "nft.faq_section.answer1_3",
+      "nft.faq_section.answer1_4",
     ],
   },
   {
-    question: "nft_page.faq_section.question2",
+    question: "nft.faq_section.question2",
+    answers: ["nft.faq_section.answer2_1", "nft.faq_section.answer2_2"],
+  },
+  {
+    question: "nft.faq_section.question3",
     answers: [
-      "nft_page.faq_section.answer2_1",
-      "nft_page.faq_section.answer2_2",
+      "nft.faq_section.answer3_1",
+      "nft.faq_section.answer3_2",
+      "nft.faq_section.answer3_3",
     ],
   },
   {
-    question: "nft_page.faq_section.question3",
+    question: "nft.faq_section.question4",
     answers: [
-      "nft_page.faq_section.answer3_1",
-      "nft_page.faq_section.answer3_2",
-      "nft_page.faq_section.answer3_3",
-    ],
-  },
-  {
-    question: "nft_page.faq_section.question4",
-    answers: [
-      "nft_page.faq_section.answer4_1",
-      "nft_page.faq_section.answer4_2",
-      "nft_page.faq_section.answer4_3",
+      "nft.faq_section.answer4_1",
+      "nft.faq_section.answer4_2",
+      "nft.faq_section.answer4_3",
     ],
   },
 ]
@@ -62,7 +59,7 @@ function FAQ() {
       <div className="flex flex-col items-center gap-4">
         <SectionTitle>FAQ</SectionTitle>
         <SectionDescription>
-          {t("nft_page.faq_section.description")}
+          {t("nft.faq_section.description")}
         </SectionDescription>
       </div>
       <div>

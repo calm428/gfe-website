@@ -161,40 +161,40 @@ export const siteConfig = {
   features: [
     {
       icon: "/features/div.png",
-      title: "home_page.section2.card1title",
-      desc: "home_page.section2.card1description",
+      title: "home.section2.card1title",
+      desc: "home.section2.card1description",
       link: "#",
     },
     {
       icon: "/features/div-1.png",
-      title: "home_page.section2.card2title",
-      desc: "home_page.section2.card2description",
+      title: "home.section2.card2title",
+      desc: "home.section2.card2description",
       link: "#",
     },
     {
       icon: "/features/div-2.png",
-      title: "home_page.section2.card3title",
-      desc: "home_page.section2.card3description",
+      title: "home.section2.card3title",
+      desc: "home.section2.card3description",
       link: "#",
     },
     {
       icon: "/features/div-3.png",
-      title: "home_page.section2.card4title",
-      desc: "home_page.section2.card4description",
+      title: "home.section2.card4title",
+      desc: "home.section2.card4description",
       link: "#",
     },
   ],
   footerLinks: [
     {
-      title: "footer_section.services",
+      title: "footer.services",
       href: "#",
     },
     {
-      title: "footer_section.community",
+      title: "footer.community",
       href: "#",
     },
     {
-      title: "footer_section.blogs_news",
+      title: "footer.blogs_news",
       href: "/blogs-and-news",
     },
   ],

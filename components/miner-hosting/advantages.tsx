@@ -13,10 +13,10 @@ export default function AdvantagesSection() {
     <section className="container py-10">
       <div className="pb-10 md:pb-14">
         <SectionTitle>
-          {t("minerHosting.advantagesOfGFEMining.title")}
+          {t("miner_hosting.advantagesOfGFEMining.title")}
         </SectionTitle>
         <SectionDescription>
-          {t("minerHosting.advantagesOfGFEMining.description")}
+          {t("miner_hosting.advantagesOfGFEMining.description")}
         </SectionDescription>
       </div>
 
@@ -24,13 +24,13 @@ export default function AdvantagesSection() {
         <div className="grid grid-cols-1 grid-rows-2 gap-5">
           <AdvantageCard
             icon="/images/home/Specialization-icon.png"
-            title={t("minerHosting.specialization.title")}
-            text={t("minerHosting.specialization.description")}
+            title={t("miner_hosting.specialization.title")}
+            text={t("miner_hosting.specialization.description")}
           />
           <AdvantageCard
             icon="/images/home/EnergyEfficiency-icon.png"
-            title={t("minerHosting.energyEfficiency.title")}
-            text={t("minerHosting.energyEfficiency.description")}
+            title={t("miner_hosting.energyEfficiency.title")}
+            text={t("miner_hosting.energyEfficiency.description")}
           />
         </div>
 
@@ -42,10 +42,10 @@ export default function AdvantagesSection() {
         >
           <div className="p-10">
             <p className="auth text-xl font-bold tracking-wider text-secondary">
-              {t("minerHosting.sunbeltMiner.title")}
+              {t("miner_hosting.sunbeltMiner.title")}
             </p>
             <p className="auth mt-2 font-medium text-white transition-all duration-500">
-              {t("minerHosting.sunbeltMiner.description")}
+              {t("miner_hosting.sunbeltMiner.description")}
             </p>
           </div>
           <Image
@@ -58,13 +58,13 @@ export default function AdvantagesSection() {
         <div className="grid grid-cols-1 grid-rows-2 gap-5">
           <AdvantageCard
             icon="/images/home/HighHashrate-icon.png"
-            title={t("minerHosting.highHashrate.title")}
-            text={t("minerHosting.highHashrate.description")}
+            title={t("miner_hosting.highHashrate.title")}
+            text={t("miner_hosting.highHashrate.description")}
           />
           <AdvantageCard
             icon="/images/home/RealTimeTrading-icon.png"
-            title={t("minerHosting.realTimeTrading.title")}
-            text={t("minerHosting.realTimeTrading.description")}
+            title={t("miner_hosting.realTimeTrading.title")}
+            text={t("miner_hosting.realTimeTrading.description")}
           />
         </div>
       </div>

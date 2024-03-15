@@ -24,16 +24,16 @@ export default function HomeSection() {
       <div className="container space-y-14">
         <div className="flex flex-col items-start gap-2">
           <PageTitle align="left" className="max-w-3xl">
-            {t("minerHosting.bitcoinMining.title")}
+            {t("miner_hosting.bitcoinMining.title")}
           </PageTitle>
           <SectionDescription align="left" className="max-w-xl">
-            {t("minerHosting.bitcoinMining.description")}
+            {t("miner_hosting.bitcoinMining.description")}
           </SectionDescription>
         </div>
         <div className="auth mb-7 flex w-full flex-row gap-2 md:mb-0 md:gap-3">
           <Button className="h-12 w-32 bg-gradient-to-l from-[#2BADFD] to-[#1570EF] font-bold">
             <Link href={siteConfig.links.docs} target="_blank" rel="noreferrer">
-              {t("minerHosting.buyEnergy")}
+              {t("miner_hosting.buyEnergy")}
             </Link>
           </Button>
 
@@ -45,7 +45,7 @@ export default function HomeSection() {
               className="flex items-center justify-between gap-3"
             >
               <Icons.play />
-              <span>{t("minerHosting.introToSunbelt")}</span>
+              <span>{t("miner_hosting.introToSunbelt")}</span>
             </Link>
           </Button>
         </div>

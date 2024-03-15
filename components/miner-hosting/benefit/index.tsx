@@ -7,12 +7,12 @@ export default function BenefitSection() {
 
   const CARDS_DATA = [
     {
-      title: t("minerHosting.highIncome.title"),
-      description: t("minerHosting.highIncome.subtitle"),
+      title: t("miner_hosting.highIncome.title"),
+      description: t("miner_hosting.highIncome.subtitle"),
     },
     {
-      title: t("minerHosting.makeTheWorldBetter.title"),
-      description: t("minerHosting.makeTheWorldBetter.subtitle"),
+      title: t("miner_hosting.makeTheWorldBetter.title"),
+      description: t("miner_hosting.makeTheWorldBetter.subtitle"),
     },
   ]
   return (
@@ -22,7 +22,7 @@ export default function BenefitSection() {
         style={{ backgroundImage: "url(/images/how-it-works/bg2.png)" }}
       >
         <div className="font-goldman text-2xl text-white">
-          {t("minerHosting.benefitsOfHosting.title")}
+          {t("miner_hosting.benefitsOfHosting.title")}
         </div>
       </div>
       <div className="w-full space-y-4 md:w-3/5">

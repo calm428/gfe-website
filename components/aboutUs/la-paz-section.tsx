@@ -21,10 +21,10 @@ export default function LaPazSection() {
           <SectionTitle align="left">La Paz BCS example:</SectionTitle>
           <div className="auth flex flex-col gap-4">
             <p className="text-left text-base lg:text-lg">
-              {t("about_us_page.faq_section.para1")}
+              {t("about_us.faq_section.para1")}
             </p>
             <p className="text-left text-base lg:text-lg">
-              {t("about_us_page.faq_section.para2")}
+              {t("about_us.faq_section.para2")}
             </p>
           </div>
         </div>

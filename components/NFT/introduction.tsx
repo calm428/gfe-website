@@ -14,18 +14,18 @@ function Introduction() {
       <div className="container flex flex-col items-center gap-8 lg:px-16">
         <div className="auth relative flex items-center justify-between rounded-3xl bg-primary/10 py-[25px] pl-[8px] pr-[16px] shadow-lg md:rounded-full md:py-[8px]">
           <Button className="absolute -top-3 left-[40%] rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
-            {t("nft_page.new")}
+            {t("nft.new")}
           </Button>
           <p className="ml-2 mt-2 text-center font-mont font-medium text-muted-foreground md:mt-0 md:text-lg">
-            {t("nft_page.badge")}
+            {t("nft.badge")}
           </p>
         </div>
         <div className="flex flex-col items-center gap-4">
           <SectionTitle>
-            {t("nft_page.title")} <br />
-            {t("nft_page.subtitle")}
+            {t("nft.title")} <br />
+            {t("nft.subtitle")}
           </SectionTitle>
-          <SectionDescription>{t("nft_page.description")}</SectionDescription>
+          <SectionDescription>{t("nft.description")}</SectionDescription>
         </div>
       </div>
       <Image
