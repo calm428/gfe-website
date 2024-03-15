@@ -170,6 +170,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.facebook}
                   className="flex items-center gap-3"
+                  aria-label="Facebook"
                 >
                   <Facebook className="size-5  fill-current text-primary" />
                 </Link>
@@ -178,6 +179,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.instagram}
                   className="flex items-center gap-3"
+                  aria-label="Instagram"
                 >
                   <Instagram className="size-5 text-primary" />
                 </Link>
@@ -186,6 +188,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.twitter}
                   className="flex items-center gap-3"
+                  aria-label="Twitter"
                 >
                   <FaXTwitter className="size-5 fill-current text-primary" />
                 </Link>
@@ -194,6 +197,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.linkedin}
                   className="flex items-center gap-3"
+                  aria-label="Linkedin"
                 >
                   <Linkedin className="size-5 fill-current text-primary" />
                 </Link>
@@ -202,6 +206,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.telegram}
                   className="flex items-center gap-3"
+                  aria-label="Telegram"
                 >
                   <FaTelegramPlane className="size-5 fill-current text-primary" />
                 </Link>
@@ -210,6 +215,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.discord}
                   className="flex items-center gap-3"
+                  aria-label="Discord"
                 >
                   <FaDiscord className="size-5 fill-current text-primary" />
                 </Link>
@@ -226,6 +232,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.facebook}
                   className="flex items-center gap-3"
+                  aria-label="Facebook"
                 >
                   <Facebook className="size-5  fill-current text-primary" />
                 </Link>
@@ -234,6 +241,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.instagram}
                   className="flex items-center gap-3"
+                  aria-label="Instagram"
                 >
                   <Instagram className="size-5 text-primary" />
                 </Link>
@@ -242,6 +250,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.twitter}
                   className="flex items-center gap-3"
+                  aria-label="Twitter"
                 >
                   <FaXTwitter className="size-5 fill-current text-primary" />
                 </Link>
@@ -250,6 +259,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.linkedin}
                   className="flex items-center gap-3"
+                  aria-label="Linkedin"
                 >
                   <Linkedin className="size-5 fill-current text-primary" />
                 </Link>
@@ -258,6 +268,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.telegram}
                   className="flex items-center gap-3"
+                  aria-label="Telegram"
                 >
                   <FaTelegramPlane className="size-5 fill-current text-primary" />
                 </Link>
@@ -266,6 +277,7 @@ export function SiteFooter() {
                 <Link
                   href={siteConfig.links.discord}
                   className="flex items-center gap-3"
+                  aria-label="Discord"
                 >
                   <FaDiscord className="size-5 fill-current text-primary" />
                 </Link>

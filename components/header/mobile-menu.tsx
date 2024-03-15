@@ -51,6 +51,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
             <Link
               href="/"
               className="flex w-[150px] flex-col items-center justify-center gap-1"
+              aria-label="Home"
             >
               <div className="flex flex-col gap-1">
                 <Image src="/GFE.svg" alt="Logo" width={100} height={32} />

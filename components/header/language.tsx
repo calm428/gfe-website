@@ -34,7 +34,10 @@ export function LanguageSelector() {
       }}
       defaultValue={locale}
     >
-      <SelectTrigger className="w-auto gap-4 rounded-full">
+      <SelectTrigger
+        className="w-auto gap-4 rounded-full"
+        aria-label="Language"
+      >
         <SelectValue placeholder="Select a language" />
       </SelectTrigger>
       <SelectContent>

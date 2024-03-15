@@ -42,6 +42,7 @@ export function MainNav({ items }: MainNavProps) {
       <Link
         href="/"
         className="flex w-[150px] flex-col items-center justify-center gap-1"
+        aria-label="Home"
       >
         <div className="flex flex-col gap-1">
           <Image src="/GFE.svg" alt="Logo" width={154} height={49} />
