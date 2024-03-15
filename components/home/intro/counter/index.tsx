@@ -164,9 +164,9 @@ function Counter() {
       <div className="auth relative w-full overflow-hidden rounded-lg bg-background/90 pb-6 font-mont shadow-lg backdrop-blur-3xl">
         <div className="flex flex-col gap-[24px] p-6">
           <div className="text-center">
-            <h3 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
+            <p className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
               {t("home_page.converter_section.title")}
-            </h3>
+            </p>
             <p className="font-mont text-[14px] font-medium">
               {t("home_page.converter_section.subtitle")}
             </p>
@@ -216,7 +216,7 @@ function Counter() {
                   setIsCardPayment(false)
                 }}
               >
-                <SelectTrigger className="">
+                <SelectTrigger className="" aria-label="Payment Type">
                   <div className="flex items-center gap-5 rounded-md text-sm">
                     {/*  */}
                     <Image
