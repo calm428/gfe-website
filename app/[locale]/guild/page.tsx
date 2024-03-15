@@ -12,10 +12,12 @@ import LeadGuildSection from "@/components/guild/lead-guild"
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "Guild",
-  description: "Join the GFE Guild",
+  description:
+    "Join the GFE Guild, a community of enthusiasts who support the GFE Foundation. Discover the benefits of being part of this unique group and engage with like-minded individuals.",
   openGraph: {
     title: "Guild",
-    description: "Join the GFE Guild",
+    description:
+      "Join the GFE Guild, a community of enthusiasts who support the GFE Foundation. Discover the benefits of being part of this unique group and engage with like-minded individuals.",
   },
 }
 

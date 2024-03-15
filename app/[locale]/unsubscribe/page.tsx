@@ -1,5 +1,6 @@
 "use client"
 
+import { Metadata } from "next"
 import { useSearchParams } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios, { AxiosError } from "axios"
@@ -20,6 +21,16 @@ import {
 import { Input } from "@/components/ui/input"
 import SectionDescription from "@/components/common/section-description"
 import SectionTitle from "@/components/common/section-title"
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
+  title: "Unsubscribe",
+  description: "Unsubscribe from our newsletter and updates.",
+  openGraph: {
+    title: "Unsubscribe",
+    description: "Unsubscribe from our newsletter and updates.",
+  },
+}
 
 function Page() {
   const t = useTranslations("main")
