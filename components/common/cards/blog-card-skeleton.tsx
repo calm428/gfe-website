@@ -1,13 +1,5 @@
 "use client"
 
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRightIcon } from "lucide-react"
-
-import { formatCustomDate, getInitials } from "@/lib/utils"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
 
 export default function BlogCardSkeleton({

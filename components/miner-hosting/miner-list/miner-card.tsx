@@ -74,7 +74,7 @@ export default function MinerCard({ miner }: { miner: Miner }) {
         <Button type="button" variant="secondary" className="font-bold">
           {t("minerHosting.viewDetail")}
         </Button>
-        <Button type="button" variant="secondary" size="icon">
+        <Button type="button" variant="secondary" size="icon" aria-label="Lock">
           <Lock />
         </Button>
       </div>

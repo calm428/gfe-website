@@ -31,7 +31,15 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
-  keywords: ["GFE", "GFE Foundation", "Green Fungible Energy", "Green Energy", "Bitcoin Mining", "Miner Hosting", "NFT"],
+  keywords: [
+    "GFE",
+    "GFE Foundation",
+    "Green Fungible Energy",
+    "Green Energy",
+    "Bitcoin Mining",
+    "Miner Hosting",
+    "NFT",
+  ],
   description: siteConfig.description,
   icons: {
     icon: "/favicon-16x16.png",

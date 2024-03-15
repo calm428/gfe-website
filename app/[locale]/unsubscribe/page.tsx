@@ -85,6 +85,7 @@ function Page() {
                     <div className="auth mx-auto mt-16 flex h-12 w-full max-w-md items-center">
                       <Input
                         type="email"
+                        aria-label="Email"
                         placeholder="Email"
                         {...field}
                         className="auth h-full rounded-l-full  rounded-r-none bg-transparent"

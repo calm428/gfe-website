@@ -291,6 +291,7 @@ function Counter() {
                 <div className="relative">
                   <Input
                     type="number"
+                    aria-label="Payment"
                     placeholder="0"
                     value={inputPaymentValue}
                     onChange={(e) => handlePaymentValueChange(e.target.value)}
@@ -318,6 +319,7 @@ function Counter() {
                 <div className="relative">
                   <Input
                     type="number"
+                    aria-label="GFE"
                     placeholder="0"
                     value={inputGFEValue}
                     onChange={(e) => handleGFEValueChange(e.target.value)}
