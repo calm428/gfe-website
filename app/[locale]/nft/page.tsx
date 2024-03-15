@@ -8,15 +8,13 @@ import ServerHosting from "@/components/NFT/server-hosting"
 import ContactUs from "@/components/common/contact-us"
 import ScrollToTop from "@/components/common/scroll-to-top"
 
-import { openGraphImage } from "../../shared-metadata"
-
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "NFT",
   description: "Reshape the future of clean energy with DAPPr NFT",
   openGraph: {
-    ...openGraphImage,
     title: "NFT",
+    description: "Reshape the future of clean energy with DAPPr NFT",
   },
 }
 

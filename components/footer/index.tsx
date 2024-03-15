@@ -94,6 +94,7 @@ export function SiteFooter() {
                         <div className="auth flex h-12 w-full items-center">
                           <Input
                             type="email"
+                            aria-label="Email"
                             placeholder="Email"
                             {...field}
                             className="auth h-full rounded-r-none  bg-transparent text-white  placeholder:text-white"
@@ -165,7 +166,7 @@ export function SiteFooter() {
               {t("footer_section.follow_us")}
             </div>
             <div className="hidden md:flex">
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Facebook">
                 <Link
                   href={siteConfig.links.facebook}
                   className="flex items-center gap-3"
@@ -173,7 +174,7 @@ export function SiteFooter() {
                   <Facebook className="size-5  fill-current text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Instagram">
                 <Link
                   href={siteConfig.links.instagram}
                   className="flex items-center gap-3"
@@ -181,7 +182,7 @@ export function SiteFooter() {
                   <Instagram className="size-5 text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Twitter">
                 <Link
                   href={siteConfig.links.twitter}
                   className="flex items-center gap-3"
@@ -189,7 +190,7 @@ export function SiteFooter() {
                   <FaXTwitter className="size-5 fill-current text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Linkedin">
                 <Link
                   href={siteConfig.links.linkedin}
                   className="flex items-center gap-3"
@@ -197,7 +198,7 @@ export function SiteFooter() {
                   <Linkedin className="size-5 fill-current text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Telegram">
                 <Link
                   href={siteConfig.links.telegram}
                   className="flex items-center gap-3"
@@ -205,7 +206,7 @@ export function SiteFooter() {
                   <FaTelegramPlane className="size-5 fill-current text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Discord">
                 <Link
                   href={siteConfig.links.discord}
                   className="flex items-center gap-3"
@@ -221,7 +222,7 @@ export function SiteFooter() {
               {t("footer_section.follow_us")}
             </div>
             <div className="flex">
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Facebook">
                 <Link
                   href={siteConfig.links.facebook}
                   className="flex items-center gap-3"
@@ -229,7 +230,7 @@ export function SiteFooter() {
                   <Facebook className="size-5  fill-current text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Instagram">
                 <Link
                   href={siteConfig.links.instagram}
                   className="flex items-center gap-3"
@@ -237,7 +238,7 @@ export function SiteFooter() {
                   <Instagram className="size-5 text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Twitter">
                 <Link
                   href={siteConfig.links.twitter}
                   className="flex items-center gap-3"
@@ -245,7 +246,7 @@ export function SiteFooter() {
                   <FaXTwitter className="size-5 fill-current text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Linkedin">
                 <Link
                   href={siteConfig.links.linkedin}
                   className="flex items-center gap-3"
@@ -253,7 +254,7 @@ export function SiteFooter() {
                   <Linkedin className="size-5 fill-current text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Telegram">
                 <Link
                   href={siteConfig.links.telegram}
                   className="flex items-center gap-3"
@@ -261,7 +262,7 @@ export function SiteFooter() {
                   <FaTelegramPlane className="size-5 fill-current text-primary" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Discord">
                 <Link
                   href={siteConfig.links.discord}
                   className="flex items-center gap-3"

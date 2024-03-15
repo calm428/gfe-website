@@ -8,16 +8,15 @@ import UpcomingSection from "@/components/blogs-and-news/upcoming"
 import ContactUs from "@/components/common/contact-us"
 import ScrollToTop from "@/components/common/scroll-to-top"
 
-import { openGraphImage } from "../../shared-metadata"
-
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "Blogs and News",
   description:
     "In the ever-evolving realm of Bitcoin mining and the broader ecosystem, our blogs and news serve as a dynamic platform.",
   openGraph: {
-    ...openGraphImage,
     title: "Blogs and News",
+    description:
+      "In the ever-evolving realm of Bitcoin mining and the broader ecosystem, our blogs and news serve as a dynamic platform.",
   },
 }
 

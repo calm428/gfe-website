@@ -41,6 +41,7 @@ export default function HeroSection() {
         <div className="mx-auto mt-10 flex max-w-sm items-center justify-center gap-3">
           <Input
             type="text"
+            aria-label="search"
             placeholder={t("blogs_and_news.search")}
             onChange={(e) => handleSearch(e.target.value)}
           />

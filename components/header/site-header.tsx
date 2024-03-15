@@ -49,6 +49,7 @@ export function SiteHeader() {
                   background:
                     "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
                 }}
+                aria-label="open mobile menu"
               >
                 <Menu />
               </Button>

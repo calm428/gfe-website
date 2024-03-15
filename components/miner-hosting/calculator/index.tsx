@@ -36,6 +36,7 @@ function CalculatorSection() {
                 <div className="relative flex size-full items-center">
                   <Input
                     type="number"
+                    aria-label="Amount"
                     placeholder={t("minerHosting.enterAmount")}
                     className={
                       "h-14 w-full font-mont text-lg text-primary " +

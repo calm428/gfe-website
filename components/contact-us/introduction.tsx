@@ -212,6 +212,7 @@ function Introduction() {
                       <FormControl>
                         <Input
                           type="text"
+                          aria-label="Name"
                           {...field}
                           placeholder={t(
                             "contactus_page.formFields.name.placeholder"
@@ -233,6 +234,7 @@ function Introduction() {
                       <FormControl>
                         <Input
                           type="text"
+                          aria-label="Email"
                           {...field}
                           placeholder={t(
                             "contactus_page.formFields.email.placeholder"
@@ -255,6 +257,7 @@ function Introduction() {
                     <FormControl>
                       <Input
                         type="text"
+                        aria-label="Subject"
                         {...field}
                         placeholder={t(
                           "contactus_page.formFields.subject.placeholder"
