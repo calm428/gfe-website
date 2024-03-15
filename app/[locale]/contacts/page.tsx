@@ -6,10 +6,12 @@ import FaqSection from "@/components/home/faq"
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "Contact Us",
-  description: "Get in touch with us",
+  description:
+    "Reach out to us for any inquiries, questions, or just to say hello. We are here to assist you.",
   openGraph: {
     title: "Contact Us",
-    description: "Get in touch with us",
+    description:
+      "Reach out to us for any inquiries, questions, or just to say hello. We are here to assist you.",
   },
 }
 
