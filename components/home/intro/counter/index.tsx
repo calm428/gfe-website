@@ -223,7 +223,7 @@ function Counter() {
                       src={`/images/main/payments/${selectedPayment}.png`}
                       width={20}
                       height={20}
-                      alt={"MATIC"}
+                      alt={"matic token"}
                     />
                     <p>{selectedPayment.toUpperCase()}</p>
                   </div>
@@ -236,7 +236,7 @@ function Counter() {
                           src="/images/main/payments/matic.png"
                           width={20}
                           height={20}
-                          alt={"MATIC"}
+                          alt={"matic token"}
                         />
                         <p>MATIC</p>
                       </div>
@@ -247,7 +247,7 @@ function Counter() {
                           src="/images/main/payments/eth.png"
                           width={20}
                           height={20}
-                          alt={"ETH"}
+                          alt={"eth token"}
                         />
                         <p>ETH</p>
                       </div>
@@ -258,7 +258,7 @@ function Counter() {
                           src="/images/main/payments/usdt.png"
                           width={20}
                           height={20}
-                          alt={"USDT"}
+                          alt={"usdt token"}
                         />
                         <p>USDT</p>
                       </div>
@@ -277,7 +277,7 @@ function Counter() {
                   src="/images/main/payments/visa.png"
                   width={20}
                   height={20}
-                  alt={"Visa/Mastercard"}
+                  alt={"visa/mastercard payment icon"}
                 />
                 <p>Visa/MasterCard</p>
               </div>
@@ -307,7 +307,7 @@ function Counter() {
                       width={20}
                       height={20}
                       className="absolute right-2 top-1/2 -translate-y-1/2"
-                      alt={selectedPayment.toUpperCase()}
+                      alt={`${selectedPayment.toUpperCase()} token`}
                     />
                   )}
                 </div>
@@ -330,7 +330,7 @@ function Counter() {
                     width={20}
                     height={20}
                     className="absolute right-2 top-1/2 -translate-y-1/2"
-                    alt={selectedPayment.toUpperCase()}
+                    alt="GFE Logo"
                   />
                 </div>
               </div>
