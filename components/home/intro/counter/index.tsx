@@ -4,6 +4,7 @@ import { startTransition, useEffect, useRef, useState } from "react"
 
 import "@radix-ui/react-icons"
 import Image from "next/image"
+import { Loader2 } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import useICOWebSocket from "@/hooks/useICOWebSocket"
@@ -34,7 +35,7 @@ function formatNumber(value: number) {
 function Counter() {
   const t = useTranslations("main")
   const countdownInterval = useRef<number | null>(null)
-  const { status, address, chainData } = useICOWebSocket(
+  const { status, address, startTime, chainData } = useICOWebSocket(
     `${process.env.NEXT_PUBLIC_ENVIRONMENT === "production" ? "wss://" : "ws://"}${process.env.NEXT_PUBLIC_WEBSOCKET_HOST}`
   )
   const [time, setTime] = useState({
@@ -48,7 +49,7 @@ function Counter() {
   const [inputGFEValue, setInputGFEValue] = useState("")
   const [inputPaymentValue, setInputPaymentValue] = useState("")
 
-  const targetDate = new Date("2024-12-31T00:00:00").getTime()
+  const targetDate = new Date().getTime()
 
   const handlePaymentValueChange = (value: string) => {
     setInputPaymentValue(value)
@@ -87,48 +88,80 @@ function Counter() {
     setInputPaymentValue(formatNumber(paymentValue))
   }
 
-  const updateCountdown = () => {
-    const currentDate = new Date().getTime()
-
-    const timeDifference = targetDate - currentDate
-
-    if (timeDifference <= 0 && countdownInterval.current) {
-      window.clearInterval(countdownInterval.current)
-    } else {
-      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
-      const hours = Math.floor(
-        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      )
-      const minutes = Math.floor(
-        (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
-      )
-      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000)
-
-      setTime({
-        days,
-        hours,
-        minutes,
-        seconds,
-      })
-    }
-  }
-
   useEffect(() => {
+    // Define the function inside the effect so it captures the current state
+    const updateCountdown = () => {
+      const currentDate = new Date().getTime()
+      // Use the most recent value of startTime here
+      const timeDifference = startTime + 30 * 24 * 60 * 60 * 1000 - currentDate
+
+      if (timeDifference <= 0 && countdownInterval.current) {
+        // Time expired logic
+      } else {
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
+        const hours = Math.floor(
+          (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        )
+        const minutes = Math.floor(
+          (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+        )
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000)
+
+        setTime({
+          days,
+          hours,
+          minutes,
+          seconds,
+        })
+      }
+    }
+
+    // Set up the interval
     countdownInterval.current = window.setInterval(updateCountdown, 1000)
 
+    // Clean up
     return () => {
       if (countdownInterval.current)
         window.clearInterval(countdownInterval.current)
     }
-  }, [])
+    // Adding startTime to the dependency array so the effect is rerun when startTime changes
+  }, [startTime])
 
   useEffect(() => {
     handlePaymentValueChange(inputPaymentValue)
   }, [isCardPayment, selectedPayment])
 
   return (
-    <>
-      <div className="auth relative w-full overflow-hidden rounded-lg bg-background/10 pb-6 font-mont shadow-lg backdrop-blur-3xl">
+    <div className="relative overflow-hidden">
+      {status !== "running" && (
+        <div className="absolute inset-0 z-10 flex items-center justify-center overflow-hidden bg-white/30 backdrop-blur-md">
+          {status === "loading" && (
+            <Loader2 className="size-10 animate-spin text-primary" />
+          )}
+          {status === "not_started" && (
+            <p className="font-goldman text-lg text-primary">
+              Not started yet...
+            </p>
+          )}
+          {status === "ended" && (
+            <p className="font-goldman text-lg text-primary">
+              The ICO has ended
+            </p>
+          )}
+          {status === "halted" && (
+            <p className="font-goldman text-lg text-primary">
+              The ICO has been halted
+            </p>
+          )}
+          {status === "disconnected" && (
+            <p className="font-goldman text-lg text-primary">
+              Something went wrong
+            </p>
+          )}
+        </div>
+      )}
+      <div className="auth relative w-full overflow-hidden rounded-lg bg-background/90 pb-6 font-mont shadow-lg backdrop-blur-3xl">
         <div className="flex flex-col gap-[24px] p-6">
           <div className="text-center">
             <h3 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
@@ -308,7 +341,7 @@ function Counter() {
           </Button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
