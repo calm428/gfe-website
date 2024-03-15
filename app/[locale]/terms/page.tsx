@@ -3,15 +3,15 @@ import { getTranslations } from "next-intl/server"
 
 import SectionTitle from "@/components/common/section-title"
 
-import { openGraphImage } from "../../shared-metadata"
-
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "Terms of Use",
-  description: "Terms of Use",
+  description:
+    "Read and understand our Terms of Use to understand our policies, terms, and conditions regarding the use of our website and services.",
   openGraph: {
-    ...openGraphImage,
     title: "Terms of Use",
+    description:
+      "Read and understand our Terms of Use to understand our policies, terms, and conditions regarding the use of our website and services.",
   },
 }
 

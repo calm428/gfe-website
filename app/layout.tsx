@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
+  description: siteConfig.description,
   keywords: [
     "GFE",
     "GFE Foundation",
@@ -40,7 +41,6 @@ export const metadata: Metadata = {
     "Miner Hosting",
     "NFT",
   ],
-  description: siteConfig.description,
   icons: {
     icon: "/favicon-16x16.png",
     shortcut: "/favicon-32x32.png",

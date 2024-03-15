@@ -6,16 +6,15 @@ import AboutGIPSection from "@/components/governance/about-gip"
 import HeroSection from "@/components/governance/hero"
 import HowPaticipateSection from "@/components/governance/how-paticipate"
 
-import { openGraphImage } from "../../shared-metadata"
-
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "Governance",
   description:
     "GFE Governance is the framework and processes responsible for contributing to the green energy world and facilitating changes to the GFE ecosystem.",
   openGraph: {
-    ...openGraphImage,
     title: "Governance",
+    description:
+      "GFE Governance is the framework and processes responsible for contributing to the green energy world and facilitating changes to the GFE ecosystem.",
   },
 }
 

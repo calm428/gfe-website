@@ -1,6 +1,5 @@
 import { Metadata } from "next"
 
-import { siteConfig } from "@/config/site"
 import CommunitySection from "@/components/common/community"
 import ScrollToTop from "@/components/common/scroll-to-top"
 import AdvantagesSection from "@/components/home/advantages"
@@ -11,16 +10,13 @@ import PartnersSection from "@/components/home/partnersSection"
 import SliderSection from "@/components/home/slider"
 import SpecsSection from "@/components/home/specs"
 
-import { openGraphImage } from "../shared-metadata"
-
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
-  title: "Green Fungible Energy",
-  description: siteConfig.description,
+  title: "Unsubscribe",
+  description: "Unsubscribe from our newsletter and updates.",
   openGraph: {
-    ...openGraphImage,
-    title: "Green Fungible Energy - GFE Foundation",
-    description: siteConfig.description,
+    title: "Unsubscribe",
+    description: "Unsubscribe from our newsletter and updates.",
   },
 }
 

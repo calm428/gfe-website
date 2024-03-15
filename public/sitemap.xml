@@ -50,6 +50,9 @@
     <lastmod>2024-03-15T08:03:43.019Z</lastmod>
     <priority>0.80</priority>
   </url>
-
-
+  <url>
+    <loc>https://www.gfe.foundation/unsubscribe</loc>
+    <lastmod>2024-03-15T08:03:43.019Z</lastmod>
+    <priority>0.50</priority>
+  </url>
 </urlset>

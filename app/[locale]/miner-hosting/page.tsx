@@ -18,16 +18,15 @@ import SpecsSection from "@/components/miner-hosting/specs"
 import WhySunbeltSection from "@/components/miner-hosting/why-sunbelt"
 import WorkFlowSection from "@/components/miner-hosting/work-flow"
 
-import { openGraphImage } from "../../shared-metadata"
-
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
   title: "Miner Hosting",
   description:
     "Reliable and profitable platform, providing several new miner hosting service for end users.",
   openGraph: {
-    ...openGraphImage,
     title: "Miner Hosting",
+    description:
+      "Reliable and profitable platform, providing several new miner hosting service for end users.",
   },
 }
 

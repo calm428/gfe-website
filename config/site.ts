@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "GFE Foundation",
+  name: "Green Fungible Energy",
   description:
     "At GFE Foundation, we're pioneering the green energy revolution by merging sustainability with profitable investments through tokenization. Dive into a world where your investment fuels renewable energy projects and offers attractive returns. Join us in shaping a sustainable future, one token at a time. Invest smart, impact the planet.",
   url: "https://www.gfe.foundation",
