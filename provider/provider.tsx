@@ -1,12 +1,9 @@
 "use client"
 
-import React, { ReactNode, useEffect, useState } from "react"
+import React, { ReactNode, useState } from "react"
 import { SunbeltContext } from "@/context/context"
 import axios from "axios"
 import { QueryClient, QueryClientProvider } from "react-query"
-import useSWR from "swr"
-
-import checkAuthentication from "@/lib/actions/checkAuthentication"
 
 const queryClient = new QueryClient()
 
@@ -23,11 +20,6 @@ const App: React.FC<IProps> = ({ children }) => {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
   const [signUpModalOpen, setSignUpModalOpen] = useState<boolean>(false)
   const [verifyModalOpen, setVerifyModalOpen] = useState<boolean>(false)
-  const [authenticated, setAuthenticated] = useState<boolean>(false)
-
-  useEffect(() => {
-    checkAuthentication().then((res) => setAuthenticated(res))
-  }, [])
 
   return (
     <SunbeltContext.Provider
@@ -44,8 +36,6 @@ const App: React.FC<IProps> = ({ children }) => {
         setSignUpModalOpen,
         verifyModalOpen,
         setVerifyModalOpen,
-        authenticated,
-        setAuthenticated,
       }}
     >
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
