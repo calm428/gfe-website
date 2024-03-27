@@ -1,8 +1,7 @@
-import { useContext } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { SunbeltContext } from "@/context/context"
+import { useSession } from "next-auth/react"
 import { useTranslations } from "next-intl"
 import { BiSolidFileDoc } from "react-icons/bi"
 import { FaGuilded } from "react-icons/fa"
@@ -27,8 +26,8 @@ import ExpandableText from "./expandable-text"
 import { LanguageSelector } from "./language"
 
 export function MobileMenu({ children }: { children: React.ReactNode }) {
+  const { data: session } = useSession()
   const t = useTranslations("main")
-  const { authenticated } = useContext(SunbeltContext)
   const pathname = usePathname()
 
   // nav style menu
@@ -244,7 +243,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
           >
             {t("header.contacts")}
           </Link>
-          <div className="mx-auto mb-4 mt-4 flex justify-center">
+          <div className="m-4 mx-auto flex justify-center">
             <LanguageSelector />
           </div>
           <Button
@@ -257,7 +256,9 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
             asChild
           >
             <Link href="https://platform.gfe.foundation">
-              {authenticated ? t("header.launch_app") : t("header.sign_in")}
+              {(session?.user as any)?.id
+                ? t("header.launch_app")
+                : t("header.sign_in")}
             </Link>
           </Button>
         </Accordion>
