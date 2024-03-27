@@ -1,9 +1,8 @@
 "use client"
 
-import { useContext } from "react"
 import Link from "next/link"
-import { SunbeltContext } from "@/context/context"
 import { Menu } from "lucide-react"
+import { useSession } from "next-auth/react"
 import { useTranslations } from "next-intl"
 
 import { siteConfig } from "@/config/site"
@@ -15,7 +14,9 @@ import { MobileMenu } from "./mobile-menu"
 
 export function SiteHeader() {
   const t = useTranslations("main")
-  const { authenticated } = useContext(SunbeltContext)
+  const { data: session } = useSession()
+
+  console.log(session)
 
   return (
     <>
@@ -33,9 +34,9 @@ export function SiteHeader() {
               asChild
             >
               <Link href="https://platform.gfe.foundation">
-                {authenticated
-                  ? t("navbar_section.launch_app")
-                  : t("navbar_section.sign_in")}
+                {(session?.user as any)?.id
+                  ? t("header.launch_app")
+                  : t("header.sign_in")}
               </Link>
             </Button>
             <LanguageSelector />

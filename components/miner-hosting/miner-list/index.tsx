@@ -121,7 +121,7 @@ export default function MinerListSection() {
   return (
     <section className="relative bg-[url('/images/miner-hosting/bg3.png')] bg-cover bg-bottom bg-no-repeat">
       <div className="container flex flex-col items-center justify-between gap-10 px-10 py-16">
-        <SectionTitle>{t("minerHosting.minerList")}</SectionTitle>
+        <SectionTitle>{t("miner_hosting.minerList")}</SectionTitle>
 
         <div className="mx-auto w-full max-w-[375px] md:max-w-[750px] lg:max-w-[968px] xl:max-w-6xl">
           <Slider {...settings} ref={(c) => setSlider(c)}>
@@ -160,7 +160,7 @@ export default function MinerListSection() {
                   "linear-gradient(9deg, #22B4FD 32.53%, #2D79FF 77.26%)",
               }}
             >
-              {t("minerHosting.planForMining")}
+              {t("miner_hosting.planForMining")}
             </Button>
           </div>
         </div>

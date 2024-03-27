@@ -38,32 +38,32 @@ export default function SliderSection() {
     {
       icon: "/images/home/slide-icon-1.png",
       title: "1 Satoshis",
-      text: t("minerHosting.perKbData"),
+      text: t("miner_hosting.perKbData"),
     },
     {
       icon: "/images/home/slide-icon-2.png",
       title: "1.95 Billion",
-      text: t("minerHosting.totalTransaction"),
+      text: t("miner_hosting.totalTransaction"),
     },
     {
       icon: "/images/home/slide-icon-3.png",
       title: "$ 0.000003",
-      text: t("minerHosting.transactionFee"),
+      text: t("miner_hosting.transactionFee"),
     },
     {
       icon: "/images/home/slide-icon-1.png",
       title: "1 Satoshis",
-      text: t("minerHosting.perKbData"),
+      text: t("miner_hosting.perKbData"),
     },
     {
       icon: "/images/home/slide-icon-2.png",
       title: "1.95 Billion",
-      text: t("minerHosting.totalTransaction"),
+      text: t("miner_hosting.totalTransaction"),
     },
     {
       icon: "/images/home/slide-icon-3.png",
       title: "$ 0.000003",
-      text: t("minerHosting.transactionFee"),
+      text: t("miner_hosting.transactionFee"),
     },
   ]
 

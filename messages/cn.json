@@ -12,7 +12,7 @@
     "buy_now": "立即购买",
     "launch_text": "NFT官方登陆页面已正式上线！🎉",
     "something_went_wrong": "出现了问题！",
-    "home_page": {
+    "home": {
       "section1": {
         "title": "绿色可替代能源",
         "subtitle": "GFE - 绿币",
@@ -69,7 +69,7 @@
         "answer4": "比特币挖矿是新比特币的创建过程，也是将交易添加到区块链的过程，即比特币网络中的所有交易的分散式总账簿。它涉及解决复杂的数学问题，验证和保障网络上的交易。"
       }
     },
-    "footer_section": {
+    "footer": {
       "section1": {
         "title": "加入我们的社区",
         "description": "通过加入GFE项目，投资者和环境倡导者都可以为可持续能源生态系统的发展做出贡献，同时享受区块链技术和服务器托管带来的经济收益，以及具有生态和伦理支持的全球商品价格，用于无开采电力。"
@@ -98,7 +98,7 @@
       "privacy_policy": "隐私政策",
       "terms_and_conditions": "条款和条件"
     },
-    "contactus_page": {
+    "contact_us": {
       "bookMeetingTitle": "预约会议",
       "bookMeetingCEO": "与首席执行官预约会议",
       "bookMeetingDescription": "对我们的服务感兴趣，愿意参与我们的私募？这就是我们在这里的原因！预约与我们团队会面，详细讨论如何运作、定价等。我们将尽力帮助。",
@@ -134,7 +134,7 @@
         "invalidMessage": "请输入有效的消息。"
       }
     },
-    "about_us_page": {
+    "about_us": {
       "name": "关于我们",
       "title": "创新",
       "subtitle": "全球能源的新思路",
@@ -175,7 +175,7 @@
         "para2": "利用拉巴斯附近的农村地区用于DAPPr单位可以在5-7年内提供一个电网稳定软件包。这些分散的发电资产可以在基础设施建设后协调供应区域和电网稳定电力。将多个小生产者作为一个实体向电网供电可以在社区的石油消费中产生巨大影响。这将减少全球暖化，将西方经济的收入带给本地的全球生产方式，即太阳能农民。"
       }
     },
-    "nft_page": {
+    "nft": {
       "new": "新的",
       "badge": "NFT 官方登陆页面正式上线！🎉",
       "title": "用 DAPPr NFT 重塑",
@@ -210,7 +210,7 @@
         "answer3_3": "最后，我们作为公会赞助工作，包括新的 DAPPr 单元和扩展到 OTEC 平台，用于海洋治理平台。这些以及其他能源和人权项目都能够作为全球基金。我们期待为非洲安装 GC MRI 的电力容量。"
       }
     },
-    "nft_page": {
+    "nft": {
       "new": "新的",
       "badge": "NFT 官方登陆页面正式上线！🎉",
       "title": "用 DAPPr NFT 重塑",
@@ -244,7 +244,7 @@
         "answer3_3": "最后，我们作为公会赞助工作，包括新的 DAPPr 单元和扩展到 OTEC 平台，用于海洋治理平台。这些以及其他能源和人权项目都能够作为全球基金。我们期待为非洲安装 GC MRI 的电力容量。"
       }
     },
-    "minerHosting": {
+    "miner_hosting": {
       "bitcoinMining": {
         "title": "比特币挖矿生态系统",
         "description": "可靠且有利可图的平台，为最终用户提供多种新的矿工托管服务。"
@@ -467,7 +467,7 @@
       },
       "Contact": "联系我们"
     },
-    "navbar_section": {
+    "header": {
       "ecosystem": "生态系统",
       "nft": "NFT",
       "community": "社区",

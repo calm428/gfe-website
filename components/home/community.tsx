@@ -14,10 +14,10 @@ export default function CommunitySection() {
       <div className="flex flex-col justify-between rounded-xl bg-muted p-[60px] md:flex-row">
         <div className="flex flex-col gap-4 lg:w-[60%]">
           <div className="bg-gradient-to-b  from-[#2BADFD]  to-[#1570EF] bg-clip-text font-monument text-3xl text-transparent">
-            {t("footer_section.section1.title")}
+            {t("footer.section1.title")}
           </div>
           <div className=" auth my-1 mb-5 font-mont text-sm font-medium md:mb-0 md:text-base">
-            {t("footer_section.section1.description")}
+            {t("footer.section1.description")}
           </div>
         </div>
         <div className="flex flex-col gap-5 md:w-[30%]">

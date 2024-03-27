@@ -2,9 +2,12 @@ import App from "@/provider/provider"
 
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
+import SessionProviders from "@/provider/session-provider"
+import { getServerSession } from "next-auth"
 import { Toaster } from "react-hot-toast"
 
 import { siteConfig } from "@/config/site"
+import { authOptions } from "@/lib/authOptions"
 import {
   fontGoldman,
   fontMono,
@@ -58,7 +61,9 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
+  const session = await getServerSession(authOptions)
+
   return (
     <App>
       <html lang="en" suppressHydrationWarning>
@@ -73,17 +78,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontMonumentExtended.variable
           )}
         >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem={false}
-          >
-            <Toaster />
-            <div className="relative flex min-h-screen flex-col">
-              <div className="flex-1">{children}</div>
-            </div>
-            <TailwindIndicator />
-          </ThemeProvider>
+          <SessionProviders session={session}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="light"
+              enableSystem={false}
+            >
+              <Toaster />
+              <div className="relative flex min-h-screen flex-col">
+                <div className="flex-1">{children}</div>
+              </div>
+              <TailwindIndicator />
+            </ThemeProvider>
+          </SessionProviders>
         </body>
       </html>
     </App>

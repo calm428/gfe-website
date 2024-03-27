@@ -165,10 +165,10 @@ function Counter() {
         <div className="flex flex-col gap-[24px] p-6">
           <div className="text-center">
             <p className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
-              {t("home_page.converter_section.title")}
+              {t("home.converter_section.title")}
             </p>
             <p className="font-mont text-[14px] font-medium">
-              {t("home_page.converter_section.subtitle")}
+              {t("home.converter_section.subtitle")}
             </p>
           </div>
           <div className="grid grid-cols-4 gap-1">

@@ -23,25 +23,25 @@ const FaqSection = () => {
 
   const FAQS = [
     {
-      question: t("minerHosting.bitcoin_mining01.question"),
-      answer: t("minerHosting.bitcoin_mining01.answer"),
+      question: t("miner_hosting.bitcoin_mining01.question"),
+      answer: t("miner_hosting.bitcoin_mining01.answer"),
     },
     {
-      question: t("minerHosting.bitcoin_mining02.question"),
-      answer: t("minerHosting.bitcoin_mining02.answer"),
+      question: t("miner_hosting.bitcoin_mining02.question"),
+      answer: t("miner_hosting.bitcoin_mining02.answer"),
     },
     {
-      question: t("minerHosting.bitcoin_mining03.question"),
-      answer: t("minerHosting.bitcoin_mining03.answer"),
+      question: t("miner_hosting.bitcoin_mining03.question"),
+      answer: t("miner_hosting.bitcoin_mining03.answer"),
     },
     {
-      question: t("minerHosting.bitcoin_mining04.question"),
-      answer: t("minerHosting.bitcoin_mining04.answer"),
+      question: t("miner_hosting.bitcoin_mining04.question"),
+      answer: t("miner_hosting.bitcoin_mining04.answer"),
     },
   ]
   return (
     <section className="container">
-      <SectionTitle>{t("minerHosting.sunbeltRenewableMining")}</SectionTitle>
+      <SectionTitle>{t("miner_hosting.sunbeltRenewableMining")}</SectionTitle>
 
       <Accordion type="single" collapsible className="auth mt-5 space-y-5">
         {FAQS.map((faq, index) => (

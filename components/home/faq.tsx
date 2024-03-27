@@ -17,20 +17,20 @@ import { Button } from "../ui/button"
 
 const FAQS = [
   {
-    question: "home_page.section5.question1",
-    answer: "home_page.section5.answer1",
+    question: "home.section5.question1",
+    answer: "home.section5.answer1",
   },
   {
-    question: "home_page.section5.question2",
-    answer: "home_page.section5.answer2",
+    question: "home.section5.question2",
+    answer: "home.section5.answer2",
   },
   {
-    question: "home_page.section5.question3",
-    answer: "home_page.section5.answer3",
+    question: "home.section5.question3",
+    answer: "home.section5.answer3",
   },
   {
-    question: "home_page.section5.question4",
-    answer: "home_page.section5.answer4",
+    question: "home.section5.question4",
+    answer: "home.section5.answer4",
   },
 ]
 
@@ -45,8 +45,8 @@ const FaqSection = () => {
   return (
     <section className="container py-[100px]">
       <SectionTitle>
-        {t("home_page.section5.title")} <br className="hidden sm:inline" />
-        {t("home_page.section5.subtitle")}
+        {t("home.section5.title")} <br className="hidden sm:inline" />
+        {t("home.section5.subtitle")}
       </SectionTitle>
 
       <Accordion type="single" collapsible className="auth mt-5 space-y-5">

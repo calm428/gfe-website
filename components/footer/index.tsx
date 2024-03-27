@@ -29,7 +29,7 @@ export function SiteFooter() {
   const t = useTranslations("main")
 
   const formSchema = z.object({
-    email: z.string().email(t("footer_section.enter_valid_email")),
+    email: z.string().email(t("footer.enter_valid_email")),
   })
 
   type UserFormValue = z.infer<typeof formSchema>
@@ -53,7 +53,7 @@ export function SiteFooter() {
     } catch (error) {
       const axiosError = error as AxiosError | any
       if (axiosError.response?.data?.message === "EMAIL_ALREADY_SUBSCRIBED") {
-        toast.error(t("footer_section.subscribe_email_already_exists"), {
+        toast.error(t("footer.subscribe_email_already_exists"), {
           position: "top-right",
         })
       } else {
@@ -70,18 +70,18 @@ export function SiteFooter() {
         <div className="relative mx-4 -mt-72 flex flex-col justify-between gap-5 rounded-3xl  bg-primary bg-gradient-to-br from-[#2BADFD] to-[#1570EF] p-[40px] sm:mx-6 md:mx-8 md:-mt-40 md:items-center md:p-[60px] lg:mx-auto lg:flex-row">
           <div className="w-full lg:w-[50%] lg:max-w-2xl 	">
             <SectionTitle className="text-white" align="left">
-              {t("footer_section.section2.title")}
+              {t("footer.section2.title")}
             </SectionTitle>
             <SectionDescription
               className="text-white xl:text-base"
               align="left"
             >
-              {t("footer_section.section2.description")}
+              {t("footer.section2.description")}
             </SectionDescription>
           </div>
           <div className="w-full lg:w-[50%] lg:max-w-xl ">
             <div className="auth my-1 text-base  font-semibold text-white">
-              {t("footer_section.newsletter")}
+              {t("footer.newsletter")}
             </div>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -104,7 +104,7 @@ export function SiteFooter() {
                             variant="secondary"
                             className="auth h-full rounded-l-none font-mont font-semibold"
                           >
-                            {t("footer_section.subscribe")}
+                            {t("footer.subscribe")}
                           </Button>
                         </div>
                       </FormControl>
@@ -119,15 +119,15 @@ export function SiteFooter() {
         <div className="auth container flex flex-col items-start gap-4 py-[60px] font-mont sm:justify-between md:flex-row">
           <div className="w-full md:w-[40%]">
             <div className="my-6 text-xl font-semibold text-primary">
-              {t("footer_section.goalSection.title")}
+              {t("footer.goalSection.title")}
             </div>
             <div className="font-mont text-base text-primary">
-              {t("footer_section.goalSection.description")}
+              {t("footer.goalSection.description")}
             </div>
           </div>
           <div className="!mx-0 w-full md:w-[30%]">
             <div className="my-6 text-xl  font-semibold text-primary">
-              {t("footer_section.important_links")}
+              {t("footer.important_links")}
             </div>
             <div className="grid grid-cols-2 gap-1 sm:grid-cols-3  md:grid-cols-1">
               {siteConfig.footerLinks.map((link, index) => (
@@ -142,7 +142,7 @@ export function SiteFooter() {
             </div>
             <div className="my-4 text-xl  text-primary">
               {" "}
-              {t("footer_section.contact_us")}
+              {t("footer.contact_us")}
             </div>
             <div>
               <div className="my-2 flex gap-2 font-mont text-base text-primary">
@@ -157,13 +157,13 @@ export function SiteFooter() {
           </div>
           <div className="!mx-0 w-full md:w-[30%]">
             <div className="my-6 text-xl  font-semibold text-primary">
-              {t("footer_section.address")}
+              {t("footer.address")}
             </div>
             <div className="font-mont text-base text-primary">
               {siteConfig.contact.address}
             </div>
             <div className="my-4 hidden text-xl text-primary md:block ">
-              {t("footer_section.follow_us")}
+              {t("footer.follow_us")}
             </div>
             <div className="hidden md:flex">
               <Button variant="ghost" size="icon" aria-label="Facebook">
@@ -225,7 +225,7 @@ export function SiteFooter() {
           <div className="!mx-0 md:hidden">
             <div className="my-2 text-xl  text-primary">
               {" "}
-              {t("footer_section.follow_us")}
+              {t("footer.follow_us")}
             </div>
             <div className="flex">
               <Button variant="ghost" size="icon" aria-label="Facebook">
@@ -292,10 +292,10 @@ export function SiteFooter() {
         </p>
         <div className="flex gap-4">
           <Link href="/privacy" target="_blank">
-            {t("footer_section.privacy_policy")}
+            {t("footer.privacy_policy")}
           </Link>
           <Link href="/terms" target="_blank">
-            {t("footer_section.terms_and_conditions")}
+            {t("footer.terms_and_conditions")}
           </Link>
         </div>
       </div>
