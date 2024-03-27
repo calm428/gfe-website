@@ -38,8 +38,6 @@ function useICOWebSocket(url: string) {
     const onMessage = (event: MessageEvent) => {
       try {
         const data = JSON.parse(event.data)
-        console.log(data)
-
         if (data.type === "initial_data") {
           setAddress({
             GFEContractAddress: data?.GFEContractAddress || "",
@@ -53,17 +51,23 @@ function useICOWebSocket(url: string) {
           if (data.config.ICO_state === "Not Started") setStatus("not_started")
           else if (data.config.ICO_state === "Running") setStatus("running")
           else if (data.config.ICO_state === "Halted") setStatus("halted")
-          else if (data.config.ICO_state === "End") setStatus("ended")
+          else if (data.config.ICO_state === "End") {
+            setStatus("ended")
+            setStartTime(0)
+          }
         } else if (data.type === "ICOstatus") {
-          data.price && setChainData({ ...chainData, ...data.price })
+          data.data && setChainData({ ...chainData, ...data.data })
 
           if (data.data.state === "Not Started") setStatus("not_started")
           else if (data.data.state === "Running") setStatus("running")
           else if (data.data.state === "Halted") setStatus("halted")
-          else if (data.data.state === "End") setStatus("ended")
+          else if (data.data.state === "End") {
+            setStatus("ended")
+            setStartTime(0)
+          }
         }
-      } catch (e) {
-        console.log(e)
+      } catch (error) {
+        console.log(error)
       }
     }
 
