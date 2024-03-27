@@ -16,6 +16,8 @@ export function SiteHeader() {
   const t = useTranslations("main")
   const { data: session } = useSession()
 
+  console.log(session)
+
   return (
     <>
       <header className="siteheader sticky top-0 z-50 w-full border-b bg-background px-0 font-mont">
@@ -32,7 +34,7 @@ export function SiteHeader() {
               asChild
             >
               <Link href="https://platform.gfe.foundation">
-                {(session?.user as any)["id"]
+                {(session?.user as any)?.id
                   ? t("header.launch_app")
                   : t("header.sign_in")}
               </Link>
