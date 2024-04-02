@@ -10,7 +10,7 @@ interface Props {
 function AdvantageCard({ title, desc, image }: Props) {
   return (
     <div className=" relative flex flex-col overflow-hidden rounded-md border border-border bg-muted">
-      <div className="flex flex-col gap-8 py-[50px] pl-[50px]">
+      <div className="flex flex-col gap-8 py-[30px] pl-[30px]">
         <div className="flex flex-col gap-4">
           <h3 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-4xl capitalize text-transparent">
             {title}
@@ -23,13 +23,7 @@ function AdvantageCard({ title, desc, image }: Props) {
           </Button>
         </div>
       </div>
-      <Image
-        src={image}
-        width={639}
-        height={500}
-        alt={title}
-        className=" self-end"
-      />
+      <Image src={image} alt={title} className="mx-auto mb-4 w-2/3" />
       <Image
         src={"/advantages/grid.svg"}
         width={539}
