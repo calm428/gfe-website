@@ -99,7 +99,7 @@ const SliderSection = () => {
 
                 .slick-dots {
                   bottom: -48px !important;
-                  z-index: 999 !important;
+                  z-index: 49 !important;
                   top: -40px;
                 }
 
