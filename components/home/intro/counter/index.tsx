@@ -36,7 +36,7 @@ function Counter() {
   const t = useTranslations("main")
   const countdownInterval = useRef<number | null>(null)
   const { status, address, startTime, chainData } = useICOWebSocket(
-    `${process.env.NEXT_PUBLIC_ENVIRONMENT === "production" ? "wss://" : "ws://"}${process.env.NEXT_PUBLIC_WEBSOCKET_HOST}`
+    `${process.env.NEXT_PUBLIC_ENVIRONMENT === "production" ? "wss://" : "wss://"}${process.env.NEXT_PUBLIC_WEBSOCKET_HOST}`
   )
   const [time, setTime] = useState({
     days: 0,

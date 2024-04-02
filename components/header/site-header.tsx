@@ -16,8 +16,6 @@ export function SiteHeader() {
   const t = useTranslations("main")
   const { data: session } = useSession()
 
-  console.log(session)
-
   return (
     <>
       <header className="siteheader sticky top-0 z-50 w-full border-b bg-background px-0 font-mont">
