@@ -1,3 +1,5 @@
+import adv1SVG from "@/public/advantages/adv1.svg"
+import adv2SVG from "@/public/advantages/adv2.svg"
 import { useTranslations } from "next-intl"
 
 import AdvantageCard from "./advantage-card"
@@ -10,12 +12,12 @@ export default function AdvantagesSection() {
       <AdvantageCard
         title={t("home.section3.card1title")}
         desc={t("home.section3.card1description")}
-        image="/advantages/adv2.svg"
+        image={adv2SVG}
       />
       <AdvantageCard
         title={t("home.section3.card2title")}
         desc={t("home.section3.card2description")}
-        image="/advantages/adv1.svg"
+        image={adv1SVG}
       />
     </div>
   )
