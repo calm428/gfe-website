@@ -9,6 +9,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import { useTranslations } from "next-intl"
 import { BiSolidFileDoc } from "react-icons/bi"
 import { FaGuilded } from "react-icons/fa"
+import { FaUsers } from "react-icons/fa6"
 import { GrArticle } from "react-icons/gr"
 import { HiUsers } from "react-icons/hi"
 import { MdArrowOutward } from "react-icons/md"
@@ -208,6 +209,26 @@ export function MainNav({ items }: MainNavProps) {
                             </p>
                             <p className="text-xs">
                               {t("header.guilds_description")}
+                            </p>
+                          </p>
+                        </div>
+                      </Link>
+                      <Link
+                        href="https://forum.gfe.foundation"
+                        target="_blank"
+                        className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                      >
+                        <div>
+                          <FaUsers className="min-w-5 text-[#21b4fd]" />
+                        </div>
+                        <div>
+                          <p>
+                            <p className="flex font-mont text-[14px] font-semibold capitalize">
+                              {t("header.gfe_forum")}
+                              <MdArrowOutward className="size-4" />
+                            </p>
+                            <p className="text-xs">
+                              {t("header.gfe_forum_description")}
                             </p>
                           </p>
                         </div>

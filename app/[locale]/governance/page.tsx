@@ -4,7 +4,7 @@ import CommunitySection from "@/components/common/community"
 import ScrollToTop from "@/components/common/scroll-to-top"
 import AboutGIPSection from "@/components/governance/about-gip"
 import HeroSection from "@/components/governance/hero"
-import HowPaticipateSection from "@/components/governance/how-paticipate"
+import HowParticipateSection from "@/components/governance/how-participate"
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
@@ -24,7 +24,7 @@ export default function GovernancePage() {
       <HeroSection />
       <AboutGIPSection />
       <div className="space-y-10 bg-[url('/images/nft/bg2.png')] bg-cover pb-[300px] md:pb-[150px]">
-        <HowPaticipateSection />
+        <HowParticipateSection />
         <CommunitySection />
       </div>
       <ScrollToTop />

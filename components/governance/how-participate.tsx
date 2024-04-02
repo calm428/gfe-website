@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { AiFillCode, AiFillMessage } from "react-icons/ai"
 import { FaUsers } from "react-icons/fa"
@@ -12,10 +13,14 @@ function GoverCard({
   title,
   content,
   further,
+  link,
+  external,
 }: {
   title: string
   content: string
-  further?: string
+  further: string
+  link: string
+  external: boolean
 }) {
   const t = useTranslations("main")
 
@@ -27,8 +32,13 @@ function GoverCard({
         </h3>
         <p className="text-sm md:text-base">{t(content as any)}</p>
       </div>
-      <Button className="mt-6 w-fit bg-gradient-to-l from-[#2BADFD] to-[#1570EF]">
-        {t(further as any)}
+      <Button
+        className="mt-6 w-fit bg-gradient-to-l from-[#2BADFD] to-[#1570EF]"
+        asChild
+      >
+        <Link href={link} target={external ? "_blank" : "_self"}>
+          {t(further as any)}
+        </Link>
       </Button>
     </div>
   )
@@ -40,22 +50,28 @@ const cardData = [
     title: "governance.documentation",
     content: "governance.documentation_description",
     further: "governance.read_more",
+    link: "",
+    external: false,
   },
   {
     id: 2,
     title: "governance.forum",
     content: "governance.forum_description",
     further: "governance.open_forum",
+    link: "https://forum.gfe.foundation",
+    external: true,
   },
   {
     id: 3,
     title: "governance.staking",
     content: "governance.staking_description",
     further: "governance.stake_now",
+    link: "",
+    external: false,
   },
 ]
 
-export default function HowPaticipateSection() {
+export default function HowParticipateSection() {
   const t = useTranslations("main")
 
   return (
@@ -66,9 +82,11 @@ export default function HowPaticipateSection() {
           {t("governance.how_participate_gfe_description")}
         </SectionDescription>
         <div className="mt-4 flex flex-wrap justify-center gap-4">
-          <Button variant="outline" className="border-primary bg-white">
-            <FaUsers className="mr-2 size-5 text-[#2BADFD]" />
-            {t("governance.join_our_forum")}
+          <Button variant="outline" className="border-primary bg-white" asChild>
+            <Link href="https://forum.gfe.foundation" target="_blank">
+              <FaUsers className="mr-2 size-5 text-[#2BADFD]" />
+              {t("governance.join_our_forum")}
+            </Link>
           </Button>
           <Button variant="outline" className="border-primary bg-white">
             <GrStakeholder className="mr-2 size-5 text-[#2BADFD]" />
