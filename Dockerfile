@@ -1,23 +1,24 @@
 # State 1: Building the app
-FROM node:18-alpine3.18 as builder
+FROM node:20.3.0-alpine3.18 as builder
 
 WORKDIR /app
 
 # Copy package.json
 COPY package.json ./
-COPY yarn.lock ./
+
+RUN npm install -g pnpm
 
 # Install dependencies
-RUN yarn
+RUN pnpm install
 
 # Copy the rest of the Next.js app source code
 COPY . .
 
 # Build the Next.js app
-RUN yarn build
+RUN pnpm build
 
 # State 2: Serve the app
-FROM node:18-alpine3.18 as runner
+FROM node:20.3.0-alpine3.18 as runner
 
 WORKDIR /app
 
