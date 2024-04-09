@@ -12,7 +12,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile \
+        run: |
+          docker build . --file Dockerfile \
           --tag calm329/gfe-landing-page:latest \
           --build-arg NEXT_PUBLIC_ENVIRONMENT=$NEXT_PUBLIC_ENVIRONMENT \
           --build-arg NEXT_PUBLIC_METADATA_BASE=$NEXT_PUBLIC_METADATA_BASE \
