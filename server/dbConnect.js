@@ -3,7 +3,12 @@ import mongoose from "mongoose"
 const MONGODB_URI = process.env.MONGODB_URI
 
 if (!MONGODB_URI) {
-  throw new Error("Please define the db url environment")
+  if (process.env.IS_BUILD_ENV === "true") {
+    console.warn("MONGODB_URI is not set. Skipping database connection...");
+    return null;
+  } else {
+    throw new Error("Please define the MONGODB_URI environment variable");
+  }
 }
 
 let cached = global.mongoose
