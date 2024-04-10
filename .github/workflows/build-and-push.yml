@@ -27,3 +27,10 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: docker push calm329/gfe-landing-page:latest
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: GFE-Foundation/gfe-deploy-server
+          event-type: image-updated
