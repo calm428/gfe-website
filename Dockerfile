@@ -22,8 +22,6 @@ RUN pnpm install
 # Copy the rest of the Next.js app source code
 COPY . .
 
-RUN cat .env.local
-
 # Build the Next.js app
 RUN pnpm build
 
