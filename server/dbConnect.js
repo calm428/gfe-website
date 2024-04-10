@@ -5,7 +5,6 @@ const MONGODB_URI = process.env.MONGODB_URI
 if (!MONGODB_URI) {
   if (process.env.IS_BUILD_ENV === "true") {
     console.warn("MONGODB_URI is not set. Skipping database connection...");
-    return null;
   } else {
     throw new Error("Please define the MONGODB_URI environment variable");
   }
