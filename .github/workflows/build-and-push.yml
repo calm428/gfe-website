@@ -15,9 +15,9 @@ jobs:
         run: |
           docker build . --file Dockerfile \
           --tag calm329/gfe-landing-page:latest \
-          --build-arg NEXT_PUBLIC_ENVIRONMENT=$NEXT_PUBLIC_ENVIRONMENT \
-          --build-arg NEXT_PUBLIC_METADATA_BASE=$NEXT_PUBLIC_METADATA_BASE \
-          --build-arg NEXT_PUBLIC_WEBSOCKET_HOST=$NEXT_PUBLIC_WEBSOCKET_HOST
+          --build-arg NEXT_PUBLIC_ENVIRONMENT=${{ vars.NEXT_PUBLIC_ENVIRONMENT }} \
+          --build-arg NEXT_PUBLIC_METADATA_BASE=${{ vars.NEXT_PUBLIC_METADATA_BASE }} \
+          --build-arg NEXT_PUBLIC_WEBSOCKET_HOST=${{ vars.NEXT_PUBLIC_WEBSOCKET_HOST }}
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
