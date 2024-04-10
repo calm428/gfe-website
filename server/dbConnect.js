@@ -17,7 +17,7 @@ if (!cached) {
 }
 
 async function dbConnect() {
-  if (cached.conn) {
+  if (cached.conn || process.env.IS_BUILD_ENV === "true") {
     return cached.conn
   }
 
@@ -36,11 +36,8 @@ async function dbConnect() {
     cached.conn = await cached.promise
   } catch (e) {
     cached.promise = null
-    if (process.env.IS_BUILD_ENV === "true") {
-      console.warn("MONGODB_URI is not set. Skipping database connection...");
-    } else {
-      throw e
-    }
+    
+    throw e
   }
 
   return cached.conn
