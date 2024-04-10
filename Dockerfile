@@ -23,6 +23,8 @@ RUN echo "NEXT_PUBLIC_ENVIRONMENT=$NEXT_PUBLIC_ENVIRONMENT" > .env.local
 RUN echo "NEXT_PUBLIC_METADATA_BASE=$NEXT_PUBLIC_METADATA_BASE" >> .env.local
 RUN echo "NEXT_PUBLIC_WEBSOCKET_HOST=$NEXT_PUBLIC_WEBSOCKET_HOST" >> .env.local
 
+RUN cat .env.local
+
 # Build the Next.js app
 RUN pnpm build
 
