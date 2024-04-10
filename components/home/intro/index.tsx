@@ -4,7 +4,7 @@ import leftPic from "@/public/bgs/left.svg"
 import rightPic from "@/public/bgs/right.svg"
 import { ChevronRightIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
-
+import { HiOutlineNewspaper } from "react-icons/hi2"
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import PageTitle from "@/components/common/page-title"
@@ -39,13 +39,13 @@ export default function HomeSection() {
                 {t("audit")}
               </Link>
 
-              <Button className="bg-backround h-12 border border-secondary-foreground bg-white font-bold text-muted-foreground hover:bg-muted">
+              <Button className="bg-backround h-12 border border-secondary-foreground bg-white hover:bg-muted">
                 <Link
                   href={siteConfig.links.docs}
                   className="flex items-center justify-between gap-3"
                 >
-                  <Icons.paper />
-                  <span>{t("whitepaper")}</span>
+                  <HiOutlineNewspaper className="size-4" />
+                  <span className="font-bold text-muted-foreground">{t("whitepaper")}</span>
                 </Link>
               </Button>
             </div>
