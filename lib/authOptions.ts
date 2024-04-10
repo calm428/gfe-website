@@ -7,7 +7,6 @@ import GoogleProvider from "next-auth/providers/google"
 
 const useSecureCookies = process.env.NEXTAUTH_URL?.startsWith("https://")
 const cookiePrefix = useSecureCookies ? "__Secure-" : ""
-const hostName = new URL(process.env.NEXTAUTH_URL || "").hostname
 
 export const authOptions: NextAuthOptions = {
   debug: true,
@@ -19,7 +18,10 @@ export const authOptions: NextAuthOptions = {
         sameSite: "lax",
         path: "/",
         secure: useSecureCookies,
-        domain: hostName == "localhost" ? hostName : ".gfe.foundation", // add a . in front so that subdomains are included
+        domain:
+          process.env.NODE_ENV === "production" && process.env.HOST_NAME
+            ? process.env.HOST_NAME
+            : "", // add a . in front so that subdomains are included
       },
     },
   },
