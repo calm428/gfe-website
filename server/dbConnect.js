@@ -36,7 +36,11 @@ async function dbConnect() {
     cached.conn = await cached.promise
   } catch (e) {
     cached.promise = null
-    throw e
+    if (process.env.IS_BUILD_ENV === "true") {
+      console.warn("MONGODB_URI is not set. Skipping database connection...");
+    } else {
+      throw e
+    }
   }
 
   return cached.conn
