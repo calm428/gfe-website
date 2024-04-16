@@ -1,20 +1,14 @@
 import App from "@/provider/provider"
+import SessionProviders from "@/provider/session-provider"
 
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
-import SessionProviders from "@/provider/session-provider"
 import { getServerSession } from "next-auth"
 import { Toaster } from "react-hot-toast"
 
 import { siteConfig } from "@/config/site"
 import { authOptions } from "@/lib/authOptions"
-import {
-  fontGoldman,
-  fontMono,
-  fontMont,
-  fontMonumentExtended,
-  fontSans,
-} from "@/lib/fonts"
+import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -70,12 +64,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-mont antialiased",
-            fontSans.variable,
-            fontMono.variable,
-            fontMont.variable,
-            fontGoldman.variable,
-            fontMonumentExtended.variable
+            "min-h-screen bg-background font-sans antialiased",
+            fontSans.variable
           )}
         >
           <SessionProviders session={session}>

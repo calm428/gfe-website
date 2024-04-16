@@ -32,7 +32,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
 
   // nav style menu
   const navMenuStyle = cn(
-    "mx-auto flex items-center rounded-lg p-2 font-mont font-medium text-muted-foreground hover:text-primary"
+    "mx-auto flex items-center rounded-lg p-2 font-sans font-medium text-muted-foreground hover:text-primary"
   )
 
   // menulist items
@@ -86,7 +86,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                     </div>
                     <div>
                       <p key={functionality.title}>
-                        <p className=" font-mont text-[14px] font-semibold capitalize ">
+                        <p className=" font-sans text-[14px] font-semibold capitalize ">
                           {functionality.title}
                         </p>
                         <ExpandableText
@@ -123,7 +123,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   </div>
                   <div>
                     <p>
-                      <p className="font-mont text-[14px] font-semibold capitalize">
+                      <p className="font-sans text-[14px] font-semibold capitalize">
                         {t("header.governance")}
                       </p>
                       <p className="text-xs">
@@ -141,7 +141,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   </div>
                   <div>
                     <p>
-                      <p className="font-mont text-[14px] font-semibold capitalize">
+                      <p className="font-sans text-[14px] font-semibold capitalize">
                         {t("header.guilds")}
                       </p>
                       <p className="text-xs">
@@ -184,7 +184,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   </div>
                   <div>
                     <p>
-                      <p className="font-mont text-[14px] font-semibold capitalize">
+                      <p className="font-sans text-[14px] font-semibold capitalize">
                         {t("header.about_us")}
                       </p>
                       <p className="text-xs">
@@ -202,7 +202,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   </div>
                   <div>
                     <p>
-                      <p className="font-mont text-[14px] font-semibold capitalize">
+                      <p className="font-sans text-[14px] font-semibold capitalize">
                         {t("header.blogs_and_news")}
                       </p>
                       <p className="text-xs">
@@ -221,7 +221,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   </div>
                   <div>
                     <p>
-                      <p className="flex font-mont text-[14px] font-semibold capitalize">
+                      <p className="flex font-sans text-[14px] font-semibold capitalize">
                         {t("header.documentation")}
                         <MdArrowOutward className="size-4" />
                       </p>
@@ -248,7 +248,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
           </div>
           <Button
             variant="default"
-            className="w-full whitespace-nowrap font-mont font-semibold"
+            className="w-full whitespace-nowrap font-sans font-semibold"
             style={{
               background:
                 "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",

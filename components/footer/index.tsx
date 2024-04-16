@@ -102,7 +102,7 @@ export function SiteFooter() {
                           <Button
                             type="submit"
                             variant="secondary"
-                            className="auth h-full rounded-l-none font-mont font-semibold"
+                            className="auth h-full rounded-l-none font-sans font-semibold"
                           >
                             {t("footer.subscribe")}
                           </Button>
@@ -116,12 +116,12 @@ export function SiteFooter() {
             </Form>
           </div>
         </div>
-        <div className="auth container flex flex-col items-start gap-4 py-[60px] font-mont sm:justify-between md:flex-row">
+        <div className="auth container flex flex-col items-start gap-4 py-[60px] font-sans sm:justify-between md:flex-row">
           <div className="w-full md:w-[40%]">
             <div className="my-6 text-xl font-semibold text-primary">
               {t("footer.goalSection.title")}
             </div>
-            <div className="font-mont text-base text-primary">
+            <div className="font-sans text-base text-primary">
               {t("footer.goalSection.description")}
             </div>
           </div>
@@ -134,7 +134,7 @@ export function SiteFooter() {
                 <Link
                   key={index}
                   href={link.href}
-                  className="  flex items-center rounded-lg font-mont text-base  text-primary hover:text-primary"
+                  className="  flex items-center rounded-lg font-sans text-base  text-primary hover:text-primary"
                 >
                   {t(link.title as any)}
                 </Link>
@@ -145,11 +145,11 @@ export function SiteFooter() {
               {t("footer.contact_us")}
             </div>
             <div>
-              <div className="my-2 flex gap-2 font-mont text-base text-primary">
+              <div className="my-2 flex gap-2 font-sans text-base text-primary">
                 <PhoneCall className="size-5" />
                 {siteConfig.contact.phone}
               </div>
-              <div className="my-2 flex gap-2 font-mont text-base text-primary">
+              <div className="my-2 flex gap-2 font-sans text-base text-primary">
                 <Mail className="size-5" />
                 {siteConfig.contact.email}
               </div>
@@ -159,7 +159,7 @@ export function SiteFooter() {
             <div className="my-6 text-xl  font-semibold text-primary">
               {t("footer.address")}
             </div>
-            <div className="font-mont text-base text-primary">
+            <div className="font-sans text-base text-primary">
               {siteConfig.contact.address}
             </div>
             <div className="my-4 hidden text-xl text-primary md:block ">

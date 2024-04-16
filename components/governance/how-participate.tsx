@@ -27,7 +27,7 @@ function GoverCard({
   return (
     <div className="mx-auto flex h-full max-w-[320px] flex-col justify-between rounded-lg p-4 shadow-md sm:max-w-[400px]">
       <div>
-        <h3 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-4 font-goldman text-2xl text-transparent">
+        <h3 className="font-goldman bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-4 text-2xl text-transparent">
           {t(title as any)}
         </h3>
         <p className="text-sm md:text-base">{t(content as any)}</p>

@@ -161,13 +161,13 @@ function Counter() {
           )}
         </div>
       )}
-      <div className="auth relative w-full overflow-hidden rounded-lg bg-background/90 pb-6 font-mont shadow-lg backdrop-blur-3xl">
+      <div className="auth relative w-full overflow-hidden rounded-lg bg-background/90 pb-6 font-sans shadow-lg backdrop-blur-3xl">
         <div className="flex flex-col gap-[24px] p-6">
           <div className="text-center">
             <p className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
               {t("home.converter_section.title")}
             </p>
-            <p className="font-mont text-[14px] font-medium">
+            <p className="font-sans text-[14px] font-medium">
               {t("home.converter_section.subtitle")}
             </p>
           </div>
@@ -200,7 +200,7 @@ function Counter() {
               </span>
             </p>
           </div>
-          <div className="my-4 flex items-center justify-between font-goldman">
+          <div className="font-goldman my-4 flex items-center justify-between">
             <div className="h-[1px] w-1/4 rounded-full bg-gray-500" />
             <p className="text-muted-foreground">
               1 GFE = ${chainData.price / 100}

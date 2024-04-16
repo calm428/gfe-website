@@ -4,7 +4,7 @@ function PartnersSection() {
   return (
     <div className="bg-muted py-[100px]">
       <div className="container flex flex-col items-center justify-center gap-6 md:flex-row">
-        <h3 className="mb-4 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text  text-center font-goldman text-3xl capitalize text-transparent lg:mb-0">
+        <h3 className="font-goldman mb-4 bg-gradient-to-b from-[#2BADFD] to-[#1570EF]  bg-clip-text text-center text-3xl capitalize text-transparent lg:mb-0">
           Partners
         </h3>
         <div className="flex flex-wrap items-center justify-center gap-3 sm:grid-cols-2 md:ml-20 md:grid-cols-5">

@@ -65,7 +65,7 @@ export default function AboutGIPSection() {
           </Button>
         </div>
         <div className="flex flex-col items-start">
-          <h3 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-xl text-transparent md:text-3xl">
+          <h3 className="font-goldman bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-xl text-transparent md:text-3xl">
             {t("governance.gips_are_used_for")}
             {" : "}
           </h3>

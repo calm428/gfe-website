@@ -22,32 +22,32 @@ export default function IncomeComparison() {
             ></Image>
 
             <div>
-              <h3 className="font-monument text-lg tracking-wider text-muted-foreground">
+              <h3 className="font-sans text-lg tracking-wider text-muted-foreground">
                 ecos.am
               </h3>
 
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted-foreground">
+                  <span className="font-sans text-muted-foreground">
                     {t("miner_hosting.HashrateRentingPrice")}
                   </span>
-                  <span className="ml-3 font-monument tracking-wider text-primary">
+                  <span className="ml-3 font-sans tracking-wider text-primary">
                     83.6USD
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted-foreground">
+                  <span className="font-sans text-muted-foreground">
                     {t("miner_hosting.ServiceFee")}
                   </span>
-                  <span className="ml-3 font-monument tracking-wider text-primary">
+                  <span className="ml-3 font-sans tracking-wider text-primary">
                     250USD
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted-foreground">
+                  <span className="font-sans text-muted-foreground">
                     {t("miner_hosting.Bandwidth")}
                   </span>
-                  <span className="ml-3 font-monument tracking-wider text-primary">
+                  <span className="ml-3 font-sans tracking-wider text-primary">
                     120TH/s, 1month
                   </span>
                 </div>
@@ -56,37 +56,37 @@ export default function IncomeComparison() {
           </div>
 
           <div className="col-span-1 flex flex-col justify-between gap-10 rounded-3xl bg-primary p-8 xl:col-span-4">
-            <h3 className="font-monument text-5xl tracking-wide text-muted xl:text-6xl">
+            <h3 className="font-sans text-5xl tracking-wide text-muted xl:text-6xl">
               SUNBELT
             </h3>
 
             <div>
-              <h3 className="font-monument text-lg tracking-widest text-muted">
+              <h3 className="font-sans text-lg tracking-widest text-muted">
                 {t("miner_hosting.ourCompany")}
               </h3>
 
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted">
+                  <span className="font-sans text-muted">
                     {t("miner_hosting.HashrateRentingPrice")}
                   </span>
-                  <span className="ml-3 font-monument tracking-wider text-muted">
+                  <span className="ml-3 font-sans tracking-wider text-muted">
                     83.6USD
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted">
+                  <span className="font-sans text-muted">
                     {t("miner_hosting.ServiceFee")}
                   </span>
-                  <span className="ml-3 font-monument tracking-wider text-muted">
+                  <span className="ml-3 font-sans tracking-wider text-muted">
                     250USD
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted">
+                  <span className="font-sans text-muted">
                     {t("miner_hosting.Bandwidth")}
                   </span>
-                  <span className="ml-3 font-monument tracking-wider text-muted">
+                  <span className="ml-3 font-sans tracking-wider text-muted">
                     120TH/s, 1month
                   </span>
                 </div>
@@ -101,32 +101,32 @@ export default function IncomeComparison() {
               alt="bitfufu logo"
             ></Image>
             <div>
-              <h3 className="font-monument text-lg tracking-wider text-muted-foreground">
+              <h3 className="font-sans text-lg tracking-wider text-muted-foreground">
                 bitfufu.com
               </h3>
 
               <div className="mt-5 space-y-3">
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted-foreground">
+                  <span className="font-sans text-muted-foreground">
                     {t("miner_hosting.HashrateRentingPrice")}
                   </span>
-                  <span className="ml-3 font-monument tracking-wider text-primary">
+                  <span className="ml-3 font-sans tracking-wider text-primary">
                     83.6USD
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted-foreground">
+                  <span className="font-sans text-muted-foreground">
                     {t("miner_hosting.ServiceFee")}
                   </span>
-                  <span className="ml-3 font-monument tracking-wider text-primary">
+                  <span className="ml-3 font-sans tracking-wider text-primary">
                     250USD
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-mont text-muted-foreground">
+                  <span className="font-sans text-muted-foreground">
                     {t("miner_hosting.Bandwidth")}
                   </span>
-                  <span className="ml-3 font-monument tracking-wider text-primary">
+                  <span className="ml-3 font-sans tracking-wider text-primary">
                     120TH/s, 1month
                   </span>
                 </div>

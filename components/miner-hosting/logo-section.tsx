@@ -9,7 +9,7 @@ const LogoSection = () => {
       }}
     >
       <div className="absolute -left-2 -z-10 h-32 w-[110vw] rotate-[2.55deg] bg-primary" />
-      <div className="container flex h-full items-center justify-between font-monument text-lg text-muted lg:text-3xl ">
+      <div className="container flex h-full items-center justify-between font-sans text-lg text-muted lg:text-3xl ">
         <div className="w-40 px-5">
           <Image src="/GFE_white.svg" alt="logo" width={160} height={50} />
         </div>

@@ -11,7 +11,7 @@ const ExpandableText = ({ description, maxChars = 100 }: Props) => {
   return (
     <p
       style={{ transition: "all" }}
-      className="font-mont text-[12px] text-muted-foreground"
+      className="font-sans text-[12px] text-muted-foreground"
     >
       {text}...
     </p>

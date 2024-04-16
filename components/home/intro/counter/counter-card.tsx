@@ -9,7 +9,7 @@ function CounterCard({ count, title }: Props) {
         count === 0
           ? "bg-background text-primary"
           : "bg-gradient-to-b from-[#2BADFD] to-[#1570EF] text-white"
-      }  flex flex-col items-center justify-center rounded-[8px] border border-border p-[16px] font-mont `}
+      }  flex flex-col items-center justify-center rounded-[8px] border border-border p-[16px] font-sans `}
     >
       <p className=" text-[14px] font-semibold md:text-[28px]">
         {count < 10 ? "0" + count : count}

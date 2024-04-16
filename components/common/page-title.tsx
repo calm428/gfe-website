@@ -12,7 +12,7 @@ export default function PageTitle({
   return (
     <h1
       className={cn(
-        "mt-3 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-3xl tracking-wider text-transparent sm:text-4xl md:text-6xl",
+        "mt-8 text-balance bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-1.5 font-sans text-4xl font-semibold text-transparent sm:text-5xl xl:text-6xl xl:leading-[72px]",
         className,
         {
           "text-center": align === "center",

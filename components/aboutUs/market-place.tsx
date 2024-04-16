@@ -14,28 +14,28 @@ export default function MarketPlace() {
         <SectionTitle align="left" className="text-white">
           {t("about_us.market_section.title")}
         </SectionTitle>
-        <p className=" auth text-justify font-mont text-base lg:text-lg">
+        <p className=" auth text-justify font-sans text-base lg:text-lg">
           {t("about_us.market_section.para1")}
         </p>
-        <p className=" auth text-justify font-mont text-base lg:text-lg">
+        <p className=" auth text-justify font-sans text-base lg:text-lg">
           {t("about_us.market_section.para2")}
         </p>
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
             <Image src={checkPic} alt="image" />
-            <p className="auth font-mont text-base lg:text-lg">
+            <p className="auth font-sans text-base lg:text-lg">
               {t("about_us.market_section.point1")}
             </p>
           </div>
           <div className="flex items-center gap-3">
             <Image src={checkPic} alt="image" />
-            <p className="auth font-mont text-base lg:text-lg">
+            <p className="auth font-sans text-base lg:text-lg">
               {t("about_us.market_section.point2")}
             </p>
           </div>
           <div className="flex items-center gap-3">
             <Image src={checkPic} alt="image" />
-            <p className="auth font-mont text-base lg:text-lg">
+            <p className="auth font-sans text-base lg:text-lg">
               {t("about_us.market_section.point3")}
             </p>
           </div>

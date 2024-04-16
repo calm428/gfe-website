@@ -17,7 +17,7 @@ function Step({ step, desc }: Props) {
         }`}
       >
         <div
-          className={` auth font-mont text-[24px] font-semibold ${
+          className={` auth font-sans text-[24px] font-semibold ${
             step <= 2
               ? "text-[#019CF0]"
               : step === 3

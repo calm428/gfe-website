@@ -104,7 +104,7 @@ function Page() {
                       <Button
                         type="submit"
                         variant="outline"
-                        className="auth h-full rounded-l-none rounded-r-full border-l-0 font-mont font-semibold"
+                        className="auth h-full rounded-l-none rounded-r-full border-l-0 font-sans font-semibold"
                       >
                         {t("unsubscribe.unsubscribe")}
                       </Button>

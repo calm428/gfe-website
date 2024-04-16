@@ -36,7 +36,7 @@ export function MainNav({ items }: MainNavProps) {
   const community = siteConfig.community
 
   const navMenuStyle = cn(
-    "flex items-center rounded-lg p-2 font-mont text-sm font-medium text-muted-foreground hover:text-primary"
+    "flex items-center rounded-lg p-2 font-sans text-sm font-medium text-muted-foreground hover:text-primary"
   )
   return (
     <div className="flex w-full gap-6 md:gap-10">
@@ -64,7 +64,7 @@ export function MainNav({ items }: MainNavProps) {
               <NavigationMenu.Content className="NavigationMenuContent absolute top-[59px]  lg:-left-36 xl:left-0 ">
                 <div className="flex w-[900px]  rounded-b-[20px] border border-border bg-background">
                   <div className="p-[24px]">
-                    <p className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
+                    <p className="font-sans text-[14px] font-medium capitalize text-muted-foreground">
                       {t("header.token_functionalities")}
                     </p>
                     {token_functionalities.map((functionality, ind) => (
@@ -84,7 +84,7 @@ export function MainNav({ items }: MainNavProps) {
                         </div>
                         <div>
                           <p key={functionality.title}>
-                            <p className=" font-mont text-[14px] font-semibold capitalize ">
+                            <p className=" font-sans text-[14px] font-semibold capitalize ">
                               {functionality.title}
                             </p>
                             <ExpandableText
@@ -97,7 +97,7 @@ export function MainNav({ items }: MainNavProps) {
                     ))}
                   </div>
                   <div className="border-l border-l-border p-[24px]">
-                    <p className="font-mont text-[14px] font-medium capitalize text-muted-foreground">
+                    <p className="font-sans text-[14px] font-medium capitalize text-muted-foreground">
                       {t("header.industries")}
                     </p>
                     <div className="grid grid-cols-2 gap-2">
@@ -118,7 +118,7 @@ export function MainNav({ items }: MainNavProps) {
                           </div>
                           <div>
                             <p key={industry.title}>
-                              <p className=" font-mont text-[14px] font-semibold capitalize">
+                              <p className=" font-sans text-[14px] font-semibold capitalize">
                                 {industry.title}
                               </p>
                               <ExpandableText
@@ -154,7 +154,7 @@ export function MainNav({ items }: MainNavProps) {
               <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
                 <div className="flex w-[450px]  rounded-b-[20px] border border-border bg-background">
                   <div className="p-4">
-                    <p className="w-28 font-mont text-[14px] font-medium capitalize text-muted-foreground">
+                    <p className="w-28 font-sans text-[14px] font-medium capitalize text-muted-foreground">
                       {t("header.social")}
                     </p>
                     {community.map((community, ind) => (
@@ -169,7 +169,7 @@ export function MainNav({ items }: MainNavProps) {
                           height={20}
                           alt={community.title}
                         />
-                        <p className="font-mont text-[14px] font-medium text-muted-foreground">
+                        <p className="font-sans text-[14px] font-medium text-muted-foreground">
                           {community.title}
                         </p>
                       </Link>
@@ -186,7 +186,7 @@ export function MainNav({ items }: MainNavProps) {
                         </div>
                         <div>
                           <p>
-                            <p className="font-mont text-[14px] font-semibold capitalize">
+                            <p className="font-sans text-[14px] font-semibold capitalize">
                               {t("header.governance")}
                             </p>
                             <p className="text-xs">
@@ -204,7 +204,7 @@ export function MainNav({ items }: MainNavProps) {
                         </div>
                         <div>
                           <p>
-                            <p className="font-mont text-[14px] font-semibold capitalize">
+                            <p className="font-sans text-[14px] font-semibold capitalize">
                               {t("header.guilds")}
                             </p>
                             <p className="text-xs">
@@ -223,7 +223,7 @@ export function MainNav({ items }: MainNavProps) {
                         </div>
                         <div>
                           <p>
-                            <p className="flex font-mont text-[14px] font-semibold capitalize">
+                            <p className="flex font-sans text-[14px] font-semibold capitalize">
                               {t("header.gfe_forum")}
                               <MdArrowOutward className="size-4" />
                             </p>
@@ -259,7 +259,7 @@ export function MainNav({ items }: MainNavProps) {
                       </div>
                       <div>
                         <p>
-                          <p className="font-mont text-[14px] font-semibold capitalize">
+                          <p className="font-sans text-[14px] font-semibold capitalize">
                             {t("header.about_us")}
                           </p>
                           <p className="text-xs">
@@ -277,7 +277,7 @@ export function MainNav({ items }: MainNavProps) {
                       </div>
                       <div>
                         <p>
-                          <p className="font-mont text-[14px] font-semibold capitalize">
+                          <p className="font-sans text-[14px] font-semibold capitalize">
                             {t("header.blogs_and_news")}
                           </p>
                           <p className="text-xs">
@@ -296,7 +296,7 @@ export function MainNav({ items }: MainNavProps) {
                       </div>
                       <div>
                         <p>
-                          <p className="flex font-mont text-[14px] font-semibold capitalize">
+                          <p className="flex font-sans text-[14px] font-semibold capitalize">
                             {t("header.documentation")}
                             <MdArrowOutward className="size-4" />
                           </p>
