@@ -17,10 +17,7 @@ export default function SectionBadge({
         "mx-auto": position === "center",
       })}
     >
-      <p className="button-87 whitespace-nowrap !text-base !font-medium text-primary">
-        <span className="actual-text">{text}</span>
-        <span className="front-text">{text}</span>
-      </p>
+      <p className="font-medium text-primary">{text}</p>
     </div>
   )
 }

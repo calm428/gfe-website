@@ -12,7 +12,7 @@ export default function SectionTitle({
   return (
     <h2
       className={cn(
-        "bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-3xl text-transparent sm:text-4xl xl:text-5xl",
+        "bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-1.5 font-sans text-3xl font-semibold text-transparent sm:text-4xl xl:text-5xl",
         className,
         {
           "text-center": align === "center",

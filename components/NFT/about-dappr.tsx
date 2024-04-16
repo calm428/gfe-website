@@ -16,15 +16,15 @@ function AboutDappr() {
           <SectionTitle align="left">
             {t("nft.about_section.title")}
           </SectionTitle>
-          <p className="auth text-justify font-mont text-base md:text-lg">
+          <p className="auth text-justify font-sans text-base md:text-lg">
             {t("nft.about_section.para1")}
           </p>
-          <p className="auth text-justify font-mont text-base md:text-lg">
+          <p className="auth text-justify font-sans text-base md:text-lg">
             <span className="font-muted-foreground">
               {t("nft.about_section.para2")}
             </span>
           </p>
-          <p className="auth text-justify font-mont text-base md:text-lg">
+          <p className="auth text-justify font-sans text-base md:text-lg">
             <span className="font-muted-foreground">
               {t("nft.about_section.para3")}
             </span>

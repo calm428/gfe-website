@@ -18,13 +18,13 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="siteheader sticky top-0 z-50 w-full border-b bg-background px-0 font-mont">
+      <header className="siteheader sticky top-0 z-50 w-full border-b bg-background px-0 font-sans">
         <div className="container flex h-20 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={siteConfig.mainNav} />
           <div className="hidden space-x-4 lg:flex">
             <Button
               variant="default"
-              className="!mx-2 whitespace-nowrap font-mont font-semibold"
+              className="!mx-2 whitespace-nowrap font-sans font-semibold"
               style={{
                 background:
                   "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",
@@ -43,7 +43,7 @@ export function SiteHeader() {
             <MobileMenu>
               <Button
                 variant="default"
-                className="!mx-2 block whitespace-nowrap font-mont font-semibold lg:hidden"
+                className="!mx-2 block whitespace-nowrap font-sans font-semibold lg:hidden"
                 style={{
                   background:
                     "linear-gradient(277deg, #22B4FD 32.53%, #2D79FF 77.26%)",

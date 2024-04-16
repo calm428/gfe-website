@@ -16,7 +16,7 @@ function Introduction() {
           <Button className="absolute -top-3 left-[40%] rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
             {t("nft.new")}
           </Button>
-          <p className="ml-2 mt-2 text-center font-mont font-medium text-muted-foreground md:mt-0 md:text-lg">
+          <p className="ml-2 mt-2 text-center font-sans font-medium text-muted-foreground md:mt-0 md:text-lg">
             {t("nft.badge")}
           </p>
         </div>

@@ -129,7 +129,7 @@ function Introduction() {
             </div>
           </div>
           <div className="auth flex flex-col gap-6">
-            <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-mont text-2xl font-bold text-transparent">
+            <div className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-sans text-2xl font-bold text-transparent">
               {t("contact_us.contactInfo.title")}
             </div>
             <div className="flex flex-col gap-2 md:flex-row lg:flex-col xl:flex-row">
@@ -172,7 +172,7 @@ function Introduction() {
                 </div>
               </div>
               <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-mont text-lg font-medium lowercase text-transparent">
+                <div className="flex items-center gap-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-sans text-lg font-medium lowercase text-transparent">
                   <div className="h-[3px] w-6 bg-primary"></div>
                   {t("contact_us.contactInfo.connect_with_us")}
                 </div>
@@ -206,7 +206,7 @@ function Introduction() {
                   name="name"
                   render={({ field }) => (
                     <FormItem className="w-full">
-                      <FormLabel className="text-md font-mont text-muted-foreground">
+                      <FormLabel className="text-md font-sans text-muted-foreground">
                         {t("contact_us.formFields.name.title")}
                       </FormLabel>
                       <FormControl>
@@ -228,7 +228,7 @@ function Introduction() {
                   name="email"
                   render={({ field }) => (
                     <FormItem className="w-full">
-                      <FormLabel className="text-md font-mont text-muted-foreground">
+                      <FormLabel className="text-md font-sans text-muted-foreground">
                         {t("contact_us.formFields.email.title")}
                       </FormLabel>
                       <FormControl>
@@ -251,7 +251,7 @@ function Introduction() {
                 name="subject"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel className="text-md font-mont text-muted-foreground">
+                    <FormLabel className="text-md font-sans text-muted-foreground">
                       {t("contact_us.formFields.subject.title")}
                     </FormLabel>
                     <FormControl>
@@ -273,7 +273,7 @@ function Introduction() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-md font-mont text-muted-foreground">
+                    <FormLabel className="text-md font-sans text-muted-foreground">
                       {t("contact_us.formFields.message.title")}
                     </FormLabel>
                     <FormControl>
@@ -293,7 +293,7 @@ function Introduction() {
             <Button
               type="submit"
               disabled={isLoading}
-              className="auth mt-6 w-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-mont"
+              className="auth mt-6 w-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4 font-sans"
             >
               {isLoading && <Loader2 className="mr-2 size-4 animate-spin" />}
               {t("contact_us.formFields.send")}

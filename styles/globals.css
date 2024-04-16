@@ -141,7 +141,7 @@
 }
 
 .page-item {
-  @apply mt-0.5 hidden px-3 font-goldman text-xl text-[#727C8F] lg:block;
+  @apply mt-0.5 hidden px-3 text-xl text-[#727C8F] lg:block;
 }
 
 .previous {
@@ -542,7 +542,7 @@ ul.react-paginate {
 .content .title {
   display: block;
   color: #21b4fd;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 20px;
 }
 

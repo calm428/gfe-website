@@ -45,7 +45,7 @@ export default function BlogCard({
 
       <div className="relative flex h-full flex-col justify-between space-y-3 rounded-3xl rounded-t-none bg-[#E7F0FD] p-5">
         <div>
-          <h2 className="line-clamp-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-xl tracking-wider text-transparent ">
+          <h2 className="font-goldman line-clamp-2 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-xl tracking-wider text-transparent ">
             {title}
           </h2>
           <p className="line-clamp-3 font-medium text-muted-foreground">
@@ -72,7 +72,7 @@ export default function BlogCard({
 
           <Button
             variant={"ghost"}
-            className="mt-0 flex items-center p-0 font-goldman text-base tracking-wider text-primary"
+            className="font-goldman mt-0 flex items-center p-0 text-base tracking-wider text-primary"
             asChild
           >
             <Link href="/blogs-and-news/[slug]" as={`/blogs-and-news/${id}`}>

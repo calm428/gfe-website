@@ -236,7 +236,7 @@
         "description": "Solar energy harnesses sunlight through photovoltaic cells or solar thermal systems, providing renewable electricity and heat with minimal environmental impact."
       },
       "immersionCooling": {
-        "title": "Immersion<br>Cooling",
+        "title": "Immersion Cooling",
         "subtitle": null,
         "description": "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence."
       },
@@ -246,7 +246,7 @@
         "description": "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence."
       },
       "earthshipBuilding": {
-        "title": "Earthship<br>Building",
+        "title": "Earthship Building",
         "subtitle": null,
         "description": "Renewable energy uses natural resources like sunlight and wind for sustainable power, reducing environmental impact and fostering energy independence."
       },

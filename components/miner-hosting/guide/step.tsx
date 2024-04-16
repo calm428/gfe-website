@@ -7,7 +7,7 @@ import { Step } from "."
 export default function StepComponent({ step }: { step: Step }) {
   return (
     <div className="relative mx-auto my-2 flex max-w-xl items-start gap-4 rounded-xl bg-white p-8 shadow-md">
-      <div className="absolute right-2 top-3 font-goldman text-2xl font-bold text-black/5">
+      <div className="font-goldman absolute right-2 top-3 text-2xl font-bold text-black/5">
         0{step.index}
       </div>
       <div
@@ -27,7 +27,7 @@ export default function StepComponent({ step }: { step: Step }) {
       </div>
       <div className="flex flex-col gap-2">
         <div className="font-goldman text-xl">{step.title}</div>
-        <div className="font-mont text-sm text-muted-foreground">
+        <div className="font-sans text-sm text-muted-foreground">
           {step.description}
         </div>
       </div>

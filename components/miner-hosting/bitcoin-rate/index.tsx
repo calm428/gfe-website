@@ -40,7 +40,7 @@ function BitcoinRateSection() {
         <BitcoinPriceGraph />
 
         <div className="w-full">
-          <h3 className="font-semi bold bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5 pt-10 font-goldman text-4xl tracking-wider text-transparent">
+          <h3 className="font-semi bold font-goldman bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text pb-5 pt-10 text-4xl tracking-wider text-transparent">
             {t("miner_hosting.bitcoin_price.title")}
           </h3>
 
@@ -49,13 +49,13 @@ function BitcoinRateSection() {
           </div>
           <div className="flex w-full justify-between">
             <div>
-              <div className="font-mont text-xl font-semibold text-primary">
+              <div className="font-sans text-xl font-semibold text-primary">
                 $ {!isLoading && priceData ? priceData.price : 0}
               </div>
               <div className="text-md">{t("miner_hosting.CurrentPrice")}</div>
             </div>
             <div>
-              <div className="font-mont text-xl font-semibold text-primary">
+              <div className="font-sans text-xl font-semibold text-primary">
                 $ {!isLoading && priceData ? priceData.marketCap : 0} B
               </div>
               <div className="text-md">{t("miner_hosting.MarketCap")}</div>

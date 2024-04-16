@@ -120,14 +120,14 @@ function HighlightsSection({
         />
       </AspectRatio>
       <div className="pt-8">
-        <h2 className="mb-3 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text font-goldman text-lg tracking-wider text-transparent">
+        <h2 className="font-goldman mb-3 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-lg tracking-wider text-transparent">
           {t("blogs_and_news.highlights")}
         </h2>
-        <h2 className="mb-5  font-goldman text-2xl tracking-wider">{title}</h2>
+        <h2 className="font-goldman  mb-5 text-2xl tracking-wider">{title}</h2>
         <p className="font-medium text-muted-foreground">{desc}</p>
         <Button
           variant={"ghost"}
-          className=" mt-5 px-0 font-goldman text-base tracking-wider text-primary"
+          className=" font-goldman mt-5 px-0 text-base tracking-wider text-primary"
         >
           {t("blogs_and_news.read_more")}
         </Button>

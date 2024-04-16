@@ -5,6 +5,7 @@ import rightPic from "@/public/bgs/right.svg"
 import { ChevronRightIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { HiOutlineNewspaper } from "react-icons/hi2"
+
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import PageTitle from "@/components/common/page-title"
@@ -45,7 +46,9 @@ export default function HomeSection() {
                   className="flex items-center justify-between gap-3"
                 >
                   <HiOutlineNewspaper className="size-4" />
-                  <span className="font-bold text-muted-foreground">{t("whitepaper")}</span>
+                  <span className="font-bold text-muted-foreground">
+                    {t("whitepaper")}
+                  </span>
                 </Link>
               </Button>
             </div>
@@ -56,7 +59,7 @@ export default function HomeSection() {
               <Button className="absolute -top-3 left-5 mr-4 rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-[16px] py-[8px] md:relative md:left-0 md:top-0 ">
                 {t("nft.new")}
               </Button>
-              <p className="mt-2 font-mont font-medium text-muted-foreground md:mt-0 md:text-[16px]">
+              <p className="mt-2 font-sans font-medium text-muted-foreground md:mt-0 md:text-[16px]">
                 {t("launch_text")}
               </p>
               <ChevronRightIcon />

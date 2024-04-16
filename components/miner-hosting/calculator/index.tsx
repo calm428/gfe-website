@@ -39,14 +39,14 @@ function CalculatorSection() {
                     aria-label="Amount"
                     placeholder={t("miner_hosting.enterAmount")}
                     className={
-                      "h-14 w-full font-mont text-lg text-primary " +
+                      "h-14 w-full font-sans text-lg text-primary " +
                       `${amount && amount > 0 && "text-lg font-bold"}`
                     }
                     value={amount || ""}
                     onChange={(e) => setAmount(e.target.value as any)}
                   />
                   {amount && amount > 0 && (
-                    <span className="absolute ml-3 font-mont text-lg font-bold text-primary">
+                    <span className="absolute ml-3 font-sans text-lg font-bold text-primary">
                       <span className="mr-2 text-transparent">{amount}</span>Kwh
                     </span>
                   )}
@@ -59,7 +59,7 @@ function CalculatorSection() {
               <Label className="auth font-semibold text-muted-foreground">
                 {t("miner_hosting.bonus")}
               </Label>
-              <span className="flex items-center justify-center bg-[#D8FFB4] px-5 py-[13px] font-mont text-lg font-bold text-[#479A0B]">
+              <span className="flex items-center justify-center bg-[#D8FFB4] px-5 py-[13px] font-sans text-lg font-bold text-[#479A0B]">
                 11%
               </span>
             </div>

@@ -24,13 +24,13 @@ function ServerHosting() {
           <SectionTitle align="left">
             {t("nft.hosting_section.title")}
           </SectionTitle>
-          <p className="auth text-justify font-mont text-lg">
+          <p className="auth text-justify font-sans text-lg">
             {t("nft.hosting_section.para1")}
           </p>
-          <p className="auth text-justify font-mont text-lg">
+          <p className="auth text-justify font-sans text-lg">
             {t("nft.hosting_section.para2")}
           </p>
-          <p className="auth text-justify font-mont text-lg">
+          <p className="auth text-justify font-sans text-lg">
             {t("nft.hosting_section.para3")}
           </p>
         </div>
