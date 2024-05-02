@@ -3,9 +3,7 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 import bottomSVG from "public/images/about-us/bottom.svg"
 import { FiPlus } from "react-icons/fi"
-import { LiaPuzzlePieceSolid } from "react-icons/lia"
 import { RiRoadMapFill } from "react-icons/ri"
-import { Tb3DCubeSphere } from "react-icons/tb"
 
 import { siteConfig } from "@/config/site"
 

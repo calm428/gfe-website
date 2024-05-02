@@ -6,10 +6,10 @@ import {
   Plus,
   SunMedium,
   Twitter,
-  type Icon as LucideIcon,
+  // type Icon,
 } from "lucide-react"
 
-export type Icon = LucideIcon
+// export type Icon
 
 export const Icons = {
   sun: SunMedium,
