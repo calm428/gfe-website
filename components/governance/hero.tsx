@@ -2,7 +2,7 @@ import Image from "next/image"
 import { useTranslations } from "next-intl"
 import bottomSVG from "public/images/about-us/bottom.svg"
 import { LiaPuzzlePieceSolid } from "react-icons/lia"
-import { Tb3DCubeSphere } from "react-icons/tb"
+import { TbCube3dSphere } from "react-icons/tb"
 
 import PageTitle from "../common/page-title"
 import SectionBadge from "../common/section-badge"
@@ -30,7 +30,7 @@ export default function HeroSection() {
         </SectionDescription>
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
           <Button variant="outline" className="border-primary bg-white">
-            <Tb3DCubeSphere className="mr-2 size-5 text-primary" />
+            <TbCube3dSphere className="mr-2 size-5 text-primary" />
             {t("governance.robust_framework")}
           </Button>
           <Button variant="outline" className="border-primary bg-white">
