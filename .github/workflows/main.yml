@@ -20,4 +20,4 @@ jobs:
 
             - name: Deploy to VPS Instance
               run: |
-                  ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd ~/gfe-foundation/gfe-landing-page && git checkout main && git pull origin main && source ~/.nvm/nvm.sh && nvm use 18 && yarn && yarn build && pm2 reload 'GFE-LANDING-PAGE'"
+                  ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd ~/gfe/gfe-landing-page && git checkout main && git pull origin main && source ~/.nvm/nvm.sh && nvm use 18 && yarn && yarn build && pm2 reload 'gfe-landing-page'"
