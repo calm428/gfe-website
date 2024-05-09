@@ -461,7 +461,12 @@
       "documentation": "Documentation",
       "documentation_description": "Explore our protocols and technologies through our detailed resources",
       "industries": "Industries",
-      "token_functionalities": "Token Functionalities"
+      "token_functionalities": "Token Functionalities",
+      "blockchain": "Blockchain",
+      "block_explorer": "Block Explorer",
+      "faucet": "Faucet",
+      "block_explorer_description": "View transactions on the blockchain",
+      "faucet_description": "Get free ETH and other crypto assets"
     },
     "unsubscribe": {
       "unsubscribe": "Unsubscribe",

@@ -1,3 +1,4 @@
+import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -5,8 +6,10 @@ import { useSession } from "next-auth/react"
 import { useTranslations } from "next-intl"
 import { BiSolidFileDoc } from "react-icons/bi"
 import { FaGuilded } from "react-icons/fa"
+import { FaFaucetDrip } from "react-icons/fa6"
 import { GrArticle } from "react-icons/gr"
 import { HiUsers } from "react-icons/hi"
+import { LuPackageSearch } from "react-icons/lu"
 import { MdArrowOutward } from "react-icons/md"
 import { RiGovernmentFill } from "react-icons/ri"
 
@@ -100,6 +103,55 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
               </div>
             </AccordionContent>
           </AccordionItem>
+          <AccordionItem value="item-2" className="border-none">
+            <AccordionTrigger className="justify-center text-muted-foreground !no-underline hover:text-primary">
+              {t("header.blockchain")}
+            </AccordionTrigger>
+            <AccordionContent className="bg-muted p-0">
+              <div className="grid grid-cols-1 gap-2 p-2">
+                <Link
+                  href={"https://cygnus.gfe.foundation"}
+                  target="_blank"
+                  className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                >
+                  <div>
+                    <LuPackageSearch className="min-w-5 text-[#21b4fd]" />
+                  </div>
+                  <div>
+                    <p>
+                      <p className="flex font-sans text-[14px] font-semibold capitalize">
+                        {t("header.block_explorer")}
+                        <MdArrowOutward className="size-4" />
+                      </p>
+                      <p className="text-xs">
+                        {t("header.block_explorer_description")}
+                      </p>
+                    </p>
+                  </div>
+                </Link>
+                <Link
+                  href={"https://faucet.cygnus.gfe.foundation"}
+                  target="_blank"
+                  className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                >
+                  <div>
+                    <FaFaucetDrip className="min-w-5 text-[#21b4fd]" />
+                  </div>
+                  <div>
+                    <p>
+                      <p className="flex font-sans text-[14px] font-semibold capitalize">
+                        {t("header.faucet")}
+                        <MdArrowOutward className="size-4" />
+                      </p>
+                      <p className="text-xs">
+                        {t("header.faucet_description")}
+                      </p>
+                    </p>
+                  </div>
+                </Link>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
           <Link
             href={"/nft"}
             className={`justify-center ${navMenuStyle} ${
@@ -108,7 +160,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
           >
             {t("header.nft")}
           </Link>
-          <AccordionItem value="item-2" className="border-none">
+          <AccordionItem value="item-3" className="border-none">
             <AccordionTrigger className="justify-center text-muted-foreground !no-underline hover:text-primary">
               {t("header.community")}
             </AccordionTrigger>
@@ -169,7 +221,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
               </div>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3" className="border-none">
+          <AccordionItem value="item-4" className="border-none">
             <AccordionTrigger className="justify-center text-muted-foreground !no-underline hover:text-primary">
               {t("header.learn")}
             </AccordionTrigger>
