@@ -9,9 +9,10 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import { useTranslations } from "next-intl"
 import { BiSolidFileDoc } from "react-icons/bi"
 import { FaGuilded } from "react-icons/fa"
-import { FaUsers } from "react-icons/fa6"
+import { FaFaucetDrip, FaUsers } from "react-icons/fa6"
 import { GrArticle } from "react-icons/gr"
 import { HiUsers } from "react-icons/hi"
+import { LuPackageSearch } from "react-icons/lu"
 import { MdArrowOutward } from "react-icons/md"
 import { RiGovernmentFill } from "react-icons/ri"
 
@@ -130,6 +131,62 @@ export function MainNav({ items }: MainNavProps) {
                         </Link>
                       ))}
                     </div>
+                  </div>
+                </div>
+              </NavigationMenu.Content>
+            </NavigationMenu.Item>
+          </NavigationMenu.List>
+        </NavigationMenu.Root>
+        <NavigationMenu.Root>
+          <NavigationMenu.List>
+            <NavigationMenu.Item>
+              <NavigationMenu.Trigger className={navMenuStyle}>
+                {t("header.blockchain")}
+                <CaretDownIcon className="CaretDown" aria-hidden />
+              </NavigationMenu.Trigger>
+              <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
+                <div className="flex w-[300px] rounded-b-[20px] border border-border bg-background">
+                  <div className="grid grid-cols-1 gap-2 p-4">
+                    <Link
+                      href={"https://cygnus.gfe.foundation"}
+                      target="_blank"
+                      className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                    >
+                      <div>
+                        <LuPackageSearch className="min-w-5 text-[#21b4fd]" />
+                      </div>
+                      <div>
+                        <p>
+                          <p className="flex font-sans text-[14px] font-semibold capitalize">
+                            {t("header.block_explorer")}
+                            <MdArrowOutward className="size-4" />
+                          </p>
+                          <p className="text-xs">
+                            {t("header.block_explorer_description")}
+                          </p>
+                        </p>
+                      </div>
+                    </Link>
+                    <Link
+                      href={"https://faucet.cygnus.gfe.foundation"}
+                      target="_blank"
+                      className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
+                    >
+                      <div>
+                        <FaFaucetDrip className="min-w-5 text-[#21b4fd]" />
+                      </div>
+                      <div>
+                        <p>
+                          <p className="flex font-sans text-[14px] font-semibold capitalize">
+                            {t("header.faucet")}
+                            <MdArrowOutward className="size-4" />
+                          </p>
+                          <p className="text-xs">
+                            {t("header.faucet_description")}
+                          </p>
+                        </p>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </NavigationMenu.Content>
