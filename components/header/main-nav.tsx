@@ -148,7 +148,7 @@ export function MainNav({ items }: MainNavProps) {
                 <div className="flex w-[300px] rounded-b-[20px] border border-border bg-background">
                   <div className="grid grid-cols-1 gap-2 p-4">
                     <Link
-                      href={"https://cygnus.gfe.foundation"}
+                      href={"https://explorer.gfe.foundation"}
                       target="_blank"
                       className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                     >
@@ -168,7 +168,7 @@ export function MainNav({ items }: MainNavProps) {
                       </div>
                     </Link>
                     <Link
-                      href={"https://faucet.cygnus.gfe.foundation"}
+                      href={"https://faucet.gfe.foundation"}
                       target="_blank"
                       className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                     >
