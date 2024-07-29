@@ -29,3 +29,15 @@ export const SunbeltContext = createContext<GlobalContent>({
   setMobileNavOpen: () => {},
 })
 export const useSunbeltContext = () => useContext(SunbeltContext)
+
+// export type ForumContent = {
+//   account: string
+//   setAccount: (account: string) => void
+// }
+
+// export const ForumContext = createContext<ForumContent>({
+//   account: "",
+//   setAccount: () => {},
+// })
+
+// export const useForumContext = () => useContext(ForumContext)
