@@ -13,8 +13,8 @@ import { cn } from "@/lib/utils"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Web3ModalProvider } from "@/context/Web3Modal"
-import ContextProvider from "@/providers/Context-provider"
-import { NextUIProviders } from "@/providers/nextui-provider"
+import ContextProvider from "@/provider/context-provider"
+import { NextUIProviders } from "@/provider/nextui-provider"
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -79,13 +79,13 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             >
               <NextUIProviders>
                 <Web3ModalProvider>
-                  <ForumContextProvider>
+                  <ContextProvider>
                     <Toaster />
                     <div className="relative flex min-h-screen flex-col">
                       <div className="flex-1">{children}</div>
                     </div>
                     <TailwindIndicator />
-                  </ForumContextProvider>
+                  </ContextProvider>
                 </Web3ModalProvider>
               </NextUIProviders>
             </ThemeProvider>

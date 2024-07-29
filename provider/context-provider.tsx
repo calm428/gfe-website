@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { ForumContext } from "@/context/ForumContext"
+import { ForumContext } from "@/context/forumContext"
 
 interface ProviderProps {
   children: React.ReactNode
