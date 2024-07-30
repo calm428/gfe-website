@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { ForumContext } from "@/context/forumContext"
+import { GFEContext } from "@/context/GFEContext"
 
 interface ProviderProps {
   children: React.ReactNode
@@ -10,13 +10,13 @@ interface ProviderProps {
 export default function Provider({ children }: ProviderProps) {
   const [account, setAccount] = React.useState<string>("")
   return (
-    <ForumContext.Provider
+    <GFEContext.Provider
       value={{
         account,
         setAccount,
       }}
     >
       {children}
-    </ForumContext.Provider>
+    </GFEContext.Provider>
   )
 }

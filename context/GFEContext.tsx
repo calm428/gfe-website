@@ -1,13 +1,13 @@
 import { createContext, useContext } from "react"
 
-export type ForumContent = {
+export type GlobalContent = {
     account: string
     setAccount: (account: string) => void
   }
   
-  export const ForumContext = createContext<ForumContent>({
+  export const GFEContext = createContext<GlobalContent>({
     account: "",
     setAccount: () => {},
   })
   
-  export const useForumContext = () => useContext(ForumContext)
+  export const useGFEContext = () => useContext(GFEContext)
