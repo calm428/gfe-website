@@ -10,6 +10,7 @@ import { siteConfig } from "@/config/site"
 import { authOptions } from "@/lib/authOptions"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import clsx from "clsx"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Web3ModalProvider } from "@/context/Web3Modal"
@@ -63,7 +64,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <App>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning className="light">
         <head />
         <body
           className={cn(

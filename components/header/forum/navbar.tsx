@@ -52,10 +52,6 @@ export async function Navbar() {
             />
           </NextLink>
         </NavbarBrand>
-        {/* <Divider
-          orientation="vertical"
-          className="h-2/3 w-0.5 bg-gradient-to-b from-[#5EA2EF] to-[#0072F5]"
-        /> */}
         <NavLinks />
       </NavbarContent>
 

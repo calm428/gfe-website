@@ -10,8 +10,6 @@ import HomeSection from "@/components/home/intro"
 import PartnersSection from "@/components/home/partnersSection"
 import SliderSection from "@/components/home/slider"
 import SpecsSection from "@/components/home/specs"
-import { SiteFooter } from "@/components/footer"
-import { SiteHeader } from "@/components/header/site-header"
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || ""),
@@ -26,7 +24,6 @@ export const metadata: Metadata = {
 function IndexPage() {
   return (
     <>
-      <SiteHeader />
       <HomeSection />
       <SliderSection />
       <SpecsSection />
@@ -38,7 +35,6 @@ function IndexPage() {
         <CommunitySection />
       </div>
       <ScrollToTop />
-      <SiteFooter />
     </>
   )
 }

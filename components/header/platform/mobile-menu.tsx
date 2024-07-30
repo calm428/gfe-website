@@ -12,7 +12,7 @@ import { useLocale } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 
-import WalletConnectButton from "@/components/header/wallet-connect-button"
+import WalletConnectButton from "./wallet-connect-button"
 
 export default function MobileMenu({
   authenticated,

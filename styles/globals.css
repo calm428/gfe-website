@@ -114,6 +114,7 @@
 /* This will change the scrollbar color for Webkit browsers like Chrome, Safari */
 ::-webkit-scrollbar {
   width: 12px;
+  height: 12px;
   /* width of the entire scrollbar */
 }
 

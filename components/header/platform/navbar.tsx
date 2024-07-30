@@ -16,7 +16,7 @@ import AvatarWithMenu from "./avatar-with-menu"
 import LanguageSelector from "./language-selector"
 import MobileMenu from "./mobile-menu"
 import NavLinks from "./nav-links"
-import WalletConnectButton from "@/components/header/wallet-connect-button"
+import WalletConnectButton from "./wallet-connect-button"
 
 async function getUser() {
   const session = await getServerSession(authOptions)
