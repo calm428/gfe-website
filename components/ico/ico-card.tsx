@@ -11,7 +11,7 @@ import { BrowserProvider, Contract, ethers } from "ethers"
 import toast from "react-hot-toast"
 
 import GFEICO from "@/config/contract/GFEICO.json"
-import useICOWebSocket from "@/hooks/useICOWebSockets"
+import useICOWebSocket from "@/hooks/useICOWebSocket"
 
 import CounterCard from "./counter-card"
 
