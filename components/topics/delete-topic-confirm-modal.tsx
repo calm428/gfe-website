@@ -25,7 +25,7 @@ export default function DeleteTopicConfirmModal({
           position: "top-right",
         })
 
-        router.push("/")
+        router.push("/forum")
       } else {
         throw new Error(res.message)
       }

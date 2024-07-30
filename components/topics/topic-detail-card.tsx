@@ -51,7 +51,7 @@ export default async function TopicDetailCard({ topic }: { topic: any }) {
          */}
         {topic.author._id.toString() === (session?.user as any)?.id && (
           <Button isIconOnly variant="light" color="primary">
-            <Link href="/topic/edit/[slug]" as={`/topic/edit/${topic?.slug}`}>
+            <Link href="/forum/topic/edit/[slug]" as={`/forum/topic/edit/${topic?.slug}`}>
               <BiSolidEdit className="size-5" />
             </Link>
           </Button>

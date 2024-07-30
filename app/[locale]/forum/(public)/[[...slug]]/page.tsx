@@ -103,21 +103,21 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
   const handleCategoryChange = (option: IOption) => {
     if (tag === "all") {
-      if (option.value === "all") router.push("/")
-      else router.push(`/c/${option.value}`)
+      if (option.value === "all") router.push("/forum/")
+      else router.push(`/forum/c/${option.value}`)
     } else {
-      if (option.value === "all") router.push(`/tag/${tag}`)
-      router.push(`/tag/c/${option.value}/${tag}`)
+      if (option.value === "all") router.push(`/forum/tag/${tag}`)
+      router.push(`/forum/tag/c/${option.value}/${tag}`)
     }
   }
 
   const handleTagChange = (option: IOption) => {
     if (category === "all") {
-      if (option.value === "all") router.push("/")
-      router.push(`/tag/${option.value}`)
+      if (option.value === "all") router.push("/forum/")
+      router.push(`/forum/tag/${option.value}`)
     } else {
-      if (option.value === "all") router.push(`/c/${category}`)
-      router.push(`/tag/c/${category}/${option.value}`)
+      if (option.value === "all") router.push(`/forum/c/${category}`)
+      router.push(`/forum/tag/c/${category}/${option.value}`)
     }
   }
 
@@ -150,7 +150,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
   const handleKeywordChange = useDebouncedCallback((value: string) => {
     if (value.trim() !== "") {
       const keyword = value.trim()
-      router.push(`?keyword=${keyword}`)
+      router.push(`/forum?keyword=${keyword}`)
     } else {
       router.push(pathname)
     }
@@ -305,7 +305,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
                 key={item.id}
                 className="cursor-pointer rounded-md border-b hover:bg-primary-300/20"
                 onClick={() => {
-                  router.push(`/topics/${item.slug}`)
+                  router.push(`/forum/topics/${item.slug}`)
                 }}
               >
                 <TableCell>

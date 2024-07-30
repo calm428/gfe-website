@@ -77,7 +77,7 @@ export default function Sidebar({ className }: { className?: string }) {
                       <MdCategory className="size-4 text-primary" />
                     )
                   }
-                  href={category.slug === "all" ? "/" : `/c/${category.slug}`}
+                  href={category.slug === "all" ? "/forum/" : `/forum/c/${category.slug}`}
                 >
                   {category.name}
                 </ListboxItem>
@@ -106,7 +106,7 @@ export default function Sidebar({ className }: { className?: string }) {
                       <FaTags className="size-4 text-primary" />
                     )
                   }
-                  href={tag.slug === "all" ? "/" : `/tag/${tag.slug}`}
+                  href={tag.slug === "all" ? "/forum/" : `/forum/tag/${tag.slug}`}
                 >
                   {tag.name}
                 </ListboxItem>

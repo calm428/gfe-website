@@ -28,7 +28,7 @@ export default function TopicSidebar({ headings }: { headings: IHeading[] }) {
               data-active={activeSection === heading.id}
               onClick={() => onHashLinkClick(heading.id)}
             >
-              <a href={`#${heading.id}`}>{heading.text}</a>
+              <a href={`/forum/#${heading.id}`}>{heading.text}</a>
             </li>
           )
         })

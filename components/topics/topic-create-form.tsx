@@ -164,7 +164,7 @@ export default function TopicCreateForm() {
         })
 
         const data = await res.json()
-        router.push(`/topics/${data.slug}`)
+        router.push(`/forum/topics/${data.slug}`)
       } else {
         toast.error("Failed to create topic", {
           position: "top-right",
