@@ -198,6 +198,82 @@ export const siteConfig = {
       href: "/blogs-and-news",
     },
   ],
+  navItems: {
+    authenticated: [
+      {
+        label: "ICO",
+        href: "/ico",
+      },
+      {
+        label: "Electricity",
+        href: "/electricity",
+      },
+      {
+        label: "Mining",
+        href: "/mining",
+      },
+      {
+        label: "DAO",
+        href: "/dao",
+      },
+      {
+        label: "Setting",
+        href: "/setting",
+      },
+    ],
+    public: [
+      {
+        label: "ICO",
+        href: "/ico",
+      },
+      {
+        label: "Electricity",
+        href: "/electricity",
+      },
+      {
+        label: "Mining",
+        href: "/mining",
+      },
+      {
+        label: "DAO",
+        href: "/dao",
+      },
+    ],
+  },
+  navMenuItems: [
+    {
+      label: "Profile",
+      href: "/profile",
+    },
+    {
+      label: "Dashboard",
+      href: "/dashboard",
+    },
+    {
+      label: "Projects",
+      href: "/projects",
+    },
+    {
+      label: "Team",
+      href: "/team",
+    },
+    {
+      label: "Calendar",
+      href: "/calendar",
+    },
+    {
+      label: "Settings",
+      href: "/settings",
+    },
+    {
+      label: "Help & Feedback",
+      href: "/help-feedback",
+    },
+    {
+      label: "Logout",
+      href: "/logout",
+    },
+  ],
   links: {
     linkedin: "https://www.linkedin.com/",
     facebook: "https://www.facebook.com/",
