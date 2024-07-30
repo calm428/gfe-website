@@ -2,6 +2,8 @@ import { IHeading } from "@/types"
 import { JSDOM } from "jsdom"
 import { nanoid } from "nanoid"
 import slugify from "slugify"
+import numeral from "numeral"
+
 
 const generateSlugWithShortHash = (title: string) => {
   const shortHash = nanoid(5) // Generates a short random ID
@@ -35,3 +37,12 @@ const processHeadingsInHtml = (
 }
 
 export { generateSlugWithShortHash, processHeadingsInHtml }
+
+export function getShortNumber(
+  value: number,
+  letterCase: "lower" | "upper" = "upper"
+): string {
+  const result = numeral(value).format("0.0a").replace(/\.0/, "")
+
+  return letterCase === "lower" ? result.toLowerCase() : result.toUpperCase()
+}
