@@ -224,19 +224,19 @@ export const siteConfig = {
     public: [
       {
         label: "ICO",
-        href: "/ico",
+        href: "/platform/ico",
       },
       {
         label: "Electricity",
-        href: "/electricity",
+        href: "/platform/electricity",
       },
       {
         label: "Mining",
-        href: "/mining",
+        href: "/platform/mining",
       },
       {
         label: "DAO",
-        href: "/dao",
+        href: "/platform/dao",
       },
     ],
   },
