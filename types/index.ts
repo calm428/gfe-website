@@ -42,3 +42,13 @@ export interface IProposal {
     amount: number
   }[]
 }
+
+export type ProposalStatusType =
+  | "PENDING"
+  | "ACTIVE"
+  | "CANCELED"
+  | "DEFEATED"
+  | "SUCCEEDED"
+  | "QUEUED"
+  | "EXPIRED"
+  | "EXECUTED"

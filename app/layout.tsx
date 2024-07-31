@@ -63,7 +63,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <App>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning className="light">
         <head />
         <body
           className={cn(

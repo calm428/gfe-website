@@ -1,0 +1,16 @@
+.vertical-item-row {
+  margin: 0 !important;
+}
+
+.timeline-card-content {
+  filter: none !important;
+  height: auto !important;
+}
+
+[class^="ToolbarWrapper"] {
+  display: none !important;
+}
+
+[class^="TimelinePointWrapper"]::before {
+  display: none !important;
+}

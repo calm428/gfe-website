@@ -1,8 +1,6 @@
 import { Metadata, Viewport } from "next"
 import { NextIntlClientProvider, useMessages } from "next-intl"
 import { unstable_setRequestLocale } from "next-intl/server"
-
-import { siteConfig } from "@/config/site"
 import { SiteFooter } from "@/components/footer"
 import { SiteHeader } from "@/components/header/site-header"
 

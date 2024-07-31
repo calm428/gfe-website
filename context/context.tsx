@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react"
 
-export type GlobalContent = {
+export type LandingContent = {
   resetModalOpen: boolean
   setResetModalOpen: (open: boolean) => void
   forgotPwModalOpen: boolean
@@ -14,7 +14,7 @@ export type GlobalContent = {
   mobileNavOpen: boolean
   setMobileNavOpen: (open: boolean) => void
 }
-export const SunbeltContext = createContext<GlobalContent>({
+export const SunbeltContext = createContext<LandingContent>({
   resetModalOpen: false,
   setResetModalOpen: () => {},
   forgotPwModalOpen: false,
@@ -29,15 +29,3 @@ export const SunbeltContext = createContext<GlobalContent>({
   setMobileNavOpen: () => {},
 })
 export const useSunbeltContext = () => useContext(SunbeltContext)
-
-// export type ForumContent = {
-//   account: string
-//   setAccount: (account: string) => void
-// }
-
-// export const ForumContext = createContext<ForumContent>({
-//   account: "",
-//   setAccount: () => {},
-// })
-
-// export const useForumContext = () => useContext(ForumContext)
