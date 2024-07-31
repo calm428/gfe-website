@@ -4,6 +4,8 @@ import Link from "next/link"
 import { Menu } from "lucide-react"
 import { useSession } from "next-auth/react"
 import { useTranslations } from "next-intl"
+import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
@@ -13,6 +15,34 @@ import { LanguageSelector } from "./language"
 import { MobileMenu } from "./mobile-menu"
 
 export function SiteHeader() {
+  const pathname = usePathname()
+  const header_available = ['about-us', 'blogs-and-news', 'contacts', 'governance', 'guild', 'miner-hosting', 'nft', 'privacy', 'terms', 'unsubscribe']
+  const [showHeader, setShowHeader] = useState(false);
+
+  useEffect(() => {
+    let headerFound = false
+    header_available.map((subUrl) => {
+      if (pathname.includes(subUrl)) {
+        headerFound = true
+      }
+    })
+    setShowHeader(headerFound)
+  }), [pathname]
+
+  return (
+    <>
+      {showHeader && <BaseHeader />}
+    </>
+  )
+}
+
+export function MainHeader() {
+  return (
+    <BaseHeader />
+  )
+}
+
+const BaseHeader = () => {  
   const t = useTranslations("main")
   const { data: session } = useSession()
 

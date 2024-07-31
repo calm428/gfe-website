@@ -6,6 +6,8 @@ import axios, { AxiosError } from "axios"
 import { Facebook, Instagram, Linkedin, Mail, PhoneCall } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { useForm } from "react-hook-form"
+import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
 import toast from "react-hot-toast"
 import { FaDiscord, FaTelegramPlane } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
@@ -25,7 +27,7 @@ import { Input } from "@/components/ui/input"
 import SectionDescription from "../common/section-description"
 import SectionTitle from "../common/section-title"
 
-export function SiteFooter() {
+function BaseFooter() {
   const t = useTranslations("main")
 
   const formSchema = z.object({
@@ -300,5 +302,33 @@ export function SiteFooter() {
         </div>
       </div>
     </footer>
+  )
+}
+
+export function SiteFooter() {
+  const pathname = usePathname()
+  const footer_available = ['about-us', 'blogs-and-news', 'contacts', 'governance', 'guild', 'miner-hosting', 'nft', 'privacy', 'terms', 'unsubscribe']
+  const [showFooter, setshowFooter] = useState(false);
+
+  useEffect(() => {
+    let footerFound = false
+    footer_available.map((subUrl) => {
+      if (pathname.includes(subUrl)) {
+        footerFound = true
+      }
+    })
+    setshowFooter(footerFound)
+  }), [pathname]
+
+  return (
+    <>
+      {showFooter && <BaseFooter />}
+    </>
+  )
+}
+
+export function MainFooter() {
+  return (
+    <BaseFooter />
   )
 }
