@@ -71,7 +71,7 @@ export async function Navbar() {
             className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
           >
             <Link
-              href={`${process.env.NEXT_PUBLIC_AUTH_SERVER}/signin?callbackUrl=${encodeURIComponent(process.env.NEXT_PUBLIC_WEBSITE_URL || "")}`}
+              href={`/signin?callbackUrl=${encodeURIComponent(process.env.NEXT_PUBLIC_WEBSITE_URL || "")}`}
             >
               Sign in
             </Link>

@@ -307,7 +307,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
             }}
             asChild
           >
-            <Link href="https://platform.gfe.foundation">
+            <Link href="/platform">
               {(session?.user as any)?.id
                 ? t("header.launch_app")
                 : t("header.sign_in")}
