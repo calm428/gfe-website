@@ -1,7 +1,11 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { Input } from '@nextui-org/react';
 
-const CustomInput = () => {
+const CustomInput = ({
+    setButtonEnable
+} : {
+    setButtonEnable : (checkStatus : boolean) => void
+}) => {
     const [isFocused, setIsFocused] = useState(false);
     const [inputValue, setInputValue] = useState('')
     const inputRef = useRef(null);
@@ -18,9 +22,17 @@ const CustomInput = () => {
         setInputValue(event.target.value)
     }
 
+    let checkStatus = inputValue.startsWith(`evmos`) && inputValue.length == 44
+    setButtonEnable(checkStatus)
+
     return (
         <div className='w-4/5'>
-            {!(inputValue == "" && !isFocused) && <span className='text-xs'>GFE wallet Address</span>}
+            {!(inputValue == "" && !isFocused) && 
+            <span className={
+                `text-xs ${checkStatus ? 'text-neutral-950' : 'text-rose-500'}`
+            }>
+                GFE wallet Address
+            </span>}
             <Input
                 ref={inputRef}
                 onFocus={handleFocus}
@@ -28,13 +40,18 @@ const CustomInput = () => {
                 onChange={handleChange}
                 placeholder="GFE wallet Address"
                 value={inputValue}
-                className={`p-2 ${isFocused ? 'border-blue-500' : 'border-gray-500'}`}
+                className={
+                    `border rounded-xl border-b-4 ${checkStatus ? 'border-blue-500 text-newtral-950' : 'border-red-500 text-rose-500'}`
+                }
             />
-            {inputValue == '' && <p>Required. Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}
-            {inputValue != '' && (!inputValue.startsWith(`evmos`) || inputValue.length != 44) && <p>Invalid GFE address format.</p>}
-            {inputValue.startsWith(`evmos`) && inputValue.length == 44 && <p>Invalid GFE ad dress format.</p>}
+            <div className='flex flex-col items-center p-t-2'>
+                {inputValue == '' && <p className='text-rose-500'>Required. Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}
+                {inputValue != '' && (!inputValue.startsWith(`evmos`) || inputValue.length != 44) && <p className='text-rose-500'>Invalid GFE address format.</p>}
+                {inputValue == 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' && <p>Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}
+                {inputValue != 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' && checkStatus && <p>Correct GFE address format. Go ahead.</p>}
+            </div>
         </div>
     );
 };
 
-export default CustomInput;
+export default CustomInput
