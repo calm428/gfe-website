@@ -3,7 +3,6 @@
 import PanelButton from "./panel-button"
 import { useState } from "react"
 import PanelDescription from "./panel-description"
-import { FaucetSender } from "./final-faucetsender"
 
 export default function FaucetDialog() {
     const [currentNum, setCurrentNum] = useState(1)

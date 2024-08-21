@@ -20,7 +20,7 @@ const CustomInput = ({
     setSecondButtonEnable(checkStatus)
 
     return (
-        <div className='w-4/5'>
+        <div className='w-full'>
             {!(inputValue == "" && !isFocused) && 
             <span className={
                 `text-xs ${checkStatus ? 'text-neutral-950' : 'text-rose-500'}`
@@ -38,15 +38,7 @@ const CustomInput = ({
                 className={
                     `border rounded-xl border-b-4 ${checkStatus ? 'border-blue-500 text-newtral-950' : 'border-red-500 text-rose-500'}`
                 }
-            />
-            {/* <div className='flex flex-col items-center'>
-                {inputValue == '' && <p className='text-rose-500'>Required. Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}
-                {inputValue != '' && (!inputValue.startsWith(`evmos`) || inputValue.length != 44) && <p className='text-rose-500'>Invalid GFE address format.</p>}
-                {inputValue == 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' && <p>Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}
-                {inputValue != 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' && checkStatus && <p>Correct GFE address format. Go ahead.</p>}
-            </div> */}
-            
-            <div className='flex flex-col items-center'>  
+            /><div className='overflow-auto'>  
                 {inputValue === '' && <p className='text-rose-500'>Required. Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}  
                 {inputValue !== '' && (!checkStatus) && <p className='text-rose-500'>Invalid GFE address format.</p>}  
                 {inputValue !== '' && checkStatus && <p>{inputValue === 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' ? 'Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' : 'Correct GFE address format. Go ahead.'}</p>}  
