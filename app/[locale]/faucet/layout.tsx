@@ -6,11 +6,11 @@ type Props = {
     children: ReactNode
 }
 
-export default function ProtectedLayout({ children }: Props) {
+export default function FaucetPage({ children }: Props) {
     return (
-        <div className="relative lex flex-col">
+        <>
             <Navbar />
-            <main className="container mx-auto">{ children }</main>
-        </div>
+            <main >{ children }</main>
+        </>
     )
 }

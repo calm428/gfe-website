@@ -1,26 +1,31 @@
 import { useState } from 'react';
 import { AttentionPart, CustomButton } from "./pre-panel-description"
 
-const PanelDescription = ({
+type panelState = {
+    firstPanel: boolean,
+    secondPanel: boolean,
+    lastPanel: boolean
+}
+export default function PanelDescription({
     panelnum,
     currentnum,
     onClickFunction,
-    setFinishEnabled
+    panelEnabled,
+    setPanelEnabled
 } : {
-    panelnum : number,
-    currentnum : number,
-    onClickFunction : (num : number) => void,
-    setFinishEnabled : (flag : boolean) => void
-}) => {
-    const [isButtonEnabled, setButtonEnable] = useState(true)
+    panelnum: number,
+    currentnum: number,
+    onClickFunction : (num: number) => void,
+    panelEnabled: panelState,
+    setPanelEnabled: ((flag: panelState) => void)
+}) {
+    const [isSecondButtonEnabled, setSecondButtonEnable] = useState(true)
     return(
         panelnum == currentnum && (
             <div className="flex flex-col items-center justify-center p-4">
-                <AttentionPart panelnum={panelnum} setButtonEnable={setButtonEnable}/>
-                <CustomButton isButtonEnabled={isButtonEnabled} panelnum={panelnum} onClickFunction={onClickFunction} setFinishEnabled={setFinishEnabled}/>
+                <AttentionPart panelnum={panelnum} setSecondButtonEnable={setSecondButtonEnable}/>
+                <CustomButton panelnum={panelnum} isSecondButtonEnabled={isSecondButtonEnabled} onClickFunction={onClickFunction} panelEnabled={panelEnabled} setPanelEnabled={setPanelEnabled}/>
             </div>
         )
     )
 }
-
-export default PanelDescription

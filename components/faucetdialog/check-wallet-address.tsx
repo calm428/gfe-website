@@ -2,28 +2,22 @@ import { useState, useRef } from 'react';
 import { Input } from '@nextui-org/react';
 
 const CustomInput = ({
-    setButtonEnable
+    setSecondButtonEnable
 } : {
-    setButtonEnable : (checkStatus : boolean) => void
+    setSecondButtonEnable : (checkStatus : boolean) => void
 }) => {
     const [isFocused, setIsFocused] = useState(false);
     const [inputValue, setInputValue] = useState('')
     const inputRef = useRef(null);
 
-    const handleFocus = () => {
-        setIsFocused(true);
-    };
+    const handleFocus = () => setIsFocused(true);
 
-    const handleBlur = () => {
-        setIsFocused(false);
-    };
+    const handleBlur = () => setIsFocused(false);
 
-    const handleChange = (event : React.ChangeEvent<HTMLInputElement>) => {
-        setInputValue(event.target.value)
-    }
+    const handleChange = (event : React.ChangeEvent<HTMLInputElement>) => setInputValue(event.target.value)
 
     let checkStatus = inputValue.startsWith(`evmos`) && inputValue.length == 44
-    setButtonEnable(checkStatus)
+    setSecondButtonEnable(checkStatus)
 
     return (
         <div className='w-4/5'>
@@ -34,6 +28,7 @@ const CustomInput = ({
                 GFE wallet Address
             </span>}
             <Input
+                id="GFE Wallet Address"
                 ref={inputRef}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
@@ -44,11 +39,17 @@ const CustomInput = ({
                     `border rounded-xl border-b-4 ${checkStatus ? 'border-blue-500 text-newtral-950' : 'border-red-500 text-rose-500'}`
                 }
             />
-            <div className='flex flex-col items-center p-t-2'>
+            {/* <div className='flex flex-col items-center'>
                 {inputValue == '' && <p className='text-rose-500'>Required. Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}
                 {inputValue != '' && (!inputValue.startsWith(`evmos`) || inputValue.length != 44) && <p className='text-rose-500'>Invalid GFE address format.</p>}
                 {inputValue == 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' && <p>Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}
                 {inputValue != 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' && checkStatus && <p>Correct GFE address format. Go ahead.</p>}
+            </div> */}
+            
+            <div className='flex flex-col items-center'>  
+                {inputValue === '' && <p className='text-rose-500'>Required. Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}  
+                {inputValue !== '' && (!checkStatus) && <p className='text-rose-500'>Invalid GFE address format.</p>}  
+                {inputValue !== '' && checkStatus && <p>{inputValue === 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' ? 'Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' : 'Correct GFE address format. Go ahead.'}</p>}  
             </div>
         </div>
     );

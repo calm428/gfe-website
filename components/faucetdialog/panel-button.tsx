@@ -2,33 +2,50 @@ import { Avatar } from "@/components/ui/avatar"
 import { FaPen } from "react-icons/fa6"
 
 const description = ["Instructions", "Add your GFE testnet Address", "Verification Challange"]
+type panelState = {
+    firstPanel: boolean,
+    secondPanel: boolean,
+    lastPanel: boolean
+}
 export default function PanelButton({
     panelnum,
     currentnum,
     onClickFunction,
-    finishEnabled,
-    setFinishEnabled
+    panelEnabled,
+    setPanelEnabled
 } : {
     panelnum: number,
     currentnum: number,
     onClickFunction : (num: number) => void,
-    finishEnabled: boolean,
-    setFinishEnabled: (flag: boolean) => void
+    panelEnabled: panelState,
+    setPanelEnabled: ((flag: panelState) => void)
 }) {
-    let hoverEnabled = finishEnabled || panelnum != 3
+    let hoverEnabled = true
+    switch(panelnum) {
+        case 1:{
+            hoverEnabled = panelEnabled.firstPanel
+            break
+        }
+        case 2:{
+            hoverEnabled = panelEnabled.secondPanel
+            break
+        }
+        case 3:{
+            hoverEnabled = panelEnabled.lastPanel
+            break
+        }
+    }
     const handleClick = () => {
-        if (panelnum != 3)
-            setFinishEnabled(false)
-        if (hoverEnabled) {
+        if (hoverEnabled){
             onClickFunction(panelnum)
         }
     }
 
     return(
         <div 
-            onClick={handleClick} 
+            onClick={handleClick}
             className={
-                `flex flex-col items-center justify-center bg-gray-700 bg-opacity-20 p-2 rounded-md cursor-pointer transition-transform h-24 border-4 ${hoverEnabled ? 'hover:scale-105' : ''}`
+                `flex flex-col items-center justify-center bg-[#1e1e1e] bg-opacity-10 border-none p-2 rounded-md cursor-pointer transition-transform h-24 border-2 ${hoverEnabled ? 'hover:scale-105 active:bg-[#1f1f1f] active:bg-opacity-20' : ''}`
             }
         >
             <Avatar className="w10 h-10 bg-orange-600 round-full flex items-center justify-center">
