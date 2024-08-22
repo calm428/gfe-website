@@ -12,13 +12,11 @@ export default function PanelButton({
     currentnum,
     onClickFunction,
     panelEnabled,
-    setPanelEnabled
 } : {
     panelnum: number,
     currentnum: number,
     onClickFunction : (num: number) => void,
     panelEnabled: panelState,
-    setPanelEnabled: ((flag: panelState) => void)
 }) {
     let hoverEnabled = true
     switch(panelnum) {
@@ -50,7 +48,7 @@ export default function PanelButton({
         >
             <Avatar className="w10 h-10 bg-orange-600 round-full flex items-center justify-center">
                 {currentnum <= panelnum ? (
-                    <span className="text-white text-sm">{panelnum}</span> 
+                    <span className="text-white text-lg">{panelnum}</span> 
                 ) : (
                     <FaPen className="text-white text-sm"/>
                 )}

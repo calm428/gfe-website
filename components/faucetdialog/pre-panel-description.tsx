@@ -1,10 +1,11 @@
+import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import CustomInput from "./check-wallet-address"
 import React from "react"
 
 const desc_txt1 = "If you are a developer looking to test the functionality of GFE network or setting up a node on testnet, setting up a node on the GFE test network, you can acquire test GFE tokens through this faucet."
-const desc_txt3 = "20 tokens are successfully transferred. Check your wallet."
+const desc_txt3 = "2 tokens are successfully transferred. Check your wallet."
 const button_txt = ["START", "CONTINUE", "FINISH"]
 type panelState = {
     firstPanel: boolean,
@@ -12,12 +13,17 @@ type panelState = {
     lastPanel: boolean
 }
 
+
 const AttentionPart = ({
     panelnum,
-    setSecondButtonEnable
+    setSecondButtonEnable,
+    address,
+    setAddress
 }: {
     panelnum: number,
-    setSecondButtonEnable: (checkState: boolean) => void
+    setSecondButtonEnable: (checkState: boolean) => void,
+    address: string,
+    setAddress: (address: string) => void
 }) => {
     switch (panelnum) {
         case 1:
@@ -28,7 +34,7 @@ const AttentionPart = ({
             )
         case 2:
             return (
-                <CustomInput setSecondButtonEnable={setSecondButtonEnable} />
+                <CustomInput setSecondButtonEnable={setSecondButtonEnable} setAddress={setAddress} />
             )
         case 3:
             return (
@@ -43,22 +49,22 @@ const CustomButton = ({
     isSecondButtonEnabled,
     panelnum,
     onClickFunction,
-    panelEnabled,
-    setPanelEnabled
+    setPanelEnabled,
+    address
 }: {
     isSecondButtonEnabled: boolean,
     panelnum: number,
     onClickFunction: (num: number) => void,
-    panelEnabled: panelState,
-    setPanelEnabled: ((flag: panelState) => void)
+    setPanelEnabled: ((flag: panelState) => void),
+    address: string
 }) => {
     const router = useRouter();
     const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
-        const temp = panelEnabled
         if (panelnum == 2) {
             e.preventDefault();
 
-            const dataToSend = { "Address": "evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru" }
+            const dataToSend = { "Address": address }
+            console.log("Hey adderss is here", address)
 
             try {
                 const response = await fetch('http://65.108.65.169:8080', {
