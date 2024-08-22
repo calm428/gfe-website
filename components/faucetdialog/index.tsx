@@ -20,15 +20,13 @@ export default function FaucetDialog() {
         const sharedProps = {
             panelnum : num,
             currentnum : currentNum,
-            onClickFunction : setCurrentNum,
-            panelEnabled: panelEnabled,
-            setPanelEnabled : setPanelEnabled
+            onClickFunction : setCurrentNum
         }
 
         return(
-            <div className="flex flex-col">
-                <PanelButton {...sharedProps}/>
-                <PanelDescription {...sharedProps}/>
+            <div className="flex flex-col mb-1">
+                <PanelButton {...sharedProps} panelEnabled = {panelEnabled}/>
+                <PanelDescription {...sharedProps} setPanelEnabled = {setPanelEnabled}/>
             </div>
         )
     }
@@ -38,10 +36,6 @@ export default function FaucetDialog() {
             <PanelButtonIm num={1}/>
             <PanelButtonIm num={2}/>
             <PanelButtonIm num={3}/>
-            {/* <FaucetSender
-                faucetAddress="cosmos15aptdqmm7ddgtcrjvc5hs988rlrkze40l4q0he"
-                rpcUrl="https://rpc.sentry-01.theta-testnet.polypore.xyz" 
-            /> */}
         </div>
     )
 }
