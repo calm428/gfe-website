@@ -17,8 +17,9 @@ const CustomInput = ({
     const handleBlur = () => setIsFocused(false);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setInputValue(event.target.value)
-        setAddress(inputRef.current.value)
+        const newValue = event.target.value
+        setInputValue(newValue)
+        setAddress(newValue)
     }
 
     let checkStatus = inputValue.startsWith(`evmos`) && inputValue.length == 44
@@ -41,7 +42,7 @@ const CustomInput = ({
                 placeholder="GFE wallet Address"
                 value={inputValue}
                 className={
-                    `border rounded-xl border-b-4 ${checkStatus ? 'border-blue-500 text-newtral-950' : 'border-red-500 text-rose-500'}`
+                    `border rounded-xl border-b-4 ${checkStatus ? 'border-blue-500 text-neutral-950' : 'border-red-500 text-rose-500'}`
                 }
             />
             <div className='mt-1 overflow-auto'>
