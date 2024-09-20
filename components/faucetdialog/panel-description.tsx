@@ -30,7 +30,7 @@ export default function PanelDescription({
 
     return (
         panelnum == currentnum && (
-            <div className="flex flex-col items-center justify-center pt-4">
+            <div className="flex flex-col items-center justify-center py-4">
                 <AttentionPart panelnum={panelnum} setSecondButtonEnable={setSecondButtonEnable} setAddress={setAddress} />
                 <CustomButton panelnum={panelnum} isSecondButtonEnabled={isSecondButtonEnabled} onClickFunction={onClickFunction} setPanelEnabled={setPanelEnabled} address={address} />
             </div>
