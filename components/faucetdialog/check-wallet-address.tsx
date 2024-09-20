@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { Input } from '@nextui-org/react';
+const faucetAddress = process.env.NEXT_PUBLIC_FAUCET_SERVER_ADDRESS
 
 const CustomInput = ({
     setSecondButtonEnable,
@@ -46,9 +47,9 @@ const CustomInput = ({
                 }
             />
             <div className='mt-1 overflow-auto'>
-                {inputValue === '' && <p className='text-rose-500'>Required. Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}
+                {inputValue === '' && <p className='text-rose-500'>Required. Example: {faucetAddress}</p>}
                 {inputValue !== '' && (!checkStatus) && <p className='text-rose-500'>Invalid GFE address format.</p>}
-                {inputValue !== '' && checkStatus && <p>{inputValue === 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' ? 'Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' : 'Correct GFE address format. Go ahead.'}</p>}
+                {inputValue !== '' && checkStatus && <p>{inputValue === faucetAddress ? `Example: ${faucetAddress}` : 'Correct GFE address format. Go ahead.'}</p>}
             </div>
         </div>
     );

@@ -1,12 +1,8 @@
-import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import CustomInput from "./check-wallet-address"
 import React from "react"
 
-const desc_txt1 = "If you are a developer looking to test the functionality of GFE network or setting up a node on testnet, setting up a node on the GFE test network, you can acquire test GFE tokens through this faucet."
-// const desc_txt3 = "2 tokens are successfully transferred. Check your wallet."
-const button_txt = ["START", "CONTINUE", "FINISH"]
 type panelState = {
     firstPanel: boolean,
     secondPanel: boolean,
@@ -18,9 +14,11 @@ type ApiRes = {
     message: string
 }
 
+const desc_txt1 = "If you're a developer testing the GFE network or setting up a node on the testnet, you can obtain test GFE tokens through this faucet."
+const button_txt = ["START", "CONTINUE", "FINISH"]
 let desc_txt3:ApiRes = {
     id: -1,
-    message: "Sorry. We can't connect to faucet server."
+    message: "Apologies, but we're unable to connect to the faucet server at the moment. Please try reconnecting after a short while."
 }
 
 const isApiRes = (res: any) => {
@@ -78,7 +76,7 @@ const CustomButton = ({
             const dataToSend = { "Address": address }
 
             try {
-                const response = await fetch('http://65.108.65.169:8080', {
+                const response = await fetch(`${'ADFAF'}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

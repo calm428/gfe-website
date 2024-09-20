@@ -1,7 +1,4 @@
 import FaucetSection from "@/components/faucetdialog"
-import Image from "next/image"
-import leftPic from "@/public/bgs/left.svg"
-import rightPic from "@/public/bgs/right.svg"
 
 export default function faucetPage() {
     return(
