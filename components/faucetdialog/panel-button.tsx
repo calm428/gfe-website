@@ -46,7 +46,7 @@ export default function PanelButton({
                 `flex flex-col items-center justify-center bg-[#1e1e1e] bg-opacity-10 border-none p-2 rounded-md cursor-pointer transition-transform h-24 border-2 ${hoverEnabled ? 'hover:scale-105 active:bg-[#1f1f1f] active:bg-opacity-20' : ''}`
             }
         >
-            <Avatar className="w10 h-10 bg-orange-600 round-full flex items-center justify-center">
+            <Avatar className={`w10 h-10 round-full flex items-center justify-center ${currentnum < panelnum ? 'bg-[#f35b04]' : 'bg-[#208ff6]'}`}>
                 {currentnum <= panelnum ? (
                     <span className="text-white text-lg">{panelnum}</span> 
                 ) : (

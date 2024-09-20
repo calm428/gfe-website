@@ -1,28 +1,37 @@
-import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import CustomInput from "./check-wallet-address"
 import React from "react"
 
-const desc_txt1 = "If you are a developer looking to test the functionality of GFE network or setting up a node on testnet, setting up a node on the GFE test network, you can acquire test GFE tokens through this faucet."
-const desc_txt3 = "2 tokens are successfully transferred. Check your wallet."
-const button_txt = ["START", "CONTINUE", "FINISH"]
 type panelState = {
     firstPanel: boolean,
     secondPanel: boolean,
     lastPanel: boolean
 }
 
+type ApiRes = {
+    id: number,
+    message: string
+}
+
+const desc_txt1 = "If you're a developer testing the GFE network or setting up a node on the testnet, you can obtain test GFE tokens through this faucet."
+const button_txt = ["START", "CONTINUE", "FINISH"]
+let desc_txt3:ApiRes = {
+    id: -1,
+    message: "Apologies, but we're unable to connect to the faucet server at the moment. Please try reconnecting after a short while."
+}
+
+const isApiRes = (res: any) => {
+    return typeof res.id === 'number' && typeof res.message === 'string' && Object.keys(res).length === 2
+}
 
 const AttentionPart = ({
     panelnum,
     setSecondButtonEnable,
-    address,
     setAddress
 }: {
     panelnum: number,
     setSecondButtonEnable: (checkState: boolean) => void,
-    address: string,
     setAddress: (address: string) => void
 }) => {
     switch (panelnum) {
@@ -39,7 +48,7 @@ const AttentionPart = ({
         case 3:
             return (
                 <h4 className="text-center">
-                    {desc_txt3}
+                    {desc_txt3.message}
                 </h4>
             )
     }
@@ -55,30 +64,29 @@ const CustomButton = ({
     isSecondButtonEnabled: boolean,
     panelnum: number,
     onClickFunction: (num: number) => void,
-    setPanelEnabled: ((flag: panelState) => void),
+    setPanelEnabled: (flag: panelState) => void,
     address: string
 }) => {
     const router = useRouter();
+
     const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
         if (panelnum == 2) {
             e.preventDefault();
 
             const dataToSend = { "Address": address }
-            console.log("Hey adderss is here", address)
 
             try {
-                const response = await fetch('http://65.108.65.169:8080', {
+                const response = await fetch(`${'ADFAF'}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(dataToSend)
                 });
-                console.log(JSON.stringify(dataToSend))
                 if (!response.ok)
                     throw new Error('Network response was not ok');
                 const result = await response.json()
-                console.log('Response:', result)
+                isApiRes(result) ? desc_txt3 = result : console.log("Response has wrong format.")
             } catch (error) {
                 console.log('Error fetching data: ', error)
             }

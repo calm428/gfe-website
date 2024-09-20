@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { Input } from '@nextui-org/react';
+const faucetAddress = process.env.NEXT_PUBLIC_FAUCET_SERVER_ADDRESS
 
 const CustomInput = ({
     setSecondButtonEnable,
@@ -17,8 +18,9 @@ const CustomInput = ({
     const handleBlur = () => setIsFocused(false);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setInputValue(event.target.value)
-        setAddress(inputRef.current.value)
+        const newValue = event.target.value
+        setInputValue(newValue)
+        setAddress(newValue)
     }
 
     let checkStatus = inputValue.startsWith(`evmos`) && inputValue.length == 44
@@ -41,13 +43,13 @@ const CustomInput = ({
                 placeholder="GFE wallet Address"
                 value={inputValue}
                 className={
-                    `border rounded-xl border-b-4 ${checkStatus ? 'border-blue-500 text-newtral-950' : 'border-red-500 text-rose-500'}`
+                    `border rounded-xl border-b-4 ${checkStatus ? 'border-blue-500 text-neutral-950' : 'border-red-500 text-rose-500'}`
                 }
             />
             <div className='mt-1 overflow-auto'>
-                {inputValue === '' && <p className='text-rose-500'>Required. Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru</p>}
+                {inputValue === '' && <p className='text-rose-500'>Required. Example: {faucetAddress}</p>}
                 {inputValue !== '' && (!checkStatus) && <p className='text-rose-500'>Invalid GFE address format.</p>}
-                {inputValue !== '' && checkStatus && <p>{inputValue === 'evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' ? 'Example: evmos17u6aw9l89myt7mmfr3vfluzkst4w7ths0sa9ru' : 'Correct GFE address format. Go ahead.'}</p>}
+                {inputValue !== '' && checkStatus && <p>{inputValue === faucetAddress ? `Example: ${faucetAddress}` : 'Correct GFE address format. Go ahead.'}</p>}
             </div>
         </div>
     );

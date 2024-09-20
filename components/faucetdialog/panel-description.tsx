@@ -11,20 +11,20 @@ export default function PanelDescription({
     currentnum,
     onClickFunction,
     setPanelEnabled
-} : {
+}: {
     panelnum: number,
     currentnum: number,
-    onClickFunction : (num: number) => void,
+    onClickFunction: (num: number) => void,
     setPanelEnabled: ((flag: panelState) => void)
 }) {
     const [isSecondButtonEnabled, setSecondButtonEnable] = useState(true)
-    const [ address, setAddress ] = useState("")
+    const [address, setAddress] = useState("")
 
-    return(
+    return (
         panelnum == currentnum && (
             <div className="flex flex-col items-center justify-center p-4">
-                <AttentionPart panelnum={panelnum} setSecondButtonEnable={setSecondButtonEnable} address={address} setAddress={setAddress}/>
-                <CustomButton panelnum={panelnum} isSecondButtonEnabled={isSecondButtonEnabled} onClickFunction={onClickFunction} setPanelEnabled={setPanelEnabled} address={address}/>
+                <AttentionPart panelnum={panelnum} setSecondButtonEnable={setSecondButtonEnable} setAddress={setAddress} />
+                <CustomButton panelnum={panelnum} isSecondButtonEnabled={isSecondButtonEnabled} onClickFunction={onClickFunction} setPanelEnabled={setPanelEnabled} address={address} />
             </div>
         )
     )
