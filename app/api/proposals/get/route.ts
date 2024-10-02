@@ -6,11 +6,13 @@ import topicModel from "@/server/model/topic.model"
 import userModel from "@/server/model/user.model"
 
 export async function GET(req: NextRequest) {
+  const searchParams = req.nextUrl.searchParams
+  
   try {
     await dbConnect()
 
-    const skip = Number(req.nextUrl.searchParams.get("skip") || 0)
-    const limit = Number(req.nextUrl.searchParams.get("limit") || 10)
+    const skip = Number(searchParams.get("skip") || 0)
+    const limit = Number(searchParams.get("limit") || 10)
 
     const proposals = await proposalModel
       .find({ proposalId: { $ne: null } }) // find proposals that proposalId is not null

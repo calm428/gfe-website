@@ -17,8 +17,10 @@ export default function NavLinks() {
 
   return (
     <ul className="ml-2 hidden justify-start gap-6 lg:flex">
-      {siteConfig.navItems.length > 0 &&
-        siteConfig.navItems.map((item: any) => (
+      {/* {siteConfig.navItems.length > 0 &&
+        siteConfig.navItems.map((item: any) => ( */}
+      {siteConfig.navItems.public.length > 0 &&
+        siteConfig.navItems.public.map((item: any) => (
           <NavbarItem
             key={item.href}
             className="group rounded-md p-2 px-3 data-[active=true]:bg-primary/10"

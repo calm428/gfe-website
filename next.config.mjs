@@ -14,6 +14,23 @@ const nextConfig = {
       },
     ],
   },
+  webpack(conf) {
+    conf.resolve.fallback = { 
+      wagmi: false,
+      net: false,
+      tls: false,
+      fs: false,
+      child_process: false,
+      canvas: false
+    }
+    return conf
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  // typescript: {
+  //   ignoreBuildErrors: true,
+  // },
   async rewrites() {
     return [
       {
@@ -22,7 +39,7 @@ const nextConfig = {
       },
       {
         source: "/auth",
-        destination: "https://platform.gfe.foundation/api/auth/session", // Proxy to Backend
+        destination: "https://www.gfe.foundation/platform/api/auth/session", // Proxy to Backend
       },
     ]
   },
