@@ -5,11 +5,12 @@ import tagModel from "@/server/model/tag.model"
 import topicModel from "@/server/model/topic.model"
 
 export async function GET(req: NextRequest) {
+  const searchParams = req.nextUrl.searchParams
+
   try {
     // connect database
     await dbConnect()
 
-    const { searchParams } = new URL(req.url)
     const keyword = searchParams.get("keyword") || ""
     const category = searchParams.get("category")
     const tag = searchParams.get("tag")
