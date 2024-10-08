@@ -75,6 +75,10 @@ export default async function middleware(req: NextRequest) {
   )
 
   const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname)
+  console.log('\nisPublicPage: ', isPublicPage, 'return intlMiddleware(req)')
+  console.log('!token: ', !token, '${process.env.NEXTAUTH_URL}/signin?callbackUrl=${encodeURIComponent(`${req.nextUrl.pathname}`)}')
+  console.log('token && !token.verified: ', token && !token.verified, 'return NextResponse.redirect(new URL(`${process.env.NEXTAUTH_URL}/verify`))')
+  console.log('else: ', 'return (authMiddleware as any)(req)\n')
 
   if (isPublicPage) {
     return intlMiddleware(req)
