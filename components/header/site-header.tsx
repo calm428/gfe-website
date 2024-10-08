@@ -61,8 +61,7 @@ const BaseHeader = () => {
               }}
               asChild
             >
-              {/* <Link href="/platform"> */}
-              <Link href="/signin">
+              <Link href="/platform">
                 {(session?.user as any)?.id
                   ? t("header.launch_app")
                   : t("header.sign_in")}
