@@ -202,23 +202,23 @@ export const siteConfig = {
     authenticated: [
       {
         label: "ICO",
-        href: "/ico",
+        href: "/platform/ico",
       },
       {
         label: "Electricity",
-        href: "/electricity",
+        href: "/platform/electricity",
       },
       {
         label: "Mining",
-        href: "/mining",
+        href: "/platform/mining",
       },
       {
         label: "DAO",
-        href: "/dao",
+        href: "/platform/dao",
       },
       {
         label: "Setting",
-        href: "/setting",
+        href: "/platform/setting",
       },
     ],
     public: [
