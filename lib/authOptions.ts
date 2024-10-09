@@ -5,8 +5,7 @@ import { type NextAuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import GoogleProvider from "next-auth/providers/google"
 
-// const useSecureCookies = process.env.NEXTAUTH_URL?.startsWith("https://")
-const useSecureCookies = true
+const useSecureCookies = process.env.NEXTAUTH_URL?.startsWith("https://")
 const cookiePrefix = useSecureCookies ? "__Secure-" : ""
 
 export const authOptions: NextAuthOptions = {

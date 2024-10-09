@@ -71,13 +71,19 @@ export default async function sendmail(
     } else if (type === "CONFIRM_EMAIL") {
       subject = "Confirm your email address"
       template = await ejs.renderFile(
-        `components/email/confirm-email-template.ejs`,
+        path.join(
+          process.cwd(),
+          `components/email/confirm-email-template.ejs`
+        ),
         data
       )
     } else if (type === "FORGOT_PASSWORD") {
       subject = "Reset your password"
       template = await ejs.renderFile(
-        `components/email/forgot-password-template.ejs`,
+        path.join(
+          process.cwd(),
+          `components/email/forgot-password-template.ejs`
+        ),
         data
       )
     }

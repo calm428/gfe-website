@@ -31,18 +31,18 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "https://admin.gfe.foundation/api/:path*", // Proxy to Backend
-      },
-      {
-        source: "/auth",
-        destination: "https://www.gfe.foundation/platform/api/auth/session", // Proxy to Backend
-      },
-    ]
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/api/:path*",
+  //       destination: "https://admin.gfe.foundation/api/:path*", // Proxy to Backend
+  //     },
+  //     {
+  //       source: "/auth",
+  //       destination: "https://www.gfe.foundation/platform/api/auth/session", // Proxy to Backend
+  //     },
+  //   ]
+  // },
 }
 
 export default withNextIntl(nextConfig)

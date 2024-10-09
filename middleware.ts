@@ -43,7 +43,7 @@ const intlMiddleware = createIntlMiddleware({
 
 const authMiddleware = withAuth(
   (req) => {
-    intlMiddleware(req)
+    return intlMiddleware(req)
   }, {
     callbacks: {
       authorized: ({ token }) => token != null,
