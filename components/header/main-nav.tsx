@@ -168,7 +168,7 @@ export function MainNav({ items }: MainNavProps) {
                       </div>
                     </Link>
                     <Link
-                      href={"https://faucet.gfe.foundation"}
+                      href={"/faucet"}
                       target="_blank"
                       className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                     >

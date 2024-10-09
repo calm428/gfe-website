@@ -26,18 +26,12 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-ARG NEXT_PUBLIC_ENVIRONMENT
-ARG NEXT_PUBLIC_METADATA_BASE
-ARG NEXT_PUBLIC_WEBSOCKET_HOST
-
-ENV NEXT_PUBLIC_ENVIRONMENT=${NEXT_PUBLIC_ENVIRONMENT}
-ENV NEXT_PUBLIC_METADATA_BASE=${NEXT_PUBLIC_METADATA_BASE}
-ENV NEXT_PUBLIC_WEBSOCKET_HOST=${NEXT_PUBLIC_WEBSOCKET_HOST}
-
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
+
+ENV NODE_OPTIONS=--max-old-space-size=4096 
 
 RUN npm run build
 

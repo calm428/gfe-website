@@ -137,6 +137,9 @@ export function SignInCard() {
               </button>
             }
             type={isVisible ? "text" : "password"}
+            isInvalid={!!errors.password}
+            color={errors.password ? "danger" : "default"}
+            errorMessage={errors.password && errors.password.message}
             className="w-full"
           />
           <div className="flex w-full justify-end">
