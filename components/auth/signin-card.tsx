@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import { FcGoogle } from "react-icons/fc"
 import { IoMdEye, IoMdEyeOff } from "react-icons/io"
+import ReCAPTCHA from "react-google-recaptcha"
 import * as z from "zod"
 
 export function SignInCard() {
@@ -25,6 +26,7 @@ export function SignInCard() {
   const router = useRouter()
   const [loading, setLoading] = useState<boolean>(false)
   const [isVisible, setIsVisible] = useState<boolean>(false)
+  const [captcha, setCaptcha] = useState(null)
 
   const formSchema = z.object({
     email: z.string().email("Invalid email address"),
@@ -47,6 +49,11 @@ export function SignInCard() {
   })
 
   const onSubmit = async (data: UserFormValue) => {
+    if (!captcha) {
+      toast.error('Please complete the captcha!');
+      return
+    }
+
     setLoading(true)
 
     const status = await signIn("email", {
@@ -148,6 +155,10 @@ export function SignInCard() {
             </Link>
           </div>
           <Checkbox>Remember me</Checkbox>
+          <ReCAPTCHA
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            onChange={(code) => setCaptcha(code)}
+          />
           <Button
             type="submit"
             color="primary"
