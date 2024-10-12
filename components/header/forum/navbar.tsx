@@ -12,10 +12,9 @@ import {
 } from "@nextui-org/react"
 import { getServerSession } from "next-auth"
 
-import AvatarWithMenu from "./avatar-with-menu"
+import AvatarWithMenu from "../avatar-with-menu"
 import MobileMenu from "./mobile-menu"
-// import NavLinks from "./nav-links"
-import WalletConnectButton from "./wallet-connect-button"
+import WalletConnectButton from "../wallet-connect-button"
 
 async function getUser() {
   const session = await getServerSession(authOptions)
@@ -52,7 +51,6 @@ export async function Navbar() {
             />
           </NextLink>
         </NavbarBrand>
-        {/* <NavLinks /> */}
       </NavbarContent>
 
       <NavbarContent className="hidden basis-1 pl-4 lg:flex" justify="end">
