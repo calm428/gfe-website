@@ -17,6 +17,7 @@ import {
   User,
 } from "@nextui-org/react"
 import { signOut } from "next-auth/react"
+import Link from "next/link"
 
 export default function AvatarWithMenu({
   user,
@@ -65,7 +66,11 @@ export default function AvatarWithMenu({
               }
               textValue="Electricity"
             >
-              Electricity
+              <Link
+                href = "/platform/electricity"
+              >
+                Electricity
+              </Link>
             </DropdownItem>
             <DropdownItem
               key="team_settings"
@@ -74,13 +79,21 @@ export default function AvatarWithMenu({
               }
               textValue="Mining"
             >
-              Mining
+              <Link
+                href = "/platform/mining"
+              >
+                Mining
+              </Link>
             </DropdownItem>
             <DropdownItem
               key="analytics"
               startContent={<Image src={daoPNG} className="size-5" alt="DAO" />}
             >
-              DAO
+              <Link
+                href = "/platform/dao"
+              >
+                DAO
+              </Link>
             </DropdownItem>
             <DropdownItem
               key="system"
@@ -89,7 +102,11 @@ export default function AvatarWithMenu({
               }
               textValue="Setting"
             >
-              Setting
+              <Link
+                href = "/platform/setting"
+              >
+                Setting
+              </Link>
             </DropdownItem>
           </DropdownSection>
           <DropdownSection>
