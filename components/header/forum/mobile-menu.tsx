@@ -5,7 +5,7 @@ import { NavbarMenu } from "@nextui-org/react"
 import { useLocale } from "next-intl"
 
 import Sidebar from "@/components/sidebar/sidebar"
-import WalletConnectButton from "./wallet-connect-button"
+import WalletConnectButton from "../wallet-connect-button"
 
 export default function MobileMenu() {
   const locale = useLocale()
