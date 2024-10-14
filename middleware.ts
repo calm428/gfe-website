@@ -44,7 +44,6 @@ const authMiddleware = withAuth(
 )
 
 export default async function middleware(req: NextRequest) {
-  console.log("middleware request : ", req.cookies, req.nextUrl.href,)
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET })
 
   const formattedPublicPages = publicPages

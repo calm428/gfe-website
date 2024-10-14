@@ -22,7 +22,7 @@ export default function NavLinks() {
         newSearchParams.set("tab", key as string)
 
         if (newSearchParams.toString() !== searchParams.toString()) {
-          router.push(`/setting?${newSearchParams.toString()}`)
+          router.push(`/platform/setting?${newSearchParams.toString()}`)
         }
       }}
       className="group hidden w-14 gap-0 divide-y divide-default-300/50 overflow-visible rounded-medium bg-content1 p-0 shadow-small dark:divide-default-100/80 sm:block md:w-full md:max-w-[250px]"
