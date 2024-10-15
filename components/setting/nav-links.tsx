@@ -8,6 +8,7 @@ import { FaChevronRight } from "react-icons/fa6"
 import { ImPower } from "react-icons/im"
 import { MdNotifications, MdOutlineSecurity } from "react-icons/md"
 import { PiWalletBold } from "react-icons/pi"
+import { MdLanguage } from "react-icons/md";
 
 export default function NavLinks() {
   const locale = useLocale()
@@ -100,6 +101,20 @@ export default function NavLinks() {
         className="group-data-[selected=notifications]:bg-primary/10 group-data-[selected=notifications]:font-bold group-data-[selected=notifications]:text-primary"
       >
         <span className="hidden md:block">Notifications</span>
+      </ListboxItem>
+      <ListboxItem
+        key="language"
+        startContent={
+          <div className="flex size-8 min-w-8 items-center justify-center rounded-small bg-primary/10 text-primary">
+            <MdLanguage className="text-md" />
+          </div>
+        }
+        endContent={
+          <FaChevronRight className="hidden text-sm text-default-500 md:block" />
+        }
+        className="group-data-[selected=notifications]:bg-primary/10 group-data-[selected=notifications]:font-bold group-data-[selected=notifications]:text-primary"
+      >
+        <span className="hidden md:block">Language</span>
       </ListboxItem>
     </Listbox>
   )
