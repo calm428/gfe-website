@@ -12,6 +12,12 @@
     "buy_now": "Buy Now",
     "launch_text": "NFT Official landing page has officially launched!🎉",
     "something_went_wrong": "Something went wrong!",
+    "language": {
+      "en": "English",
+      "ch": "Chinese",
+      "es": "Spanish",
+      "in": "Hindi"
+    },
     "home": {
       "section1": {
         "title": "Green Fungible",
@@ -466,7 +472,15 @@
       "block_explorer": "Block Explorer",
       "faucet": "Faucet",
       "block_explorer_description": "View transactions on the blockchain",
-      "faucet_description": "Get free ETH and other crypto assets"
+      "faucet_description": "Get free ETH and other crypto assets",
+      "ico": "ICO",
+      "electricity": "Electricity",
+      "mining": "Mining",
+      "dao": "DAO",
+      "setting": "Setting",
+      "logout": "Log Out",
+      "wallet_label": "Connect Wallet",
+      "wallet_loading_label": "Connecting..."
     },
     "unsubscribe": {
       "unsubscribe": "Unsubscribe",
