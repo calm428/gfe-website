@@ -611,6 +611,18 @@
       "contact_us": "Contact Us",
       "contact_us_content": "If you have any questions about these Terms, please contact us at contact@gfe.foundation.",
       "note": "Please note that the Terms and Conditions of Use apply only to our online activities and valid for visitors to our website with regards to the information they share and/or collect in GFE Foundation."
+    },
+    "faucet": {
+      "title": "GFE Faucet",
+      "panel_title1": "Instructions",
+      "panel_title2": "Add your GFE testnet Address",
+      "panel_title3": "Verification Challange",
+      "button_text1": "START",
+      "button_text2": "CONTINUE",
+      "button_text3": "FINISH",
+      "description1": "If you're a developer testing the GFE network or setting up a node on the testnet, you can obtain test GFE tokens through this faucet.",
+      "description2": "If you're a developer testing the GFE network or setting up a node on the testnet, you can obtain test GFE tokens through this faucet.",
+      "description3": "If you're a developer testing the GFE network or setting up a node on the testnet, you can obtain test GFE tokens through this faucet."
     }
   }
 }

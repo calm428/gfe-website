@@ -16,6 +16,7 @@ import AvatarWithMenu from "../avatar-with-menu"
 import MobileMenu from "./mobile-menu"
 import WalletConnectButton from "../wallet-connect-button"
 import { useTranslations } from "next-intl"
+import UnauthenticateButton from "../unauthenticate-button"
 
 async function getUser() {
   const session = await getServerSession(authOptions)
@@ -33,7 +34,6 @@ async function getUser() {
 
 export async function Navbar() {
   const user = await getUser()
-  const t = useTranslations("main")
 
   return (
     <NextUINavbar
@@ -66,16 +66,7 @@ export async function Navbar() {
             }}
           />
         ) : (
-          <Button
-            color="primary"
-            className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
-          >
-            <Link
-              href={`${process.env.NEXT_PUBLIC_AUTH_SERVER}/signin?callbackUrl=${encodeURIComponent(process.env.NEXT_PUBLIC_WEBSITE_URL || "")}`}
-            >
-              {t("header.sign_in")}
-            </Link>
-          </Button>
+          <UnauthenticateButton />
         )}
       </NavbarContent>
 

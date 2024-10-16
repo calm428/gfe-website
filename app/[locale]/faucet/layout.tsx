@@ -10,7 +10,7 @@ export default function FaucetPage({ children }: Props) {
     return (
         <>
             <Navbar />
-            <main >{ children }</main>
+            <main>{ children }</main>
         </>
     )
 }

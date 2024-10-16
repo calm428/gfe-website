@@ -1,7 +1,9 @@
+'use client'
+
 import { Avatar } from "@/components/ui/avatar"
 import { FaPen } from "react-icons/fa6"
+import { useTranslations } from "next-intl"
 
-const description = ["Instructions", "Add your GFE testnet Address", "Verification Challange"]
 type panelState = {
     firstPanel: boolean,
     secondPanel: boolean,
@@ -18,18 +20,23 @@ export default function PanelButton({
     onClickFunction : (num: number) => void,
     panelEnabled: panelState,
 }) {
+    const t = useTranslations("main")
     let hoverEnabled = true
+    let panelTitle = ''
     switch(panelnum) {
         case 1:{
             hoverEnabled = panelEnabled.firstPanel
+            panelTitle = t("faucet.panel_title1")
             break
         }
         case 2:{
             hoverEnabled = panelEnabled.secondPanel
+            panelTitle = t("faucet.panel_title2")
             break
         }
         case 3:{
             hoverEnabled = panelEnabled.lastPanel
+            panelTitle = t("faucet.panel_title3")
             break
         }
     }
@@ -53,7 +60,7 @@ export default function PanelButton({
                     <FaPen className="text-white text-sm"/>
                 )}
             </Avatar>
-            <h4 className="text-center">{description[panelnum - 1]}</h4>
+            <h4 className="text-center">{panelTitle}</h4>
         </div>
     )
 }
