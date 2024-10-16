@@ -622,7 +622,12 @@
       "button_text3": "FINISH",
       "description1": "If you're a developer testing the GFE network or setting up a node on the testnet, you can obtain test GFE tokens through this faucet.",
       "description2": "If you're a developer testing the GFE network or setting up a node on the testnet, you can obtain test GFE tokens through this faucet.",
-      "description3": "If you're a developer testing the GFE network or setting up a node on the testnet, you can obtain test GFE tokens through this faucet."
+      "description3": "Apologies, but we're unable to connect to the faucet server at the moment. Please try reconnecting after a short while.",
+      "default_input": "GFE Wallet Address",
+      "requirements": "Required",
+      "example": "Example: ",
+      "invalid_format": "Invalid GFE address format.",
+      "correct_format": "Corect GFE address format. Go ahead."
     }
   }
 }
