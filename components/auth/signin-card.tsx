@@ -21,7 +21,7 @@ import ReCAPTCHA from "react-google-recaptcha"
 import * as z from "zod"
 
 export function SignInCard() {
-  const t = useTranslations("main")
+  const t = useTranslations("main.signin")
   const searchParams = useSearchParams()
   const router = useRouter()
   const [loading, setLoading] = useState<boolean>(false)
@@ -29,8 +29,8 @@ export function SignInCard() {
   const [captcha, setCaptcha] = useState(null)
 
   const formSchema = z.object({
-    email: z.string().email("Invalid email address"),
-    password: z.string().min(8, "Password must be at least 8 characters"),
+    email: z.string().email(t("invalid_email_address")),
+    password: z.string().min(8, t("password_at_least")),
   })
 
   type UserFormValue = z.infer<typeof formSchema>
@@ -50,7 +50,7 @@ export function SignInCard() {
 
   const onSubmit = async (data: UserFormValue) => {
     if (!captcha) {
-      toast.error('Please complete the captcha!');
+      toast.error(t("complete_recaptcha"));
       return
     }
 
@@ -63,12 +63,12 @@ export function SignInCard() {
     })
 
     if (status?.error) {
-      toast.error(status?.error, {
+      toast.error(t("something_went_wrong"), {
         position: "top-right",
       })
     }
     if (status?.ok) {
-      toast.success("Welcome back to GFE Foundation!", {
+      toast.success(t("welcome_back"), {
         position: "top-right",
       })
 
@@ -94,9 +94,9 @@ export function SignInCard() {
         </Link>
       </div>
       <p className="text-center text-2xl sm:text-3xl">
-        Welcome to{" "}
+        {t("welcome_to")}
         <span className="bg-gradient-to-r from-[#77C167] to-[#1A88F9] bg-clip-text font-semibold text-transparent">
-          GFE Foundation
+          {t("gfe_foundation")}
         </span>
       </p>
       <div className="mt-8 flex w-full max-w-sm flex-col gap-3">
@@ -107,19 +107,19 @@ export function SignInCard() {
             startContent={<FcGoogle size={20} />}
             className="w-full"
           >
-            Continue with Google
+            {t("continue_with_google")}
           </Button>
         </div>
         <div className="relative w-full">
           <Divider className="my-4" />
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 text-default-400">
-            OR
+            {t("or")}
           </span>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-2">
           <Input
             {...register("email")}
-            label="Email"
+            label={t("email")}
             variant="bordered"
             isInvalid={!!errors.email}
             color={errors.email ? "danger" : "default"}
@@ -128,7 +128,7 @@ export function SignInCard() {
           />
           <Input
             {...register("password")}
-            label="Password"
+            label={t("password")}
             variant="bordered"
             endContent={
               <button
@@ -151,10 +151,10 @@ export function SignInCard() {
           />
           <div className="flex w-full justify-end">
             <Link href="/forgot-password" as={NextLink}>
-              Forgot password?
+              {t("forgot_password")}
             </Link>
           </div>
-          <Checkbox>Remember me</Checkbox>
+          <Checkbox>{t("remember_me")}</Checkbox>
           <ReCAPTCHA
             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
             onChange={(code) => setCaptcha(code)}
@@ -165,38 +165,38 @@ export function SignInCard() {
             className="w-full bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
             isLoading={loading}
           >
-            Sign In
+            {t("signin")}
           </Button>
           <p>
-            By signing in you accept the{" "}
+            {t("accept")}
             <Link
               href={process.env.NEXT_PUBLIC_TERMS_URL || "#"}
               as={NextLink}
               target="_blank"
               className="text-primary"
             >
-              Terms & Conditions
+              {t("terms_conditions")}
             </Link>{" "}
-            and the{" "}
+              {t("and")}
             <Link
               href={process.env.NEXT_PUBLIC_PRIVACY_URL || "#"}
               as={NextLink}
               target="_blank"
               className="text-primary"
             >
-              Privacy Policy
+              {t("privacy_policy")}
             </Link>
           </p>
         </form>
         <div className="mt-8 w-full max-w-sm space-y-4">
           <p className="text-center">
-            Don&apos;t have an account?{" "}
+            {t("dont_have_an_account")}
             <Link
               href="/signup"
               className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD] bg-clip-text text-transparent"
               as={NextLink}
             >
-              Register
+              {t("register")}
             </Link>
           </p>
         </div>

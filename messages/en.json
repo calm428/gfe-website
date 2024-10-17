@@ -762,10 +762,51 @@
 
     }, 
     "signin": {
-
+      "invalid_email_address": "Invalid email address",
+      "password_at_least": "Password must be at least 8 characters",
+      "complete_recaptcha": "Please complete the captcha!",
+      "something_went_wrong": "Something went wrong! please try again.",
+      "welcome_back": "Welcome back to GFE Foundation!",
+      "welcome_to": "Welcome to ",
+      "gfe_foundation": "GFE Foundation",
+      "continue_with_google": "Continue with Google",
+      "or": "OR",
+      "email": "Email",
+      "password": "Password", 
+      "forgot_password": "Forgot password?",
+      "remember_me": "Remember me",
+      "accept": "By signing in you accept the ",
+      "signin": "Sign In",
+      "terms_conditions": "Terms & Conditions",
+      "and": "and the ",
+      "privacy_policy": "Privacy Policy",
+      "dont_have_an_account": "Don't you have an account? ",
+      "register": "Register"
     }, 
     "signup": {
-
+      "firstname_required": "First name is required",
+      "lastname_required": "Last name is required",
+      "only_alphabets": "Only alphabets are allowed and no spaces",
+      "invalid_email_address": "Invalid email address",
+      "password_at_least": "Password must be at least 8 characters",
+      "successfully_created": "Your account has been created successfully!",
+      "something_went_wrong": "Something went wrong! please try again.",
+      "welcome_back": "Welcome back to GFE Foundation!",
+      "welcome_to": "Welcome to ",
+      "gfe_foundation": "GFE Foundation",
+      "continue_with_google": "Continue with Google",
+      "or": "OR",
+      "firstname": "First name",
+      "lastname": "Last name",
+      "email": "Email",
+      "password": "Password", 
+      "accept": "By signing in you accept the ",
+      "register": "Register",
+      "terms_conditions": "Terms & Conditions",
+      "and": "and the ",
+      "privacy_policy": "Privacy Policy",
+      "already_have_an_account": "Already have an account? ",
+      "signin": "Sign In"
     }, 
     "verify": {
 
