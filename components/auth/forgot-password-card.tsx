@@ -16,7 +16,7 @@ import toast from "react-hot-toast"
 import * as z from "zod"
 
 export function ForgotPasswordCard() {
-  const t = useTranslations("main")
+  const t = useTranslations("main.forgot-password")
   const router = useRouter()
   const [loading, setLoading] = useState<boolean>(false)
 
@@ -45,11 +45,11 @@ export function ForgotPasswordCard() {
       const res = await axios.post("/api/auth/forgot-password", data)
 
       if (res.status === 200) {
-        toast.success("Verification code has been sent!", {
+        toast.success(t("verification_code_has_been_sent"), {
           position: "top-right",
         })
       } else {
-        toast.error("Something went wrong!", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -57,11 +57,11 @@ export function ForgotPasswordCard() {
       const err = error as AxiosError
 
       if ((err.response?.data as any)?.message === "user_not_found") {
-        toast.error("User not found", {
+        toast.error(t("user_not_found"), {
           position: "top-right",
         })
       } else {
-        toast.error("Something went wrong!", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -82,17 +82,16 @@ export function ForgotPasswordCard() {
         </Link>
       </div>
       <div>
-        <p className="text-center text-2xl sm:text-3xl">Forgot Password?</p>
+        <p className="text-center text-2xl sm:text-3xl">{t("forgot_password")}</p>
         <p className="max-w-sm text-center text-default-400">
-          Enter the email address associated with your account. We&#39;ll send
-          you a link to reset your password.
+          {t("enter_the_email")}
         </p>
       </div>
       <div className="mt-8 flex w-full max-w-sm flex-col gap-3">
         <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-2">
           <Input
             {...register("email")}
-            label="Email"
+            label={t("email")}
             variant="bordered"
             isInvalid={!!errors.email}
             color={errors.email ? "danger" : "default"}
@@ -105,18 +104,18 @@ export function ForgotPasswordCard() {
             className="w-full bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
             isLoading={loading}
           >
-            Continue
+            {t("continue")}
           </Button>
         </form>
         <div className="mt-8 w-full max-w-sm space-y-4">
           <p className="text-center">
-            Already have an account?{" "}
+            {t("already_have_an_account")}
             <Link
               href="/signin"
               className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD] bg-clip-text text-transparent"
               as={NextLink}
             >
-              Sign In
+              {t("sign_in")}
             </Link>
           </p>
         </div>
