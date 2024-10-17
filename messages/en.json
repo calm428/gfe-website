@@ -660,6 +660,29 @@
         "new": "New", 
         "nft_landing_page": "NFT Official landing page has officially launched! 🎉",
         "sth_wrong": "Something went wrong"
+      },
+      "mining": {
+        "mining": "Mining",
+        "miner-card": {
+          "hashrate": "Hashrate:",
+          "income": "Income:",
+          "machine_price": "Machine Price:",
+          "accessory_price": "Accessory Price",
+          "price": "Price"
+        },
+        "trans_history": {
+          "title": "Transaction History"
+        },
+        "mining_plan": {
+          "title": "Mining Plan",
+          "type": "Miner Type",
+          "select_miner": "Select a miner",
+          "power": "Power",
+          "select_power": "Select a power",
+          "mining_period": "Mining Period",
+          "select_period": "Select a period",
+          "start_mining": "Start Mining"
+        }
       }
     }
   }
