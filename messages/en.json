@@ -739,7 +739,7 @@
       "something_went_wrong": "Something went wrong!",
       "user_not_found": "User not found",
       "forgot_password": "Forgot Password?",
-      "enter_the_email": "Enter the email address associated with your account. We @#39;ll send you a link to reset your password.",
+      "enter_the_email": "Enter the email address associated with your account. We will send you a link to reset your password.",
       "email": "Email",
       "continue": "Continue",
       "already_have_an_account": "Already have an account? ",
@@ -749,6 +749,16 @@
 
     }, 
     "reset-password": {
+      "your_password_has_been_reset_successfully": "Your password has been reset successfully!",
+      "something_went_wrong": "Something went wrong! please try again.",
+      "invalid_token": "Invalid token. Please try again.",
+      "user_not_found": "User not found",
+      "token_expired": "Token expired. Please try again.",
+      "reset_password": "Reset Password?",
+      "create_new_password": "Create a new secure password for your account. A strong, unique password will grant immediate access back to your account.",
+      "password": "Password",
+      "already_have_an_account": "Already have an account? ",
+      "sign_in": "Sign In"
 
     }, 
     "signin": {

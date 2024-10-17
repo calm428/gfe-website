@@ -17,7 +17,7 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io"
 import * as z from "zod"
 
 export function ResetPasswordCard({ token }: { token: string }) {
-  const t = useTranslations("main")
+  const t = useTranslations("main.reset-password")
   const router = useRouter()
   const [loading, setLoading] = useState<boolean>(false)
   const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -50,13 +50,13 @@ export function ResetPasswordCard({ token }: { token: string }) {
       })
 
       if (res.status === 200) {
-        toast.success("Your password has been reset successfully!", {
+        toast.success(t("your_password_has_been_reset_successfully"), {
           position: "top-right",
         })
 
         router.push("/signin")
       } else {
-        toast.error("Something went wrong. Please try again.", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -64,19 +64,19 @@ export function ResetPasswordCard({ token }: { token: string }) {
       const err = error as AxiosError
 
       if ((err.response?.data as any)?.message === "invalid_token") {
-        toast.error("Invalid token. Please try again.", {
+        toast.error(t("invalid_token"), {
           position: "top-right",
         })
       } else if ((err.response?.data as any)?.message === "user_not_found") {
-        toast.error("User not found. Please try again.", {
+        toast.error(t("user_not_found"), {
           position: "top-right",
         })
       } else if ((err.response?.data as any)?.message === "token_expired") {
-        toast.error("Token expired. Please try again.", {
+        toast.error(t("token_expired"), {
           position: "top-right",
         })
       } else {
-        toast.error("Something went wrong. Please try again.", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -97,17 +97,16 @@ export function ResetPasswordCard({ token }: { token: string }) {
         </Link>
       </div>
       <div>
-        <p className="text-center text-2xl sm:text-3xl">Reset Password</p>
+        <p className="text-center text-2xl sm:text-3xl">{t("reset_password")}</p>
         <p className="max-w-md text-center text-default-400">
-          Create a new secure password for your account. A strong, unique
-          password will grant immediate access back to your account.
+          {t("create_new_password")}
         </p>
       </div>
       <div className="mt-8 flex w-full max-w-sm flex-col gap-3">
         <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-2">
           <Input
             {...register("password")}
-            label="Password"
+            label={t("password")}
             variant="bordered"
             endContent={
               <button
@@ -134,18 +133,18 @@ export function ResetPasswordCard({ token }: { token: string }) {
             className="w-full bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
             isLoading={loading}
           >
-            Reset Password
+            {t("reset_password")}
           </Button>
         </form>
         <div className="mt-8 w-full max-w-sm space-y-4">
           <p className="text-center">
-            Already have an account?{" "}
+            {t("already_have_an_account")}
             <Link
               href="/signin"
               className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD] bg-clip-text text-transparent"
               as={NextLink}
             >
-              Sign In
+              {t("sign_in")}
             </Link>
           </p>
         </div>
