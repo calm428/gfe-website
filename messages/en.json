@@ -809,7 +809,20 @@
       "signin": "Sign In"
     }, 
     "verify": {
-
+      "enter_valid_virification_code": "Please enter a valid verification code",
+      "verified_successfully": "Your account has been verified successfully!",
+      "something_went_wrong": "Something went wrong!",
+      "invalid_verification": "Verification code is invalid",
+      "expired_verification": "Verification code has expired",
+      "user_not_Found": "User not found",
+      "virification_sent": "Verification code has been sent!",
+      "unauthorized": "You are not authorized!",
+      "too_many_attempts": "You have exceed the maximumnumber of attempts",
+      "verification": "Verification",
+      "description": "To help maintain a trusted community, please verify your account. It's quick, simple, and secure.",
+      "continue": "Continue",
+      "receive_the_code": "Didn't receive the code? ",
+      "try_again": "Try again"
     }, 
     "toast": {
 
