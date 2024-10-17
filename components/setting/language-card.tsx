@@ -5,7 +5,7 @@ import { Card, CardBody, CardHeader } from "@nextui-org/react"
 import Image from "next/image"
 import { useRouter, useSearchParams } from "next/navigation"
 import { usePathname } from "@/navigation"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import {
   Select,
@@ -18,6 +18,7 @@ import {
 
 export default function LanguageCard() {
   const locale = useLocale()
+  const t = useTranslations("main.language")
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -59,7 +60,7 @@ export default function LanguageCard() {
                             height={24}
                             className="mr-2 h-auto w-4"
                         />
-                            English
+                            {t("en")}
                         </div>
                     </SelectItem>
                     <SelectItem value="cn">
@@ -71,7 +72,7 @@ export default function LanguageCard() {
                             height={24}
                             className="mr-2 h-auto w-4"
                         />
-                            Chinese
+                            {t("cn")}
                         </div>
                     </SelectItem>
                     <SelectItem value="es">
@@ -83,7 +84,7 @@ export default function LanguageCard() {
                             height={24}
                             className="mr-2 h-auto w-4"
                         />
-                            Spanish
+                            {t("es")}
                         </div>
                     </SelectItem>
                     <SelectItem value="in">
@@ -95,7 +96,7 @@ export default function LanguageCard() {
                             height={24}
                             className="mr-2 h-auto w-4"
                         />
-                            Hindi
+                            {t("in")}
                         </div>
                     </SelectItem>
                 </SelectGroup>

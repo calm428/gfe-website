@@ -2,12 +2,15 @@ import Link from "next/link"
 import { Button, Chip } from "@nextui-org/react"
 import { FaChevronRight } from "react-icons/fa6"
 import { HiOutlineNewspaper } from "react-icons/hi2"
+import { useTranslations } from "next-intl"
 
 import "@/styles/magic.css"
 
 import ICOCard from "@/components/ico/ico-card"
 
 export default function ICOPage() {
+  const t = useTranslations("main.platform.ico")
+
   return (
     <div className="h-[calc(100vh-5rem-1px)] w-full bg-[url('/images/ico/ico-bg.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="container mx-auto">
@@ -16,19 +19,15 @@ export default function ICOPage() {
             <div className="mb-5 flex flex-col items-start gap-[56px]">
               <div className="flex flex-col gap-[16px]">
                 <h1 className="mt-8 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-4xl font-semibold text-transparent sm:text-5xl xl:text-6xl xl:leading-[72px]">
-                  Green Fungible Energy - GFE
+                  {t("title")}
                 </h1>
                 <p className="mt-3 text-sm sm:text-base xl:text-xl">
-                  GFE is a trailblazing initiative designed to tokenize green
-                  energy. Providing a unique investment opportunity that bridges
-                  the gap between environmental impact and economic incentive,
-                  while bringing the first global perspective to electrical
-                  costs.
+                  {t("description")}
                 </p>
               </div>
               <div className="auth mb-7 flex w-full flex-col gap-2 md:mb-0 md:flex-row md:gap-3">
                 <Link href={"#"} className="button-86">
-                  Audit
+                  {t("audit")}
                 </Link>
 
                 <Button
@@ -40,7 +39,7 @@ export default function ICOPage() {
                     className="flex items-center justify-between gap-2"
                   >
                     <HiOutlineNewspaper className="size-4" />
-                    <span>WhitePaper</span>
+                    <span>{t("whitepaper")}</span>
                   </Link>
                 </Button>
               </div>
@@ -55,10 +54,10 @@ export default function ICOPage() {
                   }}
                   className="absolute -top-3 left-5 mr-4 rounded-full bg-gradient-to-l from-[#2BADFD] to-[#1570EF] md:relative md:left-0 md:top-0"
                 >
-                  New
+                  {t("new")}
                 </Chip>
                 <h2 className="text-muted-foreground mt-2 font-medium md:mt-0 md:text-[16px]">
-                  NFT Official landing page has officially launched! 🎉
+                  {t("nft_landing_page")}
                 </h2>
                 <FaChevronRight />
               </div>

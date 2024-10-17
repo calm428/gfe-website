@@ -14,7 +14,7 @@
     "something_went_wrong": "Something went wrong!",
     "language": {
       "en": "English",
-      "ch": "Chinese",
+      "cn": "Chinese",
       "es": "Spanish",
       "in": "Hindi"
     },
@@ -628,6 +628,39 @@
       "example": "Example: ",
       "invalid_format": "Invalid GFE address format.",
       "correct_format": "Corect GFE address format. Go ahead."
+    },
+    "platform": {
+      "dao": {
+        "dao": "DAO",
+        "proposal": "Proposal",
+        "proposals": "Proposals",
+        "votes_for": "Votes for",
+        "votes_against": "Votes against",
+        "total_votes": "Total votes",
+        "addresses": "addresses",
+        "pending": "PENDING",
+        "active": "ACTIVE",
+        "canceled": "CANCELED",
+        "defeated": "DEFEATED",
+        "succeeded": "SUCCEEDED",
+        "queued": "QUEUED",
+        "expired": "EXPIRED", 
+        "executed": "EXECUTED",
+        "locale": "en-US"
+      },
+      "electricity": {
+        "electricity": "Electricity",
+        "coming_soon": "Coming Soon"
+      },
+      "ico": {
+        "title": "Green Fungible Energy - GFE",
+        "description": "GFE is a trailblazing initiative designed to tokenize green energy. Providing a unique investment opportunity that bridges the gap between environmental impact and economic incentive, while bringing the first global perspective to electrical costs.",
+        "audit": "Audit",
+        "whitepaper": "Whitepaper",
+        "new": "New", 
+        "nft_landing_page": "NFT Official landing page has officially launched! 🎉",
+        "sth_wrong": "Something went wrong"
+      }
     }
   }
 }

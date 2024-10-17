@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+import { usePathname, useSearchParams } from 'next/navigation';
 import { getShortNumber } from "@/server/lib/utils"
 import {
   Card,
   CardBody,
   CardHeader,
-  Chip,
   Progress,
   Spinner,
   Table,
@@ -18,14 +18,22 @@ import {
   TableRow,
 } from "@nextui-org/react"
 import { useAsyncList } from "@react-stately/data"
-import axios from "axios"
-import dayjs from "dayjs"
 import { useInView } from "react-intersection-observer"
+import { useTranslations, useLocale } from "next-intl"
+import dayjs from "dayjs"
+import 'dayjs/locale/zh-cn'
+import 'dayjs/locale/en-in';
+import 'dayjs/locale/es';
 
 import StatusChip from "@/components/dao/status-chip"
 
 export default function DAOPage() {
+  const t = useTranslations("main.platform.dao")
+  const locale = useLocale()
   const router = useRouter()
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  
   const [hasMore, setHasMore] = useState(true)
   const { ref: loaderRef, inView } = useInView()
 
@@ -37,8 +45,6 @@ export default function DAOPage() {
         signal,
       })
       let json = await res.json()
-
-      console.log(json)
 
       setHasMore(json.next !== null)
 
@@ -57,11 +63,11 @@ export default function DAOPage() {
     <div>
       <div className="container mx-auto max-w-7xl">
         <h1 className="w-fit bg-gradient-to-t from-[#1A88F9] to-[#76c8ff] bg-clip-text text-3xl font-semibold text-transparent">
-          DAO
+          {t("dao")}
         </h1>
         <Card className="mt-8 w-full border p-4" shadow="none" radius="sm">
           <CardHeader className="flex items-start gap-2 text-left">
-            <p className="font-semibold">Proposals</p>
+            <p className="font-semibold">{t("proposals")}</p>
           </CardHeader>
           <CardBody>
             <Table
@@ -76,15 +82,15 @@ export default function DAOPage() {
               }
             >
               <TableHeader>
-                <TableColumn>Proposal</TableColumn>
+                <TableColumn>{t("proposal")}</TableColumn>
                 <TableColumn className="hidden md:table-cell">
-                  Votes for
+                  {t("votes_for")}
                 </TableColumn>
                 <TableColumn className="hidden md:table-cell">
-                  Votes against
+                  {t("votes_against")}
                 </TableColumn>
                 <TableColumn className="hidden sm:table-cell">
-                  Total votes
+                  {t("total_votes")}
                 </TableColumn>
               </TableHeader>
               <TableBody items={list.items}>
@@ -103,7 +109,7 @@ export default function DAOPage() {
                       <div>
                         <StatusChip status={item.topic.status} />
                         <span className="ml-3">
-                          {dayjs(item.publishedAt).format("ddd MMM D, hh:mm a")}
+                          {dayjs(item.publishedAt).locale(t("locale")).format("ddd MMM D, hh:mm a")}
                         </span>
                       </div>
                     </TableCell>
@@ -140,7 +146,7 @@ export default function DAOPage() {
                         {getShortNumber(item.votes.totalVotes)}
                       </p>
                       <p className="text-sm text-gray-500">
-                        {item.votes.voteAddresses} addresses
+                        {item.votes.voteAddresses} {t("addresses")}
                       </p>
                     </TableCell>
                   </TableRow>

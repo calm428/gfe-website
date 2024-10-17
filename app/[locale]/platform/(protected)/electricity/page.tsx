@@ -1,11 +1,15 @@
+import { useTranslations } from "next-intl"
+
 export default function ElectricityPage() {
+  const t = useTranslations("main.platform.electricity")
+
   return (
     <div>
       <div className="container mx-auto max-w-7xl">
         <h1 className="w-fit bg-gradient-to-t from-[#1A88F9] to-[#76c8ff] bg-clip-text text-3xl font-semibold text-transparent">
-          Electricity
+          {t("electricity")}
         </h1>
-        <p>Coming soon</p>
+        <p>{t("coming_soon")}</p>
       </div>
     </div>
   )

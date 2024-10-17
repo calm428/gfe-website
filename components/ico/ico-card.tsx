@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useTranslations } from "next-intl"
 import Image from "next/image"
 import { Button, Input, Select, SelectItem, Spinner } from "@nextui-org/react"
 import {
@@ -67,6 +68,7 @@ function ICOCard() {
   const [inputGFEValue, setInputGFEValue] = useState("")
   const [inputPaymentValue, setInputPaymentValue] = useState("")
   const [isLoadingBuy, setIsLoadingBuy] = useState(false)
+  const t = useTranslations("main.platform.ico")
 
   const handlePaymentValueChange = (value: string) => {
     if (status !== "running") return
@@ -134,7 +136,7 @@ function ICOCard() {
 
           console.log("Invest Transaction completed: ", receipt)
         } catch (error) {
-          toast.error("Something went wrong", {
+          toast.error(t("sth_wrong"), {
             position: "top-right",
           })
 
@@ -242,7 +244,7 @@ function ICOCard() {
           )}
           {status === "disconnected" && (
             <p className="font-sans text-lg text-primary">
-              Something went wrong
+              {t("sth_wrong")}
             </p>
           )}
         </div>
