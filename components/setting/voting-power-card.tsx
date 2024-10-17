@@ -19,6 +19,7 @@ import { PiWarningDuotone } from "react-icons/pi"
 
 import GFE from "@/config/contract/GFE.json"
 import GFEGovernor from "@/config/contract/GFEGovernor.json"
+import { useTranslations } from "next-intl"
 
 export default function VotingPowerCard() {
   const { address, chainId, isConnected } = useWeb3ModalAccount()
@@ -32,6 +33,7 @@ export default function VotingPowerCard() {
   )
   const [gfeContract, setGFEContract] = useState<Contract | null>(null)
   const [balance, setBalance] = useState<number>(0)
+  const t = useTranslations("main.platform.setting.voting_power")
 
   const handleDelegate = async () => {
     if (!governorContract) return
@@ -128,18 +130,18 @@ export default function VotingPowerCard() {
   return (
     <Card className="py-4">
       <CardHeader className="flex-col items-start px-4 pb-0 pt-2">
-        <h4 className="text-large font-bold">Voting Power</h4>
-        <small className="text-default-500">Manage your voting power</small>
+        <h4 className="text-large font-bold">{t("title")}</h4>
+        <small className="text-default-500">{t("manage")}</small>
       </CardHeader>
       <CardBody>
         <Tabs variant="underlined" aria-label="Tabs variants">
-          <Tab key="delegated" title="Delegated To">
+          <Tab key="delegated" title={t("delegated_to")}>
             {isConnected ? (
               <div className="grid items-start gap-4 md:grid-cols-2">
                 <Card shadow="none" className="border">
                   <CardBody>
                     <p className="text-lg font-medium text-gray-500">
-                      Voting power
+                      {t("title")}
                     </p>
                     <p>{balance}</p>
                   </CardBody>
@@ -149,19 +151,17 @@ export default function VotingPowerCard() {
                     <CardBody>
                       <p>
                         <PiWarningDuotone className="mr-2 inline-flex size-5 text-orange-500" />
-                        You aren't delegated!
+                          {t("delegated")}
                       </p>
                       <p className="my-4 text-sm">
-                        Tokens determine voting power in test. They must be
-                        delegated before the start of the next proposal to be
-                        considered.
+                        {t("description")}
                       </p>
                       <Button
                         disabled={loading}
                         isLoading={loading}
                         onClick={handleDelegate}
                       >
-                        Delegate
+                          {t("delegate")}
                       </Button>
                     </CardBody>
                   </Card>
@@ -171,12 +171,12 @@ export default function VotingPowerCard() {
               <Card shadow="none" className="border">
                 <CardBody className="flex !flex-row items-center justify-start gap-2 py-4">
                   <PiWarningDuotone className="size-5 text-orange-500" />
-                  <p>Connect your wallet to see your voting power</p>
+                  <p>{t("connect")}</p>
                 </CardBody>
               </Card>
             )}
           </Tab>
-          <Tab key="received" title="Received Delegations" />
+          <Tab key="received" title={t("received_delegations")} />
         </Tabs>
       </CardBody>
     </Card>

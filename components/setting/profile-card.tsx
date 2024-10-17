@@ -16,6 +16,7 @@ import { Controller, useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import useSWR from "swr"
 import * as z from "zod"
+import { useTranslations } from "next-intl"
 
 import AvatarUploader from "./avatar-uploader"
 
@@ -25,6 +26,7 @@ export default function ProfileCard() {
   const [user, setUser] = useState<UserProfile | null>(null)
   const { data: fetchedData, mutate } = useSWR("/api/user/me", fetcher)
   const [loading, setLoading] = useState(false)
+  const t = useTranslations("main.platform.setting.profile")
 
   const formSchema = z.object({
     firstName: z
@@ -93,9 +95,9 @@ export default function ProfileCard() {
   return (
     <Card className="py-4">
       <CardHeader className="flex-col items-start px-4 pb-0 pt-2">
-        <h4 className="text-large font-bold">My Profile</h4>
+        <h4 className="text-large font-bold">{t("my_profile")}</h4>
         <small className="text-default-500">
-          Setup and review your personal information
+          {t("setup")}
         </small>
       </CardHeader>
       <CardBody>
@@ -120,7 +122,7 @@ export default function ProfileCard() {
               control={control}
               render={({ field }) => (
                 <Input
-                  label="First name"
+                  label={t("firstname")}
                   variant="bordered"
                   isInvalid={!!errors.firstName}
                   color={errors.firstName ? "danger" : "default"}
@@ -135,7 +137,7 @@ export default function ProfileCard() {
               control={control}
               render={({ field }) => (
                 <Input
-                  label="Last name"
+                  label={t("lastname")}
                   variant="bordered"
                   isInvalid={!!errors.lastName}
                   color={errors.lastName ? "danger" : "default"}
@@ -147,7 +149,7 @@ export default function ProfileCard() {
             />
             <Input
               type="email"
-              label="Email"
+              label={t("email")}
               variant="bordered"
               isDisabled
               labelPlacement="outside"
@@ -163,7 +165,7 @@ export default function ProfileCard() {
               isLoading={loading}
               className="ml-auto mt-4 w-fit bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
             >
-              Submit
+              {t("submit")}
             </Button>
           </div>
         </form>

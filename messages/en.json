@@ -683,6 +683,54 @@
           "select_period": "Select a period",
           "start_mining": "Start Mining"
         }
+      },
+      "setting": {
+        "title": "Setting",
+        "profile": {
+          "title": "Profile",
+          "my_profile": "My Profile",
+          "setup": "Setup and review your personal informations",
+          "firstname": "First name",
+          "lastname": "Last name",
+          "email": "Email", 
+          "submit": "Submit"
+        },
+        "wallet": {
+          "title": "Wallet",
+          "my_wallet": "My wallet",
+          "setup": "Setup your wallet address",
+          "coming_soon": "Coming Soon"
+        },
+        "voting_power": {
+          "title": "Voting Power",
+          "manage": "Manage your voting power",
+          "delegated": "You are'nt delegated!",
+          "description": "Tokens determine voting power in test. They must be delegated before the start of the next proposal to be considered.",
+          "delegate": "Delegate",
+          "connect": "Connect your wallet to see your voting power",
+          "delegated_to": "Delegated To",
+          "received_delegations": "Received Delegations"
+        },
+        "security": {
+          "title": "Security",
+          "setup": "Setup your security settings",
+          "current_password": "Current Password",
+          "new_password": "New Password",
+          "submit": "Submit"
+        },
+        "notifications": {
+          "title": "Notifications",
+          "manage": "Manage your notifications",
+          "coming_soon": "Coming soon"
+        },
+        "language": {
+          "title": "Language",
+          "setup": "Setup your language options",
+          "en": "English",
+          "cn": "Chinese",
+          "es": "Spanish",
+          "in": "Hindi"
+        }
       }
     }
   }

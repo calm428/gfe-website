@@ -18,7 +18,7 @@ import {
 
 export default function LanguageCard() {
   const locale = useLocale()
-  const t = useTranslations("main.language")
+  const t = useTranslations("main.platform.setting.language")
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -33,8 +33,8 @@ export default function LanguageCard() {
   return (
     <Card className="py-4">
       <CardHeader className="flex-col items-start px-4 pb-0 pt-2">
-        <h4 className="text-large font-bold">Language</h4>
-        <small className="text-default-500">Setup your language options</small>
+        <h4 className="text-large font-bold">{t("title")}</h4>
+        <small className="text-default-500">{t("setup")}</small>
       </CardHeader>
       <CardBody>
         <Select
