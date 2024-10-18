@@ -746,7 +746,33 @@
       "sign_in": "Sign In"
     },
     "forum": {
-
+      "welcome": "Welcome to the GFE Governance Forum",
+      "description": "Participate in key discussions and decision-making",
+      "search": "Search",
+      "topic": "Topic",
+      "replies": "Replies",
+      "views": "Views",
+      "activity": "Activity",
+      "categories": {
+        "title": "Categories",
+        "general": "General",
+        "governance-and-proposals": "Goveranace and Proposals",
+        "ideas-and-suggestions": "Ideas & Suggestions",
+        "technical-development": "Technical Development",
+        "all": "All Categories"
+      },
+      "tags": {
+        "title": "Tags",
+        "introduction": "Introduction",
+        "protocol-upgrade": "Protocol Upgrade",
+        "treasury": "Treasury",
+        "community-guidelines": "Community Guidelines",
+        "market-listing": "Market Listing",
+        "solar-power": "Solar Power",
+        "wind-power": "Wind Power",
+        "kelp-farming": "Kelp Farming",
+        "all": "All Tags"
+      }
     }, 
     "reset-password": {
       "your_password_has_been_reset_successfully": "Your password has been reset successfully!",
@@ -823,9 +849,6 @@
       "continue": "Continue",
       "receive_the_code": "Didn't receive the code? ",
       "try_again": "Try again"
-    }, 
-    "toast": {
-
     }
   }
 }
