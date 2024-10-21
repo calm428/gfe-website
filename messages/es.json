@@ -1030,5 +1030,21 @@
       "already_have_an_account": "¿Ya tienes una cuenta? ",
       "signin": "Iniciar sesión"
     },
+    "verify": {
+      "enter_valid_virification_code": "Por favor, introduzca un código de verificación válido",
+      "verified_successfully": "¡Su cuenta ha sido verificada con éxito!",
+      "something_went_wrong": "¡Algo ha ido mal!",
+      "invalid_verification": "El código de verificación no es válido",
+      "expired_verification": "El código de verificación ha expirado",
+      "user_not_Found": "Usuario no encontrado",
+      "virification_sent": "¡El código de verificación ha sido enviado!",
+      "unauthorized": "¡No está autorizado!",
+      "too_many_attempts": "Ha superado el número máximo de intentos",
+      "verification": "Verificación",
+      "description": "Para ayudar a mantener una comunidad de confianza, verifique su cuenta. Es rápido, sencillo y seguro.",
+      "continue": "Continuar",
+      "receive_the_code": "¿No ha recibido el código?",
+      "try_again": "Intente de nuevo"
+    }
   },
 }
