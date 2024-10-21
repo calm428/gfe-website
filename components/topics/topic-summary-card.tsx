@@ -1,5 +1,6 @@
 import { Card, CardBody, Chip, User } from "@nextui-org/react"
 import dayjs from "dayjs"
+import { useTranslations } from "next-intl"
 
 export default function TopicSummaryCard({
   topic,
@@ -8,11 +9,15 @@ export default function TopicSummaryCard({
   topic: any
   replies: any
 }) {
+  const t = useTranslations("main.forum.topic_status")
+
   const chipColor = (status: string) => {
     switch (status) {
-      case "SUBMISSION_APPROVED" || "PUBLISHED":
+      case "SUBMISSION_APPROVED":
+      case "PUBLISHED":
         return "success"
-      case "SUBMISSION_REJECTED" || "SUBMISSION_CANCELED":
+      case "SUBMISSION_REJECTED":
+      case "SUBMISSION_CANCELED":
         return "error"
       case "SUBMISSION":
         return "warning"
@@ -24,17 +29,17 @@ export default function TopicSummaryCard({
   const chipText = (status: string) => {
     switch (status) {
       case "SUBMISSION_APPROVED":
-        return "approved"
+        return t("approved")
       case "SUBMISSION_REJECTED":
-        return "rejected"
+        return t("rejected")
       case "SUBMISSION_CANCELED":
-        return "canceled"
+        return t("canceled")
       case "PUBLISHED":
-        return "published"
+        return t("published")
       case "SUBMISSION":
-        return "submission"
+        return t("submission")
       default:
-        return "draft"
+        return t("draft")
     }
   }
 

@@ -47,21 +47,7 @@ import { SiGithubactions } from "react-icons/si"
 import AddActionsForm from "./submit-topic-forms/add-actions-form"
 import CreateProposalForm from "./submit-topic-forms/create-proposal-form"
 import ProposalSummary from "./submit-topic-forms/proposal-summary"
-
-const steps = [
-  {
-    title: "Create a proposal",
-    description: "Provide information voters will need to make their decision",
-  },
-  {
-    title: "Set Actions",
-    description: "These actions are executed if the parameters you set are met",
-  },
-  {
-    title: "Review Proposal",
-    description: "Review your proposal before submitting",
-  },
-]
+import { useTranslations } from "next-intl"
 
 /**
  * @param {React.ReactNode} children
@@ -76,6 +62,7 @@ export default function SubmitTopicModal({
   topic: any
 }) {
   const router = useRouter()
+  const t = useTranslations("main.forum.submit_topic_proposal")
   const { address, chainId, isConnected } = useWeb3ModalAccount()
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   const [step, setStep] = useState(1)
@@ -85,6 +72,21 @@ export default function SubmitTopicModal({
     content: topic?.content,
     actions: [],
   })
+
+  const steps = [
+    {
+      title: t("title1"),
+      description: t("description1"),
+    },
+    {
+      title: t("title2"),
+      description: t("description2"),
+    },
+    {
+      title: t("title3"),
+      description: t("description3"),
+    },
+  ]
 
   const enhancedChild = React.cloneElement(children as ReactElement, {
     onPress: () => {
@@ -129,9 +131,9 @@ export default function SubmitTopicModal({
                 <Card shadow="none" className="border">
                   <CardBody className="p-6">
                     <div className="flex w-full items-end justify-between">
-                      <p className="mb-2 text-sm text-primary">New proposal</p>
+                      <p className="mb-2 text-sm text-primary">{t("new_proposal")}</p>
                       <span className="text-xs text-gray-500">
-                        Step {step} of {steps.length}
+                        {t("step")} {step} {t("of")} {steps.length}
                       </span>
                     </div>
                     <Progress

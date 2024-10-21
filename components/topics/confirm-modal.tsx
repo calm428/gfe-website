@@ -11,6 +11,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react"
+import { useTranslations } from "next-intl"
 
 export default function ConfirmModal({
   children,
@@ -23,7 +24,7 @@ export default function ConfirmModal({
   description: string
   onConfirm: () => void
 }) {
-  const router = useRouter()
+  const t = useTranslations("main.forum.confirm-modal")
   const [loading, setLoading] = useState<boolean>(false)
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
 
@@ -52,7 +53,7 @@ export default function ConfirmModal({
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
-                  Close
+                  {t("close")}
                 </Button>
                 <Button
                   color="danger"
@@ -60,7 +61,7 @@ export default function ConfirmModal({
                   isLoading={loading}
                   onPress={handleConfirm}
                 >
-                  Continue
+                  {t("continue")}
                 </Button>
               </ModalFooter>
             </>

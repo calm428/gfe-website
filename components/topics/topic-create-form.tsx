@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+import { useTranslations } from "next-intl"
 import { IOption } from "@/types"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Button, Input } from "@nextui-org/react"
@@ -99,24 +100,25 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 export default function TopicCreateForm() {
   const router = useRouter()
+  const t = useTranslations("main.forum.new")
   const [categoryOptions, setCategoryOptions] = useState<IOption[]>([])
   const [tagOptions, setTagOptions] = useState<IOption[]>([])
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const formSchema = z.object({
-    title: z.string().min(1, { message: "Title is required" }),
+    title: z.string().min(1, { message: t("title_is_required") }),
     content: z
       .string()
       .refine((value) => value.replace(/<[^>]*>?/gm, "").trim(), {
-        message: "You must input your content here",
+        message: t("must_input_here"),
       }),
     category: z
       .object({ value: z.string(), label: z.string() })
       .refine((value) => value !== null, {
-        message: "You must select a category",
+        message: t("must_select_category"),
       }),
     tags: z.array(z.object({ value: z.string(), label: z.string() })).min(1, {
-      message: "You must select at least one tag",
+      message: t("must_select_tag"),
     }),
   })
 
@@ -159,19 +161,19 @@ export default function TopicCreateForm() {
       })
 
       if (res.ok) {
-        toast.success("Topic created successfully", {
+        toast.success(t("topic_created_successfully"), {
           position: "top-right",
         })
 
         const data = await res.json()
         router.push(`/forum/topics/${data.slug}`)
       } else {
-        toast.error("Failed to create topic", {
+        toast.error(t("failed_to_create_topic"), {
           position: "top-right",
         })
       }
     } catch (error) {
-      toast.error("Failed to create topic", {
+      toast.error(t("failed_to_create_topic"), {
         position: "top-right",
       })
     } finally {
@@ -214,7 +216,7 @@ export default function TopicCreateForm() {
             <div className="flex w-full flex-col">
               <Input
                 {...field}
-                placeholder="Title"
+                placeholder={t("title")}
                 variant="flat"
                 size="lg"
                 classNames={{
@@ -250,7 +252,7 @@ export default function TopicCreateForm() {
                   }}
                   isLoading={fetchedCategoriesLoading}
                   isSearchable
-                  placeholder="Select category"
+                  placeholder={t("select_category")}
                   options={categoryOptions}
                 />
                 {errors.category && (
@@ -283,7 +285,7 @@ export default function TopicCreateForm() {
                   isMulti
                   isClearable
                   isSearchable
-                  placeholder="Select tags"
+                  placeholder={t("select_tags")}
                   options={tagOptions}
                 />
                 {errors.tags && (
@@ -305,7 +307,7 @@ export default function TopicCreateForm() {
                 theme="bubble"
                 modules={modules}
                 formats={formats}
-                placeholder="Type your content here..."
+                placeholder={t("type_here")}
                 style={{ minHeight: "calc(100vh - 21rem)" }}
               />
               {errors.content && (
@@ -326,7 +328,7 @@ export default function TopicCreateForm() {
             disabled={isSubmitting}
             startContent={!isSubmitting ? <LuSend className="size-4" /> : null}
           >
-            Post
+            {t("post")}
           </Button>
         </div>
       </form>

@@ -6,7 +6,7 @@ import { BiSolidEdit } from "react-icons/bi"
 import { BsReplyFill, BsTrash3Fill } from "react-icons/bs"
 
 import TopicReplyModal from "@/components/topics/topic-reply-modal"
-
+import { useTranslations } from "next-intl"
 import CollapsibleReplyGroup from "./collapsible-reply-group"
 import DeleteReplyConfirmModal from "./delete-reply-confirm-modal"
 import ReplyEditModal from "./reply-edit-modal"
@@ -14,6 +14,7 @@ import ReplyEditModal from "./reply-edit-modal"
 // Assuming `replies` is the prop passed to the component that includes top-level replies
 async function ReplyComponent({ reply, slug }: { reply: any; slug: string }) {
   const session = await getServerSession(authOptions)
+  const t = useTranslations("main.forum")
 
   return (
     <div key={reply._id.toString()} className="relative">
@@ -78,7 +79,7 @@ async function ReplyComponent({ reply, slug }: { reply: any; slug: string }) {
                 color="primary"
                 startContent={<BsReplyFill className="size-5" />}
               >
-                Reply
+                {t("reply")}
               </Button>
             </TopicReplyModal>
           )}

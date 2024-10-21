@@ -6,6 +6,7 @@ import { Button, Input, Textarea } from "@nextui-org/react"
 import { Controller, useForm } from "react-hook-form"
 import { FaChevronRight } from "react-icons/fa6"
 import * as z from "zod"
+import { useTranslations } from "next-intl"
 
 export default function CreateProposalForm({
   data,
@@ -16,10 +17,12 @@ export default function CreateProposalForm({
   updateData: React.Dispatch<React.SetStateAction<any>>
   goNext: () => void
 }) {
+  const t = useTranslations("main.forum.submit_topic_proposal.create_proposal")
+
   const formSchema = z.object({
-    title: z.string().min(1, "Title is required"),
-    summary: z.string().min(1, "Summary is required"),
-    content: z.string().min(1, "Content is required"),
+    title: z.string().min(1, t("title_required")),
+    summary: z.string().min(1, t("summary_required")),
+    content: z.string().min(1, t("content_required")),
   })
 
   type UserFormValue = z.infer<typeof formSchema>
@@ -58,7 +61,7 @@ export default function CreateProposalForm({
             <Input
               {...field}
               type="text"
-              label="Title"
+              label={t("title")}
               labelPlacement="outside"
               readOnly
             />
@@ -72,15 +75,15 @@ export default function CreateProposalForm({
               {...field}
               color={errors.summary ? "danger" : "default"}
               variant="flat"
-              label="Summary"
+              label={t("summary")}
               labelPlacement="outside"
-              placeholder="Describe your proposal in 2-3 sentences. This will appear in the proposal overview"
+              placeholder={t("summary_placeholder")}
               className="mt-4"
             />
           )}
         />
         <div className="mt-4">
-          <label className="pb-1.5 text-sm text-foreground">Content</label>
+          <label className="pb-1.5 text-sm text-foreground">{t("content")}</label>
           <div
             className="prose max-h-[25vh] overflow-auto rounded-medium bg-default-100 px-3 py-2 text-sm"
             dangerouslySetInnerHTML={{
@@ -97,7 +100,7 @@ export default function CreateProposalForm({
           endContent={<FaChevronRight />}
           className="ml-auto"
         >
-          Next
+          {t("next")}
         </Button>
       </div>
     </form>

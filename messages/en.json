@@ -749,6 +749,24 @@
       "welcome": "Welcome to the GFE Governance Forum",
       "description": "Participate in key discussions and decision-making",
       "search": "Search",
+      "topic_not_found": "Topic not found",
+      "new": {
+        "new_topic": "New Topic",
+        "title": "Title",
+        "select_category": "Select category",
+        "select_tags": "Select tags",
+        "type_here": "Type your content here...",
+        "title_is_required": "Title is required",
+        "must_input_here": "You must input your content here.",
+        "must_select_category": "You must select a category",
+        "must_select_tag": "You must select at least one tag",
+        "topic_created_successfully": "Topic created successfully",
+        "failed_to_create_topic": "Failed to create topic",
+        "post": "Post"
+      },
+      "edit": {
+        "topic_not_found": "Topic not found"
+      },
       "topic": "Topic",
       "replies": "Replies",
       "views": "Views",
@@ -772,6 +790,101 @@
         "wind-power": "Wind Power",
         "kelp-farming": "Kelp Farming",
         "all": "All Tags"
+      },
+      "topic_summary": {
+        "created": "CREATED",
+        "last_reply": "LAST REPLY",
+        "status": "STATUS",
+        "views": "VIEWS",
+        "replies": "REPLIES",
+        "likes": "LIKES"
+      },
+      "topic_status": {
+        "approved": "APPROVED",
+        "rejected": "REJECTED",
+        "canceled": "CANCELED",
+        "published": "PUBLISHED",
+        "submission": "SUBMISSION",
+        "draft": "DRAFT"
+      },
+      "submit_topic_proposal": {
+        "title1": "Create a proposal",
+        "description1": "Provide information voters will need to make their decision",
+        "title2": "Set Actions",
+        "description2": "These actions are executed if the parameters you set are met",
+        "title3": "Review Proposal",
+        "description3": "Review your proposal before submitting",
+        "new_proposal": "New proposal",
+        "step": "Step",
+        "of": "of",
+        "add_actions_form": {
+          "add_action": "Add action",
+          "description": "This action will execute if the vote passes. A common automatic action is transferring funds to a guild or person if their proposal passes a vote",
+          "actions": "Actions",
+          "withdraw": "Withdraw assets",
+          "withdraw_title": "Withdraw assets from the DAO teasury",
+          "withdraw_description": "Create a proposal to withdraw assets to a wallet.",
+          "mint": "Mint tokens",
+          "mint_description": "Mint more DAO tokens and distribute to wallets",
+          "type_required": "Type is required",
+          "address_required": "Recipient's address is required",
+          "amount_grater_0": "Amount must be greater than 0",
+          "reset_action": "Reset Action",
+          "remove_action": "Remove Action",
+          "recipient": "Recipient",
+          "recipient_placeholder": "Type wallet address or ENS ...",
+          "recipient_description": "The wallet that receives the tokens",
+          "amount": "Amount",
+          "amount_description": "Amount is calculated in number of tokens, not dollar value",
+          "back": "Back",
+          "next": "Next"
+        },
+        "create_proposal": {
+          "title_required": "Title is required",
+          "summary_required": "Summary is required",
+          "content_required": "Content is required",
+          "title": "Title",
+          "summary": "Summary",
+          "summary_placeholder": "Describe your proposal in 2-3 sentences. This will appear in the proposal overview",
+          "content": "Content",
+          "next": "Next"
+        },
+        "proposal_summary": {
+          "title": "Title",
+          "summary": "Summary",
+          "content": "Content", 
+          "actions": "Actions",
+          "withdraw_assets": "Withdaw assets",
+          "gfe": "GFE",
+          "back": "Back",
+          "submit": "Submit"
+        }
+      },
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "publish": "Publish",
+      "reply": "Reply",
+      "cancel-submission-confirm-modal": {
+        "proposal_submission": "Proposal submission canceled successfully",
+        "failed_cancel": "Failed to cancel submission",
+        "confirmmodal_title": "Cancel proposal submission",
+        "confirmmodal_description": "Are you sure you want to cancel the submission? This action cannot be undone."
+      },
+      "confirm-modal": {
+        "close": "Close",
+        "continue": "Continue"
+      },
+      "delete-reply-confirm-modal": {
+        "reply_deleted_success": "Reply deleted successfully",
+        "reply_deleted_failed": "Failed to delete reply",
+        "confirmmodal_title": "Deleted Reply",
+        "confirmmodal_description": "Are you sure you want to delete this reply? This action cannot be undone."
+      },
+      "delete-topic-confirm-modal": {
+        "topic_deleted_success": "Topic deleted successfully",
+        "topic_deleted_failed": "Failed to delete topic",
+        "confirmmodal_title": "Delete topic",
+        "confirmmodal_description": "Are you sure you want to delete this topic? This action can't be undone."
       }
     }, 
     "reset-password": {

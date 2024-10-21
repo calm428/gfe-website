@@ -94,6 +94,8 @@ export default function Page({ params }: { params: { slug: string[] } }) {
   const { category, tag } = getParams(params.slug || [])
   const limit = 20
 
+  console.log("status: ", status)
+
   const {
     data: fetchedTagsData,
     isLoading: tagFetchLoading,
@@ -293,16 +295,15 @@ export default function Page({ params }: { params: { slug: string[] } }) {
           />
         </div>
         <div className="ml-auto">
-          {status === "authenticated" ||
-            (true && (
-              <Button
-                color="primary"
-                startContent={<FaPlus />}
-                className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
-              >
-                <Link href="/topic/new">New Topic</Link>
-              </Button>
-            ))}
+          {status === "authenticated" && (
+            <Button
+              color="primary"
+              startContent={<FaPlus />}
+              className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
+            >
+              <Link href="/forum/topic/new">{t("new.new_topic")}</Link>
+            </Button>
+          )}
         </div>
       </div>
       <div className="">
@@ -361,8 +362,8 @@ export default function Page({ params }: { params: { slug: string[] } }) {
                   <div className="mt-1 flex flex-wrap gap-1">
                     <div className="rounded-full text-xs text-primary-600">
                       <MdCategory className="mr-1 inline" />
-                      {/* {filterCategories(item.category.slug)} */}
-                      {item.category.name}
+                      {filterCategories(item.category.slug)}
+                      {/* {item.category.name} */}
                     </div>
                     {item.tags.map((tag: any) => (
                       <div

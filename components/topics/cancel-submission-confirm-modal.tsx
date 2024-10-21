@@ -3,7 +3,7 @@
 import React from "react"
 import { useRouter } from "next/navigation"
 import cancelProposalSubmission from "@/server/actions/cancelProposalSubmission"
-import deleteTopic from "@/server/actions/deleteTopic"
+import { useTranslations } from "next-intl"
 import toast from "react-hot-toast"
 
 import ConfirmModal from "./confirm-modal"
@@ -15,6 +15,7 @@ export default function CancelSubmissionConfirmModal({
   children: React.ReactNode
   id: string
 }) {
+  const t = useTranslations("main.forum.cancel-submission-confirm-modal")
   const router = useRouter()
 
   const onCancelSubmission = async () => {
@@ -22,7 +23,7 @@ export default function CancelSubmissionConfirmModal({
       const res = await cancelProposalSubmission(id)
 
       if (res.success) {
-        toast.success("Proposal submission canceled successfully", {
+        toast.success(t("proposal_submission"), {
           position: "top-right",
         })
 
@@ -33,7 +34,7 @@ export default function CancelSubmissionConfirmModal({
     } catch (error) {
       console.log(error)
 
-      toast.error("Failed to cancel submission", {
+      toast.error(t("failed_cancel"), {
         position: "top-right",
       })
     }
@@ -41,8 +42,8 @@ export default function CancelSubmissionConfirmModal({
 
   return (
     <ConfirmModal
-      title="Cancel proposal submission"
-      description="Are you sure you want to cancel the submission? This action cannot be undone."
+      title={t("confirmmodal_title")}
+      description={t("confirmmodal_description")}
       onConfirm={onCancelSubmission}
     >
       {children}

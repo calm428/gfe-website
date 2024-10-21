@@ -4,7 +4,7 @@ import React from "react"
 import { useRouter } from "next/navigation"
 import deleteReply from "@/server/actions/deleteReply"
 import toast from "react-hot-toast"
-
+import { useTranslations } from "next-intl"
 import ConfirmModal from "./confirm-modal"
 
 /**
@@ -20,13 +20,14 @@ export default function DeleteReplyConfirmModal({
   id: string
 }) {
   const router = useRouter()
+  const t = useTranslations("main.forum.delete-reply-confirm-modal")
 
   const onDelete = async () => {
     try {
       const res = await deleteReply(id)
 
       if (res.success) {
-        toast.success("Reply deleted successfully", {
+        toast.success(t("reply_deleted_success"), {
           position: "top-right",
         })
 
@@ -37,7 +38,7 @@ export default function DeleteReplyConfirmModal({
     } catch (error) {
       console.log(error, id)
 
-      toast.error("Failed to delete reply", {
+      toast.error(t("reply_deleted_failed"), {
         position: "top-right",
       })
     }
@@ -45,8 +46,8 @@ export default function DeleteReplyConfirmModal({
 
   return (
     <ConfirmModal
-      title="Delete Reply"
-      description="Are you sure you want to delete this reply? This action cannot be undone."
+      title={t("confirmmodal_title")}
+      description={t("confirmmodal_description")}
       onConfirm={onDelete}
     >
       {children}
