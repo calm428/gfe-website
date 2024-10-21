@@ -1005,6 +1005,30 @@
       "dont_have_an_account": "您没有账户吗？",
       "register": "注册"
     },
-    
+    “signup”：{
+      “firstname_required”：“名字是必填项”，
+      “lastname_required”：“姓氏是必填项”，
+      “only_alphabets”：“只允许使用字母，不能有空格”，
+      “invalid_email_address”：“电子邮件地址无效”，
+      “password_at_least”：“密码必须至少包含 8 个字符”，
+      “successfully_created”：“您的帐户已成功创建！”，
+      “something_went_wrong”：“出现错误！请重试。”，
+      “welcome_back”：“欢迎回到 GFE Foundation！”，
+      “welcome_to”：“欢迎来到”，
+      “gfe_foundation”：“GFE Foundation”，
+      “continue_with_google”：“继续使用 Google”，
+      “or”：“或”，
+      “firstname”：“名字”，
+      “lastname”：“姓氏”，
+      “email”：“电子邮件”，
+      “password”：“密码”，
+      “accept”：“通过登录您接受“，
+      “register”：“注册”，
+      “terms_conditions”：“条款和条件”，
+      “and”：“和”，
+      “privacy_policy”：“隐私政策”，
+      “already_have_an_account”：“已有帐户？”，
+      “signin”：“登录”
+    }，
   }
 }
