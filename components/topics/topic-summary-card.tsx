@@ -94,7 +94,7 @@ export default function TopicSummaryCard({
             <span className="my-auto">{topic?.replies}</span>
           </div>
           <div className="flex w-fit flex-col items-center">
-            <span className="text-xs uppercase">{t{"likes"}}</span>
+            <span className="text-xs uppercase">{t("likes")}</span>
             <span className="my-auto">{topic?.likes}</span>
           </div>
         </div>

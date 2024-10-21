@@ -914,7 +914,7 @@
         "topic_deleted_success": "Tema eliminado correctamente",
         "topic_deleted_failed": "Error al eliminar el tema",
         "confirmmodal_title": "Eliminar tema",
-        "confirmmodal_description": "¿Está seguro de que desea eliminar este tema? Esta acción no se puede deshacer".
+        "confirmmodal_description": "¿Está seguro de que desea eliminar este tema? Esta acción no se puede deshacer."
       },
       "reply-edit-modal": {
         "must_input_here": "Debes ingresar tu contenido aquí.",
@@ -1046,5 +1046,5 @@
       "receive_the_code": "¿No ha recibido el código?",
       "try_again": "Intente de nuevo"
     }
-  },
+  }
 }

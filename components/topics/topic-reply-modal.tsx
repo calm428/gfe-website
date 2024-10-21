@@ -80,7 +80,7 @@ export default function TopicReplyModal({
     content: z
       .string()
       .refine((value) => value.replace(/<[^>]*>?/gm, "").trim(), {
-        message: {t("must_input_here")},
+        message: t("must_input_here"),
       }),
   })
 

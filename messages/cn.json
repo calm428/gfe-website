@@ -11,7 +11,7 @@
     "seconds": "秒",
     "buy_now": "立即购买",
     "launch_text": "NFT官方登陆页面已正式上线!🎉",
-    "something_went_wrong": "出现了问题！",
+    "something_went_wrong": "出现了问题!",
     "try_again": "再试一次",
     "language": {
       "en": "英语",
@@ -26,11 +26,11 @@
         "description": "GFE是一个开创性的倡议,旨在将绿色能源标记化。提供了一个独特的投资机会,弥合了环境影响与经济激励之间的差距,同时为电力成本带来了全球视角。"
       },
       "converter_section": {
-        "title": "在价格上涨之前购买！",
+        "title": "在价格上涨之前购买!",
         "subtitle": "价格上涨倒计时"
       },
       "section?": {
-        "title": "GFE是什么？",
+        "title": "GFE是什么?",
         "subtitle": "绿色可互换能源"
       },
       "section2": {
@@ -66,13 +66,13 @@
       "section5": {
         "title": "深入了解",
         "subtitle": "绿色可替代能源 - GFE",
-        "question1": "什么是绿色可替代能源？",
+        "question1": "什么是绿色可替代能源?",
         "answer1": "GFE代币是电能的数字表示,每个代币表示有权使用我们的基础设施生成和消耗1kWh绿色能源。GFE代币的这种双重含义意味着它们不仅可以作为可交易资产带来收入,而且也反映了可持续实践,并具有切实的现实效用。",
-        "question2": "比特币挖矿是否有利可图？",
+        "question2": "比特币挖矿是否有利可图?",
         "answer2": "比特币挖矿是新比特币的创建过程,也是将交易添加到区块链的过程,即比特币网络中的所有交易的分散式总账簿。它涉及解决复杂的数学问题,验证和保障网络上的交易。",
-        "question3": "如何开始挖矿比特币？",
+        "question3": "如何开始挖矿比特币?",
         "answer3": "比特币挖矿是新比特币的创建过程,也是将交易添加到区块链的过程,即比特币网络中的所有交易的分散式总账簿。它涉及解决复杂的数学问题,验证和保障网络上的交易。",
-        "question4": "公司如何进行比特币挖矿？",
+        "question4": "公司如何进行比特币挖矿?",
         "answer4": "比特币挖矿是新比特币的创建过程,也是将交易添加到区块链的过程,即比特币网络中的所有交易的分散式总账簿。它涉及解决复杂的数学问题,验证和保障网络上的交易。"
       }
     },
@@ -82,7 +82,7 @@
         "description": "通过加入GFE项目,投资者和环境倡导者都可以为可持续能源生态系统的发展做出贡献,同时享受区块链技术和服务器托管带来的经济收益,以及具有生态和伦理支持的全球商品价格,用于无开采电力。"
       },
       "section2": {
-        "title": "还不是我们专属新闻通讯的会员？",
+        "title": "还不是我们专属新闻通讯的会员?",
         "description": "立即获取市场的一系列有价值的见解,并通过知识赋予自己力量,帮助您掌握全球能源市场的控制权。"
       },
       "goalSection": {
@@ -108,7 +108,7 @@
     "contact_us": {
       "bookMeetingTitle": "预约会议",
       "bookMeetingCEO": "与首席执行官预约会议",
-      "bookMeetingDescription": "对我们的服务感兴趣,愿意参与我们的私募？这就是我们在这里的原因！预约与我们团队会面,详细讨论如何运作、定价等。我们将尽力帮助。",
+      "bookMeetingDescription": "对我们的服务感兴趣,愿意参与我们的私募?这就是我们在这里的原因!预约与我们团队会面,详细讨论如何运作、定价等。我们将尽力帮助。",
       "contactInfo": {
         "title": "联系信息",
         "email": "给我们发邮件",
@@ -146,9 +146,9 @@
       "title": "创新",
       "subtitle": "全球能源的新思路",
       "GFE_section": {
-        "para1": "基金会的愿景始于一个简单的问题:为什么每个人都想要太阳能,但没有人购买呢？能源民主是核心答案。它可以用市场摩擦来衡量。一个典型的郊区居民安装可以抵消家庭的电力消耗,并将电网用作存储。在这种情况下存在许多问题；通过拥有对电网的垄断和买方垄断关系,电网可以成为一个值得置疑的贸易伙伴。供电公用事业及其在电力发电方面的本地选择是对当地价格产生全球效应。这可能对当地法定货币的价值利有弊。",
+        "para1": "基金会的愿景始于一个简单的问题:为什么每个人都想要太阳能,但没有人购买呢?能源民主是核心答案。它可以用市场摩擦来衡量。一个典型的郊区居民安装可以抵消家庭的电力消耗,并将电网用作存储。在这种情况下存在许多问题;通过拥有对电网的垄断和买方垄断关系,电网可以成为一个值得置疑的贸易伙伴。供电公用事业及其在电力发电方面的本地选择是对当地价格产生全球效应。这可能对当地法定货币的价值利有弊。",
         "para2": "这个全球共同体的视角塑造了我们的努力,将我们的DAPPr装置扩展到可生成电力装置解决了几个问题。我们简单地在压力较大的地点创造更多电力。",
-        "para3": "我们的太阳能农场容量使我们能够为许多事物生成电力。我们在本地销售电力,为电动车提供电力,并作为电网稳定软件包的合作伙伴；此外,我们还托管服务器,并生产生物柴油和氢气。您不需要电网来供电,电网需要您的帮助来减少其用于发电的可提取商品。摆脱方便的束缚,让世界变得更美好。",
+        "para3": "我们的太阳能农场容量使我们能够为许多事物生成电力。我们在本地销售电力,为电动车提供电力,并作为电网稳定软件包的合作伙伴;此外,我们还托管服务器,并生产生物柴油和氢气。您不需要电网来供电,电网需要您的帮助来减少其用于发电的可提取商品。摆脱方便的束缚,让世界变得更美好。",
         "para4": "在一个人们又饥饿又口渴的世界里,公用事业需要用殖民地权重法定货币购买其提取能源商品。我们愿意提供帮助。我们让水、电力、烹饪能源、浴室、安全和保障成为一个社区个人层面上的资源。我们计量我们的资源分配,并免费提供它们。",
         "para5": "我们的原型装置将工作以在没有电网的情况下规范化公用规模的电力容量。该装置通过支持全球货币的当地生产,主要为发展中国家提供服务。我们寻求改善我们为后代守护的世界。"
       },
@@ -168,8 +168,8 @@
       },
       "market_section": {
         "title": "电力市场格局",
-        "para1": "全球能源市场估计价值2万亿美元。然而,这个市场在很大程度上被少数几家公司集中。这些公司通常自称为能源公司；但在我们的生活中已经转向能源行业的盈利领域。它们是为电网提供无尽需求的钻探公司。能源不是石油,石油是能源市场的盈利领域之一。我们的世界需要超越以利润为导向的公司方针。公司不会自然地参与关于其过程中未定价外部性的对话。这些对话只会让它们损失资金,而公司受到法律的授权要寻求利润。它们希望继续以同样的方式行事。",
-        "para2": "电力的强烈本地垄断市场建立在稳定性和便利性之上；它消耗着一种全球规范化的能源来源,通过法定货币标价进行贸易和运输。垄断企业相互之间以市场价格交易,进行同步交货。英国的市场价格接近每千瓦0.45美元,中国的电力市场大约是每千瓦0.04美元。英国的电力不是老化的燃煤电力,中国的电力是无法运送到英国的。直到现在,还没有全球电力商品市场。",
+        "para1": "全球能源市场估计价值2万亿美元。然而,这个市场在很大程度上被少数几家公司集中。这些公司通常自称为能源公司;但在我们的生活中已经转向能源行业的盈利领域。它们是为电网提供无尽需求的钻探公司。能源不是石油,石油是能源市场的盈利领域之一。我们的世界需要超越以利润为导向的公司方针。公司不会自然地参与关于其过程中未定价外部性的对话。这些对话只会让它们损失资金,而公司受到法律的授权要寻求利润。它们希望继续以同样的方式行事。",
+        "para2": "电力的强烈本地垄断市场建立在稳定性和便利性之上;它消耗着一种全球规范化的能源来源,通过法定货币标价进行贸易和运输。垄断企业相互之间以市场价格交易,进行同步交货。英国的市场价格接近每千瓦0.45美元,中国的电力市场大约是每千瓦0.04美元。英国的电力不是老化的燃煤电力,中国的电力是无法运送到英国的。直到现在,还没有全球电力商品市场。",
         "point1": "供电在企业操作的地点非常方便。",
         "point2": "组装厂往往使用源自中国电力生产的钢材进行组装,部分原因是制造钢材需要大量的能源。",
         "point3": "办公空间使用在冰岛供电的服务器。"
@@ -185,7 +185,7 @@
     },
     "nft": {
       "new": "新的",
-      "badge": "NFT 官方登陆页面正式上线！🎉",
+      "badge": "NFT 官方登陆页面正式上线!🎉",
       "title": "用 DAPPr NFT 重塑",
       "subtitle": "清洁能源的未来",
       "description": "我们的旅程始于设计和建造一个可持续运行的服务器托管环境原型。NFT 持有者拥有这些单位的所有权,并每天获得收入。",
@@ -204,22 +204,22 @@
       },
       "faq_section": {
         "description": "以下是关于我们 NFT 的常见问题与答案",
-        "question1": "什么是 DAPPr NFT？",
+        "question1": "什么是 DAPPr NFT?",
         "answer1_1": "GFE 代币是电能的数字表示,每个代币表示对将由我们基础设施生成和消耗的 1kWh 绿色能源的使用权。GFE 代币的这双重涵义意味着它们不仅作为可交易资产具有收入,而且反映了可持续实践并具有切实的现实世界效用。",
         "answer1_2": "它们在全球共有能源中交易。我们的世界充满了贫困和能源压力。我们看到一种在增加能源的同时投资社区的方式。制造氢气需要消耗用于发电的绿色碳氢化合物。这是利用我们所拥有的来减少我们看到的压力。",
         "answer1_3": "我们的能源包括我们制造的产品,如氢气和绿色碳氢化合物,来自太阳能和风能的电能,热能以及我们处理生物质时的碳修复能源。其他接近其提取（如铀）、设备生命周期和在全球生态系统中的地位的能源也可能属于 GC 能源。",
         "answer1_4": "一些事物是 GC 的,如潮汐能、 OTEC 等等。它们都必须有效利用才能成为 GC。",
-        "question2": "从您的市场购买 NFT 究竟会得到什么？",
+        "question2": "从您的市场购买 NFT 究竟会得到什么?",
         "answer2_1": "比特币挖矿是创建新比特币并将交易添加到区块链的过程,区块链是比特币网络中所有交易的去中心化分类账。它涉及解决验证和安全交易的复杂数学问题。",
         "answer2_2": "我们看到通过贡献 GFE 并进行测量来准确衡量价值的重要性。随着我们增加 GC 能源,我们将改善我们测量挖矿能源提取的需求和能源。",
         "question3": "质押",
         "answer3_1": "我们在我们的公会转型服务中提供质押选项。这些选项在 NFT 可用地方和全球公会提供。当我们有传统的区块链挖矿时,它们将以我们的批量率提供。这是服务器托管一种形式中的质押的一个例子,到达有效点时,我们将运作一个 GFE 池。",
-        "answer3_2": "当地 DAPPr NFT 具有公会转型服务,如生物柴油和氢气、填埋场和矿山尾矿治理,以及注塑。此外,我们还为培训处理提供 AI 托管；既在公会拥有的设备上,也在客户提供的平台上托管。",
+        "answer3_2": "当地 DAPPr NFT 具有公会转型服务,如生物柴油和氢气、填埋场和矿山尾矿治理,以及注塑。此外,我们还为培训处理提供 AI 托管;既在公会拥有的设备上,也在客户提供的平台上托管。",
         "answer3_3": "最后,我们作为公会赞助工作,包括新的 DAPPr 单元和扩展到 OTEC 平台,用于海洋治理平台。这些以及其他能源和人权项目都能够作为全球基金。我们期待为非洲安装 GC MRI 的电力容量。",
-        "question4": "NFT 调试如何工作？",
+        "question4": "NFT 调试如何工作?",
         "answer4_1": "我们的 20' DAPPr 1 易于部分组装,并在当地发达城市完成。每个城市公会发展的选择是发展和利用当地资源,并调整我们供应的产品以适应当地的组装和制造能力。",
         "answer4_2": "我们的 DAPPr 客户有 1-2 年的开发、现场和调试历程。这是我们正在地球上建造的一项全球资产。50 年的环境故事。他们拥有风能和太阳能等现场电力收集设备。我们提供其余设备并运营系统。",
-        "answer4_3": "每项资产由 4 方拥有,即土地所有者、公会、生态系统和该地区的成员 DAO。该资产的价值取决于其电气总线设计；20' 集装箱中的 350kw。"
+        "answer4_3": "每项资产由 4 方拥有,即土地所有者、公会、生态系统和该地区的成员 DAO。该资产的价值取决于其电气总线设计;20' 集装箱中的 350kw。"
       }
     },
     "miner_hosting": {
@@ -370,7 +370,7 @@
         "description": null
       },
       "whySunbelt": {
-        "title": "为什么选择Sunbelt？",
+        "title": "为什么选择Sunbelt?",
         "subtitle": "我们拥有自己的发电厂、强大团队、最佳合作伙伴支持,构建我们独特的基础设施,为用户提供可持续的挖矿服务,并在未来的可靠性、稳定性、盈利能力和信心方面提供支持。",
         "description": null
       },
@@ -425,19 +425,19 @@
       "MarketCap": "市值",
       "sunbeltRenewableMining": "开始使用太阳带可再生挖矿",
       "bitcoin_mining01": {
-        "question": "什么是比特币挖矿？",
+        "question": "什么是比特币挖矿?",
         "answer": "比特币挖矿是创建新比特币并将交易添加到区块链的过程,区块链是比特币网络中所有交易的去中心化账本。它涉及解决复杂的数学问题,验证和保护网络上的交易。"
       },
       "bitcoin_mining02": {
-        "question": "什么是比特币挖矿？",
+        "question": "什么是比特币挖矿?",
         "answer": "比特币挖矿是创建新比特币并将交易添加到区块链的过程,区块链是比特币网络中所有交易的去中心化账本。它涉及解决复杂的数学问题,验证和保护网络上的交易。"
       },
       "bitcoin_mining03": {
-        "question": "什么是比特币挖矿？",
+        "question": "什么是比特币挖矿?",
         "answer": "比特币挖矿是创建新比特币并将交易添加到区块链的过程,区块链是比特币网络中所有交易的去中心化账本。它涉及解决复杂的数学问题,验证和保护网络上的交易。"
       },
       "bitcoin_mining04": {
-        "question": "什么是比特币挖矿？",
+        "question": "什么是比特币挖矿?",
         "answer": "比特币挖矿是创建新比特币并将交易添加到区块链的过程,区块链是比特币网络中所有交易的去中心化账本。它涉及解决复杂的数学问题,验证和保护网络上的交易。"
       },
       "contact_us": {
@@ -485,7 +485,7 @@
     },
     "unsubscribe": {
       "unsubscribe": "取消订阅",
-      "unsubscribe_content": "希望停止接收我们的更新？ 没问题,您可以完全控制您的订阅状态。 要停止接收任何进一步的电子邮件、财务见解和市场趋势,请点击下面的'取消订阅'按钮。",
+      "unsubscribe_content": "希望停止接收我们的更新? 没问题,您可以完全控制您的订阅状态。 要停止接收任何进一步的电子邮件、财务见解和市场趋势,请点击下面的'取消订阅'按钮。",
       "unsubscribe_success": "您已成功取消订阅我们的通讯。",
       "unsubscribe_email_not_exist": "您未订阅我们的通讯。",
       "enter_valid_email": "请输入有效的电子邮件地址。"
@@ -497,7 +497,7 @@
       "blogs": "博客",
       "news": "新闻",
       "upcoming_events": "即将到来的活动",
-      "upcoming_events_description": "敬请关注我们下一个激动人心的活动,在这里,创新与社区相遇！ 加入我们,获得充满见解、网络机会和加密货币挖矿领域最新发展的丰富体验。",
+      "upcoming_events_description": "敬请关注我们下一个激动人心的活动,在这里,创新与社区相遇! 加入我们,获得充满见解、网络机会和加密货币挖矿领域最新发展的丰富体验。",
       "no_blogs_found": "未找到博客",
       "no_news_found": "未找到新闻",
       "no_upcoming_events_found": "未找到即将到来的活动",
@@ -511,14 +511,14 @@
       "robust_framework": "强大框架",
       "sub_dao": "子DAO",
       "about_gips": "关于GIPs",
-      "what_are_gips": "GIPs是什么？",
+      "what_are_gips": "GIPs是什么?",
       "what_are_gips_description": "GFE改进提案（GIPs）是描述作者使用的方式的文件,作者使用GIPs来提出变更,了解和记录社区对所建议变更的看法,以及提供所建议升级的技术规范和实现。",
       "learn_more": "了解更多",
       "gips_are_used_for": "GIPs被用于",
       "propose_changes": "提出变更",
       "documenting_community_sentiment": "记录社区情绪",
       "providing_technical_spec": "提供技术规范和实现建议升级",
-      "how_participate_gfe": "我如何参与GFE治理？",
+      "how_participate_gfe": "我如何参与GFE治理?",
       "how_participate_gfe_description": "欢迎社区中的每个人参与Polygon治理。",
       "join_our_forum": "加入我们的论坛",
       "stake_gfe": "抵押GFE",
@@ -538,7 +538,7 @@
     "guild": {
       "join_guild_in_your_area": "加入您所在地区的公会",
       "join_gfe_guild": "加入GFE公会",
-      "join_gfe_guild_description": "GFE行会完全是为了那种氛围！它们就像是你的秘密社团,贡献改变,分享知识,举办聚会、黑客马拉松和研讨会。作为一个行会领袖,你可以参与其中,为使世界变得更美好和与社区互动做出贡献。这是塑造世界并对可持续环境产生真正影响的机会。",
+      "join_gfe_guild_description": "GFE行会完全是为了那种氛围!它们就像是你的秘密社团,贡献改变,分享知识,举办聚会、黑客马拉松和研讨会。作为一个行会领袖,你可以参与其中,为使世界变得更美好和与社区互动做出贡献。这是塑造世界并对可持续环境产生真正影响的机会。",
       "start_guild": "创建公会",
       "explore_guild_near_you": "探索附近的公会",
       "feature": "特点",
@@ -547,8 +547,8 @@
       "connect_and_collab": "连接与合作",
       "connect_and_collab_description": "与志同道合的人联系,与其他公会成员建立网络,并组建团队开始建立可持续的本地产业。",
       "learn": "学习",
-      "learn_description": "找到志同道合的人；对一切事物充满热情,与其他公会成员建立网络,并组建团队开始建立可持续的本地产业。",
-      "ready_to_lead_guild": "准备领导一支公会吗？",
+      "learn_description": "找到志同道合的人;对一切事物充满热情,与其他公会成员建立网络,并组建团队开始建立可持续的本地产业。",
+      "ready_to_lead_guild": "准备领导一支公会吗?",
       "ready_to_lead_guild_description": "GFE社区正在寻找公会法师。",
       "represent_gfe_community": "代表GFE社区",
       "take_on_leadership_roles": "担任领导职务",
@@ -593,9 +593,9 @@
       "acceptance_of_terms_content": "通过访问网站www.gfe.foundation（'网站'）,您同意受这些网站条款和条件（'条款'）、所有适用的法律和法规的约束,并同意您有责任遵守任何适用的当地法律。如果您不同意这些条款中的任何一项,则禁止您使用或访问本网站。",
       "use_license": "使用许可",
       "use_license_content": "GFE基金会网站上的材料（信息或软件）只允许您暂时性地下载一份副本,仅用于个人、非商业临时查看。这是一项许可,而非所有权转让,在此许可下,您不得:",
-      "use_license_content_list_1": "修改或复制材料；",
-      "use_license_content_list_2": "尝试反编译或反向工程GFE基金会网站中包含的任何软件；",
-      "use_license_content_list_3": "从材料中删除任何版权或其他专有标记；",
+      "use_license_content_list_1": "修改或复制材料;",
+      "use_license_content_list_2": "尝试反编译或反向工程GFE基金会网站中包含的任何软件;",
+      "use_license_content_list_3": "从材料中删除任何版权或其他专有标记;",
       "use_license_content_list_4": "将材料转移给其他人或在任何其他服务器上'镜像'材料。",
       "disclaimer": "免责声明",
       "disclaimer_content": "GFE基金会网站上的材料按原样提供。GFE基金会不提供任何明示或暗示的担保,并在此放弃和否认所有其他担保,包括但不限于适销性、特定目的适用性或对知识产权的侵权或其他权利侵犯等暗示担保或条件。此外,GFE基金会并不担保或对网站上的材料的准确性、可能结果或可靠性,或相关材料或任何链接到本网站的其他站点做出任何陈述。",
@@ -678,14 +678,14 @@
         "audit":"审计",
         "whitepaper":"白皮书",
         "new":"新",
-        "nft_landing_page":"NFT 官方登陆页面已正式启动！ 🎉",
+        "nft_landing_page":"NFT 官方登陆页面已正式启动! 🎉",
         "something_went_wrong": "出现问题",
         "transaction_completed": "您的交易已成功完成,交易哈希为:",
         "please_connect_your_wallet": "请连接您的钱包",
         "not_started_yet": "尚未开始...",
         "ICO_has_ended": "ICO 已结束",
         "ICO_has_halted": "ICO 已停止",
-        "buy": "在价格上涨前买入！",
+        "buy": "在价格上涨前买入!",
         "countdown": "价格上涨倒计时",
         "minted": "铸造的 GFE 代币:",
         "pay_with": "付款方式",
@@ -713,7 +713,7 @@
           "mining_period": "挖矿周期",
           "select_period": "选择周期",
           "start_mining": "开始挖矿"
-        },
+        }
       },
       "setting": {
         "title": "设置",
@@ -743,7 +743,7 @@
         "voting_power": {
           "title": "投票权",
           "manage": "管理您的投票权",
-          "delegated": "您未被委托！",
+          "delegated": "您未被委托!",
           "description": "测试中,代币决定投票权。他们必须在下一个要考虑的提案开始之前被委托。",
           "delegate": "委托",
           "connect": "连接您的钱包以查看您的投票权",
@@ -849,8 +849,8 @@
         "step": "步骤",
         "of": "的",
         "have_to_connect_wallet": "您必须先连接您的钱包",
-        "proposal_submitted_successfully": "您的提案已成功提交！",
-        "something_went_wrong": "出现问题！",
+        "proposal_submitted_successfully": "您的提案已成功提交!",
+        "something_went_wrong": "出现问题!",
         "add_actions_form": {
           "add_action": "添加操作",
           "description": "如果投票通过,将执行此操作。一种常见的自动操作是,如果他们的提案通过投票,则将资金转移到公会或个人",
@@ -898,7 +898,7 @@
         "proposal_submission": "提案提交已成功取消",
         "failed_cancel": "无法取消提交",
         "confirmmodal_title": "取消提案提交",
-        "confirmmodal_description": "您确定要取消提交吗？此操作无法撤消。"
+        "confirmmodal_description": "您确定要取消提交吗?此操作无法撤消。"
       },
       "confirm-modal": {
         "close": "关闭",
@@ -908,13 +908,13 @@
         "reply_deleted_success": "回复已成功删除",
         "reply_deleted_failed": "删除回复失败",
         "confirmmodal_title": "已删除回复",
-        "confirmmodal_description": "您确定要删除此回复吗？此操作无法撤消。"
+        "confirmmodal_description": "您确定要删除此回复吗?此操作无法撤消。"
       },
       "delete-topic-confirm-modal": {
         "topic_deleted_success": "主题已成功删除",
         "topic_deleted_failed": "删除主题失败",
         "confirmmodal_title": "删除主题",
-        "confirmmodal_description": "您确定要删除此主题吗？此操作无法撤消。"
+        "confirmmodal_description": "您确定要删除此主题吗?此操作无法撤消。"
       },
       "reply-edit-modal": {
         "must_input_here": "您必须在此处输入内容。",
@@ -961,48 +961,48 @@
       }
     },
     "forgot-password": {
-      "verification_code_has_been_sent": "验证码已发送！",
-      "something_went_wrong": "出现错误！",
+      "verification_code_has_been_sent": "验证码已发送!",
+      "something_went_wrong": "出现错误!",
       "user_not_found": "未找到用户",
-      "forgot_password": "忘记密码？",
+      "forgot_password": "忘记密码?",
       "enter_the_email": "输入与您的帐户关联的电子邮件地址。我们将向您发送重置密码的链接。",
       "email": "电子邮件",
       "continue": "继续",
-      "already_have_an_account": "已有帐户？",
+      "already_have_an_account": "已有帐户?",
       "sign_in": "登录"
     },
     "reset-password": {
-      "your_password_has_been_reset_successfully": "您的密码已成功重置！",
-      "something_went_wrong": "出现错误！请重试。",
+      "your_password_has_been_reset_successfully": "您的密码已成功重置!",
+      "something_went_wrong": "出现错误!请重试。",
       "invalid_token": "令牌无效。请重试。",
       "user_not_found": "未找到用户",
       "token_expired": "令牌已过期。请重试。",
-      "reset_password": "重置密码？",
+      "reset_password": "重置密码?",
       "create_new_password": "为您的帐户创建一个新的安全密码。一个强大而独特的密码将立即授予您帐户的访问权限。",
       "password": "密码",
-      "already_have_an_account": "已有帐户？",
+      "already_have_an_account": "已有帐户?",
       "sign_in": "登录"
     },
     "signin":{
       "invalid_email_address":"电子邮件地址无效",
       "password_at_least":"密码必须至少包含 8 个字符",
-      "complete_recaptcha":"请完成验证码！",
-      "something_went_wrong":"出现错误！请重试。",
-      "welcome_back":"欢迎回到 GFE Foundation！",
+      "complete_recaptcha":"请完成验证码!",
+      "something_went_wrong":"出现错误!请重试。",
+      "welcome_back":"欢迎回到 GFE Foundation!",
       "welcome_to":"欢迎来到",
       "gfe_foundation":"GFE Foundation",
       "continue_with_google":"继续使用 Google",
       "or":"或",
       "email":"电子邮件",
       "password":"密码",
-      "forgot_password":"忘记密码？",
+      "forgot_password":"忘记密码?",
       "remember_me":"记住我",
       "accept":"登录即表示您接受",
       "signin":"登录",
       "terms_conditions":"条款和条件",
       "and":"和",
       "privacy_policy": "隐私政策",
-      "dont_have_an_account": "您没有账户吗？",
+      "dont_have_an_account": "您没有账户吗?",
       "register": "注册"
     },
     "signup":{
@@ -1011,9 +1011,9 @@
       "only_alphabets":"只允许使用字母,不能有空格",
       "invalid_email_address":"电子邮件地址无效",
       "password_at_least":"密码必须至少包含 8 个字符",
-      "successfully_created":"您的帐户已成功创建！",
-      "something_went_wrong":"出现错误！请重试。",
-      "welcome_back":"欢迎回到 GFE Foundation！",
+      "successfully_created":"您的帐户已成功创建!",
+      "something_went_wrong":"出现错误!请重试。",
+      "welcome_back":"欢迎回到 GFE Foundation!",
       "welcome_to":"欢迎来到",
       "gfe_foundation":"GFE Foundation",
       "continue_with_google":"继续使用 Google",
@@ -1027,23 +1027,23 @@
       "terms_conditions":"条款和条件",
       "and":"和",
       "privacy_policy":"隐私政策",
-      "already_have_an_account":"已有帐户？",
+      "already_have_an_account":"已有帐户?",
       "signin":"登录"
     },
     "verify":{
       "enter_valid_virification_code":"请输入有效的验证码",
-      "verified_successfully":"您的帐户已成功验证！",
-      "something_went_wrong":"出现错误！",
+      "verified_successfully":"您的帐户已成功验证!",
+      "something_went_wrong":"出现错误!",
       "invalid_verification":"验证码无效",
       "expired_verification":"验证码已过期",
       "user_not_Found":"未找到用户",
-      "virification_sent":"验证码已发送！",
-      "unauthorized":"您未获得授权！",
+      "virification_sent":"验证码已发送!",
+      "unauthorized":"您未获得授权!",
       "too_many_attempts":"您已超过最大尝试次数",
       "verification":"验证",
       "description":"为了帮助维护一个值得信赖的社区,请验证您的帐户。它快速、简单且安全。",
       "continue":"继续",
-      "receive_the_code":"没有收到代码？",
+      "receive_the_code":"没有收到代码?",
       "try_again":"再试一次"
     }
   }
