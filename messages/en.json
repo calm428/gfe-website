@@ -982,7 +982,6 @@
       "password": "Password",
       "already_have_an_account": "Already have an account? ",
       "sign_in": "Sign In"
-
     }, 
     "signin": {
       "invalid_email_address": "Invalid email address",

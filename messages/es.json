@@ -971,5 +971,17 @@
       "already_have_an_account": "¿Ya tiene una cuenta? ",
       "sign_in": "Iniciar sesión"
     },
+    "reset-password": {
+      "your_password_has_been_reset_successfully": "¡Su contraseña se ha restablecido correctamente!",
+      "something_went_wrong": "¡Algo salió mal! Inténtelo de nuevo.",
+      "invalid_token": "Token inválido. Inténtelo de nuevo.",
+      "user_not_found": "Usuario no encontrado",
+      "token_expired": "Token expirado. Inténtelo de nuevo.",
+      "reset_password": "¿Restablecer contraseña?",
+      "create_new_password": "Cree una nueva contraseña segura para su cuenta. Una contraseña segura y única le otorgará acceso inmediato a su cuenta.",
+      "password": "Contraseña",
+      "already_have_an_account": "¿Ya tiene una cuenta? ",
+      "sign_in": "Iniciar sesión"
+    },
   },
 }

@@ -971,5 +971,17 @@
       "already_have_an_account": "已有帐户？",
       "sign_in": "登录"
     },
+    "reset-password": {
+      "your_password_has_been_reset_successfully": "您的密码已成功重置！",
+      "something_went_wrong": "出现错误！请重试。",
+      "invalid_token": "令牌无效。请重试。",
+      "user_not_found": "未找到用户",
+      "token_expired": "令牌已过期。请重试。",
+      "reset_password": "重置密码？",
+      "create_new_password": "为您的帐户创建一个新的安全密码。一个强大而独特的密码将立即授予您帐户的访问权限。",
+      "password": "密码",
+      "already_have_an_account": "已有帐户？",
+      "sign_in": "登录"
+    },
   }
 }
