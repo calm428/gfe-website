@@ -983,5 +983,27 @@
       "already_have_an_account": "¿Ya tiene una cuenta? ",
       "sign_in": "Iniciar sesión"
     },
+    "signin": {
+      "invalid_email_address": "Dirección de correo electrónico no válida",
+      "password_at_least": "La contraseña debe tener al menos 8 caracteres",
+      "complete_recaptcha": "¡Complete el captcha!",
+      "something_went_wrong": "¡Algo salió mal! Inténtelo nuevamente.",
+      "welcome_back": "¡Bienvenido nuevamente a GFE Foundation!",
+      "welcome_to": "Bienvenido a ",
+      "gfe_foundation": "Fundación GFE",
+      "continue_with_google": "Continuar con Google",
+      "or": "O",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "forgot_password": "¿Olvidó su contraseña?",
+      "remember_me": "Recuérdeme",
+      "accept": "Al iniciar sesión, acepta los ",
+      "signin": "Iniciar sesión",
+      "terms_conditions": "Términos & Condiciones",
+      "and": "y la ",
+      "privacy_policy": "Política de privacidad",
+      "dont_have_an_account": "¿No tienes una cuenta? ",
+      "register": "Registrarse"
+    },
   },
 }
