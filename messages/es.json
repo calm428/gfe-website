@@ -12,6 +12,13 @@
     "buy_now": "Comprar Ahora",
     "launch_text": "¡La página oficial de lanzamiento de NFT se ha lanzado oficialmente! 🎉",
     "something_went_wrong": "¡Algo salió mal!",
+    "try_again": "Inténtalo de nuevo",
+      "language": {
+      "en": "Inglés",
+      "cn": "Chino",
+      "es": "Español",
+      "in": "Hindi"
+    },
     "home": {
       "section1": {
         "title": "Energía Fungible Verde",
@@ -94,7 +101,9 @@
       "enter_valid_email": "Por favor ingresa una dirección de correo electrónico válida.",
       "subscribe": "Suscribirse",
       "subscribe_success": "Te has suscrito satisfactoriamente a nuestro boletín.",
-      "subscribe_email_already_exists": "Esta dirección de correo electrónico ya está suscrita."
+      "subscribe_email_already_exists": "Esta dirección de correo electrónico ya está suscrita.",
+      "privacy_policy": "Política de privacidad",
+      "terms_and_conditions": "Términos y condiciones"
     },
     "contact_us": {
       "bookMeetingTitle": "Reservar una reunión",
@@ -441,30 +450,38 @@
       "nft": "NFT",
       "community": "Comunidad",
       "about_us": "Acerca de nosotros",
-      "about_us_description": "Sumérgete en la misión de la Fundación GFE y el apasionado equipo detrás de ella",
-      "blogs_and_news": "Blogs y Noticias",
-      "contacts": "Contáctanos",
+      "about_us_description": "Sumérjase en la misión de la Fundación GFE y el apasionado equipo que la respalda",
+      "blogs_and_news": "Blogs y noticias",
+      "contacts": "Contáctenos",
       "sign_in": "Iniciar sesión",
-      "launch_app": "Iniciar Aplicación",
+      "launch_app": "Iniciar aplicación",
       "social": "Social",
       "governance": "Gobernanza",
-      "governance_description": "Participa en la formación de las iniciativas de energía verde de la Fundación GFE",
+      "governance_description": "Participe en la configuración de las iniciativas de energía verde de la Fundación GFE",
       "guilds": "Gremios",
-      "guilds_description": "Únete a una unidad local de GFE para colaborar en soluciones ambientales",
+      "guilds_description": "Únase a una unidad local de GFE para colaborar en soluciones ambientales",
       "gfe_forum": "Foro de GFE",
-      "gfe_forum_description": "Participa e impulsa discusiones en todo el ecosistema de GFE",
-      "learn": "Aprender",
+      "gfe_forum_description": "Participe e impulse debates en toda la GFE Ecosistema",
+      "learn": "Aprende",
       "learn_description": "Obtén más información sobre nuestros proyectos e iniciativas",
       "blogs_and_news_description": "Mantente actualizado sobre los avances de blockchain a través de nuestras últimas publicaciones",
       "documentation": "Documentación",
       "documentation_description": "Explora nuestros protocolos y tecnologías a través de nuestros recursos detallados",
       "industries": "Industrias",
-      "token_functionalities": "Funcionalidades del Token",
+      "token_functionalities": "Funcionalidades de token",
       "blockchain": "Blockchain",
-      "block_explorer": "Block Explorer",
+      "block_explorer": "Explorador de bloques",
       "faucet": "Faucet",
       "block_explorer_description": "Ver transacciones en la blockchain",
-      "faucet_description": "Obtener ETH gratis y otros activos criptográficos"
+      "faucet_description": "Obtén ETH gratis y otros criptoactivos",
+      "ico": "ICO",
+      "electricity": "Electricidad",
+      "mining": "Minería",
+      "dao": "DAO",
+      "setting": "Configuración",
+      "logout": "Cerrar sesión",
+      "wallet_label": "Conectar billetera",
+      "wallet_loading_label": "Conectando..."
     },
     "unsubscribe": {
       "unsubscribe": "Desuscribirse",
@@ -557,6 +574,7 @@
       "how_we_use_your_information": "Cómo Utilizamos Tu Información",
       "how_we_use_your_information_content": "Utilizamos la información recopilada por varias razones, incluyendo, entre otras, servicio al cliente, análisis de datos, operación, mantenimiento de nuestro sitio web y cumplimiento de nuestras obligaciones legales. Tus datos también se utilizan con fines promocionales solo si das tu consentimiento. Tienes el derecho de retirar dicho consentimiento en cualquier momento.",
       "disclosure_of_your_information": "GFE Foundation nunca comerciará, alquilará o venderá tu información personal a terceros. Sin embargo, podemos compartir tus datos personales con proveedores o contratistas de terceros que asistan en nuestra operación y mantengan la confidencialidad en el procesamiento de tus pedidos.",
+      "disclosure_of_your_information_content": "La Fundación GFE nunca comercializará, alquilará ni venderá su información personal a terceros. Sin embargo, podemos compartir sus datos personales con proveedores o contratistas externos que colaboran en nuestra operación y mantienen la confidencialidad en el procesamiento de sus pedidos.",
       "security_of_your_information": "Seguridad de Tu Información",
       "security_of_your_information_content": "Implementamos procedimientos físicos y electrónicos adecuados para proteger y asegurar la información personal que recopilamos en línea contra el acceso o divulgación no autorizados.",
       "cookies": "Cookies",
@@ -594,6 +612,23 @@
       "contact_us": "Contáctenos",
       "contact_us_content": "Si tiene alguna pregunta sobre estos Términos, contáctenos en contact@gfe.foundation.",
       "note": "Tenga en cuenta que los Términos y Condiciones de Uso se aplican únicamente a nuestras actividades en línea y son válidos para los visitantes de nuestro sitio web en lo que respecta a la información que comparten y/o recopilan en GFE Foundation."
-    }
+    },
+    "faucet": {
+      "title": "Grifo GFE",
+      "panel_title1": "Instrucciones",
+      "panel_title2": "Agregue su dirección de red de prueba GFE",
+      "panel_title3": "Desafío de verificación",
+      "button_text1": "INICIAR",
+      "button_text2": "CONTINUAR",
+      "button_text3": "FINALIZAR",
+      "description1": "Si es un desarrollador que prueba la red GFE o configura un nodo en la red de prueba, puede obtener tokens GFE de prueba a través de este grifo.",
+      "description2": "Si es un desarrollador que prueba la red GFE o configura un nodo en la red de prueba, puede obtener tokens GFE de prueba a través de este grifo.",
+      "description3": "Lo sentimos, pero no podemos conectarnos al servidor del grifo en este momento. Intente volver a conectarse después de un rato.",
+      "default_input": "Dirección de billetera GFE",
+      "requirements": "Obligatorio",
+      "example": "Ejemplo: ",
+      "invalid_format": "Formato de dirección GFE no válido.",
+      "correct_format": "Formato de dirección GFE correcto. Adelante."
+    },
   }
 }
