@@ -8,6 +8,7 @@ import {
   Tab,
   Tabs,
 } from "@nextui-org/react"
+import { useTranslations } from "next-intl"
 
 export default function ProposalBody({
   description,
@@ -18,10 +19,12 @@ export default function ProposalBody({
   summary: string
   code: string
 }) {
+  const t = useTranslations("main.platform.dao")
+
   return (
     <Card className="w-full border" shadow="none" radius="sm">
       <CardHeader className="flex w-full items-start gap-2">
-        <p className="text-lg">Proposal</p>
+        <p className="text-lg">{t("proposal")}</p>
       </CardHeader>
       <Divider />
       <CardBody>

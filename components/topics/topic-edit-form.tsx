@@ -22,6 +22,7 @@ import { MdCategory } from "react-icons/md"
 import makeAnimated from "react-select/animated"
 import useSWR from "swr"
 import { z } from "zod"
+import { useTranslations } from "next-intl"
 
 const ReactQuill =
   typeof window === "object" ? require("react-quill") : () => false
@@ -101,21 +102,22 @@ export default function TopicEditForm({ topic }: { topic: any }) {
   const [categoryOptions, setCategoryOptions] = useState<IOption[]>([])
   const [tagOptions, setTagOptions] = useState<IOption[]>([])
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const t = useTranslations("main.forum.topic-edit-form")
 
   const formSchema = z.object({
-    title: z.string().min(1, { message: "Title is required" }),
+    title: z.string().min(1, { message: t("title_is_required") }),
     content: z
       .string()
       .refine((value) => value.replace(/<[^>]*>?/gm, "").trim(), {
-        message: "You must input your content here",
+        message: t("title_is_required"),
       }),
     category: z
       .object({ value: z.string(), label: z.string() })
       .refine((value) => value !== null, {
-        message: "You must select a category",
+        message: t("must_select_category"),
       }),
     tags: z.array(z.object({ value: z.string(), label: z.string() })).min(1, {
-      message: "You must select at least one tag",
+      message: t("must_select_tag"),
     }),
   })
 
@@ -164,16 +166,16 @@ export default function TopicEditForm({ topic }: { topic: any }) {
       })
 
       if (res.ok) {
-        toast.success("Topic updated successfully", {
+        toast.success(t("updated_successfully"), {
           position: "top-right",
         })
       } else {
-        toast.error("Failed to update topic", {
+        toast.error(t("failed_update_topic"), {
           position: "top-right",
         })
       }
     } catch (error) {
-      toast.error("Failed to update topic", {
+      toast.error(t("failed_update_topic"), {
         position: "top-right",
       })
     } finally {
@@ -216,7 +218,7 @@ export default function TopicEditForm({ topic }: { topic: any }) {
             <div className="flex w-full flex-col">
               <Input
                 {...field}
-                placeholder="Title"
+                placeholder={t("title")}
                 variant="flat"
                 size="lg"
                 classNames={{
@@ -252,7 +254,7 @@ export default function TopicEditForm({ topic }: { topic: any }) {
                   }}
                   isLoading={fetchedCategoriesLoading}
                   isSearchable
-                  placeholder="Select category"
+                  placeholder={t("select_category")}
                   options={categoryOptions}
                 />
                 {errors.category && (
@@ -285,7 +287,7 @@ export default function TopicEditForm({ topic }: { topic: any }) {
                   isMulti
                   isClearable
                   isSearchable
-                  placeholder="Select tags"
+                  placeholder={t("select_tags")}
                   options={tagOptions}
                 />
                 {errors.tags && (
@@ -307,7 +309,7 @@ export default function TopicEditForm({ topic }: { topic: any }) {
                 theme="bubble"
                 modules={modules}
                 formats={formats}
-                placeholder="Type your content here..."
+                placeholder={t("type_here")}
                 style={{ minHeight: "calc(100vh - 21rem)" }}
               />
               {errors.content && (
@@ -330,7 +332,7 @@ export default function TopicEditForm({ topic }: { topic: any }) {
               !isSubmitting ? <FaRegSave className="size-4" /> : null
             }
           >
-            Save
+            {t("save")}
           </Button>
         </div>
       </form>

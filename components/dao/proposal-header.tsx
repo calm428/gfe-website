@@ -10,6 +10,7 @@ import {
 } from "@nextui-org/react"
 import dayjs from "dayjs"
 import { RxDotFilled } from "react-icons/rx"
+import { useTranslations } from "next-intl"
 
 import StatusChip from "./status-chip"
 import VoteModal from "./vote-modal"
@@ -32,6 +33,8 @@ export default function ProposalHeader({
   user,
   createdAt,
 }: ProposalHeaderProps) {
+  const t = useTranslations("main.platform.dao")
+
   return (
     <Card className="mt-8 w-full border" shadow="none" radius="sm">
       <CardHeader className="flex w-full items-end gap-2">
@@ -46,7 +49,7 @@ export default function ProposalHeader({
               radius="sm"
               // className="ml-auto mt-4 w-fit bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
             >
-              Vote onchain
+              {t("vote_onchain")}
             </Button>
           </VoteModal>
         </div>
@@ -64,7 +67,7 @@ export default function ProposalHeader({
         <RxDotFilled />
         <div>
           <span className="text-xs text-gray-500 sm:text-sm">
-            Proposed on: {dayjs(createdAt).format("MMM D, YYYY")}
+            {t("proposed_on")} {dayjs(createdAt).format("MMM D, YYYY")}
           </span>
         </div>
       </CardBody>

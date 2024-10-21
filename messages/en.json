@@ -647,7 +647,26 @@
         "queued": "QUEUED",
         "expired": "EXPIRED", 
         "executed": "EXECUTED",
-        "locale": "en-US"
+        "locale": "en-US",
+        "connect_wallet": "Please connect your wallet",
+        "successfully voted": "You successfully voted",
+        "something-went_wrong": "Something went wrong",
+        "voting": "Voting",
+        "voting_power": "Voting Power",
+        "my_voting_power": "My voting power",
+        "for": "For",
+        "against": "Against",
+        "abstain": "Abstain",
+        "submit": "Submit",
+        "draft_created": "Draft Created",
+        "published_onchain": "Published onchain",
+        "voting_period_started": "Voting period started",
+        "voting_period_ended": "Voting period ended",
+        "proposal_queued": "Proposal queued",
+        "execute_proposal": "Execute proposal",
+        "status": "Status",
+        "vote_onchain": "Vote onchain",
+        "proposed_on": "Proposed on: "
       },
       "electricity": {
         "electricity": "Electricity",
@@ -660,7 +679,18 @@
         "whitepaper": "Whitepaper",
         "new": "New", 
         "nft_landing_page": "NFT Official landing page has officially launched! 🎉",
-        "sth_wrong": "Something went wrong"
+        "something_went_wrong": "Something went wrong",
+        "transaction_completed": "Your Transaction completed successfully with transaction hash: ",
+        "please_connect_your_wallet": "Please connect your wallet",
+        "not_started_yet": "Not started ye...",
+        "ICO_has_ended": "The ICO has ended",
+        "ICO_has_halted": "The ICO has been halted",
+        "buy": "Buy In Before Price Increases!",
+        "countdown": "Countdown until price increases",
+        "minted": " Minted GFE Tokens: ",
+        "pay_with": "Pay with",
+        "receive GFE": "Receive GFE",
+        "buy_now": "Buy Now"
       },
       "mining": {
         "mining": "Mining",
@@ -687,6 +717,14 @@
       },
       "setting": {
         "title": "Setting",
+        "avatar": {
+          "avatar_updated_successfully": "Avatar updated successfully",
+          "something_went_wrong": "Something went wrong",
+          "user_not_found": "User not found",
+          "change_avatar": "Change Avatar",
+          "close": "Close",
+          "save": "Save"
+        },
         "profile": {
           "title": "Profile",
           "my_profile": "My Profile",
@@ -750,6 +788,14 @@
       "description": "Participate in key discussions and decision-making",
       "search": "Search",
       "topic_not_found": "Topic not found",
+      "topic": "Topic",
+      "replies": "Replies",
+      "views": "Views",
+      "activity": "Activity",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "publish": "Publish",
+      "reply": "Reply",
       "new": {
         "new_topic": "New Topic",
         "title": "Title",
@@ -767,10 +813,6 @@
       "edit": {
         "topic_not_found": "Topic not found"
       },
-      "topic": "Topic",
-      "replies": "Replies",
-      "views": "Views",
-      "activity": "Activity",
       "categories": {
         "title": "Categories",
         "general": "General",
@@ -817,6 +859,9 @@
         "new_proposal": "New proposal",
         "step": "Step",
         "of": "of",
+        "have_to_connect_wallet": "You have to connect your wallet first",
+        "proposal_submitted_successfully": "Your proposal has submitted successfully!",
+        "something_went_wrong": "Something went wrong!",
         "add_actions_form": {
           "add_action": "Add action",
           "description": "This action will execute if the vote passes. A common automatic action is transferring funds to a guild or person if their proposal passes a vote",
@@ -860,10 +905,6 @@
           "submit": "Submit"
         }
       },
-      "submit": "Submit",
-      "cancel": "Cancel",
-      "publish": "Publish",
-      "reply": "Reply",
       "cancel-submission-confirm-modal": {
         "proposal_submission": "Proposal submission canceled successfully",
         "failed_cancel": "Failed to cancel submission",
@@ -885,6 +926,49 @@
         "topic_deleted_failed": "Failed to delete topic",
         "confirmmodal_title": "Delete topic",
         "confirmmodal_description": "Are you sure you want to delete this topic? This action can't be undone."
+      },
+      "reply-edit-modal": {
+        "must_input_here": "You must input your content here.",
+        "reply_edit_success": "Reply edited successfully",
+        "failed_to_edit_reply": "Failed to edit reply",
+        "modal_title": "Modal Title",
+        "type_here": "Type your content here...",
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "topic-edit-form": {
+        "title_is_required": "Titie is required",
+        "must_input_here":"You must input your content here.",
+        "must_select_category":"You must select a category",
+        "must_select_tag":"You must select at least one tag",
+        "updated_successfully": "Topic updated successfully",
+        "failed_update_topic": "Failed to update topic",
+        "title":  "Title",
+        "select_category":"Select category",
+        "select_tags":"Select tags",
+        "type_here":"Type your content here...",
+        "save":"Save"
+      },
+      "topic-publish-modal": {
+        "have_to_connect_wallet": "You have to connect your wallet first",
+        "proposal_published_successfully": "Proposal published onchain successfully",
+        "failed_to_publish_proposal": "Failed to publish proposal",
+        "publish_proposal": "Publish proposal",
+        "estimated_gas_fee": "Estimate gas fees",
+        "gfe": "GFE",
+        "max_fee": "Max fee",
+        "total_cost": "Total cost",
+        "cancel": "Cancel",
+        "confirm": "Confirm"
+      },
+      "topic-reply-modal": {
+        "must_input_here": "You must input your content here.",
+        "reply_created_success": "Reply created successfully",
+        "failed_to_create_reply": "Failed to create reply",
+        "modal_title": "Modal Title",
+        "type_here": "Type your content here...",
+        "cancel": "Cancel",
+        "reply": "Reply"
       }
     }, 
     "reset-password": {

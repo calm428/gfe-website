@@ -60,7 +60,7 @@ export default function TopicSummaryCard({
           </div>
           {replies && replies.length > 0 && (
             <div className="flex w-fit flex-col">
-              <span className="text-xs uppercase">last reply</span>
+              <span className="text-xs uppercase">{t("last_reply")}</span>
               <User
                 name={replies.slice(-1)[0]?.author?.name || ""}
                 description={dayjs(
@@ -75,7 +75,7 @@ export default function TopicSummaryCard({
           )}
         </div>
         <div className="mx-auto flex w-fit flex-col items-center">
-          <span className="text-xs uppercase">status</span>
+          <span className="text-xs uppercase">{t("status")}</span>
           <Chip
             color={chipColor(topic?.status) as any}
             variant="dot"
@@ -86,15 +86,15 @@ export default function TopicSummaryCard({
         </div>
         <div className="flex w-full justify-between gap-10 sm:mx-auto sm:w-auto">
           <div className="flex w-fit flex-col items-center">
-            <span className="text-xs uppercase">views</span>
+            <span className="text-xs uppercase">{t("views")}</span>
             <span className="my-auto">{topic?.views}</span>
           </div>
           <div className="flex w-fit flex-col items-center">
-            <span className="text-xs uppercase">replies</span>
+            <span className="text-xs uppercase">{t("replies")}</span>
             <span className="my-auto">{topic?.replies}</span>
           </div>
           <div className="flex w-fit flex-col items-center">
-            <span className="text-xs uppercase">likes</span>
+            <span className="text-xs uppercase">{t{"likes"}}</span>
             <span className="my-auto">{topic?.likes}</span>
           </div>
         </div>

@@ -17,6 +17,7 @@ import { Controller, useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import { FaRegSave } from "react-icons/fa"
 import { z } from "zod"
+import { useTranslations } from "next-intl"
 
 import "react-quill/dist/quill.bubble.css"
 
@@ -68,6 +69,7 @@ export default function ReplyEditModal({
   const router = useRouter()
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const t = useTranslations("main.forum.reply-edit-modal")
 
   const enhancedChild = React.cloneElement(children as ReactElement, {
     onPress: onOpen,
@@ -77,7 +79,7 @@ export default function ReplyEditModal({
     content: z
       .string()
       .refine((value) => value.replace(/<[^>]*>?/gm, "").trim(), {
-        message: "You must input your content here",
+        message: t("must_input_here")
       }),
   })
 
@@ -102,13 +104,13 @@ export default function ReplyEditModal({
 
       if (res.success) {
         onOpenChange()
-        toast.success("Reply edited successfully", {
+        toast.success(t("reply_edit_success"), {
           position: "top-right",
         })
 
         router.refresh()
       } else {
-        toast.error("Failed to edit reply", {
+        toast.error(t("failed_to_edit_reply"), {
           position: "top-right",
         })
 
@@ -139,7 +141,7 @@ export default function ReplyEditModal({
               className="relative w-full space-y-2"
             >
               <ModalHeader className="flex flex-col gap-1">
-                Modal Title
+                {t("modal_title")}
               </ModalHeader>
               <ModalBody>
                 <Controller
@@ -152,7 +154,7 @@ export default function ReplyEditModal({
                         theme="bubble"
                         modules={modules}
                         formats={formats}
-                        placeholder="Type your content here..."
+                        placeholder={t("type_here")}
                         style={{ height: "20vh" }}
                       />
                       {errors.content && (
@@ -166,7 +168,7 @@ export default function ReplyEditModal({
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
-                  Cancel
+                  {t("cancel")}
                 </Button>
                 <Button
                   color="primary"
@@ -177,7 +179,7 @@ export default function ReplyEditModal({
                   }
                   className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
                 >
-                  Save
+                  {t("save")}
                 </Button>
               </ModalFooter>
             </form>

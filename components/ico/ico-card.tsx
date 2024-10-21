@@ -128,7 +128,7 @@ function ICOCard() {
           const receipt = await tx.wait()
 
           toast.success(
-            `Your Transaction completed successfully with transaction hash: ${receipt.transactionHash}`,
+            `${t("please_connect_your_wallet")} ${receipt.transactionHash}`,
             {
               position: "top-right",
             }
@@ -136,7 +136,7 @@ function ICOCard() {
 
           console.log("Invest Transaction completed: ", receipt)
         } catch (error) {
-          toast.error(t("sth_wrong"), {
+          toast.error(t("something_went_wrong"), {
             position: "top-right",
           })
 
@@ -144,7 +144,7 @@ function ICOCard() {
         }
       }
     } else {
-      toast.error("Please connect your wallet", {
+      toast.error(t("please_connect_your_wallet"), {
         position: "top-right",
       })
     }
@@ -232,19 +232,19 @@ function ICOCard() {
         <div className="absolute inset-0 z-10 flex items-center justify-center overflow-hidden bg-white/30 backdrop-blur-md">
           {status === "loading" && <Spinner color="primary" size="lg" />}
           {status === "not_started" && (
-            <p className="font-sans text-lg text-primary">Not started yet...</p>
+            <p className="font-sans text-lg text-primary">{t("not_started_yet")}</p>
           )}
           {status === "ended" && (
-            <p className="font-sans text-lg text-primary">The ICO has ended</p>
+            <p className="font-sans text-lg text-primary">{t("ICO_has_ended")}</p>
           )}
           {status === "halted" && (
             <p className="font-sans text-lg text-primary">
-              The ICO has been halted
+              {t("ICO_has_halted")}
             </p>
           )}
           {status === "disconnected" && (
             <p className="font-sans text-lg text-primary">
-              {t("sth_wrong")}
+              {t("something_went_wrong")}
             </p>
           )}
         </div>
@@ -253,10 +253,10 @@ function ICOCard() {
         <div className="flex flex-col gap-[24px] p-6">
           <div className="text-center">
             <h2 className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
-              Buy In Before Price Increases!
+              {t("buy")}
             </h2>
             <p className="font-sans text-[14px] font-medium">
-              Countdown until price increases
+              {t("countdown")}
             </p>
           </div>
           <div className="grid grid-cols-4 gap-1">
@@ -277,7 +277,7 @@ function ICOCard() {
           </div>
           <div className="mt-2 flex flex-col items-center justify-center gap-[5px]">
             <p className=" text-muted-foreground">
-              Minted GFE Tokens:{" "}
+              {t("minted")}
               <span>
                 {Intl.NumberFormat().format(chainData.totalSupply)} /{" "}
                 {Intl.NumberFormat().format(chainData.totalToken)}
@@ -349,7 +349,7 @@ function ICOCard() {
             <div className="grid grid-cols-2 gap-2">
               <div className="flex flex-col gap-[8px]">
                 <p className=" text-muted-foreground text-sm font-semibold">
-                  Pay with {selectedPayment}
+                  {t("pay_with")} {selectedPayment}
                 </p>
                 <Input
                   type="number"
@@ -378,7 +378,7 @@ function ICOCard() {
               </div>
               <div className="flex flex-col gap-[8px]">
                 <p className=" text-muted-foreground text-sm font-semibold">
-                  Receive GFE
+                  {t("recieve_GFE")}
                 </p>
                 <Input
                   type="number"
@@ -409,7 +409,7 @@ function ICOCard() {
             isLoading={isLoadingBuy}
             disabled={status !== "running"}
           >
-            Buy Now
+            {t("buy_now")}
           </Button>
         </div>
       </div>

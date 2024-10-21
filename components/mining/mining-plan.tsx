@@ -29,7 +29,7 @@ export default function MiningPlan({}: MiningPlanProps) {
             className="w-full"
           >
             <SelectItem key="1" value="en">
-              sdf
+              !!!
             </SelectItem>
           </Select>
           <Select
@@ -39,7 +39,7 @@ export default function MiningPlan({}: MiningPlanProps) {
             className="w-full"
           >
             <SelectItem key="1" value="en">
-              sdf
+              ...
             </SelectItem>
           </Select>
           <Select
@@ -49,7 +49,7 @@ export default function MiningPlan({}: MiningPlanProps) {
             className="w-full"
           >
             <SelectItem key="1" value="en">
-              sdf
+              !!!
             </SelectItem>
           </Select>
         </div>

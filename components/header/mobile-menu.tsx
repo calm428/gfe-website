@@ -130,7 +130,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   </div>
                 </Link>
                 <Link
-                  href={"https://faucet.gfe.foundation"}
+                  href={"https://gfe.foundation/faucet"}
                   target="_blank"
                   className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                 >

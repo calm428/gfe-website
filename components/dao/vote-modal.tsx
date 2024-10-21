@@ -30,6 +30,7 @@ import { Addreth, AddrethConfig } from "addreth"
 import { BrowserProvider, Contract, ethers, toBeHex, toBigInt } from "ethers"
 import toast from "react-hot-toast"
 import { HiArrowLongRight } from "react-icons/hi2"
+import { useTranslations } from "next-intl"
 
 import "addreth/styles.css"
 
@@ -48,6 +49,7 @@ export const CustomRadio = (props: RadioProps & { state: string }) => {
     getLabelWrapperProps,
     getControlProps,
   } = useRadio(props)
+  const t = useTranslations("main.platform.dao")
 
   return (
     <Component
@@ -117,7 +119,7 @@ export default function VoteModal({
   const enhancedChild = React.cloneElement(children as ReactElement, {
     onPress: () => {
       if (!isConnected) {
-        toast.error("Please connect your wallet", {
+        toast.error(t("connect_wallet"), {
           position: "top-right",
         })
         return
@@ -139,7 +141,7 @@ export default function VoteModal({
       // Wait for the transaction to be mined
       const receipt = await tx.wait()
 
-      toast.success(`You successfully voted`, {
+      toast.success(t("successfully_voted"), {
         position: "top-right",
       })
 
@@ -147,7 +149,7 @@ export default function VoteModal({
     } catch (error) {
       console.log(error)
 
-      toast.error("Something went wrong", {
+      toast.error(t("something_went_wrong"), {
         position: "top-right",
       })
     } finally {
@@ -203,7 +205,7 @@ export default function VoteModal({
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1 text-2xl">
-                Voting
+                {t("voting")}
               </ModalHeader>
               <ModalBody>
                 <Card shadow="none" className="border">
@@ -223,7 +225,7 @@ export default function VoteModal({
                     <Card shadow="none" className="border">
                       <CardBody>
                         <p className="text-lg font-medium text-gray-500">
-                          Voting power
+                          {t("voting_power")}
                         </p>
                         <p>{balance}</p>
                         <Link
@@ -233,7 +235,7 @@ export default function VoteModal({
                           anchorIcon={<HiArrowLongRight className="ml-1" />}
                           className="ml-auto"
                         >
-                          My voting power
+                          {t("my_voting_power")}
                         </Link>
                       </CardBody>
                     </Card>
@@ -248,19 +250,19 @@ export default function VoteModal({
                       <CustomRadio value="for" state="for">
                         <div className="flex items-center gap-1 text-green-500">
                           <div className="size-4 rounded-md bg-green-500"></div>
-                          <span>For</span>
+                          <span>{t("for")}</span>
                         </div>
                       </CustomRadio>
                       <CustomRadio value="against" state="against">
                         <div className="flex items-center gap-1 text-danger-500">
                           <div className="size-4 rounded-md bg-danger-500"></div>
-                          <span>Against</span>
+                          <span>{t("against")}</span>
                         </div>
                       </CustomRadio>
                       <CustomRadio value="abstain" state="abstain">
                         <div className="flex items-center gap-1 text-default-500">
                           <div className="size-4 rounded-md bg-default-500"></div>
-                          <span>Abstain</span>
+                          <span>{t("abstain")}</span>
                         </div>
                       </CustomRadio>
                     </RadioGroup>
@@ -274,7 +276,7 @@ export default function VoteModal({
                   isLoading={loading}
                   onClick={handleVote}
                 >
-                  Submit
+                  {t("submit")}
                 </Button>
               </ModalFooter>
             </>

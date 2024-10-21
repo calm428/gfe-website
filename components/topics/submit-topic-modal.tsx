@@ -92,7 +92,7 @@ export default function SubmitTopicModal({
     onPress: () => {
       if (isConnected) onOpen()
       else
-        toast.error("You have to connect your wallet first", {
+        toast.error(t("have_to_connect_wallet"), {
           position: "top-right",
         })
     },
@@ -108,13 +108,13 @@ export default function SubmitTopicModal({
     console.log(res)
 
     if (res.success) {
-      toast.success("Your proposal has submitted successfully!", {
+      toast.success(t("proposal_submitted_successfully"), {
         position: "top-right",
       })
 
       router.refresh()
     } else
-      toast.error("Something went wrong!", {
+      toast.error(t("something_went_wrong"), {
         position: "top-right",
       })
   }
