@@ -771,6 +771,194 @@
           "in": "Hindi"
         }
       }
+    },
+    "forum": {
+      "welcome": "Bienvenido al Foro de Gobernanza de GFE",
+      "description": "Participe en debates clave y toma de decisiones",
+      "search": "Buscar",
+      "topic_not_found": "Tema no encontrado",
+      "topic": "Tema",
+      "replies": "Respuestas",
+      "views": "Vistas",
+      "activity": "Actividad",
+      "submit": "Enviar",
+      "cancel": "Cancelar",
+      "publish": "Publicar",
+      "reply": "Responder",
+      "new": {
+        "new_topic": "Nuevo tema",
+        "title": "Título",
+        "select_category": "Seleccione categoría",
+        "select_tags": "Seleccione etiquetas",
+        "type_here": "Escriba su contenido aquí...",
+        "title_is_required": "El título es obligatorio",
+        "must_input_here": "Debe ingresar su contenido aquí.",
+        "must_select_category": "Debe seleccionar una categoría",
+        "must_select_tag": "Debe seleccionar al menos una etiqueta",
+        "topic_created_successfully": "Tema creado correctamente",
+        "failed_to_create_topic": "Error al crear el tema",
+        "post": "Publicación"
+      },
+      "edit": {
+        "topic_not_found": "Tema no encontrado"
+      },
+      "categories": {
+        "title": "Categorías",
+        "general": "General",
+        "governance-and-proposals": "Gobernanza y propuestas",
+        "ideas-and-suggestions": "Ideas y sugerencias",
+        "technical-development": "Desarrollo técnico",
+        "all": "Todas las categorías"
+      },
+      "tags": {
+        "title": "Etiquetas",
+        "introduction": "Introducción",
+        "protocol-upgrade": "Protocolo Actualización",
+        "treasury": "Tesorería",
+        "community-guidelines": "Pautas de la comunidad",
+        "market-listing": "Listado del mercado",
+        "solar-power": "Energía solar",
+        "wind-power": "Energía eólica",
+        "kelp-farming": "Cultivo de algas",
+        "all": "Todas las etiquetas"
+      },
+      "topic_summary": {
+        "created": "CREADO",
+        "last_reply": "ÚLTIMA RESPUESTA",
+        "status": "ESTADO",
+        "views": "VISTAS",
+        "replies": "RESPUESTAS",
+        "likes": "ME GUSTA"
+      },
+      "topic_status": {
+        "approved": "APROBADO",
+        "rejected": "RECHAZADO",
+        "canceled": "CANCELADO",
+        "published": "PUBLICADO",
+        "submission": "ENVÍO",
+        "draft": "BORRADOR"
+      },
+      "submit_topic_proposal": {
+        "title1": "Crear una propuesta",
+        "description1": "Proporcionar la información que los votantes necesitarán para tomar su decisión",
+        "title2": "Establecer acciones",
+        "description2": "Estas acciones se ejecutan si se cumplen los parámetros que establece",
+        "title3": "Revisar propuesta",
+        "description3": "Revise su propuesta antes de enviarla",
+        "new_proposal": "Nueva propuesta",
+        "step": "Paso",
+        "of": "de",
+        "have_to_connect_wallet": "Primero debe conectar su billetera",
+        "proposal_submitted_successfully": "¡Su propuesta se envió con éxito!",
+        "something_went_wrong": "¡Algo salió mal!",
+        "add_actions_form": {
+          "add_action": "Agregar acción",
+          "description": "Esta acción se ejecutará si se aprueba la votación. Una acción automática común es transferir fondos a un gremio o persona si su propuesta pasa una votación",
+          "actions": "Acciones",
+          "withdraw": "Retirar activos",
+          "withdraw_title": "Retirar activos del tesoro de la DAO",
+          "withdraw_description": "Crear una propuesta para retirar activos a una billetera",
+          "mint": "Acuñar tokens",
+          "mint_description": "Acuñar más tokens de la DAO y distribuirlos a las billeteras",
+          "type_required": "Se requiere el tipo",
+          "address_required": "Se requiere la dirección del destinatario",
+          "amount_grater_0": "El monto debe ser mayor que 0",
+          "reset_action": "Restablecer acción",
+          "remove_action": "Eliminar acción",
+          "recipient": "Destinatario",
+          "recipient_placeholder": "Escriba la dirección de la billetera o ENS ...",
+          "recipient_description": "La billetera que recibe los tokens",
+          "amount": "Monto",
+          "amount_description": "El monto se calcula en cantidad de tokens, no en valor en dólares",
+          "back": "Atrás",
+          "next": "Siguiente"
+        },
+        "create_proposal": {
+          "title_required": "El título es obligatorio",
+          "summary_required": "El resumen es obligatorio",
+          "content_required": "El contenido es obligatorio",
+          "title": "Título",
+          "summary": "Resumen",
+          "summary_placeholder": "Describe tu propuesta en 2 o 3 oraciones. Esto aparecerá en la descripción general de la propuesta",
+          "content": "Contenido",
+          "next": "Siguiente"
+        },
+        "proposal_summary": {
+          "title": "Título",
+          "summary": "Resumen",
+          "content": "Contenido",
+          "actions": "Acciones",
+          "withdraw_assets": "Retirar activos",
+          "gfe": "GFE",
+          "back": "Atrás",
+          "submit": "Enviar"
+        }
+      },
+      "cancel-submission-confirm-modal": {
+        "proposal_submission": "Envío de propuesta cancelado exitosamente",
+        "failed_cancel": "Error al cancelar el envío",
+        "confirmmodal_title": "Cancelar el envío de propuesta",
+        "confirmmodal_description": "¿Está seguro de que desea cancelar el envío? Esta acción no se puede deshacer."
+      },
+      "confirm-modal": {
+        "close": "Cerrar",
+        "continue": "Continuar"
+      },
+      "delete-reply-confirm-modal": {
+        "reply_deleted_success": "Respuesta eliminada correctamente",
+        "reply_deleted_failed": "Error al eliminar la respuesta",
+        "confirmmodal_title": "Respuesta eliminada",
+        "confirmmodal_description": "¿Está seguro de que desea eliminar esta respuesta? Esta acción no se puede deshacer."
+      },
+      "delete-topic-confirm-modal": {
+        "topic_deleted_success": "Tema eliminado correctamente",
+        "topic_deleted_failed": "Error al eliminar el tema",
+        "confirmmodal_title": "Eliminar tema",
+        "confirmmodal_description": "¿Está seguro de que desea eliminar este tema? Esta acción no se puede deshacer".
+      },
+      "reply-edit-modal": {
+        "must_input_here": "Debes ingresar tu contenido aquí.",
+        "reply_edit_success": "Respuesta editada exitosamente",
+        "failed_to_edit_reply": "Error al editar la respuesta",
+        "modal_title": "Título del modal",
+        "type_here": "Escribe tu contenido aquí...",
+        "cancel": "Cancelar",
+        "save": "Guardar"
+      },
+      "topic-edit-form": {
+        "title_is_required": "Se requiere título",
+        "must_input_here": "Debes ingresar tu contenido aquí.",
+        "must_select_category": "Debes seleccionar una categoría",
+        "must_select_tag": "Debes seleccionar al menos una etiqueta",
+        "updated_successfully": "Tema actualizado exitosamente",
+        "failed_update_topic": "Error al actualizar el tema",
+        "title": "Título",
+        "select_category": "Seleccionar categoría",
+        "select_tags": "Seleccionar etiquetas",
+        "type_here": "Escribe tu contenido aquí...",
+        "save": "Guardar"
+      },
+      "topic-publish-modal": {
+        "have_to_connect_wallet": "Primero debes conectar tu billetera",
+        "proposal_published_successfully": "Propuesta publicada en cadena con éxito",
+        "failed_to_publish_proposal": "Error al publicar la propuesta",
+        "publish_proposal": "Publicar propuesta",
+        "estimated_gas_fee": "Calcular las tarifas de gas",
+        "gfe": "GFE",
+        "max_fee": "Tarifa máxima",
+        "total_cost": "Costo total",
+        "cancel": "Cancelar",
+        "confirm": "Confirmar"
+      },
+      "topic-reply-modal": {
+        "must_input_here": "Debes ingresar tu contenido aquí.",
+        "reply_created_success": "Respuesta creada exitosamente",
+        "failed_to_create_reply": "Error al crear la respuesta",
+        "modal_title": "Título del modal",
+        "type_here": "Escribe tu contenido aquí...",
+        "cancel": "Cancelar",
+        "reply": "Responder"
+      }
     }
   },
 }

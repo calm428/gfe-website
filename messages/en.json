@@ -772,17 +772,6 @@
         }
       }
     },
-    "forgot-password": {
-      "verification_code_has_been_sent": "Verification code has been sent!",
-      "something_went_wrong": "Something went wrong!",
-      "user_not_found": "User not found",
-      "forgot_password": "Forgot Password?",
-      "enter_the_email": "Enter the email address associated with your account. We will send you a link to reset your password.",
-      "email": "Email",
-      "continue": "Continue",
-      "already_have_an_account": "Already have an account? ",
-      "sign_in": "Sign In"
-    },
     "forum": {
       "welcome": "Welcome to the GFE Governance Forum",
       "description": "Participate in key discussions and decision-making",
@@ -971,6 +960,17 @@
         "reply": "Reply"
       }
     }, 
+    "forgot-password": {
+      "verification_code_has_been_sent": "Verification code has been sent!",
+      "something_went_wrong": "Something went wrong!",
+      "user_not_found": "User not found",
+      "forgot_password": "Forgot Password?",
+      "enter_the_email": "Enter the email address associated with your account. We will send you a link to reset your password.",
+      "email": "Email",
+      "continue": "Continue",
+      "already_have_an_account": "Already have an account? ",
+      "sign_in": "Sign In"
+    },
     "reset-password": {
       "your_password_has_been_reset_successfully": "Your password has been reset successfully!",
       "something_went_wrong": "Something went wrong! please try again.",

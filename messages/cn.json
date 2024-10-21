@@ -772,6 +772,193 @@
         }
       }
     },
-    
+    "formm" : {
+      "welcome": "欢迎来到 GFE 治理论坛",
+      "description": "参与关键讨论和决策",
+      "search": "搜索",
+      "topic_not_found": "未找到主题",
+      "topic": "主题",
+      "replies": "回复",
+      "views": "浏览量",
+      "activity": "活动",
+      "submit": "提交",
+      "cancel": "取消",
+      "publish": "发布",
+      "reply": "回复",
+      "new": {
+        "new_topic": "新主题",
+        "title": "标题",
+        "select_category": "选择类别",
+        "select_tags": "选择标签",
+        "type_here": "在此处输入您的内容...",
+        "title_is_required": "标题为必填项",
+        "must_input_here": "您必须在此处输入您的内容。",
+        "must_select_category": "您必须选择一个类别",
+        "must_select_tag": "您必须至少选择一个标签",
+        "topic_created_successfully": "主题创建成功",
+        "failed_to_create_topic": "创建主题失败",
+        "post": "帖子"
+      },
+      "edit": {
+        "topic_not_found": "未找到主题"
+      },
+      "categories": {
+        "title": "类别",
+        "general": "一般",
+        "governance-and-proposals": "治理和提案",
+        "ideas-and-suggestions": "想法和建议",
+        "technical-development": "技术开发",
+        "all": "所有类别"
+      },
+      "tags": {
+        "title": "标签",
+        "introduction": "介绍",
+        "protocol-upgrade": "协议升级",
+        "treasury": "金库",
+        "community-guidelines": "社区指南",
+        "market-listing": "市场列表",
+        "solar-power": "太阳能",
+        "wind-power": "风力发电",
+        "kelp-farming": "海带养殖",
+        "all": "所有标签"
+      },
+      "topic_summary": {
+        "created": "已创建",
+        "last_reply": "最后回复",
+        "status": "状态",
+        "views": "浏览次数",
+        "replies": "回复",
+        "likes": "喜欢"
+      },
+      "topic_status": {
+        "approved": "已批准",
+        "rejected": "已拒绝",
+        "canceled": "已取消",
+        "published": "已发布",
+        "submission": "提交",
+        "draft": "草稿"
+      },
+      "submit_topic_proposal": {
+        "title1": "创建提案",
+        "description1": "提供投票者做出决定所需的信息",
+        "title2": "设置操作",
+        "description2": "如果满足您设置的参数，则执行这些操作",
+        "title3": "审查提案",
+        "description3": "提交前审查您的提案",
+        "new_proposal": "新提案",
+        "step": "步骤",
+        "of": "的",
+        "have_to_connect_wallet": "您必须先连接您的钱包",
+        "proposal_submitted_successfully": "您的提案已成功提交！",
+        "something_went_wrong": "出现问题！",
+        "add_actions_form": {
+          "add_action": "添加操作",
+          "description": "如果投票通过，将执行此操作。一种常见的自动操作是，如果他们的提案通过投票，则将资金转移到公会或个人",
+          "actions": “操作”,
+          “withdraw”：“提取资产”,
+          “withdraw_title”：“从 DAO 钱包中提取资产”,
+          “withdraw_description”：“创建将资产提取到钱包的提案。”,
+          “mint”：“铸造代币”,
+          “mint_description”：“铸造更多 DAO 代币并分发到钱包”,
+          “type_required”：“类型为必填项”,
+          “address_required”：“收件人地址为必填项”,
+          “amount_grater_0”：“金额必须大于 0”,
+          “reset_action”：“重置操作”,
+          “remove_action”：“删除操作”,
+          “recipient”：“收件人”,
+          “recipient_placeholder”：“输入钱包地址或 ENS ...”,
+          “recipient_description”：“接收代币的钱包”,
+          “amount”：“金额”,
+          “amount_description”：“金额以代币数量计算，而不是美元价值”,
+          “back”：“返回”,
+          "next": "下一步"
+        },
+        "create_proposal": {
+          "title_required": "标题为必填项",
+          "summary_required": "摘要为必填项",
+          "content_required": "内容为必填项",
+          "title": "标题",
+          "summary": "摘要",
+          "summary_placeholder": "用 2-3 句话描述您的提案。这将出现在提案概述中",
+          "content": "内容",
+          "next": "下一步"
+        },
+        "proposal_summary": {
+          "title": "标题",
+          "summary": "摘要",
+          "content": "内容",
+          "actions": "操作",
+          "withdraw_assets": "提取资产",
+          "gfe": "GFE",
+          "back": "返回",
+          "submit": "提交"
+        }
+      },
+      "cancel-submission-confirm-modal": {
+        "proposal_submission": "提案提交已成功取消",
+        "failed_cancel": "无法取消提交",
+        "confirmmodal_title": "取消提案提交",
+        "confirmmodal_description": "您确定要取消提交吗？此操作无法撤消。"
+      },
+      "confirm-modal": {
+        "close": "关闭",
+        "continue": "继续"
+      },
+      "delete-reply-confirm-modal": {
+        "reply_deleted_success": "回复已成功删除",
+        "reply_deleted_failed": "删除回复失败",
+        "confirmmodal_title": "已删除回复",
+        "confirmmodal_description": "您确定要删除此回复吗？此操作无法撤消。"
+      },
+      "delete-topic-confirm-modal": {
+        "topic_deleted_success": "主题已成功删除",
+        "topic_deleted_failed": "删除主题失败",
+        "confirmmodal_title": "删除主题",
+        "confirmmodal_description": "您确定要删除此主题吗？此操作无法撤消。"
+      },
+      "reply-edit-modal": {
+        "must_input_here": "您必须在此处输入内容。",
+        "reply_edit_success": "回复编辑成功",
+        "failed_to_edit_reply": "编辑回复失败",
+        "modal_title": "模态标题",
+        "type_here": "在此处输入内容...",
+        "cancel": "取消",
+        "save": "保存"
+      },
+      "topic-edit-form": {
+        "title_is_required": "标题为必填项",
+        "must_input_here":"您必须在此处输入内容。",
+        "must_select_category":"您必须选择一个类别",
+        "must_select_tag":"您必须至少选择一个标签",
+        "updated_successfully": "主题更新成功",
+        "failed_update_topic": "更新主题失败",
+        "title": "标题",
+        "select_category":"选择类别",
+        "select_tags":"选择标签",
+        "type_here":"在此处输入您的内容...",
+        "save":"保存"
+      },
+      "topic-publish-modal": {
+        "have_to_connect_wallet": "您必须先连接您的钱包",
+        "proposal_published_successfully": "提案已成功发布在链上",
+        "failed_to_publish_proposal": "未能发布提案",
+        "publish_proposal": "发布提案",
+        "estimated_gas_fee": "估算 gas 费用",
+        "gfe": "GFE",
+        "max_fee": "最高费用",
+        "total_cost": "总成本",
+        "cancel": "取消",
+        "confirm": "确认"
+      },
+      "topic-reply-modal": {
+        "must_input_here": "您必须输入您的内容此处。",
+        "reply_created_success": "回复创建成功",
+        "failed_to_create_reply": "创建回复失败",
+        "modal_title": "模态标题",
+        "type_here": "在此处输入您的内容...",
+        "cancel": "取消",
+        "reply": "回复"
+      }
+    }
   }
 }
