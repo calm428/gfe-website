@@ -959,6 +959,17 @@
         "cancel": "取消",
         "reply": "回复"
       }
-    }
+    },
+    "forgot-password": {
+      "verification_code_has_been_sent": "验证码已发送！",
+      "something_went_wrong": "出现错误！",
+      "user_not_found": "未找到用户",
+      "forgot_password": "忘记密码？",
+      "enter_the_email": "输入与您的帐户关联的电子邮件地址。我们将向您发送重置密码的链接。",
+      "email": "电子邮件",
+      "continue": "继续",
+      "already_have_an_account": "已有帐户？",
+      "sign_in": "登录"
+    },
   }
 }

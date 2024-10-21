@@ -959,6 +959,17 @@
         "cancel": "Cancelar",
         "reply": "Responder"
       }
-    }
+    },
+    "forgot-password": {
+      "verification_code_has_been_sent": "¡Se ha enviado el código de verificación!",
+      "something_went_wrong": "¡Algo salió mal!",
+      "user_not_found": "No se encontró el usuario",
+      "forgot_password": "¿Olvidó su contraseña?",
+      "enter_the_email": "Ingrese la dirección de correo electrónico asociada a su cuenta. Le enviaremos un enlace para restablecer su contraseña.",
+      "email": "Correo electrónico",
+      "continue": "Continuar",
+      "already_have_an_account": "¿Ya tiene una cuenta? ",
+      "sign_in": "Iniciar sesión"
+    },
   },
 }
