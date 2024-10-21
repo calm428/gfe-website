@@ -630,5 +630,148 @@
       "invalid_format":"GFE 地址格式无效。",
       "correct_format":"正确的 GFE 地址格式。继续。"
     },
+    "platform":{
+      "dao": {
+        "dao":"DAO",
+        "proposal":"提案",
+        "proposals":"提案",
+        "votes_for":"赞成票",
+        "votes_against":"反对票",
+        "total_votes":"总票数",
+        "addresses":"地址",
+        "pending":"待定",
+        "active":"活动",
+        "canceled":"已取消",
+        "defeated":"已失败",
+        "succeeded":"成功",
+        "queued":"排队",
+        "expired":"已过期",
+        "executed":"已执行",
+        "locale":"en-US",
+        "connect_wallet":"请连接您的钱包",
+        "successfully voted":"您已成功投票",
+        "something-went_wrong":"出现错误",
+        "voting": "投票",
+        "voting_power": "投票权",
+        "my_voting_power": "我的投票权",
+        "for": "赞成",
+        "against": "反对",
+        "abstain": "弃权",
+        "submit": "提交",
+        "draft_created": "草案已创建",
+        "published_onchain": "链上发布",
+        "voting_period_started": "投票期开始",
+        "voting_period_ended": "投票期结束",
+        "proposal_queued": "提案已排队",
+        "execute_proposal": "执行提案",
+        "status": "状态",
+        "vote_onchain": "链上投票",
+        "proposed_on": "提议日期:"
+      },
+      "electricity": {
+        "electricity": "电力",
+        "coming_soon": "即将推出"
+      },
+      "ico": {
+        "title":"绿色可替代能源 - GFE",
+        "description":"GFE 是一项旨在将绿色能源代币化的开创性举措。提供独特的投资机会,弥合环境影响和经济激励之间的差距,同时为电力成本带来第一个全球视角。",
+        "audit":"审计",
+        "whitepaper":"白皮书",
+        "new":"新",
+        "nft_landing_page":"NFT 官方登陆页面已正式启动！ 🎉",
+        "something_went_wrong": "出现问题",
+        "transaction_completed": "您的交易已成功完成,交易哈希为:",
+        "please_connect_your_wallet": "请连接您的钱包",
+        "not_started_yet": "尚未开始...",
+        "ICO_has_ended": "ICO 已结束",
+        "ICO_has_halted": "ICO 已停止",
+        "buy": "在价格上涨前买入！",
+        "countdown": "价格上涨倒计时",
+        "minted": "铸造的 GFE 代币:",
+        "pay_with": "付款方式",
+        "receive GFE": "接收 GFE",
+        "buy_now": "立即购买"
+      },
+      "mining": {
+        "mining": "挖矿",
+        "miner-card": {
+          "hashrate": "哈希率:",
+          "income": "收入:",
+          "machine_price": "机器价格:",
+          "accessory_price": "配件价格",
+          "price": "价格"
+        },
+        "trans_history": {
+          "title": "交易历史"
+        },
+        "mining_plan": {
+          "title": "挖矿计划",
+          "type": "矿机类型",
+          "select_miner": "选择矿机",
+          "power": "算力",
+          "select_power": "选择算力",
+          "mining_period": "挖矿周期",
+          "select_period": "选择周期",
+          "start_mining": "开始挖矿"
+        },
+      },
+      "setting": {
+        "title": "设置",
+        "avatar": {
+          "avatar_updated_successfully": "头像更新成功",
+          "something_went_wrong": "出现错误",
+          "user_not_found": "未找到用户",
+          "change_avatar": "更改头像",
+          "close": "关闭",
+          "save": "保存"
+        },
+        "profile": {
+          "title": "个人资料",
+          "my_profile": "我的个人资料",
+          "setup": "设置并查看您的个人信息",
+          "firstname": "名字",
+          "lastname": "姓氏",
+          "email": "电子邮件",
+          "submit": "提交"
+        },
+        "wallet": {
+          "title": "钱包",
+          "my_wallet": "我的钱包",
+          "setup": "设置您的钱包地址",
+          "coming_soon": "即将推出"
+        },
+        "voting_power": {
+          "title": "投票权",
+          "manage": "管理您的投票权",
+          "delegated": "您未被委托！",
+          "description": "测试中,代币决定投票权。他们必须在下一个要考虑的提案开始之前被委托。",
+          "delegate": "委托",
+          "connect": "连接您的钱包以查看您的投票权",
+          "delegated_to": "委托给",
+          "received_delegations": "收到的委托"
+        },
+        "security": {
+          "title": "安全",
+          "setup": "设置您的安全设置",
+          "current_password": "当前密码",
+          "new_password": "新密码",
+          "submit": "提交"
+        },
+        "notifications":{
+          "title":"通知",
+          "manage":"管理您的通知",
+          "coming_soon":"即将推出"
+        },
+        "language":{
+          "title":"语言",
+          "setup":"设置您的语言选项",
+          "en":"英语",
+          "cn":"中文",
+          "es":"西班牙语",
+          "in":"印地语"
+        }
+      }
+    },
+    
   }
 }

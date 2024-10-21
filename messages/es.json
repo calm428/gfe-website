@@ -630,5 +630,147 @@
       "invalid_format": "Formato de dirección GFE no válido.",
       "correct_format": "Formato de dirección GFE correcto. Adelante."
     },
-  }
+    "platform": {
+      "dao": {
+        "dao": "DAO",
+        "proposal": "Propuesta",
+        "proposals": "Propuestas",
+        "votes_for": "Votos a favor",
+        "votes_against": "Votos en contra",
+        "total_votes": "Total de votos",
+        "addresses": "direcciones",
+        "pending": "PENDIENTE",
+        "active": "ACTIVO",
+        "canceled": "CANCELADO",
+        "defeated": "DERROTADO",
+        "succeeded": "EXITOSO",
+        "queued": "EN COLA",
+        "expired": "EXPIADO",
+        "executed": "EJECUTADO",
+        "locale": "en-US",
+        "connect_wallet": "Conecta tu billetera",
+        "successfully voted": "Votaste correctamente",
+        "something-went_wrong": "Algo salió mal",
+        "voting": "Votación",
+        "voting_power": "Poder de voto",
+        "my_voting_power": "Mi poder de voto",
+        "for": "A favor",
+        "against": "En contra",
+        "abstain": "Abstenerse",
+        "submit": "Enviar",
+        "draft_created": "Borrador creado",
+        "published_onchain": "Publicado en la cadena",
+        "voting_period_started": "Período de votación iniciado",
+        "voting_period_ended": "Período de votación finalizado",
+        "proposal_queued": "Propuesta en cola",
+        "execute_proposal": "Ejecutar propuesta",
+        "status": "Estado",
+        "vote_onchain": "Votación en la cadena",
+        "proposed_on": "Propuesto el: "
+      },
+      "electricity": {
+        "electricity": "Electricidad",
+        "coming_soon": "Próximamente"
+      },
+      "ico": {
+        "title": "Energía verde fungible - GFE",
+        "description": "GFE es una iniciativa pionera diseñada para tokenizar la energía verde. Ofrece una oportunidad de inversión única que cierra la brecha entre el impacto ambiental y el incentivo económico, al tiempo que aporta la primera perspectiva global sobre los costos de la electricidad.",
+        "audit": "Auditoría",
+        "whitepaper": "Informe técnico",
+        "new": "Nuevo",
+        "nft_landing_page": "¡La página de destino oficial de NFT se lanzó oficialmente! 🎉",
+        "something_went_wrong": "Algo salió mal",
+        "transaction_completed": "Su transacción se completó exitosamente con el hash de transacción: ",
+        "please_connect_your_wallet": "Conecte su billetera",
+        "not_started_yet": "Aún no se inició...",
+        "ICO_has_ended": "La ICO ha finalizado",
+        "ICO_has_halted": "La ICO se ha detenido",
+        "buy": "¡Compre antes de que aumente el precio!",
+        "countdown": "Cuenta regresiva hasta que aumente el precio",
+        "minted": "Tokens GFE acuñados: ",
+        "pay_with": "Pague con",
+        "receive GFE": "Recibir GFE",
+        "buy_now": "Compre ahora"
+      },
+      "mining": {
+        "mining": "Minería",
+        "miner-card": {
+          "hashrate": "Tasa de hash:",
+          "income": "Ingresos:",
+          "machine_price": "Precio de la máquina:",
+          "accessory_price": "Precio del accesorio",
+          "price": "Precio"
+        },
+        "trans_history": {
+          "title": "Historial de transacciones"
+        },
+        "mining_plan": {
+          "title": "Plan de minería",
+          "type": "Tipo de minero",
+          "select_miner": "Seleccione un minero",
+          "power": "Potencia",
+          "select_power": "Seleccione una potencia",
+          "mining_period": "Período de minería",
+          "select_period": "Seleccione un período",
+          "start_mining": "Iniciar minería"
+        }
+      },
+      "setting": {
+        "title": "Configuración",
+        "avatar": {
+          "avatar_updated_successfully": "Avatar actualizado correctamente",
+          "something_went_wrong": "Algo salió mal",
+          "user_not_found": "Usuario no found",
+          "change_avatar": "Cambiar avatar",
+          "close": "Cerrar",
+          "save": "Guardar"
+        },
+        "profile": {
+          "title": "Perfil",
+          "my_profile": "Mi perfil",
+          "setup": "Configura y revisa tu información personal",
+          "firstname": "Nombre",
+          "lastname": "Apellido",
+          "email": "Correo electrónico",
+          "submit": "Enviar"
+        },
+        "wallet": {
+          "title": "Billetera",
+          "my_wallet": "Mi billetera",
+          "setup": "Configura la dirección de tu billetera",
+          "coming_soon": "Próximamente"
+        },
+        "voting_power": {
+          "title": "Poder de voto",
+          "manage": "Administra tu poder de voto",
+          "delegated": "¡No estás delegado!",
+          "description": "Los tokens determinan el poder de voto en la prueba. Deben ser delegados antes del inicio de la próxima propuesta para ser considerados.",
+          "delegate": "Delegar",
+          "connect": "Conecta tu billetera para ver tu poder de voto",
+          "delegated_to": "Delegado a",
+          "received_delegations": "Delegaciones recibidas"
+        },
+        "security": {
+          "title": "Seguridad",
+          "setup": "Configura tus ajustes de seguridad",
+          "current_password": "Contraseña actual",
+          "new_password": "Nueva contraseña",
+          "submit": "Enviar"
+        },
+        "notifications": {
+          "title": "Notificaciones",
+          "manage": "Administra tus notificaciones",
+          "coming_soon": "Próximamente"
+        },
+        "language": {
+          "title": "Idioma",
+          "setup": "Configura tus opciones de idioma",
+          "en": "Inglés",
+          "cn": "Chino",
+          "es": "Español",
+          "in": "Hindi"
+        }
+      }
+    }
+  },
 }
