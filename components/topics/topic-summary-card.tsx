@@ -9,7 +9,7 @@ export default function TopicSummaryCard({
   topic: any
   replies: any
 }) {
-  const t = useTranslations("main.forum.topic_status")
+  const t = useTranslations("main.forum.topic_summary")
 
   const chipColor = (status: string) => {
     switch (status) {
@@ -27,6 +27,7 @@ export default function TopicSummaryCard({
   }
 
   const chipText = (status: string) => {
+    const t = useTranslations("main.forum.topic_status")
     switch (status) {
       case "SUBMISSION_APPROVED":
         return t("approved")
@@ -48,7 +49,7 @@ export default function TopicSummaryCard({
       <CardBody className="flex flex-row flex-wrap justify-between gap-4 px-8">
         <div className="flex flex-wrap gap-4">
           <div className="flex w-fit flex-col">
-            <span className="text-xs uppercase">created</span>
+            <span className="text-xs uppercase">{t("created")}</span>
             <User
               name={topic?.author?.name || ""}
               description={dayjs(topic?.createdAt || "").format("MMM YYYY")}

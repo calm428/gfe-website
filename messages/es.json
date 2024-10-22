@@ -13,7 +13,9 @@
     "launch_text": "¡La página oficial de lanzamiento de NFT se ha lanzado oficialmente! 🎉",
     "something_went_wrong": "¡Algo salió mal!",
     "try_again": "Inténtalo de nuevo",
-      "language": {
+    "read_more": "Leer más sobre el proyecto",
+    "partner": "Socios",
+    "language": {
       "en": "Inglés",
       "cn": "Chino",
       "es": "Español",
@@ -481,7 +483,29 @@
       "setting": "Configuración",
       "logout": "Cerrar sesión",
       "wallet_label": "Conectar billetera",
-      "wallet_loading_label": "Conectando..."
+      "wallet_loading_label": "Conectando...",
+      "energy_trading": "Comercio de energía",
+      "staking": "Staking",
+      "dao_governance": "Gobernanza de DAO",
+      "climate_change": "Cambio climático",
+      "server_hosting": "Hospedaje de servidores",
+      "district_rural_power": "Energía rural distrital",
+      "ev_charging": "Carga de vehículos eléctricos",
+      "hydrocarbon_production": "Producción de hidrocarburos",
+      "brewing_and_distillation": "Elaboración de cerveza y destilación",
+      "fish_farming": "Cría de peces",
+      "commercial_laundry": "Lavandería comercial",
+      "energy_trading_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que también reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "staking_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que también reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "dao_governance_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "climate_change_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "server_hosting_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "district_rural_power_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "ev_charging_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "hydrocarbon_production_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "brewing_and_distillation_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "fish_farming_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real.",
+      "commercial_laundry_description": "Esta doble implicación de los tokens GFE significa que no solo sirven como activos comercializables con ingresos, sino que reflejan prácticas sostenibles y tienen una utilidad tangible en el mundo real."
     },
     "unsubscribe": {
       "unsubscribe": "Desuscribirse",
@@ -682,15 +706,19 @@
         "something_went_wrong": "Algo salió mal",
         "transaction_completed": "Su transacción se completó exitosamente con el hash de transacción: ",
         "please_connect_your_wallet": "Conecte su billetera",
-        "not_started_yet": "Aún no se inició...",
+        "not_started_yet": "Aún no ha comenzado...",
         "ICO_has_ended": "La ICO ha finalizado",
         "ICO_has_halted": "La ICO se ha detenido",
         "buy": "¡Compre antes de que aumente el precio!",
         "countdown": "Cuenta regresiva hasta que aumente el precio",
         "minted": "Tokens GFE acuñados: ",
         "pay_with": "Pague con",
-        "receive GFE": "Recibir GFE",
-        "buy_now": "Compre ahora"
+        "receive_GFE": "Recibir GFE",
+        "buy_now": "Compre ahora",
+        "days": "Días",
+        "hours": "Horas",
+        "minutes": "Minutos",
+        "seconds": "Segundos"
       },
       "mining": {
         "mining": "Minería",
@@ -831,6 +859,7 @@
         "likes": "ME GUSTA"
       },
       "topic_status": {
+        "created": "CREADA",
         "approved": "APROBADO",
         "rejected": "RECHAZADO",
         "canceled": "CANCELADO",

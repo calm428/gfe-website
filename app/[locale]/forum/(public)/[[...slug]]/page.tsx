@@ -211,9 +211,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
         label: filterCategories(category.slug)
       }))
 
-      setCategories([..._categories, { value: "all", label: "All Categories" }])
+      setCategories([..._categories, { value: "all", label: t("categories.all") }])
       setDefaultCategoryOption(
-        [..._categories, { value: "all", label: "All Categories" }].find(
+        [..._categories, { value: "all", label: t("categories.all") }].find(
           (item) => item.value === category
         )
       )
@@ -227,9 +227,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
         label: filterTags(tag.slug),
       }))
 
-      setTags([..._tags, { value: "all", label: "All Tags" }])
+      setTags([..._tags, { value: "all", label: t("tags.all") }])
       setDefaultTagOption(
-        [..._tags, { value: "all", label: "All Tags" }].find(
+        [..._tags, { value: "all", label: t("tags.all") }].find(
           (item) => item.value === tag
         )
       )

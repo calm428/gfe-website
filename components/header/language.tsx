@@ -64,7 +64,7 @@ export function LanguageSelector() {
                 height={24}
                 className="mr-2 h-auto w-4"
               />
-              {t("language.ch")}
+              {t("language.cn")}
             </div>
           </SelectItem>
           <SelectItem value="es">

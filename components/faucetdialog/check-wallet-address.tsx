@@ -50,7 +50,7 @@ const CustomInput = ({
             />
             <div className='mt-1 overflow-auto'>
                 {inputValue === '' && <p className='text-rose-500'>{t("faucet.requirements")} {t("faucet.example")} {faucetAddress}</p>}
-                {inputValue !== '' && (!checkStatus) && <p className='text-rose-500'>${t("faucet.invalid_format")}</p>}
+                {inputValue !== '' && (!checkStatus) && <p className='text-rose-500'>{t("faucet.invalid_format")}</p>}
                 {inputValue !== '' && checkStatus && <p>{inputValue === faucetAddress ? `${t("faucet.example")} ${faucetAddress}` : t("faucet.correct_format")}</p>}
             </div>
         </div>

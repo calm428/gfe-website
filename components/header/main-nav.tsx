@@ -29,7 +29,7 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   const pathname = usePathname()
-  const t = useTranslations("main")
+  const t = useTranslations("main.header")
 
   const [ecoMenuOpen, setEcomenuOpen] = React.useState(false)
   const token_functionalities = siteConfig.token_functionalities
@@ -59,14 +59,14 @@ export function MainNav({ items }: MainNavProps) {
           <NavigationMenu.List>
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className={navMenuStyle}>
-                {t("header.ecosystem")}{" "}
+                {t("ecosystem")}{" "}
                 <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute top-[59px]  lg:-left-36 xl:left-0 ">
                 <div className="flex w-[900px]  rounded-b-[20px] border border-border bg-background">
                   <div className="p-[24px]">
                     <p className="font-sans text-[14px] font-medium capitalize text-muted-foreground">
-                      {t("header.token_functionalities")}
+                      {t("token_functionalities")}
                     </p>
                     {token_functionalities.map((functionality, ind) => (
                       <Link
@@ -86,10 +86,10 @@ export function MainNav({ items }: MainNavProps) {
                         <div>
                           <p key={functionality.title}>
                             <p className=" font-sans text-[14px] font-semibold capitalize ">
-                              {functionality.title}
+                              {t(functionality.locale as any)}
                             </p>
                             <ExpandableText
-                              description={functionality.desc}
+                              description={t(`${functionality.locale}` + "_description" as any)}
                               maxChars={60}
                             />
                           </p>
@@ -99,7 +99,7 @@ export function MainNav({ items }: MainNavProps) {
                   </div>
                   <div className="border-l border-l-border p-[24px]">
                     <p className="font-sans text-[14px] font-medium capitalize text-muted-foreground">
-                      {t("header.industries")}
+                      {t("industries")}
                     </p>
                     <div className="grid grid-cols-2 gap-2">
                       {industry.map((industry, ind) => (
@@ -119,11 +119,11 @@ export function MainNav({ items }: MainNavProps) {
                           </div>
                           <div>
                             <p key={industry.title}>
-                              <p className=" font-sans text-[14px] font-semibold capitalize">
-                                {industry.title}
+                              <p className=" font-sans text-[14px] font-semibold capitalize ">
+                                {t(industry.locale as any)}
                               </p>
                               <ExpandableText
-                                description={industry.desc}
+                                description={t(`${industry.locale}` + "_description" as any)}
                                 maxChars={60}
                               />
                             </p>
@@ -141,7 +141,7 @@ export function MainNav({ items }: MainNavProps) {
           <NavigationMenu.List>
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className={navMenuStyle}>
-                {t("header.blockchain")}
+                {t("blockchain")}
                 <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
@@ -158,11 +158,11 @@ export function MainNav({ items }: MainNavProps) {
                       <div>
                         <p>
                           <p className="flex font-sans text-[14px] font-semibold capitalize">
-                            {t("header.block_explorer")}
+                            {t("block_explorer")}
                             <MdArrowOutward className="size-4" />
                           </p>
                           <p className="text-xs">
-                            {t("header.block_explorer_description")}
+                            {t("block_explorer_description")}
                           </p>
                         </p>
                       </div>
@@ -178,11 +178,11 @@ export function MainNav({ items }: MainNavProps) {
                       <div>
                         <p>
                           <p className="flex font-sans text-[14px] font-semibold capitalize">
-                            {t("header.faucet")}
+                            {t("faucet")}
                             <MdArrowOutward className="size-4" />
                           </p>
                           <p className="text-xs">
-                            {t("header.faucet_description")}
+                            {t("faucet_description")}
                           </p>
                         </p>
                       </div>
@@ -199,20 +199,20 @@ export function MainNav({ items }: MainNavProps) {
             "/nft" === pathname && "bg-primary/5 font-semibold text-primary"
           }`}
         >
-          {t("header.nft")}
+          {t("nft")}
         </Link>
         <NavigationMenu.Root>
           <NavigationMenu.List>
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className={navMenuStyle}>
-                {t("header.community")}{" "}
+                {t("community")}{" "}
                 <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
                 <div className="flex w-[450px]  rounded-b-[20px] border border-border bg-background">
                   <div className="p-4">
                     <p className="w-28 font-sans text-[14px] font-medium capitalize text-muted-foreground">
-                      {t("header.social")}
+                      {t("social")}
                     </p>
                     {community.map((community, ind) => (
                       <Link
@@ -244,10 +244,10 @@ export function MainNav({ items }: MainNavProps) {
                         <div>
                           <p>
                             <p className="font-sans text-[14px] font-semibold capitalize">
-                              {t("header.governance")}
+                              {t("governance")}
                             </p>
                             <p className="text-xs">
-                              {t("header.governance_description")}
+                              {t("governance_description")}
                             </p>
                           </p>
                         </div>
@@ -262,10 +262,10 @@ export function MainNav({ items }: MainNavProps) {
                         <div>
                           <p>
                             <p className="font-sans text-[14px] font-semibold capitalize">
-                              {t("header.guilds")}
+                              {t("guilds")}
                             </p>
                             <p className="text-xs">
-                              {t("header.guilds_description")}
+                              {t("guilds_description")}
                             </p>
                           </p>
                         </div>
@@ -280,11 +280,11 @@ export function MainNav({ items }: MainNavProps) {
                         <div>
                           <p>
                             <p className="flex font-sans text-[14px] font-semibold capitalize">
-                              {t("header.gfe_forum")}
+                              {t("gfe_forum")}
                               <MdArrowOutward className="size-4" />
                             </p>
                             <p className="text-xs">
-                              {t("header.gfe_forum_description")}
+                              {t("gfe_forum_description")}
                             </p>
                           </p>
                         </div>
@@ -300,7 +300,7 @@ export function MainNav({ items }: MainNavProps) {
           <NavigationMenu.List>
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className={navMenuStyle}>
-                {t("header.learn")}
+                {t("learn")}
                 <CaretDownIcon className="CaretDown" aria-hidden />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="NavigationMenuContent absolute left-0 top-[59px] ">
@@ -316,10 +316,10 @@ export function MainNav({ items }: MainNavProps) {
                       <div>
                         <p>
                           <p className="font-sans text-[14px] font-semibold capitalize">
-                            {t("header.about_us")}
+                            {t("about_us")}
                           </p>
                           <p className="text-xs">
-                            {t("header.about_us_description")}
+                            {t("about_us_description")}
                           </p>
                         </p>
                       </div>
@@ -334,10 +334,10 @@ export function MainNav({ items }: MainNavProps) {
                       <div>
                         <p>
                           <p className="font-sans text-[14px] font-semibold capitalize">
-                            {t("header.blogs_and_news")}
+                            {t("blogs_and_news")}
                           </p>
                           <p className="text-xs">
-                            {t("header.blogs_and_news_description")}
+                            {t("blogs_and_news_description")}
                           </p>
                         </p>
                       </div>
@@ -353,11 +353,11 @@ export function MainNav({ items }: MainNavProps) {
                       <div>
                         <p>
                           <p className="flex font-sans text-[14px] font-semibold capitalize">
-                            {t("header.documentation")}
+                            {t("documentation")}
                             <MdArrowOutward className="size-4" />
                           </p>
                           <p className="text-xs">
-                            {t("header.documentation_description")}
+                            {t("documentation_description")}
                           </p>
                         </p>
                       </div>
@@ -375,7 +375,7 @@ export function MainNav({ items }: MainNavProps) {
             "bg-primary/5 font-semibold text-primary"
           }`}
         >
-          {t("header.contacts")}
+          {t("contacts")}
         </Link>
       </nav>
     </div>

@@ -13,6 +13,8 @@
     "launch_text": "NFT官方登陆页面已正式上线!🎉",
     "something_went_wrong": "出现了问题!",
     "try_again": "再试一次",
+    "read_more":"了解有关项目的更多信息",
+    "partner": "合作伙伴",    
     "language": {
       "en": "英语",
       "cn": "中文",
@@ -468,7 +470,7 @@
       "documentation": "文档",
       "documentation_description": "通过我们详细的资源探索我们的协议和技术",
       "industries": "行业",
-      "token_functionities": "代币功能",
+      "token_functionalities": "代币功能",
       "blockchain": "区块链",
       "block_explorer": "区块浏览器",
       "faucet": "水龙头",
@@ -481,7 +483,29 @@
       "setting": "设置",
       "logout": "注销",
       "wallet_label": "连接钱包",
-      "wallet_loading_label": "正在连接..."
+      "wallet_loading_label": "正在连接...",
+      "energy_trading":"能源交易",
+      "staking":"质押",
+      "dao_governance":"DAO 治理",
+      "climate_change":"气候变化",
+      "server_hosting":"服务器托管",
+      "district_rural_power":"区域农村电力",
+      "ev_charging":"电动汽车充电",
+      "hydrocarbon_production":"碳氢化合物生产",
+      "brewing_and_distillation":"酿造和蒸馏",
+      "fish_farming":"养鱼",
+      "commercial_laundry":"商业洗衣",
+      "energy_trading_description":"GFE 代币的这种双重含义意味着它们不仅可以作为具有收入的可交易资产,而且它们反映了可持续的实践,并具有有形的现实世界效用。",
+      "staking_description":"GFE 代币的这种双重含义意味着它们不仅可以作为具有收入的可交易资产,而且它们反映了可持续的实践并具有有形的、现实世界的效用。",
+      "dao_governance_description": "GFE 代币的双重含义意味着它们不仅可以作为具有收入的可交易资产,它们还反映了可持续的实践并具有有形的、现实世界的效用。",
+      "climate_change_description": "GFE 代币的双重含义意味着它们不仅可以作为具有收入的可交易资产,它们还反映了可持续的实践并具有有形的、现实世界的效用。",
+      "server_hosting_description": "GFE 代币的双重含义意味着它们不仅可以作为具有收入的可交易资产,它们还反映了可持续的实践并具有有形的、现实世界的效用。",
+      "district_rural_power_description": "GFE 代币的双重含义意味着它们不仅可以作为具有收入的可交易资产,它们还反映了可持续的实践并具有有形的、现实世界的效用。",
+      "ev_charging_description":"GFE 代币的双重含义意味着它们不仅可以作为具有收入的可交易资产,还可以反映可持续实践并具有有形的现实世界效用。",
+      "hydrocarbon_production_description":"GFE 代币的双重含义意味着它们不仅可以作为具有收入的可交易资产,还可以反映可持续实践并具有有形的现实世界效用。",
+      "brewing_and_distillation_description":"GFE 代币的双重含义意味着它们不仅可以作为具有收入的可交易资产,还可以反映可持续实践并具有有形的现实世界效用。",
+      "fish_farming_description":"GFE 代币的双重含义意味着它们不仅可以作为具有收入的可交易资产,还可以反映可持续实践并具有有形的现实世界效用。",
+      "commercial_laundry_description":"GFE 代币的双重含义意味着它们不仅可以作为具有收入的可交易资产,还可以反映可持续实践并具有有形的现实世界效用。"
     },
     "unsubscribe": {
       "unsubscribe": "取消订阅",
@@ -625,7 +649,7 @@
       "description2":"如果您是测试 GFE 网络或在测试网上设置节点的开发人员,您可以通过此水龙头获取测试 GFE 代币。",
       "description3":"抱歉,但我们目前无法连接到水龙头服务器。请稍后尝试重新连接。",
       "default_input":"GFE 钱包地址",
-      "要求": "必填",
+      "requirements": "必填",
       "example":"示例:",
       "invalid_format":"GFE 地址格式无效。",
       "correct_format":"正确的 GFE 地址格式。继续。"
@@ -689,8 +713,12 @@
         "countdown": "价格上涨倒计时",
         "minted": "铸造的 GFE 代币:",
         "pay_with": "付款方式",
-        "receive GFE": "接收 GFE",
-        "buy_now": "立即购买"
+        "receive_GFE": "接收 GFE",
+        "buy_now": "立即购买",
+        "days": "天",
+        "hours": "小时",
+        "minutes": "分钟",
+        "seconds": "秒"
       },
       "mining": {
         "mining": "挖矿",
@@ -772,7 +800,7 @@
         }
       }
     },
-    "formm" : {
+    "forum" : {
       "welcome": "欢迎来到 GFE 治理论坛",
       "description": "参与关键讨论和决策",
       "search": "搜索",
@@ -831,6 +859,7 @@
         "likes": "喜欢"
       },
       "topic_status": {
+        "created": "创建",
         "approved": "已批准",
         "rejected": "已拒绝",
         "canceled": "已取消",

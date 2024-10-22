@@ -378,7 +378,7 @@ function ICOCard() {
               </div>
               <div className="flex flex-col gap-[8px]">
                 <p className=" text-muted-foreground text-sm font-semibold">
-                  {t("recieve_GFE")}
+                  {t("receive_GFE")}
                 </p>
                 <Input
                   type="number"
