@@ -1,16 +1,18 @@
 "use client"
 
 import { Card, CardBody, CardHeader } from "@nextui-org/react"
+import { useTranslations } from "next-intl"
 
 export default function NotificationCard() {
+  const t = useTranslations("main.platform.setting.notifications")
   return (
     <Card className="py-4">
       <CardHeader className="flex-col items-start px-4 pb-0 pt-2">
-        <h4 className="text-large font-bold">Notifications</h4>
-        <small className="text-default-500">Manage your notifications</small>
+        <h4 className="text-large font-bold">{t("title")}</h4>
+        <small className="text-default-500">{t("manage")}</small>
       </CardHeader>
       <CardBody>
-        <p>Coming soon</p>
+        <p>{t("coming_soon")}</p>
         {/* <form
           onSubmit={handleSubmit(onSubmit)}
           className="relative w-full space-y-2"

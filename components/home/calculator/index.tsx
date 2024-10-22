@@ -44,7 +44,7 @@ export default function CalculatorSection() {
           </div>
           <div>
             <Button className="auth bg-gradient-to-l from-[#2BADFD] to-[#1570EF] px-8 py-4">
-              Read More About Project
+              {t("read_more")}
             </Button>
           </div>
         </div>

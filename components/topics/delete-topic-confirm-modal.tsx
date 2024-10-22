@@ -4,6 +4,7 @@ import React from "react"
 import { useRouter } from "next/navigation"
 import deleteTopic from "@/server/actions/deleteTopic"
 import toast from "react-hot-toast"
+import { useTranslations } from "next-intl"
 
 import ConfirmModal from "./confirm-modal"
 
@@ -15,13 +16,14 @@ export default function DeleteTopicConfirmModal({
   slug: string
 }) {
   const router = useRouter()
+  const t = useTranslations("main.forum.delete-topic-confirm-modal")
 
   const onDelete = async () => {
     try {
       const res = await deleteTopic(slug)
 
       if (res.success) {
-        toast.success("Topic deleted successfully", {
+        toast.success(t("topic_deleted_success"), {
           position: "top-right",
         })
 
@@ -32,7 +34,7 @@ export default function DeleteTopicConfirmModal({
     } catch (error) {
       console.log(error)
 
-      toast.error("Failed to delete topic", {
+      toast.error(t("topic_deleted_failed"), {
         position: "top-right",
       })
     }
@@ -40,8 +42,8 @@ export default function DeleteTopicConfirmModal({
 
   return (
     <ConfirmModal
-      title="Delete topic"
-      description="Are you sure you want to delete this topic? This action cannot be undone."
+      title={t("confirmmodal_title")}
+      description={t("confirmmodal_description")}
       onConfirm={onDelete}
     >
       {children}

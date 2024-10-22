@@ -18,6 +18,7 @@ import {
 } from "@nextui-org/react"
 import { signOut } from "next-auth/react"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 
 export default function AvatarWithMenu({
   user,
@@ -29,6 +30,7 @@ export default function AvatarWithMenu({
   }
 }) {
   const router = useRouter()
+  const t = useTranslations("main")
 
   return (
     <div className="flex items-center gap-4">
@@ -37,9 +39,10 @@ export default function AvatarWithMenu({
           <Avatar
             isBordered
             as="button"
-            className="transition-transform"
+            className="text-[16px] font-bold"
+            size="md"
             src={user.image}
-            name={user.name}
+            name={user.name[0].toUpperCase()}
           />
         </DropdownTrigger>
         <DropdownMenu aria-label="Profile Actions" variant="flat">
@@ -69,7 +72,7 @@ export default function AvatarWithMenu({
               <Link
                 href = "/platform/electricity"
               >
-                Electricity
+                {t("header.electricity")}
               </Link>
             </DropdownItem>
             <DropdownItem
@@ -82,7 +85,7 @@ export default function AvatarWithMenu({
               <Link
                 href = "/platform/mining"
               >
-                Mining
+                {t("header.mining")}
               </Link>
             </DropdownItem>
             <DropdownItem
@@ -92,7 +95,7 @@ export default function AvatarWithMenu({
               <Link
                 href = "/platform/dao"
               >
-                DAO
+                {t("header.dao")}
               </Link>
             </DropdownItem>
             <DropdownItem
@@ -105,7 +108,7 @@ export default function AvatarWithMenu({
               <Link
                 href = "/platform/setting"
               >
-                Setting
+                {t("header.setting")}
               </Link>
             </DropdownItem>
           </DropdownSection>
@@ -124,7 +127,7 @@ export default function AvatarWithMenu({
               }
               textValue="Log Out"
             >
-              Log Out
+              {t("header.logout")}
             </DropdownItem>
           </DropdownSection>
         </DropdownMenu>

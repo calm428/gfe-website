@@ -2,6 +2,7 @@ import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import CustomInput from "./check-wallet-address"
 import React from "react"
+import { useTranslations } from "next-intl" 
 
 type panelState = {
     firstPanel: boolean,
@@ -34,11 +35,12 @@ const AttentionPart = ({
     setSecondButtonEnable: (checkState: boolean) => void,
     setAddress: (address: string) => void
 }) => {
+    const t = useTranslations("main")
     switch (panelnum) {
         case 1:
             return (
                 <h4 className="text-center">
-                    {desc_txt1}
+                    {t("faucet.description1")}
                 </h4>
             )
         case 2:
@@ -48,7 +50,7 @@ const AttentionPart = ({
         case 3:
             return (
                 <h4 className="text-center">
-                    {desc_txt3.message}
+                    {t("faucet.description3")}
                 </h4>
             )
     }
@@ -68,6 +70,7 @@ const CustomButton = ({
     address: string
 }) => {
     const router = useRouter();
+    const t = useTranslations("main")
 
     const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
         if (panelnum == 2) {
@@ -102,13 +105,18 @@ const CustomButton = ({
         onClickFunction(panelnum + 1)
     }
 
+    const buttonText = 
+        panelnum == 1 ? t("faucet.button_text1") : 
+        panelnum == 2 ? t("faucet.button_text2") : 
+        t("faucet.button_text3")
+
     return (
         <Button
             onClick={handleClick}
             className={`flex bg-gradient-to-r ${isSecondButtonEnabled ? 'from-[#2BADFD] to-[#1570EF]' : 'from-[#ff5533] to-[#fc0303]'} border-x-2 h-10 mt-2`}
             disabled={!isSecondButtonEnabled}
         >
-            {button_txt[panelnum - 1]}
+            {buttonText}
         </Button>
     )
 }

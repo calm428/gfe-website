@@ -11,6 +11,7 @@ import RepliesComponent from "@/components/topics/topic-reply-card"
 import TopicSidebar from "@/components/topics/topic-sidebar"
 import TopicSummaryCard from "@/components/topics/topic-summary-card"
 import TopicTags from "@/components/topics/topic-tags"
+import TopicNotFound from "./topic_not_found"
 
 export default async function TopicDetailPage({
   params,
@@ -41,6 +42,6 @@ export default async function TopicDetailPage({
       </div>
     </div>
   ) : (
-    <div>Topic not found</div>
+    <TopicNotFound />
   )
 }

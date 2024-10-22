@@ -28,21 +28,21 @@ import { FaChevronLeft, FaChevronRight, FaPlus } from "react-icons/fa6"
 import { IoMdTrash } from "react-icons/io"
 import { SiGithubactions } from "react-icons/si"
 import * as z from "zod"
+import { useTranslations } from "next-intl"
 
 function AddActionButton({
   onCreate,
 }: {
   onCreate: (type: "WITHDRAW" | "MINT") => void
 }) {
+  const t = useTranslations("main.forum.submit_topic_proposal.add_actions_form")
   return (
     <Card shadow="none" className="mx-auto mt-8 max-w-3xl border">
       <CardBody className="p-6">
         <SiGithubactions className="mx-auto my-12 text-6xl text-primary" />
-        <p className="text-center text-3xl font-medium">Add action</p>
+        <p className="text-center text-3xl font-medium">{t("add_action")}</p>
         <p className="text-center text-sm text-gray-500">
-          This action will execute if the vote passes. A common automatic action
-          is transferring funds to a guild or person if their proposal passes a
-          vote
+          {t("description")}
         </p>
         <Popover showArrow offset={10} placement="bottom" backdrop="opaque">
           <PopoverTrigger>
@@ -52,7 +52,7 @@ function AddActionButton({
               className="mx-auto mt-4 w-fit capitalize"
               startContent={<FaPlus />}
             >
-              Add action
+              {t("add_action")}
             </Button>
           </PopoverTrigger>
           <PopoverContent className="">
@@ -62,7 +62,7 @@ function AddActionButton({
                   className="text-small font-bold text-foreground"
                   {...titleProps}
                 >
-                  Actions
+                  {t("actions")}
                 </p>
                 <Listbox
                   variant="flat"
@@ -76,20 +76,19 @@ function AddActionButton({
                   <ListboxSection>
                     <ListboxItem
                       key="withdraw"
-                      description="Create a proposal to withdraw assets to a wallet."
+                      description={t("withdraw_description")}
                       // startContent={<BiMoneyWithdraw />}
                       endContent={<FaChevronRight className="text-gray-500" />}
                     >
-                      Withdraw assets
+                      {t("withdraw")}
                     </ListboxItem>
                     <ListboxItem
                       key="mint"
-                      description="Mint more DAO tokens and distribute to
-                                    wallets"
+                      description={t("mint_description")}
                       // startContent={<GiMining />}
                       endContent={<FaChevronRight className="text-gray-500" />}
                     >
-                      Mint tokens
+                      {t("mint")}
                     </ListboxItem>
                   </ListboxSection>
                 </Listbox>
@@ -113,6 +112,8 @@ export default function AddActionsForm({
   goPrev: () => void
   goNext: () => void
 }) {
+  const t = useTranslations("main.forum.submit_topic_proposal.add_actions_form")
+
   const [actions, setActions] = useState<string[]>(
     data.actions.map((action) => action.type)
   )
@@ -120,9 +121,9 @@ export default function AddActionsForm({
     actions: z
       .array(
         z.object({
-          type: z.string().min(1, "Type is required"),
-          recipient: z.string().min(1, "Recipient's address is required"),
-          amount: z.number().gt(0, "Amount must be greater than 0"),
+          type: z.string().min(1, t("type_required")),
+          recipient: z.string().min(1, t("address_required")),
+          amount: z.number().gt(0, t("amount_grater_0")),
         })
       )
       .optional(),
@@ -197,9 +198,9 @@ export default function AddActionsForm({
           <Card shadow="none" className="mx-auto mt-8 w-full max-w-3xl border">
             <CardHeader className="flex gap-3">
               <div className="flex flex-col">
-                <p className="text-md font-medium">Withdraw assets</p>
+                <p className="text-md font-medium">{t("withdraw")}</p>
                 <p className="text-xs text-default-500">
-                  Withdraw assets from the DAO teasury
+                  {t("withdraw_title")}
                 </p>
               </div>
               <Dropdown>
@@ -221,7 +222,7 @@ export default function AddActionsForm({
                     startContent={<BiReset />}
                     onClick={() => resetAction(index)}
                   >
-                    Reset Action
+                    {t("reset_action")}
                   </DropdownItem>
                   <DropdownItem
                     key="delete"
@@ -230,7 +231,7 @@ export default function AddActionsForm({
                     startContent={<IoMdTrash />}
                     onClick={() => removeAction(index)}
                   >
-                    Remove Action
+                    {t("remove_action")}
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
@@ -247,10 +248,10 @@ export default function AddActionsForm({
                     color={
                       errors.actions?.[index]?.recipient ? "danger" : "default"
                     }
-                    label="Recipient"
+                    label={t("recipient")}
                     labelPlacement="outside"
-                    placeholder="Type wallet address or ENS ..."
-                    description="The wallet that receives the tokens"
+                    placeholder={t("recipient_placeholder")}
+                    description={t("recipient_description")}
                   />
                 )}
               />
@@ -267,10 +268,10 @@ export default function AddActionsForm({
                     color={
                       errors.actions?.[index]?.amount ? "danger" : "default"
                     }
-                    label="Amount"
+                    label={t("amount")}
                     labelPlacement="outside"
                     placeholder="0"
-                    description="Amount is calculated in number of tokens, not dollar value"
+                    description={t("amount_description")}
                     className="!mt-8"
                   />
                 )}
@@ -287,7 +288,7 @@ export default function AddActionsForm({
           startContent={<FaChevronLeft />}
           onClick={goPrev}
         >
-          Back
+          {t("back")}
         </Button>
         <Button
           type="submit"
@@ -296,7 +297,7 @@ export default function AddActionsForm({
           endContent={<FaChevronRight />}
           className="ml-auto"
         >
-          Next
+          {t("next")}
         </Button>
       </div>
     </form>

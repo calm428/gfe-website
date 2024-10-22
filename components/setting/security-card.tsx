@@ -10,6 +10,7 @@ import toast from "react-hot-toast"
 import { IoMdEye, IoMdEyeOff } from "react-icons/io"
 import useSWR from "swr"
 import * as z from "zod"
+import { useTranslations } from "next-intl"
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
@@ -19,6 +20,7 @@ export default function SecurityCard() {
   const [loading, setLoading] = useState(false)
   const [isOldVisible, setIsOldVisible] = useState<boolean>(false)
   const [isNewVisible, setIsNewVisible] = useState<boolean>(false)
+  const t = useTranslations("main.platform.setting.security")
 
   const formSchema = z.object({
     password: z.string().min(8, "Password must be at least 8 characters"),
@@ -72,8 +74,8 @@ export default function SecurityCard() {
   return (
     <Card className="py-4">
       <CardHeader className="flex-col items-start px-4 pb-0 pt-2">
-        <h4 className="text-large font-bold">Security</h4>
-        <small className="text-default-500">Setup your security settings</small>
+        <h4 className="text-large font-bold">{t("title")}</h4>
+        <small className="text-default-500">{t("setup")}</small>
       </CardHeader>
       <CardBody>
         <form
@@ -87,7 +89,7 @@ export default function SecurityCard() {
               render={({ field }) => (
                 <Input
                   {...field}
-                  label="Current Password"
+                  label={t("current_password")}
                   variant="bordered"
                   endContent={
                     <button
@@ -116,7 +118,7 @@ export default function SecurityCard() {
               render={({ field }) => (
                 <Input
                   {...field}
-                  label="New Password"
+                  label={t("new_password")}
                   variant="bordered"
                   endContent={
                     <button
@@ -151,7 +153,7 @@ export default function SecurityCard() {
               isLoading={loading}
               className="ml-auto mt-4 w-fit bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
             >
-              Submit
+              {t("submit")}
             </Button>
           </div>
         </form>

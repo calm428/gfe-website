@@ -1,8 +1,11 @@
 import Image from "next/image"
 import MinerPic_1 from "@/public/images/miners/miner1.png"
 import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react"
+import { useTranslations } from "next-intl"
 
 function MinerCard() {
+  const t = useTranslations("main.platform.mining.miner-card")
+
   return (
     <Card
       className="mx-auto my-1 w-full max-w-[300px] cursor-pointer p-4 hover:bg-primary/10"
@@ -20,25 +23,25 @@ function MinerCard() {
       </CardHeader>
       <CardBody>
         <div className="flex w-full items-center justify-between">
-          <p className="text-sm">Hashrate:</p>
+          <p className="text-sm">{t("hashrate")}</p>
           <p className="font-semibold text-primary">8 TH/s</p>
         </div>
         <div className="flex w-full items-center justify-between">
-          <p className="text-sm">Income:</p>
+          <p className="text-sm">{t("income")}</p>
           <p className="font-semibold text-primary">2 BTC/year</p>
         </div>
         <Divider className="my-2 bg-primary" />
         <div className="flex w-full items-center justify-between">
-          <p className="text-sm">Machine Price:</p>
+          <p className="text-sm">{t("machine_price")}</p>
           <p className="font-semibold text-primary">19,270 USD</p>
         </div>
         <div className="flex w-full items-center justify-between">
-          <p className="text-sm">Accessory Price:</p>
+          <p className="text-sm">{t("accessory_price")}</p>
           <p className="font-semibold text-primary">3,550 USD</p>
         </div>
         <Divider className="my-2 bg-primary" />
         <div className="flex w-full items-center justify-between">
-          <p className="text-sm">Price:</p>
+          <p className="text-sm">{t("price")}</p>
           <p className="font-semibold text-primary">22,850 USD</p>
         </div>
         <div className="mt-2 flex w-full justify-end">

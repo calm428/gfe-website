@@ -14,12 +14,15 @@ import { FaListUl } from "react-icons/fa"
 import { FaTags } from "react-icons/fa6"
 import { MdCategory } from "react-icons/md"
 import useSWR from "swr"
+import { useTranslations } from "next-intl"
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
+
 
 export default function Sidebar({ className }: { className?: string }) {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const t = useTranslations("main.forum")
   const [categories, setCategories] = useState<ICategory[]>([])
   const [tags, setTags] = useState<ITag[]>([])
 
@@ -31,6 +34,45 @@ export default function Sidebar({ className }: { className?: string }) {
     "/api/categories/get",
     fetcher
   )
+
+  const filterCategories = ( category: ICategory ): string => {
+    
+    switch(category.slug) {
+        case "general":
+            return t("categories.general")
+        case "governance-and-proposals":
+            return t("categories.governance-and-proposals")
+        case "ideas-and-suggestions":
+            return t("categories.ideas-and-suggestions")
+        case "technical-development":
+            return t("categories.technical-development")
+        default:
+            return t("categories.all")
+    }
+  }
+
+  const filterTags = ( tag: ITag ): string => {
+    switch(tag.slug) {
+        case "introduction":
+            return t("tags.introduction")
+        case "protocol-upgrade":
+            return t("tags.protocol-upgrade")
+        case "treasury":
+            return t("tags.treasury")
+        case "community-guidelines":
+            return t("tags.community-guidelines")
+        case "market-listing":
+            return t("tags.market-listing")
+        case "solar-power":
+            return t("tags.solar-power")
+        case "wind-power":
+            return t("tags.wind-power")
+        case "kelp-farming":
+            return t("tags.kelp-farming")
+        default:
+            return t("tags.all")
+    }
+  }
 
   useEffect(() => {
     if (fetchedCategoriesData) {
@@ -64,7 +106,11 @@ export default function Sidebar({ className }: { className?: string }) {
         defaultExpandedKeys={["1", "2"]}
         showDivider={false}
       >
-        <AccordionItem key="1" aria-label="Accordion 1" title="Categories">
+        <AccordionItem 
+          key="1" 
+          aria-label="Accordion 1" 
+          title={t("categories.title")}
+        >
           {fetchedCategoriesData ? (
             <Listbox>
               {categories.map((category) => (
@@ -79,7 +125,7 @@ export default function Sidebar({ className }: { className?: string }) {
                   }
                   href={category.slug === "all" ? "/forum/" : `/forum/c/${category.slug}`}
                 >
-                  {category.name}
+                  {filterCategories(category)}
                 </ListboxItem>
               ))}
             </Listbox>
@@ -93,7 +139,11 @@ export default function Sidebar({ className }: { className?: string }) {
             </>
           )}
         </AccordionItem>
-        <AccordionItem key="2" aria-label="Accordion 2" title="Tags">
+        <AccordionItem 
+          key="2" 
+          aria-label="Accordion 2" 
+          title={t("tags.title")}
+        >
           {fetchedTagsData ? (
             <Listbox>
               {tags.map((tag) => (
@@ -108,7 +158,7 @@ export default function Sidebar({ className }: { className?: string }) {
                   }
                   href={tag.slug === "all" ? "/forum/" : `/forum/tag/${tag.slug}`}
                 >
-                  {tag.name}
+                  {filterTags(tag)}
                 </ListboxItem>
               ))}
             </Listbox>

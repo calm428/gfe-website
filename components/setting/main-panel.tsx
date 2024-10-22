@@ -7,6 +7,7 @@ import NotificationCard from "@/components/setting/notification-card"
 import ProfileCard from "@/components/setting/profile-card"
 import SecurityCard from "@/components/setting/security-card"
 import WalletCard from "@/components/setting/wallet-card"
+import LanguageCard from "@/components/setting/language-card"
 
 import VotingPowerCard from "./voting-power-card"
 
@@ -28,6 +29,8 @@ export default function MainPanel() {
     <SecurityCard />
   ) : tab === "notifications" ? (
     <NotificationCard />
+  ) : tab === "language" ? (
+    <LanguageCard />
   ) : (
     <></>
   )

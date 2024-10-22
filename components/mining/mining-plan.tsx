@@ -8,45 +8,48 @@ import {
   Select,
   SelectItem,
 } from "@nextui-org/react"
+import { useTranslations } from "next-intl"
 
 interface MiningPlanProps {}
 
 export default function MiningPlan({}: MiningPlanProps) {
+  const t = useTranslations("main.platform.mining.mining_plan")
+
   return (
     <Card className="mx-auto my-1 w-full max-w-[320px] p-4" shadow="sm">
       <CardHeader className="flex items-start gap-2 text-left">
-        <p className="font-semibold">Mining Plan</p>
+        <p className="font-semibold">{t("title")}</p>
       </CardHeader>
       <CardBody>
         <div className="flex flex-col gap-3">
           <Select
             labelPlacement="outside"
-            label="Miner Type"
-            placeholder="Select a miner"
+            label={t("type")}
+            placeholder={t("select_miner")}
             className="w-full"
           >
             <SelectItem key="1" value="en">
-              sdf
+              !!!
             </SelectItem>
           </Select>
           <Select
             labelPlacement="outside"
-            label="Power"
-            placeholder="Select a power"
+            label={t("power")}
+            placeholder={t("select_power")}
             className="w-full"
           >
             <SelectItem key="1" value="en">
-              sdf
+              ...
             </SelectItem>
           </Select>
           <Select
             labelPlacement="outside"
-            label="Mining Period"
-            placeholder="Select a power"
+            label={t("mining_period")}
+            placeholder={t("select_period")}
             className="w-full"
           >
             <SelectItem key="1" value="en">
-              sdf
+              !!!
             </SelectItem>
           </Select>
         </div>
@@ -55,7 +58,7 @@ export default function MiningPlan({}: MiningPlanProps) {
           color="primary"
           className="mt-8 w-full bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
         >
-          Start Mining
+          {t("start_mining")}
         </Button>
       </CardBody>
     </Card>

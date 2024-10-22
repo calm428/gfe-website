@@ -27,6 +27,8 @@ import { useInView } from "react-intersection-observer"
 import Select, { components, SingleValueProps } from "react-select"
 import useSWR from "swr"
 import { useDebouncedCallback } from "use-debounce"
+import { useTranslations, useLocale } from "next-intl"
+import { ICategory, ITag } from "@/types"
 
 function getParams(slug: string[]) {
   if (slug.length === 0)
@@ -87,8 +89,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
   const [hasMore, setHasMore] = useState(true)
   const [currentSortDescriptor, setCurrentSortDescriptor] =
     useState<SortDescriptor>()
+  const t = useTranslations("main.forum")
+  const locale = useLocale()
   const { category, tag } = getParams(params.slug || [])
   const limit = 20
+
+  console.log("status: ", status)
 
   const {
     data: fetchedTagsData,
@@ -108,6 +114,48 @@ export default function Page({ params }: { params: { slug: string[] } }) {
     } else {
       if (option.value === "all") router.push(`/forum/tag/${tag}`)
       router.push(`/forum/tag/c/${option.value}/${tag}`)
+    }
+  }
+
+  const filterCategories = (category: string): string => {   
+    switch(category) {  
+      case "general":  
+      case "General":  
+        return t("categories.general");  
+      case "governance-and-proposals":  
+      case "Governance and Proposals":  
+        return t("categories.governance-and-proposals");  
+      case "ideas-and-suggestions":  
+      case "Ideas & Suggestions":  
+        return t("categories.ideas-and-suggestions");  
+      case "technical-development":  
+      case "Technical Development":  
+        return t("categories.technical-development");  
+      default:  
+        return t("categories.all");  
+    }  
+  }
+
+  const filterTags = ( tag: string ): string => {
+    switch(tag) {
+      case "introduction":
+        return t("tags.introduction")
+      case "protocol-upgrade":
+        return t("tags.protocol-upgrade")
+      case "treasury":
+        return t("tags.treasury")
+      case "community-guidelines":
+        return t("tags.community-guidelines")
+      case "market-listing":
+        return t("tags.market-listing")
+      case "solar-power":
+        return t("tags.solar-power")
+      case "wind-power":
+        return t("tags.wind-power")
+      case "kelp-farming":
+        return t("tags.kelp-farming")
+      default:
+        return t("tags.all")
     }
   }
 
@@ -158,14 +206,14 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
   useEffect(() => {
     if (fetchedCategoriesData) {
-      const _categories = fetchedCategoriesData.map((category: any) => ({
+      const _categories = fetchedCategoriesData.map((category: ICategory) => ({
         value: category.slug,
-        label: category.name,
+        label: filterCategories(category.slug)
       }))
 
-      setCategories([..._categories, { value: "all", label: "All Categories" }])
+      setCategories([..._categories, { value: "all", label: t("categories.all") }])
       setDefaultCategoryOption(
-        [..._categories, { value: "all", label: "All Categories" }].find(
+        [..._categories, { value: "all", label: t("categories.all") }].find(
           (item) => item.value === category
         )
       )
@@ -174,14 +222,14 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
   useEffect(() => {
     if (fetchedTagsData) {
-      const _tags = fetchedTagsData.map((tag: any) => ({
+      const _tags = fetchedTagsData.map((tag: ITag) => ({
         value: tag.slug,
-        label: tag.name,
+        label: filterTags(tag.slug),
       }))
 
-      setTags([..._tags, { value: "all", label: "All Tags" }])
+      setTags([..._tags, { value: "all", label: t("tags.all") }])
       setDefaultTagOption(
-        [..._tags, { value: "all", label: "All Tags" }].find(
+        [..._tags, { value: "all", label: t("tags.all") }].find(
           (item) => item.value === tag
         )
       )
@@ -199,17 +247,17 @@ export default function Page({ params }: { params: { slug: string[] } }) {
   return (
     <div className="w-full px-2">
       <h1 className="mx-auto mt-16 bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-center text-3xl font-bold tracking-wider text-transparent sm:text-4xl">
-        Welcome to the GFE Governance Forum
+        {t("welcome")}
       </h1>
       <p className="mx-auto text-center text-sm">
-        Participate in key discussions and decision-making.
+        {t("description")}
       </p>
       <div className="my-8">
         <Input
           type="text"
           variant="underlined"
-          aria-label="Search"
-          placeholder="Search"
+          aria-label={t("search")}
+          placeholder={t("search")}
           startContent={<CiSearch />}
           className="mx-auto w-full max-w-md"
           defaultValue={searchParams.get("keyword") || ""}
@@ -247,16 +295,15 @@ export default function Page({ params }: { params: { slug: string[] } }) {
           />
         </div>
         <div className="ml-auto">
-          {status === "authenticated" ||
-            (true && (
-              <Button
-                color="primary"
-                startContent={<FaPlus />}
-                className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
-              >
-                <Link href="/topic/new">New Topic</Link>
-              </Button>
-            ))}
+          {status === "authenticated" && (
+            <Button
+              color="primary"
+              startContent={<FaPlus />}
+              className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
+            >
+              <Link href="/forum/topic/new">{t("new.new_topic")}</Link>
+            </Button>
+          )}
         </div>
       </div>
       <div className="">
@@ -277,7 +324,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
         >
           <TableHeader>
             <TableColumn key="topic" className="w-full">
-              Topic
+              {t("topic")}
             </TableColumn>
             <TableColumn
               key="replies"
@@ -285,7 +332,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
               allowsSorting
               className="hidden xs:table-cell"
             >
-              Replies
+              {t("replies")}
             </TableColumn>
             <TableColumn
               key="views"
@@ -293,10 +340,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
               allowsSorting
               className="hidden sm:table-cell"
             >
-              Views
+              {t("views")}
             </TableColumn>
             <TableColumn key="createdAt" allowsSorting className="min-w-32">
-              Activity
+              {t("activity")}
             </TableColumn>
           </TableHeader>
           <TableBody items={list.items}>
@@ -315,7 +362,8 @@ export default function Page({ params }: { params: { slug: string[] } }) {
                   <div className="mt-1 flex flex-wrap gap-1">
                     <div className="rounded-full text-xs text-primary-600">
                       <MdCategory className="mr-1 inline" />
-                      {item.category.name}
+                      {filterCategories(item.category.slug)}
+                      {/* {item.category.name} */}
                     </div>
                     {item.tags.map((tag: any) => (
                       <div
@@ -323,7 +371,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
                         className="rounded-full text-xs text-primary-600"
                       >
                         <FaTags className="mr-1 inline" />
-                        {tag.name}
+                        {filterTags(tag.name)}
                       </div>
                     ))}
                   </div>

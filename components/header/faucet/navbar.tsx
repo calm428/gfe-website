@@ -1,10 +1,9 @@
 import Image from "next/image"
-import { default as Link, default as NextLink } from "next/link"
+import { default as NextLink } from "next/link"
 import logoSVG from "@/public/images/logo.svg"
 import { authOptions } from "@/server/lib/authOptions"
 import User from "@/server/model/user.model"
 import {
-  Button,
   NavbarBrand,
   NavbarContent,
   NavbarMenuToggle,
@@ -15,6 +14,7 @@ import { getServerSession } from "next-auth"
 import AvatarWithMenu from "../avatar-with-menu"
 import MobileMenu from "./mobile-menu"
 import WalletConnectButton from "../wallet-connect-button"
+import UnauthenticateButton from "../unauthenticate-button"
 
 async function getUser() {
   const session = await getServerSession(authOptions)
@@ -64,16 +64,7 @@ export async function Navbar() {
             }}
           />
         ) : (
-          <Button
-            color="primary"
-            className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
-          >
-            <Link
-              href={`${process.env.NEXT_PUBLIC_AUTH_SERVER}/signin?callbackUrl=${encodeURIComponent(process.env.NEXT_PUBLIC_WEBSITE_URL || "")}`}
-            >
-              Sign in
-            </Link>
-          </Button>
+          <UnauthenticateButton />
         )}
       </NavbarContent>
 

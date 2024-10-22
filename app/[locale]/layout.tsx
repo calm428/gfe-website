@@ -22,7 +22,7 @@ export default function SiteLayout({
     <div className="relative flex min-h-screen flex-col">
       <NextIntlClientProvider locale={locale} messages={messages}>
         <SiteHeader />
-        <div className="flex-1">{children}</div>
+          <div className="flex-1">{children}</div>
         <SiteFooter />
       </NextIntlClientProvider>
     </div>

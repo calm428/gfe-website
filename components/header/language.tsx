@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useRouter, useSearchParams } from "next/navigation"
 import { usePathname } from "@/navigation"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import {
   Select,
@@ -19,6 +19,7 @@ export function LanguageSelector() {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
+  const t = useTranslations("main")
 
   const changeLang = (lang: string) => {
     const newSearchParams = new URLSearchParams(searchParams).toString()
@@ -51,7 +52,7 @@ export function LanguageSelector() {
                 height={24}
                 className="mr-2 h-auto w-4"
               />
-              English
+              {t("language.en")}
             </div>
           </SelectItem>
           <SelectItem value="cn">
@@ -63,7 +64,7 @@ export function LanguageSelector() {
                 height={24}
                 className="mr-2 h-auto w-4"
               />
-              Chinese
+              {t("language.cn")}
             </div>
           </SelectItem>
           <SelectItem value="es">
@@ -75,19 +76,19 @@ export function LanguageSelector() {
                 height={24}
                 className="mr-2 h-auto w-4"
               />
-              Spanish
+              {t("language.es")}
             </div>
           </SelectItem>
           <SelectItem value="in">
             <div className="flex items-center pr-4">
               <Image
                 src="/images/flags/in.svg"
-                alt="es"
+                alt="in"
                 width={24}
                 height={24}
                 className="mr-2 h-auto w-4"
               />
-              Hindi
+              {t("language.in")}
             </div>
           </SelectItem>
         </SelectGroup>

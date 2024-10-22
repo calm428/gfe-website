@@ -19,7 +19,7 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io"
 import * as z from "zod"
 
 export function SignUpCard() {
-  const t = useTranslations("main")
+  const t = useTranslations("main.signup")
   const router = useRouter()
   const [loading, setLoading] = useState<boolean>(false)
   const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -27,14 +27,14 @@ export function SignUpCard() {
   const formSchema = z.object({
     firstName: z
       .string()
-      .min(1, "First name is required")
-      .regex(/^\p{Letter}*$/u, "Only alphabets are allowed and no spaces"),
+      .min(1, t("firstname_required"))
+      .regex(/^\p{Letter}*$/u, t("only_alphabets")),
     lastName: z
       .string()
-      .min(1, "Last name is required")
-      .regex(/^\p{Letter}*$/u, "Only alphabets are allowed and no spaces"),
-    email: z.string().email("Invalid email address"),
-    password: z.string().min(8, "Password must be at least 8 characters"),
+      .min(1, t("lastname_required"))
+      .regex(/^\p{Letter}*$/u, t("only_alphabets")),
+    email: z.string().email(t("invalid_email_address")),
+    password: z.string().min(8, t("password_at_least")),
   })
 
   type UserFormValue = z.infer<typeof formSchema>
@@ -61,18 +61,18 @@ export function SignUpCard() {
       const res = await axios.post("/api/auth/signup", data)
 
       if (res.status === 200) {
-        toast.success("Your account has been created successfully!", {
+        toast.success(t("successfully_created"), {
           position: "top-right",
         })
 
         router.push("/signin")
       } else {
-        toast.error("Something went wrong!", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
     } catch (error) {
-      toast.error("Something went wrong!", {
+      toast.error(t("something_went_wrong"), {
         position: "top-right",
       })
     }
@@ -92,9 +92,9 @@ export function SignUpCard() {
         </Link>
       </div>
       <p className="text-center text-2xl sm:text-3xl">
-        Welcome to{" "}
+        {t("welcome_to")}
         <span className="bg-gradient-to-r from-[#77C167] to-[#1A88F9] bg-clip-text font-semibold text-transparent">
-          GFE Foundation
+          {t("gfe_foundation")}
         </span>
       </p>
       <div className="mt-8 flex w-full max-w-sm flex-col gap-3">
@@ -105,20 +105,20 @@ export function SignUpCard() {
             startContent={<FcGoogle size={20} />}
             className="w-full"
           >
-            Continue with Google
+            {t("continuew_with_google")}
           </Button>
         </div>
         <div className="relative w-full">
           <Divider className="my-4" />
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 text-default-400">
-            OR
+            {t("or")}
           </span>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-2">
           <div className="grid grid-cols-2 gap-2">
             <Input
               {...register("firstName")}
-              label="First name"
+              label={t("firstname")}
               variant="bordered"
               isInvalid={!!errors.firstName}
               color={errors.firstName ? "danger" : "default"}
@@ -127,7 +127,7 @@ export function SignUpCard() {
             />
             <Input
               {...register("lastName")}
-              label="Last name"
+              label={t("lastname")}
               variant="bordered"
               isInvalid={!!errors.lastName}
               color={errors.lastName ? "danger" : "default"}
@@ -137,7 +137,7 @@ export function SignUpCard() {
           </div>
           <Input
             {...register("email")}
-            label="Email"
+            label={t("email")}
             variant="bordered"
             isInvalid={!!errors.email}
             color={errors.email ? "danger" : "default"}
@@ -146,7 +146,7 @@ export function SignUpCard() {
           />
           <Input
             {...register("password")}
-            label="Password"
+            label={t("password")}
             variant="bordered"
             endContent={
               <button
@@ -173,38 +173,38 @@ export function SignUpCard() {
             className="w-full bg-gradient-to-r from-[#2D79FF] to-[#22B4FD]"
             isLoading={loading}
           >
-            Register
+            {t("register")}
           </Button>
           <p>
-            By registering you accept the{" "}
+            {t("accept")}
             <Link
               href={process.env.NEXT_PUBLIC_TERMS_URL || "#"}
               as={NextLink}
               target="_blank"
               className="text-primary"
             >
-              Terms & Conditions
+              {t("terms_conditions")}
             </Link>{" "}
-            and the{" "}
+            {t("and")}
             <Link
               href={process.env.NEXT_PUBLIC_PRIVACY_URL || "#"}
               as={NextLink}
               target="_blank"
               className="text-primary"
             >
-              Privacy Policy
+              {t("privacy_policy")}
             </Link>
           </p>
         </form>
         <div className="mt-8 w-full max-w-sm space-y-4">
           <p className="text-center">
-            Already have an account?{" "}
+            {t("already_have_an_account")}
             <Link
               href="/signin"
               className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD] bg-clip-text text-transparent"
               as={NextLink}
             >
-              Sign In
+              {t("signin")}
             </Link>
           </p>
         </div>

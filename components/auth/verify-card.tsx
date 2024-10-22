@@ -14,7 +14,7 @@ import toast from "react-hot-toast"
 import VerificationInput from "react-verification-input"
 
 export function VerifyCard() {
-  const t = useTranslations("main")
+  const t = useTranslations("main.verify")
   const searchParams = useSearchParams()
   const router = useRouter()
   const [loading, setLoading] = useState<boolean>(false)
@@ -25,7 +25,7 @@ export function VerifyCard() {
     setLoading(true)
 
     if (!code || code.length !== 6) {
-      toast.error("Please enter a valid verification code", {
+      toast.error(t("enter_valid_virification_code"), {
         position: "top-right",
       })
       setLoading(false)
@@ -38,7 +38,7 @@ export function VerifyCard() {
       })
 
       if (res.status === 200) {
-        toast.success("Your account has been verified successfully!", {
+        toast.success(t("verified_successfully"), {
           position: "top-right",
         })
 
@@ -50,7 +50,7 @@ export function VerifyCard() {
             "/"
         )
       } else {
-        toast.error("Something went wrong!", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -60,21 +60,21 @@ export function VerifyCard() {
       if (
         (err.response?.data as any)?.message === "verification_code_invalid"
       ) {
-        toast.error("Verification code is invalid", {
+        toast.error(t("invalid_verification"), {
           position: "top-right",
         })
       } else if (
         (err.response?.data as any)?.message === "verification_code_expired"
       ) {
-        toast.error("Verification code has expired", {
+        toast.error(t("expired_verification"), {
           position: "top-right",
         })
       } else if ((err.response?.data as any)?.message === "user_not_found") {
-        toast.error("User not found", {
+        toast.error(t("user_not_Found"), {
           position: "top-right",
         })
       } else {
-        toast.error("Something went wrong!", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -88,11 +88,11 @@ export function VerifyCard() {
       const res = await axios.post("/api/auth/resend-verification")
 
       if (res.status === 200) {
-        toast.success("Verification code has been sent!", {
+        toast.success(t("virification_sent"), {
           position: "top-right",
         })
       } else {
-        toast.error("Something went wrong!", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -100,19 +100,19 @@ export function VerifyCard() {
       const err = error as AxiosError
 
       if ((err.response?.data as any)?.message === "unauthorized") {
-        toast.error("You are not authorized", {
+        toast.error(t("unauthorized"), {
           position: "top-right",
         })
       } else if ((err.response?.data as any)?.message === "user_not_found") {
-        toast.error("User not found", {
+        toast.error(t("user_not_Found"), {
           position: "top-right",
         })
       } else if ((err.response?.data as any)?.message === "too_many_attempts") {
-        toast.error("You have exceeded the maximum number of attempts", {
+        toast.error(t("too_many_attempts"), {
           position: "top-right",
         })
       } else {
-        toast.error("Something went wrong!", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -131,10 +131,9 @@ export function VerifyCard() {
         </Link>
       </div>
       <div>
-        <p className="text-center text-2xl sm:text-3xl">Verification</p>
+        <p className="text-center text-2xl sm:text-3xl">{t("verification")}</p>
         <p className="max-w-sm text-center text-default-400">
-          To help maintain a trusted community, please verify your account.
-          It&apos;s quick, simple, and secure.
+          {t("description")}
         </p>
       </div>
       <div className="mt-8 flex w-full max-w-sm flex-col gap-3">
@@ -157,18 +156,18 @@ export function VerifyCard() {
           isDisabled={code.length !== 6}
           onClick={handleVerify}
         >
-          Continue
+          {t("continue")}
         </Button>
         <div className="mt-8 w-full max-w-sm space-y-4">
           <p className="text-center">
-            Didn&apos;t receive the code?{" "}
+            {t("receive_the_code")}
             <Link
               href="#"
               className="bg-gradient-to-r from-[#2D79FF] to-[#22B4FD] bg-clip-text text-transparent"
               as={NextLink}
               onClick={handleResend}
             >
-              Try again
+              {t("try_again")}
             </Link>
           </p>
         </div>

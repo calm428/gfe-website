@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 import { getProposal } from "@/server/lib/fetchers"
 
 import ProposalBody from "@/components/dao/proposal-body"
@@ -10,6 +12,7 @@ export default async function ProposalDetailPage({
 }: {
   params: { slug: string }
 }) {
+  const t = useTranslations("main")
   const { proposal } = await getProposal(decodeURIComponent(params.slug))
 
   return (

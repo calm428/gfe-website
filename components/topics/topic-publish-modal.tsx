@@ -21,6 +21,7 @@ import {
 } from "@web3modal/ethers/react"
 import { BrowserProvider, Contract, ethers, toBeHex } from "ethers"
 import toast from "react-hot-toast"
+import { useTranslations } from "next-intl"
 
 import GFEGovernor from "@/config/contract/GFEGovernor.json"
 
@@ -42,6 +43,7 @@ export default function TopicPublishModal({
   const [signer, setSigner] = useState<any>(null)
   const [contract, setContract] = useState<Contract | null>(null)
   const [gasFee, setGasFee] = useState<number | null>(null)
+  const t = useTranslations("main.forum.topic-publish-modal")
 
   const enhancedChild = React.cloneElement(children as ReactElement, {
     onPress: onOpen,
@@ -88,7 +90,7 @@ export default function TopicPublishModal({
 
   const handlePublish = async (callback: () => void) => {
     if (!isConnected) {
-      toast.error("You have to connect your wallet first", {
+      toast.error(t("have_to_connect_wallet"), {
         position: "top-right",
       })
 
@@ -118,7 +120,7 @@ export default function TopicPublishModal({
       const receipt = await tx.wait()
       console.log("Proposal tx confirmed:", receipt)
 
-      toast.success("Proposal published onchain successfully", {
+      toast.success(t("proposal_published_successfully"), {
         position: "top-right",
       })
 
@@ -130,7 +132,7 @@ export default function TopicPublishModal({
     } catch (error) {
       console.log(error)
 
-      toast.error("Failed to publish proposal", {
+      toast.error(t("failed_to_publish_proposal"), {
         position: "top-right",
       })
     } finally {
@@ -180,7 +182,7 @@ export default function TopicPublishModal({
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                Publish proposal
+                {t("publish_proposal")}
               </ModalHeader>
               <ModalBody>
                 <Card shadow="none" className="border">
@@ -189,21 +191,21 @@ export default function TopicPublishModal({
                       <Tooltip content="0.075151546481516 GFE">
                         <div className="flex w-full justify-between gap-1">
                           <p className="mr-4 whitespace-nowrap">
-                            Estimated gas fees
+                            {t("estimated_gas_fee")}
                           </p>
                           <span className="ml-auto line-clamp-1">
                             {gasFee ? gasFee : ""}
                           </span>
-                          <span>GFE</span>
+                          <span>{t("gfe")}</span>
                         </div>
                       </Tooltip>
                       <Tooltip content="0.121654894351651 GFE">
                         <div className="flex w-full justify-between text-sm">
-                          <p className="mr-4 whitespace-nowrap">Max fee</p>
+                          <p className="mr-4 whitespace-nowrap">{t("max_fee")}</p>
                           <span className="ml-auto line-clamp-1">
                             {gasFee ? gasFee : ""}
                           </span>
-                          <span>GFE</span>
+                          <span>{t("gfe")}</span>
                         </div>
                       </Tooltip>
                     </div>
@@ -211,11 +213,11 @@ export default function TopicPublishModal({
                     <div>
                       <Tooltip content={`${gasFee} GFE`}>
                         <div className="flex w-full justify-between gap-1">
-                          <p className="mr-4 whitespace-nowrap">Total cost</p>
+                          <p className="mr-4 whitespace-nowrap">{t("total_cost")}</p>
                           <span className="ml-auto line-clamp-1">
                             {gasFee ? gasFee : ""}
                           </span>
-                          <span>GFE</span>
+                          <span>{t("gfe")}</span>
                         </div>
                       </Tooltip>
                       <div className="flex w-full justify-end text-sm">
@@ -227,7 +229,7 @@ export default function TopicPublishModal({
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
-                  Cancel
+                  {t("cancel")}
                 </Button>
                 <Button
                   color="primary"
@@ -235,7 +237,7 @@ export default function TopicPublishModal({
                   isLoading={loading}
                   onClick={() => handlePublish(onClose)}
                 >
-                  Confirm
+                  {t("confirm")}
                 </Button>
               </ModalFooter>
             </>

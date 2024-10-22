@@ -1,5 +1,6 @@
 import { Card, CardBody, Chip, User } from "@nextui-org/react"
 import dayjs from "dayjs"
+import { useTranslations } from "next-intl"
 
 export default function TopicSummaryCard({
   topic,
@@ -8,11 +9,15 @@ export default function TopicSummaryCard({
   topic: any
   replies: any
 }) {
+  const t = useTranslations("main.forum.topic_summary")
+
   const chipColor = (status: string) => {
     switch (status) {
-      case "SUBMISSION_APPROVED" || "PUBLISHED":
+      case "SUBMISSION_APPROVED":
+      case "PUBLISHED":
         return "success"
-      case "SUBMISSION_REJECTED" || "SUBMISSION_CANCELED":
+      case "SUBMISSION_REJECTED":
+      case "SUBMISSION_CANCELED":
         return "error"
       case "SUBMISSION":
         return "warning"
@@ -22,19 +27,20 @@ export default function TopicSummaryCard({
   }
 
   const chipText = (status: string) => {
+    const t = useTranslations("main.forum.topic_status")
     switch (status) {
       case "SUBMISSION_APPROVED":
-        return "approved"
+        return t("approved")
       case "SUBMISSION_REJECTED":
-        return "rejected"
+        return t("rejected")
       case "SUBMISSION_CANCELED":
-        return "canceled"
+        return t("canceled")
       case "PUBLISHED":
-        return "published"
+        return t("published")
       case "SUBMISSION":
-        return "submission"
+        return t("submission")
       default:
-        return "draft"
+        return t("draft")
     }
   }
 
@@ -43,7 +49,7 @@ export default function TopicSummaryCard({
       <CardBody className="flex flex-row flex-wrap justify-between gap-4 px-8">
         <div className="flex flex-wrap gap-4">
           <div className="flex w-fit flex-col">
-            <span className="text-xs uppercase">created</span>
+            <span className="text-xs uppercase">{t("created")}</span>
             <User
               name={topic?.author?.name || ""}
               description={dayjs(topic?.createdAt || "").format("MMM YYYY")}
@@ -55,7 +61,7 @@ export default function TopicSummaryCard({
           </div>
           {replies && replies.length > 0 && (
             <div className="flex w-fit flex-col">
-              <span className="text-xs uppercase">last reply</span>
+              <span className="text-xs uppercase">{t("last_reply")}</span>
               <User
                 name={replies.slice(-1)[0]?.author?.name || ""}
                 description={dayjs(
@@ -70,7 +76,7 @@ export default function TopicSummaryCard({
           )}
         </div>
         <div className="mx-auto flex w-fit flex-col items-center">
-          <span className="text-xs uppercase">status</span>
+          <span className="text-xs uppercase">{t("status")}</span>
           <Chip
             color={chipColor(topic?.status) as any}
             variant="dot"
@@ -81,15 +87,15 @@ export default function TopicSummaryCard({
         </div>
         <div className="flex w-full justify-between gap-10 sm:mx-auto sm:w-auto">
           <div className="flex w-fit flex-col items-center">
-            <span className="text-xs uppercase">views</span>
+            <span className="text-xs uppercase">{t("views")}</span>
             <span className="my-auto">{topic?.views}</span>
           </div>
           <div className="flex w-fit flex-col items-center">
-            <span className="text-xs uppercase">replies</span>
+            <span className="text-xs uppercase">{t("replies")}</span>
             <span className="my-auto">{topic?.replies}</span>
           </div>
           <div className="flex w-fit flex-col items-center">
-            <span className="text-xs uppercase">likes</span>
+            <span className="text-xs uppercase">{t("likes")}</span>
             <span className="my-auto">{topic?.likes}</span>
           </div>
         </div>

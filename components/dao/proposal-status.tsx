@@ -8,6 +8,7 @@ import { IconType } from "react-icons"
 import { FaPlay, FaRegHourglass, FaRocket, FaStop } from "react-icons/fa6"
 import { LuPlus } from "react-icons/lu"
 import { MdElectricBolt } from "react-icons/md"
+import { useTranslations } from "next-intl"
 
 import "./proposal-status.style.css"
 
@@ -96,14 +97,15 @@ export default function ProposalStatus({
   execute,
 }: ProposalStatusProps<StatusType>) {
   const [activeIndex, setActiveIndex] = useState(0)
+  const t = useTranslations("main.platform.dao")
 
   const statusDescriptions = [
-    "Draft Created",
-    "Published onchain",
-    "Voting period started",
-    "Voting period ended",
-    "Proposal queued",
-    "Execute proposal",
+    t("draft_created"),
+    t("published_onchain"),
+    t("voting_period_started"),
+    t("voting_period_ended"),
+    t("proposal_queued"),
+    t("execute_proposal")
   ]
 
   const allStatus = [
@@ -156,7 +158,7 @@ export default function ProposalStatus({
   return (
     <Card className="mt-4 w-full border" shadow="none" radius="sm">
       <CardHeader className="flex w-full items-start gap-2">
-        <p className="text-lg">Status</p>
+        <p className="text-lg">{t("status")}</p>
       </CardHeader>
       <Divider />
       <CardBody>

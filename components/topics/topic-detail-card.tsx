@@ -5,16 +5,11 @@ import { Avatar, Button } from "@nextui-org/react"
 import dayjs from "dayjs"
 import { getServerSession } from "next-auth"
 import { BiSolidEdit } from "react-icons/bi"
-import { BsReplyFill, BsSendFill, BsTrash3Fill } from "react-icons/bs"
-import { CgPushUp } from "react-icons/cg"
-import { MdCancelScheduleSend } from "react-icons/md"
-
-import CancelSubmissionConfirmModal from "./cancel-submission-confirm-modal"
+import { BsTrash3Fill } from "react-icons/bs"
 import DeleteTopicConfirmModal from "./delete-topic-confirm-modal"
-import SubmitTopicModal from "./submit-topic-modal"
 import TopicLikeButton from "./topic-like-button"
-import TopicPublishModal from "./topic-publish-modal"
-import TopicReplyModal from "./topic-reply-modal"
+
+import TopicDetailCardNav from './topic-detail-card-nav'
 
 export default async function TopicDetailCard({ topic }: { topic: any }) {
   const session = await getServerSession(authOptions)
@@ -25,9 +20,9 @@ export default async function TopicDetailCard({ topic }: { topic: any }) {
       <div className="relative flex gap-2 pt-2">
         <Avatar
           as="button"
-          className="sticky top-24 size-12 min-h-12 min-w-12 transition-transform"
+          className="sticky text-[14px] top-24 size-10 min-h-10 min-w-10 transition-transform"
           src={topic?.author?.image}
-          name={topic?.author?.name}
+          name={topic?.author?.name[0].toUpperCase()}
         />
         <div
           className="prose mt-4"
@@ -75,67 +70,8 @@ export default async function TopicDetailCard({ topic }: { topic: any }) {
          * // * If the admin review and reject the proposal, display nothing
          * // * Otherwise, it will show a "Reply" button in case of authorized users
          */}
-        {session &&
-          (topic.author._id.toString() === (session?.user as any)?.id ? (
-            topic.status === "DRAFT" ? (
-              <SubmitTopicModal topic={topic}>
-                <Button
-                  color="primary"
-                  variant="light"
-                  startContent={<BsSendFill />}
-                >
-                  Submit
-                </Button>
-              </SubmitTopicModal>
-            ) : topic.status === "SUBMISSION" ? (
-              <CancelSubmissionConfirmModal id={topic._id}>
-                <Button
-                  color="danger"
-                  variant="light"
-                  startContent={<MdCancelScheduleSend />}
-                >
-                  Cancel
-                </Button>
-              </CancelSubmissionConfirmModal>
-            ) : topic.status === "SUBMISSION_APPROVED" ? (
-              <TopicPublishModal
-                id={id}
-                data={JSON.stringify({
-                  id,
-                  title: topic.title,
-                  summary: summary,
-                })}
-              >
-                <Button
-                  color="primary"
-                  variant="light"
-                  startContent={<CgPushUp />}
-                >
-                  Publish
-                </Button>
-              </TopicPublishModal>
-            ) : topic.status === "SUBMISSION_CANCELED" ? (
-              <SubmitTopicModal topic={topic}>
-                <Button
-                  color="primary"
-                  variant="light"
-                  startContent={<BsSendFill />}
-                >
-                  Submit
-                </Button>
-              </SubmitTopicModal>
-            ) : null
-          ) : (
-            <TopicReplyModal slug={topic?.slug}>
-              <Button
-                variant="light"
-                color="primary"
-                startContent={<BsReplyFill className="size-5" />}
-              >
-                Reply
-              </Button>
-            </TopicReplyModal>
-          ))}
+        
+        <TopicDetailCardNav session = {session} topic = {topic} id = {id} summary = {summary}/>
       </div>
     </div>
   )

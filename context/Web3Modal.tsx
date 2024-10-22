@@ -28,6 +28,13 @@ createWeb3Modal({
   chains: [testnet],
   projectId,
   enableAnalytics: true, // Optional - defaults to your Cloud configuration
+  themeVariables: {
+    '--w3m-font-family': 'Roboto, sans-serif',
+    '--w3m-accent': '#2BADFD',
+    '--w3m-color-mix': '#1570EF',
+    '--w3m-color-mix-strength': 50,
+    '--w3m-border-radius-master': '3px'
+  }
 })
 
 export function Web3ModalProvider({ children }: { children: React.ReactNode }) {

@@ -3,9 +3,9 @@
 import { startTransition, useEffect, useRef, useState } from "react"
 
 import "@radix-ui/react-icons"
+import { useTranslations } from "next-intl"
 import Image from "next/image"
 import { Loader2 } from "lucide-react"
-import { useTranslations } from "next-intl"
 
 import useICOWebSocket from "@/hooks/useICOWebSocket"
 import { Button } from "@/components/ui/button"
@@ -33,7 +33,7 @@ function formatNumber(value: number) {
 }
 
 function Counter() {
-  const t = useTranslations("main")
+  const t = useTranslations("main.platform.ico")
   const countdownInterval = useRef<number | null>(null)
   const { status, address, startTime, chainData } = useICOWebSocket(
     `${process.env.NEXT_PUBLIC_ENVIRONMENT === "production" ? "wss://" : "wss://"}${process.env.NEXT_PUBLIC_WEBSOCKET_HOST}`
@@ -141,22 +141,22 @@ function Counter() {
           )}
           {status === "not_started" && (
             <p className="font-goldman text-lg text-primary">
-              Not started yet...
+              {t("not_started_yet")}
             </p>
           )}
           {status === "ended" && (
             <p className="font-goldman text-lg text-primary">
-              The ICO has ended
+              {t("ICO_has_ended")}
             </p>
           )}
           {status === "halted" && (
             <p className="font-goldman text-lg text-primary">
-              The ICO has been halted
+              {t("ICO_has_halted")}
             </p>
           )}
           {status === "disconnected" && (
             <p className="font-goldman text-lg text-primary">
-              Something went wrong
+              {t("something_went_wrong")}
             </p>
           )}
         </div>
@@ -165,10 +165,10 @@ function Counter() {
         <div className="flex flex-col gap-[24px] p-6">
           <div className="text-center">
             <p className="bg-gradient-to-b from-[#2BADFD] to-[#1570EF] bg-clip-text text-[24px] font-bold text-transparent">
-              {t("home.converter_section.title")}
+              {t("buy")}
             </p>
             <p className="font-sans text-[14px] font-medium">
-              {t("home.converter_section.subtitle")}
+              {t("countdown")}
             </p>
           </div>
           <div className="grid grid-cols-4 gap-1">
@@ -193,7 +193,7 @@ function Counter() {
           </div>
           <div className="mt-2 flex flex-col items-center justify-center gap-[5px]">
             <p className=" font-goldman text-muted-foreground">
-              Minted GFE Tokens:{" "}
+              {t("minted")}
               <span>
                 {Intl.NumberFormat().format(chainData.totalSupply)} /{" "}
                 {Intl.NumberFormat().format(chainData.totalToken)}
@@ -285,7 +285,7 @@ function Counter() {
             <div className="grid grid-cols-2 gap-2">
               <div className="flex flex-col gap-[8px]">
                 <p className=" text-sm font-semibold text-muted-foreground">
-                  Pay with{" "}
+                  {t("pay_with")}
                   {isCardPayment ? "USD" : selectedPayment.toUpperCase()}
                 </p>
                 <div className="relative">
@@ -314,7 +314,7 @@ function Counter() {
               </div>
               <div className="flex flex-col gap-[8px]">
                 <p className=" text-sm font-semibold text-muted-foreground">
-                  Receive GFE
+                  {t("receive_GFE")}
                 </p>
                 <div className="relative">
                   <Input

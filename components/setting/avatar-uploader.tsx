@@ -13,6 +13,7 @@ import {
 import axios, { AxiosError } from "axios"
 import toast from "react-hot-toast"
 import { GrFormEdit } from "react-icons/gr"
+import { useTranslations } from "next-intl"
 
 import FileUpload from "../file-upload"
 
@@ -20,6 +21,7 @@ export default function AvatarUploader() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   const [avatar, setAvatar] = useState<string>("")
   const [isLoading, setIsLoading] = useState<boolean>(false)
+  const t = useTranslations("main.platform.setting.avatar")
 
   const handleAvatarUpload = async () => {
     setIsLoading(true)
@@ -30,11 +32,11 @@ export default function AvatarUploader() {
       })
 
       if (res.status === 200) {
-        toast.success("Avatar updated successfully!", {
+        toast.success(t("avatar_updated_successfully"), {
           position: "top-right",
         })
       } else {
-        toast.error("Something went wrong!", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -42,11 +44,11 @@ export default function AvatarUploader() {
       const err = error as AxiosError
 
       if ((err.response?.data as any)?.message === "user_not_found") {
-        toast.error("User not found", {
+        toast.error(t("user_not_found"), {
           position: "top-right",
         })
       } else {
-        toast.error("Something went wrong!", {
+        toast.error(t("something_went_wrong"), {
           position: "top-right",
         })
       }
@@ -74,14 +76,14 @@ export default function AvatarUploader() {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                Change Avatar
+                {t("change_avatar")}
               </ModalHeader>
               <ModalBody>
                 <FileUpload value={avatar} onChange={setAvatar} />
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
-                  Close
+                  {t("close")}
                 </Button>
                 <Button
                   color="primary"
@@ -90,7 +92,7 @@ export default function AvatarUploader() {
                   isLoading={isLoading}
                   onPress={handleAvatarUpload}
                 >
-                  Save
+                  {t("save")}
                 </Button>
               </ModalFooter>
             </>

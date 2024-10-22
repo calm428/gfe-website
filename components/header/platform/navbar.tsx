@@ -13,7 +13,6 @@ import {
 import { getServerSession } from "next-auth"
 
 import AvatarWithMenu from "../avatar-with-menu"
-import LanguageSelector from "./language-selector"
 import MobileMenu from "./mobile-menu"
 import NavLinks from "./nav-links"
 import WalletConnectButton from "../wallet-connect-button"
@@ -65,7 +64,6 @@ export async function Navbar() {
 
       <NavbarContent className="hidden basis-1 pl-4 lg:flex" justify="end">
         <WalletConnectButton />
-        <LanguageSelector />
         {user && (
           <AvatarWithMenu
             user={{
@@ -81,7 +79,6 @@ export async function Navbar() {
         <div className="hidden sm:flex">
           <WalletConnectButton />
         </div>
-        <LanguageSelector />
         <NavbarMenuToggle />
       </NavbarContent>
 
