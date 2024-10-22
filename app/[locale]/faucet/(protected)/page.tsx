@@ -1,4 +1,4 @@
-import FaucetSection from "@/components/faucetdialog"
+import FaucetSection from "@/components/faucet"
 import { useTranslations } from "next-intl"
 
 export default function faucetPage() {

@@ -652,7 +652,7 @@
       "requirements": "Required",
       "example": "Example: ",
       "invalid_format": "Invalid GFE address format.",
-      "correct_format": "Corect GFE address format. Go ahead."
+      "correct_format": "Correct GFE address format. Go ahead."
     },
     "platform": {
       "dao": {

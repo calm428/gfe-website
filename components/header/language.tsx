@@ -83,7 +83,7 @@ export function LanguageSelector() {
             <div className="flex items-center pr-4">
               <Image
                 src="/images/flags/in.svg"
-                alt="es"
+                alt="in"
                 width={24}
                 height={24}
                 className="mr-2 h-auto w-4"
