@@ -68,13 +68,17 @@ export function SignInCard() {
       })
     }
     if (status?.ok) {
-      console.log("1", searchParams.get("callbackUrl"), process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL, "")
+      // console.log("1", searchParams.get("callbackUrl"), process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL, "")
 
       toast.success(t("welcome_back"), {
         position: "top-right",
       })
 
-      console.log("2", searchParams.get("callbackUrl"), process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL, "")
+      toast.success(searchParams.get("callbackUrl"), {
+        position: "top-right",
+      })
+
+      // console.log("2", searchParams.get("callbackUrl"), process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL, "")
 
       router.push(
         searchParams.get("callbackUrl") ||
