@@ -72,10 +72,12 @@ export function SignInCard() {
         position: "top-right",
       })
 
+      console.log(searchParams.get("callbackUrl"), process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL, "")
+
       router.push(
         searchParams.get("callbackUrl") ||
-          process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL ||
-          "/"
+        process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL ||
+        "/"
       )
     }
 
