@@ -70,11 +70,15 @@ export function SignInCard() {
     if (status?.ok) {
       // console.log("1", searchParams.get("callbackUrl"), process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL, "")
 
-      toast.success(t("welcome_back"), {
+      // toast.success(t("welcome_back"), {
+      //   position: "top-right",
+      // })
+
+      toast.success(searchParams.get("callbackUrl"), {
         position: "top-right",
       })
 
-      toast.success(searchParams.get("callbackUrl"), {
+      toast.success(process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL, {
         position: "top-right",
       })
 
