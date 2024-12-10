@@ -4,7 +4,6 @@ export const siteConfig = {
   name: "GFE Foundation",
   description:
     "At GFE Foundation, we're pioneering the green energy revolution by merging sustainability with profitable investments through tokenization. Dive into a world where your investment fuels renewable energy projects and offers attractive returns. Join us in shaping a sustainable future, one token at a time. Invest smart, impact the planet.",
-  url: process.env.NEXTAUTH_URL,
   token_functionalities: [
     {
       icon: "/icons/token_func/energy.svg",
@@ -293,19 +292,19 @@ export const siteConfig = {
     discord: "https://discord.gg/FQzPFyV5",
     telegram: "https://t.me/gfefoundation",
     youtube: "https://www.youtube.com/@GFEFoundation",
-    docs: process.env.NEXTAUTH_URL,
+    docs: "https://www.gfe.foundation",
     calcom: "https://cal.com/peter-chen-0302/meet-ceo-of-gfe-foundation",
     googleForm:
       "https://docs.google.com/forms/d/e/1FAIpQLSch45pUKLZTOwvBSTP6CNVmdqzO3WZbeuDW51z33sD3CtH86Q/viewform",
   },
   contact: {
     phone: "+1 814 419 9935",
-    email: process.env.CONTACT_MAIL_USER,
+    email: "contact@gfe.foundation",
     address: "1060 W. Addison St. Chicago, IL 60612 United States",
   },
   emails: {
-    info: process.env.INFO_MAIL_USER,
-    support: process.env.SUPPORT_MAIL_USER,
-    contact: process.env.CONTACT_MAIL_USER,
+    info: "info@gfe.foundation",
+    support: "support@gfe.foundation",
+    contact: "contact@gfe.foundation",
   },
 }
