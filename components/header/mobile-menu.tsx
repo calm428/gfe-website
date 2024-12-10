@@ -110,7 +110,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
             <AccordionContent className="bg-muted p-0">
               <div className="grid grid-cols-1 gap-2 p-2">
                 <Link
-                  href={"https://explorer.gfe.foundation"}
+                  href={process.env.NEXT_PUBLIC_EXPLORER_URL}
                   target="_blank"
                   className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                 >
@@ -130,7 +130,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   </div>
                 </Link>
                 <Link
-                  href={"https://gfe.foundation/faucet"}
+                  href={process.env.NEXT_PUBLIC_FAUCET_URL}
                   target="_blank"
                   className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                 >
@@ -264,7 +264,7 @@ export function MobileMenu({ children }: { children: React.ReactNode }) {
                   </div>
                 </Link>
                 <Link
-                  href="https://docs.gfe.foundation"
+                  href=""
                   target="_blank"
                   className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                 >
