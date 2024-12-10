@@ -74,8 +74,8 @@ export function SignInCard() {
 
       router.push(
         searchParams.get("callbackUrl") ||
-          process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL ||
-          "/"
+        process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL ||
+        "/"
       )
     }
 

@@ -148,7 +148,7 @@ export function MainNav({ items }: MainNavProps) {
                 <div className="flex w-[300px] rounded-b-[20px] border border-border bg-background">
                   <div className="grid grid-cols-1 gap-2 p-4">
                     <Link
-                      href={"https://explorer.gfe.foundation"}
+                      href={process.env.NEXT_PUBLIC_EXPLORER_URL}
                       target="_blank"
                       className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                     >
@@ -343,7 +343,7 @@ export function MainNav({ items }: MainNavProps) {
                       </div>
                     </Link>
                     <Link
-                      href="https://docs.gfe.foundation"
+                      href=""
                       target="_blank"
                       className="flex gap-2 rounded-md p-3 py-[10px] hover:bg-muted-foreground/10"
                     >

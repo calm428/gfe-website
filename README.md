@@ -15,13 +15,13 @@ This is a public website for GFE Foundation.
 ### 1. Clone the repo into your local
 
 ```bash
-git clone https://github.com/GFE-Foundation/gfe-landing-page.git
+git clone https://github.com/calm428/gfe-website.git
 ```
 
 ### 2. Go to the project folder
 
 ```bash
-cd gfe-landing-page
+cd gfe-website
 ```
 
 ### 3. Install packages with yarn
@@ -67,7 +67,7 @@ The GitHub Actions workflow consists of several key steps, each responsible for 
 
 4. **Pushing to DockerHub:** Pushes the built Docker image to DockerHub, making it available for deployment to various environments.
 
-6. **Deployment:** Automatically deploys the application to the production environment, using the latest Docker image from DockerHub. (Deployment is processed on the other repo: [gfe-deploy-server](https://github.com/GFE-Foundation/gfe-deploy-server))
+6. **Deployment:** Automatically deploys the application to the production environment, using the latest Docker image from DockerHub. (Deployment is processed on the other repo: [gfe-deploy-server](https://github.com/calm428/gfe-deploy-server))
 
 ### Environment Variables and Secrets
 
@@ -83,6 +83,6 @@ PAT=your_github_personal_access_token
 #### - Github Variables
 ```properties
 NEXT_PUBLIC_ENVIRONMENT=production
-NEXT_PUBLIC_METADATA_BASE=https://www.gfe.foundation
+NEXT_PUBLIC_METADATA_BASE=https://gfe-foundation.vercel.app
 NEXT_PUBLIC_WEBSOCKET_HOST=ico_websocket_url
 ```

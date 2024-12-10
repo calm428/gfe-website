@@ -46,8 +46,8 @@ export function VerifyCard() {
 
         router.push(
           searchParams.get("callbackUrl") ||
-            process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL ||
-            "/"
+          process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL ||
+          "/"
         )
       } else {
         toast.error(t("something_went_wrong"), {

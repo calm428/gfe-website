@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
       user.email,
       "FORGOT_PASSWORD",
       {
-        resetPasswordURL: `${process.env.WEBSITE_URL}/auth/reset-password/${token}`,
+        resetPasswordURL: `${process.env.NEXTAUTH_URL}/auth/reset-password/${token}`,
       },
       "NOTIFICATION"
     )

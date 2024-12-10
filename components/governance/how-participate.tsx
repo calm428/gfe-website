@@ -58,7 +58,7 @@ const cardData = [
     title: "governance.forum",
     content: "governance.forum_description",
     further: "governance.open_forum",
-    link: "https://forum.gfe.foundation",
+    link: process.env.NEXT_PUBLIC_FORUM_URL,
     external: true,
   },
   {
@@ -83,7 +83,7 @@ export default function HowParticipateSection() {
         </SectionDescription>
         <div className="mt-4 flex flex-wrap justify-center gap-4">
           <Button variant="outline" className="border-primary bg-white" asChild>
-            <Link href="https://forum.gfe.foundation" target="_blank">
+            <Link href={process.env.NEXT_PUBLIC_FORUM_URL} target="_blank">
               <FaUsers className="mr-2 size-5 text-[#2BADFD]" />
               {t("governance.join_our_forum")}
             </Link>

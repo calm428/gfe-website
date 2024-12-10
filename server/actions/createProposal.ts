@@ -56,7 +56,7 @@ export default async function createProposal(
     sendmail(_topic.author.email, "PROPOSAL_SUBMISSION", {
       name: _topic.author.name,
       title: _topic.title,
-      link: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/topics/${_topic.slug}`,
+      link: `${process.env.NEXT_PUBLIC_FORUM_URL}/topics/${_topic.slug}`,
     })
 
     return {

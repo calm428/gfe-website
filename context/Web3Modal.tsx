@@ -10,8 +10,8 @@ const testnet = {
   chainId: 9000,
   name: "GFE",
   currency: "GFE",
-  explorerUrl: "https://explorer.gfe.foundation",
-  rpcUrl: "http://65.108.65.169:8545",
+  explorerUrl: process.env.NEXT_PUBLIC_EXPLORER_URL,
+  rpcUrl: process.env.NEXT_PUBLIC_RPC_URL,
 }
 
 // 3. Create modal
@@ -19,8 +19,8 @@ const metadata = {
   name: "GFE Foundation",
   description:
     "GFE is a trailblazing initiative designed to tokenize green energy. Providing a unique investment opportunity that bridges the gap between environmental impact and economic incentive, while bringing the first global perspective to electrical costs.",
-  url: "https://gfe.foundation/platform", // origin must match your domain & subdomain
-  icons: ["https://www.gfe.foundation/GFE.svg"],
+  url: process.env.NEXT_PUBLIC_DEFAULT_WEBSITE_URL, // origin must match your domain & subdomain
+  icons: [process.env.NEXTAUTH_URL + "/GFE.svg"],
 }
 
 createWeb3Modal({
